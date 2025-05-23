@@ -1,0 +1,249 @@
+{
+    "survey_id": "82ed2d73-9cc9-4479-8b3c-329499d33f7e",
+    "survey_name": "Workplace Noise Levels and Productivity Survey",
+    "survey_brief": "This survey aims to understand employee perceptions of workplace noise and its impact on productivity and well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you describe the noise level in your primary workspace?",
+            "answer_options": [
+                "Very quiet",
+                "Moderately quiet",
+                "Moderate",
+                "Moderately loud",
+                "Very loud"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement. Ensure options are balanced.",
+            "scripter_notes": "Field type: Radio button (single-choice). Randomize options to avoid bias.",
+            "script": {
+                "question_text": "How would you describe the noise level in your primary workspace?",
+                "answer_options": [
+                    "Very quiet",
+                    "Moderately quiet",
+                    "Moderate",
+                    "Moderately loud",
+                    "Very loud"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following noise sources are present in your workspace? (Select all that apply)",
+            "answer_options": [
+                "Colleague conversations",
+                "Phone calls",
+                "Office equipment (e.g., printers, scanners)",
+                "Construction or external noise",
+                "Background music",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with a text field for unique responses.",
+            "scripter_notes": "Field type: Checkbox (multi-choice). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following noise sources are present in your workspace? (Select all that apply)",
+                "answer_options": [
+                    "Colleague conversations",
+                    "Phone calls",
+                    "Office equipment (e.g., printers, scanners)",
+                    "Construction or external noise",
+                    "Background music",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you use noise-canceling headphones or other tools to reduce noise?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Always"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point frequency scale. Clarify 'tools' in the question if needed.",
+            "scripter_notes": "Field type: Radio button (single-choice). Ensure mobile-friendly layout.",
+            "script": {
+                "question_text": "How often do you use noise-canceling headphones or other tools to reduce noise?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1 to 10, how much does workplace noise affect your productivity? (1 = Not at all, 10 = Extremely)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a numeric scale for precise measurement. Include clear anchors.",
+            "scripter_notes": "Field type: Radio button (single-choice). Display scale horizontally if space allows.",
+            "script": {
+                "question_text": "On a scale of 1 to 10, how much does workplace noise affect your productivity? (1 = Not at all, 10 = Extremely)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What type of workspace do you primarily work in?",
+            "answer_options": [
+                "Private office",
+                "Shared office",
+                "Open-plan office",
+                "Coworking space",
+                "Remote/home office",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Include an 'Other' option for flexibility. Ensure options cover common workspace types.",
+            "scripter_notes": "Field type: Radio button (single-choice). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What type of workspace do you primarily work in?",
+                "answer_options": [
+                    "Private office",
+                    "Shared office",
+                    "Open-plan office",
+                    "Coworking space",
+                    "Remote/home office",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you ever requested a change to your workspace due to noise levels?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a simple yes/no format. Follow up with Q7 if 'Yes' is selected.",
+            "scripter_notes": "Field type: Radio button (single-choice). Route to Q7 if 'Yes' is selected.",
+            "script": {
+                "question_text": "Have you ever requested a change to your workspace due to noise levels?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What was the outcome of your request for a workspace change due to noise?",
+            "answer_options": [
+                "Request was granted",
+                "Request was partially granted",
+                "Request was denied",
+                "Still pending"
+            ],
+            "routing_logic": "Appears if Q6 is answered with 'Yes'",
+            "client_notes": "Use clear, mutually exclusive options. Add a 'Still pending' option for unresolved requests.",
+            "scripter_notes": "Field type: Radio button (single-choice). Only show if Q6 = 'Yes'.",
+            "script": {
+                "question_text": "What was the outcome of your request for a workspace change due to noise?",
+                "answer_options": [
+                    "Request was granted",
+                    "Request was partially granted",
+                    "Request was denied",
+                    "Still pending"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q6 is answered with 'Yes'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What strategies do you use to cope with workplace noise?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture unique coping mechanisms. Limit response length to 200 characters.",
+            "scripter_notes": "Field type: Open text. Set character limit to 200.",
+            "script": {
+                "question_text": "What strategies do you use to cope with workplace noise?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How satisfied are you with your organization's efforts to manage workplace noise?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point satisfaction scale. Ensure options are balanced.",
+            "scripter_notes": "Field type: Radio button (single-choice). Randomize options to avoid bias.",
+            "script": {
+                "question_text": "How satisfied are you with your organization's efforts to manage workplace noise?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional measures would you suggest to improve noise management in your workplace?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to gather actionable suggestions. Limit response length to 300 characters.",
+            "scripter_notes": "Field type: Open text. Set character limit to 300.",
+            "script": {
+                "question_text": "What additional measures would you suggest to improve noise management in your workplace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

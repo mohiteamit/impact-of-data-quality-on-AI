@@ -1,0 +1,241 @@
+{
+    "survey_id": "f5b79d03-e575-457b-80c4-0808d81aefff",
+    "survey_name": "AI-Powered Home Assistant User Satisfaction Survey",
+    "survey_brief": "This survey aims to gather user feedback on AI-powered home assistants to improve functionality, usability, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your AI-powered home assistant?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "Use a 5-point Likert scale for consistency and ease of analysis.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with your AI-powered home assistant?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of your AI-powered home assistant do you use most frequently?",
+            "answer_options": [
+                "Voice commands",
+                "Smart home control",
+                "Music playback",
+                "Weather updates",
+                "Calendar reminders",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "Allow multiple selections to capture varied usage patterns.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes)",
+            "script": {
+                "question_text": "Which features of your AI-powered home assistant do you use most frequently?",
+                "answer_options": [
+                    "Voice commands",
+                    "Smart home control",
+                    "Music playback",
+                    "Weather updates",
+                    "Calendar reminders",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please specify any other features you use frequently that were not listed above.",
+            "answer_options": [],
+            "routing_logic": "Appears if 'Other' is selected in Q2",
+            "client_notes": "Open-ended question to capture additional insights.",
+            "scripter_notes": "Field type: Open text",
+            "script": {
+                "question_text": "Please specify any other features you use frequently that were not listed above.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if 'Other' is selected in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you experience issues with your AI-powered home assistant?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Frequently",
+                "Always"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "5-point frequency scale to quantify user experience issues.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How often do you experience issues with your AI-powered home assistant?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Frequently",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What type of issues do you most commonly encounter with your AI-powered home assistant?",
+            "answer_options": [
+                "Voice recognition errors",
+                "Connectivity issues",
+                "Slow response times",
+                "Incorrect information provided",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q4 answer is 'Rarely', 'Sometimes', 'Frequently', or 'Always'",
+            "client_notes": "Multi-choice question to identify common pain points.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes)",
+            "script": {
+                "question_text": "What type of issues do you most commonly encounter with your AI-powered home assistant?",
+                "answer_options": [
+                    "Voice recognition errors",
+                    "Connectivity issues",
+                    "Slow response times",
+                    "Incorrect information provided",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q4 answer is 'Rarely', 'Sometimes', 'Frequently', or 'Always'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please specify any other issues you encounter that were not listed above.",
+            "answer_options": [],
+            "routing_logic": "Appears if 'Other' is selected in Q5",
+            "client_notes": "Open-ended question to capture additional insights.",
+            "scripter_notes": "Field type: Open text",
+            "script": {
+                "question_text": "Please specify any other issues you encounter that were not listed above.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if 'Other' is selected in Q5"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to recommend your AI-powered home assistant to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "Measure Net Promoter Score (NPS) potential.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to recommend your AI-powered home assistant to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would you like to see in your AI-powered home assistant?",
+            "answer_options": [],
+            "routing_logic": "Always appears",
+            "client_notes": "Open-ended question to gather qualitative feedback.",
+            "scripter_notes": "Field type: Open text",
+            "script": {
+                "question_text": "What improvements would you like to see in your AI-powered home assistant?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How many AI-powered home assistants do you currently use?",
+            "answer_options": [
+                "1",
+                "2",
+                "3 or more"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "Simple count to understand device usage.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How many AI-powered home assistants do you currently use?",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3 or more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Which brand of AI-powered home assistant do you primarily use?",
+            "answer_options": [
+                "Amazon Alexa",
+                "Google Assistant",
+                "Apple Siri",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "Identify primary brand usage.",
+            "scripter_notes": "Field type: Single-choice with 'Other' option (radio buttons)",
+            "script": {
+                "question_text": "Which brand of AI-powered home assistant do you primarily use?",
+                "answer_options": [
+                    "Amazon Alexa",
+                    "Google Assistant",
+                    "Apple Siri",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "Please specify the brand of your AI-powered home assistant if not listed above.",
+            "answer_options": [],
+            "routing_logic": "Appears if 'Other' is selected in Q10",
+            "client_notes": "Open-ended question to capture additional brands.",
+            "scripter_notes": "Field type: Open text",
+            "script": {
+                "question_text": "Please specify the brand of your AI-powered home assistant if not listed above.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if 'Other' is selected in Q10"
+            }
+        }
+    ]
+}

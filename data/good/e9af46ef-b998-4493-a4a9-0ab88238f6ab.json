@@ -1,0 +1,257 @@
+{
+    "survey_id": "e9af46ef-b998-4493-a4a9-0ab88238f6ab",
+    "survey_name": "Workplace Mental Health Support Survey",
+    "survey_brief": "This survey aims to assess employee perceptions of mental health support and resources provided by their organization, identifying gaps and opportunities for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you rate your overall awareness of the mental health resources available at your workplace?",
+            "answer_options": [
+                "Very aware",
+                "Somewhat aware",
+                "Not very aware",
+                "Not aware at all"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 4-point Likert scale to avoid neutral midpoint. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: single-choice (radio buttons). Randomize answer options to reduce bias.",
+            "script": {
+                "question_text": "How would you rate your overall awareness of the mental health resources available at your workplace?",
+                "answer_options": [
+                    "Very aware",
+                    "Somewhat aware",
+                    "Not very aware",
+                    "Not aware at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following mental health resources have you used in the past 12 months? (Select all that apply)",
+            "answer_options": [
+                "Employee Assistance Program (EAP)",
+                "Mental health days/PTO",
+                "On-site counseling",
+                "Teletherapy services",
+                "Mental health webinars/trainings",
+                "Peer support groups",
+                "None of the above"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Include an 'Other' open-text field if resources aren't listed. Max 7 options for mobile usability.",
+            "scripter_notes": "Field type: multi-choice (checkboxes). Display 'None of the above' as mutually exclusive if selected.",
+            "script": {
+                "question_text": "Which of the following mental health resources have you used in the past 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Employee Assistance Program (EAP)",
+                    "Mental health days/PTO",
+                    "On-site counseling",
+                    "Teletherapy services",
+                    "Mental health webinars/trainings",
+                    "Peer support groups",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the quality of mental health support provided by your employer?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (have not used services)"
+            ],
+            "routing_logic": "Show if Q2 != 'None of the above'",
+            "client_notes": "Include explicit N/A option for respondents who haven't used services. Display logic must match Q2 responses.",
+            "scripter_notes": "Field type: single-choice (radio buttons). Implement skip logic based on Q2 selections.",
+            "script": {
+                "question_text": "How satisfied are you with the quality of mental health support provided by your employer?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (have not used services)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q2 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What barriers prevent you from using workplace mental health resources? (Select all that apply)",
+            "answer_options": [
+                "Concerns about confidentiality",
+                "Lack of time during work hours",
+                "Unclear how to access resources",
+                "Stigma/fear of judgment",
+                "Don't believe I need support",
+                "Prefer external providers",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q2 includes 'None of the above'",
+            "client_notes": "Critical question for identifying systemic gaps. Include optional open-text 'Other' field.",
+            "scripter_notes": "Field type: multi-choice with optional open-text. Display only for non-users of current resources.",
+            "script": {
+                "question_text": "What barriers prevent you from using workplace mental health resources? (Select all that apply)",
+                "answer_options": [
+                    "Concerns about confidentiality",
+                    "Lack of time during work hours",
+                    "Unclear how to access resources",
+                    "Stigma/fear of judgment",
+                    "Don't believe I need support",
+                    "Prefer external providers",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q2 includes 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How comfortable would you feel discussing mental health concerns with your direct manager?",
+            "answer_options": [
+                "Very comfortable",
+                "Somewhat comfortable",
+                "Somewhat uncomfortable",
+                "Very uncomfortable"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Sensitive question - place mid-survey after rapport is established. No neutral midpoint to force directional response.",
+            "scripter_notes": "Field type: single-choice (radio buttons). Ensure response is required.",
+            "script": {
+                "question_text": "How comfortable would you feel discussing mental health concerns with your direct manager?",
+                "answer_options": [
+                    "Very comfortable",
+                    "Somewhat comfortable",
+                    "Somewhat uncomfortable",
+                    "Very uncomfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What type of additional mental health support would you find most valuable?",
+            "answer_options": [
+                "More flexible work arrangements",
+                "Mental health first aid training for staff",
+                "Dedicated quiet/spaces",
+                "Regular wellbeing check-ins",
+                "Expanded counseling options",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Prioritization question for future programming. Include optional open-text 'Other' field.",
+            "scripter_notes": "Field type: single-choice with optional open-text. Randomize first 5 options to reduce order bias.",
+            "script": {
+                "question_text": "What type of additional mental health support would you find most valuable?",
+                "answer_options": [
+                    "More flexible work arrangements",
+                    "Mental health first aid training for staff",
+                    "Dedicated quiet/spaces",
+                    "Regular wellbeing check-ins",
+                    "Expanded counseling options",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How often does your organization communicate about mental health resources?",
+            "answer_options": [
+                "Monthly or more frequently",
+                "Quarterly",
+                "Once or twice a year",
+                "Rarely or never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Benchmark question for organizational communication effectiveness. Include explicit frequency anchors.",
+            "scripter_notes": "Field type: single-choice (radio buttons). Display options vertically on mobile.",
+            "script": {
+                "question_text": "How often does your organization communicate about mental health resources?",
+                "answer_options": [
+                    "Monthly or more frequently",
+                    "Quarterly",
+                    "Once or twice a year",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Please share any suggestions for improving mental health support at your workplace:",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended question placed near end to capture detailed feedback. Set 500-character limit.",
+            "scripter_notes": "Field type: open-text. Implement character counter with progress indicator.",
+            "script": {
+                "question_text": "Please share any suggestions for improving mental health support at your workplace:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How strongly do you agree with this statement: 'My organization genuinely cares about employee mental wellbeing.'",
+            "answer_options": [
+                "Strongly agree",
+                "Somewhat agree",
+                "Neither agree nor disagree",
+                "Somewhat disagree",
+                "Strongly disagree"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "5-point Likert scale with neutral midpoint for this attitudinal measure. Display as horizontal buttons on desktop.",
+            "scripter_notes": "Field type: single-choice (radio buttons). Mobile responsive stacking required.",
+            "script": {
+                "question_text": "How strongly do you agree with this statement: 'My organization genuinely cares about employee mental wellbeing.'",
+                "answer_options": [
+                    "Strongly agree",
+                    "Somewhat agree",
+                    "Neither agree nor disagree",
+                    "Somewhat disagree",
+                    "Strongly disagree"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Would you recommend your organization's mental health support to a colleague?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No",
+                "Not applicable (not familiar with offerings)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Net Promoter Score variant for mental health services. Include explicit N/A option.",
+            "scripter_notes": "Field type: single-choice (radio buttons). Make response required.",
+            "script": {
+                "question_text": "Would you recommend your organization's mental health support to a colleague?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No",
+                    "Not applicable (not familiar with offerings)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

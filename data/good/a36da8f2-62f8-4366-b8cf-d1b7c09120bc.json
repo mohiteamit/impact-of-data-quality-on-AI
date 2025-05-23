@@ -1,0 +1,245 @@
+{
+    "survey_id": "a36da8f2-62f8-4366-b8cf-d1b7c09120bc",
+    "survey_name": "Workplace Technology Adoption and Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction and challenges with current workplace technologies to identify areas for improvement and future investments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following technologies do you use daily in your work? (Select all that apply)",
+            "answer_options": [
+                "Laptop/Desktop",
+                "Tablet",
+                "Smartphone",
+                "Collaboration Software (e.g., Slack, Teams)",
+                "Project Management Tools (e.g., Asana, Trello)",
+                "Cloud Storage (e.g., Google Drive, Dropbox)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to allow for multiple selections. Ensure the 'Other' option includes a text field for details.",
+            "scripter_notes": "Field type: MULTI_CHOICE with checkboxes. Include an 'Other' option with an open text field.",
+            "script": {
+                "question_text": "Which of the following technologies do you use daily in your work? (Select all that apply)",
+                "answer_options": [
+                    "Laptop/Desktop",
+                    "Tablet",
+                    "Smartphone",
+                    "Collaboration Software (e.g., Slack, Teams)",
+                    "Project Management Tools (e.g., Asana, Trello)",
+                    "Cloud Storage (e.g., Google Drive, Dropbox)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary work device (e.g., laptop, desktop)?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with your primary work device (e.g., laptop, desktop)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the biggest challenge you face with workplace technology?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative insights. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT with a large input box.",
+            "script": {
+                "question_text": "What is the biggest challenge you face with workplace technology?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you experience technical issues with your work devices or software?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a frequency scale. Ensure options are clear and mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How often do you experience technical issues with your work devices or software?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following would improve your experience with workplace technology? (Select all that apply)",
+            "answer_options": [
+                "Faster devices",
+                "Better software tools",
+                "More training",
+                "Improved IT support",
+                "Regular updates/maintenance",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to identify common improvement areas. Include an 'Other' option for additional suggestions.",
+            "scripter_notes": "Field type: MULTI_CHOICE with checkboxes. Include an 'Other' option with an open text field.",
+            "script": {
+                "question_text": "Which of the following would improve your experience with workplace technology? (Select all that apply)",
+                "answer_options": [
+                    "Faster devices",
+                    "Better software tools",
+                    "More training",
+                    "Improved IT support",
+                    "Regular updates/maintenance",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How would you rate the effectiveness of IT support in resolving your technical issues?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "All respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q4",
+            "client_notes": "Likert scale question targeted at respondents who experience frequent technical issues.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons. Apply routing logic based on Q4 responses.",
+            "script": {
+                "question_text": "How would you rate the effectiveness of IT support in resolving your technical issues?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q4"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Have you received training on how to use workplace technologies effectively?",
+            "answer_options": [
+                "Yes, comprehensive training",
+                "Yes, basic training",
+                "No, but I learned on my own",
+                "No, and I struggle with some tools"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to assess training adequacy. Options should cover a range of experiences.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "Have you received training on how to use workplace technologies effectively?",
+                "answer_options": [
+                    "Yes, comprehensive training",
+                    "Yes, basic training",
+                    "No, but I learned on my own",
+                    "No, and I struggle with some tools"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What additional technologies or tools would benefit your work?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather innovative suggestions. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT with a large input box.",
+            "script": {
+                "question_text": "What additional technologies or tools would benefit your work?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How often do you use collaboration tools (e.g., Slack, Teams) for work communication?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents who selected 'Collaboration Software' in Q1",
+            "client_notes": "Frequency scale question targeted at users of collaboration tools.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons. Apply routing logic based on Q1 responses.",
+            "script": {
+                "question_text": "How often do you use collaboration tools (e.g., Slack, Teams) for work communication?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected 'Collaboration Software' in Q1"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Would you recommend your current workplace technologies to a colleague?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No, not really",
+                "No, definitely not"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to gauge overall satisfaction and advocacy.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "Would you recommend your current workplace technologies to a colleague?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No, not really",
+                    "No, definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,257 @@
+{
+    "survey_id": "4905f7b7-b1d0-49b9-ac2f-c27de26de03f",
+    "survey_name": "Electric Vehicle Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer attitudes and barriers towards adopting electric vehicles (EVs). It will help identify key factors influencing purchase decisions and awareness levels.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with electric vehicles (EVs)?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not familiar at all"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a Likert scale to measure familiarity. Ensure question is mobile-friendly.",
+            "scripter_notes": "Single-choice radio buttons. Randomize options to avoid bias.",
+            "script": {
+                "question_text": "How familiar are you with electric vehicles (EVs)?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is the primary reason you have not purchased an electric vehicle?",
+            "answer_options": [
+                "High upfront cost",
+                "Limited charging infrastructure",
+                "Range anxiety (fear of running out of charge)",
+                "Lack of preferred models",
+                "Prefer traditional gasoline vehicles",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "Include an 'Other' option to capture unique responses. Avoid leading language.",
+            "scripter_notes": "Multi-choice checkboxes. Add an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "What is the primary reason you have not purchased an electric vehicle?",
+                "answer_options": [
+                    "High upfront cost",
+                    "Limited charging infrastructure",
+                    "Range anxiety (fear of running out of charge)",
+                    "Lack of preferred models",
+                    "Prefer traditional gasoline vehicles",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following incentives would most encourage you to purchase an EV?",
+            "answer_options": [
+                "Tax credits or rebates",
+                "Lower charging costs",
+                "Expansion of charging stations",
+                "Free or discounted home charger installation",
+                "None of the above"
+            ],
+            "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "Order options from most to least commonly cited incentives.",
+            "scripter_notes": "Single-choice radio buttons. Randomize options to avoid order bias.",
+            "script": {
+                "question_text": "Which of the following incentives would most encourage you to purchase an EV?",
+                "answer_options": [
+                    "Tax credits or rebates",
+                    "Lower charging costs",
+                    "Expansion of charging stations",
+                    "Free or discounted home charger installation",
+                    "None of the above"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How many times have you test-driven an electric vehicle?",
+            "answer_options": [
+                "0 times",
+                "1 time",
+                "2-3 times",
+                "4 or more times"
+            ],
+            "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "Use a frequency scale. Ensure clarity in ranges.",
+            "scripter_notes": "Single-choice radio buttons. Avoid overlapping ranges.",
+            "script": {
+                "question_text": "How many times have you test-driven an electric vehicle?",
+                "answer_options": [
+                    "0 times",
+                    "1 time",
+                    "2-3 times",
+                    "4 or more times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What is your household income range?",
+            "answer_options": [
+                "Less than $50,000",
+                "$50,000 - $99,999",
+                "$100,000 - $149,999",
+                "$150,000 or more",
+                "Prefer not to say"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use standard income brackets. Include a 'Prefer not to say' option.",
+            "scripter_notes": "Single-choice radio buttons. Ensure anonymity by not requiring an answer.",
+            "script": {
+                "question_text": "What is your household income range?",
+                "answer_options": [
+                    "Less than $50,000",
+                    "$50,000 - $99,999",
+                    "$100,000 - $149,999",
+                    "$150,000 or more",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which of the following EV brands are you aware of? (Select all that apply)",
+            "answer_options": [
+                "Tesla",
+                "Nissan (Leaf)",
+                "Chevrolet (Bolt)",
+                "Ford (Mustang Mach-E)",
+                "Rivian",
+                "Lucid Motors",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "Include major brands and an 'Other' option. Randomize brand order.",
+            "scripter_notes": "Multi-choice checkboxes. Add an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "Which of the following EV brands are you aware of? (Select all that apply)",
+                "answer_options": [
+                    "Tesla",
+                    "Nissan (Leaf)",
+                    "Chevrolet (Bolt)",
+                    "Ford (Mustang Mach-E)",
+                    "Rivian",
+                    "Lucid Motors",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How important is environmental impact in your decision to purchase an EV?",
+            "answer_options": [
+                "Very important",
+                "Somewhat important",
+                "Neutral",
+                "Not very important",
+                "Not important at all"
+            ],
+            "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "Use a Likert scale to measure importance. Keep the scale balanced.",
+            "scripter_notes": "Single-choice radio buttons. Randomize options to avoid bias.",
+            "script": {
+                "question_text": "How important is environmental impact in your decision to purchase an EV?",
+                "answer_options": [
+                    "Very important",
+                    "Somewhat important",
+                    "Neutral",
+                    "Not very important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What type of vehicle do you currently own?",
+            "answer_options": [
+                "Gasoline-powered car",
+                "Hybrid car",
+                "Electric car",
+                "Truck or SUV",
+                "I do not own a vehicle"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Include all major vehicle types. Ensure clarity in options.",
+            "scripter_notes": "Single-choice radio buttons. Randomize options to avoid bias.",
+            "script": {
+                "question_text": "What type of vehicle do you currently own?",
+                "answer_options": [
+                    "Gasoline-powered car",
+                    "Hybrid car",
+                    "Electric car",
+                    "Truck or SUV",
+                    "I do not own a vehicle"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to purchase an electric vehicle in the next 5 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "Use a Likert scale to measure purchase intent. Keep the scale balanced.",
+            "scripter_notes": "Single-choice radio buttons. Randomize options to avoid bias.",
+            "script": {
+                "question_text": "How likely are you to purchase an electric vehicle in the next 5 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional features or improvements would make EVs more appealing to you?",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length if needed.",
+            "scripter_notes": "Open-text field. Set a character limit if required.",
+            "script": {
+                "question_text": "What additional features or improvements would make EVs more appealing to you?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        }
+    ]
+}

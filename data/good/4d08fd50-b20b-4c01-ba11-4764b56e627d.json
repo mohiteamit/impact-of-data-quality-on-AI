@@ -1,0 +1,261 @@
+{
+    "survey_id": "4d08fd50-b20b-4c01-ba11-4764b56e627d",
+    "survey_name": "Workplace Sustainability Practices Survey",
+    "survey_brief": "This survey aims to evaluate employee awareness, engagement, and satisfaction with sustainability initiatives in the workplace.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with your company's sustainability policies and initiatives?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a 4-point Likert scale for clarity. Avoid neutral midpoint to force direction.",
+            "scripter_notes": "Field type: radio button (single choice).",
+            "script": {
+                "question_text": "How familiar are you with your company's sustainability policies and initiatives?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following workplace sustainability practices are you aware of? (Select all that apply)",
+            "answer_options": [
+                "Recycling programs",
+                "Energy-efficient lighting",
+                "Paperless office initiatives",
+                "Sustainable procurement policies",
+                "Green commuting incentives",
+                "None of the above"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Checkbox format allows multiple selections. Include 'None of the above' to capture unawareness.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following workplace sustainability practices are you aware of? (Select all that apply)",
+                "answer_options": [
+                    "Recycling programs",
+                    "Energy-efficient lighting",
+                    "Paperless office initiatives",
+                    "Sustainable procurement policies",
+                    "Green commuting incentives",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you participate in workplace sustainability programs?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "5-point frequency scale provides granularity. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (single choice).",
+            "script": {
+                "question_text": "How often do you participate in workplace sustainability programs?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors discourage you from participating in sustainability initiatives at work? (Select all that apply)",
+            "answer_options": [
+                "Lack of time",
+                "Lack of awareness",
+                "Perceived lack of impact",
+                "Inconvenience",
+                "Lack of incentives",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q3 response is 'Sometimes', 'Rarely', or 'Never'",
+            "client_notes": "Multi-choice with 'Other' option for open-ended responses. Helps identify participation barriers.",
+            "scripter_notes": "Field type: checkbox with optional text input for 'Other'.",
+            "script": {
+                "question_text": "What factors discourage you from participating in sustainability initiatives at work? (Select all that apply)",
+                "answer_options": [
+                    "Lack of time",
+                    "Lack of awareness",
+                    "Perceived lack of impact",
+                    "Inconvenience",
+                    "Lack of incentives",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q3 response is 'Sometimes', 'Rarely', or 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please specify any other factors that discourage your participation in sustainability initiatives:",
+            "answer_options": [],
+            "routing_logic": "Shown if 'Other' is selected in Q4",
+            "client_notes": "Open-ended to capture unique responses. Limit to 250 characters.",
+            "scripter_notes": "Field type: open text with character limit.",
+            "script": {
+                "question_text": "Please specify any other factors that discourage your participation in sustainability initiatives:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if 'Other' is selected in Q4"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with your company's current sustainability efforts?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "5-point satisfaction scale with neutral midpoint. Standard for benchmarking.",
+            "scripter_notes": "Field type: radio button (single choice).",
+            "script": {
+                "question_text": "How satisfied are you with your company's current sustainability efforts?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional sustainability initiatives would you like to see implemented at your workplace?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Open-ended to gather innovative ideas. Encourage specificity.",
+            "scripter_notes": "Field type: open text with paragraph format.",
+            "script": {
+                "question_text": "What additional sustainability initiatives would you like to see implemented at your workplace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How important is it for you to work for a company that prioritizes sustainability?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "5-point importance scale. Helps assess employee values alignment.",
+            "scripter_notes": "Field type: radio button (single choice).",
+            "script": {
+                "question_text": "How important is it for you to work for a company that prioritizes sustainability?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Has your company's sustainability efforts influenced your decision to stay with the company?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No effect",
+                "No, but I wish they would",
+                "Not applicable"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Single-choice with nuanced options to capture varying levels of influence.",
+            "scripter_notes": "Field type: radio button (single choice).",
+            "script": {
+                "question_text": "Has your company's sustainability efforts influenced your decision to stay with the company?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No effect",
+                    "No, but I wish they would",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your preferred method for receiving information about sustainability initiatives? (Select up to 2)",
+            "answer_options": [
+                "Email newsletters",
+                "Intranet announcements",
+                "Team meetings",
+                "Posters/notices in workplace",
+                "Mobile app notifications",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Multi-choice with limit of 2 selections. Helps optimize communication channels.",
+            "scripter_notes": "Field type: checkbox with max selection limit and optional text input for 'Other'.",
+            "script": {
+                "question_text": "What is your preferred method for receiving information about sustainability initiatives? (Select up to 2)",
+                "answer_options": [
+                    "Email newsletters",
+                    "Intranet announcements",
+                    "Team meetings",
+                    "Posters/notices in workplace",
+                    "Mobile app notifications",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "Please specify your other preferred method for receiving sustainability information:",
+            "answer_options": [],
+            "routing_logic": "Shown if 'Other' is selected in Q10",
+            "client_notes": "Open-ended to capture unique preferences. Keep response concise.",
+            "scripter_notes": "Field type: open text with character limit.",
+            "script": {
+                "question_text": "Please specify your other preferred method for receiving sustainability information:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if 'Other' is selected in Q10"
+            }
+        }
+    ]
+}

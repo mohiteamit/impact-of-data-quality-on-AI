@@ -1,0 +1,231 @@
+{
+    "survey_id": "c9513645-6145-4bb7-b836-c0f1d39779bd",
+    "survey_name": "Electric Vehicle (EV) Charging Infrastructure Satisfaction Survey",
+    "survey_brief": "This survey aims to understand user satisfaction and preferences regarding public electric vehicle charging infrastructure to guide future improvements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use public EV charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "If 'Never' is selected, skip to Q10.",
+            "client_notes": "Use a clear frequency scale to ensure accurate responses.",
+            "scripter_notes": "Single-choice radio button question with skip logic.",
+            "script": {
+                "question_text": "How often do you use public EV charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'Never' is selected, skip to Q10."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What type of EV charging station do you most frequently use?",
+            "answer_options": [
+                "Level 1 (120V)",
+                "Level 2 (240V)",
+                "DC Fast Charging",
+                "I don't know"
+            ],
+            "routing_logic": "Appears for all except those who answered 'Never' in Q1.",
+            "client_notes": "Include 'I don't know' to avoid forcing uninformed responses.",
+            "scripter_notes": "Single-choice radio button question.",
+            "script": {
+                "question_text": "What type of EV charging station do you most frequently use?",
+                "answer_options": [
+                    "Level 1 (120V)",
+                    "Level 2 (240V)",
+                    "DC Fast Charging",
+                    "I don't know"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all except those who answered 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of EV charging stations in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all except those who answered 'Never' in Q1.",
+            "client_notes": "Use a balanced Likert scale to measure satisfaction accurately.",
+            "scripter_notes": "Single-choice radio button question.",
+            "script": {
+                "question_text": "How satisfied are you with the availability of EV charging stations in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all except those who answered 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What are the main challenges you face when using public EV charging stations? (Select all that apply)",
+            "answer_options": [
+                "Limited availability",
+                "Long wait times",
+                "Out-of-service stations",
+                "High cost",
+                "Inconsistent charging speeds",
+                "Poor location (e.g., unsafe or inconvenient)",
+                "Other"
+            ],
+            "routing_logic": "Appears for all except those who answered 'Never' in Q1.",
+            "client_notes": "Multi-choice question to capture multiple pain points.",
+            "scripter_notes": "Multi-choice checkbox question with 'Other' option.",
+            "script": {
+                "question_text": "What are the main challenges you face when using public EV charging stations? (Select all that apply)",
+                "answer_options": [
+                    "Limited availability",
+                    "Long wait times",
+                    "Out-of-service stations",
+                    "High cost",
+                    "Inconsistent charging speeds",
+                    "Poor location (e.g., unsafe or inconvenient)",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all except those who answered 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you selected 'Other' in the previous question, please specify:",
+            "answer_options": [],
+            "routing_logic": "Appears only if 'Other' is selected in Q4.",
+            "client_notes": "Open-ended to capture unique challenges not listed.",
+            "scripter_notes": "Open-text input field.",
+            "script": {
+                "question_text": "If you selected 'Other' in the previous question, please specify:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if 'Other' is selected in Q4."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How important is it for charging stations to have additional amenities (e.g., restrooms, coffee shops, Wi-Fi)?",
+            "answer_options": [
+                "Very important",
+                "Important",
+                "Neutral",
+                "Not important",
+                "Not at all important"
+            ],
+            "routing_logic": "Appears for all except those who answered 'Never' in Q1.",
+            "client_notes": "Use a Likert scale to gauge importance.",
+            "scripter_notes": "Single-choice radio button question.",
+            "script": {
+                "question_text": "How important is it for charging stations to have additional amenities (e.g., restrooms, coffee shops, Wi-Fi)?",
+                "answer_options": [
+                    "Very important",
+                    "Important",
+                    "Neutral",
+                    "Not important",
+                    "Not at all important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all except those who answered 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How do you typically find EV charging stations?",
+            "answer_options": [
+                "Mobile apps (e.g., PlugShare, ChargePoint)",
+                "In-car navigation system",
+                "Word of mouth",
+                "Physical signage",
+                "Other"
+            ],
+            "routing_logic": "Appears for all except those who answered 'Never' in Q1.",
+            "client_notes": "Multi-choice to understand discovery methods.",
+            "scripter_notes": "Single-choice radio button question with 'Other' option.",
+            "script": {
+                "question_text": "How do you typically find EV charging stations?",
+                "answer_options": [
+                    "Mobile apps (e.g., PlugShare, ChargePoint)",
+                    "In-car navigation system",
+                    "Word of mouth",
+                    "Physical signage",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all except those who answered 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "If you selected 'Other' in the previous question, please specify:",
+            "answer_options": [],
+            "routing_logic": "Appears only if 'Other' is selected in Q7.",
+            "client_notes": "Open-ended to capture unique discovery methods.",
+            "scripter_notes": "Open-text input field.",
+            "script": {
+                "question_text": "If you selected 'Other' in the previous question, please specify:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if 'Other' is selected in Q7."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What would encourage you to use public EV charging stations more often?",
+            "answer_options": [],
+            "routing_logic": "Appears for all except those who answered 'Never' in Q1.",
+            "client_notes": "Open-ended to gather qualitative insights for improvement.",
+            "scripter_notes": "Open-text input field with a large response box.",
+            "script": {
+                "question_text": "What would encourage you to use public EV charging stations more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all except those who answered 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you own or lease an electric vehicle?",
+            "answer_options": [
+                "Yes, I own an EV",
+                "Yes, I lease an EV",
+                "No, but I plan to purchase/lease one in the next 12 months",
+                "No, and I do not plan to purchase/lease one in the near future"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Captures current or future EV ownership status.",
+            "scripter_notes": "Single-choice radio button question.",
+            "script": {
+                "question_text": "Do you own or lease an electric vehicle?",
+                "answer_options": [
+                    "Yes, I own an EV",
+                    "Yes, I lease an EV",
+                    "No, but I plan to purchase/lease one in the next 12 months",
+                    "No, and I do not plan to purchase/lease one in the near future"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

@@ -1,0 +1,251 @@
+{
+    "survey_id": "9bdc71be-93c2-4d36-89c1-82a735e28c94",
+    "survey_name": "Smart Classroom Technology Adoption Survey",
+    "survey_brief": "Assess adoption rates, user satisfaction, and challenges related to smart classroom technologies in educational institutions.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "What is your primary role at this institution?",
+            "answer_options": [
+                "Student",
+                "Faculty Member",
+                "Administrator",
+                "IT Staff",
+                "Other"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons with an 'Other' field for optional text entry.",
+            "scripter_notes": "Field type: radio button with optional open-text follow-up for 'Other'",
+            "script": {
+                "question_text": "What is your primary role at this institution?",
+                "answer_options": [
+                    "Student",
+                    "Faculty Member",
+                    "Administrator",
+                    "IT Staff",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How frequently do you use smart classroom technologies (e.g., interactive whiteboards, lecture capture systems)?",
+            "answer_options": [
+                "Daily",
+                "3-4 times per week",
+                "1-2 times per week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Randomize answer order to mitigate selection bias.",
+            "scripter_notes": "Field type: radio button with option randomization",
+            "script": {
+                "question_text": "How frequently do you use smart classroom technologies (e.g., interactive whiteboards, lecture capture systems)?",
+                "answer_options": [
+                    "Daily",
+                    "3-4 times per week",
+                    "1-2 times per week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which smart classroom technologies have you used in the past semester? (Select all that apply)",
+            "answer_options": [
+                "Interactive whiteboards",
+                "Student response systems",
+                "Lecture capture systems",
+                "Virtual reality tools",
+                "Collaborative software",
+                "None"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include a 'None' option to capture non-users.",
+            "scripter_notes": "Field type: checkbox with 'Select all that apply' instruction",
+            "script": {
+                "question_text": "Which smart classroom technologies have you used in the past semester? (Select all that apply)",
+                "answer_options": [
+                    "Interactive whiteboards",
+                    "Student response systems",
+                    "Lecture capture systems",
+                    "Virtual reality tools",
+                    "Collaborative software",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the ease of using smart classroom technologies?",
+            "answer_options": [
+                "Very Difficult",
+                "Somewhat Difficult",
+                "Neutral",
+                "Somewhat Easy",
+                "Very Easy"
+            ],
+            "routing_logic": "All respondents who selected at least one technology in Q3",
+            "client_notes": "Use a 5-point Likert scale anchored with clear descriptors.",
+            "scripter_notes": "Field type: radio button grid",
+            "script": {
+                "question_text": "How would you rate the ease of using smart classroom technologies?",
+                "answer_options": [
+                    "Very Difficult",
+                    "Somewhat Difficult",
+                    "Neutral",
+                    "Somewhat Easy",
+                    "Very Easy"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected at least one technology in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you received formal training on using smart classroom technologies?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include a skip logic branch for 'No' responses.",
+            "scripter_notes": "Field type: radio button with conditional routing",
+            "script": {
+                "question_text": "Have you received formal training on using smart classroom technologies?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How effective was the training you received?",
+            "answer_options": [
+                "Very Ineffective",
+                "Somewhat Ineffective",
+                "Neutral",
+                "Somewhat Effective",
+                "Very Effective"
+            ],
+            "routing_logic": "Only display if Q5 answer is 'Yes'",
+            "client_notes": "Follow-up question requires previous 'Yes' response.",
+            "scripter_notes": "Field type: radio button with conditional display logic",
+            "script": {
+                "question_text": "How effective was the training you received?",
+                "answer_options": [
+                    "Very Ineffective",
+                    "Somewhat Ineffective",
+                    "Neutral",
+                    "Somewhat Effective",
+                    "Very Effective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only display if Q5 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How has smart classroom technology impacted student engagement?",
+            "answer_options": [
+                "Significantly Decreased",
+                "Slightly Decreased",
+                "No Change",
+                "Slightly Increased",
+                "Significantly Increased"
+            ],
+            "routing_logic": "All respondents except IT Staff",
+            "client_notes": "Exclude IT Staff via role-based routing from Q1.",
+            "scripter_notes": "Field type: radio button with role-based display logic",
+            "script": {
+                "question_text": "How has smart classroom technology impacted student engagement?",
+                "answer_options": [
+                    "Significantly Decreased",
+                    "Slightly Decreased",
+                    "No Change",
+                    "Slightly Increased",
+                    "Significantly Increased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except IT Staff"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What technical challenges have you encountered? (Select all that apply)",
+            "answer_options": [
+                "Equipment reliability issues",
+                "Software compatibility problems",
+                "Network connectivity",
+                "Lack of technical support",
+                "No challenges encountered"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections with a 'None' option.",
+            "scripter_notes": "Field type: checkbox with 'Select all that apply' instruction",
+            "script": {
+                "question_text": "What technical challenges have you encountered? (Select all that apply)",
+                "answer_options": [
+                    "Equipment reliability issues",
+                    "Software compatibility problems",
+                    "Network connectivity",
+                    "Lack of technical support",
+                    "No challenges encountered"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How satisfied are you with the technical support available for smart classroom technologies?",
+            "answer_options": [
+                "Very Dissatisfied",
+                "Somewhat Dissatisfied",
+                "Neutral",
+                "Somewhat Satisfied",
+                "Very Satisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include N/A option if relevant through previous responses.",
+            "scripter_notes": "Field type: radio button with optional N/A",
+            "script": {
+                "question_text": "How satisfied are you with the technical support available for smart classroom technologies?",
+                "answer_options": [
+                    "Very Dissatisfied",
+                    "Somewhat Dissatisfied",
+                    "Neutral",
+                    "Somewhat Satisfied",
+                    "Very Satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional features or improvements would enhance your smart classroom experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field with character limit (max 500 characters).",
+            "scripter_notes": "Field type: open-text input with validation",
+            "script": {
+                "question_text": "What additional features or improvements would enhance your smart classroom experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,275 @@
+{
+    "survey_id": "f1e38e27-c5d9-4c7b-bf99-3553050618c8",
+    "survey_name": "Employee Onboarding Experience Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness of the employee onboarding process to identify areas of improvement and ensure new hires feel supported and prepared in their roles.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you rate the overall quality of your onboarding experience?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very Poor"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement. Ensure mobile-friendly layout.",
+            "scripter_notes": "Single-choice radio buttons. Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "How would you rate the overall quality of your onboarding experience?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which onboarding activities did you find most helpful? (Select all that apply)",
+            "answer_options": [
+                "Orientation session",
+                "Mentorship program",
+                "Training workshops",
+                "HR paperwork assistance",
+                "Team introductions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Multi-choice question. Include an 'Other' option for additional feedback.",
+            "scripter_notes": "Checkbox inputs. Ensure 'Other' option includes an open-text field if selected.",
+            "script": {
+                "question_text": "Which onboarding activities did you find most helpful? (Select all that apply)",
+                "answer_options": [
+                    "Orientation session",
+                    "Mentorship program",
+                    "Training workshops",
+                    "HR paperwork assistance",
+                    "Team introductions",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How clear were the job expectations and responsibilities communicated during onboarding?",
+            "answer_options": [
+                "Very clear",
+                "Somewhat clear",
+                "Neutral",
+                "Somewhat unclear",
+                "Very unclear"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Use a balanced 5-point scale. Avoid leading language.",
+            "scripter_notes": "Single-choice radio buttons. Display options vertically.",
+            "script": {
+                "question_text": "How clear were the job expectations and responsibilities communicated during onboarding?",
+                "answer_options": [
+                    "Very clear",
+                    "Somewhat clear",
+                    "Neutral",
+                    "Somewhat unclear",
+                    "Very unclear"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What could be improved in the onboarding process?",
+            "answer_options": [],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 500 characters.",
+            "scripter_notes": "Open-text input with character counter.",
+            "script": {
+                "question_text": "What could be improved in the onboarding process?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Did you receive the necessary tools and equipment to start your job on time?",
+            "answer_options": [
+                "Yes, everything was provided",
+                "Most items were provided",
+                "Some items were missing",
+                "No, significant items were missing"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Single-choice question. Include a follow-up for 'missing' responses.",
+            "scripter_notes": "Radio buttons. Route to Q5a if 'Some' or 'No' is selected.",
+            "script": {
+                "question_text": "Did you receive the necessary tools and equipment to start your job on time?",
+                "answer_options": [
+                    "Yes, everything was provided",
+                    "Most items were provided",
+                    "Some items were missing",
+                    "No, significant items were missing"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q5a",
+            "question_text": "What tools or equipment were missing? (Please specify)",
+            "answer_options": [],
+            "routing_logic": "Only shown if Q5 answer is 'Some items were missing' or 'No, significant items were missing'.",
+            "client_notes": "Open-text follow-up to Q5. Helps identify specific gaps.",
+            "scripter_notes": "Text input field. Conditional display based on Q5 response.",
+            "script": {
+                "question_text": "What tools or equipment were missing? (Please specify)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only shown if Q5 answer is 'Some items were missing' or 'No, significant items were missing'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with the support from your manager during the onboarding period?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "5-point satisfaction scale. Helps assess managerial involvement.",
+            "scripter_notes": "Radio buttons. Randomize scale order if possible.",
+            "script": {
+                "question_text": "How satisfied are you with the support from your manager during the onboarding period?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Were you assigned a mentor or buddy during onboarding?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Simple yes/no question. Route to Q7a if 'Yes'.",
+            "scripter_notes": "Radio buttons. Conditional routing to Q7a.",
+            "script": {
+                "question_text": "Were you assigned a mentor or buddy during onboarding?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q7a",
+            "question_text": "How helpful was your mentor/buddy?",
+            "answer_options": [
+                "Extremely helpful",
+                "Helpful",
+                "Somewhat helpful",
+                "Not helpful"
+            ],
+            "routing_logic": "Only shown if Q7 answer is 'Yes'.",
+            "client_notes": "Assesses mentorship effectiveness. Useful for program evaluation.",
+            "scripter_notes": "Radio buttons. Display only for relevant respondents.",
+            "script": {
+                "question_text": "How helpful was your mentor/buddy?",
+                "answer_options": [
+                    "Extremely helpful",
+                    "Helpful",
+                    "Somewhat helpful",
+                    "Not helpful"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q7 answer is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How long did it take you to feel fully settled in your role?",
+            "answer_options": [
+                "Less than 1 week",
+                "1-2 weeks",
+                "3-4 weeks",
+                "1-2 months",
+                "More than 2 months"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Helps measure time-to-productivity. Use clear time ranges.",
+            "scripter_notes": "Radio buttons. Ensure options are mutually exclusive.",
+            "script": {
+                "question_text": "How long did it take you to feel fully settled in your role?",
+                "answer_options": [
+                    "Less than 1 week",
+                    "1-2 weeks",
+                    "3-4 weeks",
+                    "1-2 months",
+                    "More than 2 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Would you recommend our company's onboarding process to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Neutral",
+                "Probably no",
+                "Definitely no"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Net Promoter Score-style question. Useful for benchmarking.",
+            "scripter_notes": "Radio buttons. Display options horizontally if space allows.",
+            "script": {
+                "question_text": "Would you recommend our company's onboarding process to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Neutral",
+                    "Probably no",
+                    "Definitely no"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Any additional comments about your onboarding experience?",
+            "answer_options": [],
+            "routing_logic": "Optional question for all respondents.",
+            "client_notes": "Open-ended to capture unprompted feedback. Mark as optional.",
+            "scripter_notes": "Text area input. Include 'Skip' button.",
+            "script": {
+                "question_text": "Any additional comments about your onboarding experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional question for all respondents."
+            }
+        }
+    ]
+}

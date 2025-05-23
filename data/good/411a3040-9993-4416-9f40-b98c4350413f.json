@@ -1,0 +1,245 @@
+{
+    "survey_id": "411a3040-9993-4416-9f40-b98c4350413f",
+    "survey_name": "Workplace Meeting Effectiveness Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness, frequency, and overall satisfaction with meetings in the workplace to identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you attend meetings in a typical workweek?",
+            "answer_options": [
+                "1-3 meetings",
+                "4-6 meetings",
+                "7-10 meetings",
+                "More than 10 meetings"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you attend meetings in a typical workweek?",
+                "answer_options": [
+                    "1-3 meetings",
+                    "4-6 meetings",
+                    "7-10 meetings",
+                    "More than 10 meetings"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What percentage of meetings you attend do you find productive?",
+            "answer_options": [
+                "0-25%",
+                "26-50%",
+                "51-75%",
+                "76-100%"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice scale for easy interpretation.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "What percentage of meetings you attend do you find productive?",
+                "answer_options": [
+                    "0-25%",
+                    "26-50%",
+                    "51-75%",
+                    "76-100%"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the main reasons meetings are unproductive? (Select all that apply)",
+            "answer_options": [
+                "Lack of clear agenda",
+                "Too many participants",
+                "Off-topic discussions",
+                "Poor time management",
+                "Technical issues",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q2 answer is 0-25%, 26-50%, or 51-75%",
+            "client_notes": "Use multi-choice checkboxes to allow multiple selections.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an 'Other' option with a text field.",
+            "script": {
+                "question_text": "What are the main reasons meetings are unproductive? (Select all that apply)",
+                "answer_options": [
+                    "Lack of clear agenda",
+                    "Too many participants",
+                    "Off-topic discussions",
+                    "Poor time management",
+                    "Technical issues",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q2 answer is 0-25%, 26-50%, or 51-75%"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do meetings start on time?",
+            "answer_options": [
+                "Always",
+                "Most of the time",
+                "Occasionally",
+                "Rarely or never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Single-choice question to measure punctuality.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do meetings start on time?",
+                "answer_options": [
+                    "Always",
+                    "Most of the time",
+                    "Occasionally",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which meeting format do you prefer?",
+            "answer_options": [
+                "In-person meetings",
+                "Virtual meetings (e.g., Zoom, Teams)",
+                "Hybrid (mix of in-person and virtual)",
+                "No preference"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Single-choice question to understand format preferences.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Which meeting format do you prefer?",
+                "answer_options": [
+                    "In-person meetings",
+                    "Virtual meetings (e.g., Zoom, Teams)",
+                    "Hybrid (mix of in-person and virtual)",
+                    "No preference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What tools or methods would improve meeting effectiveness? (Select all that apply)",
+            "answer_options": [
+                "Pre-meeting agendas",
+                "Post-meeting action items",
+                "Time limits for speakers",
+                "Better facilitation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Multi-choice question to gather improvement ideas.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an 'Other' option with a text field.",
+            "script": {
+                "question_text": "What tools or methods would improve meeting effectiveness? (Select all that apply)",
+                "answer_options": [
+                    "Pre-meeting agendas",
+                    "Post-meeting action items",
+                    "Time limits for speakers",
+                    "Better facilitation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How satisfied are you with the duration of most meetings?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the duration of most meetings?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Do you feel meetings are necessary for your role?",
+            "answer_options": [
+                "Yes, most are necessary",
+                "Some are necessary, but many could be emails",
+                "No, most could be replaced with emails or async updates"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Single-choice question to assess necessity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Do you feel meetings are necessary for your role?",
+                "answer_options": [
+                    "Yes, most are necessary",
+                    "Some are necessary, but many could be emails",
+                    "No, most could be replaced with emails or async updates"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is the ideal length for a typical meeting?",
+            "answer_options": [
+                "15 minutes",
+                "30 minutes",
+                "45 minutes",
+                "60 minutes",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Single-choice question with an optional 'Other' text field.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with an 'Other' option.",
+            "script": {
+                "question_text": "What is the ideal length for a typical meeting?",
+                "answer_options": [
+                    "15 minutes",
+                    "30 minutes",
+                    "45 minutes",
+                    "60 minutes",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Please share any additional comments or suggestions to improve workplace meetings.",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "Please share any additional comments or suggestions to improve workplace meetings.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

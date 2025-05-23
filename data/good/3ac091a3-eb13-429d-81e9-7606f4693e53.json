@@ -1,0 +1,249 @@
+{
+    "survey_id": "3ac091a3-eb13-429d-81e9-7606f4693e53",
+    "survey_name": "Employee Remote Work Technology Needs Assessment",
+    "survey_brief": "This survey aims to understand the technology requirements and challenges faced by employees working remotely, to improve IT support and resource allocation.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you experience technical issues while working remotely?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for frequency to capture granularity.",
+            "scripter_notes": "Single-choice radio buttons; mandatory response.",
+            "script": {
+                "question_text": "How often do you experience technical issues while working remotely?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following devices do you primarily use for remote work? (Select all that apply)",
+            "answer_options": [
+                "Company-issued laptop",
+                "Personal laptop",
+                "Desktop computer",
+                "Tablet",
+                "Smartphone",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice checkbox; include an 'Other' field with open-text option.",
+            "scripter_notes": "Multi-choice checkboxes; allow multiple selections.",
+            "script": {
+                "question_text": "Which of the following devices do you primarily use for remote work? (Select all that apply)",
+                "answer_options": [
+                    "Company-issued laptop",
+                    "Personal laptop",
+                    "Desktop computer",
+                    "Tablet",
+                    "Smartphone",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please specify the 'Other' device you use for remote work:",
+            "answer_options": [],
+            "routing_logic": "If Q2 selected 'Other'",
+            "client_notes": "Open-text field; ensure mobile-friendly input.",
+            "scripter_notes": "Open-text input; display only if 'Other' is selected in Q2.",
+            "script": {
+                "question_text": "Please specify the 'Other' device you use for remote work:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q2 selected 'Other'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the company-provided IT support for remote work?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point satisfaction scale; include 'Neutral' midpoint.",
+            "scripter_notes": "Single-choice radio buttons; mandatory response.",
+            "script": {
+                "question_text": "How satisfied are you with the company-provided IT support for remote work?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What type of technical issues do you encounter most frequently? (Select up to 3)",
+            "answer_options": [
+                "Slow internet connection",
+                "VPN connectivity problems",
+                "Software crashes/freezes",
+                "Hardware malfunctions",
+                "Audio/video issues in meetings",
+                "Difficulty accessing company servers",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 selected 'Daily', 'Weekly', or 'Monthly'",
+            "client_notes": "Limit to 3 selections to prioritize pain points.",
+            "scripter_notes": "Multi-choice checkboxes with max 3 selections; display only if Q1 indicates frequent issues.",
+            "script": {
+                "question_text": "What type of technical issues do you encounter most frequently? (Select up to 3)",
+                "answer_options": [
+                    "Slow internet connection",
+                    "VPN connectivity problems",
+                    "Software crashes/freezes",
+                    "Hardware malfunctions",
+                    "Audio/video issues in meetings",
+                    "Difficulty accessing company servers",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 selected 'Daily', 'Weekly', or 'Monthly'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe the most disruptive technical issue you faced in the past month:",
+            "answer_options": [],
+            "routing_logic": "If Q1 selected 'Daily', 'Weekly', or 'Monthly'",
+            "client_notes": "Open-text to capture qualitative insights; limit to 500 characters.",
+            "scripter_notes": "Open-text input with character limit; display only if Q1 indicates frequent issues.",
+            "script": {
+                "question_text": "Please describe the most disruptive technical issue you faced in the past month:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 selected 'Daily', 'Weekly', or 'Monthly'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Does your home internet speed meet your work requirements?",
+            "answer_options": [
+                "Yes, consistently",
+                "Yes, but occasionally slow",
+                "No, it frequently disrupts work",
+                "I use a mobile hotspot"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include hotspot option for employees without fixed broadband.",
+            "scripter_notes": "Single-choice radio buttons; mandatory response.",
+            "script": {
+                "question_text": "Does your home internet speed meet your work requirements?",
+                "answer_options": [
+                    "Yes, consistently",
+                    "Yes, but occasionally slow",
+                    "No, it frequently disrupts work",
+                    "I use a mobile hotspot"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which communication tools do you use daily for work? (Select all that apply)",
+            "answer_options": [
+                "Email",
+                "Microsoft Teams",
+                "Slack",
+                "Zoom",
+                "Google Meet",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice to identify tool adoption; benchmark against IT licenses.",
+            "scripter_notes": "Multi-choice checkboxes; allow multiple selections.",
+            "script": {
+                "question_text": "Which communication tools do you use daily for work? (Select all that apply)",
+                "answer_options": [
+                    "Email",
+                    "Microsoft Teams",
+                    "Slack",
+                    "Zoom",
+                    "Google Meet",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What additional technology or equipment would improve your remote work experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-text to uncover unmet needs; guide IT procurement.",
+            "scripter_notes": "Open-text input; optional response.",
+            "script": {
+                "question_text": "What additional technology or equipment would improve your remote work experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to recommend the company's remote work technology setup to a colleague? (0-10 scale)",
+            "answer_options": [
+                "0 (Not at all likely)",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 (Extremely likely)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use NPS scale to benchmark satisfaction.",
+            "scripter_notes": "Single-choice radio buttons; 11-point scale.",
+            "script": {
+                "question_text": "How likely are you to recommend the company's remote work technology setup to a colleague? (0-10 scale)",
+                "answer_options": [
+                    "0 (Not at all likely)",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 (Extremely likely)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

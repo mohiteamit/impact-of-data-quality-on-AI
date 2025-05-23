@@ -1,0 +1,269 @@
+{
+    "survey_id": "d0c494c5-3ccd-4e53-a98f-1d322726645a",
+    "survey_name": "Consumer Preferences for Home Security Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, concerns, and experiences with home security systems to help manufacturers and service providers improve their offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently use a home security system?",
+            "answer_options": [
+                "Yes, I own a home security system",
+                "No, but I plan to purchase one in the next 6 months",
+                "No, but I plan to purchase one in the next 1-2 years",
+                "No, and I do not plan to purchase one"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button format for clarity. Ensure the 'No' options are distinct to capture intent.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Do you currently use a home security system?",
+                "answer_options": [
+                    "Yes, I own a home security system",
+                    "No, but I plan to purchase one in the next 6 months",
+                    "No, but I plan to purchase one in the next 1-2 years",
+                    "No, and I do not plan to purchase one"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What type of home security system do you use?",
+            "answer_options": [
+                "Professional monitoring service (e.g., ADT, SimpliSafe)",
+                "Self-monitored system (e.g., Ring, Nest)",
+                "DIY system with no monitoring",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes, I own a home security system'",
+            "client_notes": "Include an 'Other' option with a text field for unlisted responses.",
+            "scripter_notes": "Field type: radio button with open-text follow-up for 'Other' (SINGLE_CHOICE with conditional OPEN_TEXT)",
+            "script": {
+                "question_text": "What type of home security system do you use?",
+                "answer_options": [
+                    "Professional monitoring service (e.g., ADT, SimpliSafe)",
+                    "Self-monitored system (e.g., Ring, Nest)",
+                    "DIY system with no monitoring",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes, I own a home security system'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which features are most important to you when selecting a home security system? (Select up to 3)",
+            "answer_options": [
+                "24/7 professional monitoring",
+                "Smart home integration (e.g., Alexa, Google Home)",
+                "Mobile app control",
+                "Camera quality",
+                "Ease of installation",
+                "Cost of monthly subscription",
+                "Battery backup",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a checkbox format for multi-selection. Limit to 3 choices to prioritize preferences.",
+            "scripter_notes": "Field type: checkbox with max 3 selections (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which features are most important to you when selecting a home security system? (Select up to 3)",
+                "answer_options": [
+                    "24/7 professional monitoring",
+                    "Smart home integration (e.g., Alexa, Google Home)",
+                    "Mobile app control",
+                    "Camera quality",
+                    "Ease of installation",
+                    "Cost of monthly subscription",
+                    "Battery backup",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is your biggest concern about home security systems?",
+            "answer_options": [
+                "Privacy/data security",
+                "Cost",
+                "False alarms",
+                "Complexity of use",
+                "Contract terms",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice with an 'Other' option for unlisted concerns.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What is your biggest concern about home security systems?",
+                "answer_options": [
+                    "Privacy/data security",
+                    "Cost",
+                    "False alarms",
+                    "Complexity of use",
+                    "Contract terms",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How much do you typically spend per month on a home security system?",
+            "answer_options": [
+                "$0 (self-monitored/no subscription)",
+                "$1-$20",
+                "$21-$40",
+                "$41-$60",
+                "More than $60",
+                "I don't know"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes, I own a home security system'",
+            "client_notes": "Use a single-choice format with clear price ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How much do you typically spend per month on a home security system?",
+                "answer_options": [
+                    "$0 (self-monitored/no subscription)",
+                    "$1-$20",
+                    "$21-$40",
+                    "$41-$60",
+                    "More than $60",
+                    "I don't know"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes, I own a home security system'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What brands of home security systems are you familiar with? (Select all that apply)",
+            "answer_options": [
+                "ADT",
+                "SimpliSafe",
+                "Ring",
+                "Nest",
+                "Vivint",
+                "Frontpoint",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Checkbox format for multi-selection. Include an 'Other' option.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What brands of home security systems are you familiar with? (Select all that apply)",
+                "answer_options": [
+                    "ADT",
+                    "SimpliSafe",
+                    "Ring",
+                    "Nest",
+                    "Vivint",
+                    "Frontpoint",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How satisfied are you with your current home security system?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "N/A (I don't own one)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale. Include 'N/A' for non-owners.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with your current home security system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "N/A (I don't own one)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What factors would motivate you to switch to a different home security provider?",
+            "answer_options": [
+                "Lower cost",
+                "Better features",
+                "Improved customer service",
+                "Positive reviews/recommendations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes, I own a home security system'",
+            "client_notes": "Checkbox format for multi-selection. Include 'Other' for unlisted reasons.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What factors would motivate you to switch to a different home security provider?",
+                "answer_options": [
+                    "Lower cost",
+                    "Better features",
+                    "Improved customer service",
+                    "Positive reviews/recommendations",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes, I own a home security system'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How did you first hear about your current home security system?",
+            "answer_options": [
+                "Online advertisement",
+                "Word of mouth/recommendation",
+                "In-store display",
+                "Social media",
+                "Television/radio ad",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes, I own a home security system'",
+            "client_notes": "Single-choice format with 'Other' option.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How did you first hear about your current home security system?",
+                "answer_options": [
+                    "Online advertisement",
+                    "Word of mouth/recommendation",
+                    "In-store display",
+                    "Social media",
+                    "Television/radio ad",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes, I own a home security system'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional features would you like to see in future home security systems?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture innovative ideas.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What additional features would you like to see in future home security systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

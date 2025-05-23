@@ -1,0 +1,249 @@
+{
+    "survey_id": "5e2e6301-92d4-465d-9adb-b8257ea12851",
+    "survey_name": "Hybrid Event Experience Survey",
+    "survey_brief": "This survey aims to evaluate participant experiences and satisfaction with hybrid events (combining in-person and virtual elements) to improve future event planning and execution.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which type of event did you primarily attend?",
+            "answer_options": [
+                "In-person only",
+                "Virtual only",
+                "Both in-person and virtual"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use radio buttons for clear single-choice selection. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Which type of event did you primarily attend?",
+                "answer_options": [
+                    "In-person only",
+                    "Virtual only",
+                    "Both in-person and virtual"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied were you with the overall hybrid event experience?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied were you with the overall hybrid event experience?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What aspects of the virtual event platform did you find most useful?",
+            "answer_options": [
+                "Live streaming quality",
+                "Interactive Q&A features",
+                "Networking opportunities",
+                "On-demand content access",
+                "Mobile app functionality"
+            ],
+            "routing_logic": "Display if Q1 answer is 'Virtual only' or 'Both in-person and virtual'",
+            "client_notes": "Allow multiple selections to capture all relevant features. Use checkboxes.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What aspects of the virtual event platform did you find most useful?",
+                "answer_options": [
+                    "Live streaming quality",
+                    "Interactive Q&A features",
+                    "Networking opportunities",
+                    "On-demand content access",
+                    "Mobile app functionality"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 answer is 'Virtual only' or 'Both in-person and virtual'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges did you face while attending the event virtually?",
+            "answer_options": [],
+            "routing_logic": "Display if Q1 answer is 'Virtual only' or 'Both in-person and virtual'",
+            "client_notes": "Open-ended to capture diverse responses. Limit to 500 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What challenges did you face while attending the event virtually?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q1 answer is 'Virtual only' or 'Both in-person and virtual'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the quality of the in-person venue (e.g., location, facilities, safety measures)?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Fair",
+                "Poor",
+                "Did not attend in-person"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Include 'Did not attend in-person' as an opt-out option for virtual attendees.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How would you rate the quality of the in-person venue (e.g., location, facilities, safety measures)?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Fair",
+                    "Poor",
+                    "Did not attend in-person"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Did the hybrid format make the event more accessible to you?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No difference",
+                "No, it was less accessible"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use radio buttons for clear single-choice selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Did the hybrid format make the event more accessible to you?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No difference",
+                    "No, it was less accessible"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which communication channels did you use to stay updated about the event?",
+            "answer_options": [
+                "Email",
+                "Event website",
+                "Social media",
+                "Mobile app notifications",
+                "Word of mouth"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Allow multiple selections to capture all communication channels used.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which communication channels did you use to stay updated about the event?",
+                "answer_options": [
+                    "Email",
+                    "Event website",
+                    "Social media",
+                    "Mobile app notifications",
+                    "Word of mouth"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Would you attend another hybrid event in the future?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Unsure",
+                "Probably not",
+                "Definitely not"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a 5-point scale to measure likelihood accurately.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you attend another hybrid event in the future?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Unsure",
+                    "Probably not",
+                    "Definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What suggestions do you have to improve future hybrid events?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Open-ended to capture detailed feedback. Limit to 1000 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What suggestions do you have to improve future hybrid events?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to recommend this hybrid event to a colleague or friend?",
+            "answer_options": [
+                "0 - Not at all likely",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 - Extremely likely"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use an 11-point scale for granularity. Display as a slider on digital platforms.",
+            "scripter_notes": "Field type: slider (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to recommend this hybrid event to a colleague or friend?",
+                "answer_options": [
+                    "0 - Not at all likely",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 - Extremely likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        }
+    ]
+}

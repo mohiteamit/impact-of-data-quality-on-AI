@@ -1,0 +1,177 @@
+{
+    "survey_id": "d12dd3e3-5c0a-484b-93eb-1da6ed4d2137",
+    "survey_name": "Car Rental Service Customer Experience Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and identify key improvement areas for car rental service providers by assessing various aspects of the rental experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently have you used car rental services in the past 12 months?",
+            "answer_options": [
+                "Never",
+                "1-2 times",
+                "3-5 times",
+                "More than 5 times"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Use a horizontal radio button layout for mobile compatibility",
+            "scripter_notes": "Single-choice radio buttons with required validation",
+            "script": {
+                "question_text": "How frequently have you used car rental services in the past 12 months?",
+                "answer_options": [
+                    "Never",
+                    "1-2 times",
+                    "3-5 times",
+                    "More than 5 times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the vehicle availability at your preferred rental location?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Include a 'Not Applicable' option if needed, but analyze impact on data quality",
+            "scripter_notes": "Single-choice dropdown with optional 'N/A' toggle",
+            "script": {
+                "question_text": "How satisfied are you with the vehicle availability at your preferred rental location?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following factors influenced your choice of car rental company? (Select all that apply)",
+            "answer_options": [
+                "Competitive pricing",
+                "Vehicle variety",
+                "Loyalty programs",
+                "Convenient pickup locations",
+                "Online booking experience",
+                "Brand reputation"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Limit selections to 3 choices maximum to force prioritization",
+            "scripter_notes": "Multi-choice checkboxes with max-selection validation",
+            "script": {
+                "question_text": "Which of the following factors influenced your choice of car rental company? (Select all that apply)",
+                "answer_options": [
+                    "Competitive pricing",
+                    "Vehicle variety",
+                    "Loyalty programs",
+                    "Convenient pickup locations",
+                    "Online booking experience",
+                    "Brand reputation"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the transparency of additional fees during the booking process?",
+            "answer_options": [
+                "Extremely Transparent",
+                "Transparent",
+                "Neutral",
+                "Not Transparent",
+                "Completely Unclear"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Consider adding tooltip examples of common fees",
+            "scripter_notes": "Single-choice matrix table for multi-question efficiency",
+            "script": {
+                "question_text": "How would you rate the transparency of additional fees during the booking process?",
+                "answer_options": [
+                    "Extremely Transparent",
+                    "Transparent",
+                    "Neutral",
+                    "Not Transparent",
+                    "Completely Unclear"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for the vehicle return process?",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Use text analysis tools to categorize open-ended responses",
+            "scripter_notes": "Open-text field with 500-character limit",
+            "script": {
+                "question_text": "What improvements would you suggest for the vehicle return process?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend our car rental service to a colleague?",
+            "answer_options": [
+                "Very Likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very Unlikely"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "This is a standard NPS precursor question",
+            "scripter_notes": "Single-choice radio buttons with visual scale",
+            "script": {
+                "question_text": "How likely are you to recommend our car rental service to a colleague?",
+                "answer_options": [
+                    "Very Likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which age group do you belong to?",
+            "answer_options": [
+                "18-24 years",
+                "25-34 years",
+                "35-44 years",
+                "45-54 years",
+                "55+ years"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Group responses into generational cohorts during analysis",
+            "scripter_notes": "Single-choice dropdown with privacy disclaimer",
+            "script": {
+                "question_text": "Which age group do you belong to?",
+                "answer_options": [
+                    "18-24 years",
+                    "25-34 years",
+                    "35-44 years",
+                    "45-54 years",
+                    "55+ years"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        }
+    ]
+}

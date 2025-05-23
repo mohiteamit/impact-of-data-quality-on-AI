@@ -1,0 +1,297 @@
+{
+    "survey_id": "8aa4645b-ac47-4001-8746-c6e13fd7401e",
+    "survey_name": "Workplace Technology Adoption Survey",
+    "survey_brief": "Assess employee adaptation to workplace technologies and identify barriers to effective tool utilization.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How comfortable do you feel using your organization's current technology tools?",
+            "answer_options": [
+                "Very comfortable",
+                "Somewhat comfortable",
+                "Neutral",
+                "Somewhat uncomfortable",
+                "Very uncomfortable"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Use a standard 5-point Likert scale. Ensure mobile-responsive layout.",
+            "scripter_notes": "Radio buttons, single-choice. Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "How comfortable do you feel using your organization's current technology tools?",
+                "answer_options": [
+                    "Very comfortable",
+                    "Somewhat comfortable",
+                    "Neutral",
+                    "Somewhat uncomfortable",
+                    "Very uncomfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of these tools do you use daily? (Select all that apply)",
+            "answer_options": [
+                "Project management software",
+                "CRM platform",
+                "Video conferencing tools",
+                "Internal communication apps",
+                "Cloud storage systems"
+            ],
+            "routing_logic": "Display after Q1",
+            "client_notes": "Limit to 5 core tools. Include 'Other' field if needed in future iterations.",
+            "scripter_notes": "Checkbox multi-choice. Add vertical stacking for readability.",
+            "script": {
+                "question_text": "Which of these tools do you use daily? (Select all that apply)",
+                "answer_options": [
+                    "Project management software",
+                    "CRM platform",
+                    "Video conferencing tools",
+                    "Internal communication apps",
+                    "Cloud storage systems"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display after Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you encounter technical issues that disrupt your workflow?",
+            "answer_options": [
+                "Multiple times daily",
+                "Once daily",
+                "2-3 times weekly",
+                "Once weekly",
+                "Rarely/Never"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Use clear frequency anchors. Consider adding examples of 'technical issues' in survey instructions.",
+            "scripter_notes": "Radio buttons, single-choice. Display options in descending frequency order.",
+            "script": {
+                "question_text": "How often do you encounter technical issues that disrupt your workflow?",
+                "answer_options": [
+                    "Multiple times daily",
+                    "Once daily",
+                    "2-3 times weekly",
+                    "Once weekly",
+                    "Rarely/Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with IT support response times?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display if Q3 answered with any option except 'Rarely/Never'",
+            "client_notes": "Include N/A option if routing logic cannot be fully reliable",
+            "scripter_notes": "Radio buttons, single-choice. Implement skip logic based on Q3 response.",
+            "script": {
+                "question_text": "How satisfied are you with IT support response times?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q3 answered with any option except 'Rarely/Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What types of training have you received for workplace technologies?",
+            "answer_options": [
+                "In-person workshops",
+                "Online self-paced modules",
+                "Peer mentoring",
+                "One-on-one coaching",
+                "No formal training"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Allow multiple selections but make 'No formal training' mutually exclusive",
+            "scripter_notes": "Checkbox multi-choice with validation: auto-deselect other options if 'No formal training' selected",
+            "script": {
+                "question_text": "What types of training have you received for workplace technologies?",
+                "answer_options": [
+                    "In-person workshops",
+                    "Online self-paced modules",
+                    "Peer mentoring",
+                    "One-on-one coaching",
+                    "No formal training"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How effective was the training you received?",
+            "answer_options": [
+                "Extremely effective",
+                "Moderately effective",
+                "Slightly effective",
+                "Ineffective",
+                "Training not applicable"
+            ],
+            "routing_logic": "Display if Q5 does NOT have 'No formal training' selected",
+            "client_notes": "Include neutral midpoint. Clarify 'not applicable' refers to training content relevance",
+            "scripter_notes": "Radio buttons, single-choice. Implement logic to hide if Q5 = 'No formal training'",
+            "script": {
+                "question_text": "How effective was the training you received?",
+                "answer_options": [
+                    "Extremely effective",
+                    "Moderately effective",
+                    "Slightly effective",
+                    "Ineffective",
+                    "Training not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q5 does NOT have 'No formal training' selected"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What would help you adopt new technologies faster? (Select up to 3)",
+            "answer_options": [
+                "Better onboarding materials",
+                "Extended trial periods",
+                "Executive leadership support",
+                "User-friendly interfaces",
+                "Cross-departmental knowledge sharing"
+            ],
+            "routing_logic": "Display after Q6",
+            "client_notes": "Limit selections to prioritize resources. Monitor for overlapping concepts in open-text responses",
+            "scripter_notes": "Checkbox multi-choice with max selection validation. Randomize option order.",
+            "script": {
+                "question_text": "What would help you adopt new technologies faster? (Select up to 3)",
+                "answer_options": [
+                    "Better onboarding materials",
+                    "Extended trial periods",
+                    "Executive leadership support",
+                    "User-friendly interfaces",
+                    "Cross-departmental knowledge sharing"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display after Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How has technology adoption impacted your productivity?",
+            "answer_options": [
+                "Significantly increased",
+                "Slightly increased",
+                "No change",
+                "Slightly decreased",
+                "Significantly decreased"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Include comparative time frame reference in survey introduction",
+            "scripter_notes": "Radio buttons, single-choice. Use balanced polarity scale.",
+            "script": {
+                "question_text": "How has technology adoption impacted your productivity?",
+                "answer_options": [
+                    "Significantly increased",
+                    "Slightly increased",
+                    "No change",
+                    "Slightly decreased",
+                    "Significantly decreased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is the biggest challenge you face when learning new workplace technologies?",
+            "answer_options": [],
+            "routing_logic": "Display if Q3 answered with 'Multiple times daily' or 'Once daily'",
+            "client_notes": "Use text analysis tools post-survey to identify common themes",
+            "scripter_notes": "Open-text field with 500-character limit. Trigger based on Q3 responses.",
+            "script": {
+                "question_text": "What is the biggest challenge you face when learning new workplace technologies?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q3 answered with 'Multiple times daily' or 'Once daily'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional support would improve your technology experience?",
+            "answer_options": [],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Use optional field to reduce respondent burden",
+            "scripter_notes": "Open-text field with 'Optional' label. 300-character limit.",
+            "script": {
+                "question_text": "What additional support would improve your technology experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How willing are you to adopt emerging technologies?",
+            "answer_options": [
+                "Extremely willing",
+                "Somewhat willing",
+                "Neutral",
+                "Somewhat reluctant",
+                "Very reluctant"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Correlate this with Q1 responses for change readiness analysis",
+            "scripter_notes": "Radio buttons, single-choice. Add progress bar at this stage.",
+            "script": {
+                "question_text": "How willing are you to adopt emerging technologies?",
+                "answer_options": [
+                    "Extremely willing",
+                    "Somewhat willing",
+                    "Neutral",
+                    "Somewhat reluctant",
+                    "Very reluctant"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Which department do you work in?",
+            "answer_options": [
+                "Engineering/IT",
+                "Sales/Marketing",
+                "Operations",
+                "Human Resources",
+                "Executive Leadership",
+                "Other"
+            ],
+            "routing_logic": "Display at survey end",
+            "client_notes": "Use for demographic segmentation. Include 'Prefer not to say' if required by privacy policies",
+            "scripter_notes": "Radio buttons, single-choice. Add 'Other' text field conditional logic.",
+            "script": {
+                "question_text": "Which department do you work in?",
+                "answer_options": [
+                    "Engineering/IT",
+                    "Sales/Marketing",
+                    "Operations",
+                    "Human Resources",
+                    "Executive Leadership",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display at survey end"
+            }
+        }
+    ]
+}

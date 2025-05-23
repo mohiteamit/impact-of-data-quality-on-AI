@@ -1,0 +1,243 @@
+{
+    "survey_id": "ca9a61c5-1ce3-4dc0-ac72-55a134c5fdaa",
+    "survey_name": "Smart Thermostat Adoption and Satisfaction Survey",
+    "survey_brief": "This survey aims to understand consumer adoption rates, satisfaction levels, and preferences regarding smart thermostat technology in residential settings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own a smart thermostat in your household?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This is a screening question to segment the survey population.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Do you currently own a smart thermostat in your household?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which brand of smart thermostat do you own?",
+            "answer_options": [
+                "Nest",
+                "Ecobee",
+                "Honeywell",
+                "Emerson",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 == 'Yes'",
+            "client_notes": "Include an 'Other' option to capture less common brands.",
+            "scripter_notes": "Field type: radio button with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which brand of smart thermostat do you own?",
+                "answer_options": [
+                    "Nest",
+                    "Ecobee",
+                    "Honeywell",
+                    "Emerson",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influenced your decision to purchase a smart thermostat? (Select all that apply)",
+            "answer_options": [
+                "Energy savings",
+                "Remote control via smartphone",
+                "Integration with other smart home devices",
+                "Environmental concerns",
+                "Rebates or discounts",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 == 'Yes'",
+            "client_notes": "This is a multi-choice question to understand purchase drivers.",
+            "scripter_notes": "Field type: checkboxes (multi-choice).",
+            "script": {
+                "question_text": "What factors influenced your decision to purchase a smart thermostat? (Select all that apply)",
+                "answer_options": [
+                    "Energy savings",
+                    "Remote control via smartphone",
+                    "Integration with other smart home devices",
+                    "Environmental concerns",
+                    "Rebates or discounts",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your smart thermostat?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 == 'Yes'",
+            "client_notes": "Use a standard 5-point Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with your smart thermostat?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in smart thermostats?",
+            "answer_options": [],
+            "routing_logic": "Only if Q1 == 'Yes'",
+            "client_notes": "Open-ended question to gather qualitative feedback for product development.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What improvements would you like to see in smart thermostats?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q1 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you do not own a smart thermostat, what is the primary reason?",
+            "answer_options": [
+                "Too expensive",
+                "Not enough perceived benefits",
+                "Concerns about data privacy",
+                "Prefer traditional thermostats",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 == 'No'",
+            "client_notes": "This question helps identify barriers to adoption.",
+            "scripter_notes": "Field type: radio button with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "If you do not own a smart thermostat, what is the primary reason?",
+                "answer_options": [
+                    "Too expensive",
+                    "Not enough perceived benefits",
+                    "Concerns about data privacy",
+                    "Prefer traditional thermostats",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 == 'No'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to purchase a smart thermostat in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Only if Q1 == 'No'",
+            "client_notes": "Use a standard 5-point Likert scale for likelihood measurement.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to purchase a smart thermostat in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 == 'No'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What is your age group?",
+            "answer_options": [
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55-64",
+                "65+"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard demographic question for segmentation.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "What is your age group?",
+                "answer_options": [
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55-64",
+                    "65+"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is your annual household income range?",
+            "answer_options": [
+                "Less than $30,000",
+                "$30,000 - $59,999",
+                "$60,000 - $89,999",
+                "$90,000 - $119,999",
+                "$120,000 or more",
+                "Prefer not to say"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard demographic question for segmentation.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "What is your annual household income range?",
+                "answer_options": [
+                    "Less than $30,000",
+                    "$30,000 - $59,999",
+                    "$60,000 - $89,999",
+                    "$90,000 - $119,999",
+                    "$120,000 or more",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you have any additional comments about smart thermostats?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture any additional feedback.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "Do you have any additional comments about smart thermostats?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

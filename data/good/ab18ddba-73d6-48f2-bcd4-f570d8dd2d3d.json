@@ -1,0 +1,277 @@
+{
+    "survey_id": "ab18ddba-73d6-48f2-bcd4-f570d8dd2d3d",
+    "survey_name": "Sustainable Transportation Preferences Survey",
+    "survey_brief": "This survey aims to understand public preferences and behaviors regarding sustainable transportation options, including barriers to adoption and satisfaction levels with existing services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following sustainable transportation options do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Bicycle",
+                "Electric scooter",
+                "Public transit (bus, train, subway)",
+                "Carpooling or ridesharing",
+                "Walking",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to allow multiple selections. Ensure options are clear and cover common sustainable transportation methods.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following sustainable transportation options do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Bicycle",
+                    "Electric scooter",
+                    "Public transit (bus, train, subway)",
+                    "Carpooling or ridesharing",
+                    "Walking",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you use sustainable transportation options?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format. Ensure the scale covers a broad range of frequencies.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use sustainable transportation options?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the primary reasons you choose sustainable transportation options? (Select all that apply)",
+            "answer_options": [
+                "Environmental concerns",
+                "Cost savings",
+                "Convenience",
+                "Health benefits",
+                "Lack of access to a personal vehicle",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents who selected at least one option in Q1",
+            "client_notes": "Use a multi-choice format with an 'Other' option for additional responses.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE) with an open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What are the primary reasons you choose sustainable transportation options? (Select all that apply)",
+                "answer_options": [
+                    "Environmental concerns",
+                    "Cost savings",
+                    "Convenience",
+                    "Health benefits",
+                    "Lack of access to a personal vehicle",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents who selected at least one option in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you selected 'Other' in Q3, please specify:",
+            "answer_options": [],
+            "routing_logic": "Only respondents who selected 'Other' in Q3",
+            "client_notes": "Open-text field to capture unique responses. Ensure mobile-friendly input.",
+            "scripter_notes": "Field type: Open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "If you selected 'Other' in Q3, please specify:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only respondents who selected 'Other' in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What barriers prevent you from using sustainable transportation options more frequently? (Select all that apply)",
+            "answer_options": [
+                "Limited availability in my area",
+                "Inconvenient schedules or routes",
+                "Safety concerns",
+                "Lack of infrastructure (e.g., bike lanes, charging stations)",
+                "Prefer the comfort of a personal vehicle",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format with an 'Other' option for additional responses.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE) with an open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What barriers prevent you from using sustainable transportation options more frequently? (Select all that apply)",
+                "answer_options": [
+                    "Limited availability in my area",
+                    "Inconvenient schedules or routes",
+                    "Safety concerns",
+                    "Lack of infrastructure (e.g., bike lanes, charging stations)",
+                    "Prefer the comfort of a personal vehicle",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you selected 'Other' in Q5, please specify:",
+            "answer_options": [],
+            "routing_logic": "Only respondents who selected 'Other' in Q5",
+            "client_notes": "Open-text field to capture unique responses. Ensure mobile-friendly input.",
+            "scripter_notes": "Field type: Open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "If you selected 'Other' in Q5, please specify:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only respondents who selected 'Other' in Q5"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How satisfied are you with the sustainable transportation options available in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "All respondents who selected at least one option in Q1",
+            "client_notes": "Use a single-choice format with a balanced scale. Include 'Not applicable' for those who do not use these options.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the sustainable transportation options available in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected at least one option in Q1"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would encourage you to use sustainable transportation options more often? (Select all that apply)",
+            "answer_options": [
+                "More frequent service or availability",
+                "Better infrastructure (e.g., bike lanes, charging stations)",
+                "Lower costs",
+                "Improved safety measures",
+                "Real-time tracking or app integration",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format with an 'Other' option for additional responses.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE) with an open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What improvements would encourage you to use sustainable transportation options more often? (Select all that apply)",
+                "answer_options": [
+                    "More frequent service or availability",
+                    "Better infrastructure (e.g., bike lanes, charging stations)",
+                    "Lower costs",
+                    "Improved safety measures",
+                    "Real-time tracking or app integration",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "If you selected 'Other' in Q8, please specify:",
+            "answer_options": [],
+            "routing_logic": "Only respondents who selected 'Other' in Q8",
+            "client_notes": "Open-text field to capture unique responses. Ensure mobile-friendly input.",
+            "scripter_notes": "Field type: Open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "If you selected 'Other' in Q8, please specify:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only respondents who selected 'Other' in Q8"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you own or have access to a personal vehicle?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format. This helps contextualize responses about barriers and preferences.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Do you own or have access to a personal vehicle?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How likely are you to switch to a more sustainable transportation option if improvements are made?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format with a balanced scale. This measures potential behavior change.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to switch to a more sustainable transportation option if improvements are made?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "What additional comments or suggestions do you have regarding sustainable transportation options in your area?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-text field to capture qualitative feedback. Ensure mobile-friendly input.",
+            "scripter_notes": "Field type: Open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What additional comments or suggestions do you have regarding sustainable transportation options in your area?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

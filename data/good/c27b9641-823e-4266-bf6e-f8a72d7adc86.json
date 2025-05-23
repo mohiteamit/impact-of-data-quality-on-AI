@@ -1,0 +1,239 @@
+{
+    "survey_id": "c27b9641-823e-4266-bf6e-f8a72d7adc86",
+    "survey_name": "Renewable Energy Adoption and Awareness Survey",
+    "survey_brief": "This survey aims to understand public awareness, attitudes, and barriers related to renewable energy adoption in residential settings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following renewable energy sources are you familiar with? (Select all that apply)",
+            "answer_options": [
+                "Solar power",
+                "Wind energy",
+                "Geothermal energy",
+                "Hydropower",
+                "Biomass energy",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to allow multiple selections. Ensure options cover major renewable energy types.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following renewable energy sources are you familiar with? (Select all that apply)",
+                "answer_options": [
+                    "Solar power",
+                    "Wind energy",
+                    "Geothermal energy",
+                    "Hydropower",
+                    "Biomass energy",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How likely are you to consider installing renewable energy systems (e.g., solar panels) in your home in the next 5 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for measuring likelihood. Randomize order if needed to avoid bias.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to consider installing renewable energy systems (e.g., solar panels) in your home in the next 5 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary barrier preventing you from adopting renewable energy at home?",
+            "answer_options": [
+                "High upfront costs",
+                "Lack of information",
+                "Uncertainty about savings",
+                "Home unsuitable (e.g., roof type)",
+                "Lack of government incentives",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Somewhat unlikely' or 'Very unlikely' in Q2",
+            "client_notes": "Include an 'Other' option with a text field for additional barriers not listed.",
+            "scripter_notes": "Field type: Radio button with optional open-text (SINGLE_CHOICE with conditional OPEN_TEXT)",
+            "script": {
+                "question_text": "What is the primary barrier preventing you from adopting renewable energy at home?",
+                "answer_options": [
+                    "High upfront costs",
+                    "Lack of information",
+                    "Uncertainty about savings",
+                    "Home unsuitable (e.g., roof type)",
+                    "Lack of government incentives",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Somewhat unlikely' or 'Very unlikely' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you selected 'Other' in Q3, please specify the barrier:",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Other (please specify)' in Q3",
+            "client_notes": "Use an open-text field to capture unique responses. Limit to 200 characters.",
+            "scripter_notes": "Field type: Open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "If you selected 'Other' in Q3, please specify the barrier:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Other (please specify)' in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following incentives would most encourage you to adopt renewable energy? (Select up to 3)",
+            "answer_options": [
+                "Tax credits or rebates",
+                "Low-interest financing",
+                "Guaranteed buyback of excess energy",
+                "Free energy audits",
+                "Community solar programs",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow respondents to select up to 3 options. Randomize option order to minimize bias.",
+            "scripter_notes": "Field type: Checkbox with max selections = 3 (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following incentives would most encourage you to adopt renewable energy? (Select up to 3)",
+                "answer_options": [
+                    "Tax credits or rebates",
+                    "Low-interest financing",
+                    "Guaranteed buyback of excess energy",
+                    "Free energy audits",
+                    "Community solar programs",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How informed do you feel about government policies supporting renewable energy in your area?",
+            "answer_options": [
+                "Very informed",
+                "Somewhat informed",
+                "Neutral",
+                "Somewhat uninformed",
+                "Very uninformed"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale. Consider adding a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How informed do you feel about government policies supporting renewable energy in your area?",
+                "answer_options": [
+                    "Very informed",
+                    "Somewhat informed",
+                    "Neutral",
+                    "Somewhat uninformed",
+                    "Very uninformed"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What is your primary source of information about renewable energy?",
+            "answer_options": [
+                "News media",
+                "Government websites",
+                "Social media",
+                "Friends/family",
+                "Energy providers",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with a text field for additional sources not listed.",
+            "scripter_notes": "Field type: Radio button with optional open-text (SINGLE_CHOICE with conditional OPEN_TEXT)",
+            "script": {
+                "question_text": "What is your primary source of information about renewable energy?",
+                "answer_options": [
+                    "News media",
+                    "Government websites",
+                    "Social media",
+                    "Friends/family",
+                    "Energy providers",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "If you selected 'Other' in Q7, please specify your primary source:",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Other (please specify)' in Q7",
+            "client_notes": "Use an open-text field to capture unique responses. Limit to 100 characters.",
+            "scripter_notes": "Field type: Open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "If you selected 'Other' in Q7, please specify your primary source:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Other (please specify)' in Q7"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How important is environmental impact in your decision to adopt renewable energy?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How important is environmental impact in your decision to adopt renewable energy?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional information or resources would help you make a decision about renewable energy adoption?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to capture qualitative insights. Limit to 300 characters.",
+            "scripter_notes": "Field type: Open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What additional information or resources would help you make a decision about renewable energy adoption?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

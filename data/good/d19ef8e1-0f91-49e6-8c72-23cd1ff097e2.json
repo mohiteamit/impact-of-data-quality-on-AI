@@ -1,0 +1,255 @@
+{
+    "survey_id": "d19ef8e1-0f91-49e6-8c72-23cd1ff097e2",
+    "survey_name": "AI-Powered Chatbot User Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate user satisfaction with AI-powered chatbots in customer support contexts, identifying strengths and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you interact with AI-powered chatbots for customer support?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you interact with AI-powered chatbots for customer support?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following industries do you primarily interact with AI chatbots in? (Select all that apply)",
+            "answer_options": [
+                "Retail/E-commerce",
+                "Banking/Finance",
+                "Telecommunications",
+                "Healthcare",
+                "Travel/Hospitality",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Add a text input for 'Other'.",
+            "script": {
+                "question_text": "Which of the following industries do you primarily interact with AI chatbots in? (Select all that apply)",
+                "answer_options": [
+                    "Retail/E-commerce",
+                    "Banking/Finance",
+                    "Telecommunications",
+                    "Healthcare",
+                    "Travel/Hospitality",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with the accuracy of responses provided by AI chatbots? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a Likert scale with radio buttons. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Display scale labels in the UI.",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the accuracy of responses provided by AI chatbots? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you use AI chatbots instead of human customer support?",
+            "answer_options": [
+                "Faster response time",
+                "24/7 availability",
+                "Ease of use",
+                "Preference for automated solutions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Include an 'Other' option with a text field for additional insights.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with an optional text input for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you use AI chatbots instead of human customer support?",
+                "answer_options": [
+                    "Faster response time",
+                    "24/7 availability",
+                    "Ease of use",
+                    "Preference for automated solutions",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you need to escalate your query to a human agent after interacting with an AI chatbot?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Always"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use radio buttons. Options should cover the full range of frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you need to escalate your query to a human agent after interacting with an AI chatbot?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which of the following features would most improve your experience with AI chatbots? (Select up to 3)",
+            "answer_options": [
+                "Better understanding of complex queries",
+                "More personalized responses",
+                "Faster response times",
+                "Integration with live human support",
+                "Multilingual support",
+                "Voice recognition capabilities",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Limit selections to 3 options. Include an 'Other' field for additional suggestions.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with a max selection of 3. Add a text input for 'Other'.",
+            "script": {
+                "question_text": "Which of the following features would most improve your experience with AI chatbots? (Select up to 3)",
+                "answer_options": [
+                    "Better understanding of complex queries",
+                    "More personalized responses",
+                    "Faster response times",
+                    "Integration with live human support",
+                    "Multilingual support",
+                    "Voice recognition capabilities",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What is your biggest frustration when using AI chatbots?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT). Use a multi-line text input.",
+            "script": {
+                "question_text": "What is your biggest frustration when using AI chatbots?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend AI chatbots to others for customer support? (0 = Not at all likely, 10 = Extremely likely)",
+            "answer_options": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a numeric scale with radio buttons. Label the endpoints clearly (0 and 10).",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Display the scale endpoints in the UI.",
+            "script": {
+                "question_text": "How likely are you to recommend AI chatbots to others for customer support? (0 = Not at all likely, 10 = Extremely likely)",
+                "answer_options": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Would you be willing to participate in a follow-up interview to share more detailed feedback?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Simple yes/no question. Ensure the selection is clear.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you be willing to participate in a follow-up interview to share more detailed feedback?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "If you answered 'Yes' to the previous question, please provide your email address for follow-up.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Yes' in Q9",
+            "client_notes": "Use an email input field to validate the format. Clearly state this is optional.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT) with email validation. Only show if Q9 = 'Yes'.",
+            "script": {
+                "question_text": "If you answered 'Yes' to the previous question, please provide your email address for follow-up.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Yes' in Q9"
+            }
+        }
+    ]
+}

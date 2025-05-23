@@ -1,0 +1,357 @@
+{
+    "survey_id": "2beb7682-ac2a-4249-b24e-6ea870398428",
+    "survey_name": "Urban Micro-Mobility Usage and Preferences Survey",
+    "survey_brief": "This survey aims to understand user preferences, satisfaction levels, and barriers related to urban micro-mobility solutions like e-scooters, e-bikes, and bike-sharing programs in metropolitan areas.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which micro-mobility options have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "E-scooters (dockless)",
+                "E-bikes (dockless)",
+                "Bike-sharing (station-based)",
+                "E-scooters (station-based)",
+                "None of the above"
+            ],
+            "routing_logic": "If 'None of the above' is selected, skip to Q10.",
+            "client_notes": "Use a multi-select format with clear visual separation between options. Ensure mobile-friendly touch targets.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox). Include 'None of the above' as an exclusive option with skip logic.",
+            "script": {
+                "question_text": "Which micro-mobility options have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "E-scooters (dockless)",
+                    "E-bikes (dockless)",
+                    "Bike-sharing (station-based)",
+                    "E-scooters (station-based)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If 'None of the above' is selected, skip to Q10."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using micro-mobility services?",
+            "answer_options": [
+                "Commuting to work/school",
+                "Running errands",
+                "Recreational purposes",
+                "Avoiding public transit congestion",
+                "Environmental concerns",
+                "Cost savings"
+            ],
+            "routing_logic": "Display for all users who selected at least one option in Q1.",
+            "client_notes": "Single-choice question. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "What is your primary reason for using micro-mobility services?",
+                "answer_options": [
+                    "Commuting to work/school",
+                    "Running errands",
+                    "Recreational purposes",
+                    "Avoiding public transit congestion",
+                    "Environmental concerns",
+                    "Cost savings"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all users who selected at least one option in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On average, how frequently do you use micro-mobility services per week?",
+            "answer_options": [
+                "Less than once",
+                "1-3 times",
+                "4-6 times",
+                "Daily",
+                "Multiple times per day"
+            ],
+            "routing_logic": "Display for all users who selected at least one option in Q1.",
+            "client_notes": "Use a balanced frequency scale. Include tooltip explaining 'average' refers to typical weeks.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "On average, how frequently do you use micro-mobility services per week?",
+                "answer_options": [
+                    "Less than once",
+                    "1-3 times",
+                    "4-6 times",
+                    "Daily",
+                    "Multiple times per day"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all users who selected at least one option in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the availability of micro-mobility options in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "N/A (haven't used recently)"
+            ],
+            "routing_logic": "Display for all users who selected at least one option in Q1.",
+            "client_notes": "Use a standard 5-point satisfaction scale with neutral midpoint. Include N/A for recent non-users.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "How satisfied are you with the availability of micro-mobility options in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "N/A (haven't used recently)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all users who selected at least one option in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What factors are most important to you when choosing a micro-mobility service? (Select top 3)",
+            "answer_options": [
+                "Cost/pricing",
+                "Availability near start/end points",
+                "Vehicle quality/maintenance",
+                "Ease of parking",
+                "Safety features",
+                "App/user interface quality",
+                "Speed/travel time",
+                "Brand reputation",
+                "Environmental impact"
+            ],
+            "routing_logic": "Display for all users who selected at least one option in Q1.",
+            "client_notes": "Use a 'select up to 3' format with clear instructions. Randomize option order.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with maximum 3 selections enforced.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a micro-mobility service? (Select top 3)",
+                "answer_options": [
+                    "Cost/pricing",
+                    "Availability near start/end points",
+                    "Vehicle quality/maintenance",
+                    "Ease of parking",
+                    "Safety features",
+                    "App/user interface quality",
+                    "Speed/travel time",
+                    "Brand reputation",
+                    "Environmental impact"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display for all users who selected at least one option in Q1."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What safety concerns, if any, prevent you from using micro-mobility services more frequently?",
+            "answer_options": [
+                "Traffic safety",
+                "Poor sidewalk/road conditions",
+                "Lack of dedicated lanes",
+                "Vehicle maintenance concerns",
+                "Other riders' behavior",
+                "None - no safety concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display for all users who selected at least one option in Q1.",
+            "client_notes": "Multi-select question with an 'Other' open field. Consider grouping similar concerns visually.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with optional open text for 'Other'.",
+            "script": {
+                "question_text": "What safety concerns, if any, prevent you from using micro-mobility services more frequently?",
+                "answer_options": [
+                    "Traffic safety",
+                    "Poor sidewalk/road conditions",
+                    "Lack of dedicated lanes",
+                    "Vehicle maintenance concerns",
+                    "Other riders' behavior",
+                    "None - no safety concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display for all users who selected at least one option in Q1."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Please describe any particularly positive or negative experiences you've had with micro-mobility services:",
+            "answer_options": [],
+            "routing_logic": "Display for all users who selected at least one option in Q1.",
+            "client_notes": "Open-ended question with large text box (minimum 10 lines visible). Mention examples are welcome but optional.",
+            "scripter_notes": "Field type: OPEN_TEXT with large input area.",
+            "script": {
+                "question_text": "Please describe any particularly positive or negative experiences you've had with micro-mobility services:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display for all users who selected at least one option in Q1."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend micro-mobility services to friends or colleagues?",
+            "answer_options": [
+                "0 - Not at all likely",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 - Extremely likely"
+            ],
+            "routing_logic": "Display for all users who selected at least one option in Q1.",
+            "client_notes": "Use an 11-point NPS scale from 0-10 with clear endpoint labels. Display as horizontal radio buttons or slider.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button or slider).",
+            "script": {
+                "question_text": "How likely are you to recommend micro-mobility services to friends or colleagues?",
+                "answer_options": [
+                    "0 - Not at all likely",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 - Extremely likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all users who selected at least one option in Q1."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Which of the following would encourage you to use micro-mobility services more often? (Select all that apply)",
+            "answer_options": [
+                "Lower prices/membership plans",
+                "More vehicle availability",
+                "Better parking infrastructure",
+                "Dedicated lanes/routes",
+                "Helmet availability",
+                "Improved app features",
+                "Rewards/loyalty programs",
+                "Multi-modal trip planning",
+                "None - I use them as much as I want",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display for all users who selected at least one option in Q1.",
+            "client_notes": "Multi-select with logical grouping of infrastructure vs. service vs. pricing improvements.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with optional open text for 'Other'.",
+            "script": {
+                "question_text": "Which of the following would encourage you to use micro-mobility services more often? (Select all that apply)",
+                "answer_options": [
+                    "Lower prices/membership plans",
+                    "More vehicle availability",
+                    "Better parking infrastructure",
+                    "Dedicated lanes/routes",
+                    "Helmet availability",
+                    "Improved app features",
+                    "Rewards/loyalty programs",
+                    "Multi-modal trip planning",
+                    "None - I use them as much as I want",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display for all users who selected at least one option in Q1."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your primary mode of transportation for daily trips?",
+            "answer_options": [
+                "Personal car",
+                "Public transit",
+                "Walking",
+                "Traditional bicycle",
+                "Micro-mobility (e-scooter/e-bike)",
+                "Ride-sharing (Uber/Lyft)",
+                "Taxi",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display for all respondents.",
+            "client_notes": "Single-choice question to understand transportation habits. Include 'Other' for completeness.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button) with optional open text for 'Other'.",
+            "script": {
+                "question_text": "What is your primary mode of transportation for daily trips?",
+                "answer_options": [
+                    "Personal car",
+                    "Public transit",
+                    "Walking",
+                    "Traditional bicycle",
+                    "Micro-mobility (e-scooter/e-bike)",
+                    "Ride-sharing (Uber/Lyft)",
+                    "Taxi",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents."
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "What is your age range?",
+            "answer_options": [
+                "Under 18",
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55-64",
+                "65+",
+                "Prefer not to say"
+            ],
+            "routing_logic": "Display for all respondents.",
+            "client_notes": "Standard age brackets with inclusive ranges. Include 'Prefer not to say' option.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "What is your age range?",
+                "answer_options": [
+                    "Under 18",
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55-64",
+                    "65+",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents."
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Which best describes your primary area of residence?",
+            "answer_options": [
+                "Urban city center",
+                "Urban residential neighborhood",
+                "Suburban area",
+                "Rural area",
+                "Prefer not to say"
+            ],
+            "routing_logic": "Display for all respondents.",
+            "client_notes": "Simple urban/rural classification. Consider adding definitions if needed for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "Which best describes your primary area of residence?",
+                "answer_options": [
+                    "Urban city center",
+                    "Urban residential neighborhood",
+                    "Suburban area",
+                    "Rural area",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents."
+            }
+        }
+    ]
+}

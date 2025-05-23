@@ -1,0 +1,255 @@
+{
+    "survey_id": "83d7c2d6-ebca-410d-82f7-8cb3c6245953",
+    "survey_name": "Online Food Delivery Service Satisfaction Survey",
+    "survey_brief": "This survey aims to gather customer feedback on their experiences with online food delivery services, focusing on order accuracy, delivery speed, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which online food delivery service have you used most frequently in the past 3 months?",
+            "answer_options": [
+                "Uber Eats",
+                "DoorDash",
+                "Grubhub",
+                "Postmates",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option to capture services not listed. Ensure the text box for 'Other' is optional.",
+            "scripter_notes": "Use a dropdown menu for the main options with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which online food delivery service have you used most frequently in the past 3 months?",
+                "answer_options": [
+                    "Uber Eats",
+                    "DoorDash",
+                    "Grubhub",
+                    "Postmates",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you use online food delivery services?",
+            "answer_options": [
+                "Once a week or more",
+                "2-3 times a month",
+                "Once a month",
+                "Less than once a month",
+                "This was my first time"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a balanced scale to capture frequency without overwhelming respondents.",
+            "scripter_notes": "Radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use online food delivery services?",
+                "answer_options": [
+                    "Once a week or more",
+                    "2-3 times a month",
+                    "Once a month",
+                    "Less than once a month",
+                    "This was my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of your food orders?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a standard Likert scale for consistency.",
+            "scripter_notes": "Radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of your food orders?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the speed of delivery?",
+            "answer_options": [
+                "Much faster than expected",
+                "Slightly faster than expected",
+                "As expected",
+                "Slightly slower than expected",
+                "Much slower than expected"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Provide clear benchmarks for 'expected' delivery times in the survey introduction.",
+            "scripter_notes": "Radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How would you rate the speed of delivery?",
+                "answer_options": [
+                    "Much faster than expected",
+                    "Slightly faster than expected",
+                    "As expected",
+                    "Slightly slower than expected",
+                    "Much slower than expected"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What factors are most important to you when choosing a food delivery service? (Select up to 3)",
+            "answer_options": [
+                "Delivery speed",
+                "Order accuracy",
+                "Food quality",
+                "Customer service",
+                "App usability",
+                "Pricing/discounts",
+                "Restaurant selection"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Limit selections to 3 to force prioritization.",
+            "scripter_notes": "Checkboxes with a maximum of 3 selections allowed.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a food delivery service? (Select up to 3)",
+                "answer_options": [
+                    "Delivery speed",
+                    "Order accuracy",
+                    "Food quality",
+                    "Customer service",
+                    "App usability",
+                    "Pricing/discounts",
+                    "Restaurant selection"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you ever experienced a problem with your order (e.g., missing items, incorrect order)?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use this as a branching question for follow-ups.",
+            "scripter_notes": "Radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Have you ever experienced a problem with your order (e.g., missing items, incorrect order)?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If you experienced a problem, how was it resolved?",
+            "answer_options": [
+                "Full refund",
+                "Partial refund",
+                "Re-delivery",
+                "Customer service apology",
+                "No resolution"
+            ],
+            "routing_logic": "Q6 == 'Yes'",
+            "client_notes": "Only show this question if Q6 is 'Yes'. Include an 'Other' option if needed.",
+            "scripter_notes": "Radio buttons for single-choice selection with an optional 'Other' text field.",
+            "script": {
+                "question_text": "If you experienced a problem, how was it resolved?",
+                "answer_options": [
+                    "Full refund",
+                    "Partial refund",
+                    "Re-delivery",
+                    "Customer service apology",
+                    "No resolution"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Q6 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How satisfied are you with the customer support provided by the delivery service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied",
+                "N/A (I have not contacted customer support)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an N/A option for respondents who haven't interacted with support.",
+            "scripter_notes": "Radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the customer support provided by the delivery service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied",
+                    "N/A (I have not contacted customer support)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What improvements would you suggest for the delivery service?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 250 characters.",
+            "scripter_notes": "Text box with character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for the delivery service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to recommend this delivery service to a friend or colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard NPS-like question for benchmarking.",
+            "scripter_notes": "Radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How likely are you to recommend this delivery service to a friend or colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

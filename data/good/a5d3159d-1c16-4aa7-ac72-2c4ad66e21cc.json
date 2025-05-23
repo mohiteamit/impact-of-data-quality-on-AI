@@ -1,0 +1,273 @@
+{
+    "survey_id": "a5d3159d-1c16-4aa7-ac72-2c4ad66e21cc",
+    "survey_name": "Electric Vehicle Adoption Barriers Survey",
+    "survey_brief": "This survey aims to identify key barriers and motivators influencing consumer decisions regarding electric vehicle (EV) adoption to inform marketing and policy strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How likely are you to consider purchasing an electric vehicle (EV) as your next car?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: single-choice (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to consider purchasing an electric vehicle (EV) as your next car?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the TOP 3 factors preventing you from purchasing an EV? (Select up to 3)",
+            "answer_options": [
+                "High upfront cost",
+                "Limited charging infrastructure",
+                "Range anxiety (distance per charge)",
+                "Long charging times",
+                "Lack of model variety",
+                "Uncertainty about battery lifespan",
+                "Resale value concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q1 response is 'Somewhat unlikely' or 'Very unlikely'",
+            "client_notes": "Multi-select with max 3 choices. Include 'Other' with open-text follow-up.",
+            "scripter_notes": "Field type: multi-choice (checkboxes) with validation for ≤3 selections",
+            "script": {
+                "question_text": "What are the TOP 3 factors preventing you from purchasing an EV? (Select up to 3)",
+                "answer_options": [
+                    "High upfront cost",
+                    "Limited charging infrastructure",
+                    "Range anxiety (distance per charge)",
+                    "Long charging times",
+                    "Lack of model variety",
+                    "Uncertainty about battery lifespan",
+                    "Resale value concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 response is 'Somewhat unlikely' or 'Very unlikely'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What would most effectively encourage you to purchase an EV?",
+            "answer_options": [
+                "Lower purchase price",
+                "More public charging stations",
+                "Longer battery range (400+ miles)",
+                "Faster charging technology",
+                "Government tax incentives",
+                "Lower maintenance costs",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice with 'Other' option. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: single-choice (radio buttons) with option randomization",
+            "script": {
+                "question_text": "What would most effectively encourage you to purchase an EV?",
+                "answer_options": [
+                    "Lower purchase price",
+                    "More public charging stations",
+                    "Longer battery range (400+ miles)",
+                    "Faster charging technology",
+                    "Government tax incentives",
+                    "Lower maintenance costs",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How familiar are you with current EV tax incentives or rebates in your area?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "4-point scale avoids neutral midpoint. Include tooltip with local incentive examples.",
+            "scripter_notes": "Field type: single-choice with hover-over information icon",
+            "script": {
+                "question_text": "How familiar are you with current EV tax incentives or rebates in your area?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What is your estimated daily driving distance (round trip)?",
+            "answer_options": [
+                "Less than 20 miles",
+                "20-40 miles",
+                "41-60 miles",
+                "61-80 miles",
+                "More than 80 miles"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use mileage bands relevant to EV range capabilities. Include 'Prefer not to say' if needed.",
+            "scripter_notes": "Field type: single-choice with 'Prefer not to say' opt-out",
+            "script": {
+                "question_text": "What is your estimated daily driving distance (round trip)?",
+                "answer_options": [
+                    "Less than 20 miles",
+                    "20-40 miles",
+                    "41-60 miles",
+                    "61-80 miles",
+                    "More than 80 miles"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Do you have access to at-home charging (e.g., garage, driveway)?",
+            "answer_options": [
+                "Yes, with dedicated parking",
+                "Yes, with shared parking",
+                "No, street parking only",
+                "No, other arrangement"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Critical for infrastructure analysis. Include visual aid showing charging scenarios.",
+            "scripter_notes": "Field type: single-choice with accompanying illustration",
+            "script": {
+                "question_text": "Do you have access to at-home charging (e.g., garage, driveway)?",
+                "answer_options": [
+                    "Yes, with dedicated parking",
+                    "Yes, with shared parking",
+                    "No, street parking only",
+                    "No, other arrangement"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How concerned are you about the environmental impact of your current vehicle?",
+            "answer_options": [
+                "Very concerned",
+                "Somewhat concerned",
+                "Neutral",
+                "Not very concerned",
+                "Not at all concerned"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point scale measures environmental motivation. Anchor with 'Not applicable' if needed.",
+            "scripter_notes": "Field type: single-choice with 'Not applicable' option",
+            "script": {
+                "question_text": "How concerned are you about the environmental impact of your current vehicle?",
+                "answer_options": [
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Neutral",
+                    "Not very concerned",
+                    "Not at all concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which EV brands are you most familiar with? (Select all that apply)",
+            "answer_options": [
+                "Tesla",
+                "Nissan",
+                "Chevrolet",
+                "Ford",
+                "BMW",
+                "Audi",
+                "Hyundai",
+                "Kia",
+                "Rivian",
+                "Lucid",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select brand awareness question. Include major and emerging brands.",
+            "scripter_notes": "Field type: multi-choice (checkboxes) with 'Select all that apply' instruction",
+            "script": {
+                "question_text": "Which EV brands are you most familiar with? (Select all that apply)",
+                "answer_options": [
+                    "Tesla",
+                    "Nissan",
+                    "Chevrolet",
+                    "Ford",
+                    "BMW",
+                    "Audi",
+                    "Hyundai",
+                    "Kia",
+                    "Rivian",
+                    "Lucid",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What additional information would help you make an informed decision about EV purchase?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture unanticipated concerns. Limit to 250 characters.",
+            "scripter_notes": "Field type: open-text with character counter",
+            "script": {
+                "question_text": "What additional information would help you make an informed decision about EV purchase?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Which of these statements best describes your attitude toward EV technology?",
+            "answer_options": [
+                "I'm an early adopter who embraces new technology",
+                "I'll adopt once technology is proven and widely available",
+                "I prefer to wait until prices decrease significantly",
+                "I have strong reservations about EV technology",
+                "I haven't formed an opinion"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice with attitudinal segments. Randomize non-polar options.",
+            "scripter_notes": "Field type: single-choice with option randomization (except first/last options)",
+            "script": {
+                "question_text": "Which of these statements best describes your attitude toward EV technology?",
+                "answer_options": [
+                    "I'm an early adopter who embraces new technology",
+                    "I'll adopt once technology is proven and widely available",
+                    "I prefer to wait until prices decrease significantly",
+                    "I have strong reservations about EV technology",
+                    "I haven't formed an opinion"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

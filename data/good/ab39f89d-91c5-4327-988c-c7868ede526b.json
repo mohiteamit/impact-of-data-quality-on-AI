@@ -1,0 +1,303 @@
+{
+    "survey_id": "ab39f89d-91c5-4327-988c-c7868ede526b",
+    "survey_name": "Pet Grooming Service Satisfaction Survey",
+    "survey_brief": "Assess customer satisfaction with pet grooming services to identify improvement opportunities and measure loyalty metrics.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use our pet grooming services?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "Every few months",
+                "Once",
+                "Never"
+            ],
+            "routing_logic": "IF 'Never' selected, skip to Q12",
+            "client_notes": "Place first to filter non-users early. Ensure mobile-friendly dropdown if space constrained.",
+            "scripter_notes": "Single-choice radio buttons. Implement skip logic to Q12 on 'Never' selection.",
+            "script": {
+                "question_text": "How often do you use our pet grooming services?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "Every few months",
+                    "Once",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "IF 'Never' selected, skip to Q12"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the overall quality of our grooming services?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "ALWAYS SHOW",
+            "client_notes": "Use standard 5-point Likert scale. Consider randomizing scale order to reduce bias.",
+            "scripter_notes": "Single-choice radio buttons. Required question.",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of our grooming services?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "ALWAYS SHOW"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which grooming services have you used? (Select all that apply)",
+            "answer_options": [
+                "Basic Bath",
+                "Nail Trimming",
+                "Haircut/Styling",
+                "Teeth Cleaning",
+                "Flea/Tick Treatment",
+                "Skin Care",
+                "Other"
+            ],
+            "routing_logic": "ALWAYS SHOW",
+            "client_notes": "Randomize option order. Limit selections to 5 maximum.",
+            "scripter_notes": "Multi-choice checkboxes with 'Other' text field.",
+            "script": {
+                "question_text": "Which grooming services have you used? (Select all that apply)",
+                "answer_options": [
+                    "Basic Bath",
+                    "Nail Trimming",
+                    "Haircut/Styling",
+                    "Teeth Cleaning",
+                    "Flea/Tick Treatment",
+                    "Skin Care",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "ALWAYS SHOW"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What do you value most about our grooming services?",
+            "answer_options": [],
+            "routing_logic": "ALWAYS SHOW",
+            "client_notes": "Optional open-ended question. Limit to 200 characters.",
+            "scripter_notes": "Open-text field with character counter.",
+            "script": {
+                "question_text": "What do you value most about our grooming services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "ALWAYS SHOW"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the friendliness and professionalism of our staff?",
+            "answer_options": [
+                "Very Friendly",
+                "Friendly",
+                "Neutral",
+                "Unfriendly",
+                "Very Unfriendly"
+            ],
+            "routing_logic": "ALWAYS SHOW",
+            "client_notes": "Consider reverse scale to check response consistency.",
+            "scripter_notes": "Single-choice radio buttons with visual smiley-face scale.",
+            "script": {
+                "question_text": "How would you rate the friendliness and professionalism of our staff?",
+                "answer_options": [
+                    "Very Friendly",
+                    "Friendly",
+                    "Neutral",
+                    "Unfriendly",
+                    "Very Unfriendly"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "ALWAYS SHOW"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How would you rate the cleanliness of our facility?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Below Average",
+                "Poor"
+            ],
+            "routing_logic": "ALWAYS SHOW",
+            "client_notes": "Critical quality metric. Include 'Prefer not to answer' if needed.",
+            "scripter_notes": "Single-choice radio buttons with star rating visual.",
+            "script": {
+                "question_text": "How would you rate the cleanliness of our facility?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Below Average",
+                    "Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "ALWAYS SHOW"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional services would you like us to offer? (Select all that apply)",
+            "answer_options": [
+                "Pet Massage",
+                "Creative Coloring",
+                "CBD Treatments",
+                "Mobile Grooming",
+                "Pet Photography",
+                "Other"
+            ],
+            "routing_logic": "ALWAYS SHOW",
+            "client_notes": "Include exploratory market research options. Randomize order.",
+            "scripter_notes": "Multi-choice checkboxes with 'Other' text input.",
+            "script": {
+                "question_text": "What additional services would you like us to offer? (Select all that apply)",
+                "answer_options": [
+                    "Pet Massage",
+                    "Creative Coloring",
+                    "CBD Treatments",
+                    "Mobile Grooming",
+                    "Pet Photography",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "ALWAYS SHOW"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How do you feel about our pricing compared to the value received?",
+            "answer_options": [
+                "Excellent Value",
+                "Good Value",
+                "Fair Value",
+                "Poor Value",
+                "Overpriced"
+            ],
+            "routing_logic": "ALWAYS SHOW",
+            "client_notes": "Include neutral midpoint. Consider comparative pricing benchmarks.",
+            "scripter_notes": "Single-choice radio buttons with currency symbols.",
+            "script": {
+                "question_text": "How do you feel about our pricing compared to the value received?",
+                "answer_options": [
+                    "Excellent Value",
+                    "Good Value",
+                    "Fair Value",
+                    "Poor Value",
+                    "Overpriced"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "ALWAYS SHOW"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What specific improvements would you suggest for our services?",
+            "answer_options": [],
+            "routing_logic": "ALWAYS SHOW",
+            "client_notes": "Optional feedback. Use sentiment analysis in reporting.",
+            "scripter_notes": "Open-text field with 300-character limit.",
+            "script": {
+                "question_text": "What specific improvements would you suggest for our services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "ALWAYS SHOW"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to recommend our services to others? (0-10 scale)",
+            "answer_options": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "routing_logic": "ALWAYS SHOW",
+            "client_notes": "Standard NPS question. Label endpoints: 'Not at all likely' to 'Extremely likely'.",
+            "scripter_notes": "Single-choice radio buttons in horizontal layout.",
+            "script": {
+                "question_text": "How likely are you to recommend our services to others? (0-10 scale)",
+                "answer_options": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "ALWAYS SHOW"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How did you first hear about our grooming services? (Select all that apply)",
+            "answer_options": [
+                "Friend/Family Referral",
+                "Social Media",
+                "Local Advertising",
+                "Web Search",
+                "Veterinarian Recommendation",
+                "Other"
+            ],
+            "routing_logic": "ALWAYS SHOW",
+            "client_notes": "Critical for marketing attribution. Allow multiple selections.",
+            "scripter_notes": "Multi-choice checkboxes with 'Other' text field.",
+            "script": {
+                "question_text": "How did you first hear about our grooming services? (Select all that apply)",
+                "answer_options": [
+                    "Friend/Family Referral",
+                    "Social Media",
+                    "Local Advertising",
+                    "Web Search",
+                    "Veterinarian Recommendation",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "ALWAYS SHOW"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Please share any additional comments about your experience:",
+            "answer_options": [],
+            "routing_logic": "ALWAYS SHOW",
+            "client_notes": "Final optional feedback. Use for qualitative insights.",
+            "scripter_notes": "Open-text field with expandable text area.",
+            "script": {
+                "question_text": "Please share any additional comments about your experience:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "ALWAYS SHOW"
+            }
+        }
+    ]
+}

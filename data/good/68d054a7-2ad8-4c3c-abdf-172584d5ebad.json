@@ -1,0 +1,277 @@
+{
+    "survey_id": "68d054a7-2ad8-4c3c-abdf-172584d5ebad",
+    "survey_name": "Mobile Banking App User Experience Survey",
+    "survey_brief": "Assess customer satisfaction and identify pain points in mobile banking application usage to improve digital banking services",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your primary mobile banking app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use standard 5-point Likert scale. Ensure mobile-responsive layout.",
+            "scripter_notes": "Radio buttons, mandatory field",
+            "script": {
+                "question_text": "How satisfied are you with your primary mobile banking app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How frequently do you use your mobile banking app?",
+            "answer_options": [
+                "Multiple times daily",
+                "Once daily",
+                "3-6 times weekly",
+                "1-2 times weekly",
+                "Less than once weekly"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Consider adding 'Never' option if targeting new users",
+            "scripter_notes": "Radio buttons with 'Other' text field optional",
+            "script": {
+                "question_text": "How frequently do you use your mobile banking app?",
+                "answer_options": [
+                    "Multiple times daily",
+                    "Once daily",
+                    "3-6 times weekly",
+                    "1-2 times weekly",
+                    "Less than once weekly"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which features do you regularly use? (Select all that apply)",
+            "answer_options": [
+                "Balance checks",
+                "Fund transfers",
+                "Bill payments",
+                "Check deposits",
+                "Card controls",
+                "Budgeting tools"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Limit to 8 options max for mobile usability",
+            "scripter_notes": "Checkbox input with 'Other' field",
+            "script": {
+                "question_text": "Which features do you regularly use? (Select all that apply)",
+                "answer_options": [
+                    "Balance checks",
+                    "Fund transfers",
+                    "Bill payments",
+                    "Check deposits",
+                    "Card controls",
+                    "Budgeting tools"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the app's biometric login reliability?",
+            "answer_options": [
+                "Extremely reliable",
+                "Reliable",
+                "Occasionally fails",
+                "Frequently fails",
+                "Don't use biometric login"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include N/A option for non-users",
+            "scripter_notes": "Radio buttons with skip logic for last option",
+            "script": {
+                "question_text": "How would you rate the app's biometric login reliability?",
+                "answer_options": [
+                    "Extremely reliable",
+                    "Reliable",
+                    "Occasionally fails",
+                    "Frequently fails",
+                    "Don't use biometric login"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any technical issues in the past 3 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Follow with Q5a if 'Yes' selected",
+            "scripter_notes": "Radio buttons with conditional routing",
+            "script": {
+                "question_text": "Have you experienced any technical issues in the past 3 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5a",
+            "question_text": "What type of issues did you encounter? (Select all that apply)",
+            "answer_options": [
+                "Login failures",
+                "Transaction errors",
+                "App crashes",
+                "Slow performance",
+                "Incorrect balance display"
+            ],
+            "routing_logic": "Q5 == 'Yes'",
+            "client_notes": "Collect qualitative data if >20% select 'Other'",
+            "scripter_notes": "Checkbox input with text validation",
+            "script": {
+                "question_text": "What type of issues did you encounter? (Select all that apply)",
+                "answer_options": [
+                    "Login failures",
+                    "Transaction errors",
+                    "App crashes",
+                    "Slow performance",
+                    "Incorrect balance display"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Q5 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend this app to others?",
+            "answer_options": [
+                "Extremely likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Extremely unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard NPS precursor question",
+            "scripter_notes": "Radio buttons, grid layout",
+            "script": {
+                "question_text": "How likely are you to recommend this app to others?",
+                "answer_options": [
+                    "Extremely likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Extremely unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional features would improve your experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Monitor for emerging feature demands",
+            "scripter_notes": "Open text field with 500 character limit",
+            "script": {
+                "question_text": "What additional features would improve your experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How do you primarily access customer support?",
+            "answer_options": [
+                "In-app chat",
+                "Phone support",
+                "Branch visit",
+                "Email",
+                "Social media"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Identify channel preferences for resource allocation",
+            "scripter_notes": "Radio buttons with 'Other' option",
+            "script": {
+                "question_text": "How do you primarily access customer support?",
+                "answer_options": [
+                    "In-app chat",
+                    "Phone support",
+                    "Branch visit",
+                    "Email",
+                    "Social media"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How concerned are you about security when using mobile banking?",
+            "answer_options": [
+                "Extremely concerned",
+                "Somewhat concerned",
+                "Neutral",
+                "Somewhat unconcerned",
+                "Extremely unconcerned"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Critical for trust factor analysis",
+            "scripter_notes": "Radio buttons with visual scale",
+            "script": {
+                "question_text": "How concerned are you about security when using mobile banking?",
+                "answer_options": [
+                    "Extremely concerned",
+                    "Somewhat concerned",
+                    "Neutral",
+                    "Somewhat unconcerned",
+                    "Extremely unconcerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your preferred method for receiving security alerts?",
+            "answer_options": [
+                "Push notification",
+                "SMS",
+                "Email",
+                "In-app message",
+                "No preference"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Important for communication strategy",
+            "scripter_notes": "Radio buttons with multiple selection allowed",
+            "script": {
+                "question_text": "What is your preferred method for receiving security alerts?",
+                "answer_options": [
+                    "Push notification",
+                    "SMS",
+                    "Email",
+                    "In-app message",
+                    "No preference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

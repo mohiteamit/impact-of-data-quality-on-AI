@@ -1,0 +1,253 @@
+{
+    "survey_id": "0468aff4-58dd-43f2-88fb-b6a447969a66",
+    "survey_name": "Employee Remote Work Productivity Survey",
+    "survey_brief": "This survey aims to understand the impact of remote work on employee productivity and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you currently work remotely?",
+            "answer_options": [
+                "1 day",
+                "2 days",
+                "3 days",
+                "4 days",
+                "5 days (fully remote)",
+                "More than 5 days (including weekends)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for mobile-friendliness.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How many days per week do you currently work remotely?",
+                "answer_options": [
+                    "1 day",
+                    "2 days",
+                    "3 days",
+                    "4 days",
+                    "5 days (fully remote)",
+                    "More than 5 days (including weekends)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following tools do you use daily for remote work? (Select all that apply)",
+            "answer_options": [
+                "Video conferencing (e.g., Zoom, Teams)",
+                "Project management (e.g., Asana, Trello)",
+                "Instant messaging (e.g., Slack, Microsoft Teams)",
+                "Cloud storage (e.g., Google Drive, Dropbox)",
+                "Time tracking (e.g., Toggl, Harvest)",
+                "Other (please specify in Q3)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-selection. Include 'Other' as an open-ended option if selected.",
+            "scripter_notes": "Field type: MULTI_CHOICE with conditional open-text for 'Other'.",
+            "script": {
+                "question_text": "Which of the following tools do you use daily for remote work? (Select all that apply)",
+                "answer_options": [
+                    "Video conferencing (e.g., Zoom, Teams)",
+                    "Project management (e.g., Asana, Trello)",
+                    "Instant messaging (e.g., Slack, Microsoft Teams)",
+                    "Cloud storage (e.g., Google Drive, Dropbox)",
+                    "Time tracking (e.g., Toggl, Harvest)",
+                    "Other (please specify in Q3)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "If you selected 'Other' in Q2, please specify the tools you use:",
+            "answer_options": [],
+            "routing_logic": "Only if 'Other' is selected in Q2",
+            "client_notes": "Open-text field to capture unspecified tools.",
+            "scripter_notes": "Field type: OPEN_TEXT, conditional on Q2 selection.",
+            "script": {
+                "question_text": "If you selected 'Other' in Q2, please specify the tools you use:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if 'Other' is selected in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate your productivity while working remotely compared to working in the office?",
+            "answer_options": [
+                "Much less productive",
+                "Slightly less productive",
+                "About the same",
+                "Slightly more productive",
+                "Much more productive"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for clarity. Ensure mobile responsiveness.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How would you rate your productivity while working remotely compared to working in the office?",
+                "answer_options": [
+                    "Much less productive",
+                    "Slightly less productive",
+                    "About the same",
+                    "Slightly more productive",
+                    "Much more productive"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What are the biggest challenges you face while working remotely? (Select up to 3)",
+            "answer_options": [
+                "Distractions at home",
+                "Poor internet connection",
+                "Lack of access to office equipment",
+                "Difficulty collaborating with colleagues",
+                "Time zone differences",
+                "Work-life balance",
+                "Other (please specify in Q6)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Limit selections to 3 for focused insights.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max selections = 3.",
+            "script": {
+                "question_text": "What are the biggest challenges you face while working remotely? (Select up to 3)",
+                "answer_options": [
+                    "Distractions at home",
+                    "Poor internet connection",
+                    "Lack of access to office equipment",
+                    "Difficulty collaborating with colleagues",
+                    "Time zone differences",
+                    "Work-life balance",
+                    "Other (please specify in Q6)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you selected 'Other' in Q5, please describe the challenge:",
+            "answer_options": [],
+            "routing_logic": "Only if 'Other' is selected in Q5",
+            "client_notes": "Open-text field for additional challenges.",
+            "scripter_notes": "Field type: OPEN_TEXT, conditional on Q5 selection.",
+            "script": {
+                "question_text": "If you selected 'Other' in Q5, please describe the challenge:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if 'Other' is selected in Q5"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What support from your employer would improve your remote work experience?",
+            "answer_options": [
+                "Better home office equipment stipend",
+                "More flexible working hours",
+                "Improved mental health resources",
+                "More frequent virtual team-building activities",
+                "Better IT support",
+                "Other (please specify in Q8)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to identify actionable improvements.",
+            "scripter_notes": "Field type: MULTI_CHOICE.",
+            "script": {
+                "question_text": "What support from your employer would improve your remote work experience?",
+                "answer_options": [
+                    "Better home office equipment stipend",
+                    "More flexible working hours",
+                    "Improved mental health resources",
+                    "More frequent virtual team-building activities",
+                    "Better IT support",
+                    "Other (please specify in Q8)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "If you selected 'Other' in Q7, please specify:",
+            "answer_options": [],
+            "routing_logic": "Only if 'Other' is selected in Q7",
+            "client_notes": "Open-text field for additional suggestions.",
+            "scripter_notes": "Field type: OPEN_TEXT, conditional on Q7 selection.",
+            "script": {
+                "question_text": "If you selected 'Other' in Q7, please specify:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if 'Other' is selected in Q7"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How often do you experience technical issues (e.g., software crashes, slow internet) while working remotely?",
+            "answer_options": [
+                "Never",
+                "Rarely (once a month or less)",
+                "Sometimes (a few times a month)",
+                "Often (weekly)",
+                "Very often (daily)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to gauge technical pain points.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How often do you experience technical issues (e.g., software crashes, slow internet) while working remotely?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once a month or less)",
+                    "Sometimes (a few times a month)",
+                    "Often (weekly)",
+                    "Very often (daily)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Would you prefer to continue working remotely, return to the office, or adopt a hybrid model?",
+            "answer_options": [
+                "Continue working fully remote",
+                "Return to the office full-time",
+                "Hybrid model (mix of remote and office)",
+                "No preference"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice to understand employee preferences.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "Would you prefer to continue working remotely, return to the office, or adopt a hybrid model?",
+                "answer_options": [
+                    "Continue working fully remote",
+                    "Return to the office full-time",
+                    "Hybrid model (mix of remote and office)",
+                    "No preference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "What is one thing your employer could do to better support remote work?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question for qualitative insights.",
+            "scripter_notes": "Field type: OPEN_TEXT.",
+            "script": {
+                "question_text": "What is one thing your employer could do to better support remote work?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

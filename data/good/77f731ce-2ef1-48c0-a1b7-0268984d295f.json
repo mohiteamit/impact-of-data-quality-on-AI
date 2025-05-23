@@ -1,0 +1,265 @@
+{
+    "survey_id": "77f731ce-2ef1-48c0-a1b7-0268984d295f",
+    "survey_name": "Consumer Preferences for Home Cleaning Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, satisfaction levels, and pain points regarding home cleaning services to help providers improve their offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use professional home cleaning services?",
+            "answer_options": [
+                "Weekly",
+                "Bi-weekly",
+                "Monthly",
+                "Less than once a month",
+                "Never"
+            ],
+            "routing_logic": "Always ask",
+            "client_notes": "This helps segment users based on frequency of service usage.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use professional home cleaning services?",
+                "answer_options": [
+                    "Weekly",
+                    "Bi-weekly",
+                    "Monthly",
+                    "Less than once a month",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always ask"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What type of cleaning services do you typically use? (Select all that apply)",
+            "answer_options": [
+                "Standard cleaning (vacuuming, dusting, mopping)",
+                "Deep cleaning",
+                "Move-in/move-out cleaning",
+                "Green/eco-friendly cleaning",
+                "Specialty cleaning (e.g., carpets, windows)"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Understanding service preferences helps tailor offerings.",
+            "scripter_notes": "Use checkboxes for multiple selections.",
+            "script": {
+                "question_text": "What type of cleaning services do you typically use? (Select all that apply)",
+                "answer_options": [
+                    "Standard cleaning (vacuuming, dusting, mopping)",
+                    "Deep cleaning",
+                    "Move-in/move-out cleaning",
+                    "Green/eco-friendly cleaning",
+                    "Specialty cleaning (e.g., carpets, windows)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your current cleaning service provider?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (I do not use a service)"
+            ],
+            "routing_logic": "Always ask",
+            "client_notes": "Use a Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with your current cleaning service provider?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (I do not use a service)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always ask"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors are most important to you when selecting a cleaning service? (Rank top 3)",
+            "answer_options": [
+                "Price",
+                "Quality of cleaning",
+                "Availability/flexibility",
+                "Eco-friendly products",
+                "Trustworthiness of cleaners",
+                "Customer service",
+                "Customizable services"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use a ranking question to identify key decision drivers.",
+            "scripter_notes": "Implement as a drag-and-drop ranking question.",
+            "script": {
+                "question_text": "What factors are most important to you when selecting a cleaning service? (Rank top 3)",
+                "answer_options": [
+                    "Price",
+                    "Quality of cleaning",
+                    "Availability/flexibility",
+                    "Eco-friendly products",
+                    "Trustworthiness of cleaners",
+                    "Customer service",
+                    "Customizable services"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What is the average amount you spend per cleaning service visit?",
+            "answer_options": [
+                "Less than $50",
+                "$50 - $100",
+                "$101 - $150",
+                "$151 - $200",
+                "More than $200",
+                "Not applicable"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Helps understand budget expectations.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "What is the average amount you spend per cleaning service visit?",
+                "answer_options": [
+                    "Less than $50",
+                    "$50 - $100",
+                    "$101 - $150",
+                    "$151 - $200",
+                    "More than $200",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you ever switched cleaning service providers? If yes, why?",
+            "answer_options": [
+                "No, I have never switched",
+                "Yes, due to poor quality",
+                "Yes, due to high cost",
+                "Yes, due to scheduling issues",
+                "Yes, due to lack of trust",
+                "Yes, other reason"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Identifies common pain points leading to churn.",
+            "scripter_notes": "Use radio buttons for single-choice selection with an optional open-ended field for 'other reason'.",
+            "script": {
+                "question_text": "Have you ever switched cleaning service providers? If yes, why?",
+                "answer_options": [
+                    "No, I have never switched",
+                    "Yes, due to poor quality",
+                    "Yes, due to high cost",
+                    "Yes, due to scheduling issues",
+                    "Yes, due to lack of trust",
+                    "Yes, other reason"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How do you typically book your cleaning services?",
+            "answer_options": [
+                "Directly through the company's website",
+                "Mobile app",
+                "Phone call",
+                "In-person",
+                "Third-party platform (e.g., Handy, Angi)",
+                "Other"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Helps optimize booking channels.",
+            "scripter_notes": "Use radio buttons for single-choice selection with an optional open-ended field for 'other'.",
+            "script": {
+                "question_text": "How do you typically book your cleaning services?",
+                "answer_options": [
+                    "Directly through the company's website",
+                    "Mobile app",
+                    "Phone call",
+                    "In-person",
+                    "Third-party platform (e.g., Handy, Angi)",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Would you be interested in a subscription-based cleaning service with discounted rates?",
+            "answer_options": [
+                "Yes, very interested",
+                "Somewhat interested",
+                "Not interested",
+                "Unsure"
+            ],
+            "routing_logic": "Always ask",
+            "client_notes": "Assesses interest in subscription models to improve customer retention.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Would you be interested in a subscription-based cleaning service with discounted rates?",
+                "answer_options": [
+                    "Yes, very interested",
+                    "Somewhat interested",
+                    "Not interested",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always ask"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What additional services would you like to see offered by cleaning companies? (Select all that apply)",
+            "answer_options": [
+                "Laundry",
+                "Organization/decluttering",
+                "Pet care (e.g., pet hair removal)",
+                "Meal prep",
+                "None of the above"
+            ],
+            "routing_logic": "Always ask",
+            "client_notes": "Identifies potential upsell opportunities.",
+            "scripter_notes": "Use checkboxes for multiple selections.",
+            "script": {
+                "question_text": "What additional services would you like to see offered by cleaning companies? (Select all that apply)",
+                "answer_options": [
+                    "Laundry",
+                    "Organization/decluttering",
+                    "Pet care (e.g., pet hair removal)",
+                    "Meal prep",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always ask"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Please share any additional feedback or suggestions for home cleaning service providers.",
+            "answer_options": [],
+            "routing_logic": "Always ask",
+            "client_notes": "Open-ended feedback can reveal unanticipated insights.",
+            "scripter_notes": "Use a text box for open-ended responses.",
+            "script": {
+                "question_text": "Please share any additional feedback or suggestions for home cleaning service providers.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always ask"
+            }
+        }
+    ]
+}

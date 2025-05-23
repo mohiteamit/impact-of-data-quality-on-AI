@@ -1,0 +1,315 @@
+{
+    "survey_id": "34328537-cb22-4e80-ba1e-a49be7a196ff",
+    "survey_name": "Urban Mobility Preferences Survey",
+    "survey_brief": "This survey aims to understand commuter preferences and challenges related to urban mobility, focusing on modes of transportation, satisfaction levels, and suggestions for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "What is your primary mode of transportation for daily commuting?",
+            "answer_options": [
+                "Personal car",
+                "Public transit (bus, subway, etc.)",
+                "Bicycle or e-bike",
+                "Walking",
+                "Ride-sharing services (Uber, Lyft, etc.)",
+                "Other"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure options cover all common urban mobility choices.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "What is your primary mode of transportation for daily commuting?",
+                "answer_options": [
+                    "Personal car",
+                    "Public transit (bus, subway, etc.)",
+                    "Bicycle or e-bike",
+                    "Walking",
+                    "Ride-sharing services (Uber, Lyft, etc.)",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary mode of transportation?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a standard 5-point Likert scale for consistency.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with your primary mode of transportation?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the top three challenges you face with your current mode of transportation?",
+            "answer_options": [
+                "High cost",
+                "Long travel time",
+                "Limited availability",
+                "Poor reliability (delays, cancellations)",
+                "Lack of safety",
+                "Environmental concerns",
+                "Other"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multi-selection to capture multiple pain points.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "What are the top three challenges you face with your current mode of transportation?",
+                "answer_options": [
+                    "High cost",
+                    "Long travel time",
+                    "Limited availability",
+                    "Poor reliability (delays, cancellations)",
+                    "Lack of safety",
+                    "Environmental concerns",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you use alternative transportation modes (e.g., switching from car to bike or public transit)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use clear frequency options to gauge flexibility.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use alternative transportation modes (e.g., switching from car to bike or public transit)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What factors would encourage you to use public transit more often?",
+            "answer_options": [
+                "Lower fares",
+                "More frequent service",
+                "Better cleanliness",
+                "Improved safety measures",
+                "Real-time tracking",
+                "Other"
+            ],
+            "routing_logic": "Respondents who selected 'Public transit' in Q1 or 'Weekly'/'Monthly'/'Rarely' in Q4",
+            "client_notes": "Targeted question for public transit users or occasional switchers.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "What factors would encourage you to use public transit more often?",
+                "answer_options": [
+                    "Lower fares",
+                    "More frequent service",
+                    "Better cleanliness",
+                    "Improved safety measures",
+                    "Real-time tracking",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Public transit' in Q1 or 'Weekly'/'Monthly'/'Rarely' in Q4"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How important is environmental sustainability in your choice of transportation?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point scale to measure prioritization of sustainability.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How important is environmental sustainability in your choice of transportation?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Would you be willing to pay a premium for eco-friendly transportation options (e.g., electric buses, bike-sharing)?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, but only slightly more",
+                "No, I would not pay more",
+                "Unsure"
+            ],
+            "routing_logic": "Respondents who selected 'Extremely'/'Very'/'Moderately important' in Q6",
+            "client_notes": "Use conditional logic to target sustainability-conscious respondents.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Would you be willing to pay a premium for eco-friendly transportation options (e.g., electric buses, bike-sharing)?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, but only slightly more",
+                    "No, I would not pay more",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Extremely'/'Very'/'Moderately important' in Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would make walking or cycling more appealing for your commute?",
+            "answer_options": [
+                "More dedicated bike lanes",
+                "Better pedestrian infrastructure (sidewalks, crosswalks)",
+                "Improved safety measures",
+                "Weather protection (e.g., covered paths)",
+                "Other"
+            ],
+            "routing_logic": "Respondents who selected 'Bicycle or e-bike'/'Walking' in Q1",
+            "client_notes": "Multi-choice question for active commuters.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "What improvements would make walking or cycling more appealing for your commute?",
+                "answer_options": [
+                    "More dedicated bike lanes",
+                    "Better pedestrian infrastructure (sidewalks, crosswalks)",
+                    "Improved safety measures",
+                    "Weather protection (e.g., covered paths)",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Bicycle or e-bike'/'Walking' in Q1"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to use a mobility-as-a-service (MaaS) app that integrates multiple transport options (e.g., transit, bikes, ride-sharing) into one platform?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Gauge interest in integrated mobility solutions.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to use a mobility-as-a-service (MaaS) app that integrates multiple transport options (e.g., transit, bikes, ride-sharing) into one platform?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional services would you find valuable in a mobility app? (Select all that apply)",
+            "answer_options": [
+                "Real-time traffic updates",
+                "Multi-modal route planning",
+                "Integrated payment options",
+                "Rewards or discounts for eco-friendly choices",
+                "Parking availability",
+                "Other"
+            ],
+            "routing_logic": "Respondents who selected 'Very likely'/'Somewhat likely' in Q9",
+            "client_notes": "Multi-choice question for MaaS-interested respondents.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "What additional services would you find valuable in a mobility app? (Select all that apply)",
+                "answer_options": [
+                    "Real-time traffic updates",
+                    "Multi-modal route planning",
+                    "Integrated payment options",
+                    "Rewards or discounts for eco-friendly choices",
+                    "Parking availability",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Very likely'/'Somewhat likely' in Q9"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How do you typically plan your commuting routes?",
+            "answer_options": [
+                "Using navigation apps (Google Maps, Waze, etc.)",
+                "Public transit apps",
+                "Personal knowledge/habit",
+                "Word of mouth",
+                "Other"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Identify reliance on digital tools for route planning.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How do you typically plan your commuting routes?",
+                "answer_options": [
+                    "Using navigation apps (Google Maps, Waze, etc.)",
+                    "Public transit apps",
+                    "Personal knowledge/habit",
+                    "Word of mouth",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Describe any major pain points you experience with your current commuting method (open-ended).",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture nuanced feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box)",
+            "script": {
+                "question_text": "Describe any major pain points you experience with your current commuting method (open-ended).",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

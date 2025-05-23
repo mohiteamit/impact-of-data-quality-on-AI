@@ -1,0 +1,349 @@
+{
+    "survey_id": "b09e27d3-1a39-4d1f-8961-e2b2ca6fbb17",
+    "survey_name": "AI-Powered Customer Service Tools Adoption Survey",
+    "survey_brief": "Assess adoption rates, benefits, challenges, and organizational impacts of AI-driven customer service tools in enterprise environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Does your organization currently use AI-powered tools for customer service?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Planning to implement within 6 months"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons; include 'Prefer not to answer' only if required by compliance",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "Does your organization currently use AI-powered tools for customer service?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Planning to implement within 6 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following are primary use cases for your AI customer service tools? (Select all that apply)",
+            "answer_options": [
+                "Automated responses (chatbots)",
+                "Ticket routing",
+                "Sentiment analysis",
+                "Predictive issue resolution",
+                "Customer feedback analysis"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Ensure mobile-friendly multi-select interface",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "Which of the following are primary use cases for your AI customer service tools? (Select all that apply)",
+                "answer_options": [
+                    "Automated responses (chatbots)",
+                    "Ticket routing",
+                    "Sentiment analysis",
+                    "Predictive issue resolution",
+                    "Customer feedback analysis"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied is your team with the accuracy of AI-generated responses?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Use a 5-point Likert scale with neutral midpoint",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "How satisfied is your team with the accuracy of AI-generated responses?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What specific challenges have you encountered with AI customer service tools?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Allow 500-character limit; prompt for technical vs operational challenges",
+            "scripter_notes": "Field type: open text input",
+            "script": {
+                "question_text": "What specific challenges have you encountered with AI customer service tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How has AI implementation affected average customer issue resolution time?",
+            "answer_options": [
+                "Significant decrease (>30%)",
+                "Moderate decrease (10-30%)",
+                "No measurable change",
+                "Increased resolution time"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Include 'Not measured' option if required",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "How has AI implementation affected average customer issue resolution time?",
+                "answer_options": [
+                    "Significant decrease (>30%)",
+                    "Moderate decrease (10-30%)",
+                    "No measurable change",
+                    "Increased resolution time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How easily did your existing systems integrate with AI tools?",
+            "answer_options": [
+                "Seamless integration",
+                "Minor customization required",
+                "Significant development needed",
+                "Ongoing integration challenges"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Consider follow-up question about integration costs",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "How easily did your existing systems integrate with AI tools?",
+                "answer_options": [
+                    "Seamless integration",
+                    "Minor customization required",
+                    "Significant development needed",
+                    "Ongoing integration challenges"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which metrics have improved since AI implementation? (Select all that apply)",
+            "answer_options": [
+                "First response time",
+                "Customer satisfaction (CSAT)",
+                "Agent productivity",
+                "Resolution rate",
+                "Operating costs"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Include 'None' option if needed",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "Which metrics have improved since AI implementation? (Select all that apply)",
+                "answer_options": [
+                    "First response time",
+                    "Customer satisfaction (CSAT)",
+                    "Agent productivity",
+                    "Resolution rate",
+                    "Operating costs"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Have you provided specialized training for staff using AI tools?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Planned for next quarter"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Follow with training method question if answered 'Yes'",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "Have you provided specialized training for staff using AI tools?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Planned for next quarter"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What training methods were used? (Select all that apply)",
+            "answer_options": [
+                "Vendor-provided training",
+                "Internal workshops",
+                "Online courses",
+                "Peer mentoring",
+                "Documentation only"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q8",
+            "client_notes": "Allow multiple selections with 'Other' field",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "What training methods were used? (Select all that apply)",
+                "answer_options": [
+                    "Vendor-provided training",
+                    "Internal workshops",
+                    "Online courses",
+                    "Peer mentoring",
+                    "Documentation only"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q8"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How much do you trust AI tools to handle sensitive customer inquiries without human oversight?",
+            "answer_options": [
+                "Complete trust",
+                "High trust with occasional audits",
+                "Moderate trust requiring regular checks",
+                "Low trust (human approval required)",
+                "No trust"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Use progressive trust scale with clear definitions",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "How much do you trust AI tools to handle sensitive customer inquiries without human oversight?",
+                "answer_options": [
+                    "Complete trust",
+                    "High trust with occasional audits",
+                    "Moderate trust requiring regular checks",
+                    "Low trust (human approval required)",
+                    "No trust"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How have customers generally responded to AI-driven interactions?",
+            "answer_options": [
+                "Strongly Positive",
+                "Mostly Positive",
+                "Mixed Reactions",
+                "Mostly Negative",
+                "No Clear Feedback"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Include NPS-style follow-up if resources allow",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "How have customers generally responded to AI-driven interactions?",
+                "answer_options": [
+                    "Strongly Positive",
+                    "Mostly Positive",
+                    "Mixed Reactions",
+                    "Mostly Negative",
+                    "No Clear Feedback"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "What specific negative feedback have customers provided about AI interactions?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Mixed Reactions' or 'Mostly Negative' in Q11",
+            "client_notes": "Use text analysis for common themes post-survey",
+            "scripter_notes": "Field type: open text input",
+            "script": {
+                "question_text": "What specific negative feedback have customers provided about AI interactions?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Mixed Reactions' or 'Mostly Negative' in Q11"
+            }
+        },
+        {
+            "qid": "Q13",
+            "question_text": "How likely are you to increase AI tool investments in the next 18 months?",
+            "answer_options": [
+                "Very Likely",
+                "Likely",
+                "Undecided",
+                "Unlikely",
+                "Very Unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Benchmark against industry adoption rates",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "How likely are you to increase AI tool investments in the next 18 months?",
+                "answer_options": [
+                    "Very Likely",
+                    "Likely",
+                    "Undecided",
+                    "Unlikely",
+                    "Very Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q14",
+            "question_text": "What additional AI capabilities would most improve your customer service operations?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use for product development insights",
+            "scripter_notes": "Field type: open text input",
+            "script": {
+                "question_text": "What additional AI capabilities would most improve your customer service operations?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q15",
+            "question_text": "What is your role in AI tool implementation?",
+            "answer_options": [
+                "Executive Leadership",
+                "IT/Technical Team",
+                "Customer Service Management",
+                "Frontline Staff",
+                "External Consultant"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use for demographic segmentation",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "What is your role in AI tool implementation?",
+                "answer_options": [
+                    "Executive Leadership",
+                    "IT/Technical Team",
+                    "Customer Service Management",
+                    "Frontline Staff",
+                    "External Consultant"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

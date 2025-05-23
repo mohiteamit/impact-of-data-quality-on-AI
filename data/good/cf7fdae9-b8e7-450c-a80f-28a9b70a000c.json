@@ -1,0 +1,243 @@
+{
+    "survey_id": "cf7fdae9-b8e7-450c-a80f-28a9b70a000c",
+    "survey_name": "Ride-Sharing App Customer Experience Survey",
+    "survey_brief": "Assess user satisfaction with ride-sharing apps and identify key areas for service improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use ride-sharing apps?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use radio buttons with clear frequency ranges. Ensure mobile-responsive layout.",
+            "scripter_notes": "Single-choice radio buttons, required field",
+            "script": {
+                "question_text": "How often do you use ride-sharing apps?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which ride-sharing apps have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Uber",
+                "Lyft",
+                "Didi",
+                "Grab",
+                "Ola",
+                "Other"
+            ],
+            "routing_logic": "Show if Q1 ≠ 'Never'",
+            "client_notes": "Include 'Other' field with text input option to capture unlisted apps",
+            "scripter_notes": "Multi-choice checkboxes with 'Other' text validation",
+            "script": {
+                "question_text": "Which ride-sharing apps have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Uber",
+                    "Lyft",
+                    "Didi",
+                    "Grab",
+                    "Ola",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important when choosing a ride-sharing app?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Use open text field with 200-character limit. Example placeholder: 'Safety features, pricing, availability...'",
+            "scripter_notes": "Open-text input with character counter",
+            "script": {
+                "question_text": "What factors are most important when choosing a ride-sharing app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the ease of booking through your primary ride-sharing app?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Show if Q1 ≠ 'Never'",
+            "client_notes": "Use a 5-point Likert scale with emoji indicators for mobile users",
+            "scripter_notes": "Single-choice radio buttons with horizontal layout",
+            "script": {
+                "question_text": "How satisfied are you with the ease of booking through your primary ride-sharing app?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate driver professionalism in your recent experiences?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very Poor"
+            ],
+            "routing_logic": "Show if Q1 ≠ 'Never'",
+            "client_notes": "Include N/A option for users who haven't taken recent rides",
+            "scripter_notes": "Single-choice dropdown with 'N/A' option added programmatically",
+            "script": {
+                "question_text": "How would you rate driver professionalism in your recent experiences?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you experienced any safety concerns during rides in the past year?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Prefer not to answer"
+            ],
+            "routing_logic": "Show if Q1 ≠ 'Never'",
+            "client_notes": "Ensure anonymous response option is clearly stated in survey preamble",
+            "scripter_notes": "Single-choice radio buttons with optional skip logic",
+            "script": {
+                "question_text": "Have you experienced any safety concerns during rides in the past year?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Prefer not to answer"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Please describe any safety concerns you've experienced:",
+            "answer_options": [],
+            "routing_logic": "Show if Q6 = 'Yes'",
+            "client_notes": "Optional free-response field with content warning",
+            "scripter_notes": "Open-text area with optional validation",
+            "script": {
+                "question_text": "Please describe any safety concerns you've experienced:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q6 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How responsive was customer support in resolving your issues?",
+            "answer_options": [
+                "Extremely Responsive",
+                "Responsive",
+                "Neutral",
+                "Slow",
+                "Very Slow",
+                "Never Contacted"
+            ],
+            "routing_logic": "Show if Q1 ≠ 'Never'",
+            "client_notes": "Include explicit 'Never Contacted' option to reduce false negatives",
+            "scripter_notes": "Single-choice radio buttons with vertical layout",
+            "script": {
+                "question_text": "How responsive was customer support in resolving your issues?",
+                "answer_options": [
+                    "Extremely Responsive",
+                    "Responsive",
+                    "Neutral",
+                    "Slow",
+                    "Very Slow",
+                    "Never Contacted"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What payment methods do you typically use? (Select all that apply)",
+            "answer_options": [
+                "Credit/Debit Card",
+                "Digital Wallet",
+                "Cash",
+                "In-app Credits",
+                "Corporate Account"
+            ],
+            "routing_logic": "Show if Q1 ≠ 'Never'",
+            "client_notes": "Multi-select with clear payment terminology",
+            "scripter_notes": "Multi-choice checkboxes with 'Other' option",
+            "script": {
+                "question_text": "What payment methods do you typically use? (Select all that apply)",
+                "answer_options": [
+                    "Credit/Debit Card",
+                    "Digital Wallet",
+                    "Cash",
+                    "In-app Credits",
+                    "Corporate Account"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to recommend your primary ride-sharing app to others?",
+            "answer_options": [
+                "Very Likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very Unlikely"
+            ],
+            "routing_logic": "Show if Q1 ≠ 'Never'",
+            "client_notes": "Include NPS-style follow-up question in future surveys",
+            "scripter_notes": "Single-choice radio buttons with color-coded options",
+            "script": {
+                "question_text": "How likely are you to recommend your primary ride-sharing app to others?",
+                "answer_options": [
+                    "Very Likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 ≠ 'Never'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,267 @@
+{
+    "survey_id": "55af7c7b-856d-4a3a-8ebe-897bb5ab4ed4",
+    "survey_name": "Parental Satisfaction with Childcare Services Survey",
+    "survey_brief": "This survey aims to gather feedback from parents regarding their satisfaction with childcare services, focusing on quality of care, communication, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the overall quality of care provided by your childcare provider?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity and ease of response.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of care provided by your childcare provider?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How would you rate the cleanliness and safety of the childcare facility?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure the scale is balanced to avoid bias.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How would you rate the cleanliness and safety of the childcare facility?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you receive updates about your child's activities and progress?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'N/A' option if needed for parents who do not receive updates.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you receive updates about your child's activities and progress?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which of the following aspects of the childcare service are most important to you? (Select all that apply)",
+            "answer_options": [
+                "Quality of care",
+                "Cost",
+                "Location",
+                "Flexibility of hours",
+                "Staff qualifications",
+                "Communication with parents",
+                "Child-to-staff ratio"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture diverse priorities.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following aspects of the childcare service are most important to you? (Select all that apply)",
+                "answer_options": [
+                    "Quality of care",
+                    "Cost",
+                    "Location",
+                    "Flexibility of hours",
+                    "Staff qualifications",
+                    "Communication with parents",
+                    "Child-to-staff ratio"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you ever had any concerns or complaints about the childcare service?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Follow up with Q5a if 'Yes' is selected.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Have you ever had any concerns or complaints about the childcare service?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5a",
+            "question_text": "If yes, were your concerns addressed to your satisfaction?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Partially"
+            ],
+            "routing_logic": "Q5 == 'Yes'",
+            "client_notes": "Only show this question if Q5 is 'Yes'.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "If yes, were your concerns addressed to your satisfaction?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Partially"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Q5 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend this childcare service to other parents?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This is a standard Net Promoter Score (NPS) question.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to recommend this childcare service to other parents?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What improvements would you suggest for the childcare service?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: Text box (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for the childcare service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How long has your child been attending this childcare service?",
+            "answer_options": [
+                "Less than 6 months",
+                "6 months to 1 year",
+                "1 to 2 years",
+                "More than 2 years"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use clear time ranges to avoid ambiguity.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How long has your child been attending this childcare service?",
+                "answer_options": [
+                    "Less than 6 months",
+                    "6 months to 1 year",
+                    "1 to 2 years",
+                    "More than 2 years"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Do you feel that the childcare staff are adequately trained and professional?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Unsure' option for respondents who may not have enough information.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Do you feel that the childcare staff are adequately trained and professional?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your child's age group?",
+            "answer_options": [
+                "Infant (0-1 year)",
+                "Toddler (1-3 years)",
+                "Preschool (3-5 years)",
+                "School-age (5+ years)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use age ranges that align with common childcare categories.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What is your child's age group?",
+                "answer_options": [
+                    "Infant (0-1 year)",
+                    "Toddler (1-3 years)",
+                    "Preschool (3-5 years)",
+                    "School-age (5+ years)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

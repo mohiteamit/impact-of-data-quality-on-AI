@@ -1,0 +1,241 @@
+{
+    "survey_id": "c607a3a0-949a-4962-974e-da2b8fd46aff",
+    "survey_name": "Electric Scooter Sharing User Experience Survey",
+    "survey_brief": "This survey aims to evaluate user satisfaction and identify areas for improvement in electric scooter sharing services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use electric scooter sharing services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Less than once a month",
+                "First-time user"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a single-choice radio button for mobile-friendly design.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How often do you use electric scooter sharing services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Less than once a month",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using electric scooter sharing services?",
+            "answer_options": [
+                "Convenience",
+                "Cost-effectiveness",
+                "Environmental concerns",
+                "Avoiding traffic",
+                "Fun/recreation"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Allow single selection; consider randomizing options to reduce bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "What is your primary reason for using electric scooter sharing services?",
+                "answer_options": [
+                    "Convenience",
+                    "Cost-effectiveness",
+                    "Environmental concerns",
+                    "Avoiding traffic",
+                    "Fun/recreation"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which features are most important to you when choosing a scooter sharing service? (Select up to 3)",
+            "answer_options": [
+                "Price",
+                "Availability of scooters",
+                "Ease of app use",
+                "Scooter speed/performance",
+                "Battery life",
+                "Safety features",
+                "Service area coverage"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use checkboxes for multi-select; limit to 3 selections.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max_selections=3",
+            "script": {
+                "question_text": "Which features are most important to you when choosing a scooter sharing service? (Select up to 3)",
+                "answer_options": [
+                    "Price",
+                    "Availability of scooters",
+                    "Ease of app use",
+                    "Scooter speed/performance",
+                    "Battery life",
+                    "Safety features",
+                    "Service area coverage"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the current pricing of electric scooter sharing services?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a 5-point Likert scale for consistency.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with the current pricing of electric scooter sharing services?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How easy is it to find available scooters when you need them?",
+            "answer_options": [
+                "Very easy",
+                "Easy",
+                "Neutral",
+                "Difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Another Likert scale question; maintain same scale orientation as Q4.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How easy is it to find available scooters when you need them?",
+                "answer_options": [
+                    "Very easy",
+                    "Easy",
+                    "Neutral",
+                    "Difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you experienced any safety concerns while using electric scooter sharing services?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Simple yes/no question to filter for follow-up if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Have you experienced any safety concerns while using electric scooter sharing services?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If yes, please describe your safety concerns:",
+            "answer_options": [],
+            "routing_logic": "Only shown if Q6 = 'Yes'",
+            "client_notes": "Open-ended to capture specific concerns; mobile users may prefer voice input.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "If yes, please describe your safety concerns:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only shown if Q6 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How would you rate the maintenance condition of the scooters you've used?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Another scaled question; maintains consistency with previous scales.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How would you rate the maintenance condition of the scooters you've used?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What improvements would you suggest for electric scooter sharing services?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Open-ended to capture innovative ideas; set character limit to 500.",
+            "scripter_notes": "Field type: OPEN_TEXT with max_length=500",
+            "script": {
+                "question_text": "What improvements would you suggest for electric scooter sharing services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Would you recommend electric scooter sharing services to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Neutral",
+                "Probably not",
+                "Definitely not"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Standard NPS-style question; useful for benchmarking.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Would you recommend electric scooter sharing services to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Neutral",
+                    "Probably not",
+                    "Definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

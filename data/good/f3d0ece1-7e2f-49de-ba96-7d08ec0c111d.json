@@ -1,0 +1,279 @@
+{
+    "survey_id": "f3d0ece1-7e2f-49de-ba96-7d08ec0c111d",
+    "survey_name": "Customer Satisfaction Survey for Online Retail",
+    "survey_brief": "This survey aims to assess customer satisfaction with their recent online shopping experience, focusing on usability, product quality, and delivery service.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your recent online shopping experience?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency and clarity. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: single-choice (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with your recent online shopping experience?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following aspects of your shopping experience met your expectations? (Select all that apply)",
+            "answer_options": [
+                "Website usability",
+                "Product selection",
+                "Product quality",
+                "Pricing",
+                "Delivery speed",
+                "Customer service"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture nuanced feedback.",
+            "scripter_notes": "Field type: multi-choice (checkboxes)",
+            "script": {
+                "question_text": "Which of the following aspects of your shopping experience met your expectations? (Select all that apply)",
+                "answer_options": [
+                    "Website usability",
+                    "Product selection",
+                    "Product quality",
+                    "Pricing",
+                    "Delivery speed",
+                    "Customer service"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How likely are you to recommend our online store to a friend or colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This is a standard Net Promoter Score (NPS) question. Use a 5-point scale for consistency.",
+            "scripter_notes": "Field type: single-choice (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to recommend our online store to a friend or colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What was the primary reason for your recent purchase?",
+            "answer_options": [
+                "Needed the product",
+                "Saw an advertisement",
+                "Received a discount/promotion",
+                "Recommended by a friend",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with a text field to capture additional reasons.",
+            "scripter_notes": "Field type: single-choice with an open-text option (radio buttons + text input)",
+            "script": {
+                "question_text": "What was the primary reason for your recent purchase?",
+                "answer_options": [
+                    "Needed the product",
+                    "Saw an advertisement",
+                    "Received a discount/promotion",
+                    "Recommended by a friend",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any issues you encountered during your shopping experience.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q1",
+            "client_notes": "This open-ended question helps identify specific pain points for dissatisfied customers.",
+            "scripter_notes": "Field type: open-text (text area)",
+            "script": {
+                "question_text": "Please describe any issues you encountered during your shopping experience.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How easy was it to navigate our website?",
+            "answer_options": [
+                "Very easy",
+                "Easy",
+                "Neutral",
+                "Difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point scale to measure usability. Ensure the question is clear and concise.",
+            "scripter_notes": "Field type: single-choice (radio buttons)",
+            "script": {
+                "question_text": "How easy was it to navigate our website?",
+                "answer_options": [
+                    "Very easy",
+                    "Easy",
+                    "Neutral",
+                    "Difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How satisfied are you with the delivery time of your order?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question measures satisfaction with delivery speed, a critical factor in online retail.",
+            "scripter_notes": "Field type: single-choice (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the delivery time of your order?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Did you encounter any issues with the product(s) you received?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "A simple yes/no question to identify product-related issues.",
+            "scripter_notes": "Field type: single-choice (radio buttons)",
+            "script": {
+                "question_text": "Did you encounter any issues with the product(s) you received?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "If yes, please describe the issue(s) with the product(s).",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Yes' in Q8",
+            "client_notes": "This open-ended question provides detailed feedback on product issues.",
+            "scripter_notes": "Field type: open-text (text area)",
+            "script": {
+                "question_text": "If yes, please describe the issue(s) with the product(s).",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Yes' in Q8"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How would you rate the overall quality of the product(s) you received?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point scale to measure product quality perceptions.",
+            "scripter_notes": "Field type: single-choice (radio buttons)",
+            "script": {
+                "question_text": "How would you rate the overall quality of the product(s) you received?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How often do you shop online?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "This was my first time"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps segment respondents by their online shopping frequency.",
+            "scripter_notes": "Field type: single-choice (radio buttons)",
+            "script": {
+                "question_text": "How often do you shop online?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "This was my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "What additional features or services would you like to see on our website?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "This open-ended question captures suggestions for improvement.",
+            "scripter_notes": "Field type: open-text (text area)",
+            "script": {
+                "question_text": "What additional features or services would you like to see on our website?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

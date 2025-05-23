@@ -1,0 +1,231 @@
+{
+    "survey_id": "e6ac778d-28d0-4a2c-bdd8-d85c95cf5300",
+    "survey_name": "Public Library Services Feedback Survey",
+    "survey_brief": "This survey aims to gather community feedback on public library services to improve resource allocation and user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit the public library?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a 5-point frequency scale to capture usage patterns effectively",
+            "scripter_notes": "Radio buttons, mandatory response",
+            "script": {
+                "question_text": "How often do you visit the public library?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary purpose for visiting the library? (Select all that apply)",
+            "answer_options": [
+                "Borrow physical books",
+                "Use public computers/digital resources",
+                "Attend community events/workshops",
+                "Access study/workspace",
+                "Other"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Multi-select question to identify key service drivers",
+            "scripter_notes": "Checkbox input with 'Other' field trigger for Q10",
+            "script": {
+                "question_text": "What is your primary purpose for visiting the library? (Select all that apply)",
+                "answer_options": [
+                    "Borrow physical books",
+                    "Use public computers/digital resources",
+                    "Attend community events/workshops",
+                    "Access study/workspace",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the current book and media collection?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "5-point Likert scale balances granularity and response fatigue",
+            "scripter_notes": "Radio buttons with horizontal layout for mobile optimization",
+            "script": {
+                "question_text": "How satisfied are you with the current book and media collection?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the quality and reliability of our digital resources (e-books, databases, Wi-Fi)?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Haven't used"
+            ],
+            "routing_logic": "Display if 'Use public computers/digital resources' is selected in Q2",
+            "client_notes": "Include opt-out option for non-users to reduce skewed data",
+            "scripter_notes": "Implement skip logic based on Q2 responses",
+            "script": {
+                "question_text": "How would you rate the quality and reliability of our digital resources (e-books, databases, Wi-Fi)?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Haven't used"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if 'Use public computers/digital resources' is selected in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the helpfulness of library staff?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "No interaction"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Include neutral 'No interaction' option for validity",
+            "scripter_notes": "Radio buttons with auto-advance after selection",
+            "script": {
+                "question_text": "How would you rate the helpfulness of library staff?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "No interaction"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which aspects of library accessibility need improvement? (Select all that apply)",
+            "answer_options": [
+                "Operating hours",
+                "Parking availability",
+                "Public transportation access",
+                "Physical accessibility for disabilities",
+                "None"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Critical for ADA compliance planning",
+            "scripter_notes": "Checkbox input with 'None' as exclusive option",
+            "script": {
+                "question_text": "Which aspects of library accessibility need improvement? (Select all that apply)",
+                "answer_options": [
+                    "Operating hours",
+                    "Parking availability",
+                    "Public transportation access",
+                    "Physical accessibility for disabilities",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How many library-sponsored events/workshops have you attended in the past 6 months?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Open-ended to capture exact participation rates",
+            "scripter_notes": "Numeric input field with validation (0-50 range)",
+            "script": {
+                "question_text": "How many library-sponsored events/workshops have you attended in the past 6 months?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend our library to others?",
+            "answer_options": [
+                "Very Likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very Unlikely"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Standard NPS precursor question",
+            "scripter_notes": "Radio buttons with smiley-face scale for engagement",
+            "script": {
+                "question_text": "How likely are you to recommend our library to others?",
+                "answer_options": [
+                    "Very Likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What additional services or resources would you like to see offered?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Critical for innovation brainstorming",
+            "scripter_notes": "Large text input field with 500-character limit",
+            "script": {
+                "question_text": "What additional services or resources would you like to see offered?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Please specify any 'Other' purposes for library visits mentioned in Q2",
+            "answer_options": [],
+            "routing_logic": "Display only if 'Other' is selected in Q2",
+            "client_notes": "Prevents data loss from open-ended overflow",
+            "scripter_notes": "Text input with 100-character limit",
+            "script": {
+                "question_text": "Please specify any 'Other' purposes for library visits mentioned in Q2",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display only if 'Other' is selected in Q2"
+            }
+        }
+    ]
+}

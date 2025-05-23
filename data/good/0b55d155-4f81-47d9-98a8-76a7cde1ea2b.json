@@ -1,0 +1,239 @@
+{
+    "survey_id": "0b55d155-4f81-47d9-98a8-76a7cde1ea2b",
+    "survey_name": "Virtual Reality (VR) Training Program Effectiveness Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness and user satisfaction of VR-based training programs in corporate environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use VR-based training programs in your current role?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a radio button scale with clear, mutually exclusive options. Ensure options cover all possible frequencies.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you use VR-based training programs in your current role?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of training have you completed using VR? (Select all that apply)",
+            "answer_options": [
+                "Technical skills training",
+                "Soft skills training (e.g., communication, leadership)",
+                "Safety and compliance training",
+                "Onboarding and orientation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 answer is not 'Never', show this question.",
+            "client_notes": "Allow multiple selections with a checkbox format. Include an 'Other' option for flexibility.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which types of training have you completed using VR? (Select all that apply)",
+                "answer_options": [
+                    "Technical skills training",
+                    "Soft skills training (e.g., communication, leadership)",
+                    "Safety and compliance training",
+                    "Onboarding and orientation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 answer is not 'Never', show this question."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how effective do you find VR training compared to traditional methods (e.g., in-person or e-learning)?",
+            "answer_options": [
+                "1 - Much less effective",
+                "2 - Less effective",
+                "3 - Equally effective",
+                "4 - More effective",
+                "5 - Much more effective"
+            ],
+            "routing_logic": "If Q1 answer is not 'Never', show this question.",
+            "client_notes": "Use a Likert scale with clear labels for each point. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how effective do you find VR training compared to traditional methods (e.g., in-person or e-learning)?",
+                "answer_options": [
+                    "1 - Much less effective",
+                    "2 - Less effective",
+                    "3 - Equally effective",
+                    "4 - More effective",
+                    "5 - Much more effective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 answer is not 'Never', show this question."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What do you believe are the biggest advantages of VR training? (Select up to 3)",
+            "answer_options": [
+                "Immersive, hands-on experience",
+                "Ability to practice in a safe environment",
+                "Higher engagement and retention",
+                "Scalability (can train many employees at once)",
+                "Cost savings over time",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 answer is not 'Never', show this question.",
+            "client_notes": "Limit selections to 3 to prioritize responses. Use checkboxes with a validation rule.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with max 3 selections). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "What do you believe are the biggest advantages of VR training? (Select up to 3)",
+                "answer_options": [
+                    "Immersive, hands-on experience",
+                    "Ability to practice in a safe environment",
+                    "Higher engagement and retention",
+                    "Scalability (can train many employees at once)",
+                    "Cost savings over time",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 answer is not 'Never', show this question."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any technical issues while using VR training programs?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No, never"
+            ],
+            "routing_logic": "If Q1 answer is not 'Never', show this question.",
+            "client_notes": "Use a simple single-choice format to gauge frequency of issues.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Have you experienced any technical issues while using VR training programs?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No, never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 answer is not 'Never', show this question."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you answered 'Yes' to Q5, please describe the technical issues you encountered.",
+            "answer_options": [],
+            "routing_logic": "If Q5 answer is 'Yes, frequently' or 'Yes, occasionally', show this question.",
+            "client_notes": "Use an open-text field to capture detailed feedback. Ensure the field is mobile-friendly.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "If you answered 'Yes' to Q5, please describe the technical issues you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q5 answer is 'Yes, frequently' or 'Yes, occasionally', show this question."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How comfortable are you with using VR headsets and controls?",
+            "answer_options": [
+                "Very uncomfortable",
+                "Somewhat uncomfortable",
+                "Neutral",
+                "Somewhat comfortable",
+                "Very comfortable"
+            ],
+            "routing_logic": "If Q1 answer is not 'Never', show this question.",
+            "client_notes": "Use a Likert scale to measure comfort levels. Ensure the scale is intuitive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How comfortable are you with using VR headsets and controls?",
+                "answer_options": [
+                    "Very uncomfortable",
+                    "Somewhat uncomfortable",
+                    "Neutral",
+                    "Somewhat comfortable",
+                    "Very comfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 answer is not 'Never', show this question."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Would you recommend VR training to other employees in your organization?",
+            "answer_options": [
+                "Yes, strongly recommend",
+                "Yes, with some reservations",
+                "Neutral",
+                "No, would not recommend"
+            ],
+            "routing_logic": "If Q1 answer is not 'Never', show this question.",
+            "client_notes": "Use a single-choice format with nuanced options to capture recommendation strength.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Would you recommend VR training to other employees in your organization?",
+                "answer_options": [
+                    "Yes, strongly recommend",
+                    "Yes, with some reservations",
+                    "Neutral",
+                    "No, would not recommend"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 answer is not 'Never', show this question."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What improvements would you suggest for your organization's VR training programs?",
+            "answer_options": [],
+            "routing_logic": "If Q1 answer is not 'Never', show this question.",
+            "client_notes": "Use an open-text field to gather qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What improvements would you suggest for your organization's VR training programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 answer is not 'Never', show this question."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your primary role in the organization?",
+            "answer_options": [
+                "Executive/C-level",
+                "Manager",
+                "Individual contributor",
+                "HR/Training specialist",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice format with an 'Other' option for roles not listed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "What is your primary role in the organization?",
+                "answer_options": [
+                    "Executive/C-level",
+                    "Manager",
+                    "Individual contributor",
+                    "HR/Training specialist",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

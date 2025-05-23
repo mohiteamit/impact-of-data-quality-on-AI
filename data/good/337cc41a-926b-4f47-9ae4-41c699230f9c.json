@@ -1,0 +1,251 @@
+{
+    "survey_id": "337cc41a-926b-4f47-9ae4-41c699230f9c",
+    "survey_name": "Workplace Air Quality Impact Survey",
+    "survey_brief": "This survey aims to assess employees' perceptions and experiences regarding air quality in the workplace and its impact on their productivity and well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the air quality in your workplace?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity and consistency.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the air quality in your workplace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following issues have you experienced due to workplace air quality? (Select all that apply)",
+            "answer_options": [
+                "Dry or irritated eyes",
+                "Headaches",
+                "Fatigue",
+                "Difficulty concentrating",
+                "Respiratory discomfort",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture common issues.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following issues have you experienced due to workplace air quality? (Select all that apply)",
+                "answer_options": [
+                    "Dry or irritated eyes",
+                    "Headaches",
+                    "Fatigue",
+                    "Difficulty concentrating",
+                    "Respiratory discomfort",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you notice fluctuations in air quality (e.g., stuffiness, odors) in your workspace?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you notice fluctuations in air quality (e.g., stuffiness, odors) in your workspace?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which of the following best describes the air ventilation in your workspace?",
+            "answer_options": [
+                "Excellent - always fresh and well-circulated",
+                "Good - mostly fresh with occasional issues",
+                "Average - noticeable but manageable issues",
+                "Poor - frequent stuffiness or poor circulation",
+                "Very poor - constant issues with ventilation"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use descriptive options to capture nuances in ventilation quality.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Which of the following best describes the air ventilation in your workspace?",
+                "answer_options": [
+                    "Excellent - always fresh and well-circulated",
+                    "Good - mostly fresh with occasional issues",
+                    "Average - noticeable but manageable issues",
+                    "Poor - frequent stuffiness or poor circulation",
+                    "Very poor - constant issues with ventilation"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you reported any air quality concerns to your employer or facilities management?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I was not aware this was an option"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an option for those unaware of reporting channels.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Have you reported any air quality concerns to your employer or facilities management?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I was not aware this was an option"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you reported air quality concerns, how satisfied were you with the response?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (did not report)"
+            ],
+            "routing_logic": "Only if Q5 is 'Yes'",
+            "client_notes": "Include an 'N/A' option for those who did not report concerns.",
+            "scripter_notes": "Field type: radio button (single-choice) with conditional display.",
+            "script": {
+                "question_text": "If you reported air quality concerns, how satisfied were you with the response?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (did not report)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q5 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Do you believe poor air quality has affected your productivity at work?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No, not at all",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Capture both the degree of impact and uncertainty.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Do you believe poor air quality has affected your productivity at work?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No, not at all",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would you suggest to enhance air quality in your workspace? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow open-ended responses to gather qualitative feedback.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance air quality in your workspace? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Does your workplace have any visible air quality measures in place (e.g., air purifiers, plants, open windows)?",
+            "answer_options": [
+                "Yes, multiple measures",
+                "Yes, a few measures",
+                "No, none that I can see",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Unsure' option for those who may not notice these measures.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Does your workplace have any visible air quality measures in place (e.g., air purifiers, plants, open windows)?",
+                "answer_options": [
+                    "Yes, multiple measures",
+                    "Yes, a few measures",
+                    "No, none that I can see",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How often does your workplace communicate about air quality or related health initiatives?",
+            "answer_options": [
+                "Regularly",
+                "Occasionally",
+                "Rarely",
+                "Never",
+                "I'm not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use clear frequency options to gauge communication effectiveness.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often does your workplace communicate about air quality or related health initiatives?",
+                "answer_options": [
+                    "Regularly",
+                    "Occasionally",
+                    "Rarely",
+                    "Never",
+                    "I'm not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

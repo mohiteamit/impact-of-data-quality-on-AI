@@ -1,0 +1,241 @@
+{
+    "survey_id": "c2f7f613-acca-412f-876d-607b2cb40029",
+    "survey_name": "Public Transportation Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from commuters about their satisfaction with public transportation services, including reliability, cleanliness, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public transportation?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use public transportation?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which modes of public transportation do you typically use? (Select all that apply)",
+            "answer_options": [
+                "Bus",
+                "Subway/Metro",
+                "Train",
+                "Tram/Light Rail",
+                "Ferry",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use checkboxes for multi-selection to allow respondents to choose multiple options.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which modes of public transportation do you typically use? (Select all that apply)",
+                "answer_options": [
+                    "Bus",
+                    "Subway/Metro",
+                    "Train",
+                    "Tram/Light Rail",
+                    "Ferry",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the reliability of public transportation services?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who selected any mode of transportation in Q2.",
+            "client_notes": "Use a Likert scale for this question to measure satisfaction levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the reliability of public transportation services?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected any mode of transportation in Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the cleanliness of public transportation vehicles and stations?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "Appears to respondents who selected any mode of transportation in Q2.",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How would you rate the cleanliness of public transportation vehicles and stations?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected any mode of transportation in Q2."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for public transportation services?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use an open-ended text box to allow respondents to provide detailed feedback.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for public transportation services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How important is the availability of real-time updates (e.g., delays, schedule changes) to your public transportation experience?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Appears to respondents who selected any mode of transportation in Q2.",
+            "client_notes": "Use a Likert scale for this question to measure importance levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How important is the availability of real-time updates (e.g., delays, schedule changes) to your public transportation experience?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected any mode of transportation in Q2."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Have you experienced any safety concerns while using public transportation?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Prefer not to answer"
+            ],
+            "routing_logic": "Appears to respondents who selected any mode of transportation in Q2.",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Have you experienced any safety concerns while using public transportation?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Prefer not to answer"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected any mode of transportation in Q2."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "If you answered 'Yes' to the previous question, please describe the safety concern(s) you experienced.",
+            "answer_options": [],
+            "routing_logic": "Appears only if respondent selected 'Yes' in Q7.",
+            "client_notes": "Use an open-ended text box to allow respondents to provide detailed feedback.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "If you answered 'Yes' to the previous question, please describe the safety concern(s) you experienced.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if respondent selected 'Yes' in Q7."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How satisfied are you with the cost of public transportation fares?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who selected any mode of transportation in Q2.",
+            "client_notes": "Use a Likert scale for this question to measure satisfaction levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the cost of public transportation fares?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected any mode of transportation in Q2."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Would you recommend your local public transportation services to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Neutral",
+                "Probably no",
+                "Definitely no"
+            ],
+            "routing_logic": "Appears to respondents who selected any mode of transportation in Q2.",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you recommend your local public transportation services to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Neutral",
+                    "Probably no",
+                    "Definitely no"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected any mode of transportation in Q2."
+            }
+        }
+    ]
+}

@@ -1,0 +1,269 @@
+{
+    "survey_id": "4f5dfab1-ce40-47ad-ba82-84d331f0c3f9",
+    "survey_name": "Sustainable Home Energy Practices Survey",
+    "survey_brief": "This survey aims to understand household energy usage patterns, awareness of sustainable practices, and barriers to adopting energy-efficient technologies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following best describes your household's primary heating source?",
+            "answer_options": [
+                "Natural gas",
+                "Electricity",
+                "Oil",
+                "Propane",
+                "Wood or biomass",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure 'Other' option includes a text field for specification. Mobile-friendly dropdown recommended.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with 'Other' triggering text input.",
+            "script": {
+                "question_text": "Which of the following best describes your household's primary heating source?",
+                "answer_options": [
+                    "Natural gas",
+                    "Electricity",
+                    "Oil",
+                    "Propane",
+                    "Wood or biomass",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you actively monitor your home energy consumption?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons for clear single selection. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE, non-randomized for tracking consistency.",
+            "script": {
+                "question_text": "How often do you actively monitor your home energy consumption?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What smart home energy devices, if any, do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Smart thermostat",
+                "Energy monitoring plugs",
+                "Smart lighting systems",
+                "Solar panel monitoring",
+                "Home battery storage",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Checkbox format with 'None' as mutually exclusive option. Include 'Prefer not to say' if needed.",
+            "scripter_notes": "Field type: MULTI_CHOICE with validation to prevent 'None' + other selections.",
+            "script": {
+                "question_text": "What smart home energy devices, if any, do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Smart thermostat",
+                    "Energy monitoring plugs",
+                    "Smart lighting systems",
+                    "Solar panel monitoring",
+                    "Home battery storage",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors are most important to you when considering energy-efficient home upgrades? (Rank top 3)",
+            "answer_options": [
+                "Upfront cost",
+                "Long-term savings",
+                "Environmental impact",
+                "Government incentives",
+                "Ease of installation",
+                "Compatibility with existing systems"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use drag-and-drop ranking for engaged respondents, or numerical inputs for simpler implementation.",
+            "scripter_notes": "Field type: RANKING (or MULTI_CHOICE with max selections = 3 if ranking not supported).",
+            "script": {
+                "question_text": "What factors are most important to you when considering energy-efficient home upgrades? (Rank top 3)",
+                "answer_options": [
+                    "Upfront cost",
+                    "Long-term savings",
+                    "Environmental impact",
+                    "Government incentives",
+                    "Ease of installation",
+                    "Compatibility with existing systems"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What is the main reason your household has not adopted solar panels?",
+            "answer_options": [
+                "High upfront costs",
+                "Unsuitable roof/property",
+                "Lack of information",
+                "Concerns about reliability",
+                "We already have solar panels",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q3 does NOT include 'Solar panel monitoring'",
+            "client_notes": "Skip logic must exclude respondents with solar panels. Include 'Prefer not to say' for sensitive topics.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with 'Other' text input. Route only if Q3 lacks solar-related options.",
+            "script": {
+                "question_text": "What is the main reason your household has not adopted solar panels?",
+                "answer_options": [
+                    "High upfront costs",
+                    "Unsuitable roof/property",
+                    "Lack of information",
+                    "Concerns about reliability",
+                    "We already have solar panels",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q3 does NOT include 'Solar panel monitoring'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with your utility company's renewable energy programs?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable/Don't know"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point Likert scale with neutral midpoint. Label all scale points for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Randomize polarity if possible.",
+            "script": {
+                "question_text": "How satisfied are you with your utility company's renewable energy programs?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable/Don't know"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which of these energy-saving behaviors do you regularly practice? (Select all that apply)",
+            "answer_options": [
+                "Using programmable thermostats",
+                "Line-drying clothes",
+                "Unplugging unused electronics",
+                "Using energy-efficient appliances",
+                "Reducing water heater temperature",
+                "None of these"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Checkbox format with 'None' as exclusive option. Randomize option order.",
+            "scripter_notes": "Field type: MULTI_CHOICE with validation for 'None' exclusivity.",
+            "script": {
+                "question_text": "Which of these energy-saving behaviors do you regularly practice? (Select all that apply)",
+                "answer_options": [
+                    "Using programmable thermostats",
+                    "Line-drying clothes",
+                    "Unplugging unused electronics",
+                    "Using energy-efficient appliances",
+                    "Reducing water heater temperature",
+                    "None of these"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What percentage of your monthly budget is typically spent on home energy costs?",
+            "answer_options": [
+                "Less than 5%",
+                "5-10%",
+                "11-15%",
+                "16-20%",
+                "More than 20%",
+                "Don't know"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Sensitive question - place mid-survey after rapport established. Include 'Prefer not to say' if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Ensure mobile-friendly layout.",
+            "script": {
+                "question_text": "What percentage of your monthly budget is typically spent on home energy costs?",
+                "answer_options": [
+                    "Less than 5%",
+                    "5-10%",
+                    "11-15%",
+                    "16-20%",
+                    "More than 20%",
+                    "Don't know"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to invest in home energy improvements in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Undecided",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point purchase intent scale. Place near survey end for accurate behavioral prediction.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Randomize scale polarity if possible.",
+            "script": {
+                "question_text": "How likely are you to invest in home energy improvements in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Undecided",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional information would help you make decisions about home energy efficiency?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture unanticipated needs. Limit to 250 characters for manageable analysis.",
+            "scripter_notes": "Field type: OPEN_TEXT with character counter.",
+            "script": {
+                "question_text": "What additional information would help you make decisions about home energy efficiency?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

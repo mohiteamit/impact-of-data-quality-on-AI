@@ -1,0 +1,273 @@
+{
+    "survey_id": "ba339b7f-9989-455c-ae5e-18a1e6ff3b2b",
+    "survey_name": "Consumer Preferences for Smart Kitchen Appliances Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and adoption trends for smart kitchen appliances to help manufacturers tailor their product offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart kitchen appliances do you currently own? (Select all that apply)",
+            "answer_options": [
+                "Smart Refrigerator",
+                "Smart Oven",
+                "Smart Coffee Maker",
+                "Smart Slow Cooker",
+                "Smart Dishwasher",
+                "Smart Blender",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a checkbox format to allow multiple selections. Ensure the 'None of the above' option is included for accuracy.",
+            "scripter_notes": "Field type: MULTI_CHOICE. Ensure the 'None of the above' option deselects other choices if selected.",
+            "script": {
+                "question_text": "Which of the following smart kitchen appliances do you currently own? (Select all that apply)",
+                "answer_options": [
+                    "Smart Refrigerator",
+                    "Smart Oven",
+                    "Smart Coffee Maker",
+                    "Smart Slow Cooker",
+                    "Smart Dishwasher",
+                    "Smart Blender",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the smart kitchen appliances you currently own?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (I do not own any)"
+            ],
+            "routing_logic": "Appears if Q1 does not select 'None of the above'",
+            "client_notes": "Use a single-choice radio button format. Include a 'Not applicable' option for respondents without smart appliances.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Skip logic: Show only if Q1 has at least one non-'None' selection.",
+            "script": {
+                "question_text": "How satisfied are you with the smart kitchen appliances you currently own?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (I do not own any)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason for purchasing smart kitchen appliances?",
+            "answer_options": [
+                "Convenience",
+                "Energy efficiency",
+                "Remote control capabilities",
+                "Integration with other smart home devices",
+                "Advanced cooking features",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 does not select 'None of the above'",
+            "client_notes": "Use a single-choice format with an 'Other' option for open-ended responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an open-text follow-up if 'Other' is selected.",
+            "script": {
+                "question_text": "What is the primary reason for purchasing smart kitchen appliances?",
+                "answer_options": [
+                    "Convenience",
+                    "Energy efficiency",
+                    "Remote control capabilities",
+                    "Integration with other smart home devices",
+                    "Advanced cooking features",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to purchase additional smart kitchen appliances in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button format. Include a neutral option for undecided respondents.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How likely are you to purchase additional smart kitchen appliances in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which features are most important to you when selecting a smart kitchen appliance? (Select up to 3)",
+            "answer_options": [
+                "Voice control (e.g., Alexa, Google Assistant)",
+                "Mobile app integration",
+                "Energy-saving modes",
+                "Pre-programmed cooking settings",
+                "Self-cleaning capabilities",
+                "Real-time notifications",
+                "Compatibility with other smart home devices"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a multi-choice format with a limit of 3 selections. Randomize the order of options to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE with a maximum of 3 selections allowed.",
+            "script": {
+                "question_text": "Which features are most important to you when selecting a smart kitchen appliance? (Select up to 3)",
+                "answer_options": [
+                    "Voice control (e.g., Alexa, Google Assistant)",
+                    "Mobile app integration",
+                    "Energy-saving modes",
+                    "Pre-programmed cooking settings",
+                    "Self-cleaning capabilities",
+                    "Real-time notifications",
+                    "Compatibility with other smart home devices"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What is the maximum price you would be willing to pay for a smart kitchen appliance compared to a traditional one?",
+            "answer_options": [
+                "Up to 10% more",
+                "11-25% more",
+                "26-50% more",
+                "More than 50% more",
+                "I would not pay extra for smart features"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice format. Ensure the price ranges are realistic and easy to understand.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "What is the maximum price you would be willing to pay for a smart kitchen appliance compared to a traditional one?",
+                "answer_options": [
+                    "Up to 10% more",
+                    "11-25% more",
+                    "26-50% more",
+                    "More than 50% more",
+                    "I would not pay extra for smart features"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How often do you experience technical issues with your smart kitchen appliances?",
+            "answer_options": [
+                "Never",
+                "Rarely (once or twice a year)",
+                "Occasionally (every few months)",
+                "Frequently (monthly or more)"
+            ],
+            "routing_logic": "Appears if Q1 does not select 'None of the above'",
+            "client_notes": "Use a single-choice format. Include a 'Never' option for respondents without issues.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Skip logic: Show only if Q1 has at least one non-'None' selection.",
+            "script": {
+                "question_text": "How often do you experience technical issues with your smart kitchen appliances?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once or twice a year)",
+                    "Occasionally (every few months)",
+                    "Frequently (monthly or more)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What concerns, if any, do you have about using smart kitchen appliances? (Select all that apply)",
+            "answer_options": [
+                "Data privacy and security",
+                "High cost",
+                "Reliability and durability",
+                "Complexity of use",
+                "Lack of perceived benefits",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a checkbox format to allow multiple selections. Randomize the order of options to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using smart kitchen appliances? (Select all that apply)",
+                "answer_options": [
+                    "Data privacy and security",
+                    "High cost",
+                    "Reliability and durability",
+                    "Complexity of use",
+                    "Lack of perceived benefits",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Which of the following brands of smart kitchen appliances are you most familiar with? (Select all that apply)",
+            "answer_options": [
+                "Samsung",
+                "LG",
+                "GE Appliances",
+                "Whirlpool",
+                "Bosch",
+                "Breville",
+                "Instant Pot",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a checkbox format with an 'Other' option for open-ended responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an open-text follow-up if 'Other' is selected.",
+            "script": {
+                "question_text": "Which of the following brands of smart kitchen appliances are you most familiar with? (Select all that apply)",
+                "answer_options": [
+                    "Samsung",
+                    "LG",
+                    "GE Appliances",
+                    "Whirlpool",
+                    "Bosch",
+                    "Breville",
+                    "Instant Pot",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What would encourage you to purchase a smart kitchen appliance in the future? (Open-ended response)",
+            "answer_options": [],
+            "routing_logic": "Appears if Q4 selects 'Somewhat unlikely' or 'Very unlikely'",
+            "client_notes": "Use an open-text field to capture detailed responses. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with a character limit of 500.",
+            "script": {
+                "question_text": "What would encourage you to purchase a smart kitchen appliance in the future? (Open-ended response)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q4 selects 'Somewhat unlikely' or 'Very unlikely'"
+            }
+        }
+    ]
+}

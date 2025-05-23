@@ -1,0 +1,183 @@
+{
+    "survey_id": "de375229-c96e-4be9-a29b-128135e4d912",
+    "survey_name": "AI-Powered Customer Service Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction levels with AI-powered customer service solutions across various industries.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you interact with AI-powered customer service tools (e.g., chatbots, virtual assistants)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point scale for frequency to capture a broad range of user interactions.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you interact with AI-powered customer service tools (e.g., chatbots, virtual assistants)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which industries have you used AI-powered customer service tools in? (Select all that apply)",
+            "answer_options": [
+                "Retail/E-commerce",
+                "Banking/Finance",
+                "Healthcare",
+                "Telecommunications",
+                "Travel/Hospitality",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections and include an 'Other' option for comprehensiveness.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which industries have you used AI-powered customer service tools in? (Select all that apply)",
+                "answer_options": [
+                    "Retail/E-commerce",
+                    "Banking/Finance",
+                    "Healthcare",
+                    "Telecommunications",
+                    "Travel/Hospitality",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary reason for using AI-powered customer service tools?",
+            "answer_options": [
+                "24/7 availability",
+                "Faster response times",
+                "Ease of use",
+                "Preference over human interaction",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "Include an 'Other' option to capture unique motivations.",
+            "scripter_notes": "Field type: radio button with 'Other' open-text option (SINGLE_CHOICE with conditional open text)",
+            "script": {
+                "question_text": "What is your primary reason for using AI-powered customer service tools?",
+                "answer_options": [
+                    "24/7 availability",
+                    "Faster response times",
+                    "Ease of use",
+                    "Preference over human interaction",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accuracy of responses provided by AI-powered customer service tools?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of responses provided by AI-powered customer service tools?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you need to escalate to a human customer service representative after using an AI-powered tool?",
+            "answer_options": [
+                "Always",
+                "Frequently",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "This helps gauge the effectiveness of AI in resolving queries independently.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you need to escalate to a human customer service representative after using an AI-powered tool?",
+                "answer_options": [
+                    "Always",
+                    "Frequently",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which features do you value most in AI-powered customer service tools? (Select up to 3)",
+            "answer_options": [
+                "Natural language understanding",
+                "Speed of response",
+                "Integration with other services",
+                "Personalization",
+                "Multilingual support",
+                "Proactive suggestions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "Limit selections to 3 to prioritize top features.",
+            "scripter_notes": "Field type: checkbox with max selection limit (MULTI_CHOICE with validation)",
+            "script": {
+                "question_text": "Which features do you value most in AI-powered customer service tools? (Select up to 3)",
+                "answer_options": [
+                    "Natural language understanding",
+                    "Speed of response",
+                    "Integration with other services",
+                    "Personalization",
+                    "Multilingual support",
+                    "Proactive suggestions",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What improvements would you suggest for AI-powered customer service tools?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to gather qualitative feedback for innovation.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-powered customer service tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,379 @@
+{
+    "survey_id": "bec38497-551c-4476-95ea-aff141f786ec",
+    "survey_name": "E-Learning Platform Customer Satisfaction Survey",
+    "survey_brief": "Assess user satisfaction with e-learning platforms to identify strengths and improvement opportunities in content quality, platform usability, and customer support.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you used an e-learning platform for professional or personal development in the last 6 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Respondents selecting 'No' will skip to end of survey",
+            "client_notes": "Use as a screener question to filter relevant participants",
+            "scripter_notes": "Field type: radio button with exit logic for 'No' responses",
+            "script": {
+                "question_text": "Have you used an e-learning platform for professional or personal development in the last 6 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents selecting 'No' will skip to end of survey"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which e-learning platforms have you used? (Select all that apply)",
+            "answer_options": [
+                "Coursera",
+                "Udemy",
+                "LinkedIn Learning",
+                "Skillshare",
+                "Other"
+            ],
+            "routing_logic": "Appears only if Q1 = 'Yes'",
+            "client_notes": "Include 'Other' option to capture niche platforms",
+            "scripter_notes": "Field type: checkbox with multi-select functionality",
+            "script": {
+                "question_text": "Which e-learning platforms have you used? (Select all that apply)",
+                "answer_options": [
+                    "Coursera",
+                    "Udemy",
+                    "LinkedIn Learning",
+                    "Skillshare",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall course quality?",
+            "answer_options": [
+                "Very Dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very Satisfied"
+            ],
+            "routing_logic": "Always appears after Q2",
+            "client_notes": "Use standard 5-point Likert scale for consistency",
+            "scripter_notes": "Field type: radio button with horizontal layout",
+            "script": {
+                "question_text": "How satisfied are you with the overall course quality?",
+                "answer_options": [
+                    "Very Dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very Satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears after Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the variety of courses available?",
+            "answer_options": [
+                "Poor",
+                "Below Average",
+                "Average",
+                "Good",
+                "Excellent"
+            ],
+            "routing_logic": "Always appears after Q3",
+            "client_notes": "Alternative 5-point scale to prevent survey fatigue",
+            "scripter_notes": "Field type: radio button with vertical layout",
+            "script": {
+                "question_text": "How would you rate the variety of courses available?",
+                "answer_options": [
+                    "Poor",
+                    "Below Average",
+                    "Average",
+                    "Good",
+                    "Excellent"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears after Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you experience technical issues during video playback?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Occasionally",
+                "Frequently",
+                "Always"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Critical for assessing platform reliability",
+            "scripter_notes": "Field type: radio button with hover tooltip definitions",
+            "script": {
+                "question_text": "How often do you experience technical issues during video playback?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Occasionally",
+                    "Frequently",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How would you rate the mobile app experience?",
+            "answer_options": [
+                "Poor",
+                "Fair",
+                "Good",
+                "Very Good",
+                "Excellent"
+            ],
+            "routing_logic": "Appears only if Q2 includes platforms with mobile apps",
+            "client_notes": "Include 'N/A' option if needed in future iterations",
+            "scripter_notes": "Field type: radio button with conditional display",
+            "script": {
+                "question_text": "How would you rate the mobile app experience?",
+                "answer_options": [
+                    "Poor",
+                    "Fair",
+                    "Good",
+                    "Very Good",
+                    "Excellent"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q2 includes platforms with mobile apps"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which features do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Course Bookmarks",
+                "Discussion Forums",
+                "Progress Tracking",
+                "Offline Access",
+                "Certificates"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Identify high-value features for product development",
+            "scripter_notes": "Field type: checkbox grid with 2-column layout",
+            "script": {
+                "question_text": "Which features do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Course Bookmarks",
+                    "Discussion Forums",
+                    "Progress Tracking",
+                    "Offline Access",
+                    "Certificates"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend this platform to a colleague?",
+            "answer_options": [
+                "0 - Not at all likely",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 - Extremely likely"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Standard NPS question - keep 11-point scale",
+            "scripter_notes": "Field type: radio button slider with 0-10 labels",
+            "script": {
+                "question_text": "How likely are you to recommend this platform to a colleague?",
+                "answer_options": [
+                    "0 - Not at all likely",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 - Extremely likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What one improvement would most enhance your learning experience?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-text field for qualitative insights",
+            "scripter_notes": "Field type: text area with 500-character limit",
+            "script": {
+                "question_text": "What one improvement would most enhance your learning experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Which learning formats do you prefer? (Select up to 3)",
+            "answer_options": [
+                "Video Lectures",
+                "Interactive Exercises",
+                "Text Articles",
+                "Live Webinars",
+                "Peer Discussions"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Limit selections to identify top preferences",
+            "scripter_notes": "Field type: checkbox with selection limit validation",
+            "script": {
+                "question_text": "Which learning formats do you prefer? (Select up to 3)",
+                "answer_options": [
+                    "Video Lectures",
+                    "Interactive Exercises",
+                    "Text Articles",
+                    "Live Webinars",
+                    "Peer Discussions"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How satisfied are you with customer support response times?",
+            "answer_options": [
+                "Very Dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very Satisfied"
+            ],
+            "routing_logic": "Appears only if Q7 includes 'Discussion Forums' or 'Certificates'",
+            "client_notes": "Critical for users requiring technical assistance",
+            "scripter_notes": "Field type: radio button with conditional display",
+            "script": {
+                "question_text": "How satisfied are you with customer support response times?",
+                "answer_options": [
+                    "Very Dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very Satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q7 includes 'Discussion Forums' or 'Certificates'"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "How fair is the pricing compared to the value received?",
+            "answer_options": [
+                "Significantly Overpriced",
+                "Slightly Overpriced",
+                "Fairly Priced",
+                "Good Value",
+                "Exceptional Value"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Assess price perception without exact figures",
+            "scripter_notes": "Field type: radio button with emoji scale",
+            "script": {
+                "question_text": "How fair is the pricing compared to the value received?",
+                "answer_options": [
+                    "Significantly Overpriced",
+                    "Slightly Overpriced",
+                    "Fairly Priced",
+                    "Good Value",
+                    "Exceptional Value"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q13",
+            "question_text": "What challenges have you faced? (Select all that apply)",
+            "answer_options": [
+                "Outdated Content",
+                "Navigation Difficulties",
+                "Lack of Advanced Courses",
+                "Certificate Costs",
+                "Platform Bugs"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Identify pain points for roadmap prioritization",
+            "scripter_notes": "Field type: checkbox grid with 'Other' field",
+            "script": {
+                "question_text": "What challenges have you faced? (Select all that apply)",
+                "answer_options": [
+                    "Outdated Content",
+                    "Navigation Difficulties",
+                    "Lack of Advanced Courses",
+                    "Certificate Costs",
+                    "Platform Bugs"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q14",
+            "question_text": "How do you prefer to receive platform updates?",
+            "answer_options": [
+                "Email Newsletter",
+                "Mobile Push Notifications",
+                "In-App Messages",
+                "Social Media",
+                "No Updates Preferred"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Inform communication channel strategy",
+            "scripter_notes": "Field type: radio button with 'Other' option",
+            "script": {
+                "question_text": "How do you prefer to receive platform updates?",
+                "answer_options": [
+                    "Email Newsletter",
+                    "Mobile Push Notifications",
+                    "In-App Messages",
+                    "Social Media",
+                    "No Updates Preferred"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q15",
+            "question_text": "Additional comments about your e-learning experience:",
+            "answer_options": [],
+            "routing_logic": "Optional final question",
+            "client_notes": "Capture unexpected insights - keep optional",
+            "scripter_notes": "Field type: text box with optional validation",
+            "script": {
+                "question_text": "Additional comments about your e-learning experience:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional final question"
+            }
+        }
+    ]
+}

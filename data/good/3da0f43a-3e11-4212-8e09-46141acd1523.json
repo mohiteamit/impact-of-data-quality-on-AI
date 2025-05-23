@@ -1,0 +1,315 @@
+{
+    "survey_id": "3da0f43a-3e11-4212-8e09-46141acd1523",
+    "survey_name": "Remote Work Productivity and Well-being Survey",
+    "survey_brief": "This survey aims to evaluate employee productivity, well-being, and challenges faced while working remotely. The insights will help improve remote work policies and support systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you typically work remotely?",
+            "answer_options": [
+                "1 day",
+                "2 days",
+                "3 days",
+                "4 days",
+                "5 days (fully remote)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all common remote work frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How many days per week do you typically work remotely?",
+                "answer_options": [
+                    "1 day",
+                    "2 days",
+                    "3 days",
+                    "4 days",
+                    "5 days (fully remote)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following tools do you use for remote work? (Select all that apply)",
+            "answer_options": [
+                "Video conferencing (e.g., Zoom, Teams)",
+                "Project management (e.g., Asana, Trello)",
+                "Instant messaging (e.g., Slack, Microsoft Teams)",
+                "Cloud storage (e.g., Google Drive, Dropbox)",
+                "Time tracking (e.g., Toggl, Harvest)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use checkboxes for multi-select. Include common remote work tools.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following tools do you use for remote work? (Select all that apply)",
+                "answer_options": [
+                    "Video conferencing (e.g., Zoom, Teams)",
+                    "Project management (e.g., Asana, Trello)",
+                    "Instant messaging (e.g., Slack, Microsoft Teams)",
+                    "Cloud storage (e.g., Google Drive, Dropbox)",
+                    "Time tracking (e.g., Toggl, Harvest)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate your productivity while working remotely compared to working in the office?",
+            "answer_options": [
+                "Much more productive",
+                "Slightly more productive",
+                "About the same",
+                "Slightly less productive",
+                "Much less productive"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a Likert scale for nuanced responses. Ensure balanced options.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How would you rate your productivity while working remotely compared to working in the office?",
+                "answer_options": [
+                    "Much more productive",
+                    "Slightly more productive",
+                    "About the same",
+                    "Slightly less productive",
+                    "Much less productive"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What are the biggest challenges you face while working remotely? (Select up to 3)",
+            "answer_options": [
+                "Distractions at home",
+                "Poor internet connection",
+                "Lack of face-to-face collaboration",
+                "Difficulty separating work and personal life",
+                "Feeling isolated",
+                "Time zone differences with colleagues",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use checkboxes with a limit of 3 selections. Include an 'Other' option for flexibility.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with max selections = 3.",
+            "script": {
+                "question_text": "What are the biggest challenges you face while working remotely? (Select up to 3)",
+                "answer_options": [
+                    "Distractions at home",
+                    "Poor internet connection",
+                    "Lack of face-to-face collaboration",
+                    "Difficulty separating work and personal life",
+                    "Feeling isolated",
+                    "Time zone differences with colleagues",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you selected 'Other' above, please specify:",
+            "answer_options": [],
+            "routing_logic": "Show only if 'Other' is selected in Q4.",
+            "client_notes": "Open-text field for additional challenges. Keep it concise.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "If you selected 'Other' above, please specify:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show only if 'Other' is selected in Q4."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How often do you experience technical issues (e.g., software, hardware) while working remotely?",
+            "answer_options": [
+                "Very frequently (daily or almost daily)",
+                "Frequently (a few times a week)",
+                "Occasionally (a few times a month)",
+                "Rarely (once a month or less)",
+                "Never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a frequency scale for clarity. Ensure options cover all ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you experience technical issues (e.g., software, hardware) while working remotely?",
+                "answer_options": [
+                    "Very frequently (daily or almost daily)",
+                    "Frequently (a few times a week)",
+                    "Occasionally (a few times a month)",
+                    "Rarely (once a month or less)",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which of the following best describes your remote work setup?",
+            "answer_options": [
+                "Dedicated home office",
+                "Shared workspace at home",
+                "Works from a coworking space",
+                "Works from various locations (e.g., cafes, libraries)",
+                "No fixed workspace"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Single-choice question to understand workspace conditions.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Which of the following best describes your remote work setup?",
+                "answer_options": [
+                    "Dedicated home office",
+                    "Shared workspace at home",
+                    "Works from a coworking space",
+                    "Works from various locations (e.g., cafes, libraries)",
+                    "No fixed workspace"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How satisfied are you with your current remote work arrangement?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with your current remote work arrangement?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What additional support would help improve your remote work experience? (Select all that apply)",
+            "answer_options": [
+                "Better technology or equipment",
+                "More flexible work hours",
+                "Mental health resources",
+                "More virtual team-building activities",
+                "Training on remote work best practices",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Multi-choice question to identify support needs. Include an 'Other' option.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "What additional support would help improve your remote work experience? (Select all that apply)",
+                "answer_options": [
+                    "Better technology or equipment",
+                    "More flexible work hours",
+                    "Mental health resources",
+                    "More virtual team-building activities",
+                    "Training on remote work best practices",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "If you selected 'Other' above, please specify:",
+            "answer_options": [],
+            "routing_logic": "Show only if 'Other' is selected in Q9.",
+            "client_notes": "Open-text field for additional support needs.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "If you selected 'Other' above, please specify:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show only if 'Other' is selected in Q9."
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How often do you communicate with your manager while working remotely?",
+            "answer_options": [
+                "Daily",
+                "A few times a week",
+                "Weekly",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Frequency scale to understand communication patterns.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you communicate with your manager while working remotely?",
+                "answer_options": [
+                    "Daily",
+                    "A few times a week",
+                    "Weekly",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Do you feel included in team decisions and discussions while working remotely?",
+            "answer_options": [
+                "Yes, always",
+                "Yes, most of the time",
+                "Sometimes",
+                "Rarely",
+                "No, never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Likert scale to measure inclusion.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Do you feel included in team decisions and discussions while working remotely?",
+                "answer_options": [
+                    "Yes, always",
+                    "Yes, most of the time",
+                    "Sometimes",
+                    "Rarely",
+                    "No, never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q13",
+            "question_text": "What is one thing your company could do to better support remote workers?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended question for qualitative feedback.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What is one thing your company could do to better support remote workers?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

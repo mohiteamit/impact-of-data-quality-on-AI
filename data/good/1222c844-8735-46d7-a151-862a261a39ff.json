@@ -1,0 +1,257 @@
+{
+    "survey_id": "1222c844-8735-46d7-a151-862a261a39ff",
+    "survey_name": "Hybrid Event Attendee Experience Survey",
+    "survey_brief": "This survey aims to evaluate attendee satisfaction and gather feedback on hybrid (in-person and virtual) event experiences to improve future event planning.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which type of attendance did you choose for the event?",
+            "answer_options": [
+                "In-person only",
+                "Virtual only",
+                "Both in-person and virtual"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons for single selection. This helps segment respondents for follow-up questions.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Which type of attendance did you choose for the event?",
+                "answer_options": [
+                    "In-person only",
+                    "Virtual only",
+                    "Both in-person and virtual"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied were you with the event overall?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied were you with the event overall?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What aspects of the event did you find most valuable? (Select all that apply)",
+            "answer_options": [
+                "Keynote speakers",
+                "Breakout sessions",
+                "Networking opportunities",
+                "Virtual platform features",
+                "Event app functionality",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with text input.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional text input for 'Other'.",
+            "script": {
+                "question_text": "What aspects of the event did you find most valuable? (Select all that apply)",
+                "answer_options": [
+                    "Keynote speakers",
+                    "Breakout sessions",
+                    "Networking opportunities",
+                    "Virtual platform features",
+                    "Event app functionality",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the quality of the virtual event platform?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor",
+                "N/A (did not attend virtually)"
+            ],
+            "routing_logic": "Respondents who selected 'Virtual only' or 'Both in-person and virtual' in Q1",
+            "client_notes": "Include N/A option for in-person attendees. Use radio buttons.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How would you rate the quality of the virtual event platform?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor",
+                    "N/A (did not attend virtually)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Virtual only' or 'Both in-person and virtual' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the venue facilities for in-person attendees?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor",
+                "N/A (did not attend in person)"
+            ],
+            "routing_logic": "Respondents who selected 'In-person only' or 'Both in-person and virtual' in Q1",
+            "client_notes": "Include N/A option for virtual-only attendees. Use radio buttons.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How would you rate the venue facilities for in-person attendees?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor",
+                    "N/A (did not attend in person)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'In-person only' or 'Both in-person and virtual' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Did you experience any technical difficulties during the virtual event?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "N/A (did not attend virtually)"
+            ],
+            "routing_logic": "Respondents who selected 'Virtual only' or 'Both in-person and virtual' in Q1",
+            "client_notes": "Simple yes/no question with N/A option. Use radio buttons.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Did you experience any technical difficulties during the virtual event?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "N/A (did not attend virtually)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Virtual only' or 'Both in-person and virtual' in Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If you experienced technical difficulties, please describe them:",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Yes' in Q6",
+            "client_notes": "Open-ended question to gather specific feedback. Ensure text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "If you experienced technical difficulties, please describe them:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Yes' in Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How effective were the networking opportunities at the event?",
+            "answer_options": [
+                "Very effective",
+                "Somewhat effective",
+                "Neutral",
+                "Somewhat ineffective",
+                "Very ineffective",
+                "Did not participate in networking"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include a 'Did not participate' option. Use radio buttons.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How effective were the networking opportunities at the event?",
+                "answer_options": [
+                    "Very effective",
+                    "Somewhat effective",
+                    "Neutral",
+                    "Somewhat ineffective",
+                    "Very ineffective",
+                    "Did not participate in networking"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What topics would you like to see covered in future events?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather suggestions. Use a large text box.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What topics would you like to see covered in future events?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to attend future events organized by us?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to attend future events organized by us?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "Do you have any additional comments or suggestions for improving future hybrid events?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture final feedback. Use a large text box.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "Do you have any additional comments or suggestions for improving future hybrid events?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

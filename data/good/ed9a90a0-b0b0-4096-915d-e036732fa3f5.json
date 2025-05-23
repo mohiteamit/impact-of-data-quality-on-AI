@@ -1,0 +1,243 @@
+{
+    "survey_id": "ed9a90a0-b0b0-4096-915d-e036732fa3f5",
+    "survey_name": "Mental Health App User Satisfaction Survey",
+    "survey_brief": "Assess user satisfaction with mental health apps, identify valued features, and gather improvement suggestions for service providers.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the mental health app overall?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistent benchmarking. Ensure mobile-responsive layout.",
+            "scripter_notes": "Radio buttons. Randomize option order for 50% of respondents.",
+            "script": {
+                "question_text": "How satisfied are you with the mental health app overall?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How frequently do you use the app?",
+            "answer_options": [
+                "Daily",
+                "3-5 times/week",
+                "1-2 times/week",
+                "Less than once/week"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include 'N/A' option if dropout rates are being measured (add in scripter notes if needed).",
+            "scripter_notes": "Radio buttons with 'Prefer not to answer' opt-out.",
+            "script": {
+                "question_text": "How frequently do you use the app?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times/week",
+                    "1-2 times/week",
+                    "Less than once/week"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which features do you regularly use? (Select all that apply)",
+            "answer_options": [
+                "Mood tracking",
+                "Guided meditations",
+                "Crisis support",
+                "Progress analytics",
+                "Peer community chat"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Limit to 7 options maximum to avoid survey fatigue.",
+            "scripter_notes": "Checkbox input with 'Other' write-in field.",
+            "script": {
+                "question_text": "Which features do you regularly use? (Select all that apply)",
+                "answer_options": [
+                    "Mood tracking",
+                    "Guided meditations",
+                    "Crisis support",
+                    "Progress analytics",
+                    "Peer community chat"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How effective has the app been in helping you manage mental health?",
+            "answer_options": [
+                "Extremely effective",
+                "Moderately effective",
+                "Slightly effective",
+                "Not effective"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Add visual scale anchors if using a slider variant.",
+            "scripter_notes": "Radio buttons with vertical alignment.",
+            "script": {
+                "question_text": "How effective has the app been in helping you manage mental health?",
+                "answer_options": [
+                    "Extremely effective",
+                    "Moderately effective",
+                    "Slightly effective",
+                    "Not effective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you contacted customer support within the last 6 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Place sensitive questions mid-survey to reduce dropout risk.",
+            "scripter_notes": "Radio buttons with dynamic routing to Q6.",
+            "script": {
+                "question_text": "Have you contacted customer support within the last 6 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied were you with customer support response time?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Displayed only if Q5 is 'Yes'",
+            "client_notes": "Benchmark against industry-standard CSAT metrics.",
+            "scripter_notes": "Add skip logic based on Q5 response.",
+            "script": {
+                "question_text": "How satisfied were you with customer support response time?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed only if Q5 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to recommend this app to others?",
+            "answer_options": [
+                "Very Likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very Unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use as a proxy for Net Promoter Score (NPS).",
+            "scripter_notes": "Radio buttons with horizontal display on desktop.",
+            "script": {
+                "question_text": "How likely are you to recommend this app to others?",
+                "answer_options": [
+                    "Very Likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would enhance your experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use text analysis tools to categorize open responses.",
+            "scripter_notes": "Open-text field with 500-character limit.",
+            "script": {
+                "question_text": "What improvements would enhance your experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How important is data privacy in your app selection?",
+            "answer_options": [
+                "Extremely Important",
+                "Very Important",
+                "Moderately Important",
+                "Slightly Important",
+                "Not Important"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use to prioritize security communications.",
+            "scripter_notes": "Radio buttons with tooltip explaining privacy policies.",
+            "script": {
+                "question_text": "How important is data privacy in your app selection?",
+                "answer_options": [
+                    "Extremely Important",
+                    "Very Important",
+                    "Moderately Important",
+                    "Slightly Important",
+                    "Not Important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Which subscription model do you prefer?",
+            "answer_options": [
+                "Monthly",
+                "Annual",
+                "Pay-per-feature",
+                "Freemium with ads"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Identify revenue optimization opportunities.",
+            "scripter_notes": "Radio buttons with 'Undecided' opt-out.",
+            "script": {
+                "question_text": "Which subscription model do you prefer?",
+                "answer_options": [
+                    "Monthly",
+                    "Annual",
+                    "Pay-per-feature",
+                    "Freemium with ads"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

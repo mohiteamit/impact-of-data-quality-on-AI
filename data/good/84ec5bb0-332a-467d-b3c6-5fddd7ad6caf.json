@@ -1,0 +1,283 @@
+{
+    "survey_id": "84ec5bb0-332a-467d-b3c6-5fddd7ad6caf",
+    "survey_name": "Smartphone Usage and Preferences Survey",
+    "survey_brief": "This survey aims to understand user preferences, usage patterns, and satisfaction levels with current smartphone devices and features.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which smartphone brand do you currently use as your primary device?",
+            "answer_options": [
+                "Apple (iPhone)",
+                "Samsung",
+                "Google (Pixel)",
+                "OnePlus",
+                "Xiaomi",
+                "Huawei",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure 'Other' includes a text field for specification. Randomize brand order to avoid bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with 'Other' triggering an open-text follow-up.",
+            "script": {
+                "question_text": "Which smartphone brand do you currently use as your primary device?",
+                "answer_options": [
+                    "Apple (iPhone)",
+                    "Samsung",
+                    "Google (Pixel)",
+                    "OnePlus",
+                    "Xiaomi",
+                    "Huawei",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you upgrade your smartphone?",
+            "answer_options": [
+                "Every year",
+                "Every 2 years",
+                "Every 3 years",
+                "Every 4 years or more",
+                "Only when my current phone stops working"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a neutral scale. Avoid leading options.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you upgrade your smartphone?",
+                "answer_options": [
+                    "Every year",
+                    "Every 2 years",
+                    "Every 3 years",
+                    "Every 4 years or more",
+                    "Only when my current phone stops working"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the top 3 features you consider when purchasing a new smartphone? (Select up to 3)",
+            "answer_options": [
+                "Camera quality",
+                "Battery life",
+                "Processor speed",
+                "Display quality",
+                "Storage capacity",
+                "Price",
+                "Brand reputation",
+                "Operating system (iOS/Android)",
+                "Design/build quality",
+                "5G capability"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Randomize feature order. Limit selections to 3 to force prioritization.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with max selections enforced.",
+            "script": {
+                "question_text": "What are the top 3 features you consider when purchasing a new smartphone? (Select up to 3)",
+                "answer_options": [
+                    "Camera quality",
+                    "Battery life",
+                    "Processor speed",
+                    "Display quality",
+                    "Storage capacity",
+                    "Price",
+                    "Brand reputation",
+                    "Operating system (iOS/Android)",
+                    "Design/build quality",
+                    "5G capability"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1-10, how satisfied are you with your current smartphone's battery life? (1 = Not at all satisfied, 10 = Extremely satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a numeric scale for quantitative analysis. Display as a slider on mobile.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons or slider).",
+            "script": {
+                "question_text": "On a scale of 1-10, how satisfied are you with your current smartphone's battery life? (1 = Not at all satisfied, 10 = Extremely satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What do you primarily use your smartphone for? (Select all that apply)",
+            "answer_options": [
+                "Social media",
+                "Communication (calls/messaging)",
+                "Work/productivity",
+                "Entertainment (video/music/games)",
+                "Navigation/maps",
+                "Online shopping",
+                "Mobile banking",
+                "Photography",
+                "Health/fitness tracking",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. 'Other' should trigger a text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with 'Other' as an open-text option.",
+            "script": {
+                "question_text": "What do you primarily use your smartphone for? (Select all that apply)",
+                "answer_options": [
+                    "Social media",
+                    "Communication (calls/messaging)",
+                    "Work/productivity",
+                    "Entertainment (video/music/games)",
+                    "Navigation/maps",
+                    "Online shopping",
+                    "Mobile banking",
+                    "Photography",
+                    "Health/fitness tracking",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How many hours per day do you spend on your smartphone?",
+            "answer_options": [
+                "Less than 1 hour",
+                "1-2 hours",
+                "3-4 hours",
+                "5-6 hours",
+                "More than 6 hours"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use time brackets for easier recall. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How many hours per day do you spend on your smartphone?",
+                "answer_options": [
+                    "Less than 1 hour",
+                    "1-2 hours",
+                    "3-4 hours",
+                    "5-6 hours",
+                    "More than 6 hours"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What is your biggest frustration with your current smartphone?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture unprompted feedback. Limit to 200 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit.",
+            "script": {
+                "question_text": "What is your biggest frustration with your current smartphone?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Would you consider switching to a foldable smartphone in your next purchase?",
+            "answer_options": [
+                "Yes, definitely",
+                "Maybe, depending on price/features",
+                "No, not interested",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include neutral option for those unfamiliar with foldable devices.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Would you consider switching to a foldable smartphone in your next purchase?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Maybe, depending on price/features",
+                    "No, not interested",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Which mobile operating system do you prefer?",
+            "answer_options": [
+                "iOS",
+                "Android",
+                "No preference"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Simple single-choice for clear segmentation.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Which mobile operating system do you prefer?",
+                "answer_options": [
+                    "iOS",
+                    "Android",
+                    "No preference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What price range would you consider for your next smartphone purchase?",
+            "answer_options": [
+                "Under $300",
+                "$300-$599",
+                "$600-$899",
+                "$900-$1,199",
+                "$1,200 or more"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use local currency equivalents if needed. Bracket sizes reflect typical pricing tiers.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "What price range would you consider for your next smartphone purchase?",
+                "answer_options": [
+                    "Under $300",
+                    "$300-$599",
+                    "$600-$899",
+                    "$900-$1,199",
+                    "$1,200 or more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

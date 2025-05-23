@@ -1,0 +1,249 @@
+{
+    "survey_id": "2d90ba9c-a828-4719-86f5-3b8aa19242f3",
+    "survey_name": "Airport Lounge Customer Satisfaction Survey",
+    "survey_brief": "This survey collects feedback from travelers regarding their experience with airport lounge facilities, services, and amenities to identify improvement opportunities.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit this airport lounge?",
+            "answer_options": [
+                "First-time visitor",
+                "Occasionally (1-3 times per year)",
+                "Frequently (4+ times per year)",
+                "Regular member (monthly visits)"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use radio buttons with vertical layout for mobile compatibility",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "How often do you visit this airport lounge?",
+                "answer_options": [
+                    "First-time visitor",
+                    "Occasionally (1-3 times per year)",
+                    "Frequently (4+ times per year)",
+                    "Regular member (monthly visits)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is the primary reason for visiting the lounge today?",
+            "answer_options": [
+                "Relaxation between flights",
+                "Work/productive time",
+                "Food and beverage access",
+                "Shower facilities",
+                "Priority boarding preparation"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Allow multiple selections with checkbox inputs",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "What is the primary reason for visiting the lounge today?",
+                "answer_options": [
+                    "Relaxation between flights",
+                    "Work/productive time",
+                    "Food and beverage access",
+                    "Shower facilities",
+                    "Priority boarding preparation"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Rate the efficiency of the check-in process:",
+            "answer_options": [
+                "Poor",
+                "Fair",
+                "Good",
+                "Very Good",
+                "Excellent"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use a 5-point Likert scale with emoji support",
+            "scripter_notes": "Field type: radio button matrix",
+            "script": {
+                "question_text": "Rate the efficiency of the check-in process:",
+                "answer_options": [
+                    "Poor",
+                    "Fair",
+                    "Good",
+                    "Very Good",
+                    "Excellent"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the variety of food and beverage options?",
+            "answer_options": [
+                "Very Dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very Satisfied"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Include visual scale with color gradients",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "How satisfied are you with the variety of food and beverage options?",
+                "answer_options": [
+                    "Very Dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very Satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which amenities did you use today?",
+            "answer_options": [
+                "Wi-Fi",
+                "Shower facilities",
+                "Workstations",
+                "Entertainment systems",
+                "Luggage storage"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Allow multiple selections with 'Select All That Apply' instruction",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "Which amenities did you use today?",
+                "answer_options": [
+                    "Wi-Fi",
+                    "Shower facilities",
+                    "Workstations",
+                    "Entertainment systems",
+                    "Luggage storage"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you used shower facilities, rate their cleanliness and maintenance:",
+            "answer_options": [
+                "Poor",
+                "Fair",
+                "Good",
+                "Very Good",
+                "Excellent"
+            ],
+            "routing_logic": "Display only if 'Shower facilities' selected in Q5",
+            "client_notes": "Hide question dynamically based on Q5 response",
+            "scripter_notes": "Field type: radio button with conditional logic",
+            "script": {
+                "question_text": "If you used shower facilities, rate their cleanliness and maintenance:",
+                "answer_options": [
+                    "Poor",
+                    "Fair",
+                    "Good",
+                    "Very Good",
+                    "Excellent"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if 'Shower facilities' selected in Q5"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Rate the comfort and availability of seating:",
+            "answer_options": [
+                "Very Uncomfortable",
+                "Uncomfortable",
+                "Neutral",
+                "Comfortable",
+                "Very Comfortable"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Include images of seating areas for reference",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "Rate the comfort and availability of seating:",
+                "answer_options": [
+                    "Very Uncomfortable",
+                    "Uncomfortable",
+                    "Neutral",
+                    "Comfortable",
+                    "Very Comfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How would you rate the speed and reliability of the Wi-Fi service?",
+            "answer_options": [
+                "Unusable",
+                "Poor",
+                "Adequate",
+                "Good",
+                "Excellent"
+            ],
+            "routing_logic": "Display only if 'Wi-Fi' selected in Q5",
+            "client_notes": "Add optional open-text field for specific connectivity issues",
+            "scripter_notes": "Field type: radio button with conditional logic",
+            "script": {
+                "question_text": "How would you rate the speed and reliability of the Wi-Fi service?",
+                "answer_options": [
+                    "Unusable",
+                    "Poor",
+                    "Adequate",
+                    "Good",
+                    "Excellent"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if 'Wi-Fi' selected in Q5"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Were the lounge staff courteous and attentive?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Did not interact with staff"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Include 'N/A' option for non-interactions",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "Were the lounge staff courteous and attentive?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Did not interact with staff"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Please share any additional comments or suggestions for improvement:",
+            "answer_options": [],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use a large text box with 500-character limit",
+            "scripter_notes": "Field type: open text input",
+            "script": {
+                "question_text": "Please share any additional comments or suggestions for improvement:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always displayed"
+            }
+        }
+    ]
+}

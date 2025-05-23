@@ -1,0 +1,265 @@
+{
+    "survey_id": "1b24e06a-9b30-4bcf-a870-acd52701bca2",
+    "survey_name": "Consumer Sustainability Practices Survey",
+    "survey_brief": "Assess consumer awareness and preferences regarding sustainable product choices and eco-friendly purchasing behaviors",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How aware are you of sustainability certifications (e.g., Fair Trade, Energy Star, USDA Organic) when making purchases?",
+            "answer_options": [
+                "Very aware",
+                "Somewhat aware",
+                "Minimally aware",
+                "Not aware at all"
+            ],
+            "routing_logic": "Base question - shown to all respondents",
+            "client_notes": "Use a 4-point balanced scale to force directional preference. Randomize option order for mobile optimization.",
+            "scripter_notes": "Radio buttons, mandatory response",
+            "script": {
+                "question_text": "How aware are you of sustainability certifications (e.g., Fair Trade, Energy Star, USDA Organic) when making purchases?",
+                "answer_options": [
+                    "Very aware",
+                    "Somewhat aware",
+                    "Minimally aware",
+                    "Not aware at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Base question - shown to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which factors most influence your decision to purchase sustainable products? (Select all that apply)",
+            "answer_options": [
+                "Environmental impact",
+                "Product quality",
+                "Brand reputation",
+                "Price",
+                "Packaging",
+                "Certification labels",
+                "Social media influence"
+            ],
+            "routing_logic": "Show if Q1 response is 'Very aware' or 'Somewhat aware'",
+            "client_notes": "Limit to 7 options max for mobile readability. Include 'Other' option if needed through follow-up question",
+            "scripter_notes": "Checkbox input with 'Select all that apply' instruction",
+            "script": {
+                "question_text": "Which factors most influence your decision to purchase sustainable products? (Select all that apply)",
+                "answer_options": [
+                    "Environmental impact",
+                    "Product quality",
+                    "Brand reputation",
+                    "Price",
+                    "Packaging",
+                    "Certification labels",
+                    "Social media influence"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 response is 'Very aware' or 'Somewhat aware'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How much more would you pay for a sustainably produced equivalent of a $50 product?",
+            "answer_options": [
+                "Not willing to pay more",
+                "Up to 5% more ($52.50)",
+                "6-10% more ($53-$55)",
+                "11-15% more ($55.50-$57.50)",
+                "Over 15% more"
+            ],
+            "routing_logic": "Base question",
+            "client_notes": "Use concrete percentage/price examples for better accuracy. Rotate middle options to prevent order bias",
+            "scripter_notes": "Radio buttons with price anchors",
+            "script": {
+                "question_text": "How much more would you pay for a sustainably produced equivalent of a $50 product?",
+                "answer_options": [
+                    "Not willing to pay more",
+                    "Up to 5% more ($52.50)",
+                    "6-10% more ($53-$55)",
+                    "11-15% more ($55.50-$57.50)",
+                    "Over 15% more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Base question"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What prevents you from making more sustainable purchases?",
+            "answer_options": [
+                "Higher cost",
+                "Lack of availability",
+                "Confusing certifications",
+                "Doubts about impact",
+                "Inconvenience",
+                "No barriers"
+            ],
+            "routing_logic": "Show if Q3 response is 'Not willing to pay more' or any selection in Q2 includes 'Price'",
+            "client_notes": "Include 'Other' option with text field if budget allows",
+            "scripter_notes": "Checkbox input with optional 'Other' field",
+            "script": {
+                "question_text": "What prevents you from making more sustainable purchases?",
+                "answer_options": [
+                    "Higher cost",
+                    "Lack of availability",
+                    "Confusing certifications",
+                    "Doubts about impact",
+                    "Inconvenience",
+                    "No barriers"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q3 response is 'Not willing to pay more' or any selection in Q2 includes 'Price'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How do you typically verify a company's sustainability claims?",
+            "answer_options": [
+                "Third-party certifications",
+                "Company website",
+                "News articles",
+                "Social media",
+                "Don't verify",
+                "Other"
+            ],
+            "routing_logic": "Base question",
+            "client_notes": "Include text field for 'Other' responses",
+            "scripter_notes": "Checkbox input with optional text entry",
+            "script": {
+                "question_text": "How do you typically verify a company's sustainability claims?",
+                "answer_options": [
+                    "Third-party certifications",
+                    "Company website",
+                    "News articles",
+                    "Social media",
+                    "Don't verify",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Base question"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would make you more likely to purchase sustainable products?",
+            "answer_options": [],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use open text field with 200-character limit",
+            "scripter_notes": "Text input field with character counter",
+            "script": {
+                "question_text": "What improvements would make you more likely to purchase sustainable products?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How often do you research a company's sustainability practices before purchasing?",
+            "answer_options": [
+                "Always",
+                "Frequently",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Base question",
+            "client_notes": "5-point frequency scale with neutral midpoint",
+            "scripter_notes": "Radio buttons, mandatory response",
+            "script": {
+                "question_text": "How often do you research a company's sustainability practices before purchasing?",
+                "answer_options": [
+                    "Always",
+                    "Frequently",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Base question"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which communication channel do you prefer for receiving sustainability information?",
+            "answer_options": [
+                "Product packaging",
+                "Company website",
+                "Mobile app",
+                "Email newsletters",
+                "In-store displays",
+                "Social media"
+            ],
+            "routing_logic": "Show if Q7 response is not 'Never'",
+            "client_notes": "Limit to 6 options for mobile optimization",
+            "scripter_notes": "Single-choice with 'Other' option",
+            "script": {
+                "question_text": "Which communication channel do you prefer for receiving sustainability information?",
+                "answer_options": [
+                    "Product packaging",
+                    "Company website",
+                    "Mobile app",
+                    "Email newsletters",
+                    "In-store displays",
+                    "Social media"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q7 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How would you rate the effectiveness of current sustainability labeling systems?",
+            "answer_options": [
+                "1 - Very ineffective",
+                "2",
+                "3",
+                "4",
+                "5 - Very effective"
+            ],
+            "routing_logic": "Base question",
+            "client_notes": "5-point Likert scale with endpoint labels only",
+            "scripter_notes": "Radio buttons in grid format",
+            "script": {
+                "question_text": "How would you rate the effectiveness of current sustainability labeling systems?",
+                "answer_options": [
+                    "1 - Very ineffective",
+                    "2",
+                    "3",
+                    "4",
+                    "5 - Very effective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Base question"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your age range?",
+            "answer_options": [
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55-64",
+                "65+"
+            ],
+            "routing_logic": "Final demographic question",
+            "client_notes": "Standard age brackets for segmentation",
+            "scripter_notes": "Radio buttons, mandatory response",
+            "script": {
+                "question_text": "What is your age range?",
+                "answer_options": [
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55-64",
+                    "65+"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Final demographic question"
+            }
+        }
+    ]
+}

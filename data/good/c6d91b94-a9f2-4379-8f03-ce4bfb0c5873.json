@@ -1,0 +1,261 @@
+{
+    "survey_id": "c6d91b94-a9f2-4379-8f03-ce4bfb0c5873",
+    "survey_name": "Sustainable Commuting Habits Survey",
+    "survey_brief": "This survey aims to understand commuting habits and preferences related to sustainable transportation methods among urban residents.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you commute to work or school in a typical week?",
+            "answer_options": [
+                "Every day (5+ days)",
+                "3-4 days",
+                "1-2 days",
+                "Less than once a week",
+                "I do not commute"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a radio button for single-choice selection. Ensure options cover all possible frequencies.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you commute to work or school in a typical week?",
+                "answer_options": [
+                    "Every day (5+ days)",
+                    "3-4 days",
+                    "1-2 days",
+                    "Less than once a week",
+                    "I do not commute"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary mode of transportation for commuting?",
+            "answer_options": [
+                "Personal car",
+                "Public transit (bus, subway, train)",
+                "Bicycle",
+                "Walking",
+                "Rideshare (e.g., Uber, Lyft)",
+                "Electric scooter/bike",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q1 != 'I do not commute'",
+            "client_notes": "Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is your primary mode of transportation for commuting?",
+                "answer_options": [
+                    "Personal car",
+                    "Public transit (bus, subway, train)",
+                    "Bicycle",
+                    "Walking",
+                    "Rideshare (e.g., Uber, Lyft)",
+                    "Electric scooter/bike",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 != 'I do not commute'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How important is environmental sustainability in your choice of transportation?",
+            "answer_options": [
+                "Very important",
+                "Somewhat important",
+                "Neutral",
+                "Not very important",
+                "Not at all important"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a Likert scale for clarity. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How important is environmental sustainability in your choice of transportation?",
+                "answer_options": [
+                    "Very important",
+                    "Somewhat important",
+                    "Neutral",
+                    "Not very important",
+                    "Not at all important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which of the following sustainable transportation options would you consider using? (Select all that apply)",
+            "answer_options": [
+                "Electric vehicle",
+                "Bicycle-sharing programs",
+                "Public transit",
+                "Carpooling",
+                "Walking",
+                "None of the above"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Allow multiple selections. Include a 'None of the above' option.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which of the following sustainable transportation options would you consider using? (Select all that apply)",
+                "answer_options": [
+                    "Electric vehicle",
+                    "Bicycle-sharing programs",
+                    "Public transit",
+                    "Carpooling",
+                    "Walking",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What barriers prevent you from using sustainable transportation more often?",
+            "answer_options": [
+                "Lack of infrastructure (e.g., bike lanes, charging stations)",
+                "Inconvenience",
+                "Longer travel time",
+                "Safety concerns",
+                "Cost",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q4 != 'None of the above'",
+            "client_notes": "Allow multiple selections and include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What barriers prevent you from using sustainable transportation more often?",
+                "answer_options": [
+                    "Lack of infrastructure (e.g., bike lanes, charging stations)",
+                    "Inconvenience",
+                    "Longer travel time",
+                    "Safety concerns",
+                    "Cost",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q4 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with the availability of sustainable transportation options in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a Likert scale for clarity. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the availability of sustainable transportation options in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Would you be willing to pay more for a transportation option if it were more environmentally friendly?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "It depends on the cost"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Include a neutral option ('It depends') for those unsure.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Would you be willing to pay more for a transportation option if it were more environmentally friendly?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "It depends on the cost"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would encourage you to use sustainable transportation more often? (Select all that apply)",
+            "answer_options": [
+                "Better infrastructure (e.g., bike lanes, charging stations)",
+                "Lower costs",
+                "Faster travel times",
+                "More reliable schedules",
+                "Safety improvements",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q4 != 'None of the above'",
+            "client_notes": "Allow multiple selections and include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What improvements would encourage you to use sustainable transportation more often? (Select all that apply)",
+                "answer_options": [
+                    "Better infrastructure (e.g., bike lanes, charging stations)",
+                    "Lower costs",
+                    "Faster travel times",
+                    "More reliable schedules",
+                    "Safety improvements",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q4 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to switch to a more sustainable transportation method in the next year?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a Likert scale for clarity. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to switch to a more sustainable transportation method in the next year?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you have any additional comments or suggestions about sustainable transportation in your area?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Leave this as an open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box)",
+            "script": {
+                "question_text": "Do you have any additional comments or suggestions about sustainable transportation in your area?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

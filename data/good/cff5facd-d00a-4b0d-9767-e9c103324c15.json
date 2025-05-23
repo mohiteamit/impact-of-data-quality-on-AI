@@ -1,0 +1,255 @@
+{
+    "survey_id": "cff5facd-d00a-4b0d-9767-e9c103324c15",
+    "survey_name": "Corporate Learning & Development Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with the company's Learning & Development (L&D) programs, identifying strengths and areas for improvement to enhance professional growth opportunities.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the current Learning & Development programs offered by your company?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement. Ensure mobile-friendly layout for radio buttons.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the current Learning & Development programs offered by your company?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of L&D programs have you participated in over the past 12 months? (Select all that apply)",
+            "answer_options": [
+                "Technical skills training",
+                "Leadership development",
+                "Soft skills workshops",
+                "Diversity & inclusion training",
+                "Mentorship programs",
+                "None"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multi-select to capture overlapping participation. Include an optional 'Other' field if needed.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes). Add 'Other' as an open-text option if selected.",
+            "script": {
+                "question_text": "Which types of L&D programs have you participated in over the past 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Technical skills training",
+                    "Leadership development",
+                    "Soft skills workshops",
+                    "Diversity & inclusion training",
+                    "Mentorship programs",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you utilize the L&D programs provided by your company?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "Quarterly",
+                "Once or twice a year",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a frequency scale. Clarify if 'Never' is selected in Q2, this may require validation.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Add skip logic if 'None' is selected in Q2.",
+            "script": {
+                "question_text": "How often do you utilize the L&D programs provided by your company?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "Quarterly",
+                    "Once or twice a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What barriers prevent you from participating in L&D programs? (Select all that apply)",
+            "answer_options": [
+                "Lack of time due to workload",
+                "Programs not relevant to my role",
+                "Scheduling conflicts",
+                "Limited awareness of available programs",
+                "No barriers"
+            ],
+            "routing_logic": "Respondents who selected 'Never' in Q3 or 'None' in Q2",
+            "client_notes": "Multi-choice question targeting non-participants. Include an optional 'Other' field.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes). Display only if Q3 = 'Never' or Q2 includes 'None'.",
+            "script": {
+                "question_text": "What barriers prevent you from participating in L&D programs? (Select all that apply)",
+                "answer_options": [
+                    "Lack of time due to workload",
+                    "Programs not relevant to my role",
+                    "Scheduling conflicts",
+                    "Limited awareness of available programs",
+                    "No barriers"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Never' in Q3 or 'None' in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How impactful have the L&D programs been for your professional growth?",
+            "answer_options": [
+                "Extremely impactful",
+                "Moderately impactful",
+                "Slightly impactful",
+                "Not impactful",
+                "Not applicable"
+            ],
+            "routing_logic": "Respondents who did not select 'None' in Q2",
+            "client_notes": "Use a 5-point scale. Ensure 'Not applicable' is clearly labeled.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Skip if Q2 includes 'None'.",
+            "script": {
+                "question_text": "How impactful have the L&D programs been for your professional growth?",
+                "answer_options": [
+                    "Extremely impactful",
+                    "Moderately impactful",
+                    "Slightly impactful",
+                    "Not impactful",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who did not select 'None' in Q2"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional L&D topics would you like to see offered?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture unmet needs. Limit response to 250 characters.",
+            "scripter_notes": "Field type: Open-text (text area).",
+            "script": {
+                "question_text": "What additional L&D topics would you like to see offered?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Do you feel the L&D programs align with your career goals?",
+            "answer_options": [
+                "Strongly agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly disagree"
+            ],
+            "routing_logic": "Respondents who did not select 'None' in Q2",
+            "client_notes": "5-point Likert scale to measure alignment perception.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Skip if Q2 includes 'None'.",
+            "script": {
+                "question_text": "Do you feel the L&D programs align with your career goals?",
+                "answer_options": [
+                    "Strongly agree",
+                    "Agree",
+                    "Neutral",
+                    "Disagree",
+                    "Strongly disagree"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who did not select 'None' in Q2"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How easy is it to access L&D program information and registration?",
+            "answer_options": [
+                "Very easy",
+                "Easy",
+                "Neutral",
+                "Difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point scale to assess accessibility. Include an optional comment field.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Add optional open-text for 'Other'.",
+            "script": {
+                "question_text": "How easy is it to access L&D program information and registration?",
+                "answer_options": [
+                    "Very easy",
+                    "Easy",
+                    "Neutral",
+                    "Difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Would you recommend the company’s L&D programs to colleagues?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Respondents who did not select 'None' in Q2",
+            "client_notes": "Net Promoter Score (NPS) variant. Use single-choice for clarity.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Skip if Q2 includes 'None'.",
+            "script": {
+                "question_text": "Would you recommend the company’s L&D programs to colleagues?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who did not select 'None' in Q2"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your preferred format for L&D programs? (Select all that apply)",
+            "answer_options": [
+                "In-person workshops",
+                "Live virtual sessions",
+                "Self-paced online courses",
+                "Blended (online + in-person)",
+                "No preference"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice to identify delivery preferences. Max 3 selections allowed.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes). Add validation for max selections.",
+            "script": {
+                "question_text": "What is your preferred format for L&D programs? (Select all that apply)",
+                "answer_options": [
+                    "In-person workshops",
+                    "Live virtual sessions",
+                    "Self-paced online courses",
+                    "Blended (online + in-person)",
+                    "No preference"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

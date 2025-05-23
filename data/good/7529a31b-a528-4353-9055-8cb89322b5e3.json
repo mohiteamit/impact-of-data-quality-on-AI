@@ -1,0 +1,223 @@
+{
+    "survey_id": "7529a31b-a528-4353-9055-8cb89322b5e3",
+    "survey_name": "Online Clothing Store Return Policy Satisfaction Survey",
+    "survey_brief": "This survey aims to gather customer feedback on the return policy and process of our online clothing store to improve customer satisfaction and streamline operations.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with our current return policy?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point Likert scale for clear sentiment measurement. Ensure mobile-friendly layout for radio buttons.",
+            "scripter_notes": "Single-choice radio buttons. Randomize options to minimize bias.",
+            "script": {
+                "question_text": "How satisfied are you with our current return policy?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What aspects of our return policy do you find most convenient? (Select all that apply)",
+            "answer_options": [
+                "Free return shipping",
+                "Extended return window (30 days)",
+                "Easy online return process",
+                "Instant refund options",
+                "None of the above"
+            ],
+            "routing_logic": "Appears if Q1 answer is 'Very satisfied' or 'Somewhat satisfied'",
+            "client_notes": "Allow multi-selection to identify key strengths. Include 'None of the above' for comprehensive data.",
+            "scripter_notes": "Multi-choice checkboxes. Display logic based on Q1 responses.",
+            "script": {
+                "question_text": "What aspects of our return policy do you find most convenient? (Select all that apply)",
+                "answer_options": [
+                    "Free return shipping",
+                    "Extended return window (30 days)",
+                    "Easy online return process",
+                    "Instant refund options",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is 'Very satisfied' or 'Somewhat satisfied'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced with our return process?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is 'Somewhat dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open-ended to capture detailed pain points. Limit to 500 characters for readability.",
+            "scripter_notes": "Open-text field with character limit. Display logic based on Q1 responses.",
+            "script": {
+                "question_text": "What challenges have you faced with our return process?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is 'Somewhat dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you return items purchased from our store?",
+            "answer_options": [
+                "Never",
+                "Rarely (1-2 times per year)",
+                "Occasionally (3-5 times per year)",
+                "Frequently (more than 5 times per year)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Categorize frequency to identify return patterns. Avoid overlapping ranges.",
+            "scripter_notes": "Single-choice dropdown. Randomize options except 'Never'.",
+            "script": {
+                "question_text": "How often do you return items purchased from our store?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (1-2 times per year)",
+                    "Occasionally (3-5 times per year)",
+                    "Frequently (more than 5 times per year)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What would encourage you to shop with us more often?",
+            "answer_options": [
+                "Faster refund processing",
+                "More flexible return window",
+                "In-store return options",
+                "Clearer return policy communication",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Include 'Other' with text entry to capture unique suggestions. Multi-select may be useful but limit to top priorities.",
+            "scripter_notes": "Multi-choice checkboxes with optional 'Other' text field.",
+            "script": {
+                "question_text": "What would encourage you to shop with us more often?",
+                "answer_options": [
+                    "Faster refund processing",
+                    "More flexible return window",
+                    "In-store return options",
+                    "Clearer return policy communication",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How clear was the return policy information at the time of purchase?",
+            "answer_options": [
+                "Very clear",
+                "Somewhat clear",
+                "Neutral",
+                "Somewhat unclear",
+                "Very unclear"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "5-point scale to measure clarity. Place near Q1 for consistency.",
+            "scripter_notes": "Single-choice radio buttons. Randomize options to minimize bias.",
+            "script": {
+                "question_text": "How clear was the return policy information at the time of purchase?",
+                "answer_options": [
+                    "Very clear",
+                    "Somewhat clear",
+                    "Neutral",
+                    "Somewhat unclear",
+                    "Very unclear"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Have you ever decided not to make a purchase due to our return policy?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Binary question to gauge policy impact on sales. Follow with open-ended if 'Yes'.",
+            "scripter_notes": "Single-choice buttons. Route to Q8 if 'Yes'.",
+            "script": {
+                "question_text": "Have you ever decided not to make a purchase due to our return policy?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Please describe what concerned you about the return policy.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q7 answer is 'Yes'",
+            "client_notes": "Open-text to identify specific deterrents. Suggest 200-character limit.",
+            "scripter_notes": "Open-text field with character counter. Display logic based on Q7.",
+            "script": {
+                "question_text": "Please describe what concerned you about the return policy.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q7 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How would you prefer to initiate a return?",
+            "answer_options": [
+                "Online portal only",
+                "Mobile app",
+                "Customer service call",
+                "Email request",
+                "In-person at physical store"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Multi-select to assess channel preferences. Exclude 'In-person' for non-local customers.",
+            "scripter_notes": "Multi-choice checkboxes. Hide 'In-person' option if zip code indicates non-proximity to stores.",
+            "script": {
+                "question_text": "How would you prefer to initiate a return?",
+                "answer_options": [
+                    "Online portal only",
+                    "Mobile app",
+                    "Customer service call",
+                    "Email request",
+                    "In-person at physical store"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Any additional comments about your return experience?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Optional field to capture unstructured feedback. Set maximum 1000 characters.",
+            "scripter_notes": "Open-text field with scrollable box. Mark as optional in script.",
+            "script": {
+                "question_text": "Any additional comments about your return experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

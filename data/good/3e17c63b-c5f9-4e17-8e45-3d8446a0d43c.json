@@ -1,0 +1,229 @@
+{
+    "survey_id": "3e17c63b-c5f9-4e17-8e45-3d8446a0d43c",
+    "survey_name": "Home Office Setup and Productivity Survey",
+    "survey_brief": "This survey aims to understand how employees set up their home offices and how these setups impact their productivity and comfort.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you typically work from home?",
+            "answer_options": [
+                "1 day",
+                "2 days",
+                "3 days",
+                "4 days",
+                "5 or more days"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure options cover the full range of possible work-from-home frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How many days per week do you typically work from home?",
+                "answer_options": [
+                    "1 day",
+                    "2 days",
+                    "3 days",
+                    "4 days",
+                    "5 or more days"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following home office equipment do you have? (Select all that apply)",
+            "answer_options": [
+                "Dedicated desk",
+                "Ergonomic chair",
+                "External monitor",
+                "Noise-canceling headphones",
+                "Printer",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-choice selection. Include an option for respondents who may not have any dedicated equipment.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following home office equipment do you have? (Select all that apply)",
+                "answer_options": [
+                    "Dedicated desk",
+                    "Ergonomic chair",
+                    "External monitor",
+                    "Noise-canceling headphones",
+                    "Printer",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your current home office setup?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is balanced and includes a neutral option.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with your current home office setup?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the biggest challenge you face when working from home?",
+            "answer_options": [
+                "Distractions at home",
+                "Poor internet connection",
+                "Lack of ergonomic furniture",
+                "Difficulty separating work and personal life",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with a text field for additional responses. This helps capture unique challenges not listed.",
+            "scripter_notes": "Field type: radio button with an open-text option for 'Other' (SINGLE_CHOICE with conditional OPEN_TEXT)",
+            "script": {
+                "question_text": "What is the biggest challenge you face when working from home?",
+                "answer_options": [
+                    "Distractions at home",
+                    "Poor internet connection",
+                    "Lack of ergonomic furniture",
+                    "Difficulty separating work and personal life",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please specify your biggest challenge if you selected 'Other' in the previous question.",
+            "answer_options": [],
+            "routing_logic": "Only if Q4 answer is 'Other (please specify)'",
+            "client_notes": "This is an open-ended follow-up to Q4. Ensure it only appears for respondents who selected 'Other'.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "Please specify your biggest challenge if you selected 'Other' in the previous question.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q4 answer is 'Other (please specify)'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How often do you take breaks during your workday at home?",
+            "answer_options": [
+                "Every hour or more frequently",
+                "Every 2 hours",
+                "Every 3 hours",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection. This helps assess work habits and potential burnout risks.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you take breaks during your workday at home?",
+                "answer_options": [
+                    "Every hour or more frequently",
+                    "Every 2 hours",
+                    "Every 3 hours",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which of the following best describes your home workspace?",
+            "answer_options": [
+                "A dedicated room used only as an office",
+                "A shared room (e.g., living room, bedroom) with a designated workspace",
+                "No designated workspace; I work from various locations at home",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with a text field for additional responses. This helps capture unique workspace setups.",
+            "scripter_notes": "Field type: radio button with an open-text option for 'Other' (SINGLE_CHOICE with conditional OPEN_TEXT)",
+            "script": {
+                "question_text": "Which of the following best describes your home workspace?",
+                "answer_options": [
+                    "A dedicated room used only as an office",
+                    "A shared room (e.g., living room, bedroom) with a designated workspace",
+                    "No designated workspace; I work from various locations at home",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Please describe your home workspace if you selected 'Other' in the previous question.",
+            "answer_options": [],
+            "routing_logic": "Only if Q7 answer is 'Other (please specify)'",
+            "client_notes": "This is an open-ended follow-up to Q7. Ensure it only appears for respondents who selected 'Other'.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "Please describe your home workspace if you selected 'Other' in the previous question.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q7 answer is 'Other (please specify)'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How has your productivity changed since working from home?",
+            "answer_options": [
+                "Increased significantly",
+                "Increased slightly",
+                "Stayed the same",
+                "Decreased slightly",
+                "Decreased significantly"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale to measure perceived productivity changes. This helps assess the overall impact of remote work.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How has your productivity changed since working from home?",
+                "answer_options": [
+                    "Increased significantly",
+                    "Increased slightly",
+                    "Stayed the same",
+                    "Decreased slightly",
+                    "Decreased significantly"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional equipment or resources would improve your home office setup?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback on potential improvements.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What additional equipment or resources would improve your home office setup?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

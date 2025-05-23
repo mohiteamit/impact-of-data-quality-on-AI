@@ -1,0 +1,253 @@
+{
+    "survey_id": "87dfbb52-fb3e-4b7b-acbd-b1ddee55583e",
+    "survey_name": "Healthcare Telemedicine Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate patient satisfaction with telemedicine services, focusing on ease of use, quality of care, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use telemedicine services?",
+            "answer_options": [
+                "Never",
+                "Rarely (1-2 times per year)",
+                "Occasionally (3-5 times per year)",
+                "Frequently (6 or more times per year)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for ease of response.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How often do you use telemedicine services?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (1-2 times per year)",
+                    "Occasionally (3-5 times per year)",
+                    "Frequently (6 or more times per year)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following telemedicine platforms have you used? (Select all that apply)",
+            "answer_options": [
+                "Teladoc",
+                "Amwell",
+                "Doctor on Demand",
+                "MDLive",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 != 'Never'",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE with open-text option for 'Other'",
+            "script": {
+                "question_text": "Which of the following telemedicine platforms have you used? (Select all that apply)",
+                "answer_options": [
+                    "Teladoc",
+                    "Amwell",
+                    "Doctor on Demand",
+                    "MDLive",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the ease of scheduling a telemedicine appointment?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 != 'Never'",
+            "client_notes": "Use a Likert scale for accurate satisfaction measurement.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with the ease of scheduling a telemedicine appointment?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the quality of care received during your telemedicine visits?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Fair",
+                "Poor"
+            ],
+            "routing_logic": "If Q1 != 'Never'",
+            "client_notes": "Use a single-choice scale for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How would you rate the quality of care received during your telemedicine visits?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Fair",
+                    "Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What types of medical concerns have you addressed via telemedicine? (Select all that apply)",
+            "answer_options": [
+                "General health consultation",
+                "Mental health",
+                "Chronic condition management",
+                "Urgent care (e.g., flu, minor injuries)",
+                "Prescription refills",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 != 'Never'",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE with open-text option for 'Other'",
+            "script": {
+                "question_text": "What types of medical concerns have you addressed via telemedicine? (Select all that apply)",
+                "answer_options": [
+                    "General health consultation",
+                    "Mental health",
+                    "Chronic condition management",
+                    "Urgent care (e.g., flu, minor injuries)",
+                    "Prescription refills",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with the technical aspects of telemedicine (e.g., video/audio quality, platform stability)?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 != 'Never'",
+            "client_notes": "Use a Likert scale for accurate satisfaction measurement.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with the technical aspects of telemedicine (e.g., video/audio quality, platform stability)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Compared to in-person visits, how would you rate the convenience of telemedicine?",
+            "answer_options": [
+                "Much more convenient",
+                "Somewhat more convenient",
+                "About the same",
+                "Somewhat less convenient",
+                "Much less convenient"
+            ],
+            "routing_logic": "If Q1 != 'Never'",
+            "client_notes": "Use a comparative scale for direct feedback.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Compared to in-person visits, how would you rate the convenience of telemedicine?",
+                "answer_options": [
+                    "Much more convenient",
+                    "Somewhat more convenient",
+                    "About the same",
+                    "Somewhat less convenient",
+                    "Much less convenient"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would you suggest for telemedicine services?",
+            "answer_options": [],
+            "routing_logic": "If Q1 != 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you suggest for telemedicine services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Would you recommend telemedicine services to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Neutral",
+                "Probably no",
+                "Definitely no"
+            ],
+            "routing_logic": "If Q1 != 'Never'",
+            "client_notes": "Use a Likert scale for accurate recommendation measurement.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Would you recommend telemedicine services to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Neutral",
+                    "Probably no",
+                    "Definitely no"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What factors would encourage you to use telemedicine more often?",
+            "answer_options": [
+                "Lower costs",
+                "More available appointment times",
+                "Better integration with my primary care provider",
+                "Expanded services (e.g., lab tests, imaging)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 != 'Never'",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE with open-text option for 'Other'",
+            "script": {
+                "question_text": "What factors would encourage you to use telemedicine more often?",
+                "answer_options": [
+                    "Lower costs",
+                    "More available appointment times",
+                    "Better integration with my primary care provider",
+                    "Expanded services (e.g., lab tests, imaging)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 != 'Never'"
+            }
+        }
+    ]
+}

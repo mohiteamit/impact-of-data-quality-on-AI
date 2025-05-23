@@ -1,0 +1,251 @@
+{
+    "survey_id": "98df67a8-f50b-439e-8081-075d900d3942",
+    "survey_name": "Gym Member Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from gym members regarding their overall experience, satisfaction with facilities, and suggestions for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the cleanliness and maintenance of the gym facilities?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for ease of analysis. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and maintenance of the gym facilities?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you visit the gym per week?",
+            "answer_options": [
+                "Less than once",
+                "1-2 times",
+                "3-4 times",
+                "5 or more times"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure answer options cover all possible frequencies.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you visit the gym per week?",
+                "answer_options": [
+                    "Less than once",
+                    "1-2 times",
+                    "3-4 times",
+                    "5 or more times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following gym amenities do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Cardio equipment",
+                "Weightlifting area",
+                "Group fitness classes",
+                "Swimming pool",
+                "Locker rooms",
+                "Sauna/Steam room"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multiple-choice question to identify popular amenities.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following gym amenities do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Cardio equipment",
+                    "Weightlifting area",
+                    "Group fitness classes",
+                    "Swimming pool",
+                    "Locker rooms",
+                    "Sauna/Steam room"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the variety and quality of group fitness classes offered?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Group fitness classes' in Q3",
+            "client_notes": "Use a 5-point Likert scale. Ensure question only appears to relevant respondents.",
+            "scripter_notes": "Field type: radio button (single-choice). Conditional display based on Q3 selection.",
+            "script": {
+                "question_text": "How satisfied are you with the variety and quality of group fitness classes offered?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Group fitness classes' in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the availability of gym equipment during peak hours?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Fair",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point scale to capture nuanced feedback.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How would you rate the availability of gym equipment during peak hours?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Fair",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you interacted with the gym staff or personal trainers?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Binary question to filter respondents for follow-up questions.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Have you interacted with the gym staff or personal trainers?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How satisfied are you with the professionalism and helpfulness of the gym staff?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Yes' in Q6",
+            "client_notes": "Use a 5-point Likert scale. Conditional question.",
+            "scripter_notes": "Field type: radio button (single-choice). Display if Q6 = 'Yes'.",
+            "script": {
+                "question_text": "How satisfied are you with the professionalism and helpfulness of the gym staff?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Yes' in Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would you suggest for the gym?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text box.",
+            "script": {
+                "question_text": "What improvements would you suggest for the gym?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to recommend this gym to a friend or colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Net Promoter Score (NPS) question variant. Use a 5-point scale.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend this gym to a friend or colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your primary reason for joining this gym?",
+            "answer_options": [
+                "Convenient location",
+                "Quality of equipment",
+                "Group fitness classes",
+                "Personal training services",
+                "Affordable membership",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option to capture unlisted reasons.",
+            "scripter_notes": "Field type: radio button (single-choice) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is your primary reason for joining this gym?",
+                "answer_options": [
+                    "Convenient location",
+                    "Quality of equipment",
+                    "Group fitness classes",
+                    "Personal training services",
+                    "Affordable membership",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,249 @@
+{
+    "survey_id": "0b4f2d01-b413-4167-99a7-766b623c1538",
+    "survey_name": "Automotive After-Sales Service Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with after-sales services provided by automotive dealerships, including maintenance, repairs, and customer support.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the overall after-sales service experience at your automotive dealership?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How satisfied are you with the overall after-sales service experience at your automotive dealership?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following after-sales services have you used in the past 12 months? (Select all that apply)",
+            "answer_options": [
+                "Routine maintenance (e.g., oil change, tire rotation)",
+                "Diagnostic services",
+                "Repairs under warranty",
+                "Repairs not covered by warranty",
+                "Vehicle recalls",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with open text for specifics.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with optional open text for 'Other'",
+            "script": {
+                "question_text": "Which of the following after-sales services have you used in the past 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Routine maintenance (e.g., oil change, tire rotation)",
+                    "Diagnostic services",
+                    "Repairs under warranty",
+                    "Repairs not covered by warranty",
+                    "Vehicle recalls",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the timeliness of service completion?",
+            "answer_options": [
+                "Excellent (completed earlier than promised)",
+                "Good (completed as promised)",
+                "Fair (slightly delayed)",
+                "Poor (significantly delayed)",
+                "N/A (not applicable)"
+            ],
+            "routing_logic": "Appears if Q2 is not empty",
+            "client_notes": "Include an N/A option for respondents who did not use timing-dependent services.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How would you rate the timeliness of service completion?",
+                "answer_options": [
+                    "Excellent (completed earlier than promised)",
+                    "Good (completed as promised)",
+                    "Fair (slightly delayed)",
+                    "Poor (significantly delayed)",
+                    "N/A (not applicable)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q2 is not empty"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How clear and transparent were the costs associated with your after-sales service?",
+            "answer_options": [
+                "Very clear and transparent",
+                "Somewhat clear",
+                "Neutral",
+                "Somewhat unclear",
+                "Very unclear"
+            ],
+            "routing_logic": "Appears if Q2 includes 'Repairs not covered by warranty' or 'Diagnostic services'",
+            "client_notes": "Focus on cost transparency. Exclude respondents who only used warranty-covered services.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How clear and transparent were the costs associated with your after-sales service?",
+                "answer_options": [
+                    "Very clear and transparent",
+                    "Somewhat clear",
+                    "Neutral",
+                    "Somewhat unclear",
+                    "Very unclear"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q2 includes 'Repairs not covered by warranty' or 'Diagnostic services'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any issues you encountered during your after-sales service experience.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is 'Dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open-ended to capture qualitative feedback. Use text area for longer responses.",
+            "scripter_notes": "Field type: open text (text area)",
+            "script": {
+                "question_text": "Please describe any issues you encountered during your after-sales service experience.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is 'Dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend your dealership's after-sales service to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Net Promoter Score (NPS) proxy question. Ensure consistent scale.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How likely are you to recommend your dealership's after-sales service to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What is your preferred method for scheduling after-sales services?",
+            "answer_options": [
+                "Online booking via dealership website",
+                "Mobile app",
+                "Phone call",
+                "In-person at dealership",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Include an 'Other' option for unlisted methods. Useful for digital adoption insights.",
+            "scripter_notes": "Field type: radio button (single-choice) with optional open text for 'Other'",
+            "script": {
+                "question_text": "What is your preferred method for scheduling after-sales services?",
+                "answer_options": [
+                    "Online booking via dealership website",
+                    "Mobile app",
+                    "Phone call",
+                    "In-person at dealership",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How satisfied are you with the cleanliness and comfort of the waiting area during service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied",
+                "N/A (did not use waiting area)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Include N/A for respondents who did not use the waiting area.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and comfort of the waiting area during service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied",
+                    "N/A (did not use waiting area)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Did the service advisor explain the work performed and any follow-up recommendations clearly?",
+            "answer_options": [
+                "Yes, very clearly",
+                "Somewhat clearly",
+                "Neutral",
+                "Not very clearly",
+                "Not at all",
+                "N/A (no explanation provided)"
+            ],
+            "routing_logic": "Appears if Q2 is not empty",
+            "client_notes": "Assesses communication quality. Include N/A option for cases where no explanation was given.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "Did the service advisor explain the work performed and any follow-up recommendations clearly?",
+                "answer_options": [
+                    "Yes, very clearly",
+                    "Somewhat clearly",
+                    "Neutral",
+                    "Not very clearly",
+                    "Not at all",
+                    "N/A (no explanation provided)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q2 is not empty"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What improvements would you suggest for your dealership's after-sales service?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended to capture actionable feedback. Optional but valuable.",
+            "scripter_notes": "Field type: open text (text area)",
+            "script": {
+                "question_text": "What improvements would you suggest for your dealership's after-sales service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

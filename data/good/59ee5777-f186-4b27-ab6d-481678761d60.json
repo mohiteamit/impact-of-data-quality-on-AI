@@ -1,0 +1,361 @@
+{
+    "survey_id": "59ee5777-f186-4b27-ab6d-481678761d60",
+    "survey_name": "Sustainable Fashion Purchasing Behavior Survey",
+    "survey_brief": "This survey aims to understand consumer attitudes and behaviors towards sustainable fashion, including purchasing habits, brand preferences, and barriers to adoption.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase sustainable fashion items (e.g., organic cotton, recycled materials, fair trade)?",
+            "answer_options": [
+                "Very frequently (at least once a month)",
+                "Frequently (every few months)",
+                "Occasionally (once a year)",
+                "Rarely (less than once a year)",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure the options cover a broad range of frequencies to capture varied purchasing behaviors.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How often do you purchase sustainable fashion items (e.g., organic cotton, recycled materials, fair trade)?",
+                "answer_options": [
+                    "Very frequently (at least once a month)",
+                    "Frequently (every few months)",
+                    "Occasionally (once a year)",
+                    "Rarely (less than once a year)",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your decision to purchase sustainable fashion? (Select all that apply)",
+            "answer_options": [
+                "Environmental impact",
+                "Ethical labor practices",
+                "Quality and durability",
+                "Brand reputation",
+                "Price",
+                "Style and design",
+                "Peer recommendations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture diverse motivations.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes); include an 'Other' option with open-text entry.",
+            "script": {
+                "question_text": "What factors influence your decision to purchase sustainable fashion? (Select all that apply)",
+                "answer_options": [
+                    "Environmental impact",
+                    "Ethical labor practices",
+                    "Quality and durability",
+                    "Brand reputation",
+                    "Price",
+                    "Style and design",
+                    "Peer recommendations",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please specify any other factors influencing your sustainable fashion purchases.",
+            "answer_options": [],
+            "routing_logic": "If 'Other' is selected in Q2",
+            "client_notes": "Provide a concise open-text field for additional input.",
+            "scripter_notes": "Field type: Open-text (text input box); display only if 'Other' is selected in Q2.",
+            "script": {
+                "question_text": "Please specify any other factors influencing your sustainable fashion purchases.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If 'Other' is selected in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How important is sustainability when making fashion purchases, compared to other factors?",
+            "answer_options": [
+                "Extremely important (primary factor)",
+                "Very important (among top considerations)",
+                "Moderately important (considered but not a priority)",
+                "Slightly important (rarely influences decisions)",
+                "Not important at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a balanced Likert scale to measure perceived importance.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How important is sustainability when making fashion purchases, compared to other factors?",
+                "answer_options": [
+                    "Extremely important (primary factor)",
+                    "Very important (among top considerations)",
+                    "Moderately important (considered but not a priority)",
+                    "Slightly important (rarely influences decisions)",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following sustainable fashion brands are you familiar with? (Select all that apply)",
+            "answer_options": [
+                "Patagonia",
+                "Everlane",
+                "Reformation",
+                "Eileen Fisher",
+                "Stella McCartney",
+                "People Tree",
+                "Alternative Apparel",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include a mix of well-known and niche brands to gauge awareness.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes).",
+            "script": {
+                "question_text": "Which of the following sustainable fashion brands are you familiar with? (Select all that apply)",
+                "answer_options": [
+                    "Patagonia",
+                    "Everlane",
+                    "Reformation",
+                    "Eileen Fisher",
+                    "Stella McCartney",
+                    "People Tree",
+                    "Alternative Apparel",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What barriers prevent you from purchasing sustainable fashion more often? (Select all that apply)",
+            "answer_options": [
+                "Higher prices",
+                "Limited availability",
+                "Lack of style options",
+                "Difficulty verifying sustainability claims",
+                "Prefer fast fashion trends",
+                "No barriers—I already purchase sustainable fashion",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Use this to identify key obstacles for improvement.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes); include an 'Other' option with open-text entry.",
+            "script": {
+                "question_text": "What barriers prevent you from purchasing sustainable fashion more often? (Select all that apply)",
+                "answer_options": [
+                    "Higher prices",
+                    "Limited availability",
+                    "Lack of style options",
+                    "Difficulty verifying sustainability claims",
+                    "Prefer fast fashion trends",
+                    "No barriers—I already purchase sustainable fashion",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Please specify any other barriers to purchasing sustainable fashion.",
+            "answer_options": [],
+            "routing_logic": "If 'Other' is selected in Q6",
+            "client_notes": "Provide a concise open-text field for additional input.",
+            "scripter_notes": "Field type: Open-text (text input box); display only if 'Other' is selected in Q6.",
+            "script": {
+                "question_text": "Please specify any other barriers to purchasing sustainable fashion.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If 'Other' is selected in Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How much more are you willing to pay for sustainable fashion compared to conventional alternatives?",
+            "answer_options": [
+                "0-10% more",
+                "11-20% more",
+                "21-30% more",
+                "31-50% more",
+                "More than 50% more",
+                "Not willing to pay more"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Use this to understand price sensitivity.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How much more are you willing to pay for sustainable fashion compared to conventional alternatives?",
+                "answer_options": [
+                    "0-10% more",
+                    "11-20% more",
+                    "21-30% more",
+                    "31-50% more",
+                    "More than 50% more",
+                    "Not willing to pay more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How do you typically learn about sustainable fashion brands or products? (Select all that apply)",
+            "answer_options": [
+                "Social media",
+                "Friends and family",
+                "Fashion blogs or magazines",
+                "Brand websites or advertisements",
+                "In-store displays",
+                "Sustainability-focused events or campaigns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Identify effective marketing channels.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes); include an 'Other' option with open-text entry.",
+            "script": {
+                "question_text": "How do you typically learn about sustainable fashion brands or products? (Select all that apply)",
+                "answer_options": [
+                    "Social media",
+                    "Friends and family",
+                    "Fashion blogs or magazines",
+                    "Brand websites or advertisements",
+                    "In-store displays",
+                    "Sustainability-focused events or campaigns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Please specify any other ways you learn about sustainable fashion.",
+            "answer_options": [],
+            "routing_logic": "If 'Other' is selected in Q9",
+            "client_notes": "Provide a concise open-text field for additional input.",
+            "scripter_notes": "Field type: Open-text (text input box); display only if 'Other' is selected in Q9.",
+            "script": {
+                "question_text": "Please specify any other ways you learn about sustainable fashion.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If 'Other' is selected in Q9"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "Which of the following would encourage you to purchase more sustainable fashion? (Select all that apply)",
+            "answer_options": [
+                "Lower prices",
+                "More style variety",
+                "Better accessibility (e.g., more stores carrying them)",
+                "Clearer sustainability certifications",
+                "Brand transparency (e.g., supply chain details)",
+                "Promotions or discounts",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Use this to identify potential incentives.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes); include an 'Other' option with open-text entry.",
+            "script": {
+                "question_text": "Which of the following would encourage you to purchase more sustainable fashion? (Select all that apply)",
+                "answer_options": [
+                    "Lower prices",
+                    "More style variety",
+                    "Better accessibility (e.g., more stores carrying them)",
+                    "Clearer sustainability certifications",
+                    "Brand transparency (e.g., supply chain details)",
+                    "Promotions or discounts",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Please specify any other factors that would encourage you to purchase sustainable fashion.",
+            "answer_options": [],
+            "routing_logic": "If 'Other' is selected in Q11",
+            "client_notes": "Provide a concise open-text field for additional input.",
+            "scripter_notes": "Field type: Open-text (text input box); display only if 'Other' is selected in Q11.",
+            "script": {
+                "question_text": "Please specify any other factors that would encourage you to purchase sustainable fashion.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If 'Other' is selected in Q11"
+            }
+        },
+        {
+            "qid": "Q13",
+            "question_text": "How satisfied are you with the durability of sustainable fashion items you've purchased?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (have not purchased)"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Use a standard satisfaction scale; include 'Not applicable' for clarity.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the durability of sustainable fashion items you've purchased?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (have not purchased)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q14",
+            "question_text": "Do you believe sustainable fashion is a passing trend or a lasting movement?",
+            "answer_options": [
+                "A passing trend",
+                "A lasting movement",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Keep options simple to gauge long-term perceptions.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "Do you believe sustainable fashion is a passing trend or a lasting movement?",
+                "answer_options": [
+                    "A passing trend",
+                    "A lasting movement",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q15",
+            "question_text": "What additional feedback or suggestions do you have regarding sustainable fashion?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow respondents to share open-ended thoughts.",
+            "scripter_notes": "Field type: Open-text (text input box).",
+            "script": {
+                "question_text": "What additional feedback or suggestions do you have regarding sustainable fashion?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

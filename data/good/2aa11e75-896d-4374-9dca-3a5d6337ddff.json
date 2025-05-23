@@ -1,0 +1,197 @@
+{
+    "survey_id": "2aa11e75-896d-4374-9dca-3a5d6337ddff",
+    "survey_name": "Customer Satisfaction with Electric Vehicle (EV) Charging Stations",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with public EV charging stations, focusing on accessibility, ease of use, reliability, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public EV charging stations in a typical month?",
+            "answer_options": [
+                "Less than once a month",
+                "1-3 times per month",
+                "4-6 times per month",
+                "More than 6 times per month"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Use a single-choice radio button for clarity. Avoid overlapping ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you use public EV charging stations in a typical month?",
+                "answer_options": [
+                    "Less than once a month",
+                    "1-3 times per month",
+                    "4-6 times per month",
+                    "More than 6 times per month"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors are most important to you when selecting a public EV charging station? (Select up to 3)",
+            "answer_options": [
+                "Proximity to your location",
+                "Availability of fast charging",
+                "Cost of charging",
+                "Ease of payment methods",
+                "Availability of amenities nearby",
+                "Station reliability (minimal downtime)",
+                "Safety of the location"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Use checkboxes for multi-selection. Limit to 3 choices to prioritize responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with max 3 selections)",
+            "script": {
+                "question_text": "Which of the following factors are most important to you when selecting a public EV charging station? (Select up to 3)",
+                "answer_options": [
+                    "Proximity to your location",
+                    "Availability of fast charging",
+                    "Cost of charging",
+                    "Ease of payment methods",
+                    "Availability of amenities nearby",
+                    "Station reliability (minimal downtime)",
+                    "Safety of the location"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with the reliability of public EV charging stations you have used? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Use a Likert scale. Label endpoints for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the reliability of public EV charging stations you have used? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you ever encountered a charging station that was out of service or malfunctioning when you needed to use it?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Binary response. Route to Q5 if 'Yes'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Have you ever encountered a charging station that was out of service or malfunctioning when you needed to use it?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you encountered a malfunctioning station, how was the issue resolved? (Select all that apply)",
+            "answer_options": [
+                "Found another available station nearby",
+                "Contacted customer support for assistance",
+                "Waited for the station to become available",
+                "Issue was not resolved"
+            ],
+            "routing_logic": "Q4 == 'Yes'",
+            "client_notes": "Multi-choice question. Allow 'Other' as an open-text option if needed.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with optional open-text)",
+            "script": {
+                "question_text": "If you encountered a malfunctioning station, how was the issue resolved? (Select all that apply)",
+                "answer_options": [
+                    "Found another available station nearby",
+                    "Contacted customer support for assistance",
+                    "Waited for the station to become available",
+                    "Issue was not resolved"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Q4 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What payment methods do you prefer for EV charging?",
+            "answer_options": [
+                "Credit/Debit Card",
+                "Mobile App Payment",
+                "RFID Card/Membership",
+                "Pay-as-you-go (e.g., coins or tokens)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Single-choice with 'Other' as an open-text option.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What payment methods do you prefer for EV charging?",
+                "answer_options": [
+                    "Credit/Debit Card",
+                    "Mobile App Payment",
+                    "RFID Card/Membership",
+                    "Pay-as-you-go (e.g., coins or tokens)",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How would you rate the availability of EV charging stations in your area? (1 = Very Poor, 5 = Excellent)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Likert scale for consistency.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How would you rate the availability of EV charging stations in your area? (1 = Very Poor, 5 = Excellent)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would you suggest for public EV charging stations?",
+            "answer_options": [],
+            "routing_logic": "All participants",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you suggest for public EV charging stations?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All participants"
+            }
+        }
+    ]
+}

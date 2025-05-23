@@ -1,0 +1,259 @@
+{
+    "survey_id": "a11ad4d4-26cc-49d7-b73d-0141f6efe2e4",
+    "survey_name": "Telemedicine Usage and Satisfaction Survey",
+    "survey_brief": "This survey aims to gather insights on patient experiences, preferences, and satisfaction levels with telemedicine services to improve future offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often have you used telemedicine services in the past 12 months?",
+            "answer_options": [
+                "Never",
+                "1-2 times",
+                "3-5 times",
+                "6-10 times",
+                "More than 10 times"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often have you used telemedicine services in the past 12 months?",
+                "answer_options": [
+                    "Never",
+                    "1-2 times",
+                    "3-5 times",
+                    "6-10 times",
+                    "More than 10 times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of medical consultations have you used telemedicine for? (Select all that apply)",
+            "answer_options": [
+                "General health check-ups",
+                "Chronic disease management",
+                "Mental health services",
+                "Prescription refills",
+                "Urgent care (e.g., cold, flu, minor injuries)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times' or more in Q1",
+            "client_notes": "Allow multiple selections with checkboxes.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an 'Other' option with open-text follow-up.",
+            "script": {
+                "question_text": "What types of medical consultations have you used telemedicine for? (Select all that apply)",
+                "answer_options": [
+                    "General health check-ups",
+                    "Chronic disease management",
+                    "Mental health services",
+                    "Prescription refills",
+                    "Urgent care (e.g., cold, flu, minor injuries)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall quality of telemedicine services you have received?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times' or more in Q1",
+            "client_notes": "Use a 5-point Likert scale for consistency.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of telemedicine services you have received?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What do you consider the biggest advantage of telemedicine?",
+            "answer_options": [
+                "Convenience (no travel needed)",
+                "Saves time",
+                "Lower cost",
+                "Access to specialists",
+                "Reduced exposure to illnesses",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times' or more in Q1",
+            "client_notes": "Single-choice with an 'Other' option for additional insights.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with optional open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What do you consider the biggest advantage of telemedicine?",
+                "answer_options": [
+                    "Convenience (no travel needed)",
+                    "Saves time",
+                    "Lower cost",
+                    "Access to specialists",
+                    "Reduced exposure to illnesses",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced with telemedicine? (Select all that apply)",
+            "answer_options": [
+                "Technical difficulties (e.g., poor connection)",
+                "Difficulty explaining symptoms virtually",
+                "Lack of personal interaction",
+                "Limited availability of services",
+                "Privacy concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times' or more in Q1",
+            "client_notes": "Multi-choice question to identify common pain points.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with 'Other' option.",
+            "script": {
+                "question_text": "What challenges have you faced with telemedicine? (Select all that apply)",
+                "answer_options": [
+                    "Technical difficulties (e.g., poor connection)",
+                    "Difficulty explaining symptoms virtually",
+                    "Lack of personal interaction",
+                    "Limited availability of services",
+                    "Privacy concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you recommend telemedicine to a friend or family member?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times' or more in Q1",
+            "client_notes": "Measure willingness to recommend (a key satisfaction metric).",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you recommend telemedicine to a friend or family member?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What would encourage you to use telemedicine more often?",
+            "answer_options": [
+                "Lower costs",
+                "More available appointment times",
+                "Better integration with my primary care provider",
+                "Improved technology/platform",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times' or more in Q1",
+            "client_notes": "Single-choice with 'Other' option to capture unique responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with optional open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What would encourage you to use telemedicine more often?",
+                "answer_options": [
+                    "Lower costs",
+                    "More available appointment times",
+                    "Better integration with my primary care provider",
+                    "Improved technology/platform",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How important is it for telemedicine providers to offer follow-up care (e.g., lab tests, prescriptions)?",
+            "answer_options": [
+                "Very important",
+                "Somewhat important",
+                "Neutral",
+                "Not very important",
+                "Not important at all"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times' or more in Q1",
+            "client_notes": "Use a 5-point scale to gauge priority.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How important is it for telemedicine providers to offer follow-up care (e.g., lab tests, prescriptions)?",
+                "answer_options": [
+                    "Very important",
+                    "Somewhat important",
+                    "Neutral",
+                    "Not very important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is your preferred method of accessing telemedicine services?",
+            "answer_options": [
+                "Dedicated healthcare app",
+                "Video call (e.g., Zoom, Skype)",
+                "Phone call",
+                "Chat/messaging",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times' or more in Q1",
+            "client_notes": "Single-choice to identify platform preferences.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with 'Other' option.",
+            "script": {
+                "question_text": "What is your preferred method of accessing telemedicine services?",
+                "answer_options": [
+                    "Dedicated healthcare app",
+                    "Video call (e.g., Zoom, Skype)",
+                    "Phone call",
+                    "Chat/messaging",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you have any additional comments or suggestions about your telemedicine experience?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered '1-2 times' or more in Q1",
+            "client_notes": "Open-ended to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "Do you have any additional comments or suggestions about your telemedicine experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered '1-2 times' or more in Q1"
+            }
+        }
+    ]
+}

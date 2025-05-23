@@ -1,0 +1,249 @@
+{
+    "survey_id": "bdecfbe7-2924-45ab-9767-c69558e4e1b7",
+    "survey_name": "Automotive Dealership Customer Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from customers regarding their experience at automotive dealerships, focusing on sales process, service quality, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your overall experience at the dealership?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with your overall experience at the dealership?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following services did you use at the dealership? (Select all that apply)",
+            "answer_options": [
+                "Vehicle purchase",
+                "Vehicle lease",
+                "Financing",
+                "Trade-in",
+                "Service/repair",
+                "Parts purchase",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Allow multiple selections to capture various interactions.",
+            "scripter_notes": "Field type: Checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following services did you use at the dealership? (Select all that apply)",
+                "answer_options": [
+                    "Vehicle purchase",
+                    "Vehicle lease",
+                    "Financing",
+                    "Trade-in",
+                    "Service/repair",
+                    "Parts purchase",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please describe any specific issues you encountered during your visit.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is 'Dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open-ended to allow detailed feedback on negative experiences.",
+            "scripter_notes": "Field type: Open text.",
+            "script": {
+                "question_text": "Please describe any specific issues you encountered during your visit.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is 'Dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the professionalism of the sales staff?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "Appears if Q2 includes 'Vehicle purchase' or 'Vehicle lease'",
+            "client_notes": "Use a 5-point scale for evaluating staff professionalism.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How would you rate the professionalism of the sales staff?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q2 includes 'Vehicle purchase' or 'Vehicle lease'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the cleanliness and comfort of the dealership's facilities?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and comfort of the dealership's facilities?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Did the dealership provide clear and transparent pricing information?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Partially"
+            ],
+            "routing_logic": "Appears if Q2 includes 'Vehicle purchase', 'Vehicle lease', or 'Financing'",
+            "client_notes": "Simple yes/no/partial response to evaluate transparency.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "Did the dealership provide clear and transparent pricing information?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Partially"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q2 includes 'Vehicle purchase', 'Vehicle lease', or 'Financing'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to recommend this dealership to friends or family?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point scale to measure Net Promoter Score (NPS).",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend this dealership to friends or family?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What was the primary reason for choosing this dealership?",
+            "answer_options": [
+                "Reputation",
+                "Location",
+                "Price",
+                "Vehicle selection",
+                "Customer service",
+                "Previous experience",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q2 includes 'Vehicle purchase' or 'Vehicle lease'",
+            "client_notes": "Allow single selection to identify key decision factors.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "What was the primary reason for choosing this dealership?",
+                "answer_options": [
+                    "Reputation",
+                    "Location",
+                    "Price",
+                    "Vehicle selection",
+                    "Customer service",
+                    "Previous experience",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q2 includes 'Vehicle purchase' or 'Vehicle lease'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How satisfied are you with the follow-up communication after your visit?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied",
+                "No follow-up received"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Include an option for no follow-up to capture gaps in communication.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the follow-up communication after your visit?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied",
+                    "No follow-up received"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you have any additional comments or suggestions for improving the dealership experience?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended to capture qualitative feedback.",
+            "scripter_notes": "Field type: Open text.",
+            "script": {
+                "question_text": "Do you have any additional comments or suggestions for improving the dealership experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

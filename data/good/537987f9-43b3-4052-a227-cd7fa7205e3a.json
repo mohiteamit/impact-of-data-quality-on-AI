@@ -1,0 +1,245 @@
+{
+    "survey_id": "537987f9-43b3-4052-a227-cd7fa7205e3a",
+    "survey_name": "Smartphone App Privacy Concerns Survey",
+    "survey_brief": "This survey aims to understand user concerns and behaviors regarding privacy in smartphone applications, helping developers tailor better privacy practices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How concerned are you about your privacy when using smartphone apps?",
+            "answer_options": [
+                "Very concerned",
+                "Somewhat concerned",
+                "Neutral",
+                "Not very concerned",
+                "Not at all concerned"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure the scale is balanced and mobile-friendly.",
+            "scripter_notes": "Single-choice radio buttons. Randomize options if needed to avoid bias.",
+            "script": {
+                "question_text": "How concerned are you about your privacy when using smartphone apps?",
+                "answer_options": [
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Neutral",
+                    "Not very concerned",
+                    "Not at all concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of app permissions concern you the most? (Select all that apply)",
+            "answer_options": [
+                "Location tracking",
+                "Camera access",
+                "Microphone access",
+                "Contact list access",
+                "Photo library access",
+                "None of the above"
+            ],
+            "routing_logic": "Appears if Q1 is answered with 'Very concerned', 'Somewhat concerned', or 'Neutral'.",
+            "client_notes": "Multi-choice question. Consider adding an 'Other' option for additional inputs.",
+            "scripter_notes": "Multi-choice checkboxes. Allow at least one selection.",
+            "script": {
+                "question_text": "Which types of app permissions concern you the most? (Select all that apply)",
+                "answer_options": [
+                    "Location tracking",
+                    "Camera access",
+                    "Microphone access",
+                    "Contact list access",
+                    "Photo library access",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is answered with 'Very concerned', 'Somewhat concerned', or 'Neutral'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Have you ever stopped using an app due to privacy concerns?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Binary choice. Follow up with Q4 if 'Yes' is selected.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "Have you ever stopped using an app due to privacy concerns?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What was the primary reason for stopping use of the app?",
+            "answer_options": [
+                "Excessive data collection",
+                "Lack of transparency in privacy policy",
+                "Third-party data sharing",
+                "Security breaches reported",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q3 is answered 'Yes'.",
+            "client_notes": "Multi-choice with optional 'Other' text input.",
+            "scripter_notes": "Multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What was the primary reason for stopping use of the app?",
+                "answer_options": [
+                    "Excessive data collection",
+                    "Lack of transparency in privacy policy",
+                    "Third-party data sharing",
+                    "Security breaches reported",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q3 is answered 'Yes'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you review an app's privacy policy before installing it?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Use a 5-point frequency scale for clarity.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you review an app's privacy policy before installing it?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional privacy features would encourage you to use an app more confidently?",
+            "answer_options": [],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Open-ended question to gather qualitative feedback.",
+            "scripter_notes": "Open-text field with character limit of 500.",
+            "script": {
+                "question_text": "What additional privacy features would encourage you to use an app more confidently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Do you use any privacy-focused apps or tools (e.g., VPNs, ad blockers)?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Include a 'Not sure' option for clarity.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "Do you use any privacy-focused apps or tools (e.g., VPNs, ad blockers)?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which of the following best describes your trust in app developers regarding your data?",
+            "answer_options": [
+                "I trust most developers with my data",
+                "I trust only well-known developers",
+                "I distrust all developers",
+                "I don't have an opinion"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Single-choice question to gauge trust levels.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "Which of the following best describes your trust in app developers regarding your data?",
+                "answer_options": [
+                    "I trust most developers with my data",
+                    "I trust only well-known developers",
+                    "I distrust all developers",
+                    "I don't have an opinion"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Would you be willing to pay for an app that guarantees better privacy protections?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe, depending on the cost"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Include a conditional option for nuanced responses.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "Would you be willing to pay for an app that guarantees better privacy protections?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe, depending on the cost"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your age group?",
+            "answer_options": [
+                "Under 18",
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55-64",
+                "65 or older"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Standard demographic question for segmentation.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "What is your age group?",
+                "answer_options": [
+                    "Under 18",
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55-64",
+                    "65 or older"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        }
+    ]
+}

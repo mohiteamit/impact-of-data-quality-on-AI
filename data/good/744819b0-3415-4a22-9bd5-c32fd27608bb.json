@@ -1,0 +1,231 @@
+{
+    "survey_id": "744819b0-3415-4a22-9bd5-c32fd27608bb",
+    "survey_name": "Workplace Air Quality Impact Survey",
+    "survey_brief": "This survey aims to understand employee perceptions of workplace air quality and its impact on productivity and well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the current air quality in your workplace?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the current air quality in your workplace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following air quality issues have you experienced in your workplace? (Select all that apply)",
+            "answer_options": [
+                "Poor ventilation",
+                "Dust accumulation",
+                "Unpleasant odors",
+                "Humidity issues",
+                "Temperature fluctuations",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Allow multiple selections. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following air quality issues have you experienced in your workplace? (Select all that apply)",
+                "answer_options": [
+                    "Poor ventilation",
+                    "Dust accumulation",
+                    "Unpleasant odors",
+                    "Humidity issues",
+                    "Temperature fluctuations",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you experience discomfort due to air quality in your workplace?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a frequency scale. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you experience discomfort due to air quality in your workplace?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe any specific symptoms you experience due to poor air quality (e.g., headaches, respiratory issues).",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is 'Dissatisfied' or 'Very dissatisfied'.",
+            "client_notes": "Open-ended to capture detailed feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "Describe any specific symptoms you experience due to poor air quality (e.g., headaches, respiratory issues).",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is 'Dissatisfied' or 'Very dissatisfied'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How does air quality affect your productivity at work?",
+            "answer_options": [
+                "Significantly decreases productivity",
+                "Slightly decreases productivity",
+                "No impact on productivity",
+                "Slightly increases productivity",
+                "Significantly increases productivity"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a balanced scale. Randomize positive/negative options.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How does air quality affect your productivity at work?",
+                "answer_options": [
+                    "Significantly decreases productivity",
+                    "Slightly decreases productivity",
+                    "No impact on productivity",
+                    "Slightly increases productivity",
+                    "Significantly increases productivity"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which of the following improvements would most enhance workplace air quality? (Select up to 2)",
+            "answer_options": [
+                "Better ventilation systems",
+                "Air purifiers",
+                "Regular cleaning schedules",
+                "Indoor plants",
+                "Humidity control",
+                "Odor elimination",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Allow limited multi-selection. Include 'Other' option for additional feedback.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with max 2 selections.",
+            "script": {
+                "question_text": "Which of the following improvements would most enhance workplace air quality? (Select up to 2)",
+                "answer_options": [
+                    "Better ventilation systems",
+                    "Air purifiers",
+                    "Regular cleaning schedules",
+                    "Indoor plants",
+                    "Humidity control",
+                    "Odor elimination",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If you selected 'Other' in the previous question, please specify.",
+            "answer_options": [],
+            "routing_logic": "Appears only if 'Other' is selected in Q6.",
+            "client_notes": "Optional open-ended for additional suggestions. Limit to 200 characters.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "If you selected 'Other' in the previous question, please specify.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if 'Other' is selected in Q6."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How aware are you of the company's current air quality policies or initiatives?",
+            "answer_options": [
+                "Very aware",
+                "Somewhat aware",
+                "Slightly aware",
+                "Not aware at all"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Single-choice to gauge awareness levels.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How aware are you of the company's current air quality policies or initiatives?",
+                "answer_options": [
+                    "Very aware",
+                    "Somewhat aware",
+                    "Slightly aware",
+                    "Not aware at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Would you be interested in receiving more information about improving workplace air quality?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Simple yes/no/maybe option.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Would you be interested in receiving more information about improving workplace air quality?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Any additional comments or suggestions regarding workplace air quality?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Optional open-ended for final feedback. Limit to 1000 characters.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "Any additional comments or suggestions regarding workplace air quality?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

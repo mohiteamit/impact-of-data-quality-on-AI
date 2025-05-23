@@ -1,0 +1,291 @@
+{
+    "survey_id": "47dfa530-7379-40b3-8730-2407ab8a4bd1",
+    "survey_name": "Workspace Air Quality Impact Survey",
+    "survey_brief": "This survey aims to understand how air quality in office environments affects employee productivity and well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you rate the air quality in your current workspace?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Fair",
+                "Poor",
+                "Very Poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How would you rate the air quality in your current workspace?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Fair",
+                    "Poor",
+                    "Very Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Have you experienced any health issues related to poor air quality in your workspace?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not Sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an optional open-ended follow-up for 'Yes' respondents to specify issues.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Have you experienced any health issues related to poor air quality in your workspace?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not Sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "If you answered 'Yes' to Q2, please describe the health issues you experienced.",
+            "answer_options": [],
+            "routing_logic": "Q2 == 'Yes'",
+            "client_notes": "This open-ended question allows respondents to elaborate on their health issues.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "If you answered 'Yes' to Q2, please describe the health issues you experienced.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Q2 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which of the following air quality improvements would you find most beneficial in your workspace? (Select all that apply)",
+            "answer_options": [
+                "Better ventilation systems",
+                "Air purifiers",
+                "Regular air quality monitoring",
+                "Indoor plants",
+                "Natural light optimization",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow for multiple selections as respondents may value several improvements.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "Which of the following air quality improvements would you find most beneficial in your workspace? (Select all that apply)",
+                "answer_options": [
+                    "Better ventilation systems",
+                    "Air purifiers",
+                    "Regular air quality monitoring",
+                    "Indoor plants",
+                    "Natural light optimization",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often does your employer measure or assess air quality in your workspace?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Occasionally",
+                "Never",
+                "Not Sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This helps gauge employer awareness and action on air quality.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often does your employer measure or assess air quality in your workspace?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Occasionally",
+                    "Never",
+                    "Not Sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Does poor air quality affect your productivity at work?",
+            "answer_options": [
+                "Significantly decreases productivity",
+                "Moderately decreases productivity",
+                "Slightly decreases productivity",
+                "No impact",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point scale to capture varying degrees of impact.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Does poor air quality affect your productivity at work?",
+                "answer_options": [
+                    "Significantly decreases productivity",
+                    "Moderately decreases productivity",
+                    "Slightly decreases productivity",
+                    "No impact",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Have you ever requested improvements to air quality in your workspace?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not applicable (no issues)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Follow-up with open-ended question for 'Yes' responses to detail actions taken.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Have you ever requested improvements to air quality in your workspace?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not applicable (no issues)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "If you answered 'Yes' to Q7, what actions were taken in response to your request?",
+            "answer_options": [],
+            "routing_logic": "Q7 == 'Yes'",
+            "client_notes": "This open-ended question captures the effectiveness of employee requests.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "If you answered 'Yes' to Q7, what actions were taken in response to your request?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Q7 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What type of workspace do you primarily work in?",
+            "answer_options": [
+                "Open-plan office",
+                "Private office",
+                "Cubicle",
+                "Shared workspace/co-working space",
+                "Home office",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Understanding workspace type can help correlate air quality perceptions with physical environment.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "What type of workspace do you primarily work in?",
+                "answer_options": [
+                    "Open-plan office",
+                    "Private office",
+                    "Cubicle",
+                    "Shared workspace/co-working space",
+                    "Home office",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "If you selected 'Other' in Q9, please specify your workspace type.",
+            "answer_options": [],
+            "routing_logic": "Q9 == 'Other (please specify)'",
+            "client_notes": "This ensures clarity for atypical workspace types.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "If you selected 'Other' in Q9, please specify your workspace type.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Q9 == 'Other (please specify)'"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How important is air quality to your overall job satisfaction?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This helps prioritize air quality in employee satisfaction initiatives.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How important is air quality to your overall job satisfaction?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Would you consider changing jobs due to poor air quality in your current workspace?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Possibly, depending on other factors"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This measures the severity of air quality's impact on employee retention.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Would you consider changing jobs due to poor air quality in your current workspace?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Possibly, depending on other factors"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q13",
+            "question_text": "What additional comments or suggestions do you have regarding air quality in your workspace?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "This open-ended question captures any unaddressed concerns or ideas.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What additional comments or suggestions do you have regarding air quality in your workspace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

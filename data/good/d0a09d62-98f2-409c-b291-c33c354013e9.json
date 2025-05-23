@@ -1,0 +1,295 @@
+{
+    "survey_id": "d0a09d62-98f2-409c-b291-c33c354013e9",
+    "survey_name": "In-Store Shopping Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from customers about their recent in-store shopping experiences to improve service quality and store layout.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied were you with your most recent in-store shopping experience?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied were you with your most recent in-store shopping experience?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What was the primary reason for your visit to the store today?",
+            "answer_options": [
+                "Grocery shopping",
+                "Clothing/Apparel",
+                "Electronics",
+                "Home goods",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with an open-text field for specificity.",
+            "scripter_notes": "Field type: radio button with an open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What was the primary reason for your visit to the store today?",
+                "answer_options": [
+                    "Grocery shopping",
+                    "Clothing/Apparel",
+                    "Electronics",
+                    "Home goods",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How easy was it to locate the items you were looking for in the store?",
+            "answer_options": [
+                "Very easy",
+                "Easy",
+                "Neutral",
+                "Difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale. Consider adding a follow-up for 'Difficult' or 'Very difficult' responses.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How easy was it to locate the items you were looking for in the store?",
+                "answer_options": [
+                    "Very easy",
+                    "Easy",
+                    "Neutral",
+                    "Difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Did you interact with any store staff during your visit?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use this to route respondents to Q5 if 'Yes' is selected.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Did you interact with any store staff during your visit?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the helpfulness of the store staff you interacted with?",
+            "answer_options": [
+                "Very helpful",
+                "Helpful",
+                "Neutral",
+                "Unhelpful",
+                "Very unhelpful"
+            ],
+            "routing_logic": "Show if Q4 answer is 'Yes'",
+            "client_notes": "Use a 5-point Likert scale. Skip if Q4 is 'No'.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How would you rate the helpfulness of the store staff you interacted with?",
+                "answer_options": [
+                    "Very helpful",
+                    "Helpful",
+                    "Neutral",
+                    "Unhelpful",
+                    "Very unhelpful"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q4 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How clean and organized did you find the store?",
+            "answer_options": [
+                "Very clean and organized",
+                "Clean and organized",
+                "Neutral",
+                "Somewhat messy",
+                "Very messy"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How clean and organized did you find the store?",
+                "answer_options": [
+                    "Very clean and organized",
+                    "Clean and organized",
+                    "Neutral",
+                    "Somewhat messy",
+                    "Very messy"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Were you able to find all the items you intended to purchase today?",
+            "answer_options": [
+                "Yes, all items",
+                "Most items",
+                "Some items",
+                "Very few items",
+                "None of the items"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use this to gauge inventory or layout issues.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Were you able to find all the items you intended to purchase today?",
+                "answer_options": [
+                    "Yes, all items",
+                    "Most items",
+                    "Some items",
+                    "Very few items",
+                    "None of the items"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How long did you have to wait in line at checkout?",
+            "answer_options": [
+                "No wait",
+                "Less than 5 minutes",
+                "5-10 minutes",
+                "10-15 minutes",
+                "More than 15 minutes"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use predefined time ranges for easier analysis.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How long did you have to wait in line at checkout?",
+                "answer_options": [
+                    "No wait",
+                    "Less than 5 minutes",
+                    "5-10 minutes",
+                    "10-15 minutes",
+                    "More than 15 minutes"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Did you use any self-checkout options during your visit?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use this to route respondents to Q10 if 'Yes' is selected.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Did you use any self-checkout options during your visit?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How satisfied were you with the self-checkout experience?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Show if Q9 answer is 'Yes'",
+            "client_notes": "Use a 5-point Likert scale. Skip if Q9 is 'No'.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied were you with the self-checkout experience?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q9 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "What improvements would you suggest to enhance your in-store shopping experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-text field to capture qualitative feedback.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance your in-store shopping experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "How likely are you to recommend this store to a friend or family member?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale to measure Net Promoter Score (NPS).",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend this store to a friend or family member?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

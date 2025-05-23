@@ -1,0 +1,291 @@
+{
+    "survey_id": "abb94e1c-dfd6-41ef-aa04-b8582eceaa30",
+    "survey_name": "In-Store Digital Kiosk Usability Survey",
+    "survey_brief": "Assess customer experiences with in-store digital kiosks to optimize usability, functionality, and overall satisfaction in retail environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you interact with digital kiosks when visiting retail stores?",
+            "answer_options": [
+                "Every visit",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a balanced frequency scale. Ensure mobile-responsive layout for option buttons.",
+            "scripter_notes": "Single-choice radio buttons; mandatory field.",
+            "script": {
+                "question_text": "How often do you interact with digital kiosks when visiting retail stores?",
+                "answer_options": [
+                    "Every visit",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you typically use on digital kiosks? (Select all that apply)",
+            "answer_options": [
+                "Product search",
+                "Price check",
+                "Store map",
+                "Checkout/payment",
+                "Promotional offers"
+            ],
+            "routing_logic": "Respondents who selected 'Every visit', 'Occasionally', or 'Rarely' in Q1",
+            "client_notes": "Limit to 5 core features for clarity. Randomize option order to reduce bias.",
+            "scripter_notes": "Multi-choice checkboxes; allow up to 5 selections.",
+            "script": {
+                "question_text": "Which features do you typically use on digital kiosks? (Select all that apply)",
+                "answer_options": [
+                    "Product search",
+                    "Price check",
+                    "Store map",
+                    "Checkout/payment",
+                    "Promotional offers"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Every visit', 'Occasionally', or 'Rarely' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the responsiveness of digital kiosk touchscreens?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Every visit', 'Occasionally', or 'Rarely' in Q1",
+            "client_notes": "Use a standard 5-point Likert scale. Include 'Neutral' midpoint.",
+            "scripter_notes": "Single-choice radio buttons with vertical alignment.",
+            "script": {
+                "question_text": "How satisfied are you with the responsiveness of digital kiosk touchscreens?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Every visit', 'Occasionally', or 'Rarely' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you experienced technical issues with digital kiosks in the past 6 months?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Respondents who selected 'Every visit', 'Occasionally', or 'Rarely' in Q1",
+            "client_notes": "Include an 'Unsure' option for recall uncertainty.",
+            "scripter_notes": "Single-choice radio buttons with 'Yes' as first option.",
+            "script": {
+                "question_text": "Have you experienced technical issues with digital kiosks in the past 6 months?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Every visit', 'Occasionally', or 'Rarely' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What type of technical issues did you encounter? (Select all that apply)",
+            "answer_options": [
+                "Unresponsive screen",
+                "Slow loading",
+                "Payment errors",
+                "Incorrect product info",
+                "Other"
+            ],
+            "routing_logic": "Respondents who selected 'Yes' in Q4",
+            "client_notes": "Include 'Other' with text field for rare cases.",
+            "scripter_notes": "Multi-choice checkboxes with 'Other' triggering a text input.",
+            "script": {
+                "question_text": "What type of technical issues did you encounter? (Select all that apply)",
+                "answer_options": [
+                    "Unresponsive screen",
+                    "Slow loading",
+                    "Payment errors",
+                    "Incorrect product info",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Yes' in Q4"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to prefer digital kiosks over staff-assisted transactions for routine tasks?",
+            "answer_options": [
+                "Extremely likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Extremely unlikely"
+            ],
+            "routing_logic": "All respondents except those who selected 'Never' in Q1",
+            "client_notes": "Measure behavioral intent with a 5-point scale.",
+            "scripter_notes": "Single-choice radio buttons with horizontal layout.",
+            "script": {
+                "question_text": "How likely are you to prefer digital kiosks over staff-assisted transactions for routine tasks?",
+                "answer_options": [
+                    "Extremely likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Extremely unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What improvements would enhance your digital kiosk experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents except those who selected 'Never' in Q1",
+            "client_notes": "Open-ended to capture qualitative insights. Limit to 250 characters.",
+            "scripter_notes": "Open-text field with character counter.",
+            "script": {
+                "question_text": "What improvements would enhance your digital kiosk experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents except those who selected 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How has using digital kiosks affected your overall in-store satisfaction?",
+            "answer_options": [
+                "Significantly increased",
+                "Slightly increased",
+                "No change",
+                "Slightly decreased",
+                "Significantly decreased"
+            ],
+            "routing_logic": "All respondents except those who selected 'Never' in Q1",
+            "client_notes": "Use a bidirectional scale to measure positive/negative impact.",
+            "scripter_notes": "Single-choice radio buttons with neutral center option.",
+            "script": {
+                "question_text": "How has using digital kiosks affected your overall in-store satisfaction?",
+                "answer_options": [
+                    "Significantly increased",
+                    "Slightly increased",
+                    "No change",
+                    "Slightly decreased",
+                    "Significantly decreased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Would you recommend stores with digital kiosks to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Neutral",
+                "Probably no",
+                "Definitely no"
+            ],
+            "routing_logic": "All respondents except those who selected 'Never' in Q1",
+            "client_notes": "Measure Net Promoter Score (NPS) sentiment.",
+            "scripter_notes": "Single-choice radio buttons with emoji icons optional.",
+            "script": {
+                "question_text": "Would you recommend stores with digital kiosks to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Neutral",
+                    "Probably no",
+                    "Definitely no"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your age range?",
+            "answer_options": [
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55-64",
+                "65+"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard age brackets for demographic analysis.",
+            "scripter_notes": "Single-choice dropdown menu.",
+            "script": {
+                "question_text": "What is your age range?",
+                "answer_options": [
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55-64",
+                    "65+"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How would you describe your familiarity with touchscreen technology?",
+            "answer_options": [
+                "Expert",
+                "Comfortable",
+                "Neutral",
+                "Uncomfortable",
+                "Novice"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Assess tech proficiency without technical jargon.",
+            "scripter_notes": "Single-choice radio buttons with descriptive labels.",
+            "script": {
+                "question_text": "How would you describe your familiarity with touchscreen technology?",
+                "answer_options": [
+                    "Expert",
+                    "Comfortable",
+                    "Neutral",
+                    "Uncomfortable",
+                    "Novice"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Please provide any additional comments about your experience with digital kiosks:",
+            "answer_options": [],
+            "routing_logic": "Optional for all respondents",
+            "client_notes": "Allow anonymous feedback. Use optional validation.",
+            "scripter_notes": "Open-text field with optional submission.",
+            "script": {
+                "question_text": "Please provide any additional comments about your experience with digital kiosks:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional for all respondents"
+            }
+        }
+    ]
+}

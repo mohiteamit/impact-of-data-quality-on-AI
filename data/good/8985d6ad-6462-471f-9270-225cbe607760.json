@@ -1,0 +1,241 @@
+{
+    "survey_id": "8985d6ad-6462-471f-9270-225cbe607760",
+    "survey_name": "Electric Bike Usage and Satisfaction Survey",
+    "survey_brief": "This survey aims to understand user experiences, satisfaction levels, and preferences regarding electric bikes (e-bikes) for urban commuting and leisure.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use an electric bike (e-bike)?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover the full range of usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use an electric bike (e-bike)?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary purpose for using an e-bike? (Select all that apply)",
+            "answer_options": [
+                "Commuting to work/school",
+                "Running errands",
+                "Leisure/exercise",
+                "Environmental reasons",
+                "Cost savings"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use checkboxes for multi-select. Ensure all common purposes are included.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What is your primary purpose for using an e-bike? (Select all that apply)",
+                "answer_options": [
+                    "Commuting to work/school",
+                    "Running errands",
+                    "Leisure/exercise",
+                    "Environmental reasons",
+                    "Cost savings"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your current e-bike?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with your current e-bike?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What features do you value the most in an e-bike? (Select up to 3)",
+            "answer_options": [
+                "Battery range",
+                "Motor power",
+                "Lightweight design",
+                "Comfort",
+                "Price",
+                "Brand reputation",
+                "Smart connectivity"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Limit selections to 3 to prioritize top features.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with max selections set to 3.",
+            "script": {
+                "question_text": "What features do you value the most in an e-bike? (Select up to 3)",
+                "answer_options": [
+                    "Battery range",
+                    "Motor power",
+                    "Lightweight design",
+                    "Comfort",
+                    "Price",
+                    "Brand reputation",
+                    "Smart connectivity"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What is the average distance you travel per trip on your e-bike?",
+            "answer_options": [
+                "Less than 5 km",
+                "5-10 km",
+                "11-20 km",
+                "More than 20 km"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1",
+            "client_notes": "Use single-choice for simplicity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What is the average distance you travel per trip on your e-bike?",
+                "answer_options": [
+                    "Less than 5 km",
+                    "5-10 km",
+                    "11-20 km",
+                    "More than 20 km"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What challenges, if any, have you faced while using an e-bike? (Select all that apply)",
+            "answer_options": [
+                "Battery life",
+                "Maintenance issues",
+                "Parking/security concerns",
+                "Lack of bike lanes",
+                "Weather conditions",
+                "None"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Include 'None' for respondents without challenges.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What challenges, if any, have you faced while using an e-bike? (Select all that apply)",
+                "answer_options": [
+                    "Battery life",
+                    "Maintenance issues",
+                    "Parking/security concerns",
+                    "Lack of bike lanes",
+                    "Weather conditions",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Would you recommend your e-bike to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1",
+            "client_notes": "Simple yes/no/maybe for recommendation intent.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend your e-bike to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What would encourage you to use your e-bike more often? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "Appears to respondents who selected 'A few times a month', 'Rarely', or 'Never' in Q1",
+            "client_notes": "Open-ended to capture diverse responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What would encourage you to use your e-bike more often? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to respondents who selected 'A few times a month', 'Rarely', or 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is your preferred brand of e-bike?",
+            "answer_options": [
+                "Brand A",
+                "Brand B",
+                "Brand C",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1",
+            "client_notes": "Include 'Other' with a text field for additional brands.",
+            "scripter_notes": "Field type: radio button with 'Other' option and open-text follow-up.",
+            "script": {
+                "question_text": "What is your preferred brand of e-bike?",
+                "answer_options": [
+                    "Brand A",
+                    "Brand B",
+                    "Brand C",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Please share any additional comments or suggestions regarding your e-bike experience.",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended to capture qualitative insights.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "Please share any additional comments or suggestions regarding your e-bike experience.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

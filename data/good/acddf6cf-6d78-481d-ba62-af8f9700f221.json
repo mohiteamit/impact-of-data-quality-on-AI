@@ -1,0 +1,247 @@
+{
+    "survey_id": "acddf6cf-6d78-481d-ba62-af8f9700f221",
+    "survey_name": "Digital Workspace Ergonomics Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction and challenges related to digital workspace ergonomics, including hardware, software, and environmental factors impacting productivity and comfort.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the ergonomic setup of your current digital workspace?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a standard 5-point Likert scale for consistency. Ensure question is mobile-friendly.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "How satisfied are you with the ergonomic setup of your current digital workspace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following ergonomic issues have you experienced in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Eye strain or fatigue",
+                "Neck or shoulder pain",
+                "Back pain",
+                "Wrist or hand discomfort",
+                "Headaches",
+                "None of the above"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Allow multiple selections. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: Checkbox (multi-choice)",
+            "script": {
+                "question_text": "Which of the following ergonomic issues have you experienced in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Eye strain or fatigue",
+                    "Neck or shoulder pain",
+                    "Back pain",
+                    "Wrist or hand discomfort",
+                    "Headaches",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please describe any specific ergonomic challenges you face in your digital workspace.",
+            "answer_options": [],
+            "routing_logic": "Display if Q2 != 'None of the above'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 500 characters.",
+            "scripter_notes": "Field type: Open text (text area)",
+            "script": {
+                "question_text": "Please describe any specific ergonomic challenges you face in your digital workspace.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q2 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you take breaks to stretch or rest your eyes during your workday?",
+            "answer_options": [
+                "Every 30 minutes",
+                "Every hour",
+                "Every 2 hours",
+                "Every 3 hours or less frequently",
+                "I do not take regular breaks"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Include a 'Not applicable' option if needed for certain roles.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "How often do you take breaks to stretch or rest your eyes during your workday?",
+                "answer_options": [
+                    "Every 30 minutes",
+                    "Every hour",
+                    "Every 2 hours",
+                    "Every 3 hours or less frequently",
+                    "I do not take regular breaks"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following ergonomic equipment do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Adjustable chair",
+                "Standing desk",
+                "External keyboard",
+                "External mouse",
+                "Monitor riser or stand",
+                "Footrest",
+                "Wrist rest",
+                "Blue light filtering glasses",
+                "None of the above"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Randomize options to avoid order bias.",
+            "scripter_notes": "Field type: Checkbox (multi-choice)",
+            "script": {
+                "question_text": "Which of the following ergonomic equipment do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Adjustable chair",
+                    "Standing desk",
+                    "External keyboard",
+                    "External mouse",
+                    "Monitor riser or stand",
+                    "Footrest",
+                    "Wrist rest",
+                    "Blue light filtering glasses",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How would you rate the brightness and positioning of your primary work screen?",
+            "answer_options": [
+                "Excellent - no issues",
+                "Good - minor adjustments needed occasionally",
+                "Fair - frequent adjustments needed",
+                "Poor - causes eye strain or discomfort"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Consider adding a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "How would you rate the brightness and positioning of your primary work screen?",
+                "answer_options": [
+                    "Excellent - no issues",
+                    "Good - minor adjustments needed occasionally",
+                    "Fair - frequent adjustments needed",
+                    "Poor - causes eye strain or discomfort"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Does your organization provide ergonomic assessments or equipment reimbursements?",
+            "answer_options": [
+                "Yes, both assessments and equipment",
+                "Yes, equipment only",
+                "Yes, assessments only",
+                "No",
+                "I'm not sure"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Include an 'I prefer not to answer' option for anonymity.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "Does your organization provide ergonomic assessments or equipment reimbursements?",
+                "answer_options": [
+                    "Yes, both assessments and equipment",
+                    "Yes, equipment only",
+                    "Yes, assessments only",
+                    "No",
+                    "I'm not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would you suggest for your digital workspace ergonomics?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Allow for detailed feedback. Limit response to 1000 characters.",
+            "scripter_notes": "Field type: Open text (text area)",
+            "script": {
+                "question_text": "What improvements would you suggest for your digital workspace ergonomics?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How many hours per day do you typically spend working at your digital workspace?",
+            "answer_options": [
+                "Less than 4 hours",
+                "4-6 hours",
+                "6-8 hours",
+                "More than 8 hours"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a standard range for consistency in data analysis.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "How many hours per day do you typically spend working at your digital workspace?",
+                "answer_options": [
+                    "Less than 4 hours",
+                    "4-6 hours",
+                    "6-8 hours",
+                    "More than 8 hours"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How would you rate your overall productivity in relation to your digital workspace ergonomics?",
+            "answer_options": [
+                "Highly productive - no ergonomic issues",
+                "Moderately productive - minor ergonomic issues",
+                "Somewhat productive - significant ergonomic challenges",
+                "Not productive - severe ergonomic limitations"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Consider pairing this with a follow-up qualitative question.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "How would you rate your overall productivity in relation to your digital workspace ergonomics?",
+                "answer_options": [
+                    "Highly productive - no ergonomic issues",
+                    "Moderately productive - minor ergonomic issues",
+                    "Somewhat productive - significant ergonomic challenges",
+                    "Not productive - severe ergonomic limitations"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        }
+    ]
+}

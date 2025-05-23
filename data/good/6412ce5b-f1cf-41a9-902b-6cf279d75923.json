@@ -1,0 +1,241 @@
+{
+    "survey_id": "6412ce5b-f1cf-41a9-902b-6cf279d75923",
+    "survey_name": "Post-Pandemic Return-to-Office Preferences Survey",
+    "survey_brief": "This survey aims to understand employee preferences and concerns regarding returning to the office post-pandemic, helping organizations design flexible and effective workplace policies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often would you prefer to work from the office post-pandemic?",
+            "answer_options": [
+                "Full-time in the office (5 days a week)",
+                "Mostly in the office (3-4 days a week)",
+                "Hybrid (1-2 days in the office)",
+                "Fully remote (0 days in the office)"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often would you prefer to work from the office post-pandemic?",
+                "answer_options": [
+                    "Full-time in the office (5 days a week)",
+                    "Mostly in the office (3-4 days a week)",
+                    "Hybrid (1-2 days in the office)",
+                    "Fully remote (0 days in the office)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors would make you more comfortable returning to the office? (Select all that apply)",
+            "answer_options": [
+                "Vaccination requirements for all employees",
+                "Regular sanitization of workspaces",
+                "Enforced social distancing measures",
+                "Flexible work hours to avoid peak commute times",
+                "Private or well-spaced workstations",
+                "None of the above"
+            ],
+            "routing_logic": "Ask if Q1 is not 'Fully remote'",
+            "client_notes": "Use a multi-choice checkbox format. Randomize options to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which of the following factors would make you more comfortable returning to the office? (Select all that apply)",
+                "answer_options": [
+                    "Vaccination requirements for all employees",
+                    "Regular sanitization of workspaces",
+                    "Enforced social distancing measures",
+                    "Flexible work hours to avoid peak commute times",
+                    "Private or well-spaced workstations",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Ask if Q1 is not 'Fully remote'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How important is access to collaboration tools (e.g., video conferencing, shared documents) for your productivity?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Use a Likert scale with single-choice radio buttons.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How important is access to collaboration tools (e.g., video conferencing, shared documents) for your productivity?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges do you anticipate when returning to the office?",
+            "answer_options": [],
+            "routing_logic": "Ask if Q1 is not 'Fully remote'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box)",
+            "script": {
+                "question_text": "What challenges do you anticipate when returning to the office?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Ask if Q1 is not 'Fully remote'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which amenities would you like to see in the office to support your well-being? (Select all that apply)",
+            "answer_options": [
+                "On-site gym or fitness classes",
+                "Healthy meal options",
+                "Quiet/meditation rooms",
+                "Ergonomic furniture",
+                "Childcare facilities",
+                "None of the above"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Multi-choice checkbox format. Include 'Other' option if needed.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which amenities would you like to see in the office to support your well-being? (Select all that apply)",
+                "answer_options": [
+                    "On-site gym or fitness classes",
+                    "Healthy meal options",
+                    "Quiet/meditation rooms",
+                    "Ergonomic furniture",
+                    "Childcare facilities",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How has remote work impacted your work-life balance?",
+            "answer_options": [
+                "Significantly improved",
+                "Slightly improved",
+                "No change",
+                "Slightly worsened",
+                "Significantly worsened"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Single-choice Likert scale. Randomize order if possible.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How has remote work impacted your work-life balance?",
+                "answer_options": [
+                    "Significantly improved",
+                    "Slightly improved",
+                    "No change",
+                    "Slightly worsened",
+                    "Significantly worsened"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Would you be willing to relocate if your employer offered a hybrid or fully remote option?",
+            "answer_options": [
+                "Yes, I would consider relocating",
+                "No, I prefer to stay in my current location",
+                "Unsure"
+            ],
+            "routing_logic": "Ask if Q1 is 'Hybrid' or 'Fully remote'",
+            "client_notes": "Single-choice radio button. Include 'Unsure' option for neutrality.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Would you be willing to relocate if your employer offered a hybrid or fully remote option?",
+                "answer_options": [
+                    "Yes, I would consider relocating",
+                    "No, I prefer to stay in my current location",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask if Q1 is 'Hybrid' or 'Fully remote'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How satisfied are you with your current communication tools for remote work?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Single-choice Likert scale. Ensure question is clear and concise.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with your current communication tools for remote work?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What additional support would help you transition back to the office smoothly?",
+            "answer_options": [],
+            "routing_logic": "Ask if Q1 is not 'Fully remote'",
+            "client_notes": "Open-ended question to capture specific needs. Limit to 200 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box)",
+            "script": {
+                "question_text": "What additional support would help you transition back to the office smoothly?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Ask if Q1 is not 'Fully remote'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to seek new employment if your employer does not offer your preferred work arrangement?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Single-choice Likert scale. Sensitive question, ensure anonymity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to seek new employment if your employer does not offer your preferred work arrangement?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        }
+    ]
+}

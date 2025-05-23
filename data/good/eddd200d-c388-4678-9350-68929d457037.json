@@ -1,0 +1,273 @@
+{
+    "survey_id": "eddd200d-c388-4678-9350-68929d457037",
+    "survey_name": "Online Language Learning Platform Satisfaction Survey",
+    "survey_brief": "Assessing user satisfaction with language learning platforms, effectiveness of teaching methods, and areas for platform improvement",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How old are you?",
+            "answer_options": [
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55+"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Use standard age brackets for demographic analysis. Ensure mobile-responsive dropdown",
+            "scripter_notes": "Single-select dropdown menu",
+            "script": {
+                "question_text": "How old are you?",
+                "answer_options": [
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55+"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you use this language learning platform?",
+            "answer_options": [
+                "Daily",
+                "3-5 times weekly",
+                "1-2 times weekly",
+                "Less than once weekly",
+                "First-time user"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Include 'First-time user' option to filter new users for separate analysis",
+            "scripter_notes": "Radio buttons with vertical layout",
+            "script": {
+                "question_text": "How often do you use this language learning platform?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times weekly",
+                    "1-2 times weekly",
+                    "Less than once weekly",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which features do you regularly use? (Select all that apply)",
+            "answer_options": [
+                "Interactive lessons",
+                "Live tutoring",
+                "Speech recognition",
+                "Grammar exercises",
+                "Cultural immersion videos",
+                "Progress tracking"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Monitor feature popularity to prioritize development resources",
+            "scripter_notes": "Checkbox grid with 2-column layout on desktop",
+            "script": {
+                "question_text": "Which features do you regularly use? (Select all that apply)",
+                "answer_options": [
+                    "Interactive lessons",
+                    "Live tutoring",
+                    "Speech recognition",
+                    "Grammar exercises",
+                    "Cultural immersion videos",
+                    "Progress tracking"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the quality of video lesson content?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q3 includes 'Interactive lessons' or 'Cultural immersion videos'",
+            "client_notes": "Use standard 5-point Likert scale. Randomize polarity for 10% of respondents to prevent bias",
+            "scripter_notes": "Radio buttons with smiley-face icons",
+            "script": {
+                "question_text": "How satisfied are you with the quality of video lesson content?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q3 includes 'Interactive lessons' or 'Cultural immersion videos'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How effective do you find the speech recognition technology for improving pronunciation?",
+            "answer_options": [
+                "Extremely effective",
+                "Moderately effective",
+                "Slightly effective",
+                "Not effective",
+                "Haven't used this feature"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Include opt-out option for non-users. Consider follow-up study on AI accuracy",
+            "scripter_notes": "Radio buttons with horizontal layout on desktop",
+            "script": {
+                "question_text": "How effective do you find the speech recognition technology for improving pronunciation?",
+                "answer_options": [
+                    "Extremely effective",
+                    "Moderately effective",
+                    "Slightly effective",
+                    "Not effective",
+                    "Haven't used this feature"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Describe your biggest challenge when using this platform:",
+            "answer_options": [],
+            "routing_logic": "All participants",
+            "client_notes": "Open-text field with 500 character limit. Use text analytics for theme identification",
+            "scripter_notes": "Text area input with character counter",
+            "script": {
+                "question_text": "Describe your biggest challenge when using this platform:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to recommend this platform to others?",
+            "answer_options": [
+                "0 - Not at all likely",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 - Extremely likely"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Standard NPS question. Calculate promoter score post-collection",
+            "scripter_notes": "11-point scale presented as numbered buttons",
+            "script": {
+                "question_text": "How likely are you to recommend this platform to others?",
+                "answer_options": [
+                    "0 - Not at all likely",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 - Extremely likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which device do you primarily use for language learning?",
+            "answer_options": [
+                "Smartphone",
+                "Tablet",
+                "Laptop",
+                "Desktop computer",
+                "Smart TV"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Crucial for UX optimization priorities",
+            "scripter_notes": "Single-select with device icons",
+            "script": {
+                "question_text": "Which device do you primarily use for language learning?",
+                "answer_options": [
+                    "Smartphone",
+                    "Tablet",
+                    "Laptop",
+                    "Desktop computer",
+                    "Smart TV"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How satisfied are you with the platform's mobile app performance?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied",
+                "Don't use mobile app"
+            ],
+            "routing_logic": "If Q8 = 'Smartphone' or Q8 = 'Tablet'",
+            "client_notes": "Critical for mobile-first development strategy",
+            "scripter_notes": "Radio buttons with conditional display",
+            "script": {
+                "question_text": "How satisfied are you with the platform's mobile app performance?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied",
+                    "Don't use mobile app"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q8 = 'Smartphone' or Q8 = 'Tablet'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What improvements would enhance your learning experience?",
+            "answer_options": [
+                "More conversational practice",
+                "Personalized learning paths",
+                "Offline access",
+                "Cultural context lessons",
+                "Gamification elements",
+                "Better progress tracking"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Multi-select with 'Other' option in live survey",
+            "scripter_notes": "Checkbox grid with 'Other' text field",
+            "script": {
+                "question_text": "What improvements would enhance your learning experience?",
+                "answer_options": [
+                    "More conversational practice",
+                    "Personalized learning paths",
+                    "Offline access",
+                    "Cultural context lessons",
+                    "Gamification elements",
+                    "Better progress tracking"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All participants"
+            }
+        }
+    ]
+}

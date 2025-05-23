@@ -1,0 +1,249 @@
+{
+    "survey_id": "c8464b6b-275e-4a74-801f-e314e4fd0d20",
+    "survey_name": "Virtual Reality (VR) Training Program Feedback Survey",
+    "survey_brief": "Assess employee experiences with VR-based corporate training programs to evaluate effectiveness, usability, and areas for improvement",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "What is your primary role within the organization?",
+            "answer_options": [],
+            "routing_logic": "Mandatory first question",
+            "client_notes": "Use open text field to capture varied responses while maintaining anonymity",
+            "scripter_notes": "Text input field with 200-character limit",
+            "script": {
+                "question_text": "What is your primary role within the organization?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Mandatory first question"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How frequently have you used the VR training program in the past 3 months?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Few times total",
+                "I have not used the VR training program"
+            ],
+            "routing_logic": "All respondents answer",
+            "client_notes": "Include explicit non-usage option to filter subsequent questions",
+            "scripter_notes": "Radio buttons with vertical layout",
+            "script": {
+                "question_text": "How frequently have you used the VR training program in the past 3 months?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Few times total",
+                    "I have not used the VR training program"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How effective was the VR training program for developing job-related skills?",
+            "answer_options": [
+                "Very effective",
+                "Somewhat effective",
+                "Neutral",
+                "Somewhat ineffective",
+                "Very ineffective"
+            ],
+            "routing_logic": "Show only if Q2 ≠ 'I have not used the VR training program'",
+            "client_notes": "Use standard 5-point Likert scale for consistency",
+            "scripter_notes": "Radio buttons with required validation",
+            "script": {
+                "question_text": "How effective was the VR training program for developing job-related skills?",
+                "answer_options": [
+                    "Very effective",
+                    "Somewhat effective",
+                    "Neutral",
+                    "Somewhat ineffective",
+                    "Very ineffective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show only if Q2 ≠ 'I have not used the VR training program'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which aspects of the VR training did you find most valuable? (Select all that apply)",
+            "answer_options": [
+                "Interactive simulations",
+                "Real-time feedback",
+                "3D visualizations",
+                "Scenario-based learning",
+                "Knowledge retention tracking",
+                "None of the above"
+            ],
+            "routing_logic": "Show only if Q2 ≠ 'I have not used the VR training program'",
+            "client_notes": "Include 'None' option to capture negative feedback",
+            "scripter_notes": "Checkbox inputs with 'Select all that apply' instruction",
+            "script": {
+                "question_text": "Which aspects of the VR training did you find most valuable? (Select all that apply)",
+                "answer_options": [
+                    "Interactive simulations",
+                    "Real-time feedback",
+                    "3D visualizations",
+                    "Scenario-based learning",
+                    "Knowledge retention tracking",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show only if Q2 ≠ 'I have not used the VR training program'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often did you experience technical difficulties during VR training sessions?",
+            "answer_options": [
+                "Never",
+                "Rarely (1-2 times)",
+                "Occasionally (3-5 times)",
+                "Frequently (6+ times)"
+            ],
+            "routing_logic": "Show only if Q2 ≠ 'I have not used the VR training program'",
+            "client_notes": "Quantify frequency ranges for clearer data",
+            "scripter_notes": "Radio buttons with parenthetical explanations",
+            "script": {
+                "question_text": "How often did you experience technical difficulties during VR training sessions?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (1-2 times)",
+                    "Occasionally (3-5 times)",
+                    "Frequently (6+ times)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show only if Q2 ≠ 'I have not used the VR training program'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What types of technical issues did you encounter? (Select all that apply)",
+            "answer_options": [
+                "Hardware malfunctions",
+                "Software glitches",
+                "Tracking inaccuracies",
+                "Connectivity problems",
+                "User interface confusion",
+                "Other"
+            ],
+            "routing_logic": "Show only if Q5 ≠ 'Never'",
+            "client_notes": "Include 'Other' field with text input for unlisted issues",
+            "scripter_notes": "Checkboxes with 'Other' option triggering text input",
+            "script": {
+                "question_text": "What types of technical issues did you encounter? (Select all that apply)",
+                "answer_options": [
+                    "Hardware malfunctions",
+                    "Software glitches",
+                    "Tracking inaccuracies",
+                    "Connectivity problems",
+                    "User interface confusion",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show only if Q5 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How comfortable did you feel using the VR headset for extended periods?",
+            "answer_options": [
+                "Very comfortable",
+                "Somewhat comfortable",
+                "Neutral",
+                "Somewhat uncomfortable",
+                "Very uncomfortable"
+            ],
+            "routing_logic": "Show only if Q2 ≠ 'I have not used the VR training program'",
+            "client_notes": "Measure physical comfort for ergonomic assessments",
+            "scripter_notes": "Radio buttons with emoji scale optional",
+            "script": {
+                "question_text": "How comfortable did you feel using the VR headset for extended periods?",
+                "answer_options": [
+                    "Very comfortable",
+                    "Somewhat comfortable",
+                    "Neutral",
+                    "Somewhat uncomfortable",
+                    "Very uncomfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show only if Q2 ≠ 'I have not used the VR training program'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How does VR training compare to traditional classroom training for your learning style?",
+            "answer_options": [
+                "Significantly better",
+                "Somewhat better",
+                "About the same",
+                "Somewhat worse",
+                "Significantly worse"
+            ],
+            "routing_logic": "Show only if Q2 ≠ 'I have not used the VR training program'",
+            "client_notes": "Direct comparison for ROI analysis",
+            "scripter_notes": "Radio buttons with balanced scale",
+            "script": {
+                "question_text": "How does VR training compare to traditional classroom training for your learning style?",
+                "answer_options": [
+                    "Significantly better",
+                    "Somewhat better",
+                    "About the same",
+                    "Somewhat worse",
+                    "Significantly worse"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show only if Q2 ≠ 'I have not used the VR training program'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What improvements would make the VR training program more effective?",
+            "answer_options": [],
+            "routing_logic": "Show only if Q2 ≠ 'I have not used the VR training program'",
+            "client_notes": "Capture qualitative feedback for program development",
+            "scripter_notes": "Text area with 500-character limit",
+            "script": {
+                "question_text": "What improvements would make the VR training program more effective?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show only if Q2 ≠ 'I have not used the VR training program'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Which department do you work in?",
+            "answer_options": [
+                "Operations",
+                "Sales/Marketing",
+                "Engineering/R&D",
+                "Human Resources",
+                "Customer Support",
+                "Executive/Leadership",
+                "Other"
+            ],
+            "routing_logic": "All respondents answer",
+            "client_notes": "Department filter for cross-analysis",
+            "scripter_notes": "Dropdown menu with 'Other' option",
+            "script": {
+                "question_text": "Which department do you work in?",
+                "answer_options": [
+                    "Operations",
+                    "Sales/Marketing",
+                    "Engineering/R&D",
+                    "Human Resources",
+                    "Customer Support",
+                    "Executive/Leadership",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer"
+            }
+        }
+    ]
+}

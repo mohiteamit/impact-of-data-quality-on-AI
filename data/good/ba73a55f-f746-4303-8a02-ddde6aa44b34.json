@@ -1,0 +1,447 @@
+{
+    "survey_id": "ba73a55f-f746-4303-8a02-ddde6aa44b34",
+    "survey_name": "Renewable Energy Home Installation Interest Survey",
+    "survey_brief": "This survey aims to understand homeowner interest and preferences regarding renewable energy installations, such as solar panels and wind turbines, to better tailor services and incentives.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with renewable energy options for homes?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for this single-choice question to maintain clarity.",
+            "scripter_notes": "Single-choice question. Ensure the options are displayed vertically.",
+            "script": {
+                "question_text": "How familiar are you with renewable energy options for homes?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which renewable energy solutions are you most interested in? (Select all that apply)",
+            "answer_options": [
+                "Solar panels",
+                "Wind turbines",
+                "Geothermal heating",
+                "Solar water heating",
+                "Not interested"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for this multi-choice question to allow multiple selections.",
+            "scripter_notes": "Multi-choice question. Ensure respondents can select more than one option.",
+            "script": {
+                "question_text": "Which renewable energy solutions are you most interested in? (Select all that apply)",
+                "answer_options": [
+                    "Solar panels",
+                    "Wind turbines",
+                    "Geothermal heating",
+                    "Solar water heating",
+                    "Not interested"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason for your interest in renewable energy solutions?",
+            "answer_options": [
+                "Cost savings",
+                "Environmental concerns",
+                "Energy independence",
+                "Government incentives",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Single-choice question with an open-text option for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason for your interest in renewable energy solutions?",
+                "answer_options": [
+                    "Cost savings",
+                    "Environmental concerns",
+                    "Energy independence",
+                    "Government incentives",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please specify your primary reason if you selected 'Other'.",
+            "answer_options": [],
+            "routing_logic": "Only if Q3 is 'Other (please specify)'",
+            "client_notes": "Open-ended question to capture specific reasons not listed in Q3.",
+            "scripter_notes": "Open-text field. Display only if 'Other' is selected in Q3.",
+            "script": {
+                "question_text": "Please specify your primary reason if you selected 'Other'.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q3 is 'Other (please specify)'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to install a renewable energy system in your home in the next 5 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for this single-choice question to measure likelihood.",
+            "scripter_notes": "Single-choice question. Display options horizontally if space allows.",
+            "script": {
+                "question_text": "How likely are you to install a renewable energy system in your home in the next 5 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What factors would most influence your decision to install a renewable energy system? (Select up to 3)",
+            "answer_options": [
+                "Upfront cost",
+                "Long-term savings",
+                "Environmental impact",
+                "Government rebates or incentives",
+                "Ease of maintenance",
+                "Increase in home value",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Limit selections to 3 to prioritize factors. Include an 'Other' option.",
+            "scripter_notes": "Multi-choice question with a selection limit. Ensure validation for max 3 selections.",
+            "script": {
+                "question_text": "What factors would most influence your decision to install a renewable energy system? (Select up to 3)",
+                "answer_options": [
+                    "Upfront cost",
+                    "Long-term savings",
+                    "Environmental impact",
+                    "Government rebates or incentives",
+                    "Ease of maintenance",
+                    "Increase in home value",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Please specify any additional factors that would influence your decision.",
+            "answer_options": [],
+            "routing_logic": "Only if Q6 includes 'Other (please specify)'",
+            "client_notes": "Open-ended question to capture specific factors not listed in Q6.",
+            "scripter_notes": "Open-text field. Display only if 'Other' is selected in Q6.",
+            "script": {
+                "question_text": "Please specify any additional factors that would influence your decision.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q6 includes 'Other (please specify)'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What is your biggest concern about installing a renewable energy system?",
+            "answer_options": [
+                "High initial cost",
+                "Uncertainty about savings",
+                "Maintenance requirements",
+                "Aesthetics of the system",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option to capture unique concerns.",
+            "scripter_notes": "Single-choice question with an open-text option for 'Other'.",
+            "script": {
+                "question_text": "What is your biggest concern about installing a renewable energy system?",
+                "answer_options": [
+                    "High initial cost",
+                    "Uncertainty about savings",
+                    "Maintenance requirements",
+                    "Aesthetics of the system",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Please specify your biggest concern if you selected 'Other'.",
+            "answer_options": [],
+            "routing_logic": "Only if Q8 is 'Other (please specify)'",
+            "client_notes": "Open-ended question to capture specific concerns not listed in Q8.",
+            "scripter_notes": "Open-text field. Display only if 'Other' is selected in Q8.",
+            "script": {
+                "question_text": "Please specify your biggest concern if you selected 'Other'.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q8 is 'Other (please specify)'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Have you researched renewable energy options for your home before?",
+            "answer_options": [
+                "Yes, extensively",
+                "Yes, somewhat",
+                "No, not at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons for this single-choice question.",
+            "scripter_notes": "Single-choice question. Display options vertically.",
+            "script": {
+                "question_text": "Have you researched renewable energy options for your home before?",
+                "answer_options": [
+                    "Yes, extensively",
+                    "Yes, somewhat",
+                    "No, not at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "Which of the following best describes your current energy provider?",
+            "answer_options": [
+                "Traditional utility company",
+                "Renewable energy provider",
+                "Community solar program",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to gauge current energy provider type.",
+            "scripter_notes": "Single-choice question. Display options vertically.",
+            "script": {
+                "question_text": "Which of the following best describes your current energy provider?",
+                "answer_options": [
+                    "Traditional utility company",
+                    "Renewable energy provider",
+                    "Community solar program",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Would you be interested in financing options for renewable energy installations?",
+            "answer_options": [
+                "Yes, very interested",
+                "Somewhat interested",
+                "Not interested",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to assess interest in financing options.",
+            "scripter_notes": "Single-choice question. Display options vertically.",
+            "script": {
+                "question_text": "Would you be interested in financing options for renewable energy installations?",
+                "answer_options": [
+                    "Yes, very interested",
+                    "Somewhat interested",
+                    "Not interested",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q13",
+            "question_text": "What type of financing option would you prefer? (Select all that apply)",
+            "answer_options": [
+                "Low-interest loan",
+                "Lease-to-own",
+                "Power Purchase Agreement (PPA)",
+                "Government grant or rebate",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q12 is 'Yes, very interested' or 'Somewhat interested'",
+            "client_notes": "Multi-choice question to understand preferred financing methods.",
+            "scripter_notes": "Multi-choice question. Display only if Q12 indicates interest.",
+            "script": {
+                "question_text": "What type of financing option would you prefer? (Select all that apply)",
+                "answer_options": [
+                    "Low-interest loan",
+                    "Lease-to-own",
+                    "Power Purchase Agreement (PPA)",
+                    "Government grant or rebate",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q12 is 'Yes, very interested' or 'Somewhat interested'"
+            }
+        },
+        {
+            "qid": "Q14",
+            "question_text": "Please specify any other financing options you would prefer.",
+            "answer_options": [],
+            "routing_logic": "Only if Q13 includes 'Other (please specify)'",
+            "client_notes": "Open-ended question to capture specific financing preferences.",
+            "scripter_notes": "Open-text field. Display only if 'Other' is selected in Q13.",
+            "script": {
+                "question_text": "Please specify any other financing options you would prefer.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q13 includes 'Other (please specify)'"
+            }
+        },
+        {
+            "qid": "Q15",
+            "question_text": "How satisfied are you with your current energy provider?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Likert scale to measure satisfaction with current provider.",
+            "scripter_notes": "Single-choice question. Display options horizontally if space allows.",
+            "script": {
+                "question_text": "How satisfied are you with your current energy provider?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q16",
+            "question_text": "What is your annual household income range?",
+            "answer_options": [
+                "Under $50,000",
+                "$50,000 - $99,999",
+                "$100,000 - $149,999",
+                "$150,000 - $199,999",
+                "$200,000 or more",
+                "Prefer not to say"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Sensitive question. Include a 'Prefer not to say' option.",
+            "scripter_notes": "Single-choice question. Display options vertically.",
+            "script": {
+                "question_text": "What is your annual household income range?",
+                "answer_options": [
+                    "Under $50,000",
+                    "$50,000 - $99,999",
+                    "$100,000 - $149,999",
+                    "$150,000 - $199,999",
+                    "$200,000 or more",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q17",
+            "question_text": "What type of home do you live in?",
+            "answer_options": [
+                "Single-family home",
+                "Townhouse",
+                "Condominium",
+                "Apartment",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to understand housing type.",
+            "scripter_notes": "Single-choice question with an open-text option for 'Other'.",
+            "script": {
+                "question_text": "What type of home do you live in?",
+                "answer_options": [
+                    "Single-family home",
+                    "Townhouse",
+                    "Condominium",
+                    "Apartment",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q18",
+            "question_text": "Please specify your home type if you selected 'Other'.",
+            "answer_options": [],
+            "routing_logic": "Only if Q17 is 'Other (please specify)'",
+            "client_notes": "Open-ended question to capture specific home types not listed.",
+            "scripter_notes": "Open-text field. Display only if 'Other' is selected in Q17.",
+            "script": {
+                "question_text": "Please specify your home type if you selected 'Other'.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q17 is 'Other (please specify)'"
+            }
+        },
+        {
+            "qid": "Q19",
+            "question_text": "Do you own or rent your home?",
+            "answer_options": [
+                "Own",
+                "Rent",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to determine homeownership status.",
+            "scripter_notes": "Single-choice question with an open-text option for 'Other'.",
+            "script": {
+                "question_text": "Do you own or rent your home?",
+                "answer_options": [
+                    "Own",
+                    "Rent",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q20",
+            "question_text": "Please specify your living arrangement if you selected 'Other'.",
+            "answer_options": [],
+            "routing_logic": "Only if Q19 is 'Other (please specify)'",
+            "client_notes": "Open-ended question to capture specific living arrangements.",
+            "scripter_notes": "Open-text field. Display only if 'Other' is selected in Q19.",
+            "script": {
+                "question_text": "Please specify your living arrangement if you selected 'Other'.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q19 is 'Other (please specify)'"
+            }
+        }
+    ]
+}

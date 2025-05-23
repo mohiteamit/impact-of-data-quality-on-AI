@@ -1,0 +1,251 @@
+{
+    "survey_id": "3d7bb22c-4bb5-42a4-8279-b358d3986885",
+    "survey_name": "Home Gardening Trends and Preferences Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and trends in home gardening, including plant types, purchasing habits, and sustainability practices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you engage in home gardening activities?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Seasonally",
+                "Rarely or never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Recommended scale for frequency questions to gauge engagement levels.",
+            "scripter_notes": "Use radio buttons for single-choice response.",
+            "script": {
+                "question_text": "How often do you engage in home gardening activities?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Seasonally",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of plants do you typically grow in your home garden? (Select all that apply)",
+            "answer_options": [
+                "Flowers",
+                "Vegetables",
+                "Herbs",
+                "Fruits",
+                "Succulents or cacti",
+                "Indoor houseplants",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Rarely or never'.",
+            "client_notes": "Multi-choice question to capture diverse gardening preferences.",
+            "scripter_notes": "Use checkboxes for multi-choice response. Include an 'Other' option with a text field for specification.",
+            "script": {
+                "question_text": "What types of plants do you typically grow in your home garden? (Select all that apply)",
+                "answer_options": [
+                    "Flowers",
+                    "Vegetables",
+                    "Herbs",
+                    "Fruits",
+                    "Succulents or cacti",
+                    "Indoor houseplants",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Rarely or never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Where do you primarily purchase your gardening supplies?",
+            "answer_options": [
+                "Local garden centers",
+                "Big-box retailers (e.g., Home Depot, Lowe's)",
+                "Online stores (e.g., Amazon, specialized gardening sites)",
+                "Farmers' markets",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Rarely or never'.",
+            "client_notes": "Single-choice question to identify purchasing channels.",
+            "scripter_notes": "Use radio buttons for single-choice response. Include an 'Other' option with a text field for specification.",
+            "script": {
+                "question_text": "Where do you primarily purchase your gardening supplies?",
+                "answer_options": [
+                    "Local garden centers",
+                    "Big-box retailers (e.g., Home Depot, Lowe's)",
+                    "Online stores (e.g., Amazon, specialized gardening sites)",
+                    "Farmers' markets",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Rarely or never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How important is sustainability in your gardening practices?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Rarely or never'.",
+            "client_notes": "Likert scale to measure importance of sustainability.",
+            "scripter_notes": "Use radio buttons for single-choice response.",
+            "script": {
+                "question_text": "How important is sustainability in your gardening practices?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Rarely or never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which sustainable gardening practices do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Composting",
+                "Rainwater harvesting",
+                "Using organic fertilizers",
+                "Mulching",
+                "Planting native species",
+                "None of the above"
+            ],
+            "routing_logic": "This question appears if Q4 is 'Extremely important', 'Very important', or 'Moderately important'.",
+            "client_notes": "Multi-choice question to identify specific sustainable practices.",
+            "scripter_notes": "Use checkboxes for multi-choice response.",
+            "script": {
+                "question_text": "Which sustainable gardening practices do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Composting",
+                    "Rainwater harvesting",
+                    "Using organic fertilizers",
+                    "Mulching",
+                    "Planting native species",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q4 is 'Extremely important', 'Very important', or 'Moderately important'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What challenges do you face in maintaining your home garden?",
+            "answer_options": [],
+            "routing_logic": "This question appears if Q1 is not 'Rarely or never'.",
+            "client_notes": "Open-ended question to capture qualitative insights.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What challenges do you face in maintaining your home garden?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if Q1 is not 'Rarely or never'."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to participate in a community gardening program?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Likert scale to measure likelihood of participation.",
+            "scripter_notes": "Use radio buttons for single-choice response.",
+            "script": {
+                "question_text": "How likely are you to participate in a community gardening program?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What factors would encourage you to participate in a community gardening program? (Select all that apply)",
+            "answer_options": [
+                "Access to gardening space",
+                "Educational workshops",
+                "Community building activities",
+                "Free or low-cost supplies",
+                "Environmental benefits",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q7 is 'Very likely' or 'Somewhat likely'.",
+            "client_notes": "Multi-choice question to identify motivating factors.",
+            "scripter_notes": "Use checkboxes for multi-choice response. Include an 'Other' option with a text field for specification.",
+            "script": {
+                "question_text": "What factors would encourage you to participate in a community gardening program? (Select all that apply)",
+                "answer_options": [
+                    "Access to gardening space",
+                    "Educational workshops",
+                    "Community building activities",
+                    "Free or low-cost supplies",
+                    "Environmental benefits",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q7 is 'Very likely' or 'Somewhat likely'."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How much do you typically spend on gardening supplies annually?",
+            "answer_options": [
+                "Less than $50",
+                "$50 - $100",
+                "$101 - $200",
+                "$201 - $500",
+                "More than $500"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Rarely or never'.",
+            "client_notes": "Single-choice question to gauge spending habits.",
+            "scripter_notes": "Use radio buttons for single-choice response.",
+            "script": {
+                "question_text": "How much do you typically spend on gardening supplies annually?",
+                "answer_options": [
+                    "Less than $50",
+                    "$50 - $100",
+                    "$101 - $200",
+                    "$201 - $500",
+                    "More than $500"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Rarely or never'."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional resources or information would help you improve your home gardening experience?",
+            "answer_options": [],
+            "routing_logic": "This question appears if Q1 is not 'Rarely or never'.",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What additional resources or information would help you improve your home gardening experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if Q1 is not 'Rarely or never'."
+            }
+        }
+    ]
+}

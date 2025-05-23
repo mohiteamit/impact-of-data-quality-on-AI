@@ -1,0 +1,345 @@
+{
+    "survey_id": "1ce2e57a-4f19-484b-b6a8-99ecbf120f20",
+    "survey_name": "Consumer Preferences for Plant-Based Food Products Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, purchasing behaviors, and attitudes toward plant-based food products to help businesses tailor their offerings effectively.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you consume plant-based food products?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. This question sets the baseline for dietary habits.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Ensure mobile-friendly layout.",
+            "script": {
+                "question_text": "How often do you consume plant-based food products?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for consuming plant-based food products? (Select all that apply)",
+            "answer_options": [
+                "Health benefits",
+                "Environmental concerns",
+                "Animal welfare",
+                "Taste preference",
+                "Curiosity or experimentation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered anything other than 'Rarely or never' in Q1",
+            "client_notes": "Multi-choice checkboxes are appropriate here. Include an 'Other' option with an open-text field for additional insights.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). If 'Other' is selected, trigger a follow-up open-text field.",
+            "script": {
+                "question_text": "What are your primary reasons for consuming plant-based food products? (Select all that apply)",
+                "answer_options": [
+                    "Health benefits",
+                    "Environmental concerns",
+                    "Animal welfare",
+                    "Taste preference",
+                    "Curiosity or experimentation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered anything other than 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please specify your 'Other' reason for consuming plant-based food products.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Other (please specify)' in Q2",
+            "client_notes": "Open-ended question to capture unique responses. Limit response to 100 characters for brevity.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT). Maximum length: 100 characters.",
+            "script": {
+                "question_text": "Please specify your 'Other' reason for consuming plant-based food products.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Other (please specify)' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which types of plant-based food products do you typically purchase? (Select all that apply)",
+            "answer_options": [
+                "Plant-based meats (e.g., burgers, sausages)",
+                "Dairy alternatives (e.g., almond milk, oat milk)",
+                "Egg substitutes",
+                "Plant-based snacks (e.g., protein bars, crisps)",
+                "Frozen plant-based meals",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered anything other than 'Rarely or never' in Q1",
+            "client_notes": "Multi-choice checkboxes with an 'Other' option. This helps identify popular product categories.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). If 'Other' is selected, trigger a follow-up open-text field.",
+            "script": {
+                "question_text": "Which types of plant-based food products do you typically purchase? (Select all that apply)",
+                "answer_options": [
+                    "Plant-based meats (e.g., burgers, sausages)",
+                    "Dairy alternatives (e.g., almond milk, oat milk)",
+                    "Egg substitutes",
+                    "Plant-based snacks (e.g., protein bars, crisps)",
+                    "Frozen plant-based meals",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered anything other than 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please specify the 'Other' type of plant-based food product you typically purchase.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Other (please specify)' in Q4",
+            "client_notes": "Open-ended question to capture unique responses. Limit response to 100 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT). Maximum length: 100 characters.",
+            "script": {
+                "question_text": "Please specify the 'Other' type of plant-based food product you typically purchase.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Other (please specify)' in Q4"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with the taste of plant-based food products you've tried?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered anything other than 'Rarely or never' in Q1",
+            "client_notes": "Single-choice Likert scale to measure satisfaction. This helps identify potential areas for product improvement.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Ensure the scale is clearly labeled.",
+            "script": {
+                "question_text": "How satisfied are you with the taste of plant-based food products you've tried?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered anything other than 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What factors most influence your decision to purchase a plant-based food product? (Select up to 3)",
+            "answer_options": [
+                "Price",
+                "Brand reputation",
+                "Nutritional content",
+                "Ingredients",
+                "Packaging",
+                "Availability in stores",
+                "Recommendations from friends/family",
+                "Online reviews",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered anything other than 'Rarely or never' in Q1",
+            "client_notes": "Multi-choice question with a limit of 3 selections. This helps prioritize marketing and product development efforts.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with a maximum selection limit of 3. If 'Other' is selected, trigger a follow-up open-text field.",
+            "script": {
+                "question_text": "What factors most influence your decision to purchase a plant-based food product? (Select up to 3)",
+                "answer_options": [
+                    "Price",
+                    "Brand reputation",
+                    "Nutritional content",
+                    "Ingredients",
+                    "Packaging",
+                    "Availability in stores",
+                    "Recommendations from friends/family",
+                    "Online reviews",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered anything other than 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Please specify the 'Other' factor that influences your decision to purchase a plant-based food product.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Other (please specify)' in Q7",
+            "client_notes": "Open-ended question to capture unique responses. Limit response to 100 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT). Maximum length: 100 characters.",
+            "script": {
+                "question_text": "Please specify the 'Other' factor that influences your decision to purchase a plant-based food product.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Other (please specify)' in Q7"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to recommend plant-based food products to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Respondents who answered anything other than 'Rarely or never' in Q1",
+            "client_notes": "Single-choice Likert scale to measure Net Promoter Score (NPS) potential. This helps gauge overall satisfaction and advocacy.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Ensure the scale is clearly labeled.",
+            "script": {
+                "question_text": "How likely are you to recommend plant-based food products to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered anything other than 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What improvements would you like to see in plant-based food products?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered anything other than 'Rarely or never' in Q1",
+            "client_notes": "Open-ended question to gather qualitative feedback. Limit response to 200 characters to keep answers concise.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT). Maximum length: 200 characters.",
+            "script": {
+                "question_text": "What improvements would you like to see in plant-based food products?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered anything other than 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How do you typically discover new plant-based food products? (Select all that apply)",
+            "answer_options": [
+                "Supermarket displays",
+                "Social media",
+                "Online advertisements",
+                "Word of mouth",
+                "News articles or blogs",
+                "In-store promotions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice checkboxes to identify effective marketing channels. Include an 'Other' option for additional insights.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). If 'Other' is selected, trigger a follow-up open-text field.",
+            "script": {
+                "question_text": "How do you typically discover new plant-based food products? (Select all that apply)",
+                "answer_options": [
+                    "Supermarket displays",
+                    "Social media",
+                    "Online advertisements",
+                    "Word of mouth",
+                    "News articles or blogs",
+                    "In-store promotions",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Please specify the 'Other' way you typically discover new plant-based food products.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Other (please specify)' in Q11",
+            "client_notes": "Open-ended question to capture unique responses. Limit response to 100 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT). Maximum length: 100 characters.",
+            "script": {
+                "question_text": "Please specify the 'Other' way you typically discover new plant-based food products.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Other (please specify)' in Q11"
+            }
+        },
+        {
+            "qid": "Q13",
+            "question_text": "What is your age range?",
+            "answer_options": [
+                "Under 18",
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55-64",
+                "65 or older"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to segment responses by age. Ensure options are inclusive and clear.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Ensure mobile-friendly layout.",
+            "script": {
+                "question_text": "What is your age range?",
+                "answer_options": [
+                    "Under 18",
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55-64",
+                    "65 or older"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q14",
+            "question_text": "What is your gender?",
+            "answer_options": [
+                "Male",
+                "Female",
+                "Non-binary",
+                "Prefer not to say",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question with inclusive options. Include an 'Other' option for self-identification.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). If 'Other' is selected, trigger a follow-up open-text field.",
+            "script": {
+                "question_text": "What is your gender?",
+                "answer_options": [
+                    "Male",
+                    "Female",
+                    "Non-binary",
+                    "Prefer not to say",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q15",
+            "question_text": "Please specify your gender if you selected 'Other'.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Other (please specify)' in Q14",
+            "client_notes": "Open-ended question to allow self-identification. Limit response to 50 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT). Maximum length: 50 characters.",
+            "script": {
+                "question_text": "Please specify your gender if you selected 'Other'.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Other (please specify)' in Q14"
+            }
+        }
+    ]
+}

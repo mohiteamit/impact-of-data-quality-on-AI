@@ -1,0 +1,225 @@
+{
+    "survey_id": "29d84bd5-b801-4643-9768-bcc73609aeff",
+    "survey_name": "Telemedicine Platform Usability Survey",
+    "survey_brief": "This survey aims to evaluate user experience and satisfaction with telemedicine platforms to identify areas for improvement and ensure better healthcare delivery.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use telemedicine platforms?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a radio button for single selection. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use telemedicine platforms?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which telemedicine platforms have you used in the past 6 months?",
+            "answer_options": [
+                "Teladoc",
+                "Amwell",
+                "Doctor on Demand",
+                "MDLive",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 != 'Never'",
+            "client_notes": "Allow multiple selections with checkboxes. Include an 'Other' option for flexibility.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which telemedicine platforms have you used in the past 6 months?",
+                "answer_options": [
+                    "Teladoc",
+                    "Amwell",
+                    "Doctor on Demand",
+                    "MDLive",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary reason for using telemedicine platforms?",
+            "answer_options": [
+                "Convenience",
+                "Cost savings",
+                "Access to specialists",
+                "Urgent care needs",
+                "Follow-up consultations"
+            ],
+            "routing_logic": "Appears if Q1 != 'Never'",
+            "client_notes": "Single-choice question to identify the main driver for usage.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "What is your primary reason for using telemedicine platforms?",
+                "answer_options": [
+                    "Convenience",
+                    "Cost savings",
+                    "Access to specialists",
+                    "Urgent care needs",
+                    "Follow-up consultations"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the overall experience of using telemedicine platforms?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 != 'Never'",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure clear labeling at both ends.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the overall experience of using telemedicine platforms?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which features do you find most valuable in a telemedicine platform?",
+            "answer_options": [
+                "Video consultations",
+                "Prescription services",
+                "Integration with health records",
+                "Symptom checker",
+                "24/7 availability"
+            ],
+            "routing_logic": "Appears if Q1 != 'Never'",
+            "client_notes": "Allow multiple selections to understand preferred features.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which features do you find most valuable in a telemedicine platform?",
+                "answer_options": [
+                    "Video consultations",
+                    "Prescription services",
+                    "Integration with health records",
+                    "Symptom checker",
+                    "24/7 availability"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you experienced any technical difficulties while using telemedicine platforms?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears if Q1 != 'Never'",
+            "client_notes": "Simple yes/no question to gauge technical issues.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Have you experienced any technical difficulties while using telemedicine platforms?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If yes, please describe the technical difficulties you encountered.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q6 == 'Yes'",
+            "client_notes": "Open-ended question to capture specific issues. Limit response to 300 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with character limit)",
+            "script": {
+                "question_text": "If yes, please describe the technical difficulties you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q6 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend telemedicine platforms to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears if Q1 != 'Never'",
+            "client_notes": "Use a standard NPS-like scale to measure recommendation likelihood.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to recommend telemedicine platforms to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What improvements would make you use telemedicine platforms more frequently?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 != 'Never'",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure mobile-friendly input.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What improvements would make you use telemedicine platforms more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you have any additional comments or feedback about your telemedicine experience?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Optional open-ended question to capture any other insights.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area, optional)",
+            "script": {
+                "question_text": "Do you have any additional comments or feedback about your telemedicine experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,263 @@
+{
+    "survey_id": "f96f9f1e-a371-4768-a8bf-07ccc0c1156a",
+    "survey_name": "AI-Powered Customer Support Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with AI-powered support tools, identifying strengths and areas for improvement in automated customer service interactions.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you interact with AI-powered customer support tools?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "This is my first time"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a radio button for single-choice selection. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you interact with AI-powered customer support tools?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI support features have you used? (Select all that apply)",
+            "answer_options": [
+                "Chatbots",
+                "Voice assistants",
+                "Automated email responses",
+                "Self-service knowledge bases",
+                "None of the above"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option if needed.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following AI support features have you used? (Select all that apply)",
+                "answer_options": [
+                    "Chatbots",
+                    "Voice assistants",
+                    "Automated email responses",
+                    "Self-service knowledge bases",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of responses provided by AI support tools?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a 5-point Likert scale for consistency. Randomize scale direction to avoid bias.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of responses provided by AI support tools?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you choose AI support over human agents?",
+            "answer_options": [
+                "24/7 availability",
+                "Faster response times",
+                "Ease of use",
+                "Preference for automated solutions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'This is my first time'",
+            "client_notes": "Include an open-text 'Other' option for qualitative insights.",
+            "scripter_notes": "Field type: radio button with optional text input (SINGLE_CHOICE with open-ended follow-up)",
+            "script": {
+                "question_text": "What is the primary reason you choose AI support over human agents?",
+                "answer_options": [
+                    "24/7 availability",
+                    "Faster response times",
+                    "Ease of use",
+                    "Preference for automated solutions",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'This is my first time'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Describe a situation where AI support failed to meet your needs.",
+            "answer_options": [],
+            "routing_logic": "Shown if Q3 answer is 'Dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open-text field to capture detailed pain points. Limit response to 500 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "Describe a situation where AI support failed to meet your needs.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q3 answer is 'Dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which industries do you believe benefit most from AI customer support? (Select up to 3)",
+            "answer_options": [
+                "Banking/Finance",
+                "E-commerce",
+                "Healthcare",
+                "Telecommunications",
+                "Travel/Hospitality",
+                "Utilities",
+                "Education",
+                "Government services"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use checkboxes with a selection limit. Consider adding 'Other' if needed.",
+            "scripter_notes": "Field type: checkbox with max selections (MULTI_CHOICE with validation)",
+            "script": {
+                "question_text": "Which industries do you believe benefit most from AI customer support? (Select up to 3)",
+                "answer_options": [
+                    "Banking/Finance",
+                    "E-commerce",
+                    "Healthcare",
+                    "Telecommunications",
+                    "Travel/Hospitality",
+                    "Utilities",
+                    "Education",
+                    "Government services"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to recommend AI-powered customer support to others?",
+            "answer_options": [
+                "0 - Not at all likely",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 - Extremely likely"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use an 11-point NPS scale. Display as a slider on mobile devices.",
+            "scripter_notes": "Field type: radio button or slider (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to recommend AI-powered customer support to others?",
+                "answer_options": [
+                    "0 - Not at all likely",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 - Extremely likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would make AI support more valuable to you?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Open-ended question to gather innovation ideas. Suggest keeping responses brief.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would make AI support more valuable to you?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Do you trust AI support tools to handle sensitive personal information?",
+            "answer_options": [
+                "Yes, completely",
+                "Yes, with some reservations",
+                "No, unless supervised by humans",
+                "No, not at all"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Single-choice question to gauge trust levels. Important for privacy-sensitive sectors.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Do you trust AI support tools to handle sensitive personal information?",
+                "answer_options": [
+                    "Yes, completely",
+                    "Yes, with some reservations",
+                    "No, unless supervised by humans",
+                    "No, not at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What type of issues do you typically resolve using AI support?",
+            "answer_options": [
+                "Account inquiries",
+                "Billing/payments",
+                "Technical support",
+                "Product information",
+                "Order tracking",
+                "Returns/refunds",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'This is my first time'",
+            "client_notes": "Multi-choice with optional 'Other' for completeness.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What type of issues do you typically resolve using AI support?",
+                "answer_options": [
+                    "Account inquiries",
+                    "Billing/payments",
+                    "Technical support",
+                    "Product information",
+                    "Order tracking",
+                    "Returns/refunds",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'This is my first time'"
+            }
+        }
+    ]
+}

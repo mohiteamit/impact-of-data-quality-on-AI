@@ -1,0 +1,243 @@
+{
+    "survey_id": "0afe2566-7736-4044-9765-acf6003ac2fd",
+    "survey_name": "Green Energy Home Installation Interest Survey",
+    "survey_brief": "This survey aims to gauge homeowner interest in green energy solutions for residential properties, including solar panels, wind turbines, and energy-efficient appliances.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with green energy solutions for homes?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button scale to measure familiarity. Ensure options cover the full range of possible familiarity levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How familiar are you with green energy solutions for homes?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following green energy solutions are you interested in? (Select all that apply)",
+            "answer_options": [
+                "Solar panels",
+                "Wind turbines",
+                "Energy-efficient appliances",
+                "Smart thermostats",
+                "Home battery storage systems",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multiple selections. Ensure 'None of the above' is included as an option.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following green energy solutions are you interested in? (Select all that apply)",
+                "answer_options": [
+                    "Solar panels",
+                    "Wind turbines",
+                    "Energy-efficient appliances",
+                    "Smart thermostats",
+                    "Home battery storage systems",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason for your interest in green energy solutions?",
+            "answer_options": [
+                "Cost savings on energy bills",
+                "Environmental concerns",
+                "Government incentives or rebates",
+                "Increased home value",
+                "Other"
+            ],
+            "routing_logic": "All respondents except those who selected 'None of the above' in Q2",
+            "client_notes": "Use radio buttons. Include 'Other' as an option for unlisted reasons.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What is the primary reason for your interest in green energy solutions?",
+                "answer_options": [
+                    "Cost savings on energy bills",
+                    "Environmental concerns",
+                    "Government incentives or rebates",
+                    "Increased home value",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please specify your 'Other' reason for interest in green energy solutions.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Other' in Q3",
+            "client_notes": "Open-text field for detailed responses. Ensure mobile-friendly input.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "Please specify your 'Other' reason for interest in green energy solutions.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Other' in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to install a green energy solution in your home within the next 3 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents except those who selected 'None of the above' in Q2",
+            "client_notes": "Use a 5-point Likert scale with radio buttons to measure likelihood.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to install a green energy solution in your home within the next 3 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What is the biggest barrier preventing you from installing green energy solutions in your home?",
+            "answer_options": [
+                "High upfront costs",
+                "Lack of information",
+                "Uncertainty about savings",
+                "Home unsuitable for installation",
+                "Other"
+            ],
+            "routing_logic": "Respondents who selected 'Somewhat unlikely' or 'Very unlikely' in Q5",
+            "client_notes": "Use radio buttons. Include 'Other' as an option for unlisted barriers.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What is the biggest barrier preventing you from installing green energy solutions in your home?",
+                "answer_options": [
+                    "High upfront costs",
+                    "Lack of information",
+                    "Uncertainty about savings",
+                    "Home unsuitable for installation",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Somewhat unlikely' or 'Very unlikely' in Q5"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What type of home do you currently live in?",
+            "answer_options": [
+                "Single-family home",
+                "Townhouse",
+                "Apartment/Condo",
+                "Other"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons. Include 'Other' for unlisted housing types.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What type of home do you currently live in?",
+                "answer_options": [
+                    "Single-family home",
+                    "Townhouse",
+                    "Apartment/Condo",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Please specify your 'Other' home type.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Other' in Q7",
+            "client_notes": "Open-text field for detailed responses. Ensure mobile-friendly input.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "Please specify your 'Other' home type.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Other' in Q7"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is your approximate household income range?",
+            "answer_options": [
+                "Under $50,000",
+                "$50,000 - $99,999",
+                "$100,000 - $149,999",
+                "$150,000 - $199,999",
+                "$200,000 or more",
+                "Prefer not to say"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons. Include a 'Prefer not to say' option for sensitive data.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What is your approximate household income range?",
+                "answer_options": [
+                    "Under $50,000",
+                    "$50,000 - $99,999",
+                    "$100,000 - $149,999",
+                    "$150,000 - $199,999",
+                    "$200,000 or more",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How important are government incentives (e.g., tax credits, rebates) in your decision to adopt green energy solutions?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "All respondents except those who selected 'None of the above' in Q2",
+            "client_notes": "Use a 5-point Likert scale with radio buttons to measure importance.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How important are government incentives (e.g., tax credits, rebates) in your decision to adopt green energy solutions?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'None of the above' in Q2"
+            }
+        }
+    ]
+}

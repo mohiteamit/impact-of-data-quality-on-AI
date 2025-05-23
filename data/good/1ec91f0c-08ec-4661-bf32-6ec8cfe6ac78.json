@@ -1,0 +1,291 @@
+{
+    "survey_id": "1ec91f0c-08ec-4661-bf32-6ec8cfe6ac78",
+    "survey_name": "Professional Development Workshop Effectiveness Survey",
+    "survey_brief": "To evaluate the effectiveness and areas for improvement in professional development workshops offered by XYZ Corporation",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Did you attend any of the professional development workshops offered by XYZ Corporation in the past 12 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "If 'No', skip to Q15",
+            "client_notes": "Use a simple binary gatekeeping question to filter non-attendees",
+            "scripter_notes": "Radio buttons with skip logic implementation",
+            "script": {
+                "question_text": "Did you attend any of the professional development workshops offered by XYZ Corporation in the past 12 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'No', skip to Q15"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How many workshops did you attend?",
+            "answer_options": [
+                "1-2",
+                "3-5",
+                "6-8",
+                "9+"
+            ],
+            "routing_logic": "Display only if Q1 = 'Yes'",
+            "client_notes": "Use ranges to account for recall bias",
+            "scripter_notes": "Radio buttons with conditional display",
+            "script": {
+                "question_text": "How many workshops did you attend?",
+                "answer_options": [
+                    "1-2",
+                    "3-5",
+                    "6-8",
+                    "9+"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which workshop topics did you find most valuable? (Select all that apply)",
+            "answer_options": [
+                "Leadership Development",
+                "Project Management",
+                "Technical Skills",
+                "DEI Training",
+                "Communication Strategies",
+                "Other"
+            ],
+            "routing_logic": "Display only if Q1 = 'Yes'",
+            "client_notes": "Limit to 6 options with 'Other' for catch-all",
+            "scripter_notes": "Checkbox input type with 'Other' text field",
+            "script": {
+                "question_text": "Which workshop topics did you find most valuable? (Select all that apply)",
+                "answer_options": [
+                    "Leadership Development",
+                    "Project Management",
+                    "Technical Skills",
+                    "DEI Training",
+                    "Communication Strategies",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How relevant was the workshop content to your daily work responsibilities?",
+            "answer_options": [
+                "Very relevant",
+                "Somewhat relevant",
+                "Neutral",
+                "Somewhat irrelevant",
+                "Very irrelevant"
+            ],
+            "routing_logic": "Display only if Q1 = 'Yes'",
+            "client_notes": "5-point Likert scale for nuanced responses",
+            "scripter_notes": "Radio buttons with vertical layout",
+            "script": {
+                "question_text": "How relevant was the workshop content to your daily work responsibilities?",
+                "answer_options": [
+                    "Very relevant",
+                    "Somewhat relevant",
+                    "Neutral",
+                    "Somewhat irrelevant",
+                    "Very irrelevant"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "To what extent have you applied skills/knowledge gained from the workshops?",
+            "answer_options": [
+                "Extensively applied",
+                "Moderately applied",
+                "Minimally applied",
+                "Not applied"
+            ],
+            "routing_logic": "Display only if Q1 = 'Yes'",
+            "client_notes": "Include neutral midpoint for honest feedback",
+            "scripter_notes": "Radio buttons with 'Not applicable' option",
+            "script": {
+                "question_text": "To what extent have you applied skills/knowledge gained from the workshops?",
+                "answer_options": [
+                    "Extensively applied",
+                    "Moderately applied",
+                    "Minimally applied",
+                    "Not applied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How would you rate the quality of workshop materials?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "Display only if Q1 = 'Yes'",
+            "client_notes": "Standard 5-point quality scale",
+            "scripter_notes": "Radio buttons with mobile-optimized layout",
+            "script": {
+                "question_text": "How would you rate the quality of workshop materials?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What format do you prefer for future workshops?",
+            "answer_options": [
+                "In-person",
+                "Virtual live",
+                "Hybrid",
+                "Self-paced online",
+                "No preference"
+            ],
+            "routing_logic": "Display only if Q1 = 'Yes'",
+            "client_notes": "Include emerging hybrid options",
+            "scripter_notes": "Radio buttons with 'Other' text field",
+            "script": {
+                "question_text": "What format do you prefer for future workshops?",
+                "answer_options": [
+                    "In-person",
+                    "Virtual live",
+                    "Hybrid",
+                    "Self-paced online",
+                    "No preference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What prevents you from attending more workshops? (Select all that apply)",
+            "answer_options": [
+                "Scheduling conflicts",
+                "Workload constraints",
+                "Lack of relevant topics",
+                "Time zone issues",
+                "Not enough advance notice",
+                "Other"
+            ],
+            "routing_logic": "Display only if Q1 = 'Yes'",
+            "client_notes": "Critical for identifying participation barriers",
+            "scripter_notes": "Checkbox input with 'Other' field",
+            "script": {
+                "question_text": "What prevents you from attending more workshops? (Select all that apply)",
+                "answer_options": [
+                    "Scheduling conflicts",
+                    "Workload constraints",
+                    "Lack of relevant topics",
+                    "Time zone issues",
+                    "Not enough advance notice",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to recommend these workshops to colleagues?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Display only if Q1 = 'Yes'",
+            "client_notes": "Standard NPS predictor question",
+            "scripter_notes": "Radio buttons with smiley face scale",
+            "script": {
+                "question_text": "How likely are you to recommend these workshops to colleagues?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What specific improvements would enhance future workshops?",
+            "answer_options": [],
+            "routing_logic": "Display only if Q1 = 'Yes'",
+            "client_notes": "Open field for qualitative insights",
+            "scripter_notes": "Text area with 500-character limit",
+            "script": {
+                "question_text": "What specific improvements would enhance future workshops?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "Which department do you work in?",
+            "answer_options": [
+                "Engineering",
+                "Marketing",
+                "HR",
+                "Finance",
+                "Operations",
+                "Other"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Essential for demographic analysis",
+            "scripter_notes": "Dropdown menu implementation",
+            "script": {
+                "question_text": "Which department do you work in?",
+                "answer_options": [
+                    "Engineering",
+                    "Marketing",
+                    "HR",
+                    "Finance",
+                    "Operations",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Additional comments or suggestions:",
+            "answer_options": [],
+            "routing_logic": "Optional final question for all respondents",
+            "client_notes": "Capture unexpected insights",
+            "scripter_notes": "Open text field with optional flag",
+            "script": {
+                "question_text": "Additional comments or suggestions:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional final question for all respondents"
+            }
+        }
+    ]
+}

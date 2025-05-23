@@ -1,0 +1,299 @@
+{
+    "survey_id": "42407dcc-3301-4307-8f4a-e62670d9931b",
+    "survey_name": "Corporate Sustainability Program Effectiveness Survey",
+    "survey_brief": "Assess employee awareness and perceptions of corporate sustainability initiatives to identify improvement opportunities",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Is your organization currently implementing formal sustainability initiatives?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Use as screening question. Consider adding 'Prefer not to answer' option for anonymous surveys",
+            "scripter_notes": "Radio button field with mandatory response",
+            "script": {
+                "question_text": "Is your organization currently implementing formal sustainability initiatives?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How would you rate your awareness of your organization's sustainability goals?",
+            "answer_options": [
+                "Very aware",
+                "Somewhat aware",
+                "Neutral",
+                "Minimally aware",
+                "Not aware at all"
+            ],
+            "routing_logic": "Shown only if Q1 = Yes",
+            "client_notes": "5-point Likert scale with neutral midpoint. Randomize order for half of respondents to reduce bias",
+            "scripter_notes": "Radio buttons with vertical layout. Enable 'Don't Know' option if required",
+            "script": {
+                "question_text": "How would you rate your awareness of your organization's sustainability goals?",
+                "answer_options": [
+                    "Very aware",
+                    "Somewhat aware",
+                    "Neutral",
+                    "Minimally aware",
+                    "Not aware at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown only if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which sustainability initiatives have you personally participated in? (Select all that apply)",
+            "answer_options": [
+                "Recycling programs",
+                "Energy conservation projects",
+                "Community volunteering",
+                "Sustainable procurement",
+                "Carbon offset programs",
+                "None"
+            ],
+            "routing_logic": "Shown only if Q1 = Yes",
+            "client_notes": "Include 'None' option to capture non-participants. Limit to 6 options for mobile readability",
+            "scripter_notes": "Checkbox field with 'Select All That Apply' instruction",
+            "script": {
+                "question_text": "Which sustainability initiatives have you personally participated in? (Select all that apply)",
+                "answer_options": [
+                    "Recycling programs",
+                    "Energy conservation projects",
+                    "Community volunteering",
+                    "Sustainable procurement",
+                    "Carbon offset programs",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown only if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What specific suggestions do you have to improve sustainability initiatives in your organization?",
+            "answer_options": [],
+            "routing_logic": "Shown only if Q1 = Yes",
+            "client_notes": "Open text field with 500-character limit. Use placeholder text: 'Please be as specific as possible'",
+            "scripter_notes": "Text area input with character counter",
+            "script": {
+                "question_text": "What specific suggestions do you have to improve sustainability initiatives in your organization?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown only if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How effective do you believe your organization's sustainability programs are at creating real environmental impact?",
+            "answer_options": [
+                "Extremely effective",
+                "Very effective",
+                "Moderately effective",
+                "Slightly effective",
+                "Not effective at all"
+            ],
+            "routing_logic": "Shown only if Q1 = Yes",
+            "client_notes": "Include visual scale anchors: (1 = Not Effective, 5 = Extremely Effective)",
+            "scripter_notes": "Radio buttons with numeric labels 1-5 below options",
+            "script": {
+                "question_text": "How effective do you believe your organization's sustainability programs are at creating real environmental impact?",
+                "answer_options": [
+                    "Extremely effective",
+                    "Very effective",
+                    "Moderately effective",
+                    "Slightly effective",
+                    "Not effective at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown only if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which departments should take greater leadership in sustainability efforts? (Select up to 3)",
+            "answer_options": [
+                "Executive leadership",
+                "Operations",
+                "HR",
+                "Procurement",
+                "Marketing",
+                "IT",
+                "Facilities",
+                "All departments equally"
+            ],
+            "routing_logic": "Shown only if Q1 = Yes",
+            "client_notes": "Use checkbox field with selection limit validation",
+            "scripter_notes": "Multi-select with max 3 choices allowed",
+            "script": {
+                "question_text": "Which departments should take greater leadership in sustainability efforts? (Select up to 3)",
+                "answer_options": [
+                    "Executive leadership",
+                    "Operations",
+                    "HR",
+                    "Procurement",
+                    "Marketing",
+                    "IT",
+                    "Facilities",
+                    "All departments equally"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown only if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How frequently do you receive updates about sustainability program progress?",
+            "answer_options": [
+                "Monthly",
+                "Quarterly",
+                "Bi-annually",
+                "Annually",
+                "Never"
+            ],
+            "routing_logic": "Shown only if Q1 = Yes",
+            "client_notes": "Include timeline examples in question stem for clarity",
+            "scripter_notes": "Radio buttons with 'Other' text field option",
+            "script": {
+                "question_text": "How frequently do you receive updates about sustainability program progress?",
+                "answer_options": [
+                    "Monthly",
+                    "Quarterly",
+                    "Bi-annually",
+                    "Annually",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown only if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What prevents you from participating more actively in sustainability initiatives?",
+            "answer_options": [
+                "Lack of time",
+                "Insufficient information",
+                "No management support",
+                "No personal interest",
+                "Already participating fully"
+            ],
+            "routing_logic": "Shown only if Q3 includes any non-'None' options",
+            "client_notes": "Randomize option order to mitigate primacy bias",
+            "scripter_notes": "Checkbox field with 'Other' text input",
+            "script": {
+                "question_text": "What prevents you from participating more actively in sustainability initiatives?",
+                "answer_options": [
+                    "Lack of time",
+                    "Insufficient information",
+                    "No management support",
+                    "No personal interest",
+                    "Already participating fully"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown only if Q3 includes any non-'None' options"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How important are sustainability certifications (e.g., B Corp, ISO 14001) to your organization's reputation?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Provide examples in question stem for context",
+            "scripter_notes": "Radio buttons with visual importance scale",
+            "script": {
+                "question_text": "How important are sustainability certifications (e.g., B Corp, ISO 14001) to your organization's reputation?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What sustainability metrics would you like to see included in corporate reporting?",
+            "answer_options": [
+                "Carbon footprint",
+                "Energy consumption",
+                "Waste reduction",
+                "Supply chain ethics",
+                "Water usage",
+                "All of the above"
+            ],
+            "routing_logic": "Shown only if Q1 = Yes",
+            "client_notes": "Consider adding 'Other' option with text field",
+            "scripter_notes": "Checkbox field with alphabetical option order",
+            "script": {
+                "question_text": "What sustainability metrics would you like to see included in corporate reporting?",
+                "answer_options": [
+                    "Carbon footprint",
+                    "Energy consumption",
+                    "Waste reduction",
+                    "Supply chain ethics",
+                    "Water usage",
+                    "All of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown only if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How likely are you to recommend suppliers based on their sustainability practices?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Shown only if Q1 = Yes",
+            "client_notes": "Use standard NPS-style wording for comparability",
+            "scripter_notes": "Radio buttons with smiley face scale",
+            "script": {
+                "question_text": "How likely are you to recommend suppliers based on their sustainability practices?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown only if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Please share any additional comments about corporate sustainability initiatives:",
+            "answer_options": [],
+            "routing_logic": "Optional final question for all respondents",
+            "client_notes": "Use optional field to capture unsolicited feedback",
+            "scripter_notes": "Text area with 'Optional' label",
+            "script": {
+                "question_text": "Please share any additional comments about corporate sustainability initiatives:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional final question for all respondents"
+            }
+        }
+    ]
+}

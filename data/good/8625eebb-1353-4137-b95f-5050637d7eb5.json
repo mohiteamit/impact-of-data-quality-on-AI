@@ -1,0 +1,253 @@
+{
+    "survey_id": "8625eebb-1353-4137-b95f-5050637d7eb5",
+    "survey_name": "Remote Work Effectiveness Evaluation",
+    "survey_brief": "Assess productivity, collaboration tools, and employee well-being in remote work environments to optimize hybrid work policies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you typically work remotely?",
+            "answer_options": [
+                "Full-time (5 days)",
+                "4 days",
+                "3 days",
+                "2 days",
+                "1 day",
+                "Occasionally"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons with vertical layout. Include 'Other' option if needed.",
+            "scripter_notes": "Single-choice dropdown with validation",
+            "script": {
+                "question_text": "How many days per week do you typically work remotely?",
+                "answer_options": [
+                    "Full-time (5 days)",
+                    "4 days",
+                    "3 days",
+                    "2 days",
+                    "1 day",
+                    "Occasionally"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How has your productivity changed since transitioning to remote work?",
+            "answer_options": [
+                "Significantly increased",
+                "Slightly increased",
+                "Remained the same",
+                "Slightly decreased",
+                "Significantly decreased"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point Likert scale displayed as radio buttons",
+            "scripter_notes": "Implement matrix table if repeating similar scales",
+            "script": {
+                "question_text": "How has your productivity changed since transitioning to remote work?",
+                "answer_options": [
+                    "Significantly increased",
+                    "Slightly increased",
+                    "Remained the same",
+                    "Slightly decreased",
+                    "Significantly decreased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Select all challenges you've experienced with remote work:",
+            "answer_options": [
+                "Technical issues",
+                "Work-life balance",
+                "Team communication",
+                "Home distractions",
+                "Motivation maintenance",
+                "Time zone differences"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Checkbox grid with 6 items, randomize order",
+            "scripter_notes": "Multi-select with 'Select All That Apply' instruction",
+            "script": {
+                "question_text": "Select all challenges you've experienced with remote work:",
+                "answer_options": [
+                    "Technical issues",
+                    "Work-life balance",
+                    "Team communication",
+                    "Home distractions",
+                    "Motivation maintenance",
+                    "Time zone differences"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which communication tools do you use daily? (Select top 3)",
+            "answer_options": [
+                "Slack",
+                "Microsoft Teams",
+                "Zoom",
+                "Email",
+                "Asana",
+                "Trello",
+                "Google Meet"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use drag-and-drop ranking for mobile optimization",
+            "scripter_notes": "Implement max selection limit of 3",
+            "script": {
+                "question_text": "Which communication tools do you use daily? (Select top 3)",
+                "answer_options": [
+                    "Slack",
+                    "Microsoft Teams",
+                    "Zoom",
+                    "Email",
+                    "Asana",
+                    "Trello",
+                    "Google Meet"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with your current home office setup?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 != 'Occasionally'",
+            "client_notes": "Include image scale for visual learners",
+            "scripter_notes": "Add skip logic for occasional remote workers",
+            "script": {
+                "question_text": "How satisfied are you with your current home office setup?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 != 'Occasionally'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Describe your ideal remote work environment improvements:",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "500 character limit with real-time counter",
+            "scripter_notes": "Open text field with input validation",
+            "script": {
+                "question_text": "Describe your ideal remote work environment improvements:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How effective are virtual team-building activities?",
+            "answer_options": [
+                "Extremely effective",
+                "Moderately effective",
+                "Neutral",
+                "Slightly ineffective",
+                "Completely ineffective"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include 'Not Applicable' option if needed",
+            "scripter_notes": "Radio buttons with optional 'N/A'",
+            "script": {
+                "question_text": "How effective are virtual team-building activities?",
+                "answer_options": [
+                    "Extremely effective",
+                    "Moderately effective",
+                    "Neutral",
+                    "Slightly ineffective",
+                    "Completely ineffective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What time management strategies do you use? (Select all that apply)",
+            "answer_options": [
+                "Pomodoro technique",
+                "Time blocking",
+                "Task prioritization",
+                "Digital detox periods",
+                "Calendar scheduling",
+                "None"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Randomize options to reduce order bias",
+            "scripter_notes": "Multi-select with 'Other' text field",
+            "script": {
+                "question_text": "What time management strategies do you use? (Select all that apply)",
+                "answer_options": [
+                    "Pomodoro technique",
+                    "Time blocking",
+                    "Task prioritization",
+                    "Digital detox periods",
+                    "Calendar scheduling",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How has remote work impacted your work-life balance?",
+            "answer_options": [
+                "Greatly improved",
+                "Slightly improved",
+                "No change",
+                "Slightly worsened",
+                "Greatly worsened"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use symmetrical scale for neutrality",
+            "scripter_notes": "Radio buttons with hover definitions",
+            "script": {
+                "question_text": "How has remote work impacted your work-life balance?",
+                "answer_options": [
+                    "Greatly improved",
+                    "Slightly improved",
+                    "No change",
+                    "Slightly worsened",
+                    "Greatly worsened"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional support would improve your remote work experience?",
+            "answer_options": [],
+            "routing_logic": "If Q5 rating <= 3 (Dissatisfied/Very dissatisfied)",
+            "client_notes": "Probe for specific resource needs",
+            "scripter_notes": "Conditional text field based on Q5 response",
+            "script": {
+                "question_text": "What additional support would improve your remote work experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q5 rating <= 3 (Dissatisfied/Very dissatisfied)"
+            }
+        }
+    ]
+}

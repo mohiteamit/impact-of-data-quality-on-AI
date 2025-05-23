@@ -1,0 +1,255 @@
+{
+    "survey_id": "d1cfd5ae-92c6-42b1-9f97-58c4d277313f",
+    "survey_name": "Community Recycling Program Participation Survey",
+    "survey_brief": "This survey aims to evaluate community participation and satisfaction with the local recycling program, identifying areas for improvement and barriers to participation.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in the community recycling program?",
+            "answer_options": [
+                "Always - I recycle every time possible",
+                "Frequently - I recycle often but not always",
+                "Occasionally - I recycle sometimes",
+                "Rarely - I hardly ever recycle",
+                "Never - I do not participate in the recycling program"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use a single-choice format to measure frequency of participation. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you participate in the community recycling program?",
+                "answer_options": [
+                    "Always - I recycle every time possible",
+                    "Frequently - I recycle often but not always",
+                    "Occasionally - I recycle sometimes",
+                    "Rarely - I hardly ever recycle",
+                    "Never - I do not participate in the recycling program"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of materials do you typically recycle? (Select all that apply)",
+            "answer_options": [
+                "Paper & cardboard",
+                "Plastics",
+                "Glass",
+                "Metal (e.g., aluminum, steel)",
+                "Organic waste (e.g., food scraps)",
+                "Electronic waste (e.g., batteries, old devices)",
+                "None of the above"
+            ],
+            "routing_logic": "Displayed if Q1 is not 'Never'",
+            "client_notes": "Multi-choice question to identify commonly recycled materials. Include an option for non-participation.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What types of materials do you typically recycle? (Select all that apply)",
+                "answer_options": [
+                    "Paper & cardboard",
+                    "Plastics",
+                    "Glass",
+                    "Metal (e.g., aluminum, steel)",
+                    "Organic waste (e.g., food scraps)",
+                    "Electronic waste (e.g., batteries, old devices)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Displayed if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the main reasons you do not participate in the recycling program? (Select all that apply)",
+            "answer_options": [
+                "Lack of convenient recycling facilities nearby",
+                "Unclear recycling guidelines",
+                "No perceived benefit",
+                "Lack of time or effort",
+                "Prefer other disposal methods (e.g., trash, donation)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Displayed if Q1 is 'Rarely', 'Occasionally', or 'Never'",
+            "client_notes": "Multi-choice question with an open-ended 'Other' option to capture barriers.",
+            "scripter_notes": "Field type: checkbox with optional open-text (MULTI_CHOICE with 'Other' input)",
+            "script": {
+                "question_text": "What are the main reasons you do not participate in the recycling program? (Select all that apply)",
+                "answer_options": [
+                    "Lack of convenient recycling facilities nearby",
+                    "Unclear recycling guidelines",
+                    "No perceived benefit",
+                    "Lack of time or effort",
+                    "Prefer other disposal methods (e.g., trash, donation)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Displayed if Q1 is 'Rarely', 'Occasionally', or 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accessibility of recycling facilities in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Displayed if Q1 is not 'Never'",
+            "client_notes": "5-point Likert scale to measure satisfaction with accessibility.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the accessibility of recycling facilities in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the clarity of recycling guidelines provided by the program?",
+            "answer_options": [
+                "Very clear",
+                "Somewhat clear",
+                "Neutral",
+                "Somewhat unclear",
+                "Very unclear"
+            ],
+            "routing_logic": "Displayed if Q1 is not 'Never'",
+            "client_notes": "5-point Likert scale to assess clarity of instructions.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How would you rate the clarity of recycling guidelines provided by the program?",
+                "answer_options": [
+                    "Very clear",
+                    "Somewhat clear",
+                    "Neutral",
+                    "Somewhat unclear",
+                    "Very unclear"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would encourage you to recycle more? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "Displayed if Q1 is not 'Always'",
+            "client_notes": "Open-ended question to gather qualitative feedback on program enhancements.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would encourage you to recycle more? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Displayed if Q1 is not 'Always'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Do you believe the recycling program positively impacts the environment?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No, not much",
+                "No, not at all",
+                "Unsure"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Single-choice question to gauge perceived environmental impact.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Do you believe the recycling program positively impacts the environment?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No, not much",
+                    "No, not at all",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Have you encountered any issues with recycling bins (e.g., full, damaged, misplaced)?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No, never"
+            ],
+            "routing_logic": "Displayed if Q1 is not 'Never'",
+            "client_notes": "Single-choice question to identify logistical problems.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Have you encountered any issues with recycling bins (e.g., full, damaged, misplaced)?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No, never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Would you support expanding the recycling program to include additional materials (e.g., textiles, hazardous waste)?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, if convenient",
+                "No, the current program is sufficient",
+                "No, I would not support expansion"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Single-choice question to assess support for program expansion.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you support expanding the recycling program to include additional materials (e.g., textiles, hazardous waste)?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, if convenient",
+                    "No, the current program is sufficient",
+                    "No, I would not support expansion"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to recommend the recycling program to a neighbor or friend?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Displayed if Q1 is not 'Never'",
+            "client_notes": "5-point Likert scale to measure Net Promoter Score (NPS) potential.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to recommend the recycling program to a neighbor or friend?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed if Q1 is not 'Never'"
+            }
+        }
+    ]
+}

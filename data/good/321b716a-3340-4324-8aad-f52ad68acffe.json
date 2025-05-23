@@ -1,0 +1,239 @@
+{
+    "survey_id": "321b716a-3340-4324-8aad-f52ad68acffe",
+    "survey_name": "Workplace Flexibility and Mental Well-being Survey",
+    "survey_brief": "This survey aims to understand employee perceptions of workplace flexibility and its impact on mental well-being, to help organizations design better support systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your current level of workplace flexibility (e.g., flexible hours, remote work options)?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with your current level of workplace flexibility (e.g., flexible hours, remote work options)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following workplace flexibility options do you currently have access to? (Select all that apply)",
+            "answer_options": [
+                "Flexible working hours",
+                "Remote work options",
+                "Compressed workweek",
+                "Job sharing",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. Ensure options are clear and distinct.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following workplace flexibility options do you currently have access to? (Select all that apply)",
+                "answer_options": [
+                    "Flexible working hours",
+                    "Remote work options",
+                    "Compressed workweek",
+                    "Job sharing",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How has workplace flexibility impacted your mental well-being?",
+            "answer_options": [
+                "Significantly improved",
+                "Slightly improved",
+                "No impact",
+                "Slightly worsened",
+                "Significantly worsened"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale. Consider adding a follow-up open-ended question for qualitative insights.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How has workplace flexibility impacted your mental well-being?",
+                "answer_options": [
+                    "Significantly improved",
+                    "Slightly improved",
+                    "No impact",
+                    "Slightly worsened",
+                    "Significantly worsened"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe how workplace flexibility has affected your mental well-being in your own words.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "Please describe how workplace flexibility has affected your mental well-being in your own words.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you feel stressed due to inflexible work arrangements?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Always"
+            ],
+            "routing_logic": "Respondents who selected 'None of the above' in Q2 or 'Somewhat dissatisfied'/'Very dissatisfied' in Q1",
+            "client_notes": "Use a 5-point frequency scale. Ensure routing logic is correctly implemented.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you feel stressed due to inflexible work arrangements?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'None of the above' in Q2 or 'Somewhat dissatisfied'/'Very dissatisfied' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which additional workplace flexibility options would you like to see implemented? (Select all that apply)",
+            "answer_options": [
+                "More remote work days",
+                "Flexible start/end times",
+                "Unlimited paid time off",
+                "Four-day workweek",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with a text field for additional suggestions.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with an optional open text field for 'Other'.",
+            "script": {
+                "question_text": "Which additional workplace flexibility options would you like to see implemented? (Select all that apply)",
+                "answer_options": [
+                    "More remote work days",
+                    "Flexible start/end times",
+                    "Unlimited paid time off",
+                    "Four-day workweek",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How would you rate your overall mental well-being in the past month?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Fair",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point scale. This question provides a baseline for mental well-being.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How would you rate your overall mental well-being in the past month?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Fair",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Does your organization provide mental health support (e.g., counseling, wellness programs)?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I'm not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Simple yes/no question. Include an 'I'm not sure' option for clarity.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Does your organization provide mental health support (e.g., counseling, wellness programs)?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I'm not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How accessible do you find your organization's mental health support resources?",
+            "answer_options": [
+                "Very accessible",
+                "Somewhat accessible",
+                "Neutral",
+                "Somewhat inaccessible",
+                "Very inaccessible"
+            ],
+            "routing_logic": "Respondents who selected 'Yes' in Q8",
+            "client_notes": "Use a 5-point Likert scale. Only display this question if Q8 = 'Yes'.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How accessible do you find your organization's mental health support resources?",
+                "answer_options": [
+                    "Very accessible",
+                    "Somewhat accessible",
+                    "Neutral",
+                    "Somewhat inaccessible",
+                    "Very inaccessible"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Yes' in Q8"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What improvements would you suggest to enhance workplace flexibility and mental well-being support?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather actionable feedback. Limit response length to 1000 characters.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance workplace flexibility and mental well-being support?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

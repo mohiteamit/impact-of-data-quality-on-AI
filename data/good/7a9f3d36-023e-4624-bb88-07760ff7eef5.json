@@ -1,0 +1,245 @@
+{
+    "survey_id": "7a9f3d36-023e-4624-bb88-07760ff7eef5",
+    "survey_name": "Telemedicine Adoption and Satisfaction Survey",
+    "survey_brief": "This survey aims to understand patient experiences and satisfaction levels with telemedicine services, including ease of use, effectiveness, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often have you used telemedicine services in the past 12 months?",
+            "answer_options": [
+                "Never",
+                "1-2 times",
+                "3-5 times",
+                "6 or more times"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all possible frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often have you used telemedicine services in the past 12 months?",
+                "answer_options": [
+                    "Never",
+                    "1-2 times",
+                    "3-5 times",
+                    "6 or more times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of medical consultations have you used telemedicine for? (Select all that apply)",
+            "answer_options": [
+                "General health check-ups",
+                "Chronic condition management",
+                "Mental health services",
+                "Prescription refills",
+                "Urgent care (e.g., cold, flu)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What types of medical consultations have you used telemedicine for? (Select all that apply)",
+                "answer_options": [
+                    "General health check-ups",
+                    "Chronic condition management",
+                    "Mental health services",
+                    "Prescription refills",
+                    "Urgent care (e.g., cold, flu)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall quality of telemedicine services you have received?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of telemedicine services you have received?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What do you consider the biggest advantage of using telemedicine services?",
+            "answer_options": [
+                "Convenience (saving time/travel)",
+                "Access to specialists not available locally",
+                "Lower cost compared to in-person visits",
+                "Reduced exposure to illnesses",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1",
+            "client_notes": "Single-choice with an 'Other' option for additional input. Randomize options to avoid bias.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What do you consider the biggest advantage of using telemedicine services?",
+                "answer_options": [
+                    "Convenience (saving time/travel)",
+                    "Access to specialists not available locally",
+                    "Lower cost compared to in-person visits",
+                    "Reduced exposure to illnesses",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced when using telemedicine services? (Select all that apply)",
+            "answer_options": [
+                "Technical difficulties (e.g., poor connection)",
+                "Difficulty explaining symptoms remotely",
+                "Limited availability of providers",
+                "Privacy or security concerns",
+                "Lack of personal connection with provider",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1",
+            "client_notes": "Multi-choice question. Include an 'Other' option for unlisted challenges.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What challenges have you faced when using telemedicine services? (Select all that apply)",
+                "answer_options": [
+                    "Technical difficulties (e.g., poor connection)",
+                    "Difficulty explaining symptoms remotely",
+                    "Limited availability of providers",
+                    "Privacy or security concerns",
+                    "Lack of personal connection with provider",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How easy was it to schedule a telemedicine appointment?",
+            "answer_options": [
+                "Very easy",
+                "Somewhat easy",
+                "Neutral",
+                "Somewhat difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1",
+            "client_notes": "Use a 5-point Likert scale for ease of scheduling. Ensure the scale is intuitive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How easy was it to schedule a telemedicine appointment?",
+                "answer_options": [
+                    "Very easy",
+                    "Somewhat easy",
+                    "Neutral",
+                    "Somewhat difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which devices do you typically use for telemedicine appointments? (Select all that apply)",
+            "answer_options": [
+                "Smartphone",
+                "Tablet",
+                "Laptop",
+                "Desktop computer",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1",
+            "client_notes": "Multi-choice question to identify common devices. Include 'Other' for flexibility.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "Which devices do you typically use for telemedicine appointments? (Select all that apply)",
+                "answer_options": [
+                    "Smartphone",
+                    "Tablet",
+                    "Laptop",
+                    "Desktop computer",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend telemedicine services to others?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1",
+            "client_notes": "Use a standard Net Promoter Score (NPS) scale for measuring likelihood to recommend.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to recommend telemedicine services to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or '6 or more times' to Q1"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What improvements would make you more likely to use telemedicine services in the future?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'Neutral', 'Dissatisfied', or 'Very dissatisfied' to Q3",
+            "client_notes": "Open-ended question to gather qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT) with character limit",
+            "script": {
+                "question_text": "What improvements would make you more likely to use telemedicine services in the future?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'Neutral', 'Dissatisfied', or 'Very dissatisfied' to Q3"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you have any additional comments or feedback about your telemedicine experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Optional open-ended question for general feedback. Useful for capturing unexpected insights.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT) with optional submission",
+            "script": {
+                "question_text": "Do you have any additional comments or feedback about your telemedicine experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

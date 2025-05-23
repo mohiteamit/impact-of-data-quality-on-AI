@@ -1,0 +1,251 @@
+{
+    "survey_id": "fb2abced-467c-46fc-81a4-e84aaab17e78",
+    "survey_name": "Sustainable Travel Preferences Survey",
+    "survey_brief": "This survey aims to understand traveler preferences and behaviors regarding sustainable tourism practices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How important is sustainability when choosing travel destinations?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Always appears first",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How important is sustainability when choosing travel destinations?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears first"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which sustainable travel practices do you actively seek out? (Select all that apply)",
+            "answer_options": [
+                "Eco-friendly accommodations",
+                "Carbon offset programs",
+                "Public transportation usage",
+                "Local and sustainable dining",
+                "Supporting local businesses",
+                "Minimizing plastic use",
+                "Wildlife conservation activities"
+            ],
+            "routing_logic": "Appears after Q1",
+            "client_notes": "Allow multiple selections. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which sustainable travel practices do you actively seek out? (Select all that apply)",
+                "answer_options": [
+                    "Eco-friendly accommodations",
+                    "Carbon offset programs",
+                    "Public transportation usage",
+                    "Local and sustainable dining",
+                    "Supporting local businesses",
+                    "Minimizing plastic use",
+                    "Wildlife conservation activities"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears after Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers prevent you from traveling more sustainably?",
+            "answer_options": [
+                "Higher costs",
+                "Lack of information",
+                "Limited options",
+                "Inconvenience",
+                "Not a priority",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears after Q2",
+            "client_notes": "Include an 'Other' option with open text for additional insights.",
+            "scripter_notes": "Field type: radio button with optional open text for 'Other'.",
+            "script": {
+                "question_text": "What barriers prevent you from traveling more sustainably?",
+                "answer_options": [
+                    "Higher costs",
+                    "Lack of information",
+                    "Limited options",
+                    "Inconvenience",
+                    "Not a priority",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears after Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please specify any additional barriers not listed above.",
+            "answer_options": [],
+            "routing_logic": "Only appears if 'Other' is selected in Q3",
+            "client_notes": "Keep open-text concise. Use for qualitative insights.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "Please specify any additional barriers not listed above.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only appears if 'Other' is selected in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay a premium (e.g., 5-10%) for sustainable travel options?",
+            "answer_options": [
+                "Yes, always",
+                "Yes, sometimes",
+                "No, but I would consider it",
+                "No, not interested"
+            ],
+            "routing_logic": "Appears after Q4 or Q3 (if Q4 is skipped)",
+            "client_notes": "Use clear pricing context. Randomize 'Yes' and 'No' options to reduce order bias.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "Would you be willing to pay a premium (e.g., 5-10%) for sustainable travel options?",
+                "answer_options": [
+                    "Yes, always",
+                    "Yes, sometimes",
+                    "No, but I would consider it",
+                    "No, not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears after Q4 or Q3 (if Q4 is skipped)"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How do you typically research sustainable travel options? (Select all that apply)",
+            "answer_options": [
+                "Travel agency recommendations",
+                "Online reviews (e.g., TripAdvisor)",
+                "Sustainability certifications (e.g., Green Key)",
+                "Social media influencers",
+                "Friends/family recommendations",
+                "Guidebooks",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears after Q5",
+            "client_notes": "Allow multiple selections. Include 'Other' for broader insights.",
+            "scripter_notes": "Field type: checkbox with optional open text.",
+            "script": {
+                "question_text": "How do you typically research sustainable travel options? (Select all that apply)",
+                "answer_options": [
+                    "Travel agency recommendations",
+                    "Online reviews (e.g., TripAdvisor)",
+                    "Sustainability certifications (e.g., Green Key)",
+                    "Social media influencers",
+                    "Friends/family recommendations",
+                    "Guidebooks",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears after Q5"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What would encourage you to choose sustainable travel options more often?",
+            "answer_options": [],
+            "routing_logic": "Appears after Q6",
+            "client_notes": "Open-ended question for qualitative feedback. Limit response length to 200 characters.",
+            "scripter_notes": "Field type: open text with character limit.",
+            "script": {
+                "question_text": "What would encourage you to choose sustainable travel options more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears after Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Have you ever participated in a carbon offset program for travel?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I don't know what this is"
+            ],
+            "routing_logic": "Appears after Q7",
+            "client_notes": "Include an option for lack of awareness to gauge education needs.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "Have you ever participated in a carbon offset program for travel?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I don't know what this is"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears after Q7"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What type of sustainable travel content would you find most useful? (Select up to 3)",
+            "answer_options": [
+                "Eco-friendly hotel guides",
+                "Carbon footprint calculators",
+                "Local conservation initiatives",
+                "Sustainable packing tips",
+                "Public transport routes",
+                "Ethical wildlife experiences",
+                "Cultural preservation efforts"
+            ],
+            "routing_logic": "Appears after Q8",
+            "client_notes": "Limit selections to 3 to prioritize preferences. Randomize options.",
+            "scripter_notes": "Field type: checkbox with max selection limit.",
+            "script": {
+                "question_text": "What type of sustainable travel content would you find most useful? (Select up to 3)",
+                "answer_options": [
+                    "Eco-friendly hotel guides",
+                    "Carbon footprint calculators",
+                    "Local conservation initiatives",
+                    "Sustainable packing tips",
+                    "Public transport routes",
+                    "Ethical wildlife experiences",
+                    "Cultural preservation efforts"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears after Q8"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to recommend sustainable travel options to others?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears last",
+            "client_notes": "Use a 5-point Likert scale for consistency with Q1. Mobile-friendly.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How likely are you to recommend sustainable travel options to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears last"
+            }
+        }
+    ]
+}

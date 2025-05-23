@@ -1,0 +1,351 @@
+{
+    "survey_id": "d6b6ebd2-728c-4b89-bca4-b8962c9b6540",
+    "survey_name": "Employee Mental Health and Well-being Survey",
+    "survey_brief": "This survey aims to assess the mental health and well-being of employees to identify areas for improvement in workplace support and resources.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you feel stressed at work?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Always"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a Likert scale to gauge frequency of stress. Ensure the scale is balanced and options are clear.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you feel stressed at work?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the main sources of stress in your work environment? (Select all that apply)",
+            "answer_options": [
+                "Workload",
+                "Lack of support from management",
+                "Poor work-life balance",
+                "Unclear job expectations",
+                "Interpersonal conflicts",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q1 response is 'Sometimes', 'Often', or 'Always'.",
+            "client_notes": "Allow multiple selections to capture all relevant stressors. Include an 'Other' option for additional factors.",
+            "scripter_notes": "Field type: multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are the main sources of stress in your work environment? (Select all that apply)",
+                "answer_options": [
+                    "Workload",
+                    "Lack of support from management",
+                    "Poor work-life balance",
+                    "Unclear job expectations",
+                    "Interpersonal conflicts",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q1 response is 'Sometimes', 'Often', or 'Always'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the mental health resources provided by your employer?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a Likert scale to measure satisfaction. Consider follow-up questions for dissatisfied respondents.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the mental health resources provided by your employer?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional mental health resources would you find helpful? (Select all that apply)",
+            "answer_options": [
+                "Counseling services",
+                "Stress management workshops",
+                "Flexible work hours",
+                "Mental health days",
+                "Employee assistance programs",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q3 response is 'Neutral', 'Dissatisfied', or 'Very dissatisfied'.",
+            "client_notes": "Allow multiple selections to identify desired resources. Include an 'Other' option for additional suggestions.",
+            "scripter_notes": "Field type: multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What additional mental health resources would you find helpful? (Select all that apply)",
+                "answer_options": [
+                    "Counseling services",
+                    "Stress management workshops",
+                    "Flexible work hours",
+                    "Mental health days",
+                    "Employee assistance programs",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q3 response is 'Neutral', 'Dissatisfied', or 'Very dissatisfied'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Do you feel comfortable discussing mental health concerns with your supervisor?",
+            "answer_options": [
+                "Yes, very comfortable",
+                "Somewhat comfortable",
+                "Neutral",
+                "Somewhat uncomfortable",
+                "Very uncomfortable"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a Likert scale to assess comfort levels. Consider anonymity for sensitive topics.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "Do you feel comfortable discussing mental health concerns with your supervisor?",
+                "answer_options": [
+                    "Yes, very comfortable",
+                    "Somewhat comfortable",
+                    "Neutral",
+                    "Somewhat uncomfortable",
+                    "Very uncomfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe any barriers you face in accessing mental health support at work.",
+            "answer_options": [],
+            "routing_logic": "This question appears if Q5 response is 'Somewhat uncomfortable' or 'Very uncomfortable'.",
+            "client_notes": "Open-ended question to capture detailed feedback. Ensure respondents feel safe providing honest answers.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "Please describe any barriers you face in accessing mental health support at work.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if Q5 response is 'Somewhat uncomfortable' or 'Very uncomfortable'."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How often do you take breaks during your workday to manage stress?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a Likert scale to measure break frequency. Consider follow-up questions for those who rarely or never take breaks.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you take breaks during your workday to manage stress?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What types of breaks do you find most effective for managing stress? (Select all that apply)",
+            "answer_options": [
+                "Short walks",
+                "Mindfulness exercises",
+                "Socializing with colleagues",
+                "Reading or listening to music",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q7 response is 'Multiple times a day', 'Once a day', or 'A few times a week'.",
+            "client_notes": "Allow multiple selections to identify effective break activities. Include an 'Other' option for additional methods.",
+            "scripter_notes": "Field type: multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What types of breaks do you find most effective for managing stress? (Select all that apply)",
+                "answer_options": [
+                    "Short walks",
+                    "Mindfulness exercises",
+                    "Socializing with colleagues",
+                    "Reading or listening to music",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q7 response is 'Multiple times a day', 'Once a day', or 'A few times a week'."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How often do you feel that your work negatively impacts your personal life?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Always"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a Likert scale to assess work-life balance. Consider follow-up questions for those who often or always feel impacted.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you feel that your work negatively impacts your personal life?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What changes would improve your work-life balance?",
+            "answer_options": [],
+            "routing_logic": "This question appears if Q9 response is 'Sometimes', 'Often', or 'Always'.",
+            "client_notes": "Open-ended question to capture detailed suggestions. Ensure anonymity to encourage honest feedback.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What changes would improve your work-life balance?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if Q9 response is 'Sometimes', 'Often', or 'Always'."
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How supported do you feel by your colleagues in managing work-related stress?",
+            "answer_options": [
+                "Very supported",
+                "Somewhat supported",
+                "Neutral",
+                "Somewhat unsupported",
+                "Very unsupported"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a Likert scale to measure perceived support. Consider follow-up questions for those who feel unsupported.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How supported do you feel by your colleagues in managing work-related stress?",
+                "answer_options": [
+                    "Very supported",
+                    "Somewhat supported",
+                    "Neutral",
+                    "Somewhat unsupported",
+                    "Very unsupported"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "What specific actions could your colleagues take to better support your mental health?",
+            "answer_options": [],
+            "routing_logic": "This question appears if Q11 response is 'Somewhat unsupported' or 'Very unsupported'.",
+            "client_notes": "Open-ended question to capture actionable suggestions. Ensure anonymity to encourage honest feedback.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What specific actions could your colleagues take to better support your mental health?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if Q11 response is 'Somewhat unsupported' or 'Very unsupported'."
+            }
+        },
+        {
+            "qid": "Q13",
+            "question_text": "How often do you participate in workplace wellness programs?",
+            "answer_options": [
+                "Regularly",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears if Q3 response is 'Very satisfied', 'Satisfied', or 'Neutral'.",
+            "client_notes": "Use a Likert scale to measure participation frequency. Consider follow-up questions for those who rarely or never participate.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you participate in workplace wellness programs?",
+                "answer_options": [
+                    "Regularly",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q3 response is 'Very satisfied', 'Satisfied', or 'Neutral'."
+            }
+        },
+        {
+            "qid": "Q14",
+            "question_text": "What factors prevent you from participating in workplace wellness programs? (Select all that apply)",
+            "answer_options": [
+                "Lack of time",
+                "Programs are not relevant to my needs",
+                "Unaware of available programs",
+                "Scheduling conflicts",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q13 response is 'Rarely' or 'Never'.",
+            "client_notes": "Allow multiple selections to identify barriers. Include an 'Other' option for additional factors.",
+            "scripter_notes": "Field type: multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What factors prevent you from participating in workplace wellness programs? (Select all that apply)",
+                "answer_options": [
+                    "Lack of time",
+                    "Programs are not relevant to my needs",
+                    "Unaware of available programs",
+                    "Scheduling conflicts",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q13 response is 'Rarely' or 'Never'."
+            }
+        },
+        {
+            "qid": "Q15",
+            "question_text": "What additional feedback do you have regarding mental health and well-being at your workplace?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Open-ended question to capture any additional feedback. Ensure anonymity to encourage honest responses.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What additional feedback do you have regarding mental health and well-being at your workplace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

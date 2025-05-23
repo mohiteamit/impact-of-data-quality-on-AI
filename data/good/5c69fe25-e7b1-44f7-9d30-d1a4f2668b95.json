@@ -1,0 +1,259 @@
+{
+    "survey_id": "5c69fe25-e7b1-44f7-9d30-d1a4f2668b95",
+    "survey_name": "Fitness App User Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from users of fitness apps to understand their satisfaction levels, usage patterns, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use a fitness app?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a simple frequency scale. Ensure options cover all possible usage patterns.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you use a fitness app?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you use most in your fitness app? (Select all that apply)",
+            "answer_options": [
+                "Workout tracking",
+                "Diet/nutrition tracking",
+                "Step counter",
+                "Heart rate monitoring",
+                "Community/social features",
+                "Personalized coaching",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1",
+            "client_notes": "Include an 'Other' option to capture unlisted features.",
+            "scripter_notes": "Multi-choice checkboxes with an open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which features do you use most in your fitness app? (Select all that apply)",
+                "answer_options": [
+                    "Workout tracking",
+                    "Diet/nutrition tracking",
+                    "Step counter",
+                    "Heart rate monitoring",
+                    "Community/social features",
+                    "Personalized coaching",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you use a fitness app?",
+            "answer_options": [
+                "Weight loss",
+                "Muscle gain",
+                "General fitness",
+                "Health monitoring",
+                "Motivation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1",
+            "client_notes": "Include an 'Other' option to capture unlisted reasons.",
+            "scripter_notes": "Single-choice radio buttons with an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you use a fitness app?",
+                "answer_options": [
+                    "Weight loss",
+                    "Muscle gain",
+                    "General fitness",
+                    "Health monitoring",
+                    "Motivation",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current fitness app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1",
+            "client_notes": "Use a standard Likert scale for satisfaction measurement.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with your current fitness app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in your fitness app?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'Neutral', 'Dissatisfied', or 'Very dissatisfied' to Q4",
+            "client_notes": "Open-ended question to gather qualitative feedback.",
+            "scripter_notes": "Open-text field.",
+            "script": {
+                "question_text": "What improvements would you like to see in your fitness app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'Neutral', 'Dissatisfied', or 'Very dissatisfied' to Q4"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you paid for premium features in a fitness app?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1",
+            "client_notes": "Simple yes/no question to gauge willingness to pay for premium features.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "Have you paid for premium features in a fitness app?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How much would you be willing to pay for a premium fitness app per month?",
+            "answer_options": [
+                "Less than $5",
+                "$5 - $10",
+                "$10 - $15",
+                "$15 - $20",
+                "More than $20"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q6 or 'No' to Q6",
+            "client_notes": "Use a range of price points to assess willingness to pay.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How much would you be willing to pay for a premium fitness app per month?",
+                "answer_options": [
+                    "Less than $5",
+                    "$5 - $10",
+                    "$10 - $15",
+                    "$15 - $20",
+                    "More than $20"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q6 or 'No' to Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What devices do you primarily use to access your fitness app? (Select all that apply)",
+            "answer_options": [
+                "Smartphone",
+                "Tablet",
+                "Smartwatch",
+                "Computer/laptop",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1",
+            "client_notes": "Include an 'Other' option to capture unlisted devices.",
+            "scripter_notes": "Multi-choice checkboxes with an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What devices do you primarily use to access your fitness app? (Select all that apply)",
+                "answer_options": [
+                    "Smartphone",
+                    "Tablet",
+                    "Smartwatch",
+                    "Computer/laptop",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to recommend your fitness app to a friend or colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1",
+            "client_notes": "Use a standard Likert scale for recommendation likelihood.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How likely are you to recommend your fitness app to a friend or colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your age group?",
+            "answer_options": [
+                "Under 18",
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55-64",
+                "65 or older"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use standard age brackets for demographic analysis.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "What is your age group?",
+                "answer_options": [
+                    "Under 18",
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55-64",
+                    "65 or older"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

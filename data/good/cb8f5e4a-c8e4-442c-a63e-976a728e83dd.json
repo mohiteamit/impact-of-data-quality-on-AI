@@ -1,0 +1,279 @@
+{
+    "survey_id": "cb8f5e4a-c8e4-442c-a63e-976a728e83dd",
+    "survey_name": "Smart Home Technology Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer adoption, preferences, and concerns regarding smart home technology.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home devices do you currently own? (Select all that apply)",
+            "answer_options": [
+                "Smart thermostat",
+                "Smart lighting",
+                "Smart security system",
+                "Smart speaker (e.g., Amazon Echo, Google Home)",
+                "Smart TV",
+                "Smart appliances (e.g., refrigerator, washing machine)",
+                "None of the above"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a multi-choice format to allow multiple selections. Ensure 'None of the above' is included for respondents without smart home devices.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox). Randomize answer options to avoid bias.",
+            "script": {
+                "question_text": "Which of the following smart home devices do you currently own? (Select all that apply)",
+                "answer_options": [
+                    "Smart thermostat",
+                    "Smart lighting",
+                    "Smart security system",
+                    "Smart speaker (e.g., Amazon Echo, Google Home)",
+                    "Smart TV",
+                    "Smart appliances (e.g., refrigerator, washing machine)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your smart home devices?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (I do not own any smart home devices)"
+            ],
+            "routing_logic": "Show if Q1 does not include 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale. Include 'Not applicable' for respondents without devices.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button). Display logic based on Q1 response.",
+            "script": {
+                "question_text": "How satisfied are you with your smart home devices?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (I do not own any smart home devices)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 does not include 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you have not adopted smart home technology?",
+            "answer_options": [
+                "High cost",
+                "Privacy concerns",
+                "Lack of perceived benefit",
+                "Technical complexity",
+                "Prefer traditional devices",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 includes 'None of the above'",
+            "client_notes": "Include an 'Other' option with an open-text field for additional responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you have not adopted smart home technology?",
+                "answer_options": [
+                    "High cost",
+                    "Privacy concerns",
+                    "Lack of perceived benefit",
+                    "Technical complexity",
+                    "Prefer traditional devices",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 includes 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to purchase a smart home device in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point Likert scale to measure purchase intent.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button). Randomize answer options to avoid bias.",
+            "script": {
+                "question_text": "How likely are you to purchase a smart home device in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features are most important to you when selecting a smart home device? (Select up to 3)",
+            "answer_options": [
+                "Ease of use",
+                "Integration with other devices",
+                "Privacy and data security",
+                "Energy efficiency",
+                "Cost",
+                "Brand reputation",
+                "Customer support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Limit selections to 3 to prioritize top features. Include 'Other' for additional responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE with a max selection of 3. Include an open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What features are most important to you when selecting a smart home device? (Select up to 3)",
+                "answer_options": [
+                    "Ease of use",
+                    "Integration with other devices",
+                    "Privacy and data security",
+                    "Energy efficiency",
+                    "Cost",
+                    "Brand reputation",
+                    "Customer support",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What concerns, if any, do you have about using smart home technology?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended question to capture qualitative insights.",
+            "scripter_notes": "Field type: OPEN_TEXT. Use a text box for detailed responses.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using smart home technology?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which of the following brands are you most familiar with in the smart home technology space? (Select all that apply)",
+            "answer_options": [
+                "Amazon (e.g., Alexa, Ring)",
+                "Google (e.g., Nest, Google Home)",
+                "Apple (e.g., HomeKit)",
+                "Samsung SmartThings",
+                "Philips Hue",
+                "Other (please specify)",
+                "None of the above"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a multi-choice format. Include 'Other' and 'None of the above' options.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox). Randomize answer options to avoid bias.",
+            "script": {
+                "question_text": "Which of the following brands are you most familiar with in the smart home technology space? (Select all that apply)",
+                "answer_options": [
+                    "Amazon (e.g., Alexa, Ring)",
+                    "Google (e.g., Nest, Google Home)",
+                    "Apple (e.g., HomeKit)",
+                    "Samsung SmartThings",
+                    "Philips Hue",
+                    "Other (please specify)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How important is voice control (e.g., Alexa, Google Assistant) in your decision to purchase smart home devices?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point Likert scale to measure importance.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button). Randomize answer options to avoid bias.",
+            "script": {
+                "question_text": "How important is voice control (e.g., Alexa, Google Assistant) in your decision to purchase smart home devices?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is your age group?",
+            "answer_options": [
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55-64",
+                "65+"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Standard demographic question. Use single-choice format.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "What is your age group?",
+                "answer_options": [
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55-64",
+                    "65+"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your household income range?",
+            "answer_options": [
+                "Under $30,000",
+                "$30,000 - $59,999",
+                "$60,000 - $89,999",
+                "$90,000 - $119,999",
+                "$120,000 - $149,999",
+                "$150,000 or more",
+                "Prefer not to say"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Standard demographic question. Include 'Prefer not to say' option.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "What is your household income range?",
+                "answer_options": [
+                    "Under $30,000",
+                    "$30,000 - $59,999",
+                    "$60,000 - $89,999",
+                    "$90,000 - $119,999",
+                    "$120,000 - $149,999",
+                    "$150,000 or more",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

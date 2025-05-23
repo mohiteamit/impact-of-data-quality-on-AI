@@ -1,0 +1,265 @@
+{
+    "survey_id": "f869e982-83a7-4f3b-83bb-fbbc673d0f0f",
+    "survey_name": "Urban Mobility and Micromobility Preferences Survey",
+    "survey_brief": "This survey aims to understand public preferences and experiences with urban mobility solutions, particularly focusing on micromobility options like e-scooters and bike-sharing programs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following urban mobility options do you use at least once a month? (Select all that apply)",
+            "answer_options": [
+                "Personal car",
+                "Public transit (bus, subway, tram)",
+                "Bike-sharing",
+                "E-scooter sharing",
+                "Ride-sharing services (Uber, Lyft)",
+                "Walking",
+                "Personal bicycle"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use checkboxes for multi-select. Ensure options cover common urban mobility choices.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "Which of the following urban mobility options do you use at least once a month? (Select all that apply)",
+                "answer_options": [
+                    "Personal car",
+                    "Public transit (bus, subway, tram)",
+                    "Bike-sharing",
+                    "E-scooter sharing",
+                    "Ride-sharing services (Uber, Lyft)",
+                    "Walking",
+                    "Personal bicycle"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the availability of micromobility options (e-scooters, bike-sharing) in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'",
+            "client_notes": "Use a 5-point Likert scale. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the availability of micromobility options (e-scooters, bike-sharing) in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you choose micromobility options over other transportation methods?",
+            "answer_options": [
+                "Cost-effectiveness",
+                "Environmental concerns",
+                "Convenience",
+                "Speed in congested areas",
+                "Health benefits",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'",
+            "client_notes": "Include an 'Other' option with open-text field for specificity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with conditional open-text",
+            "script": {
+                "question_text": "What is the primary reason you choose micromobility options over other transportation methods?",
+                "answer_options": [
+                    "Cost-effectiveness",
+                    "Environmental concerns",
+                    "Convenience",
+                    "Speed in congested areas",
+                    "Health benefits",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you encounter issues with dockless micromobility vehicles (e.g., parked improperly, damaged, or hard to find)?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Occasionally",
+                "Frequently",
+                "Always"
+            ],
+            "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'",
+            "client_notes": "Use a 5-point frequency scale.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How often do you encounter issues with dockless micromobility vehicles (e.g., parked improperly, damaged, or hard to find)?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Occasionally",
+                    "Frequently",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would make you more likely to use micromobility options? (Select up to 3)",
+            "answer_options": [
+                "More parking stations/docks",
+                "Lower pricing",
+                "Better vehicle maintenance",
+                "Expanded service areas",
+                "Safety features (e.g., helmets, lights)",
+                "Mobile app improvements",
+                "Integration with public transit"
+            ],
+            "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'",
+            "client_notes": "Allow multi-select but cap at 3 choices for data clarity.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max selection limit",
+            "script": {
+                "question_text": "What improvements would make you more likely to use micromobility options? (Select up to 3)",
+                "answer_options": [
+                    "More parking stations/docks",
+                    "Lower pricing",
+                    "Better vehicle maintenance",
+                    "Expanded service areas",
+                    "Safety features (e.g., helmets, lights)",
+                    "Mobile app improvements",
+                    "Integration with public transit"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How concerned are you about safety when using micromobility options?",
+            "answer_options": [
+                "Very concerned",
+                "Somewhat concerned",
+                "Neutral",
+                "Somewhat unconcerned",
+                "Very unconcerned"
+            ],
+            "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'",
+            "client_notes": "Use a 5-point Likert scale.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How concerned are you about safety when using micromobility options?",
+                "answer_options": [
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Neutral",
+                    "Somewhat unconcerned",
+                    "Very unconcerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What is your primary use case for micromobility options?",
+            "answer_options": [
+                "Commuting to work/school",
+                "Running errands",
+                "Leisure/recreation",
+                "Connecting to public transit",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'",
+            "client_notes": "Include an 'Other' option with open-text field.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with conditional open-text",
+            "script": {
+                "question_text": "What is your primary use case for micromobility options?",
+                "answer_options": [
+                    "Commuting to work/school",
+                    "Running errands",
+                    "Leisure/recreation",
+                    "Connecting to public transit",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Would you support more dedicated bike lanes in your city to improve micromobility safety?",
+            "answer_options": [
+                "Strongly support",
+                "Somewhat support",
+                "Neutral",
+                "Somewhat oppose",
+                "Strongly oppose"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point Likert scale.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Would you support more dedicated bike lanes in your city to improve micromobility safety?",
+                "answer_options": [
+                    "Strongly support",
+                    "Somewhat support",
+                    "Neutral",
+                    "Somewhat oppose",
+                    "Strongly oppose"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is the maximum distance (one-way) you would consider using micromobility options for?",
+            "answer_options": [
+                "Less than 1 mile",
+                "1-3 miles",
+                "3-5 miles",
+                "5-10 miles",
+                "More than 10 miles"
+            ],
+            "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'",
+            "client_notes": "Use radio buttons for single selection.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "What is the maximum distance (one-way) you would consider using micromobility options for?",
+                "answer_options": [
+                    "Less than 1 mile",
+                    "1-3 miles",
+                    "3-5 miles",
+                    "5-10 miles",
+                    "More than 10 miles"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional features would you like to see in micromobility services?",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'",
+            "client_notes": "Open-ended question to capture innovative ideas.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What additional features would you like to see in micromobility services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 includes 'Bike-sharing' or 'E-scooter sharing'"
+            }
+        }
+    ]
+}

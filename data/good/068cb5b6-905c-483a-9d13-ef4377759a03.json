@@ -1,0 +1,231 @@
+{
+    "survey_id": "068cb5b6-905c-483a-9d13-ef4377759a03",
+    "survey_name": "Healthcare Patient Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from patients about their recent healthcare experiences to improve service quality and patient satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the overall quality of care you received during your recent visit?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency and ease of analysis.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of care you received during your recent visit?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How would you rate the cleanliness of the facility?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Fair",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure the scale is clearly labeled to avoid ambiguity.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How would you rate the cleanliness of the facility?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Fair",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How long did you wait before being seen by a healthcare provider?",
+            "answer_options": [
+                "Less than 15 minutes",
+                "15-30 minutes",
+                "30-45 minutes",
+                "45-60 minutes",
+                "More than 60 minutes"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Provide clear time ranges to ensure accurate responses.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How long did you wait before being seen by a healthcare provider?",
+                "answer_options": [
+                    "Less than 15 minutes",
+                    "15-30 minutes",
+                    "30-45 minutes",
+                    "45-60 minutes",
+                    "More than 60 minutes"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Were the healthcare providers courteous and respectful?",
+            "answer_options": [
+                "Yes, always",
+                "Yes, most of the time",
+                "Sometimes",
+                "No, rarely",
+                "No, never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a frequency scale to capture nuanced responses.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Were the healthcare providers courteous and respectful?",
+                "answer_options": [
+                    "Yes, always",
+                    "Yes, most of the time",
+                    "Sometimes",
+                    "No, rarely",
+                    "No, never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Did you receive clear and understandable explanations about your treatment or condition?",
+            "answer_options": [
+                "Yes, completely",
+                "Yes, somewhat",
+                "No, not really",
+                "No, not at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an option for partial understanding.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Did you receive clear and understandable explanations about your treatment or condition?",
+                "answer_options": [
+                    "Yes, completely",
+                    "Yes, somewhat",
+                    "No, not really",
+                    "No, not at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which of the following services did you use during your visit? (Select all that apply)",
+            "answer_options": [
+                "Primary care consultation",
+                "Specialist consultation",
+                "Diagnostic tests (e.g., blood work, X-rays)",
+                "Pharmacy services",
+                "Emergency services",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture comprehensive service usage.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following services did you use during your visit? (Select all that apply)",
+                "answer_options": [
+                    "Primary care consultation",
+                    "Specialist consultation",
+                    "Diagnostic tests (e.g., blood work, X-rays)",
+                    "Pharmacy services",
+                    "Emergency services",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Please specify any other services you used during your visit.",
+            "answer_options": [],
+            "routing_logic": "If 'Other' is selected in Q6",
+            "client_notes": "Use an open-ended field to capture unlisted services.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "Please specify any other services you used during your visit.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If 'Other' is selected in Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend our healthcare facility to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Net Promoter Score (NPS) question to gauge patient loyalty.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend our healthcare facility to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What was the most positive aspect of your visit?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What was the most positive aspect of your visit?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What could we improve to enhance your experience in the future?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to identify areas for improvement.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What could we improve to enhance your experience in the future?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

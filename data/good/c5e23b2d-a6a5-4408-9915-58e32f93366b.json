@@ -1,0 +1,261 @@
+{
+    "survey_id": "c5e23b2d-a6a5-4408-9915-58e32f93366b",
+    "survey_name": "Mobile Payment App Security Perception Survey",
+    "survey_brief": "This survey aims to understand user perceptions and concerns regarding security features in mobile payment applications.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which mobile payment apps do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Apple Pay",
+                "Google Pay",
+                "Samsung Pay",
+                "PayPal",
+                "Venmo",
+                "Cash App",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to capture all relevant apps. Include an 'Other' option with a text field for manual entry.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional text input for 'Other'.",
+            "script": {
+                "question_text": "Which mobile payment apps do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Apple Pay",
+                    "Google Pay",
+                    "Samsung Pay",
+                    "PayPal",
+                    "Venmo",
+                    "Cash App",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you use mobile payment apps?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format with clear frequency options.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How often do you use mobile payment apps?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary reason for using mobile payment apps?",
+            "answer_options": [
+                "Convenience",
+                "Speed of transactions",
+                "Security features",
+                "Rewards or cashback",
+                "Peer-to-peer payments",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents who selected any app in Q1",
+            "client_notes": "Single-choice with an 'Other' option for manual entry.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional text input for 'Other'.",
+            "script": {
+                "question_text": "What is your primary reason for using mobile payment apps?",
+                "answer_options": [
+                    "Convenience",
+                    "Speed of transactions",
+                    "Security features",
+                    "Rewards or cashback",
+                    "Peer-to-peer payments",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected any app in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the security features of your primary mobile payment app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents who selected any app in Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How satisfied are you with the security features of your primary mobile payment app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected any app in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which security features are most important to you when using a mobile payment app? (Select up to 3)",
+            "answer_options": [
+                "Biometric authentication (e.g., fingerprint, face ID)",
+                "Two-factor authentication",
+                "End-to-end encryption",
+                "Fraud detection alerts",
+                "Transaction limits",
+                "Remote app locking",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents who selected any app in Q1",
+            "client_notes": "Multi-choice with a limit of 3 selections to prioritize features.",
+            "scripter_notes": "Field type: MULTI_CHOICE with a max selection limit of 3.",
+            "script": {
+                "question_text": "Which security features are most important to you when using a mobile payment app? (Select up to 3)",
+                "answer_options": [
+                    "Biometric authentication (e.g., fingerprint, face ID)",
+                    "Two-factor authentication",
+                    "End-to-end encryption",
+                    "Fraud detection alerts",
+                    "Transaction limits",
+                    "Remote app locking",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents who selected any app in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you ever experienced a security issue (e.g., unauthorized transaction, account breach) with a mobile payment app?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Prefer not to say"
+            ],
+            "routing_logic": "All respondents who selected any app in Q1",
+            "client_notes": "Single-choice with a neutral option for privacy.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "Have you ever experienced a security issue (e.g., unauthorized transaction, account breach) with a mobile payment app?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected any app in Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If yes, how was the issue resolved?",
+            "answer_options": [
+                "Automatically by the app",
+                "After contacting customer support",
+                "Issue remains unresolved",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Yes' in Q6",
+            "client_notes": "Single-choice with an 'Other' option for manual entry.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional text input for 'Other'.",
+            "script": {
+                "question_text": "If yes, how was the issue resolved?",
+                "answer_options": [
+                    "Automatically by the app",
+                    "After contacting customer support",
+                    "Issue remains unresolved",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Yes' in Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend your primary mobile payment app to others based on its security features?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents who selected any app in Q1",
+            "client_notes": "Use a Likert scale for likelihood measurement.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How likely are you to recommend your primary mobile payment app to others based on its security features?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected any app in Q1"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What additional security features would you like to see in mobile payment apps?",
+            "answer_options": [],
+            "routing_logic": "All respondents who selected any app in Q1",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT.",
+            "script": {
+                "question_text": "What additional security features would you like to see in mobile payment apps?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents who selected any app in Q1"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your age group?",
+            "answer_options": [
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55+",
+                "Prefer not to say"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice with a neutral option for privacy.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "What is your age group?",
+                "answer_options": [
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55+",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

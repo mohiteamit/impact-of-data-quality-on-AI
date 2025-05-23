@@ -1,0 +1,231 @@
+{
+    "survey_id": "dc7db13d-936f-4f31-ae48-b15ca369237f",
+    "survey_name": "Cybersecurity Awareness and Practices Survey",
+    "survey_brief": "This survey aims to assess employees' awareness of cybersecurity threats and their adherence to best practices in the workplace.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you receive cybersecurity training from your organization?",
+            "answer_options": [
+                "Never",
+                "Once a year",
+                "Twice a year",
+                "Quarterly",
+                "Monthly or more frequently"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you receive cybersecurity training from your organization?",
+                "answer_options": [
+                    "Never",
+                    "Once a year",
+                    "Twice a year",
+                    "Quarterly",
+                    "Monthly or more frequently"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following cybersecurity threats are you most concerned about? (Select all that apply)",
+            "answer_options": [
+                "Phishing attacks",
+                "Ransomware",
+                "Data breaches",
+                "Malware",
+                "Insider threats",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-choice responses. Include 'None of the above' to capture all responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following cybersecurity threats are you most concerned about? (Select all that apply)",
+                "answer_options": [
+                    "Phishing attacks",
+                    "Ransomware",
+                    "Data breaches",
+                    "Malware",
+                    "Insider threats",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Do you use a password manager to store and manage your passwords?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I don't know what a password manager is"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question. Include an option for respondents unfamiliar with password managers.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Do you use a password manager to store and manage your passwords?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I don't know what a password manager is"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you update your passwords for work-related accounts?",
+            "answer_options": [
+                "Never",
+                "Only when required",
+                "Every 6 months",
+                "Every 3 months",
+                "Monthly or more frequently"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' or 'No' to Q3",
+            "client_notes": "Single-choice question. Ensure options cover a range of frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you update your passwords for work-related accounts?",
+                "answer_options": [
+                    "Never",
+                    "Only when required",
+                    "Every 6 months",
+                    "Every 3 months",
+                    "Monthly or more frequently"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' or 'No' to Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Describe any challenges you face in following cybersecurity best practices at work.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative insights. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "Describe any challenges you face in following cybersecurity best practices at work.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you ever encountered a cybersecurity incident (e.g., phishing email, malware) at work?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I'm not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question. Include an option for uncertain respondents.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Have you ever encountered a cybersecurity incident (e.g., phishing email, malware) at work?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I'm not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If you encountered a cybersecurity incident, how did you report it? (Select all that apply)",
+            "answer_options": [
+                "Reported to IT department",
+                "Reported to supervisor",
+                "Did not report it",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q6",
+            "client_notes": "Multi-choice question with an 'Other' option for additional details.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "If you encountered a cybersecurity incident, how did you report it? (Select all that apply)",
+                "answer_options": [
+                    "Reported to IT department",
+                    "Reported to supervisor",
+                    "Did not report it",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How confident are you in identifying a phishing email?",
+            "answer_options": [
+                "Not confident at all",
+                "Slightly confident",
+                "Moderately confident",
+                "Very confident",
+                "Extremely confident"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question with a Likert scale for confidence levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How confident are you in identifying a phishing email?",
+                "answer_options": [
+                    "Not confident at all",
+                    "Slightly confident",
+                    "Moderately confident",
+                    "Very confident",
+                    "Extremely confident"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Does your organization have a clear policy for handling cybersecurity incidents?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I'm not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to assess policy awareness.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Does your organization have a clear policy for handling cybersecurity incidents?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I'm not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional cybersecurity training or resources would you find helpful?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather suggestions for improvement.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What additional cybersecurity training or resources would you find helpful?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

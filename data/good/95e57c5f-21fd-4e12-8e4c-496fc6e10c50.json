@@ -1,0 +1,231 @@
+{
+    "survey_id": "95e57c5f-21fd-4e12-8e4c-496fc6e10c50",
+    "survey_name": "Corporate Remote Work Cybersecurity Practices Survey",
+    "survey_brief": "This survey aims to evaluate the cybersecurity practices and awareness among employees working remotely, identifying potential vulnerabilities and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you receive cybersecurity training from your employer?",
+            "answer_options": [
+                "Never",
+                "Once a year",
+                "Twice a year",
+                "Quarterly",
+                "Monthly or more frequently"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a frequency scale to gauge training regularity. Ensure options are exhaustive.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How often do you receive cybersecurity training from your employer?",
+                "answer_options": [
+                    "Never",
+                    "Once a year",
+                    "Twice a year",
+                    "Quarterly",
+                    "Monthly or more frequently"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following cybersecurity tools does your employer provide? (Select all that apply)",
+            "answer_options": [
+                "VPN",
+                "Antivirus software",
+                "Password manager",
+                "Two-factor authentication (2FA)",
+                "Encrypted email",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Multi-select question to identify tool availability. Include 'None' to capture gaps.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes).",
+            "script": {
+                "question_text": "Which of the following cybersecurity tools does your employer provide? (Select all that apply)",
+                "answer_options": [
+                    "VPN",
+                    "Antivirus software",
+                    "Password manager",
+                    "Two-factor authentication (2FA)",
+                    "Encrypted email",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Have you ever encountered a cybersecurity threat (e.g., phishing, malware) while working remotely?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Binary + unsure option to account for uncertainty. Follow-up with Q4 if 'Yes'.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "Have you ever encountered a cybersecurity threat (e.g., phishing, malware) while working remotely?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you encountered a cybersecurity threat, how did you respond?",
+            "answer_options": [
+                "Reported it to IT",
+                "Ignored it",
+                "Resolved it myself",
+                "Unsure what to do"
+            ],
+            "routing_logic": "Shows only if Q3 is 'Yes'.",
+            "client_notes": "Assesses incident response behavior. 'Unsure' option critical for training gaps.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Conditional display based on Q3.",
+            "script": {
+                "question_text": "If you encountered a cybersecurity threat, how did you respond?",
+                "answer_options": [
+                    "Reported it to IT",
+                    "Ignored it",
+                    "Resolved it myself",
+                    "Unsure what to do"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shows only if Q3 is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How confident are you in identifying phishing emails?",
+            "answer_options": [
+                "Very confident",
+                "Somewhat confident",
+                "Neutral",
+                "Not very confident",
+                "Not confident at all"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Likert scale to measure confidence. Helps target training needs.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How confident are you in identifying phishing emails?",
+                "answer_options": [
+                    "Very confident",
+                    "Somewhat confident",
+                    "Neutral",
+                    "Not very confident",
+                    "Not confident at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Do you use a personal device for work tasks?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No, only company-provided devices"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Critical for BYOD policy evaluation. Include frequency to assess risk.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "Do you use a personal device for work tasks?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No, only company-provided devices"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How often do you update the software on your work devices?",
+            "answer_options": [
+                "Automatically, as soon as updates are available",
+                "Manually, within a week of notification",
+                "Manually, but often delayed",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears if Q6 is not 'No, only company-provided devices'.",
+            "client_notes": "Assesses patching habits. Automation vs. manual behavior is key.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Conditional display based on Q6.",
+            "script": {
+                "question_text": "How often do you update the software on your work devices?",
+                "answer_options": [
+                    "Automatically, as soon as updates are available",
+                    "Manually, within a week of notification",
+                    "Manually, but often delayed",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q6 is not 'No, only company-provided devices'."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Describe any cybersecurity challenges you face while working remotely.",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended to capture unanticipated issues. Limit to 250 characters.",
+            "scripter_notes": "Field type: Open-text (text area).",
+            "script": {
+                "question_text": "Describe any cybersecurity challenges you face while working remotely.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Does your employer enforce a password policy (e.g., complexity requirements, regular changes)?",
+            "answer_options": [
+                "Yes, strictly enforced",
+                "Yes, but not strictly enforced",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Tests awareness of password policies. 'Unsure' indicates communication gaps.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "Does your employer enforce a password policy (e.g., complexity requirements, regular changes)?",
+                "answer_options": [
+                    "Yes, strictly enforced",
+                    "Yes, but not strictly enforced",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional cybersecurity support would you find helpful?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended to gather employee suggestions. Limit to 200 characters.",
+            "scripter_notes": "Field type: Open-text (text area).",
+            "script": {
+                "question_text": "What additional cybersecurity support would you find helpful?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

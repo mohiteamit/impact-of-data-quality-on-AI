@@ -1,0 +1,263 @@
+{
+    "survey_id": "db8d7a78-efb9-4752-8c9c-f3a83ad13102",
+    "survey_name": "Post-Pandemic Fitness Habits Survey",
+    "survey_brief": "This survey aims to understand how fitness habits have evolved post-pandemic, including preferences for in-person vs. virtual workouts, changes in fitness goals, and barriers to maintaining a regular fitness routine.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you currently engage in physical exercise per week?",
+            "answer_options": [
+                "Not at all",
+                "1-2 times",
+                "3-4 times",
+                "5 or more times"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options are exhaustive and mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you currently engage in physical exercise per week?",
+                "answer_options": [
+                    "Not at all",
+                    "1-2 times",
+                    "3-4 times",
+                    "5 or more times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of exercise do you typically engage in? (Select all that apply)",
+            "answer_options": [
+                "Running/Jogging",
+                "Weightlifting",
+                "Yoga/Pilates",
+                "Cycling",
+                "Swimming",
+                "HIIT/Interval Training",
+                "Team Sports",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice checkbox format. Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which types of exercise do you typically engage in? (Select all that apply)",
+                "answer_options": [
+                    "Running/Jogging",
+                    "Weightlifting",
+                    "Yoga/Pilates",
+                    "Cycling",
+                    "Swimming",
+                    "HIIT/Interval Training",
+                    "Team Sports",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Compared to before the pandemic, how has your frequency of exercise changed?",
+            "answer_options": [
+                "Increased significantly",
+                "Increased slightly",
+                "Stayed the same",
+                "Decreased slightly",
+                "Decreased significantly"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for measuring changes in behavior.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Compared to before the pandemic, how has your frequency of exercise changed?",
+                "answer_options": [
+                    "Increased significantly",
+                    "Increased slightly",
+                    "Stayed the same",
+                    "Decreased slightly",
+                    "Decreased significantly"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Do you prefer in-person gym workouts, virtual/home workouts, or a mix of both?",
+            "answer_options": [
+                "In-person gym workouts only",
+                "Virtual/home workouts only",
+                "A mix of both",
+                "I do not currently exercise"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an option for respondents who do not exercise to avoid forcing inaccurate answers.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Do you prefer in-person gym workouts, virtual/home workouts, or a mix of both?",
+                "answer_options": [
+                    "In-person gym workouts only",
+                    "Virtual/home workouts only",
+                    "A mix of both",
+                    "I do not currently exercise"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What are the primary barriers preventing you from exercising more regularly? (Select up to 3)",
+            "answer_options": [
+                "Lack of time",
+                "Lack of motivation",
+                "Cost of gym memberships/fitness classes",
+                "Limited access to equipment/facilities",
+                "Health/physical limitations",
+                "Prefer other leisure activities",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents except those who answered '5 or more times' to Q1",
+            "client_notes": "Use a multi-choice format with a max selection limit of 3.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with validation for max 3 selections.",
+            "script": {
+                "question_text": "What are the primary barriers preventing you from exercising more regularly? (Select up to 3)",
+                "answer_options": [
+                    "Lack of time",
+                    "Lack of motivation",
+                    "Cost of gym memberships/fitness classes",
+                    "Limited access to equipment/facilities",
+                    "Health/physical limitations",
+                    "Prefer other leisure activities",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents except those who answered '5 or more times' to Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you used any fitness apps or online platforms (e.g., Peloton, Nike Training Club, YouTube workouts) in the past year?",
+            "answer_options": [
+                "Yes, regularly",
+                "Yes, occasionally",
+                "No, but I am interested",
+                "No, not interested"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format to gauge adoption and interest in digital fitness tools.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Have you used any fitness apps or online platforms (e.g., Peloton, Nike Training Club, YouTube workouts) in the past year?",
+                "answer_options": [
+                    "Yes, regularly",
+                    "Yes, occasionally",
+                    "No, but I am interested",
+                    "No, not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If you use fitness apps/platforms, what features do you value the most? (Select all that apply)",
+            "answer_options": [
+                "Personalized workout plans",
+                "Live/on-demand classes",
+                "Progress tracking",
+                "Community/social features",
+                "Cost/free content",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Yes, regularly' or 'Yes, occasionally' to Q6",
+            "client_notes": "Use a multi-choice format to identify key features driving engagement.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "If you use fitness apps/platforms, what features do you value the most? (Select all that apply)",
+                "answer_options": [
+                    "Personalized workout plans",
+                    "Live/on-demand classes",
+                    "Progress tracking",
+                    "Community/social features",
+                    "Cost/free content",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes, regularly' or 'Yes, occasionally' to Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How much do you typically spend monthly on fitness-related activities (e.g., gym memberships, classes, equipment)?",
+            "answer_options": [
+                "$0",
+                "$1-$20",
+                "$21-$50",
+                "$51-$100",
+                "More than $100"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format with clear monetary ranges to gauge spending habits.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How much do you typically spend monthly on fitness-related activities (e.g., gym memberships, classes, equipment)?",
+                "answer_options": [
+                    "$0",
+                    "$1-$20",
+                    "$21-$50",
+                    "$51-$100",
+                    "More than $100"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Has your primary motivation for exercising changed since the pandemic? If yes, please describe how.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to gather qualitative insights into shifting motivations.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "Has your primary motivation for exercising changed since the pandemic? If yes, please describe how.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What would encourage you to exercise more frequently? (Select all that apply)",
+            "answer_options": [
+                "More affordable options",
+                "Greater accessibility to facilities",
+                "Accountability (e.g., workout buddy, coach)",
+                "More flexible schedules",
+                "Healthier work-life balance",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents except those who answered '5 or more times' to Q1",
+            "client_notes": "Use a multi-choice format to identify potential motivators.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What would encourage you to exercise more frequently? (Select all that apply)",
+                "answer_options": [
+                    "More affordable options",
+                    "Greater accessibility to facilities",
+                    "Accountability (e.g., workout buddy, coach)",
+                    "More flexible schedules",
+                    "Healthier work-life balance",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents except those who answered '5 or more times' to Q1"
+            }
+        }
+    ]
+}

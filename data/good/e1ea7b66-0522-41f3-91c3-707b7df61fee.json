@@ -1,0 +1,255 @@
+{
+    "survey_id": "e1ea7b66-0522-41f3-91c3-707b7df61fee",
+    "survey_name": "Customer Satisfaction Survey for Online Retail",
+    "survey_brief": "This survey aims to gather feedback from customers about their shopping experience on our online retail platform, focusing on satisfaction levels, ease of use, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your overall shopping experience on our platform?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with your overall shopping experience on our platform?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How easy was it to navigate our website and find the products you were looking for?",
+            "answer_options": [
+                "Very easy",
+                "Easy",
+                "Neutral",
+                "Difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale. Ensure the question is clear and straightforward.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How easy was it to navigate our website and find the products you were looking for?",
+                "answer_options": [
+                    "Very easy",
+                    "Easy",
+                    "Neutral",
+                    "Difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following features do you use most often on our platform? (Select all that apply)",
+            "answer_options": [
+                "Search bar",
+                "Product categories",
+                "Recommended products",
+                "Customer reviews",
+                "Wishlist"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture diverse user behaviors.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following features do you use most often on our platform? (Select all that apply)",
+                "answer_options": [
+                    "Search bar",
+                    "Product categories",
+                    "Recommended products",
+                    "Customer reviews",
+                    "Wishlist"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend our platform to a friend or colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale. This is a key metric for Net Promoter Score (NPS).",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend our platform to a friend or colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What was the primary reason for your most recent purchase on our platform?",
+            "answer_options": [
+                "Price/discount",
+                "Product quality",
+                "Brand reputation",
+                "Convenience",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: radio button with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What was the primary reason for your most recent purchase on our platform?",
+                "answer_options": [
+                    "Price/discount",
+                    "Product quality",
+                    "Brand reputation",
+                    "Convenience",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with the delivery speed of your orders?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents who have made a purchase",
+            "client_notes": "Use a 5-point Likert scale. Ensure the question is relevant only to purchasers.",
+            "scripter_notes": "Field type: radio button (single-choice). Add routing logic to skip if no purchase.",
+            "script": {
+                "question_text": "How satisfied are you with the delivery speed of your orders?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who have made a purchase"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What improvements would you suggest to enhance your shopping experience on our platform?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Keep it optional to reduce respondent burden.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance your shopping experience on our platform?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How often do you shop on our platform?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "This was my first time"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use clear frequency options to gauge customer loyalty.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you shop on our platform?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "This was my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Which device do you primarily use to access our platform?",
+            "answer_options": [
+                "Desktop/laptop",
+                "Smartphone",
+                "Tablet",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: radio button with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which device do you primarily use to access our platform?",
+                "answer_options": [
+                    "Desktop/laptop",
+                    "Smartphone",
+                    "Tablet",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How would you rate the customer service you received (if applicable)?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor",
+                "N/A (I did not contact customer service)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an N/A option for respondents who did not interact with customer service.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How would you rate the customer service you received (if applicable)?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor",
+                    "N/A (I did not contact customer service)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

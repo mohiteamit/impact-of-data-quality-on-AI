@@ -1,0 +1,243 @@
+{
+    "survey_id": "09e04e1e-2e56-46b2-9e96-e8943fa0388b",
+    "survey_name": "Home Office Setup Satisfaction Survey",
+    "survey_brief": "This survey aims to understand satisfaction levels and challenges faced by employees with their current home office setups, to help organizations improve remote work support.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your current home office setup?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure the scale is balanced and easy to understand on both desktop and mobile.",
+            "scripter_notes": "Single-choice radio buttons. Randomize order to avoid bias.",
+            "script": {
+                "question_text": "How satisfied are you with your current home office setup?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following home office equipment has your employer provided? (Select all that apply)",
+            "answer_options": [
+                "Laptop/computer",
+                "Monitor(s)",
+                "Keyboard/mouse",
+                "Desk/chair",
+                "Internet stipend",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multi-select since respondents may have multiple items provided.",
+            "scripter_notes": "Multi-choice checkboxes. Include 'None of the above' as an option.",
+            "script": {
+                "question_text": "Which of the following home office equipment has your employer provided? (Select all that apply)",
+                "answer_options": [
+                    "Laptop/computer",
+                    "Monitor(s)",
+                    "Keyboard/mouse",
+                    "Desk/chair",
+                    "Internet stipend",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the biggest challenge you face with your home office setup?",
+            "answer_options": [
+                "Lack of proper equipment",
+                "Poor internet connectivity",
+                "Noise/distractions",
+                "Limited space",
+                "Uncomfortable furniture",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with a free-text field for additional input.",
+            "scripter_notes": "Single-choice radio buttons with an 'Other' option that triggers a text box.",
+            "script": {
+                "question_text": "What is the biggest challenge you face with your home office setup?",
+                "answer_options": [
+                    "Lack of proper equipment",
+                    "Poor internet connectivity",
+                    "Noise/distractions",
+                    "Limited space",
+                    "Uncomfortable furniture",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you selected 'Other' above, please specify:",
+            "answer_options": [],
+            "routing_logic": "Only if Q3 is 'Other (please specify)'",
+            "client_notes": "This is an open-ended follow-up to Q3. Keep it concise.",
+            "scripter_notes": "Open-text field. Display only if 'Other' is selected in Q3.",
+            "script": {
+                "question_text": "If you selected 'Other' above, please specify:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q3 is 'Other (please specify)'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you experience technical difficulties (e.g., slow internet, hardware issues) while working from home?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a frequency scale. Ensure options cover the full range of possibilities.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you experience technical difficulties (e.g., slow internet, hardware issues) while working from home?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional equipment or support would improve your home office setup?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture diverse needs. Keep it optional.",
+            "scripter_notes": "Open-text field with a character limit of 500.",
+            "script": {
+                "question_text": "What additional equipment or support would improve your home office setup?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Do you have a dedicated workspace in your home?",
+            "answer_options": [
+                "Yes, a separate room",
+                "Yes, a designated area in a shared room",
+                "No, I work from various locations"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Simple single-choice question to understand workspace setup.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "Do you have a dedicated workspace in your home?",
+                "answer_options": [
+                    "Yes, a separate room",
+                    "Yes, a designated area in a shared room",
+                    "No, I work from various locations"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How would you rate the ergonomic comfort of your home office furniture (e.g., chair, desk)?",
+            "answer_options": [
+                "Very comfortable",
+                "Somewhat comfortable",
+                "Neutral",
+                "Somewhat uncomfortable",
+                "Very uncomfortable"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency with Q1.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How would you rate the ergonomic comfort of your home office furniture (e.g., chair, desk)?",
+                "answer_options": [
+                    "Very comfortable",
+                    "Somewhat comfortable",
+                    "Neutral",
+                    "Somewhat uncomfortable",
+                    "Very uncomfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Has your employer offered any financial support for improving your home office setup?",
+            "answer_options": [
+                "Yes, a one-time stipend",
+                "Yes, recurring support",
+                "No, but they plan to",
+                "No, and no plans to offer support"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include all possible support scenarios.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "Has your employer offered any financial support for improving your home office setup?",
+                "answer_options": [
+                    "Yes, a one-time stipend",
+                    "Yes, recurring support",
+                    "No, but they plan to",
+                    "No, and no plans to offer support"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to recommend your current home office setup to a colleague?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a standard Net Promoter Score (NPS) question format.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How likely are you to recommend your current home office setup to a colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

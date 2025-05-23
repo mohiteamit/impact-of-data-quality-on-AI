@@ -1,0 +1,265 @@
+{
+    "survey_id": "db497b8e-ed96-4041-beaa-d24eb4f3ee4f",
+    "survey_name": "AI-Powered Customer Support Experience Survey",
+    "survey_brief": "This survey aims to evaluate customer experiences with AI-powered support tools, identifying strengths and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you interact with AI-powered customer support tools?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a clear frequency scale. Ensure options cover all likely interaction levels.",
+            "scripter_notes": "Single-choice radio buttons. Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "How frequently do you interact with AI-powered customer support tools?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of AI-powered support tools have you used? (Select all that apply)",
+            "answer_options": [
+                "Chatbots",
+                "Virtual assistants",
+                "Automated phone systems",
+                "Email support automation",
+                "None of the above"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Allow multiple selections. Include an opt-out option for clarity.",
+            "scripter_notes": "Multi-choice checkboxes. Display 'None of the above' at the end.",
+            "script": {
+                "question_text": "Which types of AI-powered support tools have you used? (Select all that apply)",
+                "answer_options": [
+                    "Chatbots",
+                    "Virtual assistants",
+                    "Automated phone systems",
+                    "Email support automation",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of responses from AI-powered support tools?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'",
+            "client_notes": "Use a standard 5-point Likert scale for consistency.",
+            "scripter_notes": "Single-choice radio buttons. Label all scale points for clarity.",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of responses from AI-powered support tools?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What do you value most in AI-powered customer support?",
+            "answer_options": [
+                "24/7 availability",
+                "Quick response time",
+                "Consistency in answers",
+                "Ability to handle simple queries",
+                "Integration with human agents when needed"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'",
+            "client_notes": "Prioritize mobile-friendly layout for multi-choice questions.",
+            "scripter_notes": "Multi-choice checkboxes. Randomize order of first four options, keep last option fixed.",
+            "script": {
+                "question_text": "What do you value most in AI-powered customer support?",
+                "answer_options": [
+                    "24/7 availability",
+                    "Quick response time",
+                    "Consistency in answers",
+                    "Ability to handle simple queries",
+                    "Integration with human agents when needed"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you need to escalate to a human agent after using AI support?",
+            "answer_options": [
+                "Almost always",
+                "Frequently",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'",
+            "client_notes": "Include a full range of frequency options to capture meaningful data.",
+            "scripter_notes": "Single-choice radio buttons. Vertical layout for small screens.",
+            "script": {
+                "question_text": "How often do you need to escalate to a human agent after using AI support?",
+                "answer_options": [
+                    "Almost always",
+                    "Frequently",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would you suggest for AI-powered customer support systems?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Open-text field with character counter. Mobile-responsive text area.",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-powered customer support systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to prefer AI-powered support over human support for simple inquiries?",
+            "answer_options": [
+                "Extremely likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Extremely unlikely"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'",
+            "client_notes": "Use balanced wording for the likelihood scale to avoid bias.",
+            "scripter_notes": "Single-choice radio buttons. Include 'Prefer not to answer' option if needed.",
+            "script": {
+                "question_text": "How likely are you to prefer AI-powered support over human support for simple inquiries?",
+                "answer_options": [
+                    "Extremely likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Extremely unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which industries do you think benefit most from AI-powered customer support? (Select up to 3)",
+            "answer_options": [
+                "Banking/Finance",
+                "Retail/E-commerce",
+                "Telecommunications",
+                "Healthcare",
+                "Travel/Hospitality",
+                "Utilities",
+                "Insurance",
+                "Education",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Limit selections to 3 to force prioritization. Include 'Other' with text field.",
+            "scripter_notes": "Multi-choice checkboxes with selection limit. Show 'Other' text field when selected.",
+            "script": {
+                "question_text": "Which industries do you think benefit most from AI-powered customer support? (Select up to 3)",
+                "answer_options": [
+                    "Banking/Finance",
+                    "Retail/E-commerce",
+                    "Telecommunications",
+                    "Healthcare",
+                    "Travel/Hospitality",
+                    "Utilities",
+                    "Insurance",
+                    "Education",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How would you rate the personality/tone of AI support tools you've interacted with?",
+            "answer_options": [
+                "Too robotic",
+                "Somewhat robotic",
+                "Just right",
+                "Somewhat too casual",
+                "Too casual"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'",
+            "client_notes": "Use a balanced scale for tone perception. Avoid leading options.",
+            "scripter_notes": "Single-choice radio buttons. Consider adding visual analog scale alternative.",
+            "script": {
+                "question_text": "How would you rate the personality/tone of AI support tools you've interacted with?",
+                "answer_options": [
+                    "Too robotic",
+                    "Somewhat robotic",
+                    "Just right",
+                    "Somewhat too casual",
+                    "Too casual"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What concerns, if any, do you have about AI-powered customer support?",
+            "answer_options": [
+                "Data privacy",
+                "Lack of human empathy",
+                "Inability to handle complex issues",
+                "Misunderstanding requests",
+                "No concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Include 'No concerns' option to avoid forcing negative responses.",
+            "scripter_notes": "Multi-choice checkboxes. Show 'Other' text field when selected.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about AI-powered customer support?",
+                "answer_options": [
+                    "Data privacy",
+                    "Lack of human empathy",
+                    "Inability to handle complex issues",
+                    "Misunderstanding requests",
+                    "No concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

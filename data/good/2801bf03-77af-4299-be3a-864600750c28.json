@@ -1,0 +1,233 @@
+{
+    "survey_id": "2801bf03-77af-4299-be3a-864600750c28",
+    "survey_name": "Employee Wellness Program Feedback Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the current wellness programs offered by the company to assess effectiveness and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the wellness programs currently offered by your employer?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not familiar at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps gauge awareness levels. Use a Likert scale for clarity.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How familiar are you with the wellness programs currently offered by your employer?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following wellness programs have you participated in within the last 12 months? (Select all that apply)",
+            "answer_options": [
+                "Mental health workshops",
+                "Fitness challenges",
+                "Nutrition counseling",
+                "Financial wellness seminars",
+                "On-site yoga or meditation classes",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-select options. Include 'None of the above' to capture non-participants.",
+            "scripter_notes": "Field type: multi-choice checkboxes.",
+            "script": {
+                "question_text": "Which of the following wellness programs have you participated in within the last 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Mental health workshops",
+                    "Fitness challenges",
+                    "Nutrition counseling",
+                    "Financial wellness seminars",
+                    "On-site yoga or meditation classes",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the wellness programs offered by your employer?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (have not participated)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include a neutral option and 'Not applicable' for those who haven't participated.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the wellness programs offered by your employer?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (have not participated)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors prevent you from participating in the wellness programs? (Select all that apply)",
+            "answer_options": [
+                "Lack of time",
+                "Programs are not relevant to my needs",
+                "Unaware of program schedules",
+                "Lack of interest",
+                "Programs are not accessible (e.g., location, timing)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'None of the above' in Q2",
+            "client_notes": "Use conditional routing to target non-participants. Allow 'Other' with an open-text field.",
+            "scripter_notes": "Field type: multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What factors prevent you from participating in the wellness programs? (Select all that apply)",
+                "answer_options": [
+                    "Lack of time",
+                    "Programs are not relevant to my needs",
+                    "Unaware of program schedules",
+                    "Lack of interest",
+                    "Programs are not accessible (e.g., location, timing)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please specify any other factors preventing your participation in wellness programs:",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Other (please specify)' in Q4",
+            "client_notes": "Open-text field to capture additional barriers.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "Please specify any other factors preventing your participation in wellness programs:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Other (please specify)' in Q4"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How effective do you find the wellness programs in improving your overall well-being?",
+            "answer_options": [
+                "Very effective",
+                "Somewhat effective",
+                "Neutral",
+                "Somewhat ineffective",
+                "Very ineffective",
+                "Not applicable (have not participated)"
+            ],
+            "routing_logic": "Respondents who did not select 'None of the above' in Q2",
+            "client_notes": "Use Likert scale for effectiveness measurement.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How effective do you find the wellness programs in improving your overall well-being?",
+                "answer_options": [
+                    "Very effective",
+                    "Somewhat effective",
+                    "Neutral",
+                    "Somewhat ineffective",
+                    "Very ineffective",
+                    "Not applicable (have not participated)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who did not select 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional wellness programs would you like to see offered by your employer?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture unmet needs.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What additional wellness programs would you like to see offered by your employer?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How often do you participate in the wellness programs?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "Quarterly",
+                "Once or twice a year",
+                "Never"
+            ],
+            "routing_logic": "Respondents who did not select 'None of the above' in Q2",
+            "client_notes": "Frequency question to assess engagement levels.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you participate in the wellness programs?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "Quarterly",
+                    "Once or twice a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who did not select 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Would you recommend the company's wellness programs to a colleague?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Respondents who did not select 'None of the above' in Q2",
+            "client_notes": "Net Promoter Score-inspired question to measure advocacy.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "Would you recommend the company's wellness programs to a colleague?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who did not select 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What improvements would you suggest for the current wellness programs?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-text to gather actionable feedback.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What improvements would you suggest for the current wellness programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

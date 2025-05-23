@@ -1,0 +1,147 @@
+{
+    "survey_id": "3af09cf9-fc2f-483d-bee6-a78096a1b2c7",
+    "survey_name": "Smart Home Device Adoption Survey",
+    "survey_brief": "Assess consumer experiences and preferences regarding smart home device ownership, usage patterns, and adoption barriers",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own any smart home devices (e.g., smart speakers, security systems, thermostats)?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Use clear category examples to ensure respondent understanding",
+            "scripter_notes": "Field type: Radio button, mandatory response",
+            "script": {
+                "question_text": "Do you currently own any smart home devices (e.g., smart speakers, security systems, thermostats)?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of smart home devices do you own? (Select all that apply)",
+            "answer_options": [
+                "Smart speakers (e.g., Amazon Echo, Google Home)",
+                "Security cameras/systems",
+                "Smart thermostats",
+                "Smart lighting",
+                "Smart appliances",
+                "Voice-controlled TV systems"
+            ],
+            "routing_logic": "Only shown if Q1 is answered with 'Yes'",
+            "client_notes": "Include 'Other' option if needed for comprehensive data",
+            "scripter_notes": "Field type: Checkbox with 'Select all that apply' instruction",
+            "script": {
+                "question_text": "Which types of smart home devices do you own? (Select all that apply)",
+                "answer_options": [
+                    "Smart speakers (e.g., Amazon Echo, Google Home)",
+                    "Security cameras/systems",
+                    "Smart thermostats",
+                    "Smart lighting",
+                    "Smart appliances",
+                    "Voice-controlled TV systems"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 is answered with 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your smart home devices' integration with other systems?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Only shown if Q1 is answered with 'Yes'",
+            "client_notes": "Use standard 5-point Likert scale for consistency",
+            "scripter_notes": "Field type: Radio button with vertical layout",
+            "script": {
+                "question_text": "How satisfied are you with your smart home devices' integration with other systems?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 is answered with 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you experienced with smart home devices?",
+            "answer_options": [],
+            "routing_logic": "Only shown if Q1 is answered with 'Yes'",
+            "client_notes": "Use open text field to capture unexpected pain points",
+            "scripter_notes": "Field type: Open text box with 500-character limit",
+            "script": {
+                "question_text": "What challenges have you experienced with smart home devices?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only shown if Q1 is answered with 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What factors most influence your decision to purchase smart home devices?",
+            "answer_options": [
+                "Price",
+                "Brand reputation",
+                "Privacy/security features",
+                "Ease of installation",
+                "Compatibility with existing devices"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Randomize answer order to reduce bias",
+            "scripter_notes": "Field type: Checkbox with 'Select top 3' instruction",
+            "script": {
+                "question_text": "What factors most influence your decision to purchase smart home devices?",
+                "answer_options": [
+                    "Price",
+                    "Brand reputation",
+                    "Privacy/security features",
+                    "Ease of installation",
+                    "Compatibility with existing devices"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to purchase additional smart home devices in the next 12 months?",
+            "answer_options": [
+                "Extremely Likely",
+                "Somewhat Likely",
+                "Neutral",
+                "Somewhat Unlikely",
+                "Extremely Unlikely"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Include 'Not Applicable' option if needed",
+            "scripter_notes": "Field type: Radio button with horizontal layout",
+            "script": {
+                "question_text": "How likely are you to purchase additional smart home devices in the next 12 months?",
+                "answer_options": [
+                    "Extremely Likely",
+                    "Somewhat Likely",
+                    "Neutral",
+                    "Somewhat Unlikely",
+                    "Extremely Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        }
+    ]
+}

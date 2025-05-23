@@ -1,0 +1,243 @@
+{
+    "survey_id": "7bb12e70-d73a-4db5-b37b-f3b74e784156",
+    "survey_name": "Electric Vehicle Charging Station Experience Survey",
+    "survey_brief": "Assess user satisfaction and identify improvement opportunities for public EV charging infrastructure.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public electric vehicle charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use clear frequency anchors. Consider mobile-friendly dropdown for space efficiency.",
+            "scripter_notes": "Single-select radio buttons. Randomize order except 'Never'.",
+            "script": {
+                "question_text": "How frequently do you use public electric vehicle charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using public charging stations?",
+            "answer_options": [
+                "Commuting needs",
+                "Long-distance travel",
+                "No home charging option",
+                "Emergency use",
+                "Other"
+            ],
+            "routing_logic": "Display if Q1 != 'Never'",
+            "client_notes": "Include 'Other' with text field for specificity",
+            "scripter_notes": "Single-select with optional text input for 'Other'",
+            "script": {
+                "question_text": "What is your primary reason for using public charging stations?",
+                "answer_options": [
+                    "Commuting needs",
+                    "Long-distance travel",
+                    "No home charging option",
+                    "Emergency use",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the charging speed at most stations?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Display if Q1 != 'Never'",
+            "client_notes": "Use standard 5-point Likert scale for comparability",
+            "scripter_notes": "Radio buttons with horizontal layout on desktop",
+            "script": {
+                "question_text": "How satisfied are you with the charging speed at most stations?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which payment methods have you used at charging stations? (Select all that apply)",
+            "answer_options": [
+                "Credit/Debit Card",
+                "Mobile App",
+                "RFID Card",
+                "Membership Plan",
+                "Free Charging",
+                "Other"
+            ],
+            "routing_logic": "Display if Q1 != 'Never'",
+            "client_notes": "Monitor for multiple payment pain points",
+            "scripter_notes": "Multi-select checkboxes with 'Other' text field",
+            "script": {
+                "question_text": "Which payment methods have you used at charging stations? (Select all that apply)",
+                "answer_options": [
+                    "Credit/Debit Card",
+                    "Mobile App",
+                    "RFID Card",
+                    "Membership Plan",
+                    "Free Charging",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you find charging stations occupied/unavailable when you need them?",
+            "answer_options": [
+                "Almost Always",
+                "Frequently",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Display if Q1 != 'Never'",
+            "client_notes": "Critical metric for capacity planning",
+            "scripter_notes": "Single-select with visual analog scale",
+            "script": {
+                "question_text": "How often do you find charging stations occupied/unavailable when you need them?",
+                "answer_options": [
+                    "Almost Always",
+                    "Frequently",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would most enhance your charging experience?",
+            "answer_options": [],
+            "routing_logic": "Display if Q1 != 'Never'",
+            "client_notes": "Open field for qualitative insights",
+            "scripter_notes": "Text input with 500-character limit",
+            "script": {
+                "question_text": "What improvements would most enhance your charging experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How would you rate the ease of finding compatible charging stations?",
+            "answer_options": [
+                "Very Easy",
+                "Easy",
+                "Neutral",
+                "Difficult",
+                "Very Difficult"
+            ],
+            "routing_logic": "Display if Q1 != 'Never'",
+            "client_notes": "Meets accessibility requirements",
+            "scripter_notes": "Single-select with screen reader support",
+            "script": {
+                "question_text": "How would you rate the ease of finding compatible charging stations?",
+                "answer_options": [
+                    "Very Easy",
+                    "Easy",
+                    "Neutral",
+                    "Difficult",
+                    "Very Difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What type of electric vehicle do you primarily charge?",
+            "answer_options": [
+                "Battery Electric Vehicle (BEV)",
+                "Plug-in Hybrid (PHEV)",
+                "Both",
+                "Other"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Segmentation question for analysis",
+            "scripter_notes": "Single-select with 'Other' text field",
+            "script": {
+                "question_text": "What type of electric vehicle do you primarily charge?",
+                "answer_options": [
+                    "Battery Electric Vehicle (BEV)",
+                    "Plug-in Hybrid (PHEV)",
+                    "Both",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to recommend public charging stations to other EV owners?",
+            "answer_options": [
+                "Very Likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very Unlikely"
+            ],
+            "routing_logic": "Display if Q1 != 'Never'",
+            "client_notes": "Critical NPS precursor question",
+            "scripter_notes": "Radio buttons with color coding",
+            "script": {
+                "question_text": "How likely are you to recommend public charging stations to other EV owners?",
+                "answer_options": [
+                    "Very Likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Please share any additional comments about your charging station experiences:",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Capture unexpected pain points",
+            "scripter_notes": "Large text area with spell check",
+            "script": {
+                "question_text": "Please share any additional comments about your charging station experiences:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

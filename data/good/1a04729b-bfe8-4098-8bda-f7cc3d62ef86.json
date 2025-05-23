@@ -1,0 +1,249 @@
+{
+    "survey_id": "1a04729b-bfe8-4098-8bda-f7cc3d62ef86",
+    "survey_name": "Fitness App User Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from users of fitness apps to understand their satisfaction levels, feature preferences, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which fitness app do you primarily use?",
+            "answer_options": [
+                "MyFitnessPal",
+                "Nike Training Club",
+                "Fitbit",
+                "Strava",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Include an 'Other' option to capture less common apps. Ensure the list is updated with current popular apps.",
+            "scripter_notes": "Use a single-choice dropdown with an 'Other' option that triggers a text field.",
+            "script": {
+                "question_text": "Which fitness app do you primarily use?",
+                "answer_options": [
+                    "MyFitnessPal",
+                    "Nike Training Club",
+                    "Fitbit",
+                    "Strava",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you use your fitness app?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Less than once a week"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a balanced scale to capture frequency accurately.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use your fitness app?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Less than once a week"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you use most frequently in your fitness app? (Select all that apply)",
+            "answer_options": [
+                "Workout tracking",
+                "Nutrition logging",
+                "Step counting",
+                "Community/social features",
+                "Personalized coaching",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multiple selections to understand feature popularity.",
+            "scripter_notes": "Use checkboxes for multi-choice selection with an 'Other' option that triggers a text field.",
+            "script": {
+                "question_text": "What features do you use most frequently in your fitness app? (Select all that apply)",
+                "answer_options": [
+                    "Workout tracking",
+                    "Nutrition logging",
+                    "Step counting",
+                    "Community/social features",
+                    "Personalized coaching",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accuracy of your fitness app's tracking features?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a standard Likert scale for consistency.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of your fitness app's tracking features?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in your fitness app?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended to capture diverse feedback.",
+            "scripter_notes": "Use a text area for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would you like to see in your fitness app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend your fitness app to a friend or colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "This is a standard Net Promoter Score (NPS) question.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How likely are you to recommend your fitness app to a friend or colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Do you use any wearable devices (e.g., smartwatch, fitness tracker) with your fitness app?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Simple yes/no to gauge integration with wearables.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Do you use any wearable devices (e.g., smartwatch, fitness tracker) with your fitness app?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "If yes, which wearable device do you use?",
+            "answer_options": [
+                "Apple Watch",
+                "Fitbit",
+                "Garmin",
+                "Samsung Galaxy Watch",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q7 is 'Yes'",
+            "client_notes": "Include an 'Other' option to capture less common devices.",
+            "scripter_notes": "Use a single-choice dropdown with an 'Other' option that triggers a text field.",
+            "script": {
+                "question_text": "If yes, which wearable device do you use?",
+                "answer_options": [
+                    "Apple Watch",
+                    "Fitbit",
+                    "Garmin",
+                    "Samsung Galaxy Watch",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q7 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How satisfied are you with the integration between your wearable device and your fitness app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q7 is 'Yes'",
+            "client_notes": "Use a standard Likert scale for consistency.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the integration between your wearable device and your fitness app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q7 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your primary goal for using a fitness app?",
+            "answer_options": [
+                "Weight loss",
+                "Muscle gain",
+                "General fitness",
+                "Training for an event",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Include an 'Other' option to capture diverse goals.",
+            "scripter_notes": "Use a single-choice dropdown with an 'Other' option that triggers a text field.",
+            "script": {
+                "question_text": "What is your primary goal for using a fitness app?",
+                "answer_options": [
+                    "Weight loss",
+                    "Muscle gain",
+                    "General fitness",
+                    "Training for an event",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

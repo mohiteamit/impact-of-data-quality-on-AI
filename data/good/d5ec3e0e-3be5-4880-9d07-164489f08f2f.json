@@ -1,0 +1,225 @@
+{
+    "survey_id": "d5ec3e0e-3be5-4880-9d07-164489f08f2f",
+    "survey_name": "Mobile Banking App Satisfaction Survey",
+    "survey_brief": "This survey aims to assess customer satisfaction with the features and usability of our mobile banking app to identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use our mobile banking app?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use our mobile banking app?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Account balance check",
+                "Fund transfers",
+                "Bill payments",
+                "Mobile check deposit",
+                "Customer support chat",
+                "Transaction history"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'Never'",
+            "client_notes": "Use checkboxes for multi-selection to allow users to select multiple features.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following features do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Account balance check",
+                    "Fund transfers",
+                    "Bill payments",
+                    "Mobile check deposit",
+                    "Customer support chat",
+                    "Transaction history"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the overall usability of the app? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale for this question to measure satisfaction levels accurately.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the overall usability of the app? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What do you like most about our mobile banking app?",
+            "answer_options": [],
+            "routing_logic": "Shown if Q3 answer is 4 or 5",
+            "client_notes": "Open-ended question to capture positive feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What do you like most about our mobile banking app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q3 answer is 4 or 5"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for our mobile banking app?",
+            "answer_options": [],
+            "routing_logic": "Shown if Q3 answer is 1, 2, or 3",
+            "client_notes": "Open-ended question to gather constructive feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for our mobile banking app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q3 answer is 1, 2, or 3"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How easy is it to navigate through the app?",
+            "answer_options": [
+                "Very easy",
+                "Somewhat easy",
+                "Neutral",
+                "Somewhat difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'Never'",
+            "client_notes": "Use a single-choice radio button for this question to measure ease of navigation.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How easy is it to navigate through the app?",
+                "answer_options": [
+                    "Very easy",
+                    "Somewhat easy",
+                    "Neutral",
+                    "Somewhat difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Have you experienced any technical issues while using the app?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'Never'",
+            "client_notes": "Use a single-choice radio button for this question to identify technical issues.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Have you experienced any technical issues while using the app?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "If yes, please describe the technical issues you encountered.",
+            "answer_options": [],
+            "routing_logic": "Shown if Q7 answer is 'Yes'",
+            "client_notes": "Open-ended question to gather details about technical issues. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "If yes, please describe the technical issues you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q7 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to recommend our mobile banking app to others? (1 = Not likely, 10 = Very likely)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'Never'",
+            "client_notes": "Use a 10-point scale for this question to measure likelihood of recommendation.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to recommend our mobile banking app to others? (1 = Not likely, 10 = Very likely)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you have any additional comments or feedback about our mobile banking app?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Open-ended question to capture any additional feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "Do you have any additional comments or feedback about our mobile banking app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

@@ -1,0 +1,251 @@
+{
+    "survey_id": "3da5674e-0faf-4b00-ba56-8dbe442b0715",
+    "survey_name": "Online Fitness Class Instructor Effectiveness Survey",
+    "survey_brief": "This survey aims to evaluate participant satisfaction with online fitness class instructors, focusing on teaching style, engagement, and overall effectiveness.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you attend online fitness classes?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once per week"
+            ],
+            "routing_logic": "Appears for all participants",
+            "client_notes": "Use a single-choice radio button layout for mobile-friendliness.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you attend online fitness classes?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once per week"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all participants"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following best describes your primary reason for taking online fitness classes?",
+            "answer_options": [
+                "Convenience",
+                "Cost-effectiveness",
+                "Access to specific instructors",
+                "Variety of class options",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all participants",
+            "client_notes": "Allow 'Other' option with an open-text field if selected.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with conditional open-text for 'Other'",
+            "script": {
+                "question_text": "Which of the following best describes your primary reason for taking online fitness classes?",
+                "answer_options": [
+                    "Convenience",
+                    "Cost-effectiveness",
+                    "Access to specific instructors",
+                    "Variety of class options",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all participants"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with the clarity of instruction in your online fitness classes? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears for all participants",
+            "client_notes": "Use a Likert scale with clear labels for accessibility.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (scale)",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the clarity of instruction in your online fitness classes? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all participants"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What aspects of the instructor’s teaching style do you find most effective? (Select all that apply)",
+            "answer_options": [
+                "Clear verbal cues",
+                "Demonstration of movements",
+                "Pacing of the class",
+                "Providing modifications for different skill levels",
+                "Engaging personality"
+            ],
+            "routing_logic": "Appears for all participants",
+            "client_notes": "Multi-choice checkboxes are ideal for this question.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "What aspects of the instructor’s teaching style do you find most effective? (Select all that apply)",
+                "answer_options": [
+                    "Clear verbal cues",
+                    "Demonstration of movements",
+                    "Pacing of the class",
+                    "Providing modifications for different skill levels",
+                    "Engaging personality"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all participants"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend this instructor to a friend? (0 = Not at all likely, 10 = Extremely likely)",
+            "answer_options": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "routing_logic": "Appears for all participants",
+            "client_notes": "Use a numerical slider for a more interactive experience.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (slider)",
+            "script": {
+                "question_text": "How likely are you to recommend this instructor to a friend? (0 = Not at all likely, 10 = Extremely likely)",
+                "answer_options": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all participants"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would you suggest for the instructor?",
+            "answer_options": [],
+            "routing_logic": "Appears for participants who rated satisfaction ≤ 3 in Q3 or Q5",
+            "client_notes": "Open-text field to capture detailed feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you suggest for the instructor?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for participants who rated satisfaction ≤ 3 in Q3 or Q5"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Do you feel the instructor provides adequate encouragement during classes?",
+            "answer_options": [
+                "Yes, always",
+                "Yes, sometimes",
+                "No, rarely",
+                "No, never"
+            ],
+            "routing_logic": "Appears for all participants",
+            "client_notes": "Single-choice with neutral options for balanced feedback.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Do you feel the instructor provides adequate encouragement during classes?",
+                "answer_options": [
+                    "Yes, always",
+                    "Yes, sometimes",
+                    "No, rarely",
+                    "No, never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all participants"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which types of fitness classes do you prefer? (Select all that apply)",
+            "answer_options": [
+                "Yoga",
+                "HIIT",
+                "Pilates",
+                "Strength Training",
+                "Dance",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all participants",
+            "client_notes": "Multi-choice with an 'Other' option for additional input.",
+            "scripter_notes": "Field type: MULTI_CHOICE with conditional open-text for 'Other'",
+            "script": {
+                "question_text": "Which types of fitness classes do you prefer? (Select all that apply)",
+                "answer_options": [
+                    "Yoga",
+                    "HIIT",
+                    "Pilates",
+                    "Strength Training",
+                    "Dance",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all participants"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How often do you interact with the instructor during live classes (e.g., chat, reactions)?",
+            "answer_options": [
+                "Frequently",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all participants",
+            "client_notes": "Single-choice to gauge engagement levels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you interact with the instructor during live classes (e.g., chat, reactions)?",
+                "answer_options": [
+                    "Frequently",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all participants"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional features would enhance your online fitness class experience?",
+            "answer_options": [],
+            "routing_logic": "Appears for all participants",
+            "client_notes": "Open-ended to capture innovative suggestions.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What additional features would enhance your online fitness class experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all participants"
+            }
+        }
+    ]
+}

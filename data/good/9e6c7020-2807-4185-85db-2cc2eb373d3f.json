@@ -1,0 +1,247 @@
+{
+    "survey_id": "9e6c7020-2807-4185-85db-2cc2eb373d3f",
+    "survey_name": "Corporate Social Responsibility (CSR) Perception Survey",
+    "survey_brief": "This survey aims to gather employee and stakeholder perceptions of the company's CSR initiatives, identifying strengths and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with our company's Corporate Social Responsibility (CSR) initiatives?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Use a single-choice scale to gauge baseline awareness. Consider adding a brief CSR overview if most select 'Not very' or 'Not at all'.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "How familiar are you with our company's Corporate Social Responsibility (CSR) initiatives?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following CSR focus areas do you consider most important? (Select up to 3)",
+            "answer_options": [
+                "Environmental sustainability",
+                "Community engagement",
+                "Ethical labor practices",
+                "Diversity and inclusion",
+                "Philanthropic donations",
+                "Corporate governance"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Multi-select question to prioritize efforts. Display options in randomized order.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Enforce 3-selection max.",
+            "script": {
+                "question_text": "Which of the following CSR focus areas do you consider most important? (Select up to 3)",
+                "answer_options": [
+                    "Environmental sustainability",
+                    "Community engagement",
+                    "Ethical labor practices",
+                    "Diversity and inclusion",
+                    "Philanthropic donations",
+                    "Corporate governance"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How effectively do you think our company communicates its CSR efforts?",
+            "answer_options": [
+                "Very effectively",
+                "Somewhat effectively",
+                "Not very effectively",
+                "Not at all effectively"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "5-point Likert scale recommended; collapsed to 4 options here for brevity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How effectively do you think our company communicates its CSR efforts?",
+                "answer_options": [
+                    "Very effectively",
+                    "Somewhat effectively",
+                    "Not very effectively",
+                    "Not at all effectively"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What specific CSR initiative would you like to see our company undertake?",
+            "answer_options": [],
+            "routing_logic": "All participants",
+            "client_notes": "Open-ended to capture unmet expectations. Limit response to 250 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT). Enable character counter.",
+            "script": {
+                "question_text": "What specific CSR initiative would you like to see our company undertake?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you personally participated in any company-sponsored CSR activities?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Binary question to measure engagement. Follow up with Q6 if 'Yes'.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Have you personally participated in any company-sponsored CSR activities?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which types of CSR activities have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Volunteer events",
+                "Charity fundraisers",
+                "Sustainability programs",
+                "Diversity training",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Q5 == 'Yes'",
+            "client_notes": "Multi-select with 'Other' option for comprehensiveness.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Show text field if 'Other' selected.",
+            "script": {
+                "question_text": "Which types of CSR activities have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Volunteer events",
+                    "Charity fundraisers",
+                    "Sustainability programs",
+                    "Diversity training",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Q5 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How has participating in CSR activities impacted your perception of the company?",
+            "answer_options": [
+                "Significantly more positive",
+                "Slightly more positive",
+                "No change",
+                "Slightly more negative",
+                "Significantly more negative"
+            ],
+            "routing_logic": "Q5 == 'Yes'",
+            "client_notes": "5-point bipolar scale to measure sentiment shift.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How has participating in CSR activities impacted your perception of the company?",
+                "answer_options": [
+                    "Significantly more positive",
+                    "Slightly more positive",
+                    "No change",
+                    "Slightly more negative",
+                    "Significantly more negative"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Q5 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend our company as a socially responsible employer to others?",
+            "answer_options": [
+                "Extremely likely",
+                "Very likely",
+                "Somewhat likely",
+                "Not very likely",
+                "Not at all likely"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Net Promoter Score (NPS) variant for CSR. Track changes over time.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How likely are you to recommend our company as a socially responsible employer to others?",
+                "answer_options": [
+                    "Extremely likely",
+                    "Very likely",
+                    "Somewhat likely",
+                    "Not very likely",
+                    "Not at all likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Do you believe our CSR efforts align with your personal values?",
+            "answer_options": [
+                "Strongly agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly disagree"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Likert scale to measure value alignment. Critical for retention.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Do you believe our CSR efforts align with your personal values?",
+                "answer_options": [
+                    "Strongly agree",
+                    "Agree",
+                    "Neutral",
+                    "Disagree",
+                    "Strongly disagree"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What barriers prevent you from participating in CSR activities? (Select all that apply)",
+            "answer_options": [
+                "Lack of time",
+                "Unaware of opportunities",
+                "Not relevant to my interests",
+                "Scheduling conflicts",
+                "No barriers"
+            ],
+            "routing_logic": "Q5 == 'No'",
+            "client_notes": "Multi-select to identify participation blockers.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "What barriers prevent you from participating in CSR activities? (Select all that apply)",
+                "answer_options": [
+                    "Lack of time",
+                    "Unaware of opportunities",
+                    "Not relevant to my interests",
+                    "Scheduling conflicts",
+                    "No barriers"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Q5 == 'No'"
+            }
+        }
+    ]
+}

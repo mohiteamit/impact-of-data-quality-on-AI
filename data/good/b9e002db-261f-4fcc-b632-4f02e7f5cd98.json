@@ -1,0 +1,263 @@
+{
+    "survey_id": "b9e002db-261f-4fcc-b632-4f02e7f5cd98",
+    "survey_name": "Residential Solar Panel Adoption Survey",
+    "survey_brief": "Assess factors influencing homeowners' decisions to adopt solar energy systems, identify barriers to adoption, and measure satisfaction among current users",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently have solar panels installed at your primary residence?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "In process of installation"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use responsive button layout for mobile users. Consider adding 'Prefer not to answer' option for privacy-sensitive respondents.",
+            "scripter_notes": "Single-select radio buttons with vertical layout",
+            "script": {
+                "question_text": "Do you currently have solar panels installed at your primary residence?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "In process of installation"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important in your consideration of solar panel installation? (Select all that apply)",
+            "answer_options": [
+                "Reducing electricity bills",
+                "Environmental benefits",
+                "Government incentives",
+                "Increased home value",
+                "Energy independence",
+                "Neighborhood trends"
+            ],
+            "routing_logic": "Display if Q1 = 'No' or 'In process of installation'",
+            "client_notes": "Limit to 6 options maximum for mobile readability. Randomize option order to minimize bias.",
+            "scripter_notes": "Multi-select checkboxes with 'Select up to 3' validation",
+            "script": {
+                "question_text": "What factors are most important in your consideration of solar panel installation? (Select all that apply)",
+                "answer_options": [
+                    "Reducing electricity bills",
+                    "Environmental benefits",
+                    "Government incentives",
+                    "Increased home value",
+                    "Energy independence",
+                    "Neighborhood trends"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 = 'No' or 'In process of installation'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How strongly do you agree with this statement: 'The upfront costs of solar installation are a significant barrier for me'",
+            "answer_options": [
+                "Strongly agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly disagree"
+            ],
+            "routing_logic": "Display if Q1 = 'No'",
+            "client_notes": "Use a 5-point Likert scale with balanced anchors. Include 'Not applicable' if needed for screening purposes.",
+            "scripter_notes": "Radio buttons with horizontal layout on desktop, vertical on mobile",
+            "script": {
+                "question_text": "How strongly do you agree with this statement: 'The upfront costs of solar installation are a significant barrier for me'",
+                "answer_options": [
+                    "Strongly agree",
+                    "Agree",
+                    "Neutral",
+                    "Disagree",
+                    "Strongly disagree"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 = 'No'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your solar panel system's performance?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display if Q1 = 'Yes'",
+            "client_notes": "Include follow-up open-end for dissatisfied responses. Benchmark against industry NPS standards.",
+            "scripter_notes": "Radio buttons with smiley face visual scale",
+            "script": {
+                "question_text": "How satisfied are you with your solar panel system's performance?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features would make solar installation more appealing? (e.g., battery storage, smart monitoring)",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use AI-powered text analysis to categorize responses. Set 200 character limit.",
+            "scripter_notes": "Open text field with character counter",
+            "script": {
+                "question_text": "What additional features would make solar installation more appealing? (e.g., battery storage, smart monitoring)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How familiar are you with local solar incentive programs?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Heard of but don't understand",
+                "Completely unaware"
+            ],
+            "routing_logic": "Display if Q1 = 'No' or 'In process of installation'",
+            "client_notes": "Pair with educational content in post-survey communication",
+            "scripter_notes": "Radio buttons with 'Show explanation' tooltip for each option",
+            "script": {
+                "question_text": "How familiar are you with local solar incentive programs?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Heard of but don't understand",
+                    "Completely unaware"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 = 'No' or 'In process of installation'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which financing option would you prefer for solar installation?",
+            "answer_options": [
+                "Full cash purchase",
+                "Lease agreement",
+                "Power purchase agreement (PPA)",
+                "Home equity loan",
+                "Uncertain"
+            ],
+            "routing_logic": "Display if Q1 = 'No'",
+            "client_notes": "Include brief definitions for less common options via hover tooltips",
+            "scripter_notes": "Single-select dropdown menu with search functionality",
+            "script": {
+                "question_text": "Which financing option would you prefer for solar installation?",
+                "answer_options": [
+                    "Full cash purchase",
+                    "Lease agreement",
+                    "Power purchase agreement (PPA)",
+                    "Home equity loan",
+                    "Uncertain"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 = 'No'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How important is installer certification (e.g., NABCEP) when choosing a solar provider?",
+            "answer_options": [
+                "Essential requirement",
+                "Important consideration",
+                "Makes no difference",
+                "Don't know what this means"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Monitor for 'Don't know' responses to gauge need for consumer education",
+            "scripter_notes": "Radio buttons with horizontal layout on desktop",
+            "script": {
+                "question_text": "How important is installer certification (e.g., NABCEP) when choosing a solar provider?",
+                "answer_options": [
+                    "Essential requirement",
+                    "Important consideration",
+                    "Makes no difference",
+                    "Don't know what this means"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What concerns do you have about solar panel maintenance? (Select all that apply)",
+            "answer_options": [
+                "Cleaning requirements",
+                "Repair costs",
+                "Weather damage",
+                "Technology obsolescence",
+                "Warranty coverage",
+                "No concerns"
+            ],
+            "routing_logic": "Display if Q1 = 'No' or 'In process of installation'",
+            "client_notes": "Use progressive disclosure for 'Other' option if selected",
+            "scripter_notes": "Multi-select checkboxes with 'Select all that apply' label",
+            "script": {
+                "question_text": "What concerns do you have about solar panel maintenance? (Select all that apply)",
+                "answer_options": [
+                    "Cleaning requirements",
+                    "Repair costs",
+                    "Weather damage",
+                    "Technology obsolescence",
+                    "Warranty coverage",
+                    "No concerns"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 = 'No' or 'In process of installation'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to recommend solar installation to a neighbor?",
+            "answer_options": [
+                "0 - Not at all likely",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 - Extremely likely"
+            ],
+            "routing_logic": "Display if Q1 = 'Yes'",
+            "client_notes": "Standard NPS question format. Calculate promoter score separately.",
+            "scripter_notes": "11-point scale displayed as numbered buttons",
+            "script": {
+                "question_text": "How likely are you to recommend solar installation to a neighbor?",
+                "answer_options": [
+                    "0 - Not at all likely",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 - Extremely likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 = 'Yes'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,269 @@
+{
+    "survey_id": "a31b3333-83cc-41d0-ac15-c87e1b88e311",
+    "survey_name": "Electric Vehicle Adoption and Perception Survey",
+    "survey_brief": "This survey aims to understand consumer perceptions, barriers, and motivations related to electric vehicle (EV) adoption to inform marketing and product development strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How likely are you to consider purchasing an electric vehicle (EV) in the next 5 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure options are balanced and avoid leading language.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to consider purchasing an electric vehicle (EV) in the next 5 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the top 3 factors that would influence your decision to purchase an EV?",
+            "answer_options": [
+                "Environmental benefits",
+                "Lower fuel costs",
+                "Government incentives",
+                "Vehicle performance",
+                "Charging infrastructure availability",
+                "Vehicle price",
+                "Brand reputation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multi-select with a limit of 3 choices. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with max selections = 3. Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are the top 3 factors that would influence your decision to purchase an EV?",
+                "answer_options": [
+                    "Environmental benefits",
+                    "Lower fuel costs",
+                    "Government incentives",
+                    "Vehicle performance",
+                    "Charging infrastructure availability",
+                    "Vehicle price",
+                    "Brand reputation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your biggest concern about owning an electric vehicle?",
+            "answer_options": [
+                "Limited driving range",
+                "Lack of charging stations",
+                "High upfront cost",
+                "Battery lifespan/replacement cost",
+                "Long charging times",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question with an 'Other' option for additional concerns.",
+            "scripter_notes": "Field type: radio button (single-choice). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is your biggest concern about owning an electric vehicle?",
+                "answer_options": [
+                    "Limited driving range",
+                    "Lack of charging stations",
+                    "High upfront cost",
+                    "Battery lifespan/replacement cost",
+                    "Long charging times",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How familiar are you with the current government incentives for EV purchases in your region?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 4-point scale to avoid neutral midpoint bias.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How familiar are you with the current government incentives for EV purchases in your region?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you currently use public charging stations for EVs (if applicable)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Respondents who own or frequently use EVs",
+            "client_notes": "Only show this question to EV owners or frequent users. Use clear frequency options.",
+            "scripter_notes": "Field type: radio button (single-choice). Add skip logic for non-EV users.",
+            "script": {
+                "question_text": "How often do you currently use public charging stations for EVs (if applicable)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who own or frequently use EVs"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What type of vehicle do you currently own?",
+            "answer_options": [
+                "Gasoline/Diesel",
+                "Hybrid (non-plug-in)",
+                "Plug-in Hybrid",
+                "Electric Vehicle (EV)",
+                "Do not own a vehicle"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to segment respondents by current vehicle type.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "What type of vehicle do you currently own?",
+                "answer_options": [
+                    "Gasoline/Diesel",
+                    "Hybrid (non-plug-in)",
+                    "Plug-in Hybrid",
+                    "Electric Vehicle (EV)",
+                    "Do not own a vehicle"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How important is the availability of fast-charging stations in your decision to purchase an EV?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point importance scale to gauge priority.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How important is the availability of fast-charging stations in your decision to purchase an EV?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which of the following EV brands are you most familiar with? (Select all that apply)",
+            "answer_options": [
+                "Tesla",
+                "Nissan",
+                "Chevrolet",
+                "BMW",
+                "Ford",
+                "Audi",
+                "Hyundai",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to assess brand awareness. Include an 'Other' option.",
+            "scripter_notes": "Field type: checkbox (multi-choice). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following EV brands are you most familiar with? (Select all that apply)",
+                "answer_options": [
+                    "Tesla",
+                    "Nissan",
+                    "Chevrolet",
+                    "BMW",
+                    "Ford",
+                    "Audi",
+                    "Hyundai",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is your household income range?",
+            "answer_options": [
+                "Under $50,000",
+                "$50,000 - $99,999",
+                "$100,000 - $149,999",
+                "$150,000 - $199,999",
+                "$200,000 or more",
+                "Prefer not to say"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use income brackets for privacy and ease of response. Include a 'Prefer not to say' option.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "What is your household income range?",
+                "answer_options": [
+                    "Under $50,000",
+                    "$50,000 - $99,999",
+                    "$100,000 - $149,999",
+                    "$150,000 - $199,999",
+                    "$200,000 or more",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Please share any additional comments or concerns you have about electric vehicles.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative insights. Keep it optional.",
+            "scripter_notes": "Field type: open-text (optional).",
+            "script": {
+                "question_text": "Please share any additional comments or concerns you have about electric vehicles.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

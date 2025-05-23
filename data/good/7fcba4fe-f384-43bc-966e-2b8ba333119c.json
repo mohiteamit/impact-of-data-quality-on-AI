@@ -1,0 +1,339 @@
+{
+    "survey_id": "7fcba4fe-f384-43bc-966e-2b8ba333119c",
+    "survey_name": "Telemedicine Service User Satisfaction Survey",
+    "survey_brief": "Assess patient satisfaction with telemedicine platforms regarding accessibility, usability, care quality, and technical performance",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you used a telemedicine service for healthcare consultation in the past 12 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "If 'No' selected, skip to end of survey",
+            "client_notes": "Use as a screening question to filter relevant respondents",
+            "scripter_notes": "Radio button, mandatory response",
+            "script": {
+                "question_text": "Have you used a telemedicine service for healthcare consultation in the past 12 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'No' selected, skip to end of survey"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you use telemedicine services?",
+            "answer_options": [
+                "First-time user",
+                "Less than once per month",
+                "1-3 times per month",
+                "Weekly",
+                "More than weekly"
+            ],
+            "routing_logic": "Display for all who answered 'Yes' in Q1",
+            "client_notes": "Include 'First-time user' option to capture new adopters",
+            "scripter_notes": "Radio button, vertical layout",
+            "script": {
+                "question_text": "How often do you use telemedicine services?",
+                "answer_options": [
+                    "First-time user",
+                    "Less than once per month",
+                    "1-3 times per month",
+                    "Weekly",
+                    "More than weekly"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all who answered 'Yes' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which platform type do you primarily use for telemedicine consultations?",
+            "answer_options": [
+                "Video call",
+                "Phone call",
+                "Text/chat-based",
+                "Mobile app with AI triage",
+                "Other"
+            ],
+            "routing_logic": "Display for all qualified respondents",
+            "client_notes": "Include 'Other' with text field for unspecified platforms",
+            "scripter_notes": "Radio button with 'Other' triggering open-text field",
+            "script": {
+                "question_text": "Which platform type do you primarily use for telemedicine consultations?",
+                "answer_options": [
+                    "Video call",
+                    "Phone call",
+                    "Text/chat-based",
+                    "Mobile app with AI triage",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all qualified respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the ease of scheduling telemedicine appointments?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Standard display",
+            "client_notes": "Use 5-point Likert scale for consistency",
+            "scripter_notes": "Radio button matrix if combined with other satisfaction questions",
+            "script": {
+                "question_text": "How satisfied are you with the ease of scheduling telemedicine appointments?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Standard display"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the technical quality (audio/video/connection) during consultations?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Unusable"
+            ],
+            "routing_logic": "Display for all except those selecting 'Text/chat-based' in Q3",
+            "client_notes": "Critical for technical performance analysis",
+            "scripter_notes": "Add skip logic based on Q3 response",
+            "script": {
+                "question_text": "How would you rate the technical quality (audio/video/connection) during consultations?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Unusable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all except those selecting 'Text/chat-based' in Q3"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How effectively did your telemedicine provider communicate medical information?",
+            "answer_options": [
+                "More clearly than in-person",
+                "Equally clear to in-person",
+                "Less clear than in-person",
+                "Significant communication challenges"
+            ],
+            "routing_logic": "Standard display",
+            "client_notes": "Direct comparison adds actionable insights",
+            "scripter_notes": "Radio button with neutral mid-point",
+            "script": {
+                "question_text": "How effectively did your telemedicine provider communicate medical information?",
+                "answer_options": [
+                    "More clearly than in-person",
+                    "Equally clear to in-person",
+                    "Less clear than in-person",
+                    "Significant communication challenges"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Standard display"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which aspects of telemedicine do you value most? (Select all that apply)",
+            "answer_options": [
+                "Time savings",
+                "Cost effectiveness",
+                "Access to specialists",
+                "Reduced exposure to illnesses",
+                "Convenient prescription renewals",
+                "Mental health accessibility"
+            ],
+            "routing_logic": "Standard display",
+            "client_notes": "Multi-select provides feature prioritization",
+            "scripter_notes": "Checkbox input with 6 options",
+            "script": {
+                "question_text": "Which aspects of telemedicine do you value most? (Select all that apply)",
+                "answer_options": [
+                    "Time savings",
+                    "Cost effectiveness",
+                    "Access to specialists",
+                    "Reduced exposure to illnesses",
+                    "Convenient prescription renewals",
+                    "Mental health accessibility"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Standard display"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How confident do you feel about the privacy and security of your telemedicine platform?",
+            "answer_options": [
+                "Extremely confident",
+                "Confident",
+                "Neutral",
+                "Not confident",
+                "Very concerned"
+            ],
+            "routing_logic": "Standard display",
+            "client_notes": "Critical for compliance monitoring",
+            "scripter_notes": "5-star equivalent scale",
+            "script": {
+                "question_text": "How confident do you feel about the privacy and security of your telemedicine platform?",
+                "answer_options": [
+                    "Extremely confident",
+                    "Confident",
+                    "Neutral",
+                    "Not confident",
+                    "Very concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Standard display"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Have you experienced technical issues requiring rescheduled consultations?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Display for all except text/chat users (Q3)",
+            "client_notes": "Quantify technical failure rates",
+            "scripter_notes": "Radio button with conditional follow-up",
+            "script": {
+                "question_text": "Have you experienced technical issues requiring rescheduled consultations?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all except text/chat users (Q3)"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What types of technical issues did you encounter? (Select all that apply)",
+            "answer_options": [
+                "Audio problems",
+                "Video freezing",
+                "Connection drops",
+                "Platform login failures",
+                "File sharing errors",
+                "Other"
+            ],
+            "routing_logic": "Only display if 'Yes' selected in Q9",
+            "client_notes": "Identify most common technical pain points",
+            "scripter_notes": "Checkbox with 'Other' text field",
+            "script": {
+                "question_text": "What types of technical issues did you encounter? (Select all that apply)",
+                "answer_options": [
+                    "Audio problems",
+                    "Video freezing",
+                    "Connection drops",
+                    "Platform login failures",
+                    "File sharing errors",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only display if 'Yes' selected in Q9"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How likely are you to recommend telemedicine services to others? (0-10 scale)",
+            "answer_options": [
+                "0 (Not at all likely)",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 (Extremely likely)"
+            ],
+            "routing_logic": "Standard display",
+            "client_notes": "Standard NPS question format",
+            "scripter_notes": "11-point radio button scale",
+            "script": {
+                "question_text": "How likely are you to Recommend telemedicine services to others? (0-10 scale)",
+                "answer_options": [
+                    "0 (Not at all likely)",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 (Extremely likely)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Standard display"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "What improvements would enhance your telemedicine experience? (Select up to 3)",
+            "answer_options": [
+                "Better platform training",
+                "Faster response times",
+                "Integrated health records",
+                "Lower costs",
+                "More specialist availability",
+                "Improved technical reliability",
+                "Enhanced privacy features"
+            ],
+            "routing_logic": "Standard display",
+            "client_notes": "Prioritization question with limited selections",
+            "scripter_notes": "Checkbox with max 3 selections",
+            "script": {
+                "question_text": "What improvements would enhance your telemedicine experience? (Select up to 3)",
+                "answer_options": [
+                    "Better platform training",
+                    "Faster response times",
+                    "Integrated health records",
+                    "Lower costs",
+                    "More specialist availability",
+                    "Improved technical reliability",
+                    "Enhanced privacy features"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Standard display"
+            }
+        },
+        {
+            "qid": "Q13",
+            "question_text": "Please share any additional comments about your telemedicine experiences:",
+            "answer_options": [],
+            "routing_logic": "Optional final question",
+            "client_notes": "Capture qualitative feedback",
+            "scripter_notes": "Open text field with 500-character limit",
+            "script": {
+                "question_text": "Please share any additional comments about your telemedicine experiences:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional final question"
+            }
+        }
+    ]
+}

@@ -1,0 +1,263 @@
+{
+    "survey_id": "a95c057f-18a1-4a18-bd24-cfb84ead4a16",
+    "survey_name": "Online Grocery Shopping Experience Survey",
+    "survey_brief": "This survey aims to gather feedback on user experiences with online grocery shopping platforms, including satisfaction levels, preferences, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use online grocery shopping services?",
+            "answer_options": [
+                "Multiple times a week",
+                "Once a week",
+                "A few times a month",
+                "Once a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for mobile-friendliness.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How often do you use online grocery shopping services?",
+                "answer_options": [
+                    "Multiple times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Once a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following online grocery platforms have you used in the past 3 months? (Select all that apply)",
+            "answer_options": [
+                "Amazon Fresh",
+                "Instacart",
+                "Walmart Grocery",
+                "Kroger Delivery",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which of the following online grocery platforms have you used in the past 3 months? (Select all that apply)",
+                "answer_options": [
+                    "Amazon Fresh",
+                    "Instacart",
+                    "Walmart Grocery",
+                    "Kroger Delivery",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you use online grocery shopping services?",
+            "answer_options": [
+                "Convenience",
+                "Time-saving",
+                "Better prices/promotions",
+                "Wider product selection",
+                "Avoiding crowded stores",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1",
+            "client_notes": "Single-choice with an optional open-text field for 'Other'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What is the primary reason you use online grocery shopping services?",
+                "answer_options": [
+                    "Convenience",
+                    "Time-saving",
+                    "Better prices/promotions",
+                    "Wider product selection",
+                    "Avoiding crowded stores",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the freshness and quality of groceries received from online orders? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1",
+            "client_notes": "Use a Likert scale for easy mobile response.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the freshness and quality of groceries received from online orders? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced with online grocery shopping? (Select all that apply)",
+            "answer_options": [
+                "Late deliveries",
+                "Incorrect/missing items",
+                "Poor product quality",
+                "High delivery fees",
+                "Limited product availability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1",
+            "client_notes": "Multi-select with an optional open-text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What challenges have you faced with online grocery shopping? (Select all that apply)",
+                "answer_options": [
+                    "Late deliveries",
+                    "Incorrect/missing items",
+                    "Poor product quality",
+                    "High delivery fees",
+                    "Limited product availability",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would you suggest for online grocery shopping services?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What improvements would you suggest for online grocery shopping services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How important is the availability of same-day delivery for your online grocery shopping experience?",
+            "answer_options": [
+                "Very important",
+                "Somewhat important",
+                "Neutral",
+                "Not very important",
+                "Not important at all"
+            ],
+            "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1",
+            "client_notes": "Single-choice question with clear scale labels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How important is the availability of same-day delivery for your online grocery shopping experience?",
+                "answer_options": [
+                    "Very important",
+                    "Somewhat important",
+                    "Neutral",
+                    "Not very important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Would you be willing to pay extra for express delivery (e.g., within 2 hours)?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Depends on the cost"
+            ],
+            "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1",
+            "client_notes": "Single-choice with a conditional follow-up.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "Would you be willing to pay extra for express delivery (e.g., within 2 hours)?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Depends on the cost"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "If you answered 'Depends on the cost' to Q8, what is the maximum you would pay for express delivery?",
+            "answer_options": [
+                "$2 - $4",
+                "$5 - $7",
+                "$8 - $10",
+                "More than $10"
+            ],
+            "routing_logic": "Appears only to respondents who selected 'Depends on the cost' in Q8",
+            "client_notes": "Single-choice for quick selection.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "If you answered 'Depends on the cost' to Q8, what is the maximum you would pay for express delivery?",
+                "answer_options": [
+                    "$2 - $4",
+                    "$5 - $7",
+                    "$8 - $10",
+                    "More than $10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only to respondents who selected 'Depends on the cost' in Q8"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to recommend your preferred online grocery service to others? (1 = Not likely at all, 10 = Extremely likely)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1",
+            "client_notes": "Use a 10-point scale for granularity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How likely are you to recommend your preferred online grocery service to others? (1 = Not likely at all, 10 = Extremely likely)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected any option except 'Rarely or never' in Q1"
+            }
+        }
+    ]
+}

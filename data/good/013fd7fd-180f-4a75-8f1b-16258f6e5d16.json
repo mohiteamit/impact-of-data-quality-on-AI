@@ -1,0 +1,259 @@
+{
+    "survey_id": "013fd7fd-180f-4a75-8f1b-16258f6e5d16",
+    "survey_name": "Crowdfunding Platform User Experience Survey",
+    "survey_brief": "This survey collects feedback from users of crowdfunding platforms to understand their experiences, preferences, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use crowdfunding platforms?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "First-time user"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button scale. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use crowdfunding platforms?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of projects do you typically support?",
+            "answer_options": [
+                "Creative Arts",
+                "Technology Innovations",
+                "Social Causes",
+                "Personal Needs",
+                "Other"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. Include 'Other' with a text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional 'Other' input",
+            "script": {
+                "question_text": "What types of projects do you typically support?",
+                "answer_options": [
+                    "Creative Arts",
+                    "Technology Innovations",
+                    "Social Causes",
+                    "Personal Needs",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How important is the platform's fee structure in your decision to use it?",
+            "answer_options": [
+                "Very Important",
+                "Important",
+                "Neutral",
+                "Slightly Important",
+                "Not Important"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How important is the platform's fee structure in your decision to use it?",
+                "answer_options": [
+                    "Very Important",
+                    "Important",
+                    "Neutral",
+                    "Slightly Important",
+                    "Not Important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you ever launched a campaign yourself?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a binary choice. Route 'Yes' respondents to Q5.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with conditional routing",
+            "script": {
+                "question_text": "Have you ever launched a campaign yourself?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'Yes', proceed to Q5; else skip to Q6"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied were you with the campaign creation process?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q4",
+            "client_notes": "Use a 5-point scale to measure satisfaction.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied were you with the campaign creation process?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q4"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What factors most influence your decision to back a project?",
+            "answer_options": [
+                "Project Idea",
+                "Creator Reputation",
+                "Rewards Offered",
+                "Social Proof",
+                "Funding Progress"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "What factors most influence your decision to back a project?",
+                "answer_options": [
+                    "Project Idea",
+                    "Creator Reputation",
+                    "Rewards Offered",
+                    "Social Proof",
+                    "Funding Progress"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How satisfied are you with the communication tools provided by the platform?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include a 'Not Applicable' option if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the communication tools provided by the platform?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would you suggest for crowdfunding platforms?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field. Limit response to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What improvements would you suggest for crowdfunding platforms?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to recommend your primary crowdfunding platform to others?",
+            "answer_options": [
+                "0 (Not at all Likely)",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 (Extremely Likely)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an 11-point Net Promoter Score scale.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons in horizontal layout)",
+            "script": {
+                "question_text": "How likely are you to recommend your primary crowdfunding platform to others?",
+                "answer_options": [
+                    "0 (Not at all Likely)",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 (Extremely Likely)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Which device do you primarily use to access crowdfunding platforms?",
+            "answer_options": [
+                "Mobile",
+                "Desktop",
+                "Tablet",
+                "Multiple Devices"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include clear device categories.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Which device do you primarily use to access crowdfunding platforms?",
+                "answer_options": [
+                    "Mobile",
+                    "Desktop",
+                    "Tablet",
+                    "Multiple Devices"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

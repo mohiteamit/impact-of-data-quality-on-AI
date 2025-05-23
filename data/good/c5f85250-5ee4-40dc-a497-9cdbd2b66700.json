@@ -1,0 +1,245 @@
+{
+    "survey_id": "c5f85250-5ee4-40dc-a497-9cdbd2b66700",
+    "survey_name": "Cloud Storage Service User Feedback Survey",
+    "survey_brief": "Assess user satisfaction, feature utilization, and improvement opportunities for enterprise cloud storage solutions",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use our cloud storage service?",
+            "answer_options": [
+                "Multiple times daily",
+                "Once daily",
+                "3-5 times weekly",
+                "Less than 3 times weekly",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use standard frequency scale for benchmarking",
+            "scripter_notes": "Radio buttons, mandatory field",
+            "script": {
+                "question_text": "How often do you use our cloud storage service?",
+                "answer_options": [
+                    "Multiple times daily",
+                    "Once daily",
+                    "3-5 times weekly",
+                    "Less than 3 times weekly",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with our file versioning/history features?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Show if Q1 != 'Never'",
+            "client_notes": "Include N/A option programmatically for non-users",
+            "scripter_notes": "Radio buttons with 'Not Applicable' conditional option",
+            "script": {
+                "question_text": "How satisfied are you with our file versioning/history features?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which storage management features do you regularly use? (Select all that apply)",
+            "answer_options": [
+                "Automated backup scheduling",
+                "Cross-device sync",
+                "File encryption",
+                "Access permission controls",
+                "Storage analytics",
+                "None of these"
+            ],
+            "routing_logic": "Show if Q1 != 'Never'",
+            "client_notes": "Monitor feature awareness gaps",
+            "scripter_notes": "Checkboxes with 'Other' field",
+            "script": {
+                "question_text": "Which storage management features do you regularly use? (Select all that apply)",
+                "answer_options": [
+                    "Automated backup scheduling",
+                    "Cross-device sync",
+                    "File encryption",
+                    "Access permission controls",
+                    "Storage analytics",
+                    "None of these"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How important are these factors when choosing cloud storage? (Rank 1-5 where 1=Most Important)",
+            "answer_options": [
+                "Security protocols",
+                "Storage capacity",
+                "Collaboration features",
+                "Pricing structure",
+                "Mobile app functionality"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use drag-and-drop ranking for better UX",
+            "scripter_notes": "Ranking grid with validation",
+            "script": {
+                "question_text": "How important are these factors when choosing cloud storage? (Rank 1-5 where 1=Most Important)",
+                "answer_options": [
+                    "Security protocols",
+                    "Storage capacity",
+                    "Collaboration features",
+                    "Pricing structure",
+                    "Mobile app functionality"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any data synchronization issues in the past 3 months?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Show if Q1 != 'Never'",
+            "client_notes": "Critical for SLA compliance tracking",
+            "scripter_notes": "Radio buttons with alert trigger for 'Yes' responses",
+            "script": {
+                "question_text": "Have you experienced any data synchronization issues in the past 3 months?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How confident are you in our security measures for sensitive data?",
+            "answer_options": [
+                "Extremely confident",
+                "Somewhat confident",
+                "Neutral",
+                "Not very confident",
+                "Not at all confident"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include ISO certification references in survey header",
+            "scripter_notes": "Radio buttons with tooltip explanation",
+            "script": {
+                "question_text": "How confident are you in our security measures for sensitive data?",
+                "answer_options": [
+                    "Extremely confident",
+                    "Somewhat confident",
+                    "Neutral",
+                    "Not very confident",
+                    "Not at all confident"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What improvements would you prioritize for our service? (Select up to 3)",
+            "answer_options": [
+                "Faster upload speeds",
+                "Lower pricing tiers",
+                "Enhanced mobile app",
+                "Better collaboration tools",
+                "More storage options",
+                "Improved customer support"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use strategic prioritization framework",
+            "scripter_notes": "Checkboxes with selection limit",
+            "script": {
+                "question_text": "What improvements would you prioritize for our service? (Select up to 3)",
+                "answer_options": [
+                    "Faster upload speeds",
+                    "Lower pricing tiers",
+                    "Enhanced mobile app",
+                    "Better collaboration tools",
+                    "More storage options",
+                    "Improved customer support"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend our service to colleagues?",
+            "answer_options": [
+                "Extremely likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Extremely unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard NPS precursor question",
+            "scripter_notes": "Radio buttons with color gradient",
+            "script": {
+                "question_text": "How likely are you to recommend our service to colleagues?",
+                "answer_options": [
+                    "Extremely likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Extremely unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What primary factors influence your continued use of our service?",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 != 'Never'",
+            "client_notes": "Critical churn prediction data",
+            "scripter_notes": "Open text field with 500-character limit",
+            "script": {
+                "question_text": "What primary factors influence your continued use of our service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Which additional features would make our service indispensable to your workflow?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Monitor emerging market needs",
+            "scripter_notes": "Open text field with AI suggestion prompts",
+            "script": {
+                "question_text": "Which additional features would make our service indispensable to your workflow?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

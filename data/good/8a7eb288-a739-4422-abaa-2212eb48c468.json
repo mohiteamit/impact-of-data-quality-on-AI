@@ -1,0 +1,247 @@
+{
+    "survey_id": "8a7eb288-a739-4422-abaa-2212eb48c468",
+    "survey_name": "Corporate Sustainability Practices Assessment",
+    "survey_brief": "Evaluate current sustainability initiatives, challenges, and employee engagement levels within business organizations",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Does your organization have formal sustainability initiatives?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Planning to implement within 12 months"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use clear binary options with neutral midpoint for transitional organizations",
+            "scripter_notes": "Field type: Radio buttons. Mandatory question.",
+            "script": {
+                "question_text": "Does your organization have formal sustainability initiatives?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Planning to implement within 12 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which areas does your sustainability strategy focus on? (Select all that apply)",
+            "answer_options": [
+                "Energy efficiency",
+                "Waste reduction",
+                "Water conservation",
+                "Sustainable sourcing",
+                "Carbon footprint reduction"
+            ],
+            "routing_logic": "Show if Q1 answered 'Yes' or 'Planning to implement within 12 months'",
+            "client_notes": "Limit to 5 core categories for mobile-friendly display",
+            "scripter_notes": "Field type: Checkbox grid. Max 3 selections allowed.",
+            "script": {
+                "question_text": "Which areas does your sustainability strategy focus on? (Select all that apply)",
+                "answer_options": [
+                    "Energy efficiency",
+                    "Waste reduction",
+                    "Water conservation",
+                    "Sustainable sourcing",
+                    "Carbon footprint reduction"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 answered 'Yes' or 'Planning to implement within 12 months'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How effective are your current sustainability initiatives?",
+            "answer_options": [
+                "Very effective",
+                "Somewhat effective",
+                "Neutral",
+                "Somewhat ineffective",
+                "Not effective"
+            ],
+            "routing_logic": "Show if Q1 answered 'Yes'",
+            "client_notes": "Use 5-point Likert scale for nuanced feedback",
+            "scripter_notes": "Field type: Radio buttons with vertical layout",
+            "script": {
+                "question_text": "How effective are your current sustainability initiatives?",
+                "answer_options": [
+                    "Very effective",
+                    "Somewhat effective",
+                    "Neutral",
+                    "Somewhat ineffective",
+                    "Not effective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answered 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What primarily motivates your sustainability efforts?",
+            "answer_options": [
+                "Regulatory compliance",
+                "Cost savings",
+                "Brand reputation",
+                "Leadership values",
+                "Customer demand"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include 'Other' option if budget allows",
+            "scripter_notes": "Field type: Checkboxes with 'Select up to 2' instruction",
+            "script": {
+                "question_text": "What primarily motivates your sustainability efforts?",
+                "answer_options": [
+                    "Regulatory compliance",
+                    "Cost savings",
+                    "Brand reputation",
+                    "Leadership values",
+                    "Customer demand"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What barriers have you encountered in implementing sustainability practices?",
+            "answer_options": [
+                "Budget constraints",
+                "Lack of expertise",
+                "Employee resistance",
+                "Measurement challenges",
+                "Competing priorities"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Randomize option order to prevent bias",
+            "scripter_notes": "Field type: Checkbox grid with 'Select all that apply'",
+            "script": {
+                "question_text": "What barriers have you encountered in implementing sustainability practices?",
+                "answer_options": [
+                    "Budget constraints",
+                    "Lack of expertise",
+                    "Employee resistance",
+                    "Measurement challenges",
+                    "Competing priorities"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How engaged are employees in sustainability initiatives?",
+            "answer_options": [
+                "Highly engaged",
+                "Moderately engaged",
+                "Minimally engaged",
+                "Not engaged"
+            ],
+            "routing_logic": "Show if Q1 answered 'Yes'",
+            "client_notes": "Use 4-point scale to force directional response",
+            "scripter_notes": "Field type: Radio buttons with required validation",
+            "script": {
+                "question_text": "How engaged are employees in sustainability initiatives?",
+                "answer_options": [
+                    "Highly engaged",
+                    "Moderately engaged",
+                    "Minimally engaged",
+                    "Not engaged"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answered 'Yes'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How frequently do you measure sustainability performance?",
+            "answer_options": [
+                "Real-time monitoring",
+                "Quarterly",
+                "Annually",
+                "Irregularly",
+                "Never"
+            ],
+            "routing_logic": "Show if Q1 answered 'Yes'",
+            "client_notes": "Include 'Not applicable' if needed",
+            "scripter_notes": "Field type: Radio buttons with 'Other' text field",
+            "script": {
+                "question_text": "How frequently do you measure sustainability performance?",
+                "answer_options": [
+                    "Real-time monitoring",
+                    "Quarterly",
+                    "Annually",
+                    "Irregularly",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answered 'Yes'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What percentage of your energy consumption comes from renewable sources?",
+            "answer_options": [
+                "0-25%",
+                "26-50%",
+                "51-75%",
+                "76-100%",
+                "Don't know"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use estimated ranges for easier reporting",
+            "scripter_notes": "Field type: Radio buttons with horizontal layout",
+            "script": {
+                "question_text": "What percentage of your energy consumption comes from renewable sources?",
+                "answer_options": [
+                    "0-25%",
+                    "26-50%",
+                    "51-75%",
+                    "76-100%",
+                    "Don't know"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Have you achieved measurable waste reduction in the past 3 years?",
+            "answer_options": [
+                "Yes, verified by audit",
+                "Yes, internal metrics only",
+                "No",
+                "Not applicable"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Differentiate between verified/unverified claims",
+            "scripter_notes": "Field type: Radio buttons with skip logic for 'Not applicable'",
+            "script": {
+                "question_text": "Have you achieved measurable waste reduction in the past 3 years?",
+                "answer_options": [
+                    "Yes, verified by audit",
+                    "Yes, internal metrics only",
+                    "No",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What suggestions do you have for improving corporate sustainability programs?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Optional qualitative feedback field",
+            "scripter_notes": "Field type: Open text area (max 500 characters)",
+            "script": {
+                "question_text": "What suggestions do you have for improving corporate sustainability programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,243 @@
+{
+    "survey_id": "ec19ff85-dca7-4666-b49a-d97a090f8c1a",
+    "survey_name": "Hotel Guest Experience Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate guest satisfaction across various aspects of their hotel stay, including service quality, amenities, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you rate your overall experience at our hotel?",
+            "answer_options": [
+                "Excellent",
+                "Very Good",
+                "Good",
+                "Fair",
+                "Poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a standard 5-point scale for consistent benchmarking. Ensure mobile-friendly layout.",
+            "scripter_notes": "Single-choice radio buttons; randomize order to reduce bias.",
+            "script": {
+                "question_text": "How would you rate your overall experience at our hotel?",
+                "answer_options": [
+                    "Excellent",
+                    "Very Good",
+                    "Good",
+                    "Fair",
+                    "Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied were you with the efficiency of the check-in/check-out process?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Avoid leading language. Consider including a 'N/A' option if applicable.",
+            "scripter_notes": "Single-choice dropdown menu; add 'Prefer not to answer' as optional.",
+            "script": {
+                "question_text": "How satisfied were you with the efficiency of the check-in/check-out process?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the cleanliness of your room?",
+            "answer_options": [
+                "Excellent",
+                "Very Good",
+                "Good",
+                "Fair",
+                "Poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Critical metric for hospitality. Use consistent scale with Q1.",
+            "scripter_notes": "Single-choice radio buttons; vertical alignment.",
+            "script": {
+                "question_text": "How would you rate the cleanliness of your room?",
+                "answer_options": [
+                    "Excellent",
+                    "Very Good",
+                    "Good",
+                    "Fair",
+                    "Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which of the following hotel amenities did you use during your stay?",
+            "answer_options": [
+                "Swimming Pool",
+                "Fitness Center",
+                "Spa",
+                "Restaurant",
+                "Business Center"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select to assess amenity utilization. Limit to 5 options for brevity.",
+            "scripter_notes": "Multi-choice checkboxes; include 'Other' with open text field.",
+            "script": {
+                "question_text": "Which of the following hotel amenities did you use during your stay?",
+                "answer_options": [
+                    "Swimming Pool",
+                    "Fitness Center",
+                    "Spa",
+                    "Restaurant",
+                    "Business Center"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the quality of our in-house dining options?",
+            "answer_options": [
+                "Excellent",
+                "Very Good",
+                "Good",
+                "Fair",
+                "Poor"
+            ],
+            "routing_logic": "Show only if Q4 includes 'Restaurant'",
+            "client_notes": "Critical for revenue analysis. Include image thumbnails of dishes if survey is visual.",
+            "scripter_notes": "Single-choice grid format; add skip logic for non-restaurant users.",
+            "script": {
+                "question_text": "How would you rate the quality of our in-house dining options?",
+                "answer_options": [
+                    "Excellent",
+                    "Very Good",
+                    "Good",
+                    "Fair",
+                    "Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show only if Q4 includes 'Restaurant'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How responsive was our staff to your requests or concerns?",
+            "answer_options": [
+                "Extremely Responsive",
+                "Responsive",
+                "Neutral",
+                "Slow",
+                "Very Slow"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Key service metric. Use clear labels to avoid ambiguity.",
+            "scripter_notes": "Single-choice slider scale (1-5); ensure touchscreen compatibility.",
+            "script": {
+                "question_text": "How responsive was our staff to your requests or concerns?",
+                "answer_options": [
+                    "Extremely Responsive",
+                    "Responsive",
+                    "Neutral",
+                    "Slow",
+                    "Very Slow"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What is the primary reason you chose our hotel?",
+            "answer_options": [
+                "Price",
+                "Location",
+                "Brand Reputation",
+                "Amenities",
+                "Online Reviews"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Insight for marketing strategy. Limit to 5 options with 'Other' field.",
+            "scripter_notes": "Single-choice with 'Other' open-text option.",
+            "script": {
+                "question_text": "What is the primary reason you chose our hotel?",
+                "answer_options": [
+                    "Price",
+                    "Location",
+                    "Brand Reputation",
+                    "Amenities",
+                    "Online Reviews"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend our hotel to others?",
+            "answer_options": [
+                "Extremely Likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Extremely Unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard NPS precursor. Place near end to reduce survey fatigue.",
+            "scripter_notes": "Single-choice emoticon scale (happy to sad faces).",
+            "script": {
+                "question_text": "How likely are you to recommend our hotel to others?",
+                "answer_options": [
+                    "Extremely Likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Extremely Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Please elaborate on your reason for the rating above:",
+            "answer_options": [],
+            "routing_logic": "Show only if Q8 is 'Unlikely' or 'Extremely Unlikely'",
+            "client_notes": "Open field for qualitative insights. Limit to 500 characters.",
+            "scripter_notes": "Open-text input with character counter.",
+            "script": {
+                "question_text": "Please elaborate on your reason for the rating above:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show only if Q8 is 'Unlikely' or 'Extremely Unlikely'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Is there anything else you would like to share about your stay?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Optional open-ended question for unprompted feedback.",
+            "scripter_notes": "Large text box with optional file upload for images.",
+            "script": {
+                "question_text": "Is there anything else you would like to share about your stay?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

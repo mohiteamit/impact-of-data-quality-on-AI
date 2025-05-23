@@ -1,0 +1,249 @@
+{
+    "survey_id": "95c0d688-03bb-46f3-aa55-61ef8bc71965",
+    "survey_name": "Customer Satisfaction with Contactless Payment Methods Survey",
+    "survey_brief": "This survey aims to understand customer satisfaction and preferences regarding contactless payment methods, including mobile wallets, contactless cards, and QR code payments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use contactless payment methods?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you use contactless payment methods?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which contactless payment methods have you used in the past 3 months? (Select all that apply)",
+            "answer_options": [
+                "Mobile wallet (e.g., Apple Pay, Google Pay)",
+                "Contactless credit/debit card",
+                "QR code payments (e.g., PayPal, Venmo)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which contactless payment methods have you used in the past 3 months? (Select all that apply)",
+                "answer_options": [
+                    "Mobile wallet (e.g., Apple Pay, Google Pay)",
+                    "Contactless credit/debit card",
+                    "QR code payments (e.g., PayPal, Venmo)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you prefer contactless payments?",
+            "answer_options": [
+                "Convenience",
+                "Speed",
+                "Hygiene (no physical contact)",
+                "Security",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected at least one contactless payment method in Q2",
+            "client_notes": "Single-choice with an 'Other' option for additional insights.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you prefer contactless payments?",
+                "answer_options": [
+                    "Convenience",
+                    "Speed",
+                    "Hygiene (no physical contact)",
+                    "Security",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one contactless payment method in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the security of contactless payments? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Respondents who selected at least one contactless payment method in Q2",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the security of contactless payments? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one contactless payment method in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any issues with contactless payments? If yes, please describe.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected at least one contactless payment method in Q2",
+            "client_notes": "Open-ended question to capture detailed feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "Have you experienced any issues with contactless payments? If yes, please describe.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected at least one contactless payment method in Q2"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which of the following factors would encourage you to use contactless payments more often? (Select all that apply)",
+            "answer_options": [
+                "More widespread acceptance at merchants",
+                "Better rewards or cashback offers",
+                "Improved security features",
+                "Faster transaction speeds",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to identify key drivers. Include an 'Other' option for additional insights.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following factors would encourage you to use contactless payments more often? (Select all that apply)",
+                "answer_options": [
+                    "More widespread acceptance at merchants",
+                    "Better rewards or cashback offers",
+                    "Improved security features",
+                    "Faster transaction speeds",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to recommend contactless payments to a friend or colleague? (1 = Not at all likely, 10 = Extremely likely)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "routing_logic": "Respondents who selected at least one contactless payment method in Q2",
+            "client_notes": "Use a 10-point scale for Net Promoter Score (NPS) measurement. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to recommend contactless payments to a friend or colleague? (1 = Not at all likely, 10 = Extremely likely)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one contactless payment method in Q2"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What is your age group?",
+            "answer_options": [
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55+"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard demographic question. Use single-choice for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "What is your age group?",
+                "answer_options": [
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55+"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is your gender?",
+            "answer_options": [
+                "Male",
+                "Female",
+                "Non-binary",
+                "Prefer not to say"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard demographic question. Ensure inclusivity in options.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "What is your gender?",
+                "answer_options": [
+                    "Male",
+                    "Female",
+                    "Non-binary",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you have any additional comments or suggestions about contactless payments?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture final thoughts. Ensure the text box is large enough.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "Do you have any additional comments or suggestions about contactless payments?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

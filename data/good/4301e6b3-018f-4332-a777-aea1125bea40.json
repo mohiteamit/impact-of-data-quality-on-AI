@@ -1,0 +1,239 @@
+{
+    "survey_id": "4301e6b3-018f-4332-a777-aea1125bea40",
+    "survey_name": "Employee Recognition Program Effectiveness Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness of current employee recognition programs within the organization and gather feedback for potential improvements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you receive recognition for your work?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "Quarterly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for better granularity. Consider adding a 'Not Applicable' option if some employees are not eligible for recognition programs.",
+            "scripter_notes": "Single-choice radio buttons with mandatory response.",
+            "script": {
+                "question_text": "How often do you receive recognition for your work?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "Quarterly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which forms of recognition do you value the most? (Select up to 3)",
+            "answer_options": [
+                "Monetary rewards (bonuses, gift cards)",
+                "Public acknowledgment (team meetings, company-wide emails)",
+                "Private praise (one-on-one with manager)",
+                "Career development opportunities",
+                "Extra time off",
+                "Trophy or physical awards",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure the 'Other' option includes a text field for specification.",
+            "scripter_notes": "Multi-choice checkboxes with a maximum of 3 selections allowed.",
+            "script": {
+                "question_text": "Which forms of recognition do you value the most? (Select up to 3)",
+                "answer_options": [
+                    "Monetary rewards (bonuses, gift cards)",
+                    "Public acknowledgment (team meetings, company-wide emails)",
+                    "Private praise (one-on-one with manager)",
+                    "Career development opportunities",
+                    "Extra time off",
+                    "Trophy or physical awards",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the current employee recognition program?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include a visual scale (e.g., stars or emojis) for better user experience.",
+            "scripter_notes": "Single-choice radio buttons with mandatory response.",
+            "script": {
+                "question_text": "How satisfied are you with the current employee recognition program?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the employee recognition program?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow for open-ended feedback to capture detailed suggestions.",
+            "scripter_notes": "Open-text field with a character limit of 500.",
+            "script": {
+                "question_text": "What improvements would you suggest for the employee recognition program?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Do you feel that recognition is fairly distributed across all employees?",
+            "answer_options": [
+                "Yes, very fairly",
+                "Somewhat fairly",
+                "Neutral",
+                "Not very fairly",
+                "Not at all fairly"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Consider adding a follow-up question for those who select 'Not very fairly' or 'Not at all fairly'.",
+            "scripter_notes": "Single-choice radio buttons with mandatory response.",
+            "script": {
+                "question_text": "Do you feel that recognition is fairly distributed across all employees?",
+                "answer_options": [
+                    "Yes, very fairly",
+                    "Somewhat fairly",
+                    "Neutral",
+                    "Not very fairly",
+                    "Not at all fairly"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you answered 'Not very fairly' or 'Not at all fairly' to the previous question, please explain your concerns.",
+            "answer_options": [],
+            "routing_logic": "Q5 == 'Not very fairly' OR Q5 == 'Not at all fairly'",
+            "client_notes": "Ensure this question only appears for relevant respondents.",
+            "scripter_notes": "Open-text field with a character limit of 500.",
+            "script": {
+                "question_text": "If you answered 'Not very fairly' or 'Not at all fairly' to the previous question, please explain your concerns.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Q5 == 'Not very fairly' OR Q5 == 'Not at all fairly'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How effective is recognition in motivating you to perform better?",
+            "answer_options": [
+                "Extremely effective",
+                "Very effective",
+                "Somewhat effective",
+                "Not very effective",
+                "Not at all effective"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a visual scale for better engagement.",
+            "scripter_notes": "Single-choice radio buttons with mandatory response.",
+            "script": {
+                "question_text": "How effective is recognition in motivating you to perform better?",
+                "answer_options": [
+                    "Extremely effective",
+                    "Very effective",
+                    "Somewhat effective",
+                    "Not very effective",
+                    "Not at all effective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which department do you belong to?",
+            "answer_options": [
+                "Sales",
+                "Marketing",
+                "Engineering",
+                "Human Resources",
+                "Finance",
+                "Operations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure the 'Other' option includes a text field for specification.",
+            "scripter_notes": "Single-choice dropdown menu with an 'Other' text field.",
+            "script": {
+                "question_text": "Which department do you belong to?",
+                "answer_options": [
+                    "Sales",
+                    "Marketing",
+                    "Engineering",
+                    "Human Resources",
+                    "Finance",
+                    "Operations",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How long have you been with the company?",
+            "answer_options": [
+                "Less than 1 year",
+                "1-3 years",
+                "3-5 years",
+                "5-10 years",
+                "More than 10 years"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a dropdown menu for cleaner presentation.",
+            "scripter_notes": "Single-choice dropdown menu with mandatory response.",
+            "script": {
+                "question_text": "How long have you been with the company?",
+                "answer_options": [
+                    "Less than 1 year",
+                    "1-3 years",
+                    "3-5 years",
+                    "5-10 years",
+                    "More than 10 years"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you have any additional comments or suggestions regarding employee recognition?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Optional question to capture any additional feedback.",
+            "scripter_notes": "Open-text field with a character limit of 1000.",
+            "script": {
+                "question_text": "Do you have any additional comments or suggestions regarding employee recognition?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

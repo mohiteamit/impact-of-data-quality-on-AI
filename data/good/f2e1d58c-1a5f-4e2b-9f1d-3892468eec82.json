@@ -1,0 +1,259 @@
+{
+    "survey_id": "f2e1d58c-1a5f-4e2b-9f1d-3892468eec82",
+    "survey_name": "Workplace Collaboration Tools Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with current workplace collaboration tools and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which collaboration tools do you currently use for work? (Select all that apply)",
+            "answer_options": [
+                "Microsoft Teams",
+                "Slack",
+                "Zoom",
+                "Google Workspace (Chat, Meet, etc.)",
+                "Asana",
+                "Trello",
+                "Other"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Ensure the 'Other' option includes a text field for specifying the tool.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional text input for 'Other'.",
+            "script": {
+                "question_text": "Which collaboration tools do you currently use for work? (Select all that apply)",
+                "answer_options": [
+                    "Microsoft Teams",
+                    "Slack",
+                    "Zoom",
+                    "Google Workspace (Chat, Meet, etc.)",
+                    "Asana",
+                    "Trello",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the overall performance of your primary collaboration tool?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point Likert scale for consistency.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the overall performance of your primary collaboration tool?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges do you face when using collaboration tools? (Select all that apply)",
+            "answer_options": [
+                "Technical issues (e.g., crashes, slow performance)",
+                "Difficulty integrating with other tools",
+                "Poor user interface",
+                "Lack of training or support",
+                "Overwhelming notifications",
+                "Other"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Include an optional text field for 'Other'.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional text input for 'Other'.",
+            "script": {
+                "question_text": "What challenges do you face when using collaboration tools? (Select all that apply)",
+                "answer_options": [
+                    "Technical issues (e.g., crashes, slow performance)",
+                    "Difficulty integrating with other tools",
+                    "Poor user interface",
+                    "Lack of training or support",
+                    "Overwhelming notifications",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you experience technical issues with your collaboration tools?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Show if Q2 answer is 'Dissatisfied' or 'Very dissatisfied'.",
+            "client_notes": "Use a frequency scale to assess severity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How often do you experience technical issues with your collaboration tools?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q2 answer is 'Dissatisfied' or 'Very dissatisfied'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features do you find most valuable in collaboration tools? (Select all that apply)",
+            "answer_options": [
+                "Messaging/chat",
+                "Video conferencing",
+                "File sharing",
+                "Task management",
+                "Integration with other apps",
+                "Search functionality",
+                "Other"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Include an optional text field for 'Other'.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional text input for 'Other'.",
+            "script": {
+                "question_text": "What features do you find most valuable in collaboration tools? (Select all that apply)",
+                "answer_options": [
+                    "Messaging/chat",
+                    "Video conferencing",
+                    "File sharing",
+                    "Task management",
+                    "Integration with other apps",
+                    "Search functionality",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How easy is it to switch between different collaboration tools in your workflow?",
+            "answer_options": [
+                "Very easy",
+                "Somewhat easy",
+                "Neutral",
+                "Somewhat difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "Show if Q1 has more than one answer selected.",
+            "client_notes": "Assess workflow friction due to tool switching.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How easy is it to switch between different collaboration tools in your workflow?",
+                "answer_options": [
+                    "Very easy",
+                    "Somewhat easy",
+                    "Neutral",
+                    "Somewhat difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 has more than one answer selected."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What improvements would you suggest for your primary collaboration tool?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended to capture qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT with a text box.",
+            "script": {
+                "question_text": "What improvements would you suggest for your primary collaboration tool?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How often do you receive training or updates about your collaboration tools?",
+            "answer_options": [
+                "Regularly (e.g., quarterly)",
+                "Occasionally (e.g., once a year)",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Assess training frequency and gaps.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How often do you receive training or updates about your collaboration tools?",
+                "answer_options": [
+                    "Regularly (e.g., quarterly)",
+                    "Occasionally (e.g., once a year)",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Do you feel your collaboration tools help you work more efficiently?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No effect",
+                "No, they hinder efficiency"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Measure perceived productivity impact.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "Do you feel your collaboration tools help you work more efficiently?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No effect",
+                    "No, they hinder efficiency"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Would you recommend your current collaboration tools to other teams or organizations?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Net Promoter Score (NPS)-style question to gauge loyalty.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "Would you recommend your current collaboration tools to other teams or organizations?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

@@ -1,0 +1,249 @@
+{
+    "survey_id": "ce9b3eb5-9ce8-4d8b-811d-e00e91392584",
+    "survey_name": "Tourist Attraction Visitor Experience Survey",
+    "survey_brief": "Assess visitor satisfaction and gather insights about guest experiences at cultural/historical attractions",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit this tourist attraction?",
+            "answer_options": [
+                "First-time visitor",
+                "Once a year",
+                "2-3 times a year",
+                "4+ times a year"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons with vertical layout for mobile optimization",
+            "scripter_notes": "Single-choice radio button field",
+            "script": {
+                "question_text": "How often do you visit this tourist attraction?",
+                "answer_options": [
+                    "First-time visitor",
+                    "Once a year",
+                    "2-3 times a year",
+                    "4+ times a year"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influenced your decision to visit? (Select all that apply)",
+            "answer_options": [
+                "Online reviews",
+                "Social media content",
+                "Family/friend recommendation",
+                "Educational interest",
+                "Tour package inclusion",
+                "Local event promotion"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Limit to 6 options to prevent choice overload",
+            "scripter_notes": "Multi-choice checkbox field with 'Other' option",
+            "script": {
+                "question_text": "What factors influenced your decision to visit? (Select all that apply)",
+                "answer_options": [
+                    "Online reviews",
+                    "Social media content",
+                    "Family/friend recommendation",
+                    "Educational interest",
+                    "Tour package inclusion",
+                    "Local event promotion"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the cleanliness of public facilities?",
+            "answer_options": [
+                "Poor",
+                "Fair",
+                "Good",
+                "Very Good",
+                "Excellent"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use smiley face scale for enhanced engagement",
+            "scripter_notes": "Single-choice radio button with icon support",
+            "script": {
+                "question_text": "How would you rate the cleanliness of public facilities?",
+                "answer_options": [
+                    "Poor",
+                    "Fair",
+                    "Good",
+                    "Very Good",
+                    "Excellent"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Did you use the audio guide service during your visit?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Place question before audio guide-specific questions",
+            "scripter_notes": "Single-choice radio button with skip logic",
+            "script": {
+                "question_text": "Did you use the audio guide service during your visit?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the audio guide content quality?",
+            "answer_options": [
+                "Not comprehensive",
+                "Somewhat informative",
+                "Adequate",
+                "Very informative",
+                "Exceptional depth"
+            ],
+            "routing_logic": "Only if Q4 = 'Yes'",
+            "client_notes": "Include 'N/A' option for validation purposes",
+            "scripter_notes": "Single-choice with conditional display logic",
+            "script": {
+                "question_text": "How would you rate the audio guide content quality?",
+                "answer_options": [
+                    "Not comprehensive",
+                    "Somewhat informative",
+                    "Adequate",
+                    "Very informative",
+                    "Exceptional depth"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q4 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How well were historical artifacts/exhibits labeled?",
+            "answer_options": [
+                "Labels were unclear",
+                "Some missing information",
+                "Adequate descriptions",
+                "Detailed explanations",
+                "Exceptional contextualization"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include image examples in survey instructions",
+            "scripter_notes": "Single-choice radio button grid",
+            "script": {
+                "question_text": "How well were historical artifacts/exhibits labeled?",
+                "answer_options": [
+                    "Labels were unclear",
+                    "Some missing information",
+                    "Adequate descriptions",
+                    "Detailed explanations",
+                    "Exceptional contextualization"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional amenities would improve your experience?",
+            "answer_options": [
+                "More seating areas",
+                "Interactive digital displays",
+                "Multilingual signage",
+                "Enhanced food options",
+                "Child-friendly activities"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections with 'Other' field",
+            "scripter_notes": "Multi-choice with optional text input",
+            "script": {
+                "question_text": "What additional amenities would improve your experience?",
+                "answer_options": [
+                    "More seating areas",
+                    "Interactive digital displays",
+                    "Multilingual signage",
+                    "Enhanced food options",
+                    "Child-friendly activities"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How satisfied are you with staff accessibility?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use standard 5-point Likert scale formatting",
+            "scripter_notes": "Single-choice radio button matrix",
+            "script": {
+                "question_text": "How satisfied are you with staff accessibility?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Please share any specific suggestions for improvement:",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use character limit (500 max) with real-time counter",
+            "scripter_notes": "Open-text field with input validation",
+            "script": {
+                "question_text": "Please share any specific suggestions for improvement:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to recommend this attraction to others?",
+            "answer_options": [
+                "Very unlikely",
+                "Unlikely",
+                "Neutral",
+                "Likely",
+                "Very likely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Place key metric question near survey end",
+            "scripter_notes": "Single-choice with NPS-style formatting",
+            "script": {
+                "question_text": "How likely are you to recommend this attraction to others?",
+                "answer_options": [
+                    "Very unlikely",
+                    "Unlikely",
+                    "Neutral",
+                    "Likely",
+                    "Very likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,289 @@
+{
+    "survey_id": "61cb5549-7b3a-41c1-af60-f6e1ddd4996b",
+    "survey_name": "Cybersecurity Awareness Training Effectiveness Survey",
+    "survey_brief": "Assess employee awareness and organizational effectiveness of cybersecurity training programs to identify gaps and improve future initiatives.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often does your organization conduct cybersecurity awareness training?",
+            "answer_options": [
+                "Quarterly",
+                "Annually",
+                "Biannually",
+                "Ad hoc basis",
+                "Never"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Use a single-select radial scale. Consider adding 'Not sure' option if needed.",
+            "scripter_notes": "Radio button input. Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "How often does your organization conduct cybersecurity awareness training?",
+                "answer_options": [
+                    "Quarterly",
+                    "Annually",
+                    "Biannually",
+                    "Ad hoc basis",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following topics were covered in your cybersecurity training? (Select all that apply)",
+            "answer_options": [
+                "Phishing prevention",
+                "Password management",
+                "Data encryption",
+                "Social engineering",
+                "Incident reporting",
+                "None of the above"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Multi-select with 'Other' field optional. Limit to 6 core options for mobile responsiveness.",
+            "scripter_notes": "Checkbox input. Include 'Select all that apply' instruction.",
+            "script": {
+                "question_text": "Which of the following topics were covered in your cybersecurity training? (Select all that apply)",
+                "answer_options": [
+                    "Phishing prevention",
+                    "Password management",
+                    "Data encryption",
+                    "Social engineering",
+                    "Incident reporting",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Have you completed all required cybersecurity training modules in the past 12 months?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Partial completion"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Include tooltip explaining what 'partial completion' entails.",
+            "scripter_notes": "Radio button input with vertical layout.",
+            "script": {
+                "question_text": "Have you completed all required cybersecurity training modules in the past 12 months?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Partial completion"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How confident do you feel identifying phishing attempts in workplace communications?",
+            "answer_options": [
+                "Very confident",
+                "Somewhat confident",
+                "Neutral",
+                "Somewhat unconfident",
+                "Very unconfident"
+            ],
+            "routing_logic": "Display if Q3 answer is 'Yes' or 'Partial completion'",
+            "client_notes": "5-point Likert scale. Consider adding visual anchors.",
+            "scripter_notes": "Radio button grid. Ensure mobile-responsive design.",
+            "script": {
+                "question_text": "How confident do you feel identifying phishing attempts in workplace communications?",
+                "answer_options": [
+                    "Very confident",
+                    "Somewhat confident",
+                    "Neutral",
+                    "Somewhat unconfident",
+                    "Very unconfident"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q3 answer is 'Yes' or 'Partial completion'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the relevance of training content to your daily work responsibilities?",
+            "answer_options": [
+                "Highly relevant",
+                "Moderately relevant",
+                "Neutral",
+                "Slightly irrelevant",
+                "Completely irrelevant"
+            ],
+            "routing_logic": "Display if Q3 answer is 'Yes' or 'Partial completion'",
+            "client_notes": "Include N/A option for roles with minimal digital interaction.",
+            "scripter_notes": "Radio button input with horizontal layout on desktop.",
+            "script": {
+                "question_text": "How would you rate the relevance of training content to your daily work responsibilities?",
+                "answer_options": [
+                    "Highly relevant",
+                    "Moderately relevant",
+                    "Neutral",
+                    "Slightly irrelevant",
+                    "Completely irrelevant"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q3 answer is 'Yes' or 'Partial completion'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which training delivery methods does your organization use? (Select all that apply)",
+            "answer_options": [
+                "In-person workshops",
+                "E-learning modules",
+                "Video tutorials",
+                "Simulated attacks",
+                "Printed materials",
+                "None"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Monitor for 'None' selections to identify training gaps.",
+            "scripter_notes": "Checkbox input with 'Other' text field optional.",
+            "script": {
+                "question_text": "Which training delivery methods does your organization use? (Select all that apply)",
+                "answer_options": [
+                    "In-person workshops",
+                    "E-learning modules",
+                    "Video tutorials",
+                    "Simulated attacks",
+                    "Printed materials",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Have you encountered a cybersecurity threat at work in the past 6 months?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Follow up with incident reporters through separate channel.",
+            "scripter_notes": "Radio buttons with conditional logic for 'Yes' responses.",
+            "script": {
+                "question_text": "Have you encountered a cybersecurity threat at work in the past 6 months?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How satisfied are you with the technical support provided during cybersecurity incidents?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display if Q7 answer is 'Yes'",
+            "client_notes": "Add optional comment field for specific feedback.",
+            "scripter_notes": "Radio button scale with emoji anchors for accessibility.",
+            "script": {
+                "question_text": "How satisfied are you with the technical support provided during cybersecurity incidents?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q7 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What improvements would you suggest for future cybersecurity training programs?",
+            "answer_options": [],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Use text analysis tools for qualitative responses.",
+            "scripter_notes": "Open-text field with 500-character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for future cybersecurity training programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How effective are your organization's password policy requirements?",
+            "answer_options": [
+                "Very effective",
+                "Effective",
+                "Neutral",
+                "Ineffective",
+                "Very ineffective"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Correlate with actual password change frequency data.",
+            "scripter_notes": "Radio button grid with horizontal alignment.",
+            "script": {
+                "question_text": "How effective are your organization's password policy requirements?",
+                "answer_options": [
+                    "Very effective",
+                    "Effective",
+                    "Neutral",
+                    "Ineffective",
+                    "Very ineffective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "Does your organization conduct simulated phishing exercises?",
+            "answer_options": [
+                "Regularly",
+                "Occasionally",
+                "Never",
+                "Don't know"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Benchmark against industry standards in final report.",
+            "scripter_notes": "Radio buttons with 'Don't know' as last option.",
+            "script": {
+                "question_text": "Does your organization conduct simulated phishing exercises?",
+                "answer_options": [
+                    "Regularly",
+                    "Occasionally",
+                    "Never",
+                    "Don't know"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Please share any additional comments regarding cybersecurity practices in your organization:",
+            "answer_options": [],
+            "routing_logic": "Optional final question for all respondents",
+            "client_notes": "Use optional free-form field to capture unexpected insights.",
+            "scripter_notes": "Open-text area with 1000-character limit.",
+            "script": {
+                "question_text": "Please share any additional comments regarding cybersecurity practices in your organization:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional final question for all respondents"
+            }
+        }
+    ]
+}

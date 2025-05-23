@@ -1,0 +1,269 @@
+{
+    "survey_id": "092fe195-a2d2-469e-83a0-03b2cba8fa1c",
+    "survey_name": "Smart Home Device Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer attitudes, preferences, and challenges related to smart home device adoption to guide product development and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home devices do you currently own? (Select all that apply)",
+            "answer_options": [
+                "Smart speakers (e.g., Amazon Echo, Google Home)",
+                "Smart thermostats",
+                "Smart lighting",
+                "Smart security systems (e.g., cameras, doorbells)",
+                "Smart appliances (e.g., refrigerators, washing machines)",
+                "None of the above"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use checkboxes for multi-selection. Randomize order of options to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE. Ensure 'None of the above' deselects other options if chosen.",
+            "script": {
+                "question_text": "Which of the following smart home devices do you currently own? (Select all that apply)",
+                "answer_options": [
+                    "Smart speakers (e.g., Amazon Echo, Google Home)",
+                    "Smart thermostats",
+                    "Smart lighting",
+                    "Smart security systems (e.g., cameras, doorbells)",
+                    "Smart appliances (e.g., refrigerators, washing machines)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your smart home devices overall?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "I do not own any smart home devices"
+            ],
+            "routing_logic": "Show if Q1 does not select 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale. Include 'I do not own any' as an opt-out option to avoid forcing a response.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Display logic excludes those who selected 'None of the above' in Q1.",
+            "script": {
+                "question_text": "How satisfied are you with your smart home devices overall?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "I do not own any smart home devices"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you have not adopted smart home devices?",
+            "answer_options": [
+                "Too expensive",
+                "Privacy/security concerns",
+                "Too complicated to use",
+                "Not enough perceived benefits",
+                "Prefer traditional devices",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 selects 'None of the above'",
+            "client_notes": "Include an 'Other' option with text entry to capture nuanced responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an 'Other' text field. Display only for non-owners.",
+            "script": {
+                "question_text": "What is the primary reason you have not adopted smart home devices?",
+                "answer_options": [
+                    "Too expensive",
+                    "Privacy/security concerns",
+                    "Too complicated to use",
+                    "Not enough perceived benefits",
+                    "Prefer traditional devices",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 selects 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which factors are most important to you when purchasing a smart home device? (Rank top 3)",
+            "answer_options": [
+                "Price",
+                "Ease of use",
+                "Brand reputation",
+                "Privacy/security features",
+                "Integration with other devices",
+                "Customer reviews",
+                "Design/aesthetics",
+                "Energy efficiency"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a drag-and-drop ranking interface for mobile/web compatibility. Limit to 3 selections.",
+            "scripter_notes": "Field type: RANKING (custom script). Validate exactly 3 selections.",
+            "script": {
+                "question_text": "Which factors are most important to you when purchasing a smart home device? (Rank top 3)",
+                "answer_options": [
+                    "Price",
+                    "Ease of use",
+                    "Brand reputation",
+                    "Privacy/security features",
+                    "Integration with other devices",
+                    "Customer reviews",
+                    "Design/aesthetics",
+                    "Energy efficiency"
+                ],
+                "type": "RANKING",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to purchase additional smart home devices in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point likelihood scale. Randomize scale order for a subset of respondents to check for bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Add randomization logic for scale display.",
+            "script": {
+                "question_text": "How likely are you to purchase additional smart home devices in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would make you more likely to use smart home devices?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended to capture qualitative insights. Set a 300-character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT. Add character counter.",
+            "script": {
+                "question_text": "What improvements would make you more likely to use smart home devices?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which smart home platform do you use most frequently?",
+            "answer_options": [
+                "Amazon Alexa",
+                "Google Assistant",
+                "Apple HomeKit",
+                "Samsung SmartThings",
+                "Other (please specify)",
+                "I do not use a platform"
+            ],
+            "routing_logic": "Show if Q1 does not select 'None of the above'",
+            "client_notes": "Include 'Other' for less common platforms. Prefill 'Other' text if 'Other' is selected in Q1.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with 'Other' text field. Hide for non-owners.",
+            "script": {
+                "question_text": "Which smart home platform do you use most frequently?",
+                "answer_options": [
+                    "Amazon Alexa",
+                    "Google Assistant",
+                    "Apple HomeKit",
+                    "Samsung SmartThings",
+                    "Other (please specify)",
+                    "I do not use a platform"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How concerned are you about data privacy with smart home devices?",
+            "answer_options": [
+                "Extremely concerned",
+                "Very concerned",
+                "Somewhat concerned",
+                "Slightly concerned",
+                "Not at all concerned"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "5-point scale. Place this after adoption questions to avoid priming effects.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Randomize scale for 10% of respondents.",
+            "script": {
+                "question_text": "How concerned are you about data privacy with smart home devices?",
+                "answer_options": [
+                    "Extremely concerned",
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Slightly concerned",
+                    "Not at all concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Have you ever stopped using a smart home device due to privacy concerns?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Prefer not to answer"
+            ],
+            "routing_logic": "Show if Q1 does not select 'None of the above'",
+            "client_notes": "Sensitive question—include 'Prefer not to answer'. Use a skip logic from Q8 if 'Not at all concerned' is selected.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Skip if Q8 = 'Not at all concerned'.",
+            "script": {
+                "question_text": "Have you ever stopped using a smart home device due to privacy concerns?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Prefer not to answer"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your age range?",
+            "answer_options": [
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55-64",
+                "65+",
+                "Prefer not to answer"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Standard demographic. Place at end to avoid drop-offs.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Required for analytics.",
+            "script": {
+                "question_text": "What is your age range?",
+                "answer_options": [
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55-64",
+                    "65+",
+                    "Prefer not to answer"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

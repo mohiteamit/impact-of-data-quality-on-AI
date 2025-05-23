@@ -1,0 +1,291 @@
+{
+    "survey_id": "5193f3fc-2320-4312-b001-45ce5b660c0d",
+    "survey_name": "Car Sharing Service User Experience Survey",
+    "survey_brief": "This survey aims to evaluate user satisfaction and identify areas for improvement in a car sharing service, focusing on ease of use, vehicle availability, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use our car sharing service?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Less than once a month"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This helps segment users by engagement level. Consider adding a follow-up for infrequent users to understand barriers.",
+            "scripter_notes": "Single-choice radio buttons. Include 'Prefer not to say' if required.",
+            "script": {
+                "question_text": "How frequently do you use our car sharing service?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Less than once a month"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using our car sharing service?",
+            "answer_options": [
+                "Convenience",
+                "Cost savings",
+                "Environmental concerns",
+                "No personal vehicle",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an open-ended option for 'Other' to capture unique motivations.",
+            "scripter_notes": "Single-choice with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is your primary reason for using our car sharing service?",
+                "answer_options": [
+                    "Convenience",
+                    "Cost savings",
+                    "Environmental concerns",
+                    "No personal vehicle",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the ease of booking a vehicle through our app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency. Consider benchmarking against competitors.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the ease of booking a vehicle through our app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the availability of vehicles in your preferred locations?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This is a key performance indicator. Consider geographic segmentation for deeper analysis.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How would you rate the availability of vehicles in your preferred locations?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What types of vehicles do you typically book? (Select all that apply)",
+            "answer_options": [
+                "Compact cars",
+                "Sedans",
+                "SUVs",
+                "Luxury vehicles",
+                "Electric vehicles",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to understand vehicle preferences. Use this data for fleet optimization.",
+            "scripter_notes": "Multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What types of vehicles do you typically book? (Select all that apply)",
+                "answer_options": [
+                    "Compact cars",
+                    "Sedans",
+                    "SUVs",
+                    "Luxury vehicles",
+                    "Electric vehicles",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with the cleanliness and maintenance of the vehicles?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This impacts user retention. Consider adding a follow-up for dissatisfied users.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and maintenance of the vehicles?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Have you ever experienced any technical issues with our app?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "If 'Yes,' route to Q8 for details. This helps prioritize bug fixes.",
+            "scripter_notes": "Single-choice radio buttons with conditional routing.",
+            "script": {
+                "question_text": "Have you ever experienced any technical issues with our app?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Please describe the technical issues you encountered with our app.",
+            "answer_options": [],
+            "routing_logic": "Only if Q7 is 'Yes'",
+            "client_notes": "Open-ended to capture specific pain points. Use for QA improvements.",
+            "scripter_notes": "Open-text field. Optional character limit (e.g., 500 chars).",
+            "script": {
+                "question_text": "Please describe the technical issues you encountered with our app.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q7 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How satisfied are you with our customer support team?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Critical for service quality. Follow up with low scores to understand gaps.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with our customer support team?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional features or services would you like to see in our car sharing service?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture innovation ideas. Use for product roadmap.",
+            "scripter_notes": "Open-text field. Optional character limit (e.g., 500 chars).",
+            "script": {
+                "question_text": "What additional features or services would you like to see in our car sharing service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How likely are you to recommend our car sharing service to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Net Promoter Score (NPS) question. Calculate by subtracting detractors from promoters.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How likely are you to recommend our car sharing service to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "What is your age group?",
+            "answer_options": [
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55+",
+                "Prefer not to say"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Demographic data for segmentation. Ensure compliance with privacy regulations.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "What is your age group?",
+                "answer_options": [
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55+",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

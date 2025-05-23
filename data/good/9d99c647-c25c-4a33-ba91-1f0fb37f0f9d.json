@@ -1,0 +1,243 @@
+{
+    "survey_id": "9d99c647-c25c-4a33-ba91-1f0fb37f0f9d",
+    "survey_name": "Telehealth Platform Usability Survey",
+    "survey_brief": "This survey aims to assess user satisfaction and identify areas for improvement in telehealth platforms, focusing on usability, features, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use telehealth platforms?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a simple frequency scale to gauge user engagement levels.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you use telehealth platforms?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you value most in a telehealth platform? (Select up to 3)",
+            "answer_options": [
+                "Video consultations",
+                "Secure messaging",
+                "Prescription refills",
+                "Appointment scheduling",
+                "Integration with electronic health records",
+                "Health tracking tools",
+                "Multi-language support"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to identify priority features. Limit selections to 3 for clearer insights.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes with max selection limit of 3)",
+            "script": {
+                "question_text": "Which features do you value most in a telehealth platform? (Select up to 3)",
+                "answer_options": [
+                    "Video consultations",
+                    "Secure messaging",
+                    "Prescription refills",
+                    "Appointment scheduling",
+                    "Integration with electronic health records",
+                    "Health tracking tools",
+                    "Multi-language support"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Rate your overall satisfaction with the telehealth platform you use most often.",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a standard 5-point Likert scale for measuring satisfaction.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "Rate your overall satisfaction with the telehealth platform you use most often.",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you use telehealth services?",
+            "answer_options": [
+                "Convenience",
+                "Cost savings",
+                "Access to specialists",
+                "Reduced travel time",
+                "Privacy concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Include an 'Other' option with a text field to capture diverse responses.",
+            "scripter_notes": "Field type: Single-choice with optional open-text (radio buttons + text input for 'Other')",
+            "script": {
+                "question_text": "What is the primary reason you use telehealth services?",
+                "answer_options": [
+                    "Convenience",
+                    "Cost savings",
+                    "Access to specialists",
+                    "Reduced travel time",
+                    "Privacy concerns",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any technical difficulties while using telehealth platforms?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Binary question to identify technical issues. Follow up with Q6 if 'Yes' is selected.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "Have you experienced any technical difficulties while using telehealth platforms?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Describe the technical difficulties you've encountered.",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'Yes' in Q5",
+            "client_notes": "Open-ended question to capture specific technical issues. No character limit.",
+            "scripter_notes": "Field type: Open-text (text area)",
+            "script": {
+                "question_text": "Describe the technical difficulties you've encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'Yes' in Q5"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to recommend your telehealth platform to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Standard NPS-like question to measure advocacy.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to recommend your telehealth platform to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would enhance your telehealth experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: Open-text (text area)",
+            "script": {
+                "question_text": "What improvements would enhance your telehealth experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Which devices do you typically use to access telehealth services? (Select all that apply)",
+            "answer_options": [
+                "Smartphone",
+                "Tablet",
+                "Desktop computer",
+                "Laptop",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Multi-choice question to understand device preferences. Include an 'Other' option.",
+            "scripter_notes": "Field type: Multi-choice with optional open-text (checkboxes + text input for 'Other')",
+            "script": {
+                "question_text": "Which devices do you typically use to access telehealth services? (Select all that apply)",
+                "answer_options": [
+                    "Smartphone",
+                    "Tablet",
+                    "Desktop computer",
+                    "Laptop",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How important is data privacy when choosing a telehealth platform?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point importance scale to measure privacy concerns.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How important is data privacy when choosing a telehealth platform?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

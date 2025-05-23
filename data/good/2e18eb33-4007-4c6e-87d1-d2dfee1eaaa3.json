@@ -1,0 +1,205 @@
+{
+    "survey_id": "2e18eb33-4007-4c6e-87d1-d2dfee1eaaa3",
+    "survey_name": "Contactless Payment Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and concerns regarding contactless payment methods, including mobile wallets and tap-to-pay cards.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use contactless payment methods (e.g., mobile wallets, tap-to-pay cards)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice format. Ensure options cover all possible usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use contactless payment methods (e.g., mobile wallets, tap-to-pay cards)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following contactless payment methods have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Mobile wallet (e.g., Apple Pay, Google Pay)",
+                "Tap-to-pay credit/debit card",
+                "Contactless transit card (e.g., public transportation)",
+                "Other",
+                "None of the above"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a multi-choice format. Include an 'Other' option for flexibility.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following contactless payment methods have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Mobile wallet (e.g., Apple Pay, Google Pay)",
+                    "Tap-to-pay credit/debit card",
+                    "Contactless transit card (e.g., public transportation)",
+                    "Other",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you prefer contactless payments over traditional payment methods?",
+            "answer_options": [
+                "Speed and convenience",
+                "Hygiene (avoiding physical contact)",
+                "Security features",
+                "Rewards or cashback incentives",
+                "I do not prefer contactless payments"
+            ],
+            "routing_logic": "Show if Q1 response is not 'Never'",
+            "client_notes": "Use a single-choice format. Tailor options to common motivations.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "What is the primary reason you prefer contactless payments over traditional payment methods?",
+                "answer_options": [
+                    "Speed and convenience",
+                    "Hygiene (avoiding physical contact)",
+                    "Security features",
+                    "Rewards or cashback incentives",
+                    "I do not prefer contactless payments"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about using contactless payments? (Select all that apply)",
+            "answer_options": [
+                "Security risks (e.g., fraud, data theft)",
+                "Limited acceptance at merchants",
+                "Lack of understanding how it works",
+                "No concerns",
+                "Other"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a multi-choice format. Include an 'Other' option for flexibility.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using contactless payments? (Select all that apply)",
+                "answer_options": [
+                    "Security risks (e.g., fraud, data theft)",
+                    "Limited acceptance at merchants",
+                    "Lack of understanding how it works",
+                    "No concerns",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the security features of contactless payment methods?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied",
+                "N/A (I do not use contactless payments)"
+            ],
+            "routing_logic": "Show if Q1 response is not 'Never'",
+            "client_notes": "Use a single-choice Likert scale. Include an N/A option for non-users.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the security features of contactless payment methods?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied",
+                    "N/A (I do not use contactless payments)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you be more likely to use contactless payments if merchants offered discounts or rewards for doing so?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, somewhat",
+                "No effect",
+                "No, I already use them",
+                "No, I would still not use them"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice format. Tailor options to measure incentive impact.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you be more likely to use contactless payments if merchants offered discounts or rewards for doing so?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, somewhat",
+                    "No effect",
+                    "No, I already use them",
+                    "No, I would still not use them"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What is the maximum transaction amount for which you would feel comfortable using contactless payment?",
+            "answer_options": [
+                "Up to $20",
+                "$20-$50",
+                "$50-$100",
+                "Over $100",
+                "No limit"
+            ],
+            "routing_logic": "Show if Q1 response is not 'Never'",
+            "client_notes": "Use a single-choice format. Capture comfort levels with transaction sizes.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "What is the maximum transaction amount for which you would feel comfortable using contactless payment?",
+                "answer_options": [
+                    "Up to $20",
+                    "$20-$50",
+                    "$50-$100",
+                    "Over $100",
+                    "No limit"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Please describe any additional thoughts or concerns you have about contactless payments.",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Use an open-ended format. Allow respondents to share qualitative feedback.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "Please describe any additional thoughts or concerns you have about contactless payments.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

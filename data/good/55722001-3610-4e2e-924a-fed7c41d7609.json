@@ -1,0 +1,259 @@
+{
+    "survey_id": "55722001-3610-4e2e-924a-fed7c41d7609",
+    "survey_name": "Local Grocery Store Shopping Habits Survey",
+    "survey_brief": "This survey aims to understand customer shopping habits, preferences, and satisfaction levels with local grocery stores to improve service offerings and customer experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you shop at your local grocery store?",
+            "answer_options": [
+                "Daily",
+                "2-3 times a week",
+                "Once a week",
+                "2-3 times a month",
+                "Once a month or less"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you shop at your local grocery store?",
+                "answer_options": [
+                    "Daily",
+                    "2-3 times a week",
+                    "Once a week",
+                    "2-3 times a month",
+                    "Once a month or less"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons you choose to shop at your local grocery store? (Select all that apply)",
+            "answer_options": [
+                "Proximity to home/work",
+                "Better prices",
+                "Quality of products",
+                "Variety of products",
+                "Friendly staff",
+                "Cleanliness of store",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What are the primary reasons you choose to shop at your local grocery store? (Select all that apply)",
+                "answer_options": [
+                    "Proximity to home/work",
+                    "Better prices",
+                    "Quality of products",
+                    "Variety of products",
+                    "Friendly staff",
+                    "Cleanliness of store",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall shopping experience at your local grocery store?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the overall shopping experience at your local grocery store?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see at your local grocery store?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you like to see at your local grocery store?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Do you use the store's loyalty or rewards program?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I wasn't aware there was one"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to gauge awareness and usage of loyalty programs.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Do you use the store's loyalty or rewards program?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I wasn't aware there was one"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you answered 'Yes' to using the loyalty program, how satisfied are you with it?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q5",
+            "client_notes": "This question should only appear if Q5 is answered with 'Yes'. Use a 5-point Likert scale.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "If you answered 'Yes' to using the loyalty program, how satisfied are you with it?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q5"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How important are the following factors when choosing a grocery store? (Rate each factor from 1 to 5, where 1 is 'Not important' and 5 is 'Very important')",
+            "answer_options": [
+                "Price",
+                "Product quality",
+                "Store cleanliness",
+                "Customer service",
+                "Location convenience",
+                "Product variety",
+                "Availability of organic/local products"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a matrix question with a 5-point scale for each factor. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: matrix (MULTI_CHOICE for each row)",
+            "script": {
+                "question_text": "How important are the following factors when choosing a grocery store? (Rate each factor from 1 to 5, where 1 is 'Not important' and 5 is 'Very important')",
+                "answer_options": [
+                    "Price",
+                    "Product quality",
+                    "Store cleanliness",
+                    "Customer service",
+                    "Location convenience",
+                    "Product variety",
+                    "Availability of organic/local products"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Do you purchase organic or locally sourced products at your grocery store?",
+            "answer_options": [
+                "Yes, regularly",
+                "Yes, occasionally",
+                "No, never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to understand purchasing habits of organic/local products.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Do you purchase organic or locally sourced products at your grocery store?",
+                "answer_options": [
+                    "Yes, regularly",
+                    "Yes, occasionally",
+                    "No, never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What types of products do you typically buy at your local grocery store? (Select all that apply)",
+            "answer_options": [
+                "Fresh produce (fruits, vegetables)",
+                "Dairy products",
+                "Meat and poultry",
+                "Bakery items",
+                "Frozen foods",
+                "Canned goods",
+                "Snacks and beverages",
+                "Household essentials",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question to understand product preferences. Include an 'Other' option for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What types of products do you typically buy at your local grocery store? (Select all that apply)",
+                "answer_options": [
+                    "Fresh produce (fruits, vegetables)",
+                    "Dairy products",
+                    "Meat and poultry",
+                    "Bakery items",
+                    "Frozen foods",
+                    "Canned goods",
+                    "Snacks and beverages",
+                    "Household essentials",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Would you be interested in a mobile app for your local grocery store to check deals, create shopping lists, and track loyalty points?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, possibly",
+                "No, not interested"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to gauge interest in a potential mobile app.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you be interested in a mobile app for your local grocery store to check deals, create shopping lists, and track loyalty points?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, possibly",
+                    "No, not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,257 @@
+{
+    "survey_id": "712ccec8-daa7-4087-9025-ffc14cf944f7",
+    "survey_name": "Corporate Wellness Program Participation Survey",
+    "survey_brief": "This survey aims to assess employee participation and satisfaction with the current corporate wellness program to identify areas for improvement and increase engagement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the corporate wellness program offered by your employer?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not familiar at all"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a 4-point Likert scale to measure familiarity levels. Ensure mobile-friendly layout for easy selection.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How familiar are you with the corporate wellness program offered by your employer?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following wellness program activities have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Fitness challenges",
+                "Health screenings",
+                "Mental health workshops",
+                "Nutrition counseling",
+                "Yoga or meditation sessions",
+                "None of the above"
+            ],
+            "routing_logic": "This question appears if respondent selects 'Very familiar' or 'Somewhat familiar' in Q1.",
+            "client_notes": "Use checkboxes for multi-select options. Randomize the order of options to avoid bias.",
+            "scripter_notes": "Field type: Multi-choice checkboxes.",
+            "script": {
+                "question_text": "Which of the following wellness program activities have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Fitness challenges",
+                    "Health screenings",
+                    "Mental health workshops",
+                    "Nutrition counseling",
+                    "Yoga or meditation sessions",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if respondent selects 'Very familiar' or 'Somewhat familiar' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the wellness program activities you have participated in?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears if respondent selects at least one activity in Q2.",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction. Include a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the wellness program activities you have participated in?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if respondent selects at least one activity in Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What barriers, if any, prevent you from participating in the wellness program?",
+            "answer_options": [
+                "Lack of time",
+                "Lack of interest",
+                "Unaware of program details",
+                "Program activities not relevant to me",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if respondent selects 'Not very familiar' or 'Not familiar at all' in Q1 or 'None of the above' in Q2.",
+            "client_notes": "Include an 'Other' option with a text field for additional comments.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with an open-text option.",
+            "script": {
+                "question_text": "What barriers, if any, prevent you from participating in the wellness program?",
+                "answer_options": [
+                    "Lack of time",
+                    "Lack of interest",
+                    "Unaware of program details",
+                    "Program activities not relevant to me",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if respondent selects 'Not very familiar' or 'Not familiar at all' in Q1 or 'None of the above' in Q2."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following benefits would motivate you to participate in the wellness program? (Select all that apply)",
+            "answer_options": [
+                "Financial incentives (e.g., gift cards, bonuses)",
+                "Extra paid time off",
+                "Recognition or awards",
+                "Health insurance discounts",
+                "Personal health improvements",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Randomize the order of options to reduce order bias. Include an 'Other' option for additional feedback.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with an open-text option.",
+            "script": {
+                "question_text": "Which of the following benefits would motivate you to participate in the wellness program? (Select all that apply)",
+                "answer_options": [
+                    "Financial incentives (e.g., gift cards, bonuses)",
+                    "Extra paid time off",
+                    "Recognition or awards",
+                    "Health insurance discounts",
+                    "Personal health improvements",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend the corporate wellness program to a colleague?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale. This question can serve as a Net Promoter Score (NPS) proxy.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How likely are you to recommend the corporate wellness program to a colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional wellness activities would you like to see included in the program?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Open-ended question to gather qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: Open-text with character limit.",
+            "script": {
+                "question_text": "What additional wellness activities would you like to see included in the program?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How often do you typically participate in wellness program activities?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "Quarterly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears if respondent selects at least one activity in Q2.",
+            "client_notes": "Use a frequency scale to measure participation. Include a 'Never' option for non-participants.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you typically participate in wellness program activities?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "Quarterly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if respondent selects at least one activity in Q2."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Do you feel the wellness program has positively impacted your overall well-being?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No impact",
+                "No, it has negatively impacted my well-being"
+            ],
+            "routing_logic": "This question appears if respondent selects at least one activity in Q2.",
+            "client_notes": "Use a 4-point scale to measure perceived impact. Include an option for negative impact.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "Do you feel the wellness program has positively impacted your overall well-being?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No impact",
+                    "No, it has negatively impacted my well-being"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if respondent selects at least one activity in Q2."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your preferred method of receiving information about wellness program activities?",
+            "answer_options": [
+                "Email",
+                "Company intranet",
+                "Mobile app notifications",
+                "Posters or flyers in the office",
+                "Team meetings",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Include an 'Other' option for additional preferences. Randomize the order of options.",
+            "scripter_notes": "Field type: Single-choice radio buttons with an open-text option.",
+            "script": {
+                "question_text": "What is your preferred method of receiving information about wellness program activities?",
+                "answer_options": [
+                    "Email",
+                    "Company intranet",
+                    "Mobile app notifications",
+                    "Posters or flyers in the office",
+                    "Team meetings",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

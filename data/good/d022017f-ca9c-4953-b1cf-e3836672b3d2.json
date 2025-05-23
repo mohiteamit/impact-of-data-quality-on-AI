@@ -1,0 +1,285 @@
+{
+    "survey_id": "d022017f-ca9c-4953-b1cf-e3836672b3d2",
+    "survey_name": "Remote Patient Monitoring Device Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from patients using remote monitoring devices to improve product usability and healthcare outcomes.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How long have you been using your remote patient monitoring device?",
+            "answer_options": [
+                "Less than 1 month",
+                "1-3 months",
+                "4-6 months",
+                "More than 6 months"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a horizontal radio button layout for mobile compatibility.",
+            "scripter_notes": "Field type: single-choice (radio buttons). Ensure answer options are mutually exclusive.",
+            "script": {
+                "question_text": "How long have you been using your remote patient monitoring device?",
+                "answer_options": [
+                    "Less than 1 month",
+                    "1-3 months",
+                    "4-6 months",
+                    "More than 6 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Vital signs monitoring",
+                "Medication reminders",
+                "Symptom logging",
+                "Emergency alert system",
+                "Video consultation",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Consider randomizing options to reduce order bias. Include 'None' option for accurate data.",
+            "scripter_notes": "Field type: multi-choice (checkboxes). Set max selections to 6.",
+            "script": {
+                "question_text": "Which of the following features do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Vital signs monitoring",
+                    "Medication reminders",
+                    "Symptom logging",
+                    "Emergency alert system",
+                    "Video consultation",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How easy is it to set up and connect your monitoring device?",
+            "answer_options": [
+                "Very easy",
+                "Somewhat easy",
+                "Neither easy nor difficult",
+                "Somewhat difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point Likert scale with balanced anchors. Add N/A option if needed.",
+            "scripter_notes": "Field type: single-choice (radio buttons). Display vertically on mobile.",
+            "script": {
+                "question_text": "How easy is it to set up and connect your monitoring device?",
+                "answer_options": [
+                    "Very easy",
+                    "Somewhat easy",
+                    "Neither easy nor difficult",
+                    "Somewhat difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you experience technical issues with your device?",
+            "answer_options": [
+                "Never",
+                "Rarely (once every few months)",
+                "Occasionally (1-2 times per month)",
+                "Frequently (weekly or more)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Include follow-up open-ended if 'Frequently' selected.",
+            "scripter_notes": "Field type: single-choice with conditional routing to Q4a if 'Frequently' selected.",
+            "script": {
+                "question_text": "How often do you experience technical issues with your device?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once every few months)",
+                    "Occasionally (1-2 times per month)",
+                    "Frequently (weekly or more)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4a",
+            "question_text": "Please describe the technical issues you encounter most frequently:",
+            "answer_options": [],
+            "routing_logic": "Only appears if Q4 = 'Frequently (weekly or more)'",
+            "client_notes": "Use rich text field to allow detailed descriptions. Set character limit to 500.",
+            "scripter_notes": "Field type: open-text. Enable spellcheck.",
+            "script": {
+                "question_text": "Please describe the technical issues you encounter most frequently:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only appears if Q4 = 'Frequently (weekly or more)'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the battery life of your device?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Consider adding visual smiley scale for accessibility.",
+            "scripter_notes": "Field type: single-choice. Randomize scale direction for 50% of respondents.",
+            "script": {
+                "question_text": "How satisfied are you with the battery life of your device?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Has using this device changed how often you communicate with your healthcare provider?",
+            "answer_options": [
+                "Yes, I communicate more frequently",
+                "Yes, I communicate less frequently",
+                "No change in communication frequency",
+                "Not applicable"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Important for measuring impact on patient-provider relationships.",
+            "scripter_notes": "Field type: single-choice. Include 'Prefer not to answer' option if required.",
+            "script": {
+                "question_text": "Has using this device changed how often you communicate with your healthcare provider?",
+                "answer_options": [
+                    "Yes, I communicate more frequently",
+                    "Yes, I communicate less frequently",
+                    "No change in communication frequency",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What improvements would you suggest for your remote monitoring device? (Select up to 3)",
+            "answer_options": [
+                "Longer battery life",
+                "Simpler setup process",
+                "More comfortable wearable design",
+                "Better mobile app integration",
+                "More accurate readings",
+                "Faster data syncing",
+                "More affordable accessories",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Prioritization question - limit selections to force ranking.",
+            "scripter_notes": "Field type: multi-choice with max selections = 3. Add 'Other' text field if selected.",
+            "script": {
+                "question_text": "What improvements would you suggest for your remote monitoring device? (Select up to 3)",
+                "answer_options": [
+                    "Longer battery life",
+                    "Simpler setup process",
+                    "More comfortable wearable design",
+                    "Better mobile app integration",
+                    "More accurate readings",
+                    "Faster data syncing",
+                    "More affordable accessories",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How confident are you that your health data is secure with this system?",
+            "answer_options": [
+                "Extremely confident",
+                "Very confident",
+                "Somewhat confident",
+                "Not very confident",
+                "Not at all confident"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Critical question for privacy compliance assessments.",
+            "scripter_notes": "Field type: single-choice. Include 'Don't know' option if needed.",
+            "script": {
+                "question_text": "How confident are you that your health data is secure with this system?",
+                "answer_options": [
+                    "Extremely confident",
+                    "Very confident",
+                    "Somewhat confident",
+                    "Not very confident",
+                    "Not at all confident"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Would you recommend this remote monitoring device to other patients with similar conditions?",
+            "answer_options": [
+                "Definitely would recommend",
+                "Probably would recommend",
+                "Might or might not recommend",
+                "Probably would not recommend",
+                "Definitely would not recommend"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Standard NPS precursor question. Follow with open-ended if negative rating.",
+            "scripter_notes": "Field type: single-choice. Route to Q9a if rating < 3.",
+            "script": {
+                "question_text": "Would you recommend this remote monitoring device to other patients with similar conditions?",
+                "answer_options": [
+                    "Definitely would recommend",
+                    "Probably would recommend",
+                    "Might or might not recommend",
+                    "Probably would not recommend",
+                    "Definitely would not recommend"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q9a",
+            "question_text": "What concerns would prevent you from recommending this device?",
+            "answer_options": [],
+            "routing_logic": "Only appears if Q9 ≤ 'Might or might not recommend'",
+            "client_notes": "Valuable qualitative data for product improvement.",
+            "scripter_notes": "Field type: open-text. Set minimum 20-character requirement.",
+            "script": {
+                "question_text": "What concerns would prevent you from recommending this device?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only appears if Q9 ≤ 'Might or might not recommend'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional features would make this device more useful for your healthcare management?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended to capture unmet needs. Suggest 2-3 sentences.",
+            "scripter_notes": "Field type: open-text. Set reasonable character limit (300).",
+            "script": {
+                "question_text": "What additional features would make this device more useful for your healthcare management?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

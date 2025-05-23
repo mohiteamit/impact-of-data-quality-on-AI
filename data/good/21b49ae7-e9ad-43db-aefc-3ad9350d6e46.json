@@ -1,0 +1,249 @@
+{
+    "survey_id": "21b49ae7-e9ad-43db-aefc-3ad9350d6e46",
+    "survey_name": "Customer Satisfaction Survey for Ride-Sharing Services",
+    "survey_brief": "This survey aims to gather feedback from users of ride-sharing services to understand their satisfaction levels, preferences, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use ride-sharing services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Less than once a month",
+                "First-time user"
+            ],
+            "routing_logic": "Applies to all respondents.",
+            "client_notes": "Use a single-choice question to ensure clarity. Mobile-friendly layout recommended.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often do you use ride-sharing services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Less than once a month",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Applies to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which ride-sharing service do you use most frequently?",
+            "answer_options": [
+                "Uber",
+                "Lyft",
+                "Didi",
+                "Grab",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Applies to all respondents.",
+            "client_notes": "Include an 'Other' option for less common services. Ensure the 'Other' field is open-ended if selected.",
+            "scripter_notes": "Field type: radio button with an open-ended follow-up if 'Other' is selected.",
+            "script": {
+                "question_text": "Which ride-sharing service do you use most frequently?",
+                "answer_options": [
+                    "Uber",
+                    "Lyft",
+                    "Didi",
+                    "Grab",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Applies to all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing a ride-sharing service? (Select all that apply)",
+            "answer_options": [
+                "Price",
+                "Wait time",
+                "Driver ratings",
+                "App usability",
+                "Safety features",
+                "Vehicle cleanliness",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Applies to all respondents.",
+            "client_notes": "Use a multi-choice question to capture multiple preferences. Ensure the 'Other' field is open-ended if selected.",
+            "scripter_notes": "Field type: checkbox with an open-ended follow-up if 'Other' is selected.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a ride-sharing service? (Select all that apply)",
+                "answer_options": [
+                    "Price",
+                    "Wait time",
+                    "Driver ratings",
+                    "App usability",
+                    "Safety features",
+                    "Vehicle cleanliness",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Applies to all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the overall experience of your most frequently used ride-sharing service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Applies to all respondents.",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How satisfied are you with the overall experience of your most frequently used ride-sharing service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Applies to all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What is the primary reason for your satisfaction or dissatisfaction with your ride-sharing service?",
+            "answer_options": [],
+            "routing_logic": "Applies to all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What is the primary reason for your satisfaction or dissatisfaction with your ride-sharing service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Applies to all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How often do you experience issues during your ride-sharing trips?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Occasionally",
+                "Frequently",
+                "Almost every trip"
+            ],
+            "routing_logic": "Applies to all respondents.",
+            "client_notes": "Use a frequency scale to measure issue occurrence. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often do you experience issues during your ride-sharing trips?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Occasionally",
+                    "Frequently",
+                    "Almost every trip"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Applies to all respondents."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What types of issues have you encountered during your ride-sharing trips? (Select all that apply)",
+            "answer_options": [
+                "Long wait times",
+                "Poor driver behavior",
+                "Vehicle cleanliness issues",
+                "Route deviations",
+                "Payment issues",
+                "App glitches",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Applies if Q6 is not 'Never'.",
+            "client_notes": "Multi-choice question to identify common issues. Ensure the 'Other' field is open-ended if selected.",
+            "scripter_notes": "Field type: checkbox with an open-ended follow-up if 'Other' is selected.",
+            "script": {
+                "question_text": "What types of issues have you encountered during your ride-sharing trips? (Select all that apply)",
+                "answer_options": [
+                    "Long wait times",
+                    "Poor driver behavior",
+                    "Vehicle cleanliness issues",
+                    "Route deviations",
+                    "Payment issues",
+                    "App glitches",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Applies if Q6 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend your most frequently used ride-sharing service to a friend or colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Applies to all respondents.",
+            "client_notes": "Use a Likert scale to measure recommendation likelihood. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How likely are you to recommend your most frequently used ride-sharing service to a friend or colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Applies to all respondents."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What improvements would make you more satisfied with your ride-sharing service?",
+            "answer_options": [],
+            "routing_logic": "Applies to all respondents.",
+            "client_notes": "Open-ended question to capture suggestions for improvement. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would make you more satisfied with your ride-sharing service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Applies to all respondents."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Would you be interested in using additional features offered by ride-sharing services, such as carpooling or subscription plans?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe",
+                "Not sure"
+            ],
+            "routing_logic": "Applies to all respondents.",
+            "client_notes": "Single-choice question to gauge interest in additional features. Mobile-friendly layout recommended.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "Would you be interested in using additional features offered by ride-sharing services, such as carpooling or subscription plans?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Applies to all respondents."
+            }
+        }
+    ]
+}

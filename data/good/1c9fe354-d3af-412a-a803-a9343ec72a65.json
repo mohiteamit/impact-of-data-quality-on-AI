@@ -1,0 +1,263 @@
+{
+    "survey_id": "1c9fe354-d3af-412a-a803-a9343ec72a65",
+    "survey_name": "Meal Kit Delivery Service Customer Feedback Survey",
+    "survey_brief": "Assess customer satisfaction, preferences, and improvement areas for meal kit delivery services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How long have you been using a meal kit delivery service?",
+            "answer_options": [
+                "Less than 3 months",
+                "3-6 months",
+                "6-12 months",
+                "1-2 years",
+                "Over 2 years",
+                "No longer using"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons with vertical layout. Include 'No longer using' to identify former customers.",
+            "scripter_notes": "Single-choice dropdown with 'No longer using' as a skip trigger for Q9.",
+            "script": {
+                "question_text": "How long have you been using a meal kit delivery service?",
+                "answer_options": [
+                    "Less than 3 months",
+                    "3-6 months",
+                    "6-12 months",
+                    "1-2 years",
+                    "Over 2 years",
+                    "No longer using"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influenced your choice of meal kit service? (Select all that apply)",
+            "answer_options": [
+                "Price",
+                "Meal variety",
+                "Dietary options",
+                "Delivery flexibility",
+                "Brand reputation",
+                "Friend referral"
+            ],
+            "routing_logic": "All respondents except those who answered 'No longer using' in Q1",
+            "client_notes": "Use checkboxes with a maximum of 3 selections allowed.",
+            "scripter_notes": "Multi-choice checkbox grid with 'Other' field optional.",
+            "script": {
+                "question_text": "What factors influenced your choice of meal kit service? (Select all that apply)",
+                "answer_options": [
+                    "Price",
+                    "Meal variety",
+                    "Dietary options",
+                    "Delivery flexibility",
+                    "Brand reputation",
+                    "Friend referral"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents except those who answered 'No longer using' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the variety of meals offered each week?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "Respondents who didn't select 'No longer using' in Q1",
+            "client_notes": "Use a 5-point Likert scale with emoji support for mobile users.",
+            "scripter_notes": "Single-choice radio buttons with horizontal layout.",
+            "script": {
+                "question_text": "How satisfied are you with the variety of meals offered each week?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who didn't select 'No longer using' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the freshness and quality of ingredients?",
+            "answer_options": [
+                "Poor",
+                "Fair",
+                "Good",
+                "Very good",
+                "Excellent"
+            ],
+            "routing_logic": "Respondents who didn't select 'No longer using' in Q1",
+            "client_notes": "Ensure scale consistency with Q3 for comparative analysis.",
+            "scripter_notes": "Single-choice star rating system (5 stars mapped to labels).",
+            "script": {
+                "question_text": "How would you rate the freshness and quality of ingredients?",
+                "answer_options": [
+                    "Poor",
+                    "Fair",
+                    "Good",
+                    "Very good",
+                    "Excellent"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who didn't select 'No longer using' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you experience delivery issues (e.g., late/missing boxes)?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Occasionally",
+                "Frequently",
+                "Always"
+            ],
+            "routing_logic": "All respondents except those who answered 'No longer using' in Q1",
+            "client_notes": "Include a 'Not applicable' option if delivery reliability isn't tracked.",
+            "scripter_notes": "Single-choice dropdown with conditional follow-up for 'Frequently' or 'Always'.",
+            "script": {
+                "question_text": "How often do you experience delivery issues (e.g., late/missing boxes)?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Occasionally",
+                    "Frequently",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'No longer using' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which dietary preferences does your household accommodate? (Select all that apply)",
+            "answer_options": [
+                "Vegetarian",
+                "Vegan",
+                "Gluten-free",
+                "Low-carb",
+                "Dairy-free",
+                "No restrictions"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections but force at least one choice.",
+            "scripter_notes": "Multi-choice checkbox with 'No restrictions' as an exclusive option.",
+            "script": {
+                "question_text": "Which dietary preferences does your household accommodate? (Select all that apply)",
+                "answer_options": [
+                    "Vegetarian",
+                    "Vegan",
+                    "Gluten-free",
+                    "Low-carb",
+                    "Dairy-free",
+                    "No restrictions"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How important is recipe creativity in your meal kit experience?",
+            "answer_options": [
+                "Not important",
+                "Slightly important",
+                "Moderately important",
+                "Very important",
+                "Essential"
+            ],
+            "routing_logic": "Respondents who didn't select 'No longer using' in Q1",
+            "client_notes": "Use a sliding scale visual for web respondents.",
+            "scripter_notes": "Single-choice radio buttons with tooltip definitions.",
+            "script": {
+                "question_text": "How important is recipe creativity in your meal kit experience?",
+                "answer_options": [
+                    "Not important",
+                    "Slightly important",
+                    "Moderately important",
+                    "Very important",
+                    "Essential"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who didn't select 'No longer using' in Q1"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend this service to a friend?",
+            "answer_options": [
+                "Very unlikely",
+                "Unlikely",
+                "Neutral",
+                "Likely",
+                "Very likely"
+            ],
+            "routing_logic": "Respondents who didn't select 'No longer using' in Q1",
+            "client_notes": "Include NPS (Net Promoter Score) calculation in backend.",
+            "scripter_notes": "Single-choice radio buttons with color-coded options.",
+            "script": {
+                "question_text": "How likely are you to recommend this service to a friend?",
+                "answer_options": [
+                    "Very unlikely",
+                    "Unlikely",
+                    "Neutral",
+                    "Likely",
+                    "Very likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who didn't select 'No longer using' in Q1"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What were your primary reasons for discontinuing the service? (Select all that apply)",
+            "answer_options": [
+                "Cost",
+                "Poor ingredient quality",
+                "Limited meal variety",
+                "Delivery issues",
+                "Changed dietary needs",
+                "Found better alternative"
+            ],
+            "routing_logic": "Only respondents who selected 'No longer using' in Q1",
+            "client_notes": "Include an open-text field for 'Other' reasons.",
+            "scripter_notes": "Multi-choice checkboxes with optional comment field.",
+            "script": {
+                "question_text": "What were your primary reasons for discontinuing the service? (Select all that apply)",
+                "answer_options": [
+                    "Cost",
+                    "Poor ingredient quality",
+                    "Limited meal variety",
+                    "Delivery issues",
+                    "Changed dietary needs",
+                    "Found better alternative"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only respondents who selected 'No longer using' in Q1"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional features would improve your experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use AI-powered text analysis for open responses.",
+            "scripter_notes": "Open-text field with 500-character limit.",
+            "script": {
+                "question_text": "What additional features would improve your experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

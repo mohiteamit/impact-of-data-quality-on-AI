@@ -1,0 +1,239 @@
+{
+    "survey_id": "a62eb372-b7dd-4a93-925f-6abe3c6a9946",
+    "survey_name": "Urban Park Visitor Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from visitors about their experience in urban parks to improve facilities, services, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit this urban park?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "This is my first visit"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a radio button for single-choice selection. Ensure options are clear and cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you visit this urban park?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "This is my first visit"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for visiting this park? (Select all that apply)",
+            "answer_options": [
+                "Exercise (walking, jogging, cycling)",
+                "Relaxation and leisure",
+                "Spending time with family/friends",
+                "Attending events or activities",
+                "Nature observation (birds, plants)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "What are your primary reasons for visiting this park? (Select all that apply)",
+                "answer_options": [
+                    "Exercise (walking, jogging, cycling)",
+                    "Relaxation and leisure",
+                    "Spending time with family/friends",
+                    "Attending events or activities",
+                    "Nature observation (birds, plants)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness of the park?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a Likert scale format (radio buttons). Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness of the park?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in this park?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What improvements would you like to see in this park?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the availability of seating areas in the park?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a Likert scale format (radio buttons). Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the availability of seating areas in the park?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you participated in any organized events or activities in the park?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use radio buttons for yes/no selection. Follow up with Q7 if 'Yes' is selected.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Route to Q7 if 'Yes' is selected.",
+            "script": {
+                "question_text": "Have you participated in any organized events or activities in the park?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If yes, how satisfied were you with the events or activities?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears only if Q6 is answered with 'Yes'.",
+            "client_notes": "Use a Likert scale format (radio buttons). Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Only display if Q6 answer is 'Yes'.",
+            "script": {
+                "question_text": "If yes, how satisfied were you with the events or activities?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q6 is answered with 'Yes'."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How safe do you feel in the park during the day?",
+            "answer_options": [
+                "Very safe",
+                "Somewhat safe",
+                "Neutral",
+                "Somewhat unsafe",
+                "Very unsafe"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a Likert scale format (radio buttons). Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How safe do you feel in the park during the day?",
+                "answer_options": [
+                    "Very safe",
+                    "Somewhat safe",
+                    "Neutral",
+                    "Somewhat unsafe",
+                    "Very unsafe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How safe do you feel in the park during the evening?",
+            "answer_options": [
+                "Very safe",
+                "Somewhat safe",
+                "Neutral",
+                "Somewhat unsafe",
+                "Very unsafe"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a Likert scale format (radio buttons). Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How safe do you feel in the park during the evening?",
+                "answer_options": [
+                    "Very safe",
+                    "Somewhat safe",
+                    "Neutral",
+                    "Somewhat unsafe",
+                    "Very unsafe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Are there any specific amenities you feel are missing in the park?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "Are there any specific amenities you feel are missing in the park?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

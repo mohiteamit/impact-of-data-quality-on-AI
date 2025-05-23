@@ -1,0 +1,237 @@
+{
+    "survey_id": "790da3b1-780e-422e-a5cb-87a5fb7857c9",
+    "survey_name": "Airline Passenger Experience Survey",
+    "survey_brief": "This survey aims to evaluate passenger satisfaction with various aspects of airline travel, including in-flight services, boarding processes, and overall comfort.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the overall cleanliness of the aircraft?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Single-choice radio buttons; mandatory field.",
+            "script": {
+                "question_text": "How satisfied are you with the overall cleanliness of the aircraft?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following in-flight services did you use during your flight? (Select all that apply)",
+            "answer_options": [
+                "Food and beverage service",
+                "In-flight entertainment",
+                "Wi-Fi",
+                "Duty-free shopping",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections; include 'None of the above' option.",
+            "scripter_notes": "Multi-choice checkboxes; optional field.",
+            "script": {
+                "question_text": "Which of the following in-flight services did you use during your flight? (Select all that apply)",
+                "answer_options": [
+                    "Food and beverage service",
+                    "In-flight entertainment",
+                    "Wi-Fi",
+                    "Duty-free shopping",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the comfort of your seat?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Provide clear definitions for each rating to ensure consistency.",
+            "scripter_notes": "Single-choice radio buttons; mandatory field.",
+            "script": {
+                "question_text": "How would you rate the comfort of your seat?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Did you experience any delays during your journey?",
+            "answer_options": [
+                "Yes, during check-in",
+                "Yes, during boarding",
+                "Yes, during the flight",
+                "Yes, at baggage claim",
+                "No delays"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to capture different types of delays.",
+            "scripter_notes": "Multi-choice checkboxes; optional field.",
+            "script": {
+                "question_text": "Did you experience any delays during your journey?",
+                "answer_options": [
+                    "Yes, during check-in",
+                    "Yes, during boarding",
+                    "Yes, during the flight",
+                    "Yes, at baggage claim",
+                    "No delays"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any issues you encountered during your flight.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected any delay options in Q4",
+            "client_notes": "Open-ended question to gather detailed feedback on specific issues.",
+            "scripter_notes": "Open-text field; optional field.",
+            "script": {
+                "question_text": "Please describe any issues you encountered during your flight.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected any delay options in Q4"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend this airline to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a standard Net Promoter Score (NPS) scale for consistency.",
+            "scripter_notes": "Single-choice radio buttons; mandatory field.",
+            "script": {
+                "question_text": "How likely are you to recommend this airline to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which of the following factors influenced your overall satisfaction the most? (Select up to three)",
+            "answer_options": [
+                "Flight punctuality",
+                "Staff friendliness",
+                "Seat comfort",
+                "In-flight services",
+                "Baggage handling",
+                "Food quality",
+                "Check-in process",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Limit selections to three to prioritize key factors.",
+            "scripter_notes": "Multi-choice checkboxes with a maximum of three selections; optional field.",
+            "script": {
+                "question_text": "Which of the following factors influenced your overall satisfaction the most? (Select up to three)",
+                "answer_options": [
+                    "Flight punctuality",
+                    "Staff friendliness",
+                    "Seat comfort",
+                    "In-flight services",
+                    "Baggage handling",
+                    "Food quality",
+                    "Check-in process",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Please specify any other factors that influenced your satisfaction.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Other (please specify)' in Q7",
+            "client_notes": "Open-ended question to capture additional feedback not covered in the options.",
+            "scripter_notes": "Open-text field; optional field.",
+            "script": {
+                "question_text": "Please specify any other factors that influenced your satisfaction.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Other (please specify)' in Q7"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How satisfied were you with the boarding process?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency with other satisfaction questions.",
+            "scripter_notes": "Single-choice radio buttons; mandatory field.",
+            "script": {
+                "question_text": "How satisfied were you with the boarding process?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you have any additional comments or suggestions for improving your airline experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture any final thoughts or suggestions.",
+            "scripter_notes": "Open-text field; optional field.",
+            "script": {
+                "question_text": "Do you have any additional comments or suggestions for improving your airline experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

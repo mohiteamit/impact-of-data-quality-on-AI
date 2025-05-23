@@ -1,0 +1,255 @@
+{
+    "survey_id": "b7747498-a788-4b44-bcb2-530313170c49",
+    "survey_name": "Post-Pandemic Office Re-entry Experience Survey",
+    "survey_brief": "This survey aims to understand employee experiences and preferences regarding returning to the office after remote work during the pandemic.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often are you currently working from the office?",
+            "answer_options": [
+                "Full-time (5 days a week)",
+                "Hybrid (3-4 days a week)",
+                "Part-time (1-2 days a week)",
+                "Fully remote (0 days in office)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Include an 'Other' option if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How often are you currently working from the office?",
+                "answer_options": [
+                    "Full-time (5 days a week)",
+                    "Hybrid (3-4 days a week)",
+                    "Part-time (1-2 days a week)",
+                    "Fully remote (0 days in office)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influenced your decision to return to the office (or remain remote)?",
+            "answer_options": [
+                "Employer requirement",
+                "Better collaboration in person",
+                "Work-life balance",
+                "Commute time/cost",
+                "Health and safety concerns",
+                "Home environment not conducive to work"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture varied motivations.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "What factors influenced your decision to return to the office (or remain remote)?",
+                "answer_options": [
+                    "Employer requirement",
+                    "Better collaboration in person",
+                    "Work-life balance",
+                    "Commute time/cost",
+                    "Health and safety concerns",
+                    "Home environment not conducive to work"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your current work arrangement (office/remote/hybrid)?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with your current work arrangement (office/remote/hybrid)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would make you more comfortable returning to the office?",
+            "answer_options": [
+                "Better ventilation/air filtration",
+                "More flexible hours",
+                "Reduced office density (more space)",
+                "On-site health protocols (e.g., testing)",
+                "Improved cleaning procedures"
+            ],
+            "routing_logic": "Respondents who selected 'Hybrid' or 'Full-time' in Q1",
+            "client_notes": "Allow multiple selections to address diverse concerns.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "What improvements would make you more comfortable returning to the office?",
+                "answer_options": [
+                    "Better ventilation/air filtration",
+                    "More flexible hours",
+                    "Reduced office density (more space)",
+                    "On-site health protocols (e.g., testing)",
+                    "Improved cleaning procedures"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Hybrid' or 'Full-time' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How has returning to the office impacted your productivity?",
+            "answer_options": [
+                "Significantly increased",
+                "Slightly increased",
+                "No change",
+                "Slightly decreased",
+                "Significantly decreased"
+            ],
+            "routing_logic": "Respondents who selected 'Hybrid' or 'Full-time' in Q1",
+            "client_notes": "Use a symmetric scale to measure positive/negative impact equally.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How has returning to the office impacted your productivity?",
+                "answer_options": [
+                    "Significantly increased",
+                    "Slightly increased",
+                    "No change",
+                    "Slightly decreased",
+                    "Significantly decreased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Hybrid' or 'Full-time' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What challenges have you faced while working remotely?",
+            "answer_options": [
+                "Difficulty collaborating with colleagues",
+                "Home distractions",
+                "Poor work-life balance",
+                "Technology issues",
+                "Lack of social interaction"
+            ],
+            "routing_logic": "Respondents who selected 'Part-time' or 'Fully remote' in Q1",
+            "client_notes": "Multi-choice to identify common pain points.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "What challenges have you faced while working remotely?",
+                "answer_options": [
+                    "Difficulty collaborating with colleagues",
+                    "Home distractions",
+                    "Poor work-life balance",
+                    "Technology issues",
+                    "Lack of social interaction"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Part-time' or 'Fully remote' in Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Would you prefer to continue with your current work arrangement, or would you like it to change?",
+            "answer_options": [
+                "Continue as is",
+                "More office days",
+                "More remote days",
+                "Fully remote",
+                "Fully in-office"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice to gauge preferences clearly.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Would you prefer to continue with your current work arrangement, or would you like it to change?",
+                "answer_options": [
+                    "Continue as is",
+                    "More office days",
+                    "More remote days",
+                    "Fully remote",
+                    "Fully in-office"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How has returning to the office affected your work-life balance?",
+            "answer_options": [
+                "Improved significantly",
+                "Improved slightly",
+                "No change",
+                "Worsened slightly",
+                "Worsened significantly"
+            ],
+            "routing_logic": "Respondents who selected 'Hybrid' or 'Full-time' in Q1",
+            "client_notes": "Likert scale for balanced measurement.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How has returning to the office affected your work-life balance?",
+                "answer_options": [
+                    "Improved significantly",
+                    "Improved slightly",
+                    "No change",
+                    "Worsened slightly",
+                    "Worsened significantly"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Hybrid' or 'Full-time' in Q1"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What additional support would help you thrive in your current work arrangement?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture unique needs.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What additional support would help you thrive in your current work arrangement?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Do you feel your employer has adequately addressed health and safety concerns regarding office re-entry?",
+            "answer_options": [
+                "Yes, completely",
+                "Yes, somewhat",
+                "Neutral",
+                "No, not really",
+                "No, not at all"
+            ],
+            "routing_logic": "Respondents who selected 'Hybrid' or 'Full-time' in Q1",
+            "client_notes": "Single-choice for clear feedback.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Do you feel your employer has adequately addressed health and safety concerns regarding office re-entry?",
+                "answer_options": [
+                    "Yes, completely",
+                    "Yes, somewhat",
+                    "Neutral",
+                    "No, not really",
+                    "No, not at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Hybrid' or 'Full-time' in Q1"
+            }
+        }
+    ]
+}

@@ -1,0 +1,235 @@
+{
+    "survey_id": "ead14f50-36ba-4fc8-8fe8-072d0e16c1f1",
+    "survey_name": "Coworking Space User Experience Survey",
+    "survey_brief": "Evaluate user satisfaction and identify improvement opportunities for coworking space operators",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use coworking spaces?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Occasionally (less than weekly)",
+                "Never"
+            ],
+            "routing_logic": "If 'Never' selected, skip to Q5",
+            "client_notes": "Use radio buttons with vertical layout. Include explicit 'Never' option to filter non-users.",
+            "scripter_notes": "Single-select dropdown with skip logic implementation",
+            "script": {
+                "question_text": "How frequently do you use coworking spaces?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Occasionally (less than weekly)",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'Never' selected, skip to Q5"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for using coworking spaces? (Select all that apply)",
+            "answer_options": [
+                "Professional networking",
+                "Flexible work hours",
+                "Access to office amenities",
+                "Cost-effectiveness",
+                "Work-life separation",
+                "Community events"
+            ],
+            "routing_logic": "Always shown unless skipped by Q1",
+            "client_notes": "Limit to 6 options for mobile responsiveness. Include 'Other' option if needed in future iterations",
+            "scripter_notes": "Multi-select checkbox grid with 'Select All That Apply' instruction",
+            "script": {
+                "question_text": "What are your primary reasons for using coworking spaces? (Select all that apply)",
+                "answer_options": [
+                    "Professional networking",
+                    "Flexible work hours",
+                    "Access to office amenities",
+                    "Cost-effectiveness",
+                    "Work-life separation",
+                    "Community events"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown unless skipped by Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of private meeting rooms?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Only shown if Q1 ≠ 'Never'",
+            "client_notes": "Use standard 5-point Likert scale. Randomize polarity for quality control",
+            "scripter_notes": "Radio buttons with required validation",
+            "script": {
+                "question_text": "How satisfied are you with the availability of private meeting rooms?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional amenities would significantly improve your coworking experience?",
+            "answer_options": [],
+            "routing_logic": "Only shown if Q3 answer is 'Dissatisfied' or 'Very Dissatisfied'",
+            "client_notes": "Open text field with 200-character limit. Use placeholder text: 'e.g., More phone booths, better kitchen facilities...'",
+            "scripter_notes": "Textarea input with character counter",
+            "script": {
+                "question_text": "What additional amenities would significantly improve your coworking experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only shown if Q3 answer is 'Dissatisfied' or 'Very Dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the cost-effectiveness of coworking memberships compared to traditional office leases?",
+            "answer_options": [
+                "Significantly more cost-effective",
+                "Somewhat more cost-effective",
+                "Comparable cost",
+                "Somewhat less cost-effective",
+                "Significantly less cost-effective"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Include 'Not Applicable' option if needed for non-users",
+            "scripter_notes": "Radio buttons with 'Prefer Not to Answer' option excluded per client request",
+            "script": {
+                "question_text": "How would you rate the cost-effectiveness of coworking memberships compared to traditional office leases?",
+                "answer_options": [
+                    "Significantly more cost-effective",
+                    "Somewhat more cost-effective",
+                    "Comparable cost",
+                    "Somewhat less cost-effective",
+                    "Significantly less cost-effective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What monthly budget range would you consider reasonable for a full-time coworking membership?",
+            "answer_options": [],
+            "routing_logic": "Only shown if Q5 ≠ 'Significantly less cost-effective'",
+            "client_notes": "Use numeric input with currency prefix. Allow range entries (e.g., $300-$500)",
+            "scripter_notes": "Open text field with input mask for currency formatting",
+            "script": {
+                "question_text": "What monthly budget range would you consider reasonable for a full-time coworking membership?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only shown if Q5 ≠ 'Significantly less cost-effective'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How important are community events to your coworking experience?",
+            "answer_options": [
+                "Extremely Important",
+                "Very Important",
+                "Moderately Important",
+                "Slightly Important",
+                "Not Important"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use horizontal radio buttons for desktop, vertical for mobile",
+            "scripter_notes": "Implement responsive design toggle based on device detection",
+            "script": {
+                "question_text": "How important are community events to your coworking experience?",
+                "answer_options": [
+                    "Extremely Important",
+                    "Very Important",
+                    "Moderately Important",
+                    "Slightly Important",
+                    "Not Important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which types of community events would you most likely attend? (Select up to 3)",
+            "answer_options": [
+                "Professional workshops",
+                "Networking mixers",
+                "Wellness activities",
+                "Social hours",
+                "Skill-sharing sessions",
+                "Industry panels"
+            ],
+            "routing_logic": "Only shown if Q7 ≠ 'Not Important'",
+            "client_notes": "Use checkbox grid with selection limit validation",
+            "scripter_notes": "Implement JavaScript validation for maximum 3 selections",
+            "script": {
+                "question_text": "Which types of community events would you most likely attend? (Select up to 3)",
+                "answer_options": [
+                    "Professional workshops",
+                    "Networking mixers",
+                    "Wellness activities",
+                    "Social hours",
+                    "Skill-sharing sessions",
+                    "Industry panels"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q7 ≠ 'Not Important'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What specific improvements would increase your likelihood to recommend our coworking space to others?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Use multi-line text input with 500-character limit",
+            "scripter_notes": "Textarea element with dynamic character counter",
+            "script": {
+                "question_text": "What specific improvements would increase your likelihood to recommend our coworking space to others?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to continue using coworking spaces in the next 12 months?",
+            "answer_options": [
+                "Extremely Likely",
+                "Very Likely",
+                "Somewhat Likely",
+                "Not Very Likely",
+                "Not at All Likely"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Include optional follow-up contact field for 'Not Very Likely' or 'Not at All Likely' responses",
+            "scripter_notes": "Add conditional comment field for negative responses",
+            "script": {
+                "question_text": "How likely are you to continue using coworking spaces in the next 12 months?",
+                "answer_options": [
+                    "Extremely Likely",
+                    "Very Likely",
+                    "Somewhat Likely",
+                    "Not Very Likely",
+                    "Not at All Likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

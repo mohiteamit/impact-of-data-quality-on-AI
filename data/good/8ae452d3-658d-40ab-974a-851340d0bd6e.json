@@ -1,0 +1,255 @@
+{
+    "survey_id": "8ae452d3-658d-40ab-974a-851340d0bd6e",
+    "survey_name": "Renewable Energy Adoption Barriers Survey",
+    "survey_brief": "This survey aims to identify key barriers and motivations for households adopting renewable energy solutions (e.g., solar panels, wind turbines). Responses will help energy providers tailor education and incentive programs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following best describes your current energy source?",
+            "answer_options": [
+                "Grid electricity (non-renewable)",
+                "Grid electricity (renewable mix)",
+                "On-site solar panels",
+                "Wind turbine",
+                "Other renewable source",
+                "Hybrid system (renewable + non-renewable)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include 'Prefer not to say' if sensitivity is a concern. Randomize options to avoid bias.",
+            "scripter_notes": "Single-choice radio buttons, mandatory field.",
+            "script": {
+                "question_text": "Which of the following best describes your current energy source?",
+                "answer_options": [
+                    "Grid electricity (non-renewable)",
+                    "Grid electricity (renewable mix)",
+                    "On-site solar panels",
+                    "Wind turbine",
+                    "Other renewable source",
+                    "Hybrid system (renewable + non-renewable)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How likely are you to install renewable energy systems in the next 5 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a balanced Likert scale. Consider adding a 'Don’t know' option.",
+            "scripter_notes": "Single-choice radio buttons with horizontal layout for mobile-friendliness.",
+            "script": {
+                "question_text": "How likely are you to install renewable energy systems in the next 5 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the TOP 3 barriers preventing you from adopting renewable energy? (Select up to 3)",
+            "answer_options": [
+                "High upfront costs",
+                "Lack of financing options",
+                "Uncertainty about savings",
+                "Limited roof/space suitability",
+                "Aesthetic concerns",
+                "Complex installation process",
+                "Lack of trusted providers",
+                "Other (please specify in Q4)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Randomize options and limit selections to 3 to force prioritization.",
+            "scripter_notes": "Multi-choice checkboxes with validation for max 3 selections.",
+            "script": {
+                "question_text": "What are the TOP 3 barriers preventing you from adopting renewable energy? (Select up to 3)",
+                "answer_options": [
+                    "High upfront costs",
+                    "Lack of financing options",
+                    "Uncertainty about savings",
+                    "Limited roof/space suitability",
+                    "Aesthetic concerns",
+                    "Complex installation process",
+                    "Lack of trusted providers",
+                    "Other (please specify in Q4)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you selected 'Other' in Q3, please specify:",
+            "answer_options": [],
+            "routing_logic": "Only if 'Other' is selected in Q3",
+            "client_notes": "Use open-ended to capture unique responses. Keep field optional.",
+            "scripter_notes": "Open-text field with 200-character limit.",
+            "script": {
+                "question_text": "If you selected 'Other' in Q3, please specify:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if 'Other' is selected in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which incentives would most encourage you to adopt renewable energy? (Select all that apply)",
+            "answer_options": [
+                "Tax credits/rebates",
+                "Low-interest loans",
+                "Guaranteed buyback of excess energy",
+                "Free installation consultation",
+                "Community solar programs",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow unlimited selections but include 'None of the above' to avoid forced responses.",
+            "scripter_notes": "Multi-choice checkboxes with 'Select all that apply' instruction.",
+            "script": {
+                "question_text": "Which incentives would most encourage you to adopt renewable energy? (Select all that apply)",
+                "answer_options": [
+                    "Tax credits/rebates",
+                    "Low-interest loans",
+                    "Guaranteed buyback of excess energy",
+                    "Free installation consultation",
+                    "Community solar programs",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How informed do you feel about renewable energy options?",
+            "answer_options": [
+                "Very informed",
+                "Somewhat informed",
+                "Neutral",
+                "Somewhat uninformed",
+                "Very uninformed"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point scale to measure self-perceived knowledge.",
+            "scripter_notes": "Single-choice radio buttons with tooltip explaining 'informed' means understanding costs, benefits, and installation.",
+            "script": {
+                "question_text": "How informed do you feel about renewable energy options?",
+                "answer_options": [
+                    "Very informed",
+                    "Somewhat informed",
+                    "Neutral",
+                    "Somewhat uninformed",
+                    "Very uninformed"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What is your primary source of information about renewable energy?",
+            "answer_options": [
+                "Government websites",
+                "Energy provider communications",
+                "Social media",
+                "Friends/family",
+                "News articles",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option to capture niche sources.",
+            "scripter_notes": "Single-choice dropdown to save space on mobile devices.",
+            "script": {
+                "question_text": "What is your primary source of information about renewable energy?",
+                "answer_options": [
+                    "Government websites",
+                    "Energy provider communications",
+                    "Social media",
+                    "Friends/family",
+                    "News articles",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How much would you be willing to pay upfront for a system that cuts your energy bills by 50%?",
+            "answer_options": [
+                "Less than $5,000",
+                "$5,000-$10,000",
+                "$10,001-$15,000",
+                "$15,001-$20,000",
+                "More than $20,000"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Customize ranges based on regional average installation costs.",
+            "scripter_notes": "Single-choice radio buttons with dynamic currency display based on respondent location.",
+            "script": {
+                "question_text": "How much would you be willing to pay upfront for a system that cuts your energy bills by 50%?",
+                "answer_options": [
+                    "Less than $5,000",
+                    "$5,000-$10,000",
+                    "$10,001-$15,000",
+                    "$15,001-$20,000",
+                    "More than $20,000"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Describe any concerns you have about maintaining renewable energy systems:",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to uncover unanticipated issues like repair costs or longevity.",
+            "scripter_notes": "Open-text field with 500-character limit and spell-check enabled.",
+            "script": {
+                "question_text": "Describe any concerns you have about maintaining renewable energy systems:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Which of these best describes your household income?",
+            "answer_options": [
+                "Under $50,000",
+                "$50,000-$100,000",
+                "$100,001-$150,000",
+                "Over $150,000",
+                "Prefer not to say"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Income data is sensitive; make 'Prefer not to say' non-punitive.",
+            "scripter_notes": "Single-choice dropdown with optional field validation.",
+            "script": {
+                "question_text": "Which of these best describes your household income?",
+                "answer_options": [
+                    "Under $50,000",
+                    "$50,000-$100,000",
+                    "$100,001-$150,000",
+                    "Over $150,000",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,261 @@
+{
+    "survey_id": "9cf4f07b-a924-4ae5-8b60-51151b5ddd41",
+    "survey_name": "Smart Home Technology Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer attitudes, adoption rates, and barriers related to smart home technology.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home devices do you currently own? (Select all that apply)",
+            "answer_options": [
+                "Smart thermostat",
+                "Smart lighting",
+                "Smart security system",
+                "Smart speaker (e.g., Amazon Echo, Google Home)",
+                "Smart TV",
+                "Smart appliances (e.g., refrigerator, washer/dryer)",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-select. Consider randomizing option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "Which of the following smart home devices do you currently own? (Select all that apply)",
+                "answer_options": [
+                    "Smart thermostat",
+                    "Smart lighting",
+                    "Smart security system",
+                    "Smart speaker (e.g., Amazon Echo, Google Home)",
+                    "Smart TV",
+                    "Smart appliances (e.g., refrigerator, washer/dryer)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your smart home devices?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (do not own any)"
+            ],
+            "routing_logic": "Respondents who selected at least one device in Q1",
+            "client_notes": "Use a 5-point Likert scale. Include 'Not applicable' for those who skipped Q1.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with your smart home devices?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (do not own any)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one device in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you have not adopted smart home technology?",
+            "answer_options": [
+                "Too expensive",
+                "Privacy/security concerns",
+                "Too complicated to use",
+                "Don't see the value",
+                "Prefer traditional devices",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'None of the above' in Q1",
+            "client_notes": "Include an 'Other' option with open-text field for additional responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional open-text",
+            "script": {
+                "question_text": "What is the primary reason you have not adopted smart home technology?",
+                "answer_options": [
+                    "Too expensive",
+                    "Privacy/security concerns",
+                    "Too complicated to use",
+                    "Don't see the value",
+                    "Prefer traditional devices",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'None of the above' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to purchase a smart home device in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to purchase a smart home device in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features are most important to you when considering smart home technology? (Select up to 3)",
+            "answer_options": [
+                "Ease of use",
+                "Cost",
+                "Integration with other devices",
+                "Energy efficiency",
+                "Security features",
+                "Voice control",
+                "Remote access",
+                "Brand reputation"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Limit selections to 3 options. Randomize option order.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max selections = 3",
+            "script": {
+                "question_text": "What features are most important to you when considering smart home technology? (Select up to 3)",
+                "answer_options": [
+                    "Ease of use",
+                    "Cost",
+                    "Integration with other devices",
+                    "Energy efficiency",
+                    "Security features",
+                    "Voice control",
+                    "Remote access",
+                    "Brand reputation"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How concerned are you about data privacy with smart home devices?",
+            "answer_options": [
+                "Very concerned",
+                "Somewhat concerned",
+                "Neutral",
+                "Somewhat unconcerned",
+                "Very unconcerned"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale. Consider adding a 'Don't know' option if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How concerned are you about data privacy with smart home devices?",
+                "answer_options": [
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Neutral",
+                    "Somewhat unconcerned",
+                    "Very unconcerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which smart home platform do you primarily use?",
+            "answer_options": [
+                "Amazon Alexa",
+                "Google Home",
+                "Apple HomeKit",
+                "Samsung SmartThings",
+                "Other (please specify)",
+                "Don't use any platform"
+            ],
+            "routing_logic": "Respondents who selected at least one device in Q1",
+            "client_notes": "Include 'Other' with open-text field for additional responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional open-text",
+            "script": {
+                "question_text": "Which smart home platform do you primarily use?",
+                "answer_options": [
+                    "Amazon Alexa",
+                    "Google Home",
+                    "Apple HomeKit",
+                    "Samsung SmartThings",
+                    "Other (please specify)",
+                    "Don't use any platform"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one device in Q1"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How did you first hear about smart home technology?",
+            "answer_options": [
+                "Friend/family recommendation",
+                "Online advertisement",
+                "Retail store display",
+                "News article/blog",
+                "Social media",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include 'Other' with open-text field for additional responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional open-text",
+            "script": {
+                "question_text": "How did you first hear about smart home technology?",
+                "answer_options": [
+                    "Friend/family recommendation",
+                    "Online advertisement",
+                    "Retail store display",
+                    "News article/blog",
+                    "Social media",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is your biggest frustration with current smart home technology?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected at least one device in Q1",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit",
+            "script": {
+                "question_text": "What is your biggest frustration with current smart home technology?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected at least one device in Q1"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What would encourage you to adopt more smart home technology in the future?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit",
+            "script": {
+                "question_text": "What would encourage you to adopt more smart home technology in the future?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

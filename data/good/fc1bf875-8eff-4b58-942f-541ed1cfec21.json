@@ -1,0 +1,245 @@
+{
+    "survey_id": "fc1bf875-8eff-4b58-942f-541ed1cfec21",
+    "survey_name": "Co-Working Space Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate user satisfaction and identify improvement areas for co-working space members.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use our co-working space?",
+            "answer_options": [
+                "Daily",
+                "3-5 times a week",
+                "1-2 times a week",
+                "Less than once a week"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons. Consider adding 'Not applicable' if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you use our co-working space?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times a week",
+                    "1-2 times a week",
+                    "Less than once a week"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which amenities do you use most often? (Select all that apply)",
+            "answer_options": [
+                "Private meeting rooms",
+                "Open workspace desks",
+                "High-speed internet",
+                "Printing/scanning facilities",
+                "Kitchen/cafeteria",
+                "Lounges/breakout areas"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes. Limit to 6 options for readability.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which amenities do you use most often? (Select all that apply)",
+                "answer_options": [
+                    "Private meeting rooms",
+                    "Open workspace desks",
+                    "High-speed internet",
+                    "Printing/scanning facilities",
+                    "Kitchen/cafeteria",
+                    "Lounges/breakout areas"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness of our co-working space?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point Likert scale. Randomize option order for bias reduction.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons, randomized)",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness of our co-working space?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the noise level in the co-working space?",
+            "answer_options": [
+                "Too quiet",
+                "Just right",
+                "Occasionally too loud",
+                "Consistently too loud"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include visual scale (e.g., smiley faces) for mobile users.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons with icons)",
+            "script": {
+                "question_text": "How would you rate the noise level in the co-working space?",
+                "answer_options": [
+                    "Too quiet",
+                    "Just right",
+                    "Occasionally too loud",
+                    "Consistently too loud"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional amenities would you like to see in our co-working space?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-text field with character limit (200 max).",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What additional amenities would you like to see in our co-working space?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with the internet speed and reliability?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point Likert scale. Essential question for tech-focused users.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the internet speed and reliability?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Have you participated in any community events hosted by our co-working space?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Binary choice. Follow up with Q8 if 'Yes'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Have you participated in any community events hosted by our co-working space?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How would you rate the quality of the community events you attended?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor"
+            ],
+            "routing_logic": "Q7 = 'Yes'",
+            "client_notes": "Display only if Q7 = 'Yes'. Scale tailored for event feedback.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons, conditional)",
+            "script": {
+                "question_text": "How would you rate the quality of the community events you attended?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Q7 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to recommend our co-working space to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Essential NPS-like question. Place near survey end.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to recommend our co-working space to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is the primary reason for choosing our co-working space?",
+            "answer_options": [
+                "Location",
+                "Price",
+                "Amenities",
+                "Community/network",
+                "Flexibility"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice with 'Other' option via scripter.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons + 'Other' text field)",
+            "script": {
+                "question_text": "What is the primary reason for choosing our co-working space?",
+                "answer_options": [
+                    "Location",
+                    "Price",
+                    "Amenities",
+                    "Community/network",
+                    "Flexibility"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

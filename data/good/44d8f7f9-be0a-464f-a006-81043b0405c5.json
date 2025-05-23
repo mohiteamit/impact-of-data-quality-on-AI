@@ -1,0 +1,207 @@
+{
+    "survey_id": "44d8f7f9-be0a-464f-a006-81043b0405c5",
+    "survey_name": "Streaming Service Content Preferences Survey",
+    "survey_brief": "Evaluate consumer preferences and satisfaction with current streaming content offerings to guide platform improvements",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many streaming services do you actively subscribe to?",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4 or more"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use radio buttons with vertical layout. Consider adding 'None' option if targeting cord-cutters",
+            "scripter_notes": "Single-select dropdown with numerical validation",
+            "script": {
+                "question_text": "How many streaming services do you actively subscribe to?",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4 or more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of devices do you primarily use for streaming? (Select all that apply)",
+            "answer_options": [
+                "Smart TV",
+                "Mobile Phone",
+                "Tablet",
+                "Desktop/Laptop",
+                "Gaming Console",
+                "Streaming Stick/Box"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Limit to 6 options max for mobile readability. Consider randomizing order",
+            "scripter_notes": "Multi-select checkbox grid with horizontal layout on desktop",
+            "script": {
+                "question_text": "Which types of devices do you primarily use for streaming? (Select all that apply)",
+                "answer_options": [
+                    "Smart TV",
+                    "Mobile Phone",
+                    "Tablet",
+                    "Desktop/Laptop",
+                    "Gaming Console",
+                    "Streaming Stick/Box"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the diversity of content genres available on your primary streaming service?",
+            "answer_options": [
+                "Very Dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very Satisfied"
+            ],
+            "routing_logic": "If Q1 > 0",
+            "client_notes": "Use standard 5-point Likert scale. Include N/A option for non-subscribers",
+            "scripter_notes": "Radio button matrix with required validation",
+            "script": {
+                "question_text": "How satisfied are you with the diversity of content genres available on your primary streaming service?",
+                "answer_options": [
+                    "Very Dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very Satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 > 0"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which of these content categories do you watch most frequently? (Select top 3)",
+            "answer_options": [
+                "Original Series",
+                "Movies",
+                "Documentaries",
+                "Live Sports",
+                "News",
+                "Reality TV",
+                "Kids Programming",
+                "Stand-up Comedy"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use drag-and-drop ranking for better data quality",
+            "scripter_notes": "Multi-select with max 3 choices validation",
+            "script": {
+                "question_text": "Which of these content categories do you watch most frequently? (Select top 3)",
+                "answer_options": [
+                    "Original Series",
+                    "Movies",
+                    "Documentaries",
+                    "Live Sports",
+                    "News",
+                    "Reality TV",
+                    "Kids Programming",
+                    "Stand-up Comedy"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How important are personalized content recommendations to your viewing experience?",
+            "answer_options": [
+                "Not Important",
+                "Slightly Important",
+                "Moderately Important",
+                "Very Important",
+                "Essential"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Include visual scale anchors (1-5 stars)",
+            "scripter_notes": "Radio buttons with image labels",
+            "script": {
+                "question_text": "How important are personalized content recommendations to your viewing experience?",
+                "answer_options": [
+                    "Not Important",
+                    "Slightly Important",
+                    "Moderately Important",
+                    "Very Important",
+                    "Essential"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What factors would make you consider switching to a different streaming service? (Select all that apply)",
+            "answer_options": [
+                "Lower Price",
+                "Exclusive Content",
+                "Better User Interface",
+                "Higher Video Quality",
+                "Family Plan Options",
+                "Ad-Free Experience"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Randomize option order to prevent bias",
+            "scripter_notes": "Checkbox grid with 'Other' text field",
+            "script": {
+                "question_text": "What factors would make you consider switching to a different streaming service? (Select all that apply)",
+                "answer_options": [
+                    "Lower Price",
+                    "Exclusive Content",
+                    "Better User Interface",
+                    "Higher Video Quality",
+                    "Family Plan Options",
+                    "Ad-Free Experience"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How often do you discover new content through the platform's recommendation algorithm versus external sources?",
+            "answer_options": [
+                "Mostly Platform Recommendations",
+                "Equal Mix",
+                "Mostly External Sources"
+            ],
+            "routing_logic": "If Q3 >= Neutral",
+            "client_notes": "Use balanced response options to avoid leading",
+            "scripter_notes": "Radio buttons with conditional display",
+            "script": {
+                "question_text": "How often do you discover new content through the platform's recommendation algorithm versus external sources?",
+                "answer_options": [
+                    "Mostly Platform Recommendations",
+                    "Equal Mix",
+                    "Mostly External Sources"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q3 >= Neutral"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would you most like to see in streaming platforms?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Use text box with character limit (max 500 characters)",
+            "scripter_notes": "Open text field with input validation",
+            "script": {
+                "question_text": "What improvements would you most like to see in streaming platforms?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

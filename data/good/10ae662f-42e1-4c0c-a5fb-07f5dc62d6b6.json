@@ -1,0 +1,295 @@
+{
+    "survey_id": "10ae662f-42e1-4c0c-a5fb-07f5dc62d6b6",
+    "survey_name": "Retail Store Customer Experience Feedback Survey",
+    "survey_brief": "Gather insights on customer satisfaction, store layout, staff interactions, and improvement opportunities for in-store shopping experiences.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit our store?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "Every few months",
+                "First-time visitor"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use radio buttons for mobile-friendly selection. Consider adding a 'Prefer not to say' option in future iterations.",
+            "scripter_notes": "Single-choice radio buttons; randomize options to avoid order bias.",
+            "script": {
+                "question_text": "How often do you visit our store?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "Every few months",
+                    "First-time visitor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How would you rate your overall satisfaction with today's shopping experience?",
+            "answer_options": [
+                "1 - Very Dissatisfied",
+                "2",
+                "3 - Neutral",
+                "4",
+                "5 - Very Satisfied"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "5-point Likert scale with endpoint labels. Ensure scale displays horizontally on desktop.",
+            "scripter_notes": "Single-choice radio buttons; require answer before submission.",
+            "script": {
+                "question_text": "How would you rate your overall satisfaction with today's shopping experience?",
+                "answer_options": [
+                    "1 - Very Dissatisfied",
+                    "2",
+                    "3 - Neutral",
+                    "4",
+                    "5 - Very Satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How easy was it to locate products in the store?",
+            "answer_options": [
+                "Very Difficult",
+                "Somewhat Difficult",
+                "Neutral",
+                "Somewhat Easy",
+                "Very Easy"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Include a 'N/A' option if testing with non-shoppers.",
+            "scripter_notes": "Single-choice dropdown to save space on mobile.",
+            "script": {
+                "question_text": "How easy was it to locate products in the store?",
+                "answer_options": [
+                    "Very Difficult",
+                    "Somewhat Difficult",
+                    "Neutral",
+                    "Somewhat Easy",
+                    "Very Easy"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which factors influenced your shopping experience today? (Select all that apply)",
+            "answer_options": [
+                "Product variety",
+                "Pricing",
+                "Staff assistance",
+                "Store cleanliness",
+                "Promotional offers",
+                "Checkout speed"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Limit to 6 options to prevent survey fatigue. Monitor for 'Other' write-in requests.",
+            "scripter_notes": "Multi-choice checkboxes with 'Select all that apply' instruction.",
+            "script": {
+                "question_text": "Which factors influenced your shopping experience today? (Select all that apply)",
+                "answer_options": [
+                    "Product variety",
+                    "Pricing",
+                    "Staff assistance",
+                    "Store cleanliness",
+                    "Promotional offers",
+                    "Checkout speed"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend our store to others?",
+            "answer_options": [
+                "0 - Not at all Likely",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 - Extremely Likely"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "11-point NPS scale. Benchmark against industry standard of 42% promoters.",
+            "scripter_notes": "Single-choice slider with numeric labels at 0, 5, and 10.",
+            "script": {
+                "question_text": "How likely are you to recommend our store to others?",
+                "answer_options": [
+                    "0 - Not at all Likely",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 - Extremely Likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would enhance your future shopping experiences?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Analyze responses for common themes like inventory requests or layout changes.",
+            "scripter_notes": "Open-text field with 500-character limit.",
+            "script": {
+                "question_text": "What improvements would enhance your future shopping experiences?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How satisfied are you with the checkout process?",
+            "answer_options": [
+                "Very Dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very Satisfied"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Compare with Q2 results to identify service gaps.",
+            "scripter_notes": "Single-choice buttons with emoji scale option for accessibility.",
+            "script": {
+                "question_text": "How satisfied are you with the checkout process?",
+                "answer_options": [
+                    "Very Dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very Satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Were all the products you wanted available today?",
+            "answer_options": [
+                "Yes, everything I needed",
+                "Most items were available",
+                "Many items were out of stock"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Track inventory satisfaction trends weekly.",
+            "scripter_notes": "Single-choice with optional stock request follow-up.",
+            "script": {
+                "question_text": "Were all the products you wanted available today?",
+                "answer_options": [
+                    "Yes, everything I needed",
+                    "Most items were available",
+                    "Many items were out of stock"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How would you rate the cleanliness and organization of the store?",
+            "answer_options": [
+                "Poor",
+                "Fair",
+                "Good",
+                "Very Good",
+                "Excellent"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Correlate with mystery shopper reports.",
+            "scripter_notes": "Single-choice radio buttons with smiley faces.",
+            "script": {
+                "question_text": "How would you rate the cleanliness and organization of the store?",
+                "answer_options": [
+                    "Poor",
+                    "Fair",
+                    "Good",
+                    "Very Good",
+                    "Excellent"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Did you use any in-store promotions or discounts today?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I wasn't aware of any promotions"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Assess promotion visibility effectiveness.",
+            "scripter_notes": "Single-choice with conditional routing to promotion feedback.",
+            "script": {
+                "question_text": "Did you use any in-store promotions or discounts today?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I wasn't aware of any promotions"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "What is your preferred method of shopping with us?",
+            "answer_options": [
+                "In-store only",
+                "Online only",
+                "Both equally"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Identify omnichannel behavior patterns.",
+            "scripter_notes": "Single-choice with hidden 'Other' option for edge cases.",
+            "script": {
+                "question_text": "What is your preferred method of shopping with us?",
+                "answer_options": [
+                    "In-store only",
+                    "Online only",
+                    "Both equally"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Please share any additional comments about your experience:",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Use sentiment analysis on responses.",
+            "scripter_notes": "Open-text field with spellcheck enabled.",
+            "script": {
+                "question_text": "Please share any additional comments about your experience:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

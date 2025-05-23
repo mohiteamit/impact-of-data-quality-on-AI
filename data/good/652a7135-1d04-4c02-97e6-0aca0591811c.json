@@ -1,0 +1,271 @@
+{
+    "survey_id": "652a7135-1d04-4c02-97e6-0aca0591811c",
+    "survey_name": "Retail Banking Customer Experience Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and identify areas for improvement in retail banking services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your primary banking provider?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with your primary banking provider?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following banking services do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Checking accounts",
+                "Savings accounts",
+                "Credit cards",
+                "Loans (personal, auto, mortgage)",
+                "Investment services",
+                "Mobile banking app",
+                "Online banking website",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture service usage patterns.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following banking services do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Checking accounts",
+                    "Savings accounts",
+                    "Credit cards",
+                    "Loans (personal, auto, mortgage)",
+                    "Investment services",
+                    "Mobile banking app",
+                    "Online banking website",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you visit a physical bank branch?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "Quarterly",
+                "Once a year or less",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a frequency scale to measure branch visitation habits.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you visit a physical bank branch?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "Quarterly",
+                    "Once a year or less",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you visit a physical bank branch?",
+            "answer_options": [
+                "Deposit/withdraw cash",
+                "Speak with a banker",
+                "Resolve account issues",
+                "Loan applications",
+                "Not applicable (I don't visit branches)"
+            ],
+            "routing_logic": "Respondents who answered 'Weekly', 'Monthly', 'Quarterly', or 'Once a year or less' to Q3",
+            "client_notes": "Only show to respondents who visit branches.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "What is the primary reason you visit a physical bank branch?",
+                "answer_options": [
+                    "Deposit/withdraw cash",
+                    "Speak with a banker",
+                    "Resolve account issues",
+                    "Loan applications",
+                    "Not applicable (I don't visit branches)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Weekly', 'Monthly', 'Quarterly', or 'Once a year or less' to Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with your bank's mobile app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (I don't use the mobile app)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an option for non-users to avoid skewing results.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with your bank's mobile app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (I don't use the mobile app)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What features do you value most in your bank's mobile app? (Select up to 3)",
+            "answer_options": [
+                "Mobile check deposit",
+                "Bill pay",
+                "Account balance alerts",
+                "Money transfer (peer-to-peer)",
+                "Customer support chat",
+                "Spending insights/budgeting tools",
+                "None of the above"
+            ],
+            "routing_logic": "Respondents who answered 'Very satisfied', 'Satisfied', 'Neutral', 'Dissatisfied', or 'Very dissatisfied' to Q5",
+            "client_notes": "Limit selections to prioritize top features.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with max 3 selections.",
+            "script": {
+                "question_text": "What features do you value most in your bank's mobile app? (Select up to 3)",
+                "answer_options": [
+                    "Mobile check deposit",
+                    "Bill pay",
+                    "Account balance alerts",
+                    "Money transfer (peer-to-peer)",
+                    "Customer support chat",
+                    "Spending insights/budgeting tools",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Very satisfied', 'Satisfied', 'Neutral', 'Dissatisfied', or 'Very dissatisfied' to Q5"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How easy is it to resolve issues with your bank?",
+            "answer_options": [
+                "Very easy",
+                "Easy",
+                "Neutral",
+                "Difficult",
+                "Very difficult",
+                "Not applicable (I haven't had any issues)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an option for respondents without issues.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How easy is it to resolve issues with your bank?",
+                "answer_options": [
+                    "Very easy",
+                    "Easy",
+                    "Neutral",
+                    "Difficult",
+                    "Very difficult",
+                    "Not applicable (I haven't had any issues)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What is your preferred method for contacting customer support?",
+            "answer_options": [
+                "Phone",
+                "Email",
+                "Live chat",
+                "In-person at a branch",
+                "Social media",
+                "I don't contact customer support"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Capture channel preferences for support interactions.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "What is your preferred method for contacting customer support?",
+                "answer_options": [
+                    "Phone",
+                    "Email",
+                    "Live chat",
+                    "In-person at a branch",
+                    "Social media",
+                    "I don't contact customer support"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to recommend your bank to friends or family?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a standard Net Promoter Score (NPS) question format.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend your bank to friends or family?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What could your bank improve to better meet your needs?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text (unlimited characters).",
+            "script": {
+                "question_text": "What could your bank improve to better meet your needs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,299 @@
+{
+    "survey_id": "3a9c4e3e-a1d1-4761-a89d-fd52c94ec9a0",
+    "survey_name": "Wearable Fitness Technology User Experience Survey",
+    "survey_brief": "Evaluate user satisfaction, feature utilization, and challenges faced with wearable fitness devices to inform product improvements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own or regularly use a wearable fitness device (e.g., smartwatch, fitness tracker)?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Use as a screening question. Consider adding 'Prefer not to answer' if anonymity is critical.",
+            "scripter_notes": "Radio buttons with vertical layout. Mandatory response.",
+            "script": {
+                "question_text": "Do you currently own or regularly use a wearable fitness device (e.g., smartwatch, fitness tracker)?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary wearable fitness device?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Only shown if Q1 = Yes",
+            "client_notes": "Use standard 5-point Likert scale. Randomize scale direction for 10% of respondents to reduce bias.",
+            "scripter_notes": "Radio buttons with horizontal layout. Require answer unless 'Prefer not to answer' is added.",
+            "script": {
+                "question_text": "How satisfied are you with your primary wearable fitness device?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which features do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Step counting",
+                "Heart rate monitoring",
+                "Sleep tracking",
+                "GPS tracking",
+                "Calorie expenditure",
+                "Exercise recognition",
+                "Notifications from phone"
+            ],
+            "routing_logic": "Only shown if Q1 = Yes",
+            "client_notes": "Limit to 7 core features. Include 'Other' option if comprehensive data is needed.",
+            "scripter_notes": "Checkboxes with vertical layout. Add 'Select all that apply' instruction.",
+            "script": {
+                "question_text": "Which features do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Step counting",
+                    "Heart rate monitoring",
+                    "Sleep tracking",
+                    "GPS tracking",
+                    "Calorie expenditure",
+                    "Exercise recognition",
+                    "Notifications from phone"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you experienced? (Select all that apply)",
+            "answer_options": [
+                "Short battery life",
+                "Inaccurate data",
+                "Difficult syncing with other apps",
+                "Uncomfortable design",
+                "Complex interface",
+                "Limited third-party integrations"
+            ],
+            "routing_logic": "Only shown if Q1 = Yes",
+            "client_notes": "Monitor for frequent pain points. Consider follow-up qualitative research on top selections.",
+            "scripter_notes": "Checkboxes with 'Other' text field. Randomize option order for 30% of respondents.",
+            "script": {
+                "question_text": "What challenges have you experienced? (Select all that apply)",
+                "answer_options": [
+                    "Short battery life",
+                    "Inaccurate data",
+                    "Difficult syncing with other apps",
+                    "Uncomfortable design",
+                    "Complex interface",
+                    "Limited third-party integrations"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How important is waterproofing in your device selection?",
+            "answer_options": [
+                "Extremely Important",
+                "Very Important",
+                "Moderately Important",
+                "Slightly Important",
+                "Not Important"
+            ],
+            "routing_logic": "Only shown if Q1 = Yes",
+            "client_notes": "Assess feature prioritization. Compare with actual usage data for validation.",
+            "scripter_notes": "Radio buttons with visual scale (stars or emojis optional).",
+            "script": {
+                "question_text": "How important is waterproofing in your device selection?",
+                "answer_options": [
+                    "Extremely Important",
+                    "Very Important",
+                    "Moderately Important",
+                    "Slightly Important",
+                    "Not Important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How often do you sync your device with other health/fitness apps?",
+            "answer_options": [
+                "Multiple times daily",
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Never"
+            ],
+            "routing_logic": "Only shown if Q1 = Yes",
+            "client_notes": "Identify integration patterns. Consider cross-promotion opportunities with popular apps.",
+            "scripter_notes": "Dropdown menu to save space on mobile devices.",
+            "script": {
+                "question_text": "How often do you sync your device with other health/fitness apps?",
+                "answer_options": [
+                    "Multiple times daily",
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to recommend your device to others?",
+            "answer_options": [
+                "Very Likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very Unlikely"
+            ],
+            "routing_logic": "Only shown if Q1 = Yes",
+            "client_notes": "Track Net Promoter Score (NPS). Follow up with low scores in later stages.",
+            "scripter_notes": "Radio buttons with NPS color coding (green to red).",
+            "script": {
+                "question_text": "How likely are you to recommend your device to others?",
+                "answer_options": [
+                    "Very Likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What additional health metrics would you like to see tracked?",
+            "answer_options": [
+                "Blood pressure",
+                "Stress levels",
+                "Blood oxygen saturation",
+                "Electrolyte balance",
+                "Hydration levels",
+                "Muscle fatigue"
+            ],
+            "routing_logic": "Only shown if Q1 = Yes",
+            "client_notes": "Identify R&D opportunities. Allow multiple selections but limit to 6 options.",
+            "scripter_notes": "Checkboxes with 'Other' field. Grid layout for desktop users.",
+            "script": {
+                "question_text": "What additional health metrics would you like to see tracked?",
+                "answer_options": [
+                    "Blood pressure",
+                    "Stress levels",
+                    "Blood oxygen saturation",
+                    "Electrolyte balance",
+                    "Hydration levels",
+                    "Muscle fatigue"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What price range would you consider for your next wearable device?",
+            "answer_options": [
+                "Under $100",
+                "$100-$199",
+                "$200-$299",
+                "$300-$399",
+                "$400+"
+            ],
+            "routing_logic": "Only shown if Q1 = Yes",
+            "client_notes": "Assess price sensitivity. Compare with current market positioning.",
+            "scripter_notes": "Radio buttons with currency symbols. Localize for different regions.",
+            "script": {
+                "question_text": "What price range would you consider for your next wearable device?",
+                "answer_options": [
+                    "Under $100",
+                    "$100-$199",
+                    "$200-$299",
+                    "$300-$399",
+                    "$400+"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Please share any additional feedback about your wearable device experience:",
+            "answer_options": [],
+            "routing_logic": "Only shown if Q1 = Yes",
+            "client_notes": "Use text analysis tools for sentiment evaluation. Limit to 500 characters.",
+            "scripter_notes": "Open text field with character counter. Mobile-friendly large input area.",
+            "script": {
+                "question_text": "Please share any additional feedback about your wearable device experience:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only shown if Q1 = Yes"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "What factors might convince you to start using a wearable fitness device?",
+            "answer_options": [
+                "Lower cost",
+                "Better health insurance incentives",
+                "More accurate sensors",
+                "Longer battery life",
+                "Fashionable designs",
+                "Integration with my healthcare provider"
+            ],
+            "routing_logic": "Only shown if Q1 = No",
+            "client_notes": "Identify conversion drivers for non-users. Prioritize options based on selection frequency.",
+            "scripter_notes": "Checkboxes with 'Other' option. Show conditional logic based on Q1.",
+            "script": {
+                "question_text": "What factors might convince you to start using a wearable fitness device?",
+                "answer_options": [
+                    "Lower cost",
+                    "Better health insurance incentives",
+                    "More accurate sensors",
+                    "Longer battery life",
+                    "Fashionable designs",
+                    "Integration with my healthcare provider"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 = No"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "How do you currently track your fitness/health metrics?",
+            "answer_options": [],
+            "routing_logic": "Only shown if Q1 = No",
+            "client_notes": "Discover alternative tracking methods. Use natural language processing for categorization.",
+            "scripter_notes": "Open text field with example placeholder text: 'e.g., mobile apps, manual journaling...'",
+            "script": {
+                "question_text": "How do you currently track your fitness/health metrics?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only shown if Q1 = No"
+            }
+        }
+    ]
+}

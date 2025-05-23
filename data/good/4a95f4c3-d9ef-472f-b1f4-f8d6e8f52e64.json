@@ -1,0 +1,251 @@
+{
+    "survey_id": "4a95f4c3-d9ef-472f-b1f4-f8d6e8f52e64",
+    "survey_name": "Outdoor Adventure Gear Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from customers on their satisfaction with outdoor adventure gear to improve product offerings and customer service.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase outdoor adventure gear?",
+            "answer_options": [
+                "Once a year or less",
+                "2-5 times a year",
+                "6-10 times a year",
+                "More than 10 times a year"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for ease of selection.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How often do you purchase outdoor adventure gear?",
+                "answer_options": [
+                    "Once a year or less",
+                    "2-5 times a year",
+                    "6-10 times a year",
+                    "More than 10 times a year"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of outdoor adventure gear do you typically purchase? (Select all that apply)",
+            "answer_options": [
+                "Hiking boots/shoes",
+                "Backpacks",
+                "Tents",
+                "Sleeping bags",
+                "Clothing (e.g., jackets, pants)",
+                "Climbing equipment",
+                "Water bottles/hydration packs",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multi-selection for accurate data capture.",
+            "scripter_notes": "Field type: checkbox",
+            "script": {
+                "question_text": "Which types of outdoor adventure gear do you typically purchase? (Select all that apply)",
+                "answer_options": [
+                    "Hiking boots/shoes",
+                    "Backpacks",
+                    "Tents",
+                    "Sleeping bags",
+                    "Clothing (e.g., jackets, pants)",
+                    "Climbing equipment",
+                    "Water bottles/hydration packs",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the durability of the outdoor adventure gear you have purchased?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents who selected any gear type in Q2",
+            "client_notes": "Use a Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How satisfied are you with the durability of the outdoor adventure gear you have purchased?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected any gear type in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors are most important to you when purchasing outdoor adventure gear? (Select up to 3)",
+            "answer_options": [
+                "Durability",
+                "Price",
+                "Brand reputation",
+                "Weight/portability",
+                "Comfort",
+                "Environmental sustainability",
+                "Customer reviews",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Limit selection to 3 options for focused insights.",
+            "scripter_notes": "Field type: checkbox with max selection limit of 3",
+            "script": {
+                "question_text": "What factors are most important to you when purchasing outdoor adventure gear? (Select up to 3)",
+                "answer_options": [
+                    "Durability",
+                    "Price",
+                    "Brand reputation",
+                    "Weight/portability",
+                    "Comfort",
+                    "Environmental sustainability",
+                    "Customer reviews",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any issues with the outdoor adventure gear you purchased in the past 12 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents who selected any gear type in Q2",
+            "client_notes": "Use a simple yes/no question for quick response.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "Have you experienced any issues with the outdoor adventure gear you purchased in the past 12 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected any gear type in Q2"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If yes, please describe the issue(s) you experienced:",
+            "answer_options": [],
+            "routing_logic": "Only respondents who answered 'Yes' to Q5",
+            "client_notes": "Allow open-ended response for detailed feedback.",
+            "scripter_notes": "Field type: open text",
+            "script": {
+                "question_text": "If yes, please describe the issue(s) you experienced:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only respondents who answered 'Yes' to Q5"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to recommend the brand(s) of outdoor adventure gear you purchased to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents who selected any gear type in Q2",
+            "client_notes": "Use a standard NPS-like scale for recommendations.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How likely are you to recommend the brand(s) of outdoor adventure gear you purchased to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected any gear type in Q2"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would you like to see in outdoor adventure gear?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback.",
+            "scripter_notes": "Field type: open text",
+            "script": {
+                "question_text": "What improvements would you like to see in outdoor adventure gear?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How do you typically research outdoor adventure gear before purchasing? (Select all that apply)",
+            "answer_options": [
+                "Online reviews",
+                "Brand websites",
+                "Social media",
+                "Recommendations from friends/family",
+                "In-store research",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to understand research behavior.",
+            "scripter_notes": "Field type: checkbox",
+            "script": {
+                "question_text": "How do you typically research outdoor adventure gear before purchasing? (Select all that apply)",
+                "answer_options": [
+                    "Online reviews",
+                    "Brand websites",
+                    "Social media",
+                    "Recommendations from friends/family",
+                    "In-store research",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your age range?",
+            "answer_options": [
+                "18-24",
+                "25-34",
+                "35-44",
+                "45-54",
+                "55-64",
+                "65+"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard demographic question for segmentation.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "What is your age range?",
+                "answer_options": [
+                    "18-24",
+                    "25-34",
+                    "35-44",
+                    "45-54",
+                    "55-64",
+                    "65+"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

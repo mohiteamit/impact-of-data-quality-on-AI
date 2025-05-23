@@ -1,0 +1,231 @@
+{
+    "survey_id": "cddfe639-ce96-4826-9e9f-d18b9f67d374",
+    "survey_name": "Home Energy Efficiency Awareness Survey",
+    "survey_brief": "This survey aims to understand consumer awareness and behaviors related to home energy efficiency, including adoption of energy-saving practices and technologies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How concerned are you about your home's energy consumption?",
+            "answer_options": [
+                "Very concerned",
+                "Somewhat concerned",
+                "Neutral",
+                "Not very concerned",
+                "Not concerned at all"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a Likert scale to measure concern levels. Ensure options are balanced and cover the full range of possible responses.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How concerned are you about your home's energy consumption?",
+                "answer_options": [
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Neutral",
+                    "Not very concerned",
+                    "Not concerned at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following energy-efficient practices have you implemented in your home? (Select all that apply)",
+            "answer_options": [
+                "LED lighting",
+                "Smart thermostats",
+                "Energy-efficient appliances",
+                "Solar panels",
+                "Improved insulation",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Multiple-choice question to gauge adoption rates of common energy-saving practices. Include an option for 'None of the above'.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following energy-efficient practices have you implemented in your home? (Select all that apply)",
+                "answer_options": [
+                    "LED lighting",
+                    "Smart thermostats",
+                    "Energy-efficient appliances",
+                    "Solar panels",
+                    "Improved insulation",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason for implementing energy-efficient practices in your home?",
+            "answer_options": [
+                "To reduce utility bills",
+                "Environmental concerns",
+                "Government incentives/rebates",
+                "Home comfort improvement",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q2 is not 'None of the above'",
+            "client_notes": "Include an 'Other' option with a text field for respondents to specify their reason.",
+            "scripter_notes": "Field type: radio button (single-choice) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason for implementing energy-efficient practices in your home?",
+                "answer_options": [
+                    "To reduce utility bills",
+                    "Environmental concerns",
+                    "Government incentives/rebates",
+                    "Home comfort improvement",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q2 is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you selected 'Other' in Q3, please specify your primary reason.",
+            "answer_options": [],
+            "routing_logic": "Appears only if 'Other' is selected in Q3",
+            "client_notes": "Open-ended question to capture unique responses not covered in the predefined options.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "If you selected 'Other' in Q3, please specify your primary reason.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if 'Other' is selected in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to invest in additional energy-efficient upgrades for your home in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a Likert scale to measure likelihood. Helps predict future adoption trends.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to invest in additional energy-efficient upgrades for your home in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which of the following barriers prevent you from adopting more energy-efficient practices? (Select all that apply)",
+            "answer_options": [
+                "High upfront costs",
+                "Lack of information",
+                "Difficulty in finding reliable contractors",
+                "Uncertainty about savings",
+                "No barriers, already fully optimized",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q5 is not 'Very likely'",
+            "client_notes": "Multiple-choice question to identify common barriers. Include 'Other' for unique responses.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following barriers prevent you from adopting more energy-efficient practices? (Select all that apply)",
+                "answer_options": [
+                    "High upfront costs",
+                    "Lack of information",
+                    "Difficulty in finding reliable contractors",
+                    "Uncertainty about savings",
+                    "No barriers, already fully optimized",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q5 is not 'Very likely'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If you selected 'Other' in Q6, please specify the barrier.",
+            "answer_options": [],
+            "routing_logic": "Appears only if 'Other' is selected in Q6",
+            "client_notes": "Open-ended question to capture unique barriers not covered in the predefined options.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "If you selected 'Other' in Q6, please specify the barrier.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if 'Other' is selected in Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Have you ever participated in a government or utility-run energy efficiency program?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I'm not sure"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Simple yes/no question to gauge program awareness and participation.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Have you ever participated in a government or utility-run energy efficiency program?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I'm not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "If you participated in such a program, how satisfied were you with the experience?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears only if 'Yes' is selected in Q8",
+            "client_notes": "Likert scale to measure satisfaction levels among program participants.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "If you participated in such a program, how satisfied were you with the experience?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if 'Yes' is selected in Q8"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional information or resources would help you make more energy-efficient decisions for your home?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to identify unmet needs for education or support.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What additional information or resources would help you make more energy-efficient decisions for your home?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

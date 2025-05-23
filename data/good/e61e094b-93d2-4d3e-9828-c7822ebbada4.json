@@ -1,0 +1,245 @@
+{
+    "survey_id": "e61e094b-93d2-4d3e-9828-c7822ebbada4",
+    "survey_name": "AI-Powered Fitness Coach Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from users of AI-powered fitness coaching apps to evaluate satisfaction, usability, and overall experience with the technology.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use an AI-powered fitness coaching app?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Consider using a 5-point Likert scale for consistency. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you use an AI-powered fitness coaching app?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features do you find most valuable in your AI fitness coach? (Select up to 3)",
+            "answer_options": [
+                "Personalized workout plans",
+                "Real-time form correction",
+                "Progress tracking",
+                "Nutritional guidance",
+                "Motivational prompts",
+                "Community challenges",
+                "Integration with wearable devices"
+            ],
+            "routing_logic": "Respondents who answered 'Daily' to 'Once a week' in Q1",
+            "client_notes": "Multi-select feature allows users to highlight preferred functionalities.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with a maximum of 3 selections.",
+            "script": {
+                "question_text": "Which of the following features do you find most valuable in your AI fitness coach? (Select up to 3)",
+                "answer_options": [
+                    "Personalized workout plans",
+                    "Real-time form correction",
+                    "Progress tracking",
+                    "Nutritional guidance",
+                    "Motivational prompts",
+                    "Community challenges",
+                    "Integration with wearable devices"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily' to 'Once a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the accuracy of your AI fitness coach's recommendations?",
+            "answer_options": [
+                "1 - Very dissatisfied",
+                "2 - Dissatisfied",
+                "3 - Neutral",
+                "4 - Satisfied",
+                "5 - Very satisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a standard Likert scale for consistent measurement across surveys.",
+            "scripter_notes": "Field type: Single-choice radio buttons with horizontal layout.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the accuracy of your AI fitness coach's recommendations?",
+                "answer_options": [
+                    "1 - Very dissatisfied",
+                    "2 - Dissatisfied",
+                    "3 - Neutral",
+                    "4 - Satisfied",
+                    "5 - Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for your AI fitness coach?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: Open-text input with a 500-character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for your AI fitness coach?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your AI fitness coach to a friend or colleague?",
+            "answer_options": [
+                "1 - Very unlikely",
+                "2 - Unlikely",
+                "3 - Neutral",
+                "4 - Likely",
+                "5 - Very likely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Net Promoter Score (NPS) question; useful for measuring loyalty.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How likely are you to recommend your AI fitness coach to a friend or colleague?",
+                "answer_options": [
+                    "1 - Very unlikely",
+                    "2 - Unlikely",
+                    "3 - Neutral",
+                    "4 - Likely",
+                    "5 - Very likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you ever encountered any technical issues while using your AI fitness coach?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Simple yes/no question to gauge technical reliability.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "Have you ever encountered any technical issues while using your AI fitness coach?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If you answered 'Yes' to Q6, please describe the technical issue you encountered.",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'Yes' in Q6",
+            "client_notes": "Optional follow-up to gather specifics on technical problems.",
+            "scripter_notes": "Field type: Open-text input with a 300-character limit.",
+            "script": {
+                "question_text": "If you answered 'Yes' to Q6, please describe the technical issue you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'Yes' in Q6"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which of the following fitness goals are you using your AI coach for? (Select all that apply)",
+            "answer_options": [
+                "Weight loss",
+                "Muscle building",
+                "Cardiovascular health",
+                "Flexibility/mobility",
+                "General fitness",
+                "Injury recovery",
+                "Sports performance"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select to understand primary use cases.",
+            "scripter_notes": "Field type: Multi-choice checkboxes.",
+            "script": {
+                "question_text": "Which of the following fitness goals are you using your AI coach for? (Select all that apply)",
+                "answer_options": [
+                    "Weight loss",
+                    "Muscle building",
+                    "Cardiovascular health",
+                    "Flexibility/mobility",
+                    "General fitness",
+                    "Injury recovery",
+                    "Sports performance"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How does your AI fitness coach compare to working with a human personal trainer?",
+            "answer_options": [
+                "Much better",
+                "Somewhat better",
+                "About the same",
+                "Somewhat worse",
+                "Much worse"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Comparative question to gauge perceived value against human trainers.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How does your AI fitness coach compare to working with a human personal trainer?",
+                "answer_options": [
+                    "Much better",
+                    "Somewhat better",
+                    "About the same",
+                    "Somewhat worse",
+                    "Much worse"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Would you be interested in a hybrid model combining AI coaching with occasional live human trainer sessions?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, possibly",
+                "No, AI-only is fine",
+                "No, I prefer human-only training"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Helps assess market potential for hybrid services.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "Would you be interested in a hybrid model combining AI coaching with occasional live human trainer sessions?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, possibly",
+                    "No, AI-only is fine",
+                    "No, I prefer human-only training"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,233 @@
+{
+    "survey_id": "45e9a745-bc85-4e91-b1cc-bcd03c2983e8",
+    "survey_name": "Healthcare Patient Experience Survey",
+    "survey_brief": "Evaluate patient satisfaction with recent clinical encounters to improve service quality and care delivery",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you rate your overall experience during your recent visit?",
+            "answer_options": [
+                "Excellent",
+                "Very Good",
+                "Good",
+                "Fair",
+                "Poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use standard 5-point scale for benchmarking. Randomize option order to reduce bias.",
+            "scripter_notes": "Horizontal radio buttons. Require response before proceeding.",
+            "script": {
+                "question_text": "How would you rate your overall experience during your recent visit?",
+                "answer_options": [
+                    "Excellent",
+                    "Very Good",
+                    "Good",
+                    "Fair",
+                    "Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which aspects of your visit met or exceeded expectations? (Select all that apply)",
+            "answer_options": [
+                "Wait time",
+                "Staff professionalism",
+                "Facility cleanliness",
+                "Communication clarity",
+                "Treatment effectiveness"
+            ],
+            "routing_logic": "If Q1 ≠ 'Poor'",
+            "client_notes": "Max 3 selections allowed. Include 'Other' option if needed through follow-up question",
+            "scripter_notes": "Checkbox input with vertical layout. Enable 'Other' field trigger if selected",
+            "script": {
+                "question_text": "Which aspects of your visit met or exceeded expectations? (Select all that apply)",
+                "answer_options": [
+                    "Wait time",
+                    "Staff professionalism",
+                    "Facility cleanliness",
+                    "Communication clarity",
+                    "Treatment effectiveness"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 ≠ 'Poor'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How many minutes did you wait beyond your scheduled appointment time?",
+            "answer_options": [
+                "0-5 minutes",
+                "6-15 minutes",
+                "16-30 minutes",
+                "More than 30 minutes"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Critical metric for operational efficiency. Use predefined ranges for quantifiable analysis",
+            "scripter_notes": "Dropdown menu with auto-advance on selection",
+            "script": {
+                "question_text": "How many minutes did you wait beyond your scheduled appointment time?",
+                "answer_options": [
+                    "0-5 minutes",
+                    "6-15 minutes",
+                    "16-30 minutes",
+                    "More than 30 minutes"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any specific positive experiences or areas needing improvement:",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Include character limit (500 max) and profanity filter. Mobile-responsive text box",
+            "scripter_notes": "Open text field with input validation",
+            "script": {
+                "question_text": "Please describe any specific positive experiences or areas needing improvement:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend our facility to others?",
+            "answer_options": [
+                "Extremely likely",
+                "Very likely",
+                "Somewhat likely",
+                "Not likely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Net Promoter Score (NPS) precursor question. Display as smiley-face scale on mobile",
+            "scripter_notes": "Graphic rating scale fallback to radio buttons",
+            "script": {
+                "question_text": "How likely are you to recommend our facility to others?",
+                "answer_options": [
+                    "Extremely likely",
+                    "Very likely",
+                    "Somewhat likely",
+                    "Not likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Were your health concerns addressed to your satisfaction?",
+            "answer_options": [
+                "Completely",
+                "Mostly",
+                "Partially",
+                "Not at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Sensitive question - place mid-survey to maintain completion rates",
+            "scripter_notes": "Radio buttons with neutral color scheme",
+            "script": {
+                "question_text": "Were your health concerns addressed to your satisfaction?",
+                "answer_options": [
+                    "Completely",
+                    "Mostly",
+                    "Partially",
+                    "Not at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which communication channels would you prefer for follow-up care?",
+            "answer_options": [
+                "Secure messaging portal",
+                "Phone call",
+                "Email",
+                "Text message",
+                "In-person discussion"
+            ],
+            "routing_logic": "If Q6 ≠ 'Not at all'",
+            "client_notes": "Multiple selections allowed. Monitor HIPAA-compliant preferences",
+            "scripter_notes": "Checkbox grid with 'Select all' prompt",
+            "script": {
+                "question_text": "Which communication channels would you prefer for follow-up care?",
+                "answer_options": [
+                    "Secure messaging portal",
+                    "Phone call",
+                    "Email",
+                    "Text message",
+                    "In-person discussion"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q6 ≠ 'Not at all'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How would you rate the comfort and accessibility of our facility?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Below Average"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Focus on ADA compliance and wayfinding. Include photo examples if permitted",
+            "scripter_notes": "Star rating component with text fallback",
+            "script": {
+                "question_text": "How would you rate the comfort and accessibility of our facility?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Below Average"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Did you receive clear instructions for post-visit care?",
+            "answer_options": [
+                "Yes, both verbally and in writing",
+                "Yes, verbally only",
+                "Yes, in writing only",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Critical quality measure. Follow up with Q10 if 'No' selected",
+            "scripter_notes": "Radio buttons with conditional routing",
+            "script": {
+                "question_text": "Did you receive clear instructions for post-visit care?",
+                "answer_options": [
+                    "Yes, both verbally and in writing",
+                    "Yes, verbally only",
+                    "Yes, in writing only",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What additional information or resources would have been helpful?",
+            "answer_options": [],
+            "routing_logic": "If Q9 = 'No'",
+            "client_notes": "Free-text field only shown when needed. Auto-save partial responses",
+            "scripter_notes": "Conditional text area with save draft functionality",
+            "script": {
+                "question_text": "What additional information or resources would have been helpful?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q9 = 'No'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,267 @@
+{
+    "survey_id": "38c0859d-e64c-4699-b7d7-a2d210ffa917",
+    "survey_name": "Home Renovation Preferences Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and priorities when planning home renovations to help businesses tailor their services and products accordingly.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following best describes your current home renovation plans?",
+            "answer_options": [
+                "Planning a minor renovation (e.g., single room update)",
+                "Planning a major renovation (e.g., multiple rooms or full home)",
+                "Considering renovation but undecided",
+                "Not currently planning any renovations"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. This question helps segment respondents for further questions.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Which of the following best describes your current home renovation plans?",
+                "answer_options": [
+                    "Planning a minor renovation (e.g., single room update)",
+                    "Planning a major renovation (e.g., multiple rooms or full home)",
+                    "Considering renovation but undecided",
+                    "Not currently planning any renovations"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is the primary motivation for your home renovation?",
+            "answer_options": [
+                "Improving functionality/layout",
+                "Updating outdated design",
+                "Increasing home value for resale",
+                "Personal enjoyment/comfort",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only show if Q1 answer is 'Planning a minor renovation' or 'Planning a major renovation'",
+            "client_notes": "Include an 'Other' option with an open-text field for additional responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional open-text follow-up for 'Other'",
+            "script": {
+                "question_text": "What is the primary motivation for your home renovation?",
+                "answer_options": [
+                    "Improving functionality/layout",
+                    "Updating outdated design",
+                    "Increasing home value for resale",
+                    "Personal enjoyment/comfort",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only show if Q1 answer is 'Planning a minor renovation' or 'Planning a major renovation'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which rooms are you planning to renovate? (Select all that apply)",
+            "answer_options": [
+                "Kitchen",
+                "Bathroom",
+                "Living room",
+                "Bedroom",
+                "Basement",
+                "Outdoor space (e.g., patio, deck)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only show if Q1 answer is 'Planning a minor renovation' or 'Planning a major renovation'",
+            "client_notes": "Allow multiple selections and include an 'Other' option with open-text input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "Which rooms are you planning to renovate? (Select all that apply)",
+                "answer_options": [
+                    "Kitchen",
+                    "Bathroom",
+                    "Living room",
+                    "Bedroom",
+                    "Basement",
+                    "Outdoor space (e.g., patio, deck)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only show if Q1 answer is 'Planning a minor renovation' or 'Planning a major renovation'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is your estimated budget for the renovation?",
+            "answer_options": [
+                "Under $10,000",
+                "$10,000 - $25,000",
+                "$25,001 - $50,000",
+                "$50,001 - $100,000",
+                "Over $100,000",
+                "Not sure"
+            ],
+            "routing_logic": "Only show if Q1 answer is 'Planning a minor renovation' or 'Planning a major renovation'",
+            "client_notes": "Use a single-choice scale. Ensure ranges are clear and non-overlapping.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "What is your estimated budget for the renovation?",
+                "answer_options": [
+                    "Under $10,000",
+                    "$10,000 - $25,000",
+                    "$25,001 - $50,000",
+                    "$50,001 - $100,000",
+                    "Over $100,000",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only show if Q1 answer is 'Planning a minor renovation' or 'Planning a major renovation'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How do you typically research home renovation products or services? (Select all that apply)",
+            "answer_options": [
+                "Online search (e.g., Google)",
+                "Social media (e.g., Pinterest, Instagram)",
+                "Home improvement stores",
+                "Recommendations from friends/family",
+                "Professional contractors/designers",
+                "Home renovation magazines/blogs",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. This helps identify key marketing channels.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "How do you typically research home renovation products or services? (Select all that apply)",
+                "answer_options": [
+                    "Online search (e.g., Google)",
+                    "Social media (e.g., Pinterest, Instagram)",
+                    "Home improvement stores",
+                    "Recommendations from friends/family",
+                    "Professional contractors/designers",
+                    "Home renovation magazines/blogs",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What factors are most important to you when selecting a contractor or design professional? (Rank top 3)",
+            "answer_options": [
+                "Cost",
+                "Reputation/reviews",
+                "Experience/expertise",
+                "Timeline/completion speed",
+                "Quality of materials",
+                "Communication style",
+                "Sustainability practices",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only show if Q1 answer is 'Planning a minor renovation' or 'Planning a major renovation'",
+            "client_notes": "Use a ranking question type where respondents can drag and drop or select their top 3 choices.",
+            "scripter_notes": "Field type: RANKING (select top 3) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What factors are most important to you when selecting a contractor or design professional? (Rank top 3)",
+                "answer_options": [
+                    "Cost",
+                    "Reputation/reviews",
+                    "Experience/expertise",
+                    "Timeline/completion speed",
+                    "Quality of materials",
+                    "Communication style",
+                    "Sustainability practices",
+                    "Other (please specify)"
+                ],
+                "type": "RANKING",
+                "routing_logic": "Only show if Q1 answer is 'Planning a minor renovation' or 'Planning a major renovation'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How concerned are you about the environmental impact of your renovation?",
+            "answer_options": [
+                "Very concerned",
+                "Somewhat concerned",
+                "Neutral",
+                "Not very concerned",
+                "Not at all concerned"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for measuring intensity of concern.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How concerned are you about the environmental impact of your renovation?",
+                "answer_options": [
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Neutral",
+                    "Not very concerned",
+                    "Not at all concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Would you be willing to pay a premium for eco-friendly or sustainable materials?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, but only a small premium",
+                "No, I would not pay extra",
+                "Not sure"
+            ],
+            "routing_logic": "Only show if Q7 answer is 'Very concerned' or 'Somewhat concerned'",
+            "client_notes": "This helps gauge willingness to invest in sustainability.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Would you be willing to pay a premium for eco-friendly or sustainable materials?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, but only a small premium",
+                    "No, I would not pay extra",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only show if Q7 answer is 'Very concerned' or 'Somewhat concerned'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is your biggest concern or hesitation about undertaking a home renovation?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to uncover potential pain points.",
+            "scripter_notes": "Field type: OPEN_TEXT (text input)",
+            "script": {
+                "question_text": "What is your biggest concern or hesitation about undertaking a home renovation?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How satisfied are you with your current living space before renovation?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale to measure baseline satisfaction.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with your current living space before renovation?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

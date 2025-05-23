@@ -1,0 +1,323 @@
+{
+    "survey_id": "b246d520-529a-4bbc-b039-522c240489ab",
+    "survey_name": "Online Grocery Delivery Service Feedback Survey",
+    "survey_brief": "Gather insights about customer experiences with online grocery delivery services to improve service quality and operational efficiency",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your overall experience using online grocery delivery services?",
+            "answer_options": [
+                "Very Dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very Satisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a standard 5-point Likert scale to maintain benchmark consistency. Ensure mobile-responsive layout.",
+            "scripter_notes": "Radio buttons, vertical alignment, mandatory response",
+            "script": {
+                "question_text": "How satisfied are you with your overall experience using online grocery delivery services?",
+                "answer_options": [
+                    "Very Dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very Satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How frequently do you use online grocery delivery services?",
+            "answer_options": [
+                "Less than once a month",
+                "1-3 times per month",
+                "Weekly",
+                "Multiple times per week"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include 'Not applicable' if needed for non-users (though screening should precede)",
+            "scripter_notes": "Radio buttons with 'Other' open-field option",
+            "script": {
+                "question_text": "How frequently do you use online grocery delivery services?",
+                "answer_options": [
+                    "Less than once a month",
+                    "1-3 times per month",
+                    "Weekly",
+                    "Multiple times per week"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which platforms have you used for online grocery delivery in the last 3 months? (Select all that apply)",
+            "answer_options": [
+                "Instacart",
+                "Amazon Fresh",
+                "Walmart Grocery",
+                "Shipt",
+                "Local supermarket apps",
+                "Other"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Randomize order of options to avoid bias. Limit to 6 choices for readability.",
+            "scripter_notes": "Checkbox inputs with 'Other' text field",
+            "script": {
+                "question_text": "Which platforms have you used for online grocery delivery in the last 3 months? (Select all that apply)",
+                "answer_options": [
+                    "Instacart",
+                    "Amazon Fresh",
+                    "Walmart Grocery",
+                    "Shipt",
+                    "Local supermarket apps",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors are most important when selecting a grocery delivery service? (Select up to 3)",
+            "answer_options": [
+                "Delivery fees",
+                "Product selection",
+                "Freshness guarantees",
+                "Delivery speed",
+                "Loyalty programs",
+                "User-friendly app",
+                "Customer service",
+                "Environmental sustainability"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a drag-and-rank question alternative for advanced implementations",
+            "scripter_notes": "Checkbox inputs with max 3 selections enforced",
+            "script": {
+                "question_text": "What factors are most important when selecting a grocery delivery service? (Select up to 3)",
+                "answer_options": [
+                    "Delivery fees",
+                    "Product selection",
+                    "Freshness guarantees",
+                    "Delivery speed",
+                    "Loyalty programs",
+                    "User-friendly app",
+                    "Customer service",
+                    "Environmental sustainability"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the accuracy of delivered items compared to your order?",
+            "answer_options": [
+                "Always inaccurate",
+                "Occasionally inaccurate",
+                "Usually accurate",
+                "Always accurate"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Consider adding image-based smiley scales for mobile users",
+            "scripter_notes": "Radio buttons with horizontal display on desktop",
+            "script": {
+                "question_text": "How would you rate the accuracy of delivered items compared to your order?",
+                "answer_options": [
+                    "Always inaccurate",
+                    "Occasionally inaccurate",
+                    "Usually accurate",
+                    "Always accurate"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with the freshness of perishable items (e.g., produce, dairy) received?",
+            "answer_options": [
+                "Very Dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very Satisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Benchmark against Q1 satisfaction for correlation analysis",
+            "scripter_notes": "Radio buttons with same scale as Q1",
+            "script": {
+                "question_text": "How satisfied are you with the freshness of perishable items (e.g., produce, dairy) received?",
+                "answer_options": [
+                    "Very Dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very Satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Have you experienced any technical issues with grocery delivery apps/websites in the past 6 months?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Follow with open-end if 'Yes' selected",
+            "scripter_notes": "Radio buttons with conditional routing to Q8",
+            "script": {
+                "question_text": "Have you experienced any technical issues with grocery delivery apps/websites in the past 6 months?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What types of issues did you encounter? (Select all that apply)",
+            "answer_options": [
+                "Payment processing errors",
+                "App crashes/freezes",
+                "Incorrect delivery tracking",
+                "Difficulty scheduling deliveries",
+                "Account login problems",
+                "Other"
+            ],
+            "routing_logic": "Shown if Q7 = 'Yes, frequently' or 'Yes, occasionally'",
+            "client_notes": "Use this data to prioritize tech stack improvements",
+            "scripter_notes": "Checkbox inputs with 'Other' text field",
+            "script": {
+                "question_text": "What types of issues did you encounter? (Select all that apply)",
+                "answer_options": [
+                    "Payment processing errors",
+                    "App crashes/freezes",
+                    "Incorrect delivery tracking",
+                    "Difficulty scheduling deliveries",
+                    "Account login problems",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q7 = 'Yes, frequently' or 'Yes, occasionally'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to recommend your primary grocery delivery service to others?",
+            "answer_options": [
+                "0 - Not at all likely",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 - Extremely likely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard NPS question format. Display as 11-point scale slider on mobile.",
+            "scripter_notes": "Radio buttons in grid layout, numerical values only",
+            "script": {
+                "question_text": "How likely are you to recommend your primary grocery delivery service to others?",
+                "answer_options": [
+                    "0 - Not at all likely",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 - Extremely likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What improvements would most enhance your online grocery delivery experience?",
+            "answer_options": [
+                "Lower delivery fees",
+                "Faster delivery windows",
+                "Better substitution options",
+                "Improved packaging quality",
+                "Real-time shopper communication",
+                "Eco-friendly packaging options"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Randomize options to minimize order bias",
+            "scripter_notes": "Checkbox inputs with max 3 selections",
+            "script": {
+                "question_text": "What improvements would most enhance your online grocery delivery experience?",
+                "answer_options": [
+                    "Lower delivery fees",
+                    "Faster delivery windows",
+                    "Better substitution options",
+                    "Improved packaging quality",
+                    "Real-time shopper communication",
+                    "Eco-friendly packaging options"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How important is sustainable packaging in your satisfaction with delivery services?",
+            "answer_options": [
+                "Not important",
+                "Slightly important",
+                "Moderately important",
+                "Very important",
+                "Extremely important"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Cross-tabulate with demographic data if collected",
+            "scripter_notes": "Radio buttons with vertical layout",
+            "script": {
+                "question_text": "How important is sustainable packaging in your satisfaction with delivery services?",
+                "answer_options": [
+                    "Not important",
+                    "Slightly important",
+                    "Moderately important",
+                    "Very important",
+                    "Extremely important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "Please share any additional comments about your online grocery delivery experiences:",
+            "answer_options": [],
+            "routing_logic": "Optional for all respondents",
+            "client_notes": "Use text analytics for sentiment analysis",
+            "scripter_notes": "Open text field with 500-character limit",
+            "script": {
+                "question_text": "Please share any additional comments about your online grocery delivery experiences:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional for all respondents"
+            }
+        }
+    ]
+}

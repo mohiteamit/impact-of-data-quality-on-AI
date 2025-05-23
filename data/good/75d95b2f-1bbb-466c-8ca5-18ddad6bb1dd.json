@@ -1,0 +1,239 @@
+{
+    "survey_id": "75d95b2f-1bbb-466c-8ca5-18ddad6bb1dd",
+    "survey_name": "Workplace Mental Health Support Survey",
+    "survey_brief": "This survey aims to assess employee awareness and satisfaction with mental health support initiatives in the workplace, identifying gaps and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How aware are you of the mental health support resources provided by your employer?",
+            "answer_options": [
+                "Very aware",
+                "Somewhat aware",
+                "Not very aware",
+                "Not aware at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale to measure awareness levels. Ensure options are clearly differentiated.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How aware are you of the mental health support resources provided by your employer?",
+                "answer_options": [
+                    "Very aware",
+                    "Somewhat aware",
+                    "Not very aware",
+                    "Not aware at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following mental health support resources have you used in the past 12 months? (Select all that apply)",
+            "answer_options": [
+                "Employee Assistance Program (EAP)",
+                "Mental health days/leave",
+                "On-site counseling services",
+                "Mental health webinars/workshops",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. Include an option for those who haven't used any resources.",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "Which of the following mental health support resources have you used in the past 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Employee Assistance Program (EAP)",
+                    "Mental health days/leave",
+                    "On-site counseling services",
+                    "Mental health webinars/workshops",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the mental health support provided by your employer?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (have not used any resources)"
+            ],
+            "routing_logic": "Respondents who selected any option other than 'None of the above' in Q2",
+            "client_notes": "Include a neutral option and an 'N/A' for those who haven't used resources.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How satisfied are you with the mental health support provided by your employer?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (have not used any resources)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any option other than 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What barriers, if any, have prevented you from using mental health support resources at work? (Select all that apply)",
+            "answer_options": [
+                "Lack of awareness about available resources",
+                "Concerns about confidentiality",
+                "Fear of stigma or judgment",
+                "Inconvenient timing/location",
+                "Not relevant to my needs",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'None of the above' in Q2",
+            "client_notes": "Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What barriers, if any, have prevented you from using mental health support resources at work? (Select all that apply)",
+                "answer_options": [
+                    "Lack of awareness about available resources",
+                    "Concerns about confidentiality",
+                    "Fear of stigma or judgment",
+                    "Inconvenient timing/location",
+                    "Not relevant to my needs",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any additional mental health support resources you would like to see offered by your employer.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open-text",
+            "script": {
+                "question_text": "Please describe any additional mental health support resources you would like to see offered by your employer.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How comfortable do you feel discussing mental health with your manager or HR?",
+            "answer_options": [
+                "Very comfortable",
+                "Somewhat comfortable",
+                "Neutral",
+                "Somewhat uncomfortable",
+                "Very uncomfortable"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale to measure comfort levels. Avoid leading language.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How comfortable do you feel discussing mental health with your manager or HR?",
+                "answer_options": [
+                    "Very comfortable",
+                    "Somewhat comfortable",
+                    "Neutral",
+                    "Somewhat uncomfortable",
+                    "Very uncomfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Has your employer's mental health support positively impacted your work performance or well-being?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No impact",
+                "No, I have not used any resources"
+            ],
+            "routing_logic": "Respondents who selected any option other than 'None of the above' in Q2",
+            "client_notes": "Include an option for those who haven't used resources.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "Has your employer's mental health support positively impacted your work performance or well-being?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No impact",
+                    "No, I have not used any resources"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any option other than 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How frequently does your employer communicate about mental health support resources?",
+            "answer_options": [
+                "Very frequently",
+                "Somewhat frequently",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Assess communication frequency to identify gaps in awareness.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How frequently does your employer communicate about mental health support resources?",
+                "answer_options": [
+                    "Very frequently",
+                    "Somewhat frequently",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Would you recommend your employer's mental health support to a colleague?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No",
+                "Not applicable (have not used any resources)"
+            ],
+            "routing_logic": "Respondents who selected any option other than 'None of the above' in Q2",
+            "client_notes": "Include an 'N/A' option for those who haven't used resources.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "Would you recommend your employer's mental health support to a colleague?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No",
+                    "Not applicable (have not used any resources)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any option other than 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What suggestions do you have for improving mental health support in your workplace?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather actionable feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: open-text",
+            "script": {
+                "question_text": "What suggestions do you have for improving mental health support in your workplace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,221 @@
+{
+    "survey_id": "23367d88-cea4-4533-b05e-ce552aff3b50",
+    "survey_name": "Online Coding Bootcamp Graduate Outcomes Survey",
+    "survey_brief": "Assess post-completion experiences of coding bootcamp graduates to improve career outcomes and curriculum effectiveness",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the overall curriculum quality of the coding bootcamp?",
+            "answer_options": [
+                "Very Dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very Satisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use standard 5-point Likert scale for consistent benchmarking",
+            "scripter_notes": "Radio button horizontal layout, required field",
+            "script": {
+                "question_text": "How satisfied are you with the overall curriculum quality of the coding bootcamp?",
+                "answer_options": [
+                    "Very Dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very Satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which programming languages did you become proficient in through the bootcamp?",
+            "answer_options": [
+                "JavaScript",
+                "Python",
+                "Java",
+                "Ruby",
+                "C#",
+                "SQL",
+                "Other"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections with 'Other' field validation",
+            "scripter_notes": "Checkbox grid with text input for 'Other'",
+            "script": {
+                "question_text": "Which programming languages did you become proficient in through the bootcamp?",
+                "answer_options": [
+                    "JavaScript",
+                    "Python",
+                    "Java",
+                    "Ruby",
+                    "C#",
+                    "SQL",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How many months after graduation did you secure full-time employment in tech?",
+            "answer_options": [
+                "Immediately (0-1 month)",
+                "2-3 months",
+                "4-6 months",
+                "7-12 months",
+                "Still seeking employment"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include explicit 'still seeking' option to capture unemployment data",
+            "scripter_notes": "Radio button vertical layout with progress bar display",
+            "script": {
+                "question_text": "How many months after graduation did you secure full-time employment in tech?",
+                "answer_options": [
+                    "Immediately (0-1 month)",
+                    "2-3 months",
+                    "4-6 months",
+                    "7-12 months",
+                    "Still seeking employment"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What specific aspects of the career support services were most valuable to you?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use text analysis to identify common themes in responses",
+            "scripter_notes": "Open text field with 500-character limit",
+            "script": {
+                "question_text": "What specific aspects of the career support services were most valuable to you?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you rate the relevance of technical skills learned to your current job requirements?",
+            "answer_options": [
+                "Not Relevant",
+                "Slightly Relevant",
+                "Moderately Relevant",
+                "Very Relevant",
+                "Extremely Relevant"
+            ],
+            "routing_logic": "If Q3 != 'Still seeking employment'",
+            "client_notes": "Ensure mobile-responsive slider scale implementation",
+            "scripter_notes": "Interactive slider scale with numeric labels",
+            "script": {
+                "question_text": "How would you rate the relevance of technical skills learned to your current job requirements?",
+                "answer_options": [
+                    "Not Relevant",
+                    "Slightly Relevant",
+                    "Moderately Relevant",
+                    "Very Relevant",
+                    "Extremely Relevant"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q3 != 'Still seeking employment'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which of these non-technical skills did the program effectively develop?",
+            "answer_options": [
+                "Team Collaboration",
+                "Problem Solving",
+                "Time Management",
+                "Technical Communication",
+                "Agile Methodology"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Limit to 3 selections maximum",
+            "scripter_notes": "Checkbox with selection limit validation",
+            "script": {
+                "question_text": "Which of these non-technical skills did the program effectively develop?",
+                "answer_options": [
+                    "Team Collaboration",
+                    "Problem Solving",
+                    "Time Management",
+                    "Technical Communication",
+                    "Agile Methodology"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What percentage salary increase did you achieve post-bootcamp compared to your pre-bootcamp earnings?",
+            "answer_options": [
+                "Less than 20%",
+                "21-40%",
+                "41-60%",
+                "61-100%",
+                "Over 100% increase"
+            ],
+            "routing_logic": "If Q3 != 'Still seeking employment'",
+            "client_notes": "Sensitive question - ensure anonymous response handling",
+            "scripter_notes": "Radio buttons with 'Prefer not to answer' optional",
+            "script": {
+                "question_text": "What percentage salary increase did you achieve post-bootcamp compared to your pre-bootcamp earnings?",
+                "answer_options": [
+                    "Less than 20%",
+                    "21-40%",
+                    "41-60%",
+                    "61-100%",
+                    "Over 100% increase"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q3 != 'Still seeking employment'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend this coding bootcamp to others?",
+            "answer_options": [
+                "Very Unlikely",
+                "Unlikely",
+                "Neutral",
+                "Likely",
+                "Very Likely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include NPS calculation in backend analysis",
+            "scripter_notes": "Radio button matrix with emoji scale",
+            "script": {
+                "question_text": "How likely are you to recommend this coding bootcamp to others?",
+                "answer_options": [
+                    "Very Unlikely",
+                    "Unlikely",
+                    "Neutral",
+                    "Likely",
+                    "Very Likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What additional topics should be included in future curriculum updates?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use keyword cloud visualization for analysis",
+            "scripter_notes": "Open text field with AI-powered suggestion prompts",
+            "script": {
+                "question_text": "What additional topics should be included in future curriculum updates?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

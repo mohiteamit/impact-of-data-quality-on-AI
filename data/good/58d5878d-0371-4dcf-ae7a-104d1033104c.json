@@ -1,0 +1,243 @@
+{
+    "survey_id": "58d5878d-0371-4dcf-ae7a-104d1033104c",
+    "survey_name": "Mobile Banking App Security Features Survey",
+    "survey_brief": "This survey aims to gather user feedback on the security features of mobile banking apps, including authentication methods, perceived safety, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use your mobile banking app?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Once a week",
+                "Less than once a week"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button for this question. Ensure the options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use your mobile banking app?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Once a week",
+                    "Less than once a week"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which authentication methods do you use to access your mobile banking app? (Select all that apply)",
+            "answer_options": [
+                "Password",
+                "PIN",
+                "Fingerprint",
+                "Facial recognition",
+                "Two-factor authentication (SMS/email code)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a multi-choice checkbox for this question. Include an 'Other' option with an open-text field for additional methods.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which authentication methods do you use to access your mobile banking app? (Select all that apply)",
+                "answer_options": [
+                    "Password",
+                    "PIN",
+                    "Fingerprint",
+                    "Facial recognition",
+                    "Two-factor authentication (SMS/email code)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the security features of your mobile banking app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point Likert scale for this question. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the security features of your mobile banking app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you ever experienced a security issue (e.g., unauthorized access) with your mobile banking app?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Prefer not to say"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button. Include a 'Prefer not to say' option for sensitive responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Have you ever experienced a security issue (e.g., unauthorized access) with your mobile banking app?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Prefer not to say"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you answered 'Yes' to Q4, please briefly describe the security issue you experienced.",
+            "answer_options": [],
+            "routing_logic": "Show only if Q4 answer is 'Yes'",
+            "client_notes": "Use an open-text field for detailed responses. Ensure the question is only shown to relevant respondents.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area), with conditional display logic based on Q4.",
+            "script": {
+                "question_text": "If you answered 'Yes' to Q4, please briefly describe the security issue you experienced.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show only if Q4 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which of the following security features would you like to see added to your mobile banking app? (Select all that apply)",
+            "answer_options": [
+                "Voice recognition",
+                "Behavioral biometrics (e.g., typing pattern)",
+                "One-time password (OTP) via authenticator app",
+                "Enhanced fraud alerts",
+                "None, I am satisfied with current features",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a multi-choice checkbox for this question. Include an 'Other' option with an open-text field for additional suggestions.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following security features would you like to see added to your mobile banking app? (Select all that apply)",
+                "answer_options": [
+                    "Voice recognition",
+                    "Behavioral biometrics (e.g., typing pattern)",
+                    "One-time password (OTP) via authenticator app",
+                    "Enhanced fraud alerts",
+                    "None, I am satisfied with current features",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to recommend your mobile banking app to others based on its security features?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point Likert scale for this question. This measures Net Promoter Score (NPS) for security.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to recommend your mobile banking app to others based on its security features?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Do you feel adequately informed about the security measures in place for your mobile banking app?",
+            "answer_options": [
+                "Yes, I feel very informed",
+                "Somewhat informed",
+                "No, I do not feel informed",
+                "I don't know"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button. Include an 'I don't know' option for neutrality.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Do you feel adequately informed about the security measures in place for your mobile banking app?",
+                "answer_options": [
+                    "Yes, I feel very informed",
+                    "Somewhat informed",
+                    "No, I do not feel informed",
+                    "I don't know"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What additional security information or features would help you feel more confident using your mobile banking app?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Use an open-text field for detailed responses. This provides qualitative insights.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What additional security information or features would help you feel more confident using your mobile banking app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Which of the following actions have you taken to enhance the security of your mobile banking app? (Select all that apply)",
+            "answer_options": [
+                "Enabled biometric authentication",
+                "Changed my password regularly",
+                "Set up transaction alerts",
+                "Used a unique password for the app",
+                "None of the above",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a multi-choice checkbox for this question. Include an 'Other' option with an open-text field for additional actions.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following actions have you taken to enhance the security of your mobile banking app? (Select all that apply)",
+                "answer_options": [
+                    "Enabled biometric authentication",
+                    "Changed my password regularly",
+                    "Set up transaction alerts",
+                    "Used a unique password for the app",
+                    "None of the above",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}
