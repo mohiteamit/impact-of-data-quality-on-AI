@@ -73,6 +73,23 @@ logging.basicConfig(
     datefmt="%Y-%m-%d %H:%M:%S"
 )
 
+from rich.progress import Progress, TimeElapsedColumn, BarColumn, TextColumn, SpinnerColumn
+from pathlib import Path
+import json
+import uuid
+import logging
+import time
+
+# Configure logging
+log_path = Path("logs")
+log_path.mkdir(parents=True, exist_ok=True)
+logging.basicConfig(
+    filename=log_path / "generate_examples.log",
+    level=logging.INFO,
+    format="%(asctime)s - %(levelname)s - %(message)s",
+    datefmt="%Y-%m-%d %H:%M:%S"
+)
+
 def generate_examples(prompt_file_path, n_examples=1, model="deepseek-reasoner", temperature=0.7,  
                       success_dir="data/good", failed_dir="data/good/failed"):
     prompt_path = Path(prompt_file_path)
@@ -114,6 +131,12 @@ def generate_examples(prompt_file_path, n_examples=1, model="deepseek-reasoner",
                     "especially the following:\n- <PREVIOUSLY_GENERATED_SURVEY_NAME>\n", ""
                 )
 
+                number_of_questions = random.randint(5, 25)
+                updated_prompt_content.replace(
+                    '<NUMBER_OF_QUESTION>',    
+                    str(number_of_questions)
+                )
+
                 # -----------------------------
                 # Step 2: API Call
                 # -----------------------------
@@ -142,7 +165,7 @@ def generate_examples(prompt_file_path, n_examples=1, model="deepseek-reasoner",
                     is_valid_json = True
 
                     # Log generated survey topic
-                    logging.info(f"Generated Topic #{i+1}: {new_topic}")
+                    logging.info(f"[Example #{i+1}] Generated Topic : {new_topic} with {number_of_questions} questions")
 
                 except json.JSONDecodeError as json_err:
                     logging.error(f"[Example #{i+1}] JSON Decode Error: {json_err}")
@@ -183,6 +206,6 @@ def generate_examples(prompt_file_path, n_examples=1, model="deepseek-reasoner",
 generate_examples(
     prompt_file_path='prompts/deepseek-good-data.md',
     model="deepseek-chat",
-    n_examples=2000, 
+    n_examples=1500, 
     temperature=1.5
 )
