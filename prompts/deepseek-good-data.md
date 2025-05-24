@@ -27,7 +27,7 @@ If needed, invent new, unique survey topics across diverse domains, such as (but
 ### Step 2: Create a Survey
 
 * Build one complete survey on the selected topic.
-* Randomly pick a number between 10 to 20 and create that many realistic survey questions.
+* Create <NUMBER_OF_QUESTION> realistic survey questions.
 
 ### Step 3: Structure the Survey Data
 
