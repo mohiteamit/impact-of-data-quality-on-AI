@@ -1,0 +1,103 @@
+{
+    "survey_id": "8850e06a-af8f-436b-a883-d01ff99d6d73",
+    "survey_name": "Electric Vehicle Adoption Barriers Survey",
+    "survey_brief": "This survey aims to understand the key barriers preventing consumers from adopting electric vehicles (EVs) and their preferences for future EV models.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How likely are you to consider purchasing an electric vehicle (EV) in the next 5 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for better granularity in responses.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How likely are you to consider purchasing an electric vehicle (EV) in the next 5 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the top 3 barriers preventing you from purchasing an EV? (Select up to 3)",
+            "answer_options": [
+                "High purchase price",
+                "Limited charging infrastructure",
+                "Range anxiety (worries about running out of charge)",
+                "Long charging times",
+                "Lack of model variety",
+                "Uncertainty about battery lifespan",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Somewhat unlikely' or 'Very unlikely' to Q1.",
+            "client_notes": "Allow multi-select with a maximum of 3 options. Include an 'Other' field for additional insights.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes) with a max selection limit of 3.",
+            "script": {
+                "question_text": "What are the top 3 barriers preventing you from purchasing an EV? (Select up to 3)",
+                "answer_options": [
+                    "High purchase price",
+                    "Limited charging infrastructure",
+                    "Range anxiety (worries about running out of charge)",
+                    "Long charging times",
+                    "Lack of model variety",
+                    "Uncertainty about battery lifespan",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Somewhat unlikely' or 'Very unlikely' to Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "If charging infrastructure were more widely available, how would it impact your likelihood of purchasing an EV?",
+            "answer_options": [
+                "Significantly increase likelihood",
+                "Moderately increase likelihood",
+                "Slightly increase likelihood",
+                "No impact",
+                "Unsure"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice scale to measure the perceived importance of charging infrastructure.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "If charging infrastructure were more widely available, how would it impact your likelihood of purchasing an EV?",
+                "answer_options": [
+                    "Significantly increase likelihood",
+                    "Moderately increase likelihood",
+                    "Slightly increase likelihood",
+                    "No impact",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional features or improvements would encourage you to purchase an EV?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative insights. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: Open-text (text area).",
+            "script": {
+                "question_text": "What additional features or improvements would encourage you to purchase an EV?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

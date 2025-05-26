@@ -1,0 +1,125 @@
+{
+    "survey_id": "c8246c7f-33c9-4e96-b91e-3e831eb257a5",
+    "survey_name": "Post-Pandemic Office Reintegration Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the transition back to office work following pandemic-related remote work, focusing on comfort, productivity, and preferences for future work arrangements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How comfortable do you feel returning to the office full-time?",
+            "answer_options": [
+                "Very comfortable",
+                "Somewhat comfortable",
+                "Neutral",
+                "Somewhat uncomfortable",
+                "Very uncomfortable"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a Likert scale for clarity. Ensure mobile responsiveness for remote employees.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "How comfortable do you feel returning to the office full-time?",
+                "answer_options": [
+                    "Very comfortable",
+                    "Somewhat comfortable",
+                    "Neutral",
+                    "Somewhat uncomfortable",
+                    "Very uncomfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following measures would increase your comfort in the office? (Select all that apply)",
+            "answer_options": [
+                "Improved ventilation systems",
+                "Regular sanitation of common areas",
+                "Flexible seating arrangements",
+                "Designated quiet zones",
+                "On-site health screenings"
+            ],
+            "routing_logic": "Appears if Q1 response is 'Somewhat uncomfortable' or 'Very uncomfortable'",
+            "client_notes": "Multi-select question. Limit to 5 options for readability.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include 'Other' with open-text option.",
+            "script": {
+                "question_text": "Which of the following measures would increase your comfort in the office? (Select all that apply)",
+                "answer_options": [
+                    "Improved ventilation systems",
+                    "Regular sanitation of common areas",
+                    "Flexible seating arrangements",
+                    "Designated quiet zones",
+                    "On-site health screenings"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is 'Somewhat uncomfortable' or 'Very uncomfortable'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What percentage of your workweek would you prefer to spend in the office versus remotely?",
+            "answer_options": [
+                "100% office",
+                "75% office, 25% remote",
+                "50% office, 50% remote",
+                "25% office, 75% remote",
+                "100% remote"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a balanced scale. Consider follow-up questions for extreme preferences.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Display as horizontal buttons on desktop.",
+            "script": {
+                "question_text": "What percentage of your workweek would you prefer to spend in the office versus remotely?",
+                "answer_options": [
+                    "100% office",
+                    "75% office, 25% remote",
+                    "50% office, 50% remote",
+                    "25% office, 75% remote",
+                    "100% remote"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe any additional support you would need to transition smoothly back to office work.",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended to capture unique needs. Set 500-character limit.",
+            "scripter_notes": "Field type: text area (OPEN_TEXT). Enable spell check.",
+            "script": {
+                "question_text": "Describe any additional support you would need to transition smoothly back to office work.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How has your productivity compared between office and remote work?",
+            "answer_options": [
+                "Much more productive in office",
+                "Somewhat more productive in office",
+                "Equally productive in both",
+                "Somewhat more productive remotely",
+                "Much more productive remotely"
+            ],
+            "routing_logic": "Appears for all respondents except those who selected '100% office' in Q3",
+            "client_notes": "Comparative scale. Route logic based on Q3 to reduce redundancy.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Display with visual analog scale.",
+            "script": {
+                "question_text": "How has your productivity compared between office and remote work?",
+                "answer_options": [
+                    "Much more productive in office",
+                    "Somewhat more productive in office",
+                    "Equally productive in both",
+                    "Somewhat more productive remotely",
+                    "Much more productive remotely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents except those who selected '100% office' in Q3"
+            }
+        }
+    ]
+}

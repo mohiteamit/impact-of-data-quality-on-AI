@@ -1,0 +1,101 @@
+{
+    "survey_id": "921fbc20-0070-4532-bfbe-5c2616b55f68",
+    "survey_name": "Electric Vehicle Adoption Barriers Survey",
+    "survey_brief": "This survey aims to identify key barriers and motivators influencing consumer adoption of electric vehicles (EVs) to inform marketing and policy strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "What is your current level of interest in purchasing an electric vehicle?",
+            "answer_options": [
+                "Very interested - actively considering purchase",
+                "Somewhat interested - but not currently planning to buy",
+                "Neutral - no strong feelings",
+                "Not interested - unlikely to consider in near future"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a balanced 4-point scale to avoid neutral bias. Randomize order for mobile users.",
+            "scripter_notes": "Single-choice radio buttons with mandatory response.",
+            "script": {
+                "question_text": "What is your current level of interest in purchasing an electric vehicle?",
+                "answer_options": [
+                    "Very interested - actively considering purchase",
+                    "Somewhat interested - but not currently planning to buy",
+                    "Neutral - no strong feelings",
+                    "Not interested - unlikely to consider in near future"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors most concern you about EV ownership? (Select up to 3)",
+            "answer_options": [
+                "High upfront cost",
+                "Limited charging infrastructure",
+                "Battery range anxiety",
+                "Long charging times",
+                "Uncertainty about battery lifespan",
+                "Lack of home charging capability",
+                "Limited model options"
+            ],
+            "routing_logic": "Shows only if Q1 response is not 'Not interested'",
+            "client_notes": "Multi-select with clear cap (3) to prevent survey fatigue. Include 'Other' field if needed.",
+            "scripter_notes": "Checkbox input with maximum 3 selections allowed.",
+            "script": {
+                "question_text": "Which of the following factors most concern you about EV ownership? (Select up to 3)",
+                "answer_options": [
+                    "High upfront cost",
+                    "Limited charging infrastructure",
+                    "Battery range anxiety",
+                    "Long charging times",
+                    "Uncertainty about battery lifespan",
+                    "Lack of home charging capability",
+                    "Limited model options"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shows only if Q1 response is not 'Not interested'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What would most likely motivate you to purchase an EV sooner?",
+            "answer_options": [
+                "Lower purchase price (e.g., tax credits/subsidies)",
+                "Expansion of fast-charging stations",
+                "Proof of long-term battery reliability",
+                "Increased range (400+ miles per charge)",
+                "More vehicle body style options"
+            ],
+            "routing_logic": "Shows only if Q1 response is 'Very' or 'Somewhat interested'",
+            "client_notes": "Randomize options to prevent order bias. Include 'None of the above' if appropriate.",
+            "scripter_notes": "Single-choice with radio buttons and optional 'Other' field.",
+            "script": {
+                "question_text": "What would most likely motivate you to purchase an EV sooner?",
+                "answer_options": [
+                    "Lower purchase price (e.g., tax credits/subsidies)",
+                    "Expansion of fast-charging stations",
+                    "Proof of long-term battery reliability",
+                    "Increased range (400+ miles per charge)",
+                    "More vehicle body style options"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shows only if Q1 response is 'Very' or 'Somewhat interested'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any additional concerns or comments you have about electric vehicles:",
+            "answer_options": [],
+            "routing_logic": "Optional question for all respondents",
+            "client_notes": "Open-text field with character limit (500) to ensure manageable data.",
+            "scripter_notes": "Text area input with optional submission.",
+            "script": {
+                "question_text": "Please describe any additional concerns or comments you have about electric vehicles:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional question for all respondents"
+            }
+        }
+    ]
+}

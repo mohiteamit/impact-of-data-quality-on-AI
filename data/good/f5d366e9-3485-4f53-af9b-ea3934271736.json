@@ -1,0 +1,125 @@
+{
+    "survey_id": "f5d366e9-3485-4f53-af9b-ea3934271736",
+    "survey_name": "University Student IT Services Satisfaction Survey",
+    "survey_brief": "This survey aims to assess student satisfaction with university-provided IT services, including Wi-Fi, online learning platforms, and tech support.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the reliability of the university's Wi-Fi service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a standard 5-point Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Use single-choice radio buttons for responses.",
+            "script": {
+                "question_text": "How satisfied are you with the reliability of the university's Wi-Fi service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following IT services have you used in the past semester? (Select all that apply)",
+            "answer_options": [
+                "University Wi-Fi",
+                "Online learning platform (e.g., Canvas, Blackboard)",
+                "Library digital resources",
+                "Tech support services",
+                "Campus computer labs"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Allow respondents to select multiple options as they may have used more than one service.",
+            "scripter_notes": "Use multi-choice checkboxes for responses.",
+            "script": {
+                "question_text": "Which of the following IT services have you used in the past semester? (Select all that apply)",
+                "answer_options": [
+                    "University Wi-Fi",
+                    "Online learning platform (e.g., Canvas, Blackboard)",
+                    "Library digital resources",
+                    "Tech support services",
+                    "Campus computer labs"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for the university's IT services?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended question to gather qualitative feedback.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would you suggest for the university's IT services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you experience technical issues when using the online learning platform?",
+            "answer_options": [
+                "Very frequently (daily or almost daily)",
+                "Frequently (a few times a week)",
+                "Occasionally (once or twice a month)",
+                "Rarely (less than once a month)",
+                "Never"
+            ],
+            "routing_logic": "Show if 'Online learning platform' is selected in Q2.",
+            "client_notes": "This question helps identify frequency of technical issues among users of the online learning platform.",
+            "scripter_notes": "Use single-choice radio buttons for responses.",
+            "script": {
+                "question_text": "How often do you experience technical issues when using the online learning platform?",
+                "answer_options": [
+                    "Very frequently (daily or almost daily)",
+                    "Frequently (a few times a week)",
+                    "Occasionally (once or twice a month)",
+                    "Rarely (less than once a month)",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if 'Online learning platform' is selected in Q2."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "On a scale of 1 to 5, how would you rate the responsiveness of the university's tech support team? (1 = Very poor, 5 = Excellent)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Show if 'Tech support services' is selected in Q2.",
+            "client_notes": "Use a 5-point numerical scale to measure perceived responsiveness of tech support.",
+            "scripter_notes": "Use single-choice radio buttons for responses.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how would you rate the responsiveness of the university's tech support team? (1 = Very poor, 5 = Excellent)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if 'Tech support services' is selected in Q2."
+            }
+        }
+    ]
+}

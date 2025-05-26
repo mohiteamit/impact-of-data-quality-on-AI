@@ -1,0 +1,127 @@
+{
+    "survey_id": "6d67e51a-2179-492d-a665-4d00d46f2faf",
+    "survey_name": "Smart Home Device Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer attitudes and behaviors regarding the adoption and usage of smart home devices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home devices do you currently own? (Select all that apply)",
+            "answer_options": [
+                "Smart Speaker (e.g., Amazon Echo, Google Home)",
+                "Smart Thermostat (e.g., Nest, Ecobee)",
+                "Smart Lighting (e.g., Philips Hue, LIFX)",
+                "Smart Security System (e.g., Ring, SimpliSafe)",
+                "Smart TV or Streaming Device (e.g., Roku, Fire TV)",
+                "None of the above"
+            ],
+            "routing_logic": "Always display",
+            "client_notes": "Use checkboxes for multi-select functionality. Ensure the 'None of the above' option is mutually exclusive if selected.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "Which of the following smart home devices do you currently own? (Select all that apply)",
+                "answer_options": [
+                    "Smart Speaker (e.g., Amazon Echo, Google Home)",
+                    "Smart Thermostat (e.g., Nest, Ecobee)",
+                    "Smart Lighting (e.g., Philips Hue, LIFX)",
+                    "Smart Security System (e.g., Ring, SimpliSafe)",
+                    "Smart TV or Streaming Device (e.g., Roku, Fire TV)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always display"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is the primary reason for purchasing your smart home device(s)?",
+            "answer_options": [
+                "Convenience",
+                "Energy Efficiency",
+                "Home Security",
+                "Entertainment",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q1 answer is not 'None of the above'",
+            "client_notes": "Include an open-text field if 'Other' is selected to capture additional reasons.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button) with conditional open-text follow-up for 'Other'",
+            "script": {
+                "question_text": "What is the primary reason for purchasing your smart home device(s)?",
+                "answer_options": [
+                    "Convenience",
+                    "Energy Efficiency",
+                    "Home Security",
+                    "Entertainment",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your smart home device(s)?",
+            "answer_options": [
+                "Very Satisfied",
+                "Somewhat Satisfied",
+                "Neutral",
+                "Somewhat Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Display if Q1 answer is not 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How satisfied are you with your smart home device(s)?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Somewhat Satisfied",
+                    "Neutral",
+                    "Somewhat Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced when using your smart home device(s)?",
+            "answer_options": [],
+            "routing_logic": "Display if Q1 answer is not 'None of the above'",
+            "client_notes": "Allow respondents to provide detailed feedback. Use a text box for open-ended responses.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What challenges have you faced when using your smart home device(s)?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend smart home devices to others?",
+            "answer_options": [
+                "Very Likely",
+                "Somewhat Likely",
+                "Neutral",
+                "Somewhat Unlikely",
+                "Very Unlikely"
+            ],
+            "routing_logic": "Always display",
+            "client_notes": "Use a 5-point Likert scale to measure likelihood. This question helps gauge overall satisfaction and advocacy.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How likely are you to recommend smart home devices to others?",
+                "answer_options": [
+                    "Very Likely",
+                    "Somewhat Likely",
+                    "Neutral",
+                    "Somewhat Unlikely",
+                    "Very Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always display"
+            }
+        }
+    ]
+}

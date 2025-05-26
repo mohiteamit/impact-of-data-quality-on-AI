@@ -1,0 +1,117 @@
+{
+    "survey_id": "82ffa8b5-11c6-4abb-a7c1-11630cb4bbe9",
+    "survey_name": "Retail Customer Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from customers on their recent shopping experience to help improve service quality and product offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied were you with your recent shopping experience?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point Likert scale for better granularity in responses.",
+            "scripter_notes": "Field type: Radio buttons (single-choice)",
+            "script": {
+                "question_text": "How satisfied were you with your recent shopping experience?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors contributed most to your satisfaction or dissatisfaction? (Select all that apply)",
+            "answer_options": [
+                "Product quality",
+                "Pricing",
+                "Staff helpfulness",
+                "Store cleanliness",
+                "Checkout speed",
+                "Product availability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multiple selections to identify key drivers of satisfaction.",
+            "scripter_notes": "Field type: Checkboxes (multi-choice)",
+            "script": {
+                "question_text": "Which of the following factors contributed most to your satisfaction or dissatisfaction? (Select all that apply)",
+                "answer_options": [
+                    "Product quality",
+                    "Pricing",
+                    "Staff helpfulness",
+                    "Store cleanliness",
+                    "Checkout speed",
+                    "Product availability",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please describe any specific issues you encountered during your visit.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is 'Dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open-ended question to capture detailed feedback for improvement.",
+            "scripter_notes": "Field type: Open text box",
+            "script": {
+                "question_text": "Please describe any specific issues you encountered during your visit.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is 'Dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend our store to a friend or colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Net Promoter Score (NPS) style question to gauge loyalty.",
+            "scripter_notes": "Field type: Radio buttons (single-choice)",
+            "script": {
+                "question_text": "How likely are you to recommend our store to a friend or colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Is there anything else you would like to share about your experience?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Optional open-ended question to capture additional insights.",
+            "scripter_notes": "Field type: Open text box",
+            "script": {
+                "question_text": "Is there anything else you would like to share about your experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

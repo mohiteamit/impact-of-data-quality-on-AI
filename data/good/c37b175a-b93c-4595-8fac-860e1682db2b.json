@@ -1,0 +1,73 @@
+{
+    "survey_id": "c37b175a-b93c-4595-8fac-860e1682db2b",
+    "survey_name": "Healthcare Provider Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from patients regarding their satisfaction with healthcare services provided by their primary care providers.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the overall quality of care provided by your healthcare provider?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: radio button, single-choice.",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of care provided by your healthcare provider?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following aspects of your healthcare experience did you find most satisfactory?",
+            "answer_options": [
+                "Wait time for appointments",
+                "Communication with healthcare staff",
+                "Quality of medical advice",
+                "Cleanliness of the facility",
+                "Availability of follow-up care"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Satisfied' or 'Very satisfied' in Q1.",
+            "client_notes": "Allow multiple selections to capture diverse positive experiences.",
+            "scripter_notes": "Field type: checkbox, multi-choice.",
+            "script": {
+                "question_text": "Which of the following aspects of your healthcare experience did you find most satisfactory?",
+                "answer_options": [
+                    "Wait time for appointments",
+                    "Communication with healthcare staff",
+                    "Quality of medical advice",
+                    "Cleanliness of the facility",
+                    "Availability of follow-up care"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Satisfied' or 'Very satisfied' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please describe any areas where you feel your healthcare provider could improve.",
+            "answer_options": [],
+            "routing_logic": "Appears for respondents who answered 'Dissatisfied' or 'Very dissatisfied' in Q1.",
+            "client_notes": "Use an open-ended format to gather detailed feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: text area, open-ended.",
+            "script": {
+                "question_text": "Please describe any areas where you feel your healthcare provider could improve.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for respondents who answered 'Dissatisfied' or 'Very dissatisfied' in Q1."
+            }
+        }
+    ]
+}

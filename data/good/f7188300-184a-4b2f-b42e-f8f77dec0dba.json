@@ -1,0 +1,123 @@
+{
+    "survey_id": "f7188300-184a-4b2f-b42e-f8f77dec0dba",
+    "survey_name": "Public EV Charging Station Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from electric vehicle (EV) owners about their experiences with public EV charging stations to identify areas for improvement and better service planning.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public EV charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "This is my first time"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice question to gauge usage frequency.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How frequently do you use public EV charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following issues have you encountered at public EV charging stations? (Select all that apply)",
+            "answer_options": [
+                "Out-of-service chargers",
+                "Long wait times",
+                "Poor location accessibility",
+                "Payment system failures",
+                "Insufficient charging speed",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a multi-choice question to identify common pain points.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following issues have you encountered at public EV charging stations? (Select all that apply)",
+                "answer_options": [
+                    "Out-of-service chargers",
+                    "Long wait times",
+                    "Poor location accessibility",
+                    "Payment system failures",
+                    "Insufficient charging speed",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with the availability of public EV charging stations in your area? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a Likert scale to measure satisfaction.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the availability of public EV charging stations in your area? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for public EV charging stations?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you suggest for public EV charging stations?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay a premium for faster or more reliable charging options?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Appears if Q3 answer is 3 or lower.",
+            "client_notes": "Single-choice question to gauge willingness to pay for better service.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Would you be willing to pay a premium for faster or more reliable charging options?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q3 answer is 3 or lower."
+            }
+        }
+    ]
+}

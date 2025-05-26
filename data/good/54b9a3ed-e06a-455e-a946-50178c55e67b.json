@@ -1,0 +1,159 @@
+{
+    "survey_id": "54b9a3ed-e06a-455e-a946-50178c55e67b",
+    "survey_name": "Customer Satisfaction Survey for Cloud Storage Services",
+    "survey_brief": "This survey aims to gather feedback from users of cloud storage services to understand their satisfaction levels, pain points, and preferences for future improvements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use cloud storage services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity and ease of response.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use cloud storage services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following cloud storage services do you use? (Select all that apply)",
+            "answer_options": [
+                "Google Drive",
+                "Dropbox",
+                "Microsoft OneDrive",
+                "iCloud",
+                "Amazon Drive",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice checkbox for this question to allow multiple selections. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which of the following cloud storage services do you use? (Select all that apply)",
+                "answer_options": [
+                    "Google Drive",
+                    "Dropbox",
+                    "Microsoft OneDrive",
+                    "iCloud",
+                    "Amazon Drive",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you use cloud storage services?",
+            "answer_options": [
+                "Work-related files",
+                "Personal files and photos",
+                "Collaboration with others",
+                "Backup and security",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button with an 'Other' option that includes a text field for additional responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What is the primary reason you use cloud storage services?",
+                "answer_options": [
+                    "Work-related files",
+                    "Personal files and photos",
+                    "Collaboration with others",
+                    "Backup and security",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with your current cloud storage service? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Use a Likert scale for this question to measure satisfaction levels accurately.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with your current cloud storage service? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features do you value the most in a cloud storage service? (Select up to 3)",
+            "answer_options": [
+                "Large storage capacity",
+                "Ease of use",
+                "File sharing and collaboration",
+                "Security and encryption",
+                "Sync across devices",
+                "Integration with other apps",
+                "Customer support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Use a multi-choice checkbox with a limit of 3 selections to prioritize features.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with a selection limit of 3 and an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What features do you value the most in a cloud storage service? (Select up to 3)",
+                "answer_options": [
+                    "Large storage capacity",
+                    "Ease of use",
+                    "File sharing and collaboration",
+                    "Security and encryption",
+                    "Sync across devices",
+                    "Integration with other apps",
+                    "Customer support",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please share any additional feedback or suggestions for improving cloud storage services.",
+            "answer_options": [],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Use an open-ended text box to gather qualitative feedback. This can provide valuable insights for service improvements.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "Please share any additional feedback or suggestions for improving cloud storage services.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        }
+    ]
+}

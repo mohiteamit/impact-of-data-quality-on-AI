@@ -1,0 +1,99 @@
+{
+    "survey_id": "88f2b6df-d62e-4e20-bcc4-06832caa7af1",
+    "survey_name": "Customer Satisfaction Survey for Plant-Based Restaurants",
+    "survey_brief": "This survey aims to gather feedback from customers about their dining experience at plant-based restaurants, including food quality, service, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you dine at plant-based restaurants?",
+            "answer_options": [
+                "Never",
+                "Rarely (less than once a month)",
+                "Occasionally (1-3 times a month)",
+                "Frequently (once a week or more)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for easy selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you dine at plant-based restaurants?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (less than once a month)",
+                    "Occasionally (1-3 times a month)",
+                    "Frequently (once a week or more)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your choice to dine at a plant-based restaurant? (Select all that apply)",
+            "answer_options": [
+                "Health benefits",
+                "Environmental concerns",
+                "Taste and variety of food",
+                "Ethical reasons",
+                "Price and affordability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use multi-choice checkboxes. Include 'Other' as an open-ended option for additional input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional OPEN_TEXT field for 'Other'.",
+            "script": {
+                "question_text": "What factors influence your choice to dine at a plant-based restaurant? (Select all that apply)",
+                "answer_options": [
+                    "Health benefits",
+                    "Environmental concerns",
+                    "Taste and variety of food",
+                    "Ethical reasons",
+                    "Price and affordability",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the food quality at plant-based restaurants?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Occasionally' or 'Frequently' in Q1.",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction. Ensure clarity in scale labels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the food quality at plant-based restaurants?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Occasionally' or 'Frequently' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for plant-based restaurants?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for plant-based restaurants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

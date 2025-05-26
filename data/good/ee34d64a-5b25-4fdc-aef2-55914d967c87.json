@@ -1,0 +1,229 @@
+{
+    "survey_id": "ee34d64a-5b25-4fdc-aef2-55914d967c87",
+    "survey_name": "Workplace Coffee Station Satisfaction Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the workplace coffee station to improve offerings and satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the workplace coffee station?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice scale to measure frequency of use.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use the workplace coffee station?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of coffee do you typically consume from the workplace coffee station? (Select all that apply)",
+            "answer_options": [
+                "Regular coffee",
+                "Decaf coffee",
+                "Espresso",
+                "Cappuccino",
+                "Latte",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents who selected 'Multiple times a day', 'Once a day', or 'A few times a week' in Q1.",
+            "client_notes": "Use a multi-choice scale to capture preferences.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an 'Other' option with an open-text field for specification.",
+            "script": {
+                "question_text": "Which types of coffee do you typically consume from the workplace coffee station? (Select all that apply)",
+                "answer_options": [
+                    "Regular coffee",
+                    "Decaf coffee",
+                    "Espresso",
+                    "Cappuccino",
+                    "Latte",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents who selected 'Multiple times a day', 'Once a day', or 'A few times a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the quality of coffee provided at the workplace coffee station?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents who selected 'Multiple times a day', 'Once a day', or 'A few times a week' in Q1.",
+            "client_notes": "Use a single-choice Likert scale to measure satisfaction.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the quality of coffee provided at the workplace coffee station?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected 'Multiple times a day', 'Once a day', or 'A few times a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the workplace coffee station?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q3.",
+            "client_notes": "Open-text field to capture qualitative feedback.",
+            "scripter_notes": "Field type: open-ended text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for the workplace coffee station?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q3."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How important is the availability of a coffee station to your overall workplace satisfaction?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a single-choice scale to measure importance.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How important is the availability of a coffee station to your overall workplace satisfaction?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Do you feel the workplace coffee station is adequately stocked with supplies (e.g., coffee, creamer, sugar)?",
+            "answer_options": [
+                "Yes, always",
+                "Mostly yes",
+                "Occasionally no",
+                "Frequently no",
+                "No, never"
+            ],
+            "routing_logic": "Appears to all respondents who selected 'Multiple times a day', 'Once a day', or 'A few times a week' in Q1.",
+            "client_notes": "Use a single-choice scale to measure adequacy of supplies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Do you feel the workplace coffee station is adequately stocked with supplies (e.g., coffee, creamer, sugar)?",
+                "answer_options": [
+                    "Yes, always",
+                    "Mostly yes",
+                    "Occasionally no",
+                    "Frequently no",
+                    "No, never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected 'Multiple times a day', 'Once a day', or 'A few times a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Would you be willing to contribute to a coffee fund to enhance the quality of offerings?",
+            "answer_options": [
+                "Yes, definitely",
+                "Possibly",
+                "No, not interested"
+            ],
+            "routing_logic": "Appears to all respondents who selected 'Multiple times a day', 'Once a day', or 'A few times a week' in Q1.",
+            "client_notes": "Use a single-choice scale to gauge willingness to contribute.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you be willing to contribute to a coffee fund to enhance the quality of offerings?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Possibly",
+                    "No, not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected 'Multiple times a day', 'Once a day', or 'A few times a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What additional beverages or snacks would you like to see at the workplace coffee station?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents who selected 'Multiple times a day', 'Once a day', or 'A few times a week' in Q1.",
+            "client_notes": "Open-text field to capture suggestions for additions.",
+            "scripter_notes": "Field type: open-ended text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What additional beverages or snacks would you like to see at the workplace coffee station?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents who selected 'Multiple times a day', 'Once a day', or 'A few times a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How clean and well-maintained do you find the workplace coffee station?",
+            "answer_options": [
+                "Very clean and well-maintained",
+                "Clean and well-maintained",
+                "Neutral",
+                "Somewhat dirty or poorly maintained",
+                "Very dirty or poorly maintained"
+            ],
+            "routing_logic": "Appears to all respondents who selected 'Multiple times a day', 'Once a day', or 'A few times a week' in Q1.",
+            "client_notes": "Use a single-choice scale to measure cleanliness perception.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How clean and well-maintained do you find the workplace coffee station?",
+                "answer_options": [
+                    "Very clean and well-maintained",
+                    "Clean and well-maintained",
+                    "Neutral",
+                    "Somewhat dirty or poorly maintained",
+                    "Very dirty or poorly maintained"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected 'Multiple times a day', 'Once a day', or 'A few times a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Any additional comments or feedback about the workplace coffee station?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Open-text field to capture any additional qualitative feedback.",
+            "scripter_notes": "Field type: open-ended text (OPEN_TEXT).",
+            "script": {
+                "question_text": "Any additional comments or feedback about the workplace coffee station?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents."
+            }
+        }
+    ]
+}

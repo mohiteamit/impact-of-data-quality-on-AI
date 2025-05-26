@@ -1,0 +1,125 @@
+{
+    "survey_id": "cbbe0a63-7c1a-479a-aad9-d13c8f832320",
+    "survey_name": "Customer Satisfaction Survey for Augmented Reality Shopping Apps",
+    "survey_brief": "This survey aims to gather user feedback on augmented reality (AR) shopping applications to improve functionality, user experience, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use augmented reality (AR) shopping apps?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "This is my first time using an AR shopping app"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button format for clarity. Ensure the options cover all possible usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use augmented reality (AR) shopping apps?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "This is my first time using an AR shopping app"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you find most useful in AR shopping apps? (Select all that apply)",
+            "answer_options": [
+                "Virtual try-on for clothing/accessories",
+                "3D product previews",
+                "In-store navigation assistance",
+                "AR-based product customization",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a multi-choice checkbox format. Include an 'Other' option if needed for additional features.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which features do you find most useful in AR shopping apps? (Select all that apply)",
+                "answer_options": [
+                    "Virtual try-on for clothing/accessories",
+                    "3D product previews",
+                    "In-store navigation assistance",
+                    "AR-based product customization",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced while using AR shopping apps?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use an open-text field to capture detailed responses. Ensure the field is mobile-friendly for longer answers.",
+            "scripter_notes": "Field type: open-ended text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What challenges have you faced while using AR shopping apps?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accuracy of virtual product representations in AR shopping apps?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Virtual try-on for clothing/accessories' or '3D product previews' in Q2.",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Ensure the question is only shown to relevant respondents based on Q2 responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Apply routing logic based on Q2 selections.",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of virtual product representations in AR shopping apps?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Virtual try-on for clothing/accessories' or '3D product previews' in Q2."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend the AR shopping app you use most often to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Not sure",
+                "Probably no",
+                "Definitely no"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button format. This question measures Net Promoter Score (NPS) potential.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you recommend the AR shopping app you use most often to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Not sure",
+                    "Probably no",
+                    "Definitely no"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

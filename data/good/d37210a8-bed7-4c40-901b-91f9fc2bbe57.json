@@ -1,0 +1,177 @@
+{
+    "survey_id": "d37210a8-bed7-4c40-901b-91f9fc2bbe57",
+    "survey_name": "AI-Powered Customer Support Experience Survey",
+    "survey_brief": "This survey aims to gather feedback on the effectiveness and user experience of AI-powered customer support tools.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you interact with AI-powered customer support tools?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice question to simplify data analysis.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often do you interact with AI-powered customer support tools?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI-powered customer support tools have you used? (Select all that apply)",
+            "answer_options": [
+                "Chatbots",
+                "Voice assistants (e.g., Alexa, Siri)",
+                "Automated email responders",
+                "Virtual agents",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1.",
+            "client_notes": "Use a multi-choice question to capture multiple tool usage.",
+            "scripter_notes": "Field type: checkbox with an 'Other' option as open text.",
+            "script": {
+                "question_text": "Which of the following AI-powered customer support tools have you used? (Select all that apply)",
+                "answer_options": [
+                    "Chatbots",
+                    "Voice assistants (e.g., Alexa, Siri)",
+                    "Automated email responders",
+                    "Virtual agents",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of responses provided by AI-powered customer support tools?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1.",
+            "client_notes": "Use a Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of responses provided by AI-powered customer support tools?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you prefer AI-powered customer support over human agents?",
+            "answer_options": [
+                "Faster response times",
+                "24/7 availability",
+                "No wait times",
+                "Consistency in responses",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Very satisfied' or 'Satisfied' in Q3.",
+            "client_notes": "Use a multi-choice question with an 'Other' option.",
+            "scripter_notes": "Field type: checkbox with an 'Other' option as open text.",
+            "script": {
+                "question_text": "What is the primary reason you prefer AI-powered customer support over human agents?",
+                "answer_options": [
+                    "Faster response times",
+                    "24/7 availability",
+                    "No wait times",
+                    "Consistency in responses",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Very satisfied' or 'Satisfied' in Q3."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced when using AI-powered customer support tools?",
+            "answer_options": [
+                "Difficulty understanding responses",
+                "Limited ability to resolve complex issues",
+                "Repetitive or irrelevant responses",
+                "Poor integration with other systems",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Neutral', 'Dissatisfied', or 'Very dissatisfied' in Q3.",
+            "client_notes": "Use a multi-choice question with an 'Other' option.",
+            "scripter_notes": "Field type: checkbox with an 'Other' option as open text.",
+            "script": {
+                "question_text": "What challenges have you faced when using AI-powered customer support tools?",
+                "answer_options": [
+                    "Difficulty understanding responses",
+                    "Limited ability to resolve complex issues",
+                    "Repetitive or irrelevant responses",
+                    "Poor integration with other systems",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Neutral', 'Dissatisfied', or 'Very dissatisfied' in Q3."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend AI-powered customer support tools to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice question to measure Net Promoter Score (NPS).",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How likely are you to recommend AI-powered customer support tools to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What improvements would you suggest for AI-powered customer support tools?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use an open-ended question to gather qualitative feedback.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-powered customer support tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

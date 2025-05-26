@@ -1,0 +1,255 @@
+{
+    "survey_id": "907a914d-2a72-4799-b0ea-0cc06b4a0264",
+    "survey_name": "Library Services Satisfaction Survey",
+    "survey_brief": "This survey aims to assess patron satisfaction with library services, resources, and facilities to improve user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit the library?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Less than once a month",
+                "This is my first visit"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button scale for clear single-choice selection. Consider adding 'Not applicable' if needed.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you visit the library?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Less than once a month",
+                    "This is my first visit"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary purpose for visiting the library? (Select all that apply)",
+            "answer_options": [
+                "Borrowing books/media",
+                "Using study spaces",
+                "Attending events/programs",
+                "Using computers/printers",
+                "Accessing research databases",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections with checkboxes. Include an 'Other' option with text entry.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What is your primary purpose for visiting the library? (Select all that apply)",
+                "answer_options": [
+                    "Borrowing books/media",
+                    "Using study spaces",
+                    "Attending events/programs",
+                    "Using computers/printers",
+                    "Accessing research databases",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of books and other materials?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for measurable satisfaction data. Consider adding 'N/A' if needed.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the availability of books and other materials?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the cleanliness and maintenance of library facilities?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a clear ordinal scale for consistent ratings across respondents.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How would you rate the cleanliness and maintenance of library facilities?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you attended any library programs or events in the past year?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Simple binary question to filter for event attendees.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Have you attended any library programs or events in the past year?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If yes, which types of programs have you attended? (Select all that apply)",
+            "answer_options": [
+                "Author talks/book clubs",
+                "Children's storytime",
+                "Technology workshops",
+                "Cultural events",
+                "Educational lectures",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Q5 == 'Yes'",
+            "client_notes": "Only show if Q5 is 'Yes'. Allow multiple selections.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with conditional routing",
+            "script": {
+                "question_text": "If yes, which types of programs have you attended? (Select all that apply)",
+                "answer_options": [
+                    "Author talks/book clubs",
+                    "Children's storytime",
+                    "Technology workshops",
+                    "Cultural events",
+                    "Educational lectures",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Q5 == 'Yes'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How satisfied are you with the library's digital resources (e-books, online databases, etc.)?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied",
+                "I don't use digital resources"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an opt-out option for non-users of digital resources.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the library's digital resources (e-books, online databases, etc.)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied",
+                    "I don't use digital resources"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How easy is it to find materials using the library catalog?",
+            "answer_options": [
+                "Very easy",
+                "Somewhat easy",
+                "Neutral",
+                "Somewhat difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Assess usability of catalog system with a standard scale.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How easy is it to find materials using the library catalog?",
+                "answer_options": [
+                    "Very easy",
+                    "Somewhat easy",
+                    "Neutral",
+                    "Somewhat difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How would you rate the helpfulness of library staff?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard rating scale for service quality assessment.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How would you rate the helpfulness of library staff?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What improvements would you suggest for our library services?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 500 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT) with character limit",
+            "script": {
+                "question_text": "What improvements would you suggest for our library services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

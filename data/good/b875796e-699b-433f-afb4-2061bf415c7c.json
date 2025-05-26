@@ -1,0 +1,105 @@
+{
+    "survey_id": "b875796e-699b-433f-afb4-2061bf415c7c",
+    "survey_name": "Remote Work Productivity Survey",
+    "survey_brief": "This survey aims to evaluate the productivity and challenges faced by employees working remotely, to help organizations improve remote work policies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you typically work remotely?",
+            "answer_options": [
+                "1 day",
+                "2 days",
+                "3 days",
+                "4 days",
+                "5 days (full-time remote)",
+                "More than 5 days (including weekends)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a radio button for this single-choice question to ensure clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How many days per week do you typically work remotely?",
+                "answer_options": [
+                    "1 day",
+                    "2 days",
+                    "3 days",
+                    "4 days",
+                    "5 days (full-time remote)",
+                    "More than 5 days (including weekends)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following tools do you use daily for remote work? (Select all that apply)",
+            "answer_options": [
+                "Slack",
+                "Microsoft Teams",
+                "Zoom",
+                "Google Meet",
+                "Trello",
+                "Asana",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Checkboxes are recommended for multi-choice questions to allow multiple selections.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE), include an optional 'Other' text field if selected.",
+            "script": {
+                "question_text": "Which of the following tools do you use daily for remote work? (Select all that apply)",
+                "answer_options": [
+                    "Slack",
+                    "Microsoft Teams",
+                    "Zoom",
+                    "Google Meet",
+                    "Trello",
+                    "Asana",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the biggest challenge you face while working remotely?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended responses can provide valuable qualitative insights. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT), max length: 500 characters.",
+            "script": {
+                "question_text": "What is the biggest challenge you face while working remotely?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate your overall productivity when working remotely compared to working in the office?",
+            "answer_options": [
+                "Much less productive",
+                "Slightly less productive",
+                "About the same",
+                "Slightly more productive",
+                "Much more productive"
+            ],
+            "routing_logic": "Appears for respondents who selected Q1 with at least 1 day",
+            "client_notes": "Use a 5-point Likert scale for balanced responses. Randomize options to avoid bias.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE), randomize options except 'About the same'.",
+            "script": {
+                "question_text": "How would you rate your overall productivity when working remotely compared to working in the office?",
+                "answer_options": [
+                    "Much less productive",
+                    "Slightly less productive",
+                    "About the same",
+                    "Slightly more productive",
+                    "Much more productive"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected Q1 with at least 1 day"
+            }
+        }
+    ]
+}

@@ -1,0 +1,387 @@
+{
+    "survey_id": "2421c743-48c9-4242-ac65-3fa3d251556b",
+    "survey_name": "Smart Home Energy Management System User Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate user satisfaction and identify improvement areas for smart home energy management systems, including ease of use, features, and impact on energy savings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your smart home energy management system overall?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with your smart home energy management system overall?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of your smart home energy management system do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Energy usage monitoring",
+                "Automated scheduling",
+                "Remote control via app",
+                "Energy-saving recommendations",
+                "Integration with other smart devices",
+                "None of the above"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Allow multiple selections. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which features of your smart home energy management system do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Energy usage monitoring",
+                    "Automated scheduling",
+                    "Remote control via app",
+                    "Energy-saving recommendations",
+                    "Integration with other smart devices",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How easy was it to set up and configure your smart home energy management system?",
+            "answer_options": [
+                "Very easy",
+                "Somewhat easy",
+                "Neutral",
+                "Somewhat difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use a 5-point Likert scale. Include a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How easy was it to set up and configure your smart home energy management system?",
+                "answer_options": [
+                    "Very easy",
+                    "Somewhat easy",
+                    "Neutral",
+                    "Somewhat difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you noticed a reduction in your energy bills since using the system?",
+            "answer_options": [
+                "Yes, significant reduction",
+                "Yes, slight reduction",
+                "No change",
+                "No, my bills have increased"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Include an option for 'I don't know' if applicable.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Have you noticed a reduction in your energy bills since using the system?",
+                "answer_options": [
+                    "Yes, significant reduction",
+                    "Yes, slight reduction",
+                    "No change",
+                    "No, my bills have increased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you encountered while using the system? (Select all that apply)",
+            "answer_options": [
+                "Difficulty understanding features",
+                "Technical issues/glitches",
+                "Poor customer support",
+                "Integration problems with other devices",
+                "None, I have not encountered any challenges"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (multi-choice). Add an 'Other' text field if selected.",
+            "script": {
+                "question_text": "What challenges have you encountered while using the system? (Select all that apply)",
+                "answer_options": [
+                    "Difficulty understanding features",
+                    "Technical issues/glitches",
+                    "Poor customer support",
+                    "Integration problems with other devices",
+                    "None, I have not encountered any challenges"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How often do you interact with your smart home energy management system?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use clear frequency options. Randomize order if needed.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you interact with your smart home energy management system?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How would you rate the mobile app or web interface for controlling the system?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "Display if Q1 answer is not 'Very dissatisfied'",
+            "client_notes": "Use a 5-point scale. Skip if user is very dissatisfied (Q1).",
+            "scripter_notes": "Field type: radio button (single-choice). Add skip logic based on Q1.",
+            "script": {
+                "question_text": "How would you rate the mobile app or web interface for controlling the system?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 answer is not 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What additional features would you like to see in your smart home energy management system?",
+            "answer_options": [],
+            "routing_logic": "Always displayed",
+            "client_notes": "Open-ended to capture qualitative feedback. Limit to 500 characters.",
+            "scripter_notes": "Field type: open text (textarea).",
+            "script": {
+                "question_text": "What additional features would you like to see in your smart home energy management system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to recommend this system to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use a 5-point Likert scale. Essential for Net Promoter Score (NPS).",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend this system to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How long have you been using your smart home energy management system?",
+            "answer_options": [
+                "Less than 1 month",
+                "1-6 months",
+                "6-12 months",
+                "1-2 years",
+                "More than 2 years"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use clear time ranges. Avoid overlapping intervals.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How long have you been using your smart home energy management system?",
+                "answer_options": [
+                    "Less than 1 month",
+                    "1-6 months",
+                    "6-12 months",
+                    "1-2 years",
+                    "More than 2 years"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "Which of the following smart home devices do you integrate with your energy management system? (Select all that apply)",
+            "answer_options": [
+                "Smart thermostat",
+                "Smart lighting",
+                "Smart plugs",
+                "Solar panels",
+                "EV charger",
+                "None of the above"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Allow multiple selections. Randomize option order.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following smart home devices do you integrate with your energy management system? (Select all that apply)",
+                "answer_options": [
+                    "Smart thermostat",
+                    "Smart lighting",
+                    "Smart plugs",
+                    "Solar panels",
+                    "EV charger",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "How responsive is customer support when you encounter issues?",
+            "answer_options": [
+                "Very responsive",
+                "Somewhat responsive",
+                "Neutral",
+                "Somewhat unresponsive",
+                "Very unresponsive",
+                "I have not contacted support"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Include a 'Not applicable' option. Use a 5-point scale.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How responsive is customer support when you encounter issues?",
+                "answer_options": [
+                    "Very responsive",
+                    "Somewhat responsive",
+                    "Neutral",
+                    "Somewhat unresponsive",
+                    "Very unresponsive",
+                    "I have not contacted support"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q13",
+            "question_text": "Has the system helped you become more aware of your energy consumption habits?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No change",
+                "No, not at all"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Simple yes/no with gradation. Avoid leading questions.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Has the system helped you become more aware of your energy consumption habits?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No change",
+                    "No, not at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q14",
+            "question_text": "What is your primary reason for using a smart home energy management system?",
+            "answer_options": [
+                "To save money on energy bills",
+                "To reduce environmental impact",
+                "For convenience/automation",
+                "To monitor energy usage",
+                "Other"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Single-choice with 'Other' option. Include text field if 'Other' is selected.",
+            "scripter_notes": "Field type: radio button (single-choice). Add 'Other' text field if selected.",
+            "script": {
+                "question_text": "What is your primary reason for using a smart home energy management system?",
+                "answer_options": [
+                    "To save money on energy bills",
+                    "To reduce environmental impact",
+                    "For convenience/automation",
+                    "To monitor energy usage",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q15",
+            "question_text": "How secure do you feel your data is with the system?",
+            "answer_options": [
+                "Very secure",
+                "Somewhat secure",
+                "Neutral",
+                "Somewhat insecure",
+                "Very insecure"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use a 5-point Likert scale. Include a 'Not sure' option if needed.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How secure do you feel your data is with the system?",
+                "answer_options": [
+                    "Very secure",
+                    "Somewhat secure",
+                    "Neutral",
+                    "Somewhat insecure",
+                    "Very insecure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        }
+    ]
+}

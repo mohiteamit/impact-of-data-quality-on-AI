@@ -1,0 +1,127 @@
+{
+    "survey_id": "ae1f265a-8d08-468f-96a0-b93380ad78e3",
+    "survey_name": "Hybrid Work Model Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from employees about their satisfaction and challenges with the hybrid work model, combining remote and in-office work.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you typically work remotely?",
+            "answer_options": [
+                "0 days (fully in-office)",
+                "1 day",
+                "2 days",
+                "3 days",
+                "4 days",
+                "5 days (fully remote)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a radio button for single selection. Ensure options cover all possible scenarios.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How many days per week do you typically work remotely?",
+                "answer_options": [
+                    "0 days (fully in-office)",
+                    "1 day",
+                    "2 days",
+                    "3 days",
+                    "4 days",
+                    "5 days (fully remote)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the biggest challenges you face with the hybrid work model? (Select up to 3)",
+            "answer_options": [
+                "Communication with colleagues",
+                "Maintaining work-life balance",
+                "Access to necessary tools/equipment",
+                "Feeling disconnected from team",
+                "Difficulty collaborating on projects",
+                "Home distractions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option with a text field for specifics.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Add a text field linked to 'Other' selection.",
+            "script": {
+                "question_text": "What are the biggest challenges you face with the hybrid work model? (Select up to 3)",
+                "answer_options": [
+                    "Communication with colleagues",
+                    "Maintaining work-life balance",
+                    "Access to necessary tools/equipment",
+                    "Feeling disconnected from team",
+                    "Difficulty collaborating on projects",
+                    "Home distractions",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the technology provided for remote work?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents who selected 1-5 days remote in Q1.",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the technology provided for remote work?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected 1-5 days remote in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional support would help you be more productive in a hybrid work environment?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 500 characters.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT).",
+            "script": {
+                "question_text": "What additional support would help you be more productive in a hybrid work environment?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your company's hybrid work policy to others in similar roles?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Simple yes/no/unsure question to gauge overall satisfaction.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you recommend your company's hybrid work policy to others in similar roles?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

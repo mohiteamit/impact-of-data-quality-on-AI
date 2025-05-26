@@ -1,0 +1,125 @@
+{
+    "survey_id": "be663dad-5ac2-41b3-bd2f-dff67941e591",
+    "survey_name": "Customer Satisfaction Survey for Pet Insurance Providers",
+    "survey_brief": "This survey aims to gather feedback from pet owners regarding their satisfaction with their pet insurance providers, including coverage, claims process, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which pet insurance provider do you currently use?",
+            "answer_options": [
+                "Provider A",
+                "Provider B",
+                "Provider C",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a dropdown menu to list common providers and include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: Dropdown with 'Other' option triggering a text input.",
+            "script": {
+                "question_text": "Which pet insurance provider do you currently use?",
+                "answer_options": [
+                    "Provider A",
+                    "Provider B",
+                    "Provider C",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your pet insurance provider's coverage options?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents who selected a provider in Q1",
+            "client_notes": "Use a Likert scale for clarity. Ensure the scale is mobile-friendly.",
+            "scripter_notes": "Field type: Radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with your pet insurance provider's coverage options?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected a provider in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How easy was it to file a claim with your pet insurance provider?",
+            "answer_options": [
+                "Very easy",
+                "Easy",
+                "Neutral",
+                "Difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "Appears to all respondents who selected a provider in Q1",
+            "client_notes": "Use a Likert scale for consistency. Ensure the options are clearly labeled.",
+            "scripter_notes": "Field type: Radio buttons.",
+            "script": {
+                "question_text": "How easy was it to file a claim with your pet insurance provider?",
+                "answer_options": [
+                    "Very easy",
+                    "Easy",
+                    "Neutral",
+                    "Difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected a provider in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors influenced your choice of pet insurance provider? (Select all that apply)",
+            "answer_options": [
+                "Cost of premiums",
+                "Coverage options",
+                "Ease of claims process",
+                "Reputation of the provider",
+                "Recommendation from a friend/veterinarian",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents who selected a provider in Q1",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: Checkboxes with 'Other' option triggering a text input.",
+            "script": {
+                "question_text": "What factors influenced your choice of pet insurance provider? (Select all that apply)",
+                "answer_options": [
+                    "Cost of premiums",
+                    "Coverage options",
+                    "Ease of claims process",
+                    "Reputation of the provider",
+                    "Recommendation from a friend/veterinarian",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents who selected a provider in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please share any additional feedback or suggestions for improving your pet insurance provider's services.",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents who selected a provider in Q1",
+            "client_notes": "Use an open-text field to capture detailed feedback. Ensure the field is large enough for lengthy responses.",
+            "scripter_notes": "Field type: Open-text input with a large text area.",
+            "script": {
+                "question_text": "Please share any additional feedback or suggestions for improving your pet insurance provider's services.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents who selected a provider in Q1"
+            }
+        }
+    ]
+}

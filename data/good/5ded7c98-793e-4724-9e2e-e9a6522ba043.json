@@ -1,0 +1,101 @@
+{
+    "survey_id": "5ded7c98-793e-4724-9e2e-e9a6522ba043",
+    "survey_name": "Public Transportation Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from commuters about their satisfaction with public transportation services, including reliability, cleanliness, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public transportation?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice responses. Ensure the options cover the full range of possible usage frequencies.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How frequently do you use public transportation?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which modes of public transportation do you primarily use? (Select all that apply)",
+            "answer_options": [
+                "Bus",
+                "Subway/Metro",
+                "Train",
+                "Tram/Light Rail",
+                "Ferry",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', '3-5 times per week', or '1-2 times per week' in Q1",
+            "client_notes": "Use checkboxes for multi-choice responses. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "Which modes of public transportation do you primarily use? (Select all that apply)",
+                "answer_options": [
+                    "Bus",
+                    "Subway/Metro",
+                    "Train",
+                    "Tram/Light Rail",
+                    "Ferry",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', '3-5 times per week', or '1-2 times per week' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the cleanliness of the public transportation vehicles you use? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Respondents who selected at least one mode of transportation in Q2",
+            "client_notes": "Use a Likert scale with radio buttons. Ensure the scale is clearly labeled for respondents.",
+            "scripter_notes": "Field type: radio button (single-choice) for Likert scale",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the cleanliness of the public transportation vehicles you use? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one mode of transportation in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest to enhance your public transportation experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to allow free-form responses. Encourage detailed feedback.",
+            "scripter_notes": "Field type: open-text",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance your public transportation experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

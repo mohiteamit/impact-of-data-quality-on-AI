@@ -1,0 +1,125 @@
+{
+    "survey_id": "51614203-fe7a-4402-8cb9-e1aa310b95f2",
+    "survey_name": "Digital Payment App Security Perception Survey",
+    "survey_brief": "This survey aims to understand user perceptions and concerns regarding the security features of digital payment applications.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which digital payment app do you use most frequently?",
+            "answer_options": [
+                "PayPal",
+                "Venmo",
+                "Cash App",
+                "Zelle",
+                "Google Pay",
+                "Apple Pay",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Consider adding an 'Other' option with a text field for precise data collection.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional text input for 'Other'.",
+            "script": {
+                "question_text": "Which digital payment app do you use most frequently?",
+                "answer_options": [
+                    "PayPal",
+                    "Venmo",
+                    "Cash App",
+                    "Zelle",
+                    "Google Pay",
+                    "Apple Pay",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the security features of your primary digital payment app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity and consistency.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the security features of your primary digital payment app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which security features are most important to you when using a digital payment app? (Select all that apply)",
+            "answer_options": [
+                "Two-factor authentication",
+                "Biometric login (e.g., fingerprint, face ID)",
+                "End-to-end encryption",
+                "Transaction notifications",
+                "Fraud detection alerts",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture comprehensive preferences.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional text input for 'Other'.",
+            "script": {
+                "question_text": "Which security features are most important to you when using a digital payment app? (Select all that apply)",
+                "answer_options": [
+                    "Two-factor authentication",
+                    "Biometric login (e.g., fingerprint, face ID)",
+                    "End-to-end encryption",
+                    "Transaction notifications",
+                    "Fraud detection alerts",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you ever experienced a security issue (e.g., unauthorized transaction, account breach) with a digital payment app?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Simple yes/no question to filter for follow-up questions.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Have you ever experienced a security issue (e.g., unauthorized transaction, account breach) with a digital payment app?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If yes, please describe the security issue you encountered and how it was resolved.",
+            "answer_options": [],
+            "routing_logic": "Only if Q4 answer is 'Yes'",
+            "client_notes": "Open-ended question to gather detailed feedback. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "If yes, please describe the security issue you encountered and how it was resolved.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q4 answer is 'Yes'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+{
+    "survey_id": "477596b7-ebf2-4ee1-82dd-8005c945033b",
+    "survey_name": "Customer Satisfaction Survey for Ride-Sharing Apps",
+    "survey_brief": "This survey aims to gather feedback from users of ride-sharing apps to understand their satisfaction levels, preferences, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use ride-sharing apps?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice format to ensure clarity. Consider mobile-friendly design for optimal user experience.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often do you use ride-sharing apps?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which ride-sharing app do you use most frequently?",
+            "answer_options": [
+                "Uber",
+                "Lyft",
+                "Didi",
+                "Grab",
+                "Other"
+            ],
+            "routing_logic": "This question appears for respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1.",
+            "client_notes": "Include an 'Other' option to capture less common apps. Ensure the question is clear and concise.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "Which ride-sharing app do you use most frequently?",
+                "answer_options": [
+                    "Uber",
+                    "Lyft",
+                    "Didi",
+                    "Grab",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing a ride-sharing app? (Select all that apply)",
+            "answer_options": [
+                "Price",
+                "Driver reliability",
+                "App usability",
+                "Safety features",
+                "Availability of rides",
+                "Customer service",
+                "Other"
+            ],
+            "routing_logic": "This question appears for respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1.",
+            "client_notes": "Use a multi-choice format to allow multiple selections. Ensure the options cover common user priorities.",
+            "scripter_notes": "Field type: checkbox.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a ride-sharing app? (Select all that apply)",
+                "answer_options": [
+                    "Price",
+                    "Driver reliability",
+                    "App usability",
+                    "Safety features",
+                    "Availability of rides",
+                    "Customer service",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the overall experience of using your preferred ride-sharing app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1.",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How satisfied are you with the overall experience of using your preferred ride-sharing app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please share any additional comments or suggestions for improving ride-sharing apps.",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use an open-ended format to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "Please share any additional comments or suggestions for improving ride-sharing apps.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

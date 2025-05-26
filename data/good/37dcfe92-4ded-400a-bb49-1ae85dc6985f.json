@@ -1,0 +1,103 @@
+{
+    "survey_id": "37dcfe92-4ded-400a-bb49-1ae85dc6985f",
+    "survey_name": "Customer Satisfaction Survey for Fast Food Chains",
+    "survey_brief": "This survey aims to gather customer feedback on their experiences with various fast food chains, focusing on food quality, service speed, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit fast food chains?",
+            "answer_options": [
+                "Once a week or more",
+                "2-3 times a month",
+                "Once a month",
+                "Less than once a month",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity and ease of response.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you visit fast food chains?",
+                "answer_options": [
+                    "Once a week or more",
+                    "2-3 times a month",
+                    "Once a month",
+                    "Less than once a month",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following fast food chains have you visited in the past 3 months? (Select all that apply)",
+            "answer_options": [
+                "McDonald's",
+                "Burger King",
+                "Wendy's",
+                "Taco Bell",
+                "Subway",
+                "KFC",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a multi-choice checkbox format to allow multiple selections. Include an 'Other' option with a text field for additional entries.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which of the following fast food chains have you visited in the past 3 months? (Select all that apply)",
+                "answer_options": [
+                    "McDonald's",
+                    "Burger King",
+                    "Wendy's",
+                    "Taco Bell",
+                    "Subway",
+                    "KFC",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how would you rate the food quality at your most frequently visited fast food chain? (1 = Poor, 5 = Excellent)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale for this question to measure satisfaction levels. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how would you rate the food quality at your most frequently visited fast food chain? (1 = Poor, 5 = Excellent)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest to enhance your experience at fast food chains?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "This open-ended question allows respondents to provide detailed feedback. Ensure the text box is large enough to accommodate lengthy responses.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance your experience at fast food chains?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "survey_id": "29eb48b1-db50-45e5-abc0-c6c27083df3c",
+    "survey_name": "Sustainable Packaging Preferences Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and attitudes towards sustainable packaging in the food and beverage industry.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How important is sustainable packaging when making a purchase decision for food or beverages?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point Likert scale for consistency and ease of analysis. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "How important is sustainable packaging when making a purchase decision for food or beverages?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainable packaging materials do you prefer? (Select all that apply)",
+            "answer_options": [
+                "Recycled paper/cardboard",
+                "Biodegradable/compostable materials",
+                "Plant-based plastics",
+                "Reusable containers",
+                "Glass",
+                "None of the above"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Multi-choice question to capture diverse preferences. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: Checkbox (multi-choice)",
+            "script": {
+                "question_text": "Which of the following sustainable packaging materials do you prefer? (Select all that apply)",
+                "answer_options": [
+                    "Recycled paper/cardboard",
+                    "Biodegradable/compostable materials",
+                    "Plant-based plastics",
+                    "Reusable containers",
+                    "Glass",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Would you be willing to pay a premium (e.g., 5-10% higher price) for products with sustainable packaging?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, but only a small premium (up to 5%)",
+                "No, I would not pay extra",
+                "Unsure"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Single-choice question with clear pricing context. Avoid leading language.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "Would you be willing to pay a premium (e.g., 5-10% higher price) for products with sustainable packaging?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, but only a small premium (up to 5%)",
+                    "No, I would not pay extra",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What barriers, if any, prevent you from choosing products with sustainable packaging more often?",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 answer is 'Extremely important', 'Very important', or 'Moderately important'",
+            "client_notes": "Open-ended question to capture qualitative insights. Use text box with character limit (500 max).",
+            "scripter_notes": "Field type: Open text",
+            "script": {
+                "question_text": "What barriers, if any, prevent you from choosing products with sustainable packaging more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 answer is 'Extremely important', 'Very important', or 'Moderately important'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How do you typically dispose of food/beverage packaging?",
+            "answer_options": [
+                "Recycle whenever possible",
+                "Compost (if applicable)",
+                "Throw in general waste",
+                "Reuse for other purposes",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Multi-choice question with 'Other' option for open-ended input. Include text field for 'Other'.",
+            "scripter_notes": "Field type: Checkbox (multi-choice) with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "How do you typically dispose of food/beverage packaging?",
+                "answer_options": [
+                    "Recycle whenever possible",
+                    "Compost (if applicable)",
+                    "Throw in general waste",
+                    "Reuse for other purposes",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

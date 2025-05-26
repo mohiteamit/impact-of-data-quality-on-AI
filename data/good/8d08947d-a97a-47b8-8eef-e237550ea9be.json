@@ -1,0 +1,125 @@
+{
+    "survey_id": "8d08947d-a97a-47b8-8eef-e237550ea9be",
+    "survey_name": "Hotel Guest Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from hotel guests about their recent stay to improve service quality and guest satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you rate your overall experience at our hotel?",
+            "answer_options": [
+                "Excellent",
+                "Very Good",
+                "Good",
+                "Fair",
+                "Poor"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point Likert scale to measure overall satisfaction.",
+            "scripter_notes": "Single-choice question with radio buttons.",
+            "script": {
+                "question_text": "How would you rate your overall experience at our hotel?",
+                "answer_options": [
+                    "Excellent",
+                    "Very Good",
+                    "Good",
+                    "Fair",
+                    "Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following amenities did you use during your stay? (Select all that apply)",
+            "answer_options": [
+                "Swimming pool",
+                "Fitness center",
+                "Spa services",
+                "Restaurant",
+                "Room service"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Allows multiple selections to understand amenity usage.",
+            "scripter_notes": "Multi-choice question with checkboxes.",
+            "script": {
+                "question_text": "Which of the following amenities did you use during your stay? (Select all that apply)",
+                "answer_options": [
+                    "Swimming pool",
+                    "Fitness center",
+                    "Spa services",
+                    "Restaurant",
+                    "Room service"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please describe any issues you encountered during your stay.",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 rating is 'Fair' or 'Poor'",
+            "client_notes": "Open-ended question to gather detailed feedback on issues.",
+            "scripter_notes": "Open-text field with routing based on Q1 response.",
+            "script": {
+                "question_text": "Please describe any issues you encountered during your stay.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 rating is 'Fair' or 'Poor'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend our hotel to others?",
+            "answer_options": [
+                "Very Likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very Unlikely"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Measure Net Promoter Score (NPS) potential with this question.",
+            "scripter_notes": "Single-choice question with radio buttons.",
+            "script": {
+                "question_text": "How likely are you to recommend our hotel to others?",
+                "answer_options": [
+                    "Very Likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What was the primary reason for your stay?",
+            "answer_options": [
+                "Business",
+                "Leisure",
+                "Family visit",
+                "Special event",
+                "Other"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Helps segment responses by travel purpose.",
+            "scripter_notes": "Single-choice question with radio buttons and 'Other' option for flexibility.",
+            "script": {
+                "question_text": "What was the primary reason for your stay?",
+                "answer_options": [
+                    "Business",
+                    "Leisure",
+                    "Family visit",
+                    "Special event",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

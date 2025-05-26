@@ -1,0 +1,123 @@
+{
+    "survey_id": "68db7263-7247-4f78-bd49-255d526b9d31",
+    "survey_name": "Sustainable Packaging Preferences Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and attitudes towards sustainable packaging in the retail sector.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How important is sustainable packaging to you when making a purchase?",
+            "answer_options": [
+                "Very important",
+                "Somewhat important",
+                "Neutral",
+                "Not very important",
+                "Not important at all"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use a 5-point Likert scale for ease of response and analysis.",
+            "scripter_notes": "Field type: radio button (single choice).",
+            "script": {
+                "question_text": "How important is sustainable packaging to you when making a purchase?",
+                "answer_options": [
+                    "Very important",
+                    "Somewhat important",
+                    "Neutral",
+                    "Not very important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainable packaging materials do you prefer? (Select all that apply)",
+            "answer_options": [
+                "Recycled paper/cardboard",
+                "Biodegradable plastics",
+                "Compostable materials",
+                "Reusable containers",
+                "None of the above"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Allow multiple selections to capture diverse preferences.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following sustainable packaging materials do you prefer? (Select all that apply)",
+                "answer_options": [
+                    "Recycled paper/cardboard",
+                    "Biodegradable plastics",
+                    "Compostable materials",
+                    "Reusable containers",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Would you be willing to pay a premium for products with sustainable packaging?",
+            "answer_options": [
+                "Yes, up to 5% more",
+                "Yes, up to 10% more",
+                "Yes, more than 10%",
+                "No, I would not pay extra"
+            ],
+            "routing_logic": "Show if Q1 response is 'Very important' or 'Somewhat important'",
+            "client_notes": "Use a single-choice format to quantify willingness to pay.",
+            "scripter_notes": "Field type: radio button (single choice).",
+            "script": {
+                "question_text": "Would you be willing to pay a premium for products with sustainable packaging?",
+                "answer_options": [
+                    "Yes, up to 5% more",
+                    "Yes, up to 10% more",
+                    "Yes, more than 10%",
+                    "No, I would not pay extra"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 response is 'Very important' or 'Somewhat important'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors discourage you from choosing products with sustainable packaging?",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 response is 'Not very important' or 'Not important at all'",
+            "client_notes": "Open-ended question to capture qualitative insights.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What factors discourage you from choosing products with sustainable packaging?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 response is 'Not very important' or 'Not important at all'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How do you typically dispose of product packaging?",
+            "answer_options": [
+                "Recycle",
+                "Compost",
+                "Throw in general waste",
+                "Reuse for other purposes",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: radio button with an optional open-text follow-up.",
+            "script": {
+                "question_text": "How do you typically dispose of product packaging?",
+                "answer_options": [
+                    "Recycle",
+                    "Compost",
+                    "Throw in general waste",
+                    "Reuse for other purposes",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        }
+    ]
+}

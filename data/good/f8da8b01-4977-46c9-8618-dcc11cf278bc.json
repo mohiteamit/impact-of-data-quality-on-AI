@@ -1,0 +1,123 @@
+{
+    "survey_id": "f8da8b01-4977-46c9-8618-dcc11cf278bc",
+    "survey_name": "Customer Satisfaction Survey for Online Bookstores",
+    "survey_brief": "This survey aims to evaluate customer satisfaction levels with online bookstore services, including website usability, book selection, delivery experience, and overall service quality.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase books from online bookstores?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a radio button for single-choice selection. Ensure mobile-friendly design.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you purchase books from online bookstores?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following online bookstores have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Amazon",
+                "Barnes & Noble",
+                "Book Depository",
+                "ThriftBooks",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use checkboxes for multi-choice selection. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following online bookstores have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Amazon",
+                    "Barnes & Noble",
+                    "Book Depository",
+                    "ThriftBooks",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the book selection available on your preferred online bookstore?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents who selected at least one bookstore in Q2.",
+            "client_notes": "Use a 5-point Likert scale. Ensure clear labels for each option.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the book selection available on your preferred online bookstore?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected at least one bookstore in Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for your preferred online bookstore?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT) with character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for your preferred online bookstore?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How important is fast and free shipping when choosing an online bookstore?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale. Ensure mobile-friendly design.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How important is fast and free shipping when choosing an online bookstore?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

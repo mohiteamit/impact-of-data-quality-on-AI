@@ -1,0 +1,127 @@
+{
+    "survey_id": "21e17e76-3f47-4d23-9909-5210d64f2b92",
+    "survey_name": "Customer Satisfaction Survey for Online Banking Services",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with online banking services, focusing on usability, security, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use your bank's online services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Less than once a month",
+                "Never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Ensure the options cover all possible usage frequencies for accurate data.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use your bank's online services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Less than once a month",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following online banking features do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Account balance check",
+                "Fund transfers",
+                "Bill payments",
+                "Loan applications",
+                "Investment services",
+                "Customer support chat"
+            ],
+            "routing_logic": "Show if Q1 response is not 'Never'",
+            "client_notes": "Multi-select options provide insights into feature popularity.",
+            "scripter_notes": "Use checkboxes for multiple selections.",
+            "script": {
+                "question_text": "Which of the following online banking features do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Account balance check",
+                    "Fund transfers",
+                    "Bill payments",
+                    "Loan applications",
+                    "Investment services",
+                    "Customer support chat"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall usability of your bank's online services?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Show if Q1 response is not 'Never'",
+            "client_notes": "5-point Likert scale ensures balanced responses.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the overall usability of your bank's online services?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest to enhance your online banking experience?",
+            "answer_options": [],
+            "routing_logic": "Show if Q3 response is 'Somewhat dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open-ended responses allow for qualitative feedback.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance your online banking experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q3 response is 'Somewhat dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How confident do you feel about the security of your bank's online services?",
+            "answer_options": [
+                "Very confident",
+                "Somewhat confident",
+                "Neutral",
+                "Somewhat unconfident",
+                "Very unconfident"
+            ],
+            "routing_logic": "Show if Q1 response is not 'Never'",
+            "client_notes": "Security confidence is a critical factor in online banking satisfaction.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How confident do you feel about the security of your bank's online services?",
+                "answer_options": [
+                    "Very confident",
+                    "Somewhat confident",
+                    "Neutral",
+                    "Somewhat unconfident",
+                    "Very unconfident"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 response is not 'Never'"
+            }
+        }
+    ]
+}

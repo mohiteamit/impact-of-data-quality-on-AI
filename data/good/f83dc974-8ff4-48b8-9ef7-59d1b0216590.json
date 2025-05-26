@@ -1,0 +1,117 @@
+{
+    "survey_id": "f83dc974-8ff4-48b8-9ef7-59d1b0216590",
+    "survey_name": "Urban Mobility and Public Transport Satisfaction Survey",
+    "survey_brief": "This survey aims to assess user satisfaction and identify areas for improvement in urban public transportation systems, focusing on accessibility, reliability, and comfort.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public transportation in your city?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How frequently do you use public transportation in your city?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which modes of public transportation do you primarily use? (Select all that apply)",
+            "answer_options": [
+                "Buses",
+                "Subway/Metro",
+                "Trams/Light Rail",
+                "Trains (Intercity/Regional)",
+                "Ferries/Water Taxis",
+                "Bike-Sharing Services",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily' to 'Less than once a week' in Q1",
+            "client_notes": "Use checkboxes for multi-select. Include 'Other' as an open-text field if selected.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with conditional open-text for 'Other'.",
+            "script": {
+                "question_text": "Which modes of public transportation do you primarily use? (Select all that apply)",
+                "answer_options": [
+                    "Buses",
+                    "Subway/Metro",
+                    "Trams/Light Rail",
+                    "Trains (Intercity/Regional)",
+                    "Ferries/Water Taxis",
+                    "Bike-Sharing Services",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily' to 'Less than once a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with the reliability (e.g., punctuality, frequency) of your primary mode of transportation?",
+            "answer_options": [
+                "1 (Very Dissatisfied)",
+                "2",
+                "3 (Neutral)",
+                "4",
+                "5 (Very Satisfied)"
+            ],
+            "routing_logic": "Respondents who selected any mode in Q2 except 'Never' in Q1",
+            "client_notes": "Use a Likert scale with radio buttons. Label endpoints clearly.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the reliability (e.g., punctuality, frequency) of your primary mode of transportation?",
+                "answer_options": [
+                    "1 (Very Dissatisfied)",
+                    "2",
+                    "3 (Neutral)",
+                    "4",
+                    "5 (Very Satisfied)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any mode in Q2 except 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you do not use public transportation?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Never' in Q1",
+            "client_notes": "Open-text field to capture detailed feedback. Ensure mobile-friendly input.",
+            "scripter_notes": "Field type: OPEN_TEXT.",
+            "script": {
+                "question_text": "What is the primary reason you do not use public transportation?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How could your city's public transportation system be improved?",
+            "answer_options": [],
+            "routing_logic": "All respondents except those who selected 'Never' in Q1",
+            "client_notes": "Open-ended question to encourage qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit.",
+            "script": {
+                "question_text": "How could your city's public transportation system be improved?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents except those who selected 'Never' in Q1"
+            }
+        }
+    ]
+}

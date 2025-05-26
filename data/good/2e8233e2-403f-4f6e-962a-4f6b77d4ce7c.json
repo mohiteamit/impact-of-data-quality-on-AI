@@ -1,0 +1,305 @@
+{
+    "survey_id": "2e8233e2-403f-4f6e-962a-4f6b77d4ce7c",
+    "survey_name": "Sustainable Urban Mobility Survey",
+    "survey_brief": "This survey aims to understand public preferences and behaviors regarding sustainable urban mobility options, including walking, cycling, and public transit usage.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use public transportation for your daily commute?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Recommended scale for frequency-based questions. Ensure mobile-friendly dropdown for answer options.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you use public transportation for your daily commute?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainable mobility options do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Walking",
+                "Cycling",
+                "Electric scooters",
+                "Carpooling",
+                "Public transit",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Allow multiple selections. Randomize answer options to avoid bias.",
+            "scripter_notes": "Field type: Multi-choice checkboxes.",
+            "script": {
+                "question_text": "Which of the following sustainable mobility options do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Walking",
+                    "Cycling",
+                    "Electric scooters",
+                    "Carpooling",
+                    "Public transit",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What prevents you from using sustainable mobility options more frequently?",
+            "answer_options": [
+                "Lack of infrastructure (e.g., bike lanes)",
+                "Safety concerns",
+                "Inconvenience",
+                "Long travel distances",
+                "Prefer the comfort of private vehicles",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shows if Q2 includes 'None of the above' or if Q1 is 'Rarely' or 'Never'",
+            "client_notes": "Include 'Other' with open-text option for additional insights.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with conditional open-text.",
+            "script": {
+                "question_text": "What prevents you from using sustainable mobility options more frequently?",
+                "answer_options": [
+                    "Lack of infrastructure (e.g., bike lanes)",
+                    "Safety concerns",
+                    "Inconvenience",
+                    "Long travel distances",
+                    "Prefer the comfort of private vehicles",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shows if Q2 includes 'None of the above' or if Q1 is 'Rarely' or 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the availability of bike lanes in your city?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point Likert scale for satisfaction questions.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the availability of bike lanes in your city?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to use sustainable mobility options more often?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: Open-text input.",
+            "script": {
+                "question_text": "What improvements would encourage you to use sustainable mobility options more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you used a bike-sharing or e-scooter program in the past year?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No, but I would consider it",
+                "No, and I am not interested"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Include both frequency and intent options for nuanced insights.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "Have you used a bike-sharing or e-scooter program in the past year?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No, but I would consider it",
+                    "No, and I am not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How important is reducing your carbon footprint when choosing a mode of transportation?",
+            "answer_options": [
+                "Extremely important",
+                "Important",
+                "Somewhat important",
+                "Not important",
+                "I don't consider this"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point importance scale for environmental impact questions.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How important is reducing your carbon footprint when choosing a mode of transportation?",
+                "answer_options": [
+                    "Extremely important",
+                    "Important",
+                    "Somewhat important",
+                    "Not important",
+                    "I don't consider this"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which of the following incentives would most likely encourage you to use sustainable mobility options? (Select up to 3)",
+            "answer_options": [
+                "Subsidized fares",
+                "Better infrastructure (e.g., bike lanes)",
+                "Real-time tracking apps",
+                "Employer incentives (e.g., transit benefits)",
+                "Environmental impact reports",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Limit selections to 3 to prioritize preferences. Randomize options.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with max selection limit.",
+            "script": {
+                "question_text": "Which of the following incentives would most likely encourage you to use sustainable mobility options? (Select up to 3)",
+                "answer_options": [
+                    "Subsidized fares",
+                    "Better infrastructure (e.g., bike lanes)",
+                    "Real-time tracking apps",
+                    "Employer incentives (e.g., transit benefits)",
+                    "Environmental impact reports",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How would you rate the cleanliness and maintenance of public transit in your city?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor",
+                "Not applicable"
+            ],
+            "routing_logic": "Shows if Q1 is not 'Never'",
+            "client_notes": "Include 'Not applicable' for non-users.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How would you rate the cleanliness and maintenance of public transit in your city?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shows if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "What is your primary reason for choosing your current mode of transportation?",
+            "answer_options": [
+                "Speed",
+                "Cost",
+                "Convenience",
+                "Environmental impact",
+                "Health benefits",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Include 'Other' with open-text option for unique responses.",
+            "scripter_notes": "Field type: Single-choice radio buttons with conditional open-text.",
+            "script": {
+                "question_text": "What is your primary reason for choosing your current mode of transportation?",
+                "answer_options": [
+                    "Speed",
+                    "Cost",
+                    "Convenience",
+                    "Environmental impact",
+                    "Health benefits",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "How likely are you to switch to a sustainable mobility option if it were more affordable?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point likelihood scale for behavioral intent questions.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How likely are you to switch to a sustainable mobility option if it were more affordable?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "What is your ZIP code?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Collect for geographic analysis. Ensure data privacy compliance.",
+            "scripter_notes": "Field type: Open-text input with numeric validation.",
+            "script": {
+                "question_text": "What is your ZIP code?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

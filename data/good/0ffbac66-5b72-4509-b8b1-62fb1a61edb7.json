@@ -1,0 +1,103 @@
+{
+    "survey_id": "0ffbac66-5b72-4509-b8b1-62fb1a61edb7",
+    "survey_name": "Campus Dining Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from students about their satisfaction with campus dining services, including food quality, variety, and service efficiency.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the campus dining facilities?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice question to gauge frequency of use. Ensure options cover all possible scenarios.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use the campus dining facilities?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors are most important to you when choosing a campus dining facility? (Select all that apply)",
+            "answer_options": [
+                "Food quality",
+                "Variety of options",
+                "Price",
+                "Convenience of location",
+                "Speed of service",
+                "Cleanliness",
+                "Dietary accommodations (e.g., vegan, gluten-free)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a multi-choice question to identify key factors influencing dining choices.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following factors are most important to you when choosing a campus dining facility? (Select all that apply)",
+                "answer_options": [
+                    "Food quality",
+                    "Variety of options",
+                    "Price",
+                    "Convenience of location",
+                    "Speed of service",
+                    "Cleanliness",
+                    "Dietary accommodations (e.g., vegan, gluten-free)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the quality of food offered at campus dining facilities?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a single-choice Likert scale to measure satisfaction with food quality.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the quality of food offered at campus dining facilities?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for campus dining services?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use an open-ended question to capture detailed feedback for improvements.",
+            "scripter_notes": "Field type: text box (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for campus dining services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

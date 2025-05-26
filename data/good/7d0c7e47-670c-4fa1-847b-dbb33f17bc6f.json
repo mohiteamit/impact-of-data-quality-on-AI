@@ -1,0 +1,125 @@
+{
+    "survey_id": "7d0c7e47-670c-4fa1-847b-dbb33f17bc6f",
+    "survey_name": "Customer Satisfaction Survey for Streaming Services",
+    "survey_brief": "This survey aims to gather feedback from users about their satisfaction with various streaming services, including content variety, user interface, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which streaming service(s) do you currently subscribe to? (Select all that apply)",
+            "answer_options": [
+                "Netflix",
+                "Amazon Prime Video",
+                "Disney+",
+                "HBO Max",
+                "Hulu",
+                "Apple TV+",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use checkboxes for multi-select options. Ensure 'Other' includes a text field for specification.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an additional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which streaming service(s) do you currently subscribe to? (Select all that apply)",
+                "answer_options": [
+                    "Netflix",
+                    "Amazon Prime Video",
+                    "Disney+",
+                    "HBO Max",
+                    "Hulu",
+                    "Apple TV+",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the content variety offered by your primary streaming service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents who selected at least one streaming service in Q1",
+            "client_notes": "Use a single-choice radio button scale. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How satisfied are you with the content variety offered by your primary streaming service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected at least one streaming service in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you like to see in your primary streaming service?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents who selected at least one streaming service in Q1",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit.",
+            "script": {
+                "question_text": "What improvements would you like to see in your primary streaming service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents who selected at least one streaming service in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you experience technical issues (e.g., buffering, crashes) while using your primary streaming service?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Very often"
+            ],
+            "routing_logic": "Appears to all respondents who selected at least one streaming service in Q1",
+            "client_notes": "Use a single-choice radio button scale. Ensure the question is clear and concise.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How often do you experience technical issues (e.g., buffering, crashes) while using your primary streaming service?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Very often"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected at least one streaming service in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your primary streaming service to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Appears to all respondents who selected at least one streaming service in Q1",
+            "client_notes": "Use a single-choice radio button scale. Consider adding a follow-up question for 'No' or 'Not sure' responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "Would you recommend your primary streaming service to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected at least one streaming service in Q1"
+            }
+        }
+    ]
+}

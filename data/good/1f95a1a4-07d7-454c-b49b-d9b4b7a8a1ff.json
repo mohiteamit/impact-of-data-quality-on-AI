@@ -1,0 +1,101 @@
+{
+    "survey_id": "1f95a1a4-07d7-454c-b49b-d9b4b7a8a1ff",
+    "survey_name": "Remote Working Effectiveness Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness of remote working arrangements within organizations, focusing on productivity, communication, and employee well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you currently work remotely?",
+            "answer_options": [
+                "1 day",
+                "2 days",
+                "3 days",
+                "4 days",
+                "5 days (fully remote)",
+                "I do not work remotely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure the scale covers all possible scenarios.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How many days per week do you currently work remotely?",
+                "answer_options": [
+                    "1 day",
+                    "2 days",
+                    "3 days",
+                    "4 days",
+                    "5 days (fully remote)",
+                    "I do not work remotely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following tools do you use for remote work? (Select all that apply)",
+            "answer_options": [
+                "Video conferencing (e.g., Zoom, Teams)",
+                "Instant messaging (e.g., Slack, WhatsApp)",
+                "Project management (e.g., Trello, Asana)",
+                "Cloud storage (e.g., Google Drive, Dropbox)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-choice selection. Ensure 'Other' option includes a text field for specification.",
+            "scripter_notes": "Field type: checkboxes (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following tools do you use for remote work? (Select all that apply)",
+                "answer_options": [
+                    "Video conferencing (e.g., Zoom, Teams)",
+                    "Instant messaging (e.g., Slack, WhatsApp)",
+                    "Project management (e.g., Trello, Asana)",
+                    "Cloud storage (e.g., Google Drive, Dropbox)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate your overall productivity while working remotely compared to working in the office?",
+            "answer_options": [
+                "Much less productive",
+                "Somewhat less productive",
+                "About the same",
+                "Somewhat more productive",
+                "Much more productive"
+            ],
+            "routing_logic": "All respondents except those who selected 'I do not work remotely' in Q1",
+            "client_notes": "Use a Likert scale for single-choice selection. Ensure the question is skipped for non-remote workers.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How would you rate your overall productivity while working remotely compared to working in the office?",
+                "answer_options": [
+                    "Much less productive",
+                    "Somewhat less productive",
+                    "About the same",
+                    "Somewhat more productive",
+                    "Much more productive"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'I do not work remotely' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges do you face while working remotely? Please describe.",
+            "answer_options": [],
+            "routing_logic": "All respondents except those who selected 'I do not work remotely' in Q1",
+            "client_notes": "Use an open text field for detailed responses. Ensure the question is skipped for non-remote workers.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What challenges do you face while working remotely? Please describe.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents except those who selected 'I do not work remotely' in Q1"
+            }
+        }
+    ]
+}

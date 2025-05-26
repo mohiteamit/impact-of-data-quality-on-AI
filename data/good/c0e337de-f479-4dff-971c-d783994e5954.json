@@ -1,0 +1,127 @@
+{
+    "survey_id": "c0e337de-f479-4dff-971c-d783994e5954",
+    "survey_name": "Customer Satisfaction Survey for Online Clothing Retailers",
+    "survey_brief": "This survey aims to gather feedback from customers about their shopping experience with online clothing retailers, focusing on website usability, product quality, delivery, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you shop for clothing online?",
+            "answer_options": [
+                "Once a week or more",
+                "2-3 times a month",
+                "Once a month",
+                "Less than once a month",
+                "This is my first time"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure the options cover all potential frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you shop for clothing online?",
+                "answer_options": [
+                    "Once a week or more",
+                    "2-3 times a month",
+                    "Once a month",
+                    "Less than once a month",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing an online clothing retailer? (Select up to 3)",
+            "answer_options": [
+                "Price",
+                "Product quality",
+                "Shipping speed",
+                "Free returns",
+                "Customer reviews",
+                "Website ease of use",
+                "Size inclusivity",
+                "Brand reputation"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Allow multi-selection to capture top priorities. Ensure the options are mobile-friendly.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE), max selections: 3.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing an online clothing retailer? (Select up to 3)",
+                "answer_options": [
+                    "Price",
+                    "Product quality",
+                    "Shipping speed",
+                    "Free returns",
+                    "Customer reviews",
+                    "Website ease of use",
+                    "Size inclusivity",
+                    "Brand reputation"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall shopping experience on your most recent online clothing purchase?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the overall shopping experience on your most recent online clothing purchase?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any issues you encountered during your recent online clothing shopping experience.",
+            "answer_options": [],
+            "routing_logic": "Show if Q3 answer is 'Dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open-ended question to capture detailed feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT), max length: 500.",
+            "script": {
+                "question_text": "Please describe any issues you encountered during your recent online clothing shopping experience.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q3 answer is 'Dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend the online clothing retailer you most recently used to a friend or family member?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Simple yes/no question to measure Net Promoter Score (NPS). Use a single-choice format.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you recommend the online clothing retailer you most recently used to a friend or family member?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

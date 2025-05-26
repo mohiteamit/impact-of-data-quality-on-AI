@@ -1,0 +1,139 @@
+{
+    "survey_id": "953dd1c2-3baf-4855-a2b2-2cc3509f0596",
+    "survey_name": "Digital Detox Effectiveness Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness of digital detox programs and their impact on participants' well-being and productivity.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you participated in a digital detox program in the past 12 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Use a simple yes/no format for clarity. Consider branching logic based on response.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "Have you participated in a digital detox program in the past 12 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How long was your most recent digital detox program?",
+            "answer_options": [
+                "Less than 1 day",
+                "1-3 days",
+                "4-7 days",
+                "More than 1 week"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Provide clear time ranges to capture duration accurately.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How long was your most recent digital detox program?",
+                "answer_options": [
+                    "Less than 1 day",
+                    "1-3 days",
+                    "4-7 days",
+                    "More than 1 week"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What were your primary reasons for participating in a digital detox program? (Select all that apply)",
+            "answer_options": [
+                "Reduce stress and anxiety",
+                "Improve sleep quality",
+                "Increase productivity",
+                "Enhance personal relationships",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Allow multiple selections to capture varied motivations.",
+            "scripter_notes": "Field type: checkbox",
+            "script": {
+                "question_text": "What were your primary reasons for participating in a digital detox program? (Select all that apply)",
+                "answer_options": [
+                    "Reduce stress and anxiety",
+                    "Improve sleep quality",
+                    "Increase productivity",
+                    "Enhance personal relationships",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the overall effectiveness of your digital detox program?",
+            "answer_options": [
+                "Very effective",
+                "Somewhat effective",
+                "Neutral",
+                "Somewhat ineffective",
+                "Very ineffective"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Use a balanced Likert scale for reliable feedback.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How would you rate the overall effectiveness of your digital detox program?",
+                "answer_options": [
+                    "Very effective",
+                    "Somewhat effective",
+                    "Neutral",
+                    "Somewhat ineffective",
+                    "Very ineffective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges did you face during your digital detox program?",
+            "answer_options": [],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Open-ended to capture qualitative insights.",
+            "scripter_notes": "Field type: text input",
+            "script": {
+                "question_text": "What challenges did you face during your digital detox program?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you recommend a digital detox program to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Include a neutral option to avoid forced responses.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "Would you recommend a digital detox program to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        }
+    ]
+}

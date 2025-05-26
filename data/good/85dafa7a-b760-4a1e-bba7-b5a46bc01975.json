@@ -1,0 +1,107 @@
+{
+    "survey_id": "85dafa7a-b760-4a1e-bba7-b5a46bc01975",
+    "survey_name": "Electric Vehicle Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer attitudes and barriers towards electric vehicle (EV) adoption to inform marketing and policy strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How likely are you to consider purchasing an electric vehicle (EV) within the next 5 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely",
+                "I already own an EV"
+            ],
+            "routing_logic": "Always shown to all respondents",
+            "client_notes": "Use a Likert scale for nuanced responses. Ensure mobile-friendly radio buttons.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Randomize option order to minimize bias.",
+            "script": {
+                "question_text": "How likely are you to consider purchasing an electric vehicle (EV) within the next 5 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely",
+                    "I already own an EV"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary factors influencing your decision to adopt an EV? (Select all that apply)",
+            "answer_options": [
+                "Lower environmental impact",
+                "Fuel cost savings",
+                "Government incentives",
+                "Availability of charging stations",
+                "Vehicle performance",
+                "Upfront cost of EVs",
+                "Range anxiety",
+                "Lack of model variety"
+            ],
+            "routing_logic": "Shown to all respondents except those who selected 'I already own an EV' in Q1",
+            "client_notes": "Allow multi-selection. Consider grouping options into pros/cons for analysis.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes). Include 'Other' with open-text option.",
+            "script": {
+                "question_text": "What are the primary factors influencing your decision to adopt an EV? (Select all that apply)",
+                "answer_options": [
+                    "Lower environmental impact",
+                    "Fuel cost savings",
+                    "Government incentives",
+                    "Availability of charging stations",
+                    "Vehicle performance",
+                    "Upfront cost of EVs",
+                    "Range anxiety",
+                    "Lack of model variety"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown to all respondents except those who selected 'I already own an EV' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What additional features or improvements would make you more likely to purchase an EV?",
+            "answer_options": [],
+            "routing_logic": "Shown only to respondents who selected 'Somewhat likely', 'Neutral', or 'Somewhat unlikely' in Q1",
+            "client_notes": "Open-ended to capture qualitative insights. Limit response to 250 characters.",
+            "scripter_notes": "Field type: Open-text (text area). Enable character counter.",
+            "script": {
+                "question_text": "What additional features or improvements would make you more likely to purchase an EV?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown only to respondents who selected 'Somewhat likely', 'Neutral', or 'Somewhat unlikely' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current EV?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Shown only to respondents who selected 'I already own an EV' in Q1",
+            "client_notes": "Use a symmetric scale with neutral midpoint. Include N/A option if needed.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Display vertically.",
+            "script": {
+                "question_text": "How satisfied are you with your current EV?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown only to respondents who selected 'I already own an EV' in Q1"
+            }
+        }
+    ]
+}

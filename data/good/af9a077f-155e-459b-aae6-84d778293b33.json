@@ -1,0 +1,125 @@
+{
+    "survey_id": "af9a077f-155e-459b-aae6-84d778293b33",
+    "survey_name": "Telecommuting Tool Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate user satisfaction with various telecommuting tools and software used in remote work environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following telecommuting tools do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Zoom",
+                "Microsoft Teams",
+                "Slack",
+                "Google Meet",
+                "Trello",
+                "Asana",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "This multi-choice question helps identify the most commonly used tools. Consider adding an 'Other' option for completeness.",
+            "scripter_notes": "Implement as a checkbox question allowing multiple selections.",
+            "script": {
+                "question_text": "Which of the following telecommuting tools do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Zoom",
+                    "Microsoft Teams",
+                    "Slack",
+                    "Google Meet",
+                    "Trello",
+                    "Asana",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the video conferencing tool you use most frequently?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if respondent selected any video conferencing tool in Q1",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure the question is clear about referring to their primary tool.",
+            "scripter_notes": "Implement as a single-choice radio button question.",
+            "script": {
+                "question_text": "How satisfied are you with the video conferencing tool you use most frequently?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if respondent selected any video conferencing tool in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you feel are missing from your current telecommuting tools?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Keep the text box large enough for detailed responses.",
+            "scripter_notes": "Implement as an open-text field with a character limit of 500.",
+            "script": {
+                "question_text": "What features do you feel are missing from your current telecommuting tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you experience technical issues with your telecommuting tools?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "This helps gauge the reliability of tools. Use a frequency scale for easy interpretation.",
+            "scripter_notes": "Implement as a single-choice radio button question.",
+            "script": {
+                "question_text": "How often do you experience technical issues with your telecommuting tools?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your primary telecommuting tool to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Simple yes/no question to measure overall satisfaction and likelihood to recommend.",
+            "scripter_notes": "Implement as a single-choice radio button question.",
+            "script": {
+                "question_text": "Would you recommend your primary telecommuting tool to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

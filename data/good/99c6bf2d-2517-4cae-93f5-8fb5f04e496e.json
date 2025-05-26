@@ -1,0 +1,121 @@
+{
+    "survey_id": "99c6bf2d-2517-4cae-93f5-8fb5f04e496e",
+    "survey_name": "Corporate Wellness Program Feedback Survey",
+    "survey_brief": "This survey aims to gather feedback from employees about the effectiveness, satisfaction, and areas for improvement in the company's corporate wellness program.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the current corporate wellness program?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears to all respondents.",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement. Ensure the scale is visually balanced on mobile devices.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the current corporate wellness program?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which components of the wellness program have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Fitness classes",
+                "Mental health workshops",
+                "Nutrition counseling",
+                "Health screenings",
+                "None of the above"
+            ],
+            "routing_logic": "This question appears to all respondents.",
+            "client_notes": "Allow multiple selections to capture diverse participation. Ensure checkboxes are touch-friendly for mobile users.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which components of the wellness program have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Fitness classes",
+                    "Mental health workshops",
+                    "Nutrition counseling",
+                    "Health screenings",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for the wellness program?",
+            "answer_options": [],
+            "routing_logic": "This question appears to all respondents.",
+            "client_notes": "Open-ended responses can provide qualitative insights. Limit response length to 500 characters for readability.",
+            "scripter_notes": "Field type: text input (open-ended).",
+            "script": {
+                "question_text": "What improvements would you suggest for the wellness program?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How has the wellness program impacted your overall well-being?",
+            "answer_options": [
+                "Significantly improved",
+                "Slightly improved",
+                "No change",
+                "Slightly worsened",
+                "Significantly worsened"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Very dissatisfied'.",
+            "client_notes": "Use a 5-point Likert scale. Skip logic ensures only relevant respondents answer.",
+            "scripter_notes": "Field type: radio button (single-choice). Apply skip logic based on Q1.",
+            "script": {
+                "question_text": "How has the wellness program impacted your overall well-being?",
+                "answer_options": [
+                    "Significantly improved",
+                    "Slightly improved",
+                    "No change",
+                    "Slightly worsened",
+                    "Significantly worsened"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Very dissatisfied'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend the wellness program to a colleague?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "This question appears to all respondents.",
+            "client_notes": "Binary with an 'Unsure' option captures neutral responses. Display as radio buttons.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Would you recommend the wellness program to a colleague?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears to all respondents."
+            }
+        }
+    ]
+}

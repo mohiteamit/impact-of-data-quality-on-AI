@@ -1,0 +1,205 @@
+{
+    "survey_id": "76b6ac87-2162-4f24-916d-d907e75537c0",
+    "survey_name": "Outdoor Fitness Equipment Usage Survey",
+    "survey_brief": "This survey aims to gather feedback on the usage and satisfaction of outdoor fitness equipment in public parks to improve future installations and maintenance.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use outdoor fitness equipment in public parks?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure the options cover a broad range of usage frequencies.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use outdoor fitness equipment in public parks?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of outdoor fitness equipment do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Pull-up bars",
+                "Parallel bars",
+                "Stationary bikes",
+                "Elliptical machines",
+                "Stretching stations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Use multi-choice checkboxes. Include an 'Other' option to capture unlisted equipment.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which types of outdoor fitness equipment do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Pull-up bars",
+                    "Parallel bars",
+                    "Stationary bikes",
+                    "Elliptical machines",
+                    "Stretching stations",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influence your decision to use outdoor fitness equipment?",
+            "answer_options": [
+                "Convenience of location",
+                "No cost involved",
+                "Variety of equipment",
+                "Social interaction opportunities",
+                "Fresh air and outdoor environment",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Use multi-choice checkboxes. Include an 'Other' option for additional factors.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "What factors influence your decision to use outdoor fitness equipment?",
+                "answer_options": [
+                    "Convenience of location",
+                    "No cost involved",
+                    "Variety of equipment",
+                    "Social interaction opportunities",
+                    "Fresh air and outdoor environment",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the condition and maintenance of outdoor fitness equipment in your local park?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the condition and maintenance of outdoor fitness equipment in your local park?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you ever encountered any safety issues with outdoor fitness equipment?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Use a simple yes/no binary choice for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Have you ever encountered any safety issues with outdoor fitness equipment?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If yes, please describe the safety issue you encountered.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q5 response is 'Yes'.",
+            "client_notes": "Use an open-text field to capture detailed feedback. Ensure the field is large enough for descriptive responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "If yes, please describe the safety issue you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q5 response is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional types of outdoor fitness equipment would you like to see installed in your local park?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Use an open-text field to allow for creative and varied suggestions.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What additional types of outdoor fitness equipment would you like to see installed in your local park?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend outdoor fitness equipment to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Use a Likert scale for measuring likelihood to recommend.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to recommend outdoor fitness equipment to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Do you have any additional comments or suggestions regarding outdoor fitness equipment in your local park?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use an open-text field to capture any final feedback or suggestions.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "Do you have any additional comments or suggestions regarding outdoor fitness equipment in your local park?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

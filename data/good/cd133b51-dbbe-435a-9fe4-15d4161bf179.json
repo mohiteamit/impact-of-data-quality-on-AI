@@ -1,0 +1,119 @@
+{
+    "survey_id": "cd133b51-dbbe-435a-9fe4-15d4161bf179",
+    "survey_name": "Telehealth Service Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from users about their experiences with telehealth services, including ease of use, quality of care, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use telehealth services?",
+            "answer_options": [
+                "Never",
+                "Rarely (1-2 times per year)",
+                "Occasionally (3-5 times per year)",
+                "Frequently (6+ times per year)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a radio button for single-choice selection. Ensure options cover a broad range of usage frequencies.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you use telehealth services?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (1-2 times per year)",
+                    "Occasionally (3-5 times per year)",
+                    "Frequently (6+ times per year)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following telehealth platforms have you used? (Select all that apply)",
+            "answer_options": [
+                "Zoom for Healthcare",
+                "Doxy.me",
+                "Teladoc",
+                "Amwell",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Use checkboxes for multi-choice selection. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following telehealth platforms have you used? (Select all that apply)",
+                "answer_options": [
+                    "Zoom for Healthcare",
+                    "Doxy.me",
+                    "Teladoc",
+                    "Amwell",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the quality of care received through telehealth services?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale for single-choice selection. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the quality of care received through telehealth services?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What do you consider the biggest advantage of using telehealth services?",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open-text with character limit.",
+            "script": {
+                "question_text": "What do you consider the biggest advantage of using telehealth services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend telehealth services to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Use a radio button for single-choice selection. Simple and direct question.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Would you recommend telehealth services to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        }
+    ]
+}

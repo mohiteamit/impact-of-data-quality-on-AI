@@ -1,0 +1,247 @@
+{
+    "survey_id": "e1f0a170-1916-4d9a-96a3-9daca9471688",
+    "survey_name": "Online Grocery Shopping Experience Survey",
+    "survey_brief": "This survey aims to understand customer experiences and preferences regarding online grocery shopping services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you shop for groceries online?",
+            "answer_options": [
+                "Weekly",
+                "Bi-weekly",
+                "Monthly",
+                "Less than once a month",
+                "This is my first time"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button for this question. Ensure the options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you shop for groceries online?",
+                "answer_options": [
+                    "Weekly",
+                    "Bi-weekly",
+                    "Monthly",
+                    "Less than once a month",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which online grocery platforms do you use? (Select all that apply)",
+            "answer_options": [
+                "Amazon Fresh",
+                "Instacart",
+                "Walmart Grocery",
+                "Kroger Delivery",
+                "Shipt",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a multi-choice checkbox. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which online grocery platforms do you use? (Select all that apply)",
+                "answer_options": [
+                    "Amazon Fresh",
+                    "Instacart",
+                    "Walmart Grocery",
+                    "Kroger Delivery",
+                    "Shipt",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing an online grocery service? (Select up to 3)",
+            "answer_options": [
+                "Price",
+                "Delivery speed",
+                "Product variety",
+                "User interface",
+                "Customer service",
+                "Ease of return/refund",
+                "Subscription benefits",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a multi-choice checkbox with a limit of 3 selections. Include an 'Other' option for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with a max selection limit of 3.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing an online grocery service? (Select up to 3)",
+                "answer_options": [
+                    "Price",
+                    "Delivery speed",
+                    "Product variety",
+                    "User interface",
+                    "Customer service",
+                    "Ease of return/refund",
+                    "Subscription benefits",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the freshness of groceries received from online orders?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a Likert scale for satisfaction ratings. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the freshness of groceries received from online orders?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for online grocery shopping services?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended question to capture qualitative feedback. Provide a large text box.",
+            "scripter_notes": "Field type: OPEN_TEXT (large text input).",
+            "script": {
+                "question_text": "What improvements would you suggest for online grocery shopping services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you ever experienced issues with delivery times?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Simple yes/no question. Use radio buttons.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Have you ever experienced issues with delivery times?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If yes, please describe the issue(s) you encountered.",
+            "answer_options": [],
+            "routing_logic": "Show only if Q6 is 'Yes'",
+            "client_notes": "Open-ended follow-up question. Display only if Q6 is 'Yes'.",
+            "scripter_notes": "Field type: OPEN_TEXT. Conditional display based on Q6 response.",
+            "script": {
+                "question_text": "If yes, please describe the issue(s) you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show only if Q6 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How likely are you to recommend your preferred online grocery service to a friend or colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a Likert scale for likelihood ratings. Ensure clear labeling.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How likely are you to recommend your preferred online grocery service to a friend or colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What is the primary reason for choosing online grocery shopping over in-store shopping?",
+            "answer_options": [
+                "Convenience",
+                "Time-saving",
+                "Better prices",
+                "Access to specialty items",
+                "Avoiding crowds",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Single-choice with an 'Other' option for additional inputs.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason for choosing online grocery shopping over in-store shopping?",
+                "answer_options": [
+                    "Convenience",
+                    "Time-saving",
+                    "Better prices",
+                    "Access to specialty items",
+                    "Avoiding crowds",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How do you typically receive your grocery deliveries?",
+            "answer_options": [
+                "Home delivery",
+                "Curbside pickup",
+                "In-store pickup",
+                "Locker pickup",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Single-choice with an 'Other' option. Ensure all common delivery methods are covered.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "How do you typically receive your grocery deliveries?",
+                "answer_options": [
+                    "Home delivery",
+                    "Curbside pickup",
+                    "In-store pickup",
+                    "Locker pickup",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

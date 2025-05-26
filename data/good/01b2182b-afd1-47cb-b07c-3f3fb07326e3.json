@@ -1,0 +1,129 @@
+{
+    "survey_id": "01b2182b-afd1-47cb-b07c-3f3fb07326e3",
+    "survey_name": "Customer Satisfaction Survey for Coffee Shops",
+    "survey_brief": "This survey aims to gather feedback from customers about their experience at coffee shops, including satisfaction with products, service, and atmosphere.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit coffee shops?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity and ease of response.",
+            "scripter_notes": "Field type: Single-choice radio button.",
+            "script": {
+                "question_text": "How often do you visit coffee shops?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing a coffee shop? (Select up to 3)",
+            "answer_options": [
+                "Quality of coffee",
+                "Price",
+                "Atmosphere",
+                "Location",
+                "Customer service",
+                "Variety of menu items",
+                "Speed of service",
+                "Availability of seating",
+                "Free Wi-Fi"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice checkbox for this question to allow multiple selections.",
+            "scripter_notes": "Field type: Multi-choice checkbox with a limit of 3 selections.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a coffee shop? (Select up to 3)",
+                "answer_options": [
+                    "Quality of coffee",
+                    "Price",
+                    "Atmosphere",
+                    "Location",
+                    "Customer service",
+                    "Variety of menu items",
+                    "Speed of service",
+                    "Availability of seating",
+                    "Free Wi-Fi"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the quality of coffee at your most frequented coffee shop?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a Likert scale for this question to measure satisfaction levels.",
+            "scripter_notes": "Field type: Single-choice radio button.",
+            "script": {
+                "question_text": "How satisfied are you with the quality of coffee at your most frequented coffee shop?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any improvements you would like to see at coffee shops you visit.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to allow detailed feedback.",
+            "scripter_notes": "Field type: Open-text input.",
+            "script": {
+                "question_text": "Please describe any improvements you would like to see at coffee shops you visit.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your most frequented coffee shop to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a single-choice radio button for this question.",
+            "scripter_notes": "Field type: Single-choice radio button.",
+            "script": {
+                "question_text": "Would you recommend your most frequented coffee shop to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        }
+    ]
+}

@@ -1,0 +1,137 @@
+{
+    "survey_id": "5e4dd98a-b0da-4d3a-bb4a-21c923f3655e",
+    "survey_name": "Electric Scooter Sharing Service Feedback Survey",
+    "survey_brief": "This survey aims to gather user feedback on electric scooter sharing services to improve service quality, safety, and user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use electric scooter sharing services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "This is my first time"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for simplicity and ease of response on mobile devices.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use electric scooter sharing services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing an electric scooter sharing service? (Select up to 3)",
+            "answer_options": [
+                "Price",
+                "Availability of scooters",
+                "Ease of use (app functionality)",
+                "Safety features",
+                "Battery life",
+                "Scooter cleanliness",
+                "Customer support"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a multi-choice checkbox format to allow respondents to select multiple options.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Maximum of 3 selections allowed.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing an electric scooter sharing service? (Select up to 3)",
+                "answer_options": [
+                    "Price",
+                    "Availability of scooters",
+                    "Ease of use (app functionality)",
+                    "Safety features",
+                    "Battery life",
+                    "Scooter cleanliness",
+                    "Customer support"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of scooters in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if respondent answers 'Daily', 'Weekly', or 'Monthly' to Q1",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the availability of scooters in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if respondent answers 'Daily', 'Weekly', or 'Monthly' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you experienced any safety concerns while using electric scooter sharing services?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a simple yes/no question to quickly gauge safety concerns.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Have you experienced any safety concerns while using electric scooter sharing services?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any safety concerns you have encountered while using electric scooter sharing services.",
+            "answer_options": [],
+            "routing_logic": "Appears if respondent answers 'Yes' to Q4",
+            "client_notes": "Use an open-ended text field to allow detailed responses. Ensure the field is mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "Please describe any safety concerns you have encountered while using electric scooter sharing services.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if respondent answers 'Yes' to Q4"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would you suggest for electric scooter sharing services?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use an open-ended text field to capture qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for electric scooter sharing services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

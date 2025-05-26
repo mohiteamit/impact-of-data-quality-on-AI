@@ -1,0 +1,99 @@
+{
+    "survey_id": "f95185c1-6b15-481b-8d8f-2d085aa7a173",
+    "survey_name": "Remote Work Productivity Assessment",
+    "survey_brief": "This survey aims to evaluate the effectiveness of remote work arrangements and identify areas for improvement to enhance employee productivity and satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you currently work remotely?",
+            "answer_options": [
+                "1 day",
+                "2 days",
+                "3 days",
+                "4 days",
+                "5 days (full-time remote)"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure the options cover all possible scenarios.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How many days per week do you currently work remotely?",
+                "answer_options": [
+                    "1 day",
+                    "2 days",
+                    "3 days",
+                    "4 days",
+                    "5 days (full-time remote)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following tools do you use regularly for remote work? (Select all that apply)",
+            "answer_options": [
+                "Video conferencing (e.g., Zoom, Microsoft Teams)",
+                "Project management software (e.g., Asana, Trello)",
+                "Instant messaging (e.g., Slack, Microsoft Teams)",
+                "Cloud storage (e.g., Google Drive, Dropbox)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a multi-choice checkbox format. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following tools do you use regularly for remote work? (Select all that apply)",
+                "answer_options": [
+                    "Video conferencing (e.g., Zoom, Microsoft Teams)",
+                    "Project management software (e.g., Asana, Trello)",
+                    "Instant messaging (e.g., Slack, Microsoft Teams)",
+                    "Cloud storage (e.g., Google Drive, Dropbox)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the biggest challenge you face while working remotely?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Use an open-text field to capture detailed responses. Ensure the text box is large enough for longer answers.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What is the biggest challenge you face while working remotely?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate your overall productivity while working remotely compared to working in the office?",
+            "answer_options": [
+                "Much less productive",
+                "Slightly less productive",
+                "About the same",
+                "Slightly more productive",
+                "Much more productive"
+            ],
+            "routing_logic": "Shown if Q1 answer is not '5 days (full-time remote)'",
+            "client_notes": "Use a single-choice Likert scale. Ensure the question is only shown to hybrid workers.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Add routing logic to exclude full-time remote workers.",
+            "script": {
+                "question_text": "How would you rate your overall productivity while working remotely compared to working in the office?",
+                "answer_options": [
+                    "Much less productive",
+                    "Slightly less productive",
+                    "About the same",
+                    "Slightly more productive",
+                    "Much more productive"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not '5 days (full-time remote)'"
+            }
+        }
+    ]
+}

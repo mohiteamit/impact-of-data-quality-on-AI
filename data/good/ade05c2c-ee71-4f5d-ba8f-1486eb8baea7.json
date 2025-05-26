@@ -1,0 +1,241 @@
+{
+    "survey_id": "ade05c2c-ee71-4f5d-ba8f-1486eb8baea7",
+    "survey_name": "SaaS Platform User Onboarding Experience Survey",
+    "survey_brief": "This survey aims to evaluate user satisfaction and identify pain points in the onboarding process of our SaaS platform to improve user experience and reduce churn.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you rate your overall satisfaction with the onboarding process of our SaaS platform?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use a standard 5-point Likert scale for consistency and easy analysis. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: single-choice radio buttons. Mandatory question.",
+            "script": {
+                "question_text": "How would you rate your overall satisfaction with the onboarding process of our SaaS platform?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following onboarding resources did you use? (Select all that apply)",
+            "answer_options": [
+                "Interactive product tour",
+                "Video tutorials",
+                "Knowledge base/articles",
+                "Live demo session",
+                "Email guides",
+                "None of the above"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Allow multiple selections. Include 'None of the above' to capture users who skipped onboarding.",
+            "scripter_notes": "Field type: multi-choice checkboxes. Include 'Select all that apply' instruction.",
+            "script": {
+                "question_text": "Which of the following onboarding resources did you use? (Select all that apply)",
+                "answer_options": [
+                    "Interactive product tour",
+                    "Video tutorials",
+                    "Knowledge base/articles",
+                    "Live demo session",
+                    "Email guides",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How long did it take you to complete the onboarding process?",
+            "answer_options": [
+                "Less than 15 minutes",
+                "15-30 minutes",
+                "30-60 minutes",
+                "1-2 hours",
+                "More than 2 hours"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use time ranges that reflect typical onboarding durations. Consider adding 'I haven't completed onboarding' option if needed.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How long did it take you to complete the onboarding process?",
+                "answer_options": [
+                    "Less than 15 minutes",
+                    "15-30 minutes",
+                    "30-60 minutes",
+                    "1-2 hours",
+                    "More than 2 hours"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What was the most helpful aspect of the onboarding process?",
+            "answer_options": [],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Open-ended to capture qualitative insights. Limit response to 250 characters.",
+            "scripter_notes": "Field type: open text with character counter.",
+            "script": {
+                "question_text": "What was the most helpful aspect of the onboarding process?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Did you encounter any technical difficulties during onboarding?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Simple yes/no question to identify technical issues. Follow up with Q6 if 'Yes' is selected.",
+            "scripter_notes": "Field type: single-choice radio buttons with conditional logic for Q6.",
+            "script": {
+                "question_text": "Did you encounter any technical difficulties during onboarding?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe the technical difficulties you encountered during onboarding:",
+            "answer_options": [],
+            "routing_logic": "Only shown if Q5 response is 'Yes'.",
+            "client_notes": "Open-ended to gather detailed feedback on technical issues. Include example placeholder text like 'Please describe the issue and any error messages received'.",
+            "scripter_notes": "Field type: open text with conditional display based on Q5 response.",
+            "script": {
+                "question_text": "Please describe the technical difficulties you encountered during onboarding:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only shown if Q5 response is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How confident do you feel using our platform after completing onboarding?",
+            "answer_options": [
+                "Very confident",
+                "Somewhat confident",
+                "Neutral",
+                "Somewhat unconfident",
+                "Not at all confident"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "5-point Likert scale to measure self-reported confidence levels. Important metric for onboarding success.",
+            "scripter_notes": "Field type: single-choice radio buttons with validation.",
+            "script": {
+                "question_text": "How confident do you feel using our platform after completing onboarding?",
+                "answer_options": [
+                    "Very confident",
+                    "Somewhat confident",
+                    "Neutral",
+                    "Somewhat unconfident",
+                    "Not at all confident"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Which of these features were you able to successfully configure during onboarding? (Select all that apply)",
+            "answer_options": [
+                "User profile setup",
+                "Team member invitations",
+                "Integration setup",
+                "Dashboard customization",
+                "Notification preferences",
+                "None of the above"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Multi-select to identify which features users engage with during onboarding. Helps prioritize onboarding content.",
+            "scripter_notes": "Field type: multi-choice checkboxes with 'Select all that apply' instruction.",
+            "script": {
+                "question_text": "Which of these features were you able to successfully configure during onboarding? (Select all that apply)",
+                "answer_options": [
+                    "User profile setup",
+                    "Team member invitations",
+                    "Integration setup",
+                    "Dashboard customization",
+                    "Notification preferences",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How would you improve the onboarding experience?",
+            "answer_options": [],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Open-ended to gather innovative suggestions. Consider adding 'No suggestions at this time' option if needed.",
+            "scripter_notes": "Field type: open text with optional character limit.",
+            "script": {
+                "question_text": "How would you improve the onboarding experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How likely are you to recommend our platform to a colleague based on your onboarding experience?",
+            "answer_options": [
+                "0 - Not at all likely",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 - Extremely likely"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use 11-point NPS scale (0-10) to calculate Net Promoter Score. Include clear endpoint labels.",
+            "scripter_notes": "Field type: single-choice radio buttons in horizontal layout for scale visibility.",
+            "script": {
+                "question_text": "How likely are you to recommend our platform to a colleague based on your onboarding experience?",
+                "answer_options": [
+                    "0 - Not at all likely",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 - Extremely likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        }
+    ]
+}

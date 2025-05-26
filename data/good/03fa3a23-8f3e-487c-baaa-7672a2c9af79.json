@@ -1,0 +1,131 @@
+{
+    "survey_id": "03fa3a23-8f3e-487c-baaa-7672a2c9af79",
+    "survey_name": "Electric Vehicle Adoption Barriers Survey",
+    "survey_brief": "This survey aims to identify the key barriers and concerns preventing consumers from adopting electric vehicles (EVs). The data will help manufacturers and policymakers address these challenges effectively.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How likely are you to consider purchasing an electric vehicle in the next 5 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a standard 5-point Likert scale for clarity. Ensure mobile-friendly radio buttons.",
+            "scripter_notes": "Field type: single-choice (radio buttons). Randomize options to avoid bias.",
+            "script": {
+                "question_text": "How likely are you to consider purchasing an electric vehicle in the next 5 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the top 3 factors preventing you from purchasing an electric vehicle today?",
+            "answer_options": [
+                "High upfront cost",
+                "Limited charging infrastructure",
+                "Range anxiety (fear of running out of charge)",
+                "Long charging times",
+                "Lack of model variety",
+                "Uncertainty about battery lifespan",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is 'Somewhat unlikely' or 'Very unlikely'",
+            "client_notes": "Allow multi-select with a max of 3 choices. Include an 'Other' option with open-text follow-up.",
+            "scripter_notes": "Field type: multi-choice (checkboxes) with validation for max 3 selections.",
+            "script": {
+                "question_text": "What are the top 3 factors preventing you from purchasing an electric vehicle today?",
+                "answer_options": [
+                    "High upfront cost",
+                    "Limited charging infrastructure",
+                    "Range anxiety (fear of running out of charge)",
+                    "Long charging times",
+                    "Lack of model variety",
+                    "Uncertainty about battery lifespan",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is 'Somewhat unlikely' or 'Very unlikely'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "If you selected 'Other' in Q2, please specify your concern:",
+            "answer_options": [],
+            "routing_logic": "Appears only if 'Other' is selected in Q2",
+            "client_notes": "Keep the text box concise but allow for detailed responses.",
+            "scripter_notes": "Field type: open-text (text area with 200-character limit).",
+            "script": {
+                "question_text": "If you selected 'Other' in Q2, please specify your concern:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if 'Other' is selected in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What incentives would make you more likely to purchase an electric vehicle?",
+            "answer_options": [
+                "Tax credits or rebates",
+                "Lower electricity rates for charging",
+                "Free public charging stations",
+                "Guaranteed battery replacement",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Multi-choice question. Randomize options to avoid order bias.",
+            "scripter_notes": "Field type: multi-choice (checkboxes) with an 'Other' option if needed.",
+            "script": {
+                "question_text": "What incentives would make you more likely to purchase an electric vehicle?",
+                "answer_options": [
+                    "Tax credits or rebates",
+                    "Lower electricity rates for charging",
+                    "Free public charging stations",
+                    "Guaranteed battery replacement",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the current availability of public charging stations in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (I don't use public charging)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Include a 'Not applicable' option for respondents who don't use public charging.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the current availability of public charging stations in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (I don't use public charging)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

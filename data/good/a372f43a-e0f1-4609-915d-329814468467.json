@@ -1,0 +1,131 @@
+{
+    "survey_id": "a372f43a-e0f1-4609-915d-329814468467",
+    "survey_name": "Remote Work Productivity and Well-being Survey",
+    "survey_brief": "This survey aims to understand employees' productivity levels, challenges, and well-being while working remotely. The insights will help improve remote work policies and support systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you typically work remotely?",
+            "answer_options": [
+                "1 day",
+                "2 days",
+                "3 days",
+                "4 days",
+                "5 days (full-time remote)",
+                "More than 5 days"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice format. Ensure options cover all common remote work schedules.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How many days per week do you typically work remotely?",
+                "answer_options": [
+                    "1 day",
+                    "2 days",
+                    "3 days",
+                    "4 days",
+                    "5 days (full-time remote)",
+                    "More than 5 days"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the biggest challenges you face while working remotely? (Select up to 3)",
+            "answer_options": [
+                "Distractions at home",
+                "Lack of in-person collaboration",
+                "Poor internet connection",
+                "Difficulty separating work and personal life",
+                "Feeling isolated",
+                "Time zone differences with colleagues",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for respondents who work remotely at least 1 day per week (Q1 answer options 1-6).",
+            "client_notes": "Use a multi-choice format with a limit of 3 selections. Include an 'Other' option for additional feedback.",
+            "scripter_notes": "Field type: checkbox with max selections = 3.",
+            "script": {
+                "question_text": "What are the biggest challenges you face while working remotely? (Select up to 3)",
+                "answer_options": [
+                    "Distractions at home",
+                    "Lack of in-person collaboration",
+                    "Poor internet connection",
+                    "Difficulty separating work and personal life",
+                    "Feeling isolated",
+                    "Time zone differences with colleagues",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who work remotely at least 1 day per week (Q1 answer options 1-6)."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How productive do you feel when working remotely compared to working in the office?",
+            "answer_options": [
+                "Much less productive",
+                "Slightly less productive",
+                "About the same",
+                "Slightly more productive",
+                "Much more productive"
+            ],
+            "routing_logic": "This question appears for respondents who work remotely at least 1 day per week (Q1 answer options 1-6).",
+            "client_notes": "Use a single-choice Likert scale for consistency. Ensure balanced options.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How productive do you feel when working remotely compared to working in the office?",
+                "answer_options": [
+                    "Much less productive",
+                    "Slightly less productive",
+                    "About the same",
+                    "Slightly more productive",
+                    "Much more productive"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who work remotely at least 1 day per week (Q1 answer options 1-6)."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What tools or resources would help you be more productive while working remotely? (e.g., better software, training, hardware)",
+            "answer_options": [],
+            "routing_logic": "This question appears for respondents who selected 'Much less productive' or 'Slightly less productive' in Q3.",
+            "client_notes": "Open-ended question to capture specific needs. Encourage detailed responses.",
+            "scripter_notes": "Field type: open text box.",
+            "script": {
+                "question_text": "What tools or resources would help you be more productive while working remotely? (e.g., better software, training, hardware)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for respondents who selected 'Much less productive' or 'Slightly less productive' in Q3."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with your current remote work setup?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "This question appears for all respondents who work remotely at least 1 day per week (Q1 answer options 1-6).",
+            "client_notes": "Use a single-choice Likert scale for easy comparison.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How satisfied are you with your current remote work setup?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents who work remotely at least 1 day per week (Q1 answer options 1-6)."
+            }
+        }
+    ]
+}

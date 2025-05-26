@@ -1,0 +1,115 @@
+{
+    "survey_id": "cc325b99-30a2-421f-83f8-73d023d47b38",
+    "survey_name": "Workplace Collaboration Tools Satisfaction Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction and usability of current collaboration tools used within the organization to improve productivity and team communication.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which collaboration tools do you currently use for work purposes? (Select all that apply)",
+            "answer_options": [
+                "Microsoft Teams",
+                "Slack",
+                "Zoom",
+                "Google Workspace (Chat, Meet, etc.)",
+                "Asana/Trello",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to capture all tools in use. Ensure 'Other' includes an open-text field for specifics.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include optional text input for 'Other' selection.",
+            "script": {
+                "question_text": "Which collaboration tools do you currently use for work purposes? (Select all that apply)",
+                "answer_options": [
+                    "Microsoft Teams",
+                    "Slack",
+                    "Zoom",
+                    "Google Workspace (Chat, Meet, etc.)",
+                    "Asana/Trello",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the primary collaboration tool you use most frequently?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale. Clarify 'primary tool' refers to the one selected most in Q1.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Randomize options to avoid bias.",
+            "script": {
+                "question_text": "How satisfied are you with the primary collaboration tool you use most frequently?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the biggest challenge you face when using collaboration tools?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative insights. Limit response to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area). Add character counter.",
+            "script": {
+                "question_text": "What is the biggest challenge you face when using collaboration tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you experience technical issues (e.g., lag, crashes) with your primary collaboration tool?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Respondents who selected at least one tool in Q1",
+            "client_notes": "Single-choice question. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (dropdown if on mobile).",
+            "script": {
+                "question_text": "How often do you experience technical issues (e.g., lag, crashes) with your primary collaboration tool?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one tool in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features would improve your collaboration tool experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to gather suggestions. Display after Q2 to contextualize dissatisfaction.",
+            "scripter_notes": "Field type: OPEN_TEXT (paragraph input).",
+            "script": {
+                "question_text": "What additional features would improve your collaboration tool experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+{
+    "survey_id": "7f0db292-a27a-45f2-9a09-4daf27bc5013",
+    "survey_name": "Customer Satisfaction Survey for Online Grocery Delivery",
+    "survey_brief": "This survey aims to gather feedback from customers regarding their satisfaction with online grocery delivery services to identify areas for improvement and enhance user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use online grocery delivery services?",
+            "answer_options": [
+                "Once a week or more",
+                "2-3 times a month",
+                "Once a month",
+                "Less than once a month",
+                "This is my first time"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice scale for clarity. Ensure options cover a broad range of usage frequencies.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How often do you use online grocery delivery services?",
+                "answer_options": [
+                    "Once a week or more",
+                    "2-3 times a month",
+                    "Once a month",
+                    "Less than once a month",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors are most important to you when choosing an online grocery delivery service? (Select all that apply)",
+            "answer_options": [
+                "Delivery speed",
+                "Product quality",
+                "Price competitiveness",
+                "User-friendly website/app",
+                "Customer service",
+                "Availability of organic/specialty items"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a multi-choice format to allow multiple selections. Ensure the options reflect common customer priorities.",
+            "scripter_notes": "Field type: checkbox",
+            "script": {
+                "question_text": "Which of the following factors are most important to you when choosing an online grocery delivery service? (Select all that apply)",
+                "answer_options": [
+                    "Delivery speed",
+                    "Product quality",
+                    "Price competitiveness",
+                    "User-friendly website/app",
+                    "Customer service",
+                    "Availability of organic/specialty items"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall experience of your most recent online grocery delivery?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who selected any option other than 'This is my first time' in Q1",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Ensure it is displayed clearly on both desktop and mobile.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How satisfied are you with the overall experience of your most recent online grocery delivery?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected any option other than 'This is my first time' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest to enhance your online grocery delivery experience?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: text input",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance your online grocery delivery experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

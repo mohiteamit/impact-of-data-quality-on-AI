@@ -1,0 +1,305 @@
+{
+    "survey_id": "a8e3db88-6f0f-490c-a78d-f31954ab2dc5",
+    "survey_name": "Home Energy Efficiency Upgrade Interest Survey",
+    "survey_brief": "This survey aims to understand homeowners' interest in and barriers to adopting home energy efficiency upgrades, such as insulation, solar panels, and smart thermostats.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with home energy efficiency upgrades?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a single-choice radio button for this question to measure awareness levels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How familiar are you with home energy efficiency upgrades?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following energy efficiency upgrades have you already implemented in your home? (Select all that apply)",
+            "answer_options": [
+                "Smart thermostat",
+                "LED lighting",
+                "Improved insulation",
+                "Energy-efficient windows",
+                "Solar panels",
+                "None of the above"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a multi-choice checkbox format for this question to capture multiple selections.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "Which of the following energy efficiency upgrades have you already implemented in your home? (Select all that apply)",
+                "answer_options": [
+                    "Smart thermostat",
+                    "LED lighting",
+                    "Improved insulation",
+                    "Energy-efficient windows",
+                    "Solar panels",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How interested are you in making energy efficiency upgrades to your home in the next 12 months?",
+            "answer_options": [
+                "Very interested",
+                "Somewhat interested",
+                "Neutral",
+                "Not very interested",
+                "Not interested at all"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a Likert scale for this single-choice question to gauge interest levels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How interested are you in making energy efficiency upgrades to your home in the next 12 months?",
+                "answer_options": [
+                    "Very interested",
+                    "Somewhat interested",
+                    "Neutral",
+                    "Not very interested",
+                    "Not interested at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors would motivate you to invest in home energy efficiency upgrades? (Select all that apply)",
+            "answer_options": [
+                "Lower energy bills",
+                "Environmental benefits",
+                "Government incentives/rebates",
+                "Increased home resale value",
+                "Improved comfort",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q3 answer is 'Very interested' or 'Somewhat interested'",
+            "client_notes": "Use a multi-choice checkbox format with an optional open-text field for 'Other'.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with conditional open-text for 'Other'",
+            "script": {
+                "question_text": "What factors would motivate you to invest in home energy efficiency upgrades? (Select all that apply)",
+                "answer_options": [
+                    "Lower energy bills",
+                    "Environmental benefits",
+                    "Government incentives/rebates",
+                    "Increased home resale value",
+                    "Improved comfort",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q3 answer is 'Very interested' or 'Somewhat interested'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What are the main barriers preventing you from investing in energy efficiency upgrades for your home?",
+            "answer_options": [
+                "High upfront costs",
+                "Lack of information",
+                "Uncertainty about savings",
+                "Renting/not owning the home",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q3 answer is 'Neutral', 'Not very interested', or 'Not interested at all'",
+            "client_notes": "Use a single-choice radio button with an optional open-text field for 'Other'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button) with conditional open-text for 'Other'",
+            "script": {
+                "question_text": "What are the main barriers preventing you from investing in energy efficiency upgrades for your home?",
+                "answer_options": [
+                    "High upfront costs",
+                    "Lack of information",
+                    "Uncertainty about savings",
+                    "Renting/not owning the home",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q3 answer is 'Neutral', 'Not very interested', or 'Not interested at all'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How much would you be willing to spend on energy efficiency upgrades in the next year?",
+            "answer_options": [
+                "Less than $500",
+                "$500 - $1,000",
+                "$1,001 - $2,500",
+                "$2,501 - $5,000",
+                "More than $5,000",
+                "Unsure"
+            ],
+            "routing_logic": "Shown if Q3 answer is 'Very interested' or 'Somewhat interested'",
+            "client_notes": "Use a single-choice radio button to quantify potential investment levels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How much would you be willing to spend on energy efficiency upgrades in the next year?",
+                "answer_options": [
+                    "Less than $500",
+                    "$500 - $1,000",
+                    "$1,001 - $2,500",
+                    "$2,501 - $5,000",
+                    "More than $5,000",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q3 answer is 'Very interested' or 'Somewhat interested'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How do you typically learn about home improvement or energy-saving options? (Select all that apply)",
+            "answer_options": [
+                "Online research",
+                "Friends/family",
+                "Home improvement stores",
+                "Utility company programs",
+                "Social media",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a multi-choice checkbox format to identify common information channels.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with conditional open-text for 'Other'",
+            "script": {
+                "question_text": "How do you typically learn about home improvement or energy-saving options? (Select all that apply)",
+                "answer_options": [
+                    "Online research",
+                    "Friends/family",
+                    "Home improvement stores",
+                    "Utility company programs",
+                    "Social media",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Would you be interested in financing options (e.g., low-interest loans) for energy efficiency upgrades?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Shown if Q3 answer is 'Very interested' or 'Somewhat interested'",
+            "client_notes": "Use a single-choice radio button for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "Would you be interested in financing options (e.g., low-interest loans) for energy efficiency upgrades?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q3 answer is 'Very interested' or 'Somewhat interested'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What type of energy efficiency upgrade are you most interested in learning more about?",
+            "answer_options": [
+                "Smart thermostats",
+                "Solar panels",
+                "Insulation improvements",
+                "Energy-efficient appliances",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q3 answer is 'Very interested' or 'Somewhat interested'",
+            "client_notes": "Use a single-choice radio button with an optional open-text field for 'Other'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button) with conditional open-text for 'Other'",
+            "script": {
+                "question_text": "What type of energy efficiency upgrade are you most interested in learning more about?",
+                "answer_options": [
+                    "Smart thermostats",
+                    "Solar panels",
+                    "Insulation improvements",
+                    "Energy-efficient appliances",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q3 answer is 'Very interested' or 'Somewhat interested'"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "How satisfied are you with your current home's energy efficiency?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a Likert scale for this single-choice question to measure satisfaction.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How satisfied are you with your current home's energy efficiency?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q11",
+            "question_text": "Have you ever participated in a government or utility company rebate program for energy efficiency upgrades?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I don't know"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a single-choice radio button for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "Have you ever participated in a government or utility company rebate program for energy efficiency upgrades?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I don't know"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q12",
+            "question_text": "What additional information would help you decide whether to invest in energy efficiency upgrades?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Use an open-text field to capture qualitative insights.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What additional information would help you decide whether to invest in energy efficiency upgrades?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

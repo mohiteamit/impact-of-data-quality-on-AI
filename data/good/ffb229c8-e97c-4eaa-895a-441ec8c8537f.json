@@ -1,0 +1,131 @@
+{
+    "survey_id": "ffb229c8-e97c-4eaa-895a-441ec8c8537f",
+    "survey_name": "Customer Satisfaction Survey for Plant-Based Food Products",
+    "survey_brief": "This survey aims to gather feedback from consumers about their satisfaction with plant-based food products, their purchasing habits, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase plant-based food products?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Occasionally",
+                "Never"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use a clear frequency scale to ensure accurate responses. Mobile-friendly dropdowns are recommended.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you purchase plant-based food products?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Occasionally",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of plant-based food products do you typically purchase? (Select all that apply)",
+            "answer_options": [
+                "Meat substitutes (e.g., burgers, sausages)",
+                "Dairy alternatives (e.g., milk, cheese)",
+                "Snack foods (e.g., protein bars, chips)",
+                "Ready-to-eat meals",
+                "Bakery items (e.g., bread, cookies)"
+            ],
+            "routing_logic": "Displayed if Q1 is not 'Never'",
+            "client_notes": "Ensure multi-select options are clearly labeled for easy selection on all devices.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes).",
+            "script": {
+                "question_text": "What types of plant-based food products do you typically purchase? (Select all that apply)",
+                "answer_options": [
+                    "Meat substitutes (e.g., burgers, sausages)",
+                    "Dairy alternatives (e.g., milk, cheese)",
+                    "Snack foods (e.g., protein bars, chips)",
+                    "Ready-to-eat meals",
+                    "Bakery items (e.g., bread, cookies)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Displayed if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influence your decision to purchase plant-based food products? (Select up to three)",
+            "answer_options": [
+                "Health benefits",
+                "Environmental concerns",
+                "Taste",
+                "Price",
+                "Availability",
+                "Ethical reasons",
+                "Curiosity",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Displayed if Q1 is not 'Never'",
+            "client_notes": "Limit selections to three to prioritize key factors. Include an 'Other' option for additional input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with a maximum of three selections).",
+            "script": {
+                "question_text": "What factors influence your decision to purchase plant-based food products? (Select up to three)",
+                "answer_options": [
+                    "Health benefits",
+                    "Environmental concerns",
+                    "Taste",
+                    "Price",
+                    "Availability",
+                    "Ethical reasons",
+                    "Curiosity",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Displayed if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the taste of plant-based food products you have tried?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Displayed if Q1 is not 'Never'",
+            "client_notes": "Use a standard Likert scale for consistency. Avoid neutral bias by placing 'Neutral' in the middle.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the taste of plant-based food products you have tried?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in plant-based food products?",
+            "answer_options": [],
+            "routing_logic": "Displayed if Q1 is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What improvements would you like to see in plant-based food products?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Displayed if Q1 is not 'Never'"
+            }
+        }
+    ]
+}

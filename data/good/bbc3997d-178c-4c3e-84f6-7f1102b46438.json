@@ -1,0 +1,123 @@
+{
+    "survey_id": "bbc3997d-178c-4c3e-84f6-7f1102b46438",
+    "survey_name": "AI-Assisted Customer Support Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with AI-assisted customer support services across various industries.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you interact with AI-assisted customer support (e.g., chatbots, virtual assistants)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "Use a single-choice scale to measure frequency of interaction. Ensure options cover all possible usage patterns.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you interact with AI-assisted customer support (e.g., chatbots, virtual assistants)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which industries have you used AI-assisted customer support in? (Select all that apply)",
+            "answer_options": [
+                "Banking/Financial Services",
+                "Retail/E-commerce",
+                "Telecommunications",
+                "Healthcare",
+                "Travel/Hospitality",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Multi-choice question to identify industry exposure. Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: checkbox (multi-choice). Include a text input field for 'Other'.",
+            "script": {
+                "question_text": "Which industries have you used AI-assisted customer support in? (Select all that apply)",
+                "answer_options": [
+                    "Banking/Financial Services",
+                    "Retail/E-commerce",
+                    "Telecommunications",
+                    "Healthcare",
+                    "Travel/Hospitality",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with the resolution provided by AI-assisted customer support? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: radio button (single-choice). Display as a horizontal scale.",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the resolution provided by AI-assisted customer support? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for AI-assisted customer support?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Open-ended question to gather qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open text. Include a character counter.",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-assisted customer support?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you prefer AI-assisted support over human customer service for routine inquiries?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Depends on the situation"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Single-choice question to gauge preference. Include a neutral option for nuanced responses.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Would you prefer AI-assisted support over human customer service for routine inquiries?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Depends on the situation"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        }
+    ]
+}

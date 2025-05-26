@@ -1,0 +1,99 @@
+{
+    "survey_id": "99097a00-406f-40bf-9d51-126397889b33",
+    "survey_name": "Workplace Wellness Program Evaluation Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction and effectiveness of the current workplace wellness programs to identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the current workplace wellness programs offered by your employer?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction levels. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the current workplace wellness programs offered by your employer?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which wellness programs do you currently participate in? (Select all that apply)",
+            "answer_options": [
+                "Mental health resources",
+                "Fitness classes or gym memberships",
+                "Nutrition counseling",
+                "Stress management workshops",
+                "None of the above"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Allow multiple selections to capture participation across different programs.",
+            "scripter_notes": "Field type: Multi-choice checkboxes.",
+            "script": {
+                "question_text": "Which wellness programs do you currently participate in? (Select all that apply)",
+                "answer_options": [
+                    "Mental health resources",
+                    "Fitness classes or gym memberships",
+                    "Nutrition counseling",
+                    "Stress management workshops",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for the workplace wellness programs?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Open-ended question to gather qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: Open-ended text box.",
+            "script": {
+                "question_text": "What improvements would you suggest for the workplace wellness programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you participate in workplace wellness activities?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for respondents who selected any wellness program in Q2.",
+            "client_notes": "Use a frequency scale to measure engagement levels.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Show only if Q2 has at least one selection other than 'None of the above'.",
+            "script": {
+                "question_text": "How often do you participate in workplace wellness activities?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who selected any wellness program in Q2."
+            }
+        }
+    ]
+}

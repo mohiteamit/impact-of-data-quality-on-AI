@@ -1,0 +1,121 @@
+{
+    "survey_id": "7a761e61-438b-494f-8475-906a8f332f98",
+    "survey_name": "Smart Water Meter Adoption Survey",
+    "survey_brief": "This survey aims to gather feedback from homeowners regarding their experiences and opinions on smart water meters, including installation, usage, and perceived benefits.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently have a smart water meter installed in your home?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I'm not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a simple yes/no question to segment respondents. Consider adding a 'Not sure' option for clarity.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "Do you currently have a smart water meter installed in your home?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I'm not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your smart water meter?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 answer is 'Yes'",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How satisfied are you with your smart water meter?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features of your smart water meter do you find most useful? (Select all that apply)",
+            "answer_options": [
+                "Real-time water usage tracking",
+                "Leak detection alerts",
+                "Historical usage reports",
+                "Integration with smart home systems",
+                "None of the above"
+            ],
+            "routing_logic": "Only if Q1 answer is 'Yes'",
+            "client_notes": "Multi-choice question to identify key features valued by users.",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "What features of your smart water meter do you find most useful? (Select all that apply)",
+                "answer_options": [
+                    "Real-time water usage tracking",
+                    "Leak detection alerts",
+                    "Historical usage reports",
+                    "Integration with smart home systems",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about smart water meters?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: open text",
+            "script": {
+                "question_text": "What concerns, if any, do you have about smart water meters?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend a smart water meter to a friend or neighbor?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Only if Q1 answer is 'Yes'",
+            "client_notes": "Use a 5-point scale to measure likelihood of recommendation (similar to NPS).",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How likely are you to recommend a smart water meter to a friend or neighbor?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 answer is 'Yes'"
+            }
+        }
+    ]
+}

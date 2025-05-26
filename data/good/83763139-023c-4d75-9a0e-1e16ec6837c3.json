@@ -1,0 +1,133 @@
+{
+    "survey_id": "83763139-023c-4d75-9a0e-1e16ec6837c3",
+    "survey_name": "AI-Powered Personal Assistant Usage Survey",
+    "survey_brief": "This survey aims to understand user preferences, satisfaction levels, and feature usage patterns for AI-powered personal assistants like Siri, Alexa, Google Assistant, etc.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which AI-powered personal assistant do you use most frequently?",
+            "answer_options": [
+                "Siri (Apple)",
+                "Alexa (Amazon)",
+                "Google Assistant",
+                "Bixby (Samsung)",
+                "Cortana (Microsoft)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Include an 'Other' option with a text field for unspecified assistants.",
+            "scripter_notes": "Use radio buttons for single selection with an optional text field for 'Other'.",
+            "script": {
+                "question_text": "Which AI-powered personal assistant do you use most frequently?",
+                "answer_options": [
+                    "Siri (Apple)",
+                    "Alexa (Amazon)",
+                    "Google Assistant",
+                    "Bixby (Samsung)",
+                    "Cortana (Microsoft)",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you use your preferred AI assistant in a typical day?",
+            "answer_options": [
+                "Several times a day",
+                "Once a day",
+                "A few times a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents who selected any option in Q1 except 'Never'",
+            "client_notes": "Order options logically from most to least frequent.",
+            "scripter_notes": "Use radio buttons for single selection.",
+            "script": {
+                "question_text": "How often do you use your preferred AI assistant in a typical day?",
+                "answer_options": [
+                    "Several times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who selected any option in Q1 except 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are your primary use cases for AI assistants? (Select all that apply)",
+            "answer_options": [
+                "Setting reminders/alarms",
+                "Playing music/podcasts",
+                "Checking weather forecasts",
+                "Getting news updates",
+                "Controlling smart home devices",
+                "Making calls/sending messages",
+                "Answering general knowledge questions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents who selected any option in Q1 except 'Never'",
+            "client_notes": "Ensure the 'Other' option includes a text field for additional input.",
+            "scripter_notes": "Use checkboxes for multiple selections with an optional text field for 'Other'.",
+            "script": {
+                "question_text": "What are your primary use cases for AI assistants? (Select all that apply)",
+                "answer_options": [
+                    "Setting reminders/alarms",
+                    "Playing music/podcasts",
+                    "Checking weather forecasts",
+                    "Getting news updates",
+                    "Controlling smart home devices",
+                    "Making calls/sending messages",
+                    "Answering general knowledge questions",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents who selected any option in Q1 except 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1-5, how satisfied are you with your primary AI assistant? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears for all respondents who selected any option in Q1 except 'Never'",
+            "client_notes": "Use a Likert scale with clear endpoint labels for consistency.",
+            "scripter_notes": "Use radio buttons with a horizontal layout for the scale.",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with your primary AI assistant? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who selected any option in Q1 except 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in AI assistants?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Keep this open-ended to capture diverse feedback.",
+            "scripter_notes": "Use a text area field for longer responses.",
+            "script": {
+                "question_text": "What improvements would you like to see in AI assistants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

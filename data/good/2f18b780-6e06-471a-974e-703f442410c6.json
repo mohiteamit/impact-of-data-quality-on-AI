@@ -1,0 +1,129 @@
+{
+    "survey_id": "2f18b780-6e06-471a-974e-703f442410c6",
+    "survey_name": "Airline Passenger Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from passengers about their recent flight experience to help improve service quality and customer satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which airline did you fly with most recently?",
+            "answer_options": [
+                "Delta Air Lines",
+                "American Airlines",
+                "United Airlines",
+                "Southwest Airlines",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with a text field for airlines not listed.",
+            "scripter_notes": "Use a single-choice dropdown with an 'Other' option that triggers a text field.",
+            "script": {
+                "question_text": "Which airline did you fly with most recently?",
+                "answer_options": [
+                    "Delta Air Lines",
+                    "American Airlines",
+                    "United Airlines",
+                    "Southwest Airlines",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied were you with the overall flight experience?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency with industry standards.",
+            "scripter_notes": "Single-choice radio buttons with vertical alignment for mobile-friendliness.",
+            "script": {
+                "question_text": "How satisfied were you with the overall flight experience?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What aspects of your flight met or exceeded your expectations? (Select all that apply)",
+            "answer_options": [
+                "Check-in process",
+                "Boarding efficiency",
+                "Cabin cleanliness",
+                "In-flight service",
+                "Seat comfort",
+                "On-time performance",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow for multiple selections but include a 'None of the above' option.",
+            "scripter_notes": "Multi-choice checkboxes with a 'select all that apply' instruction.",
+            "script": {
+                "question_text": "What aspects of your flight met or exceeded your expectations? (Select all that apply)",
+                "answer_options": [
+                    "Check-in process",
+                    "Boarding efficiency",
+                    "Cabin cleanliness",
+                    "In-flight service",
+                    "Seat comfort",
+                    "On-time performance",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any issues you encountered during your flight.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q2",
+            "client_notes": "Open-ended question to capture detailed feedback from dissatisfied passengers.",
+            "scripter_notes": "Open-text field with a character limit of 500.",
+            "script": {
+                "question_text": "Please describe any issues you encountered during your flight.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend this airline to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This is a standard Net Promoter Score (NPS) question; ensure the scale is consistent.",
+            "scripter_notes": "Single-choice radio buttons labeled from 0 (Very unlikely) to 10 (Very likely) for NPS calculation.",
+            "script": {
+                "question_text": "How likely are you to recommend this airline to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}
