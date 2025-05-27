@@ -1,0 +1,155 @@
+{
+    "survey_id": "b3269048-dd43-41d1-944f-9fdeae2726b6",
+    "survey_name": "Home Internet Service Reliability Survey",
+    "survey_brief": "This survey aims to gather feedback from users about their satisfaction with home internet service reliability, including uptime, speed consistency, and customer support responsiveness.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the overall reliability of your home internet service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point Likert scale for clear feedback. Ensure mobile-friendly layout for buttons.",
+            "scripter_notes": "Single-choice radio buttons. Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "How satisfied are you with the overall reliability of your home internet service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you experience unexpected downtime or outages with your home internet service?",
+            "answer_options": [
+                "Never",
+                "Rarely (once every few months)",
+                "Occasionally (once a month)",
+                "Frequently (multiple times a month)",
+                "Very frequently (weekly or more)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a frequency scale for measurable insights. Consider adding a 'Not sure' option if needed.",
+            "scripter_notes": "Single-choice radio buttons. Ensure options are mutually exclusive.",
+            "script": {
+                "question_text": "How often do you experience unexpected downtime or outages with your home internet service?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once every few months)",
+                    "Occasionally (once a month)",
+                    "Frequently (multiple times a month)",
+                    "Very frequently (weekly or more)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following issues have you encountered with your home internet service? (Select all that apply)",
+            "answer_options": [
+                "Slow speeds during peak hours",
+                "Frequent disconnections",
+                "Inconsistent Wi-Fi signal strength",
+                "Poor customer support responsiveness",
+                "Difficulty setting up or troubleshooting",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Include a 'None of the above' option to capture respondents without issues. Multi-select format.",
+            "scripter_notes": "Multi-choice checkboxes. Randomize option order except for 'None of the above'.",
+            "script": {
+                "question_text": "Which of the following issues have you encountered with your home internet service? (Select all that apply)",
+                "answer_options": [
+                    "Slow speeds during peak hours",
+                    "Frequent disconnections",
+                    "Inconsistent Wi-Fi signal strength",
+                    "Poor customer support responsiveness",
+                    "Difficulty setting up or troubleshooting",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you chose your current home internet service provider?",
+            "answer_options": [
+                "Price or affordability",
+                "Speed and reliability",
+                "Availability in my area",
+                "Customer service reputation",
+                "Bundle deals (e.g., TV, phone)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Include an 'Other' option with a text field for detailed responses. Single-choice format.",
+            "scripter_notes": "Single-choice radio buttons with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you chose your current home internet service provider?",
+                "answer_options": [
+                    "Price or affordability",
+                    "Speed and reliability",
+                    "Availability in my area",
+                    "Customer service reputation",
+                    "Bundle deals (e.g., TV, phone)",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How would you describe your experience with your internet provider's customer support?",
+            "answer_options": [
+                "Excellent (quick and helpful)",
+                "Good (satisfactory but could improve)",
+                "Average (neither good nor bad)",
+                "Poor (slow or unhelpful)",
+                "Very poor (unresponsive or frustrating)"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Poor customer support responsiveness' in Q3 or 'Dissatisfied'/'Very dissatisfied' in Q1",
+            "client_notes": "Use a 5-point Likert scale for nuanced feedback. Route based on prior dissatisfaction.",
+            "scripter_notes": "Single-choice radio buttons. Ensure conditional logic is correctly implemented.",
+            "script": {
+                "question_text": "How would you describe your experience with your internet provider's customer support?",
+                "answer_options": [
+                    "Excellent (quick and helpful)",
+                    "Good (satisfactory but could improve)",
+                    "Average (neither good nor bad)",
+                    "Poor (slow or unhelpful)",
+                    "Very poor (unresponsive or frustrating)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Poor customer support responsiveness' in Q3 or 'Dissatisfied'/'Very dissatisfied' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you could change one thing about your home internet service, what would it be?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question for qualitative insights. Limit response length to 250 characters.",
+            "scripter_notes": "Open-text field with character limit. Ensure mobile-friendly input.",
+            "script": {
+                "question_text": "If you could change one thing about your home internet service, what would it be?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

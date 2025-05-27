@@ -1,0 +1,101 @@
+{
+    "survey_id": "a5f9907c-4a02-41dc-a6e2-8bd6d4941b84",
+    "survey_name": "Electric Bicycle Commuter Satisfaction Survey",
+    "survey_brief": "This survey aims to understand the satisfaction levels and experiences of commuters who use electric bicycles for their daily travel.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use an electric bicycle for commuting?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Only occasionally"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a radio button for single-choice responses. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use an electric bicycle for commuting?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Only occasionally"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons you choose an electric bicycle for commuting? (Select all that apply)",
+            "answer_options": [
+                "Cost savings on fuel/public transport",
+                "Environmental benefits",
+                "Faster than walking/public transport",
+                "Health and fitness benefits",
+                "Avoiding traffic congestion",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use checkboxes for multi-choice responses. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are the primary reasons you choose an electric bicycle for commuting? (Select all that apply)",
+                "answer_options": [
+                    "Cost savings on fuel/public transport",
+                    "Environmental benefits",
+                    "Faster than walking/public transport",
+                    "Health and fitness benefits",
+                    "Avoiding traffic congestion",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the battery life of your electric bicycle?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents who use electric bicycles at least occasionally (Q1 not 'Only occasionally')",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the battery life of your electric bicycle?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who use electric bicycles at least occasionally (Q1 not 'Only occasionally')"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for electric bicycle infrastructure in your area?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use an open-text field to gather qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you suggest for electric bicycle infrastructure in your area?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

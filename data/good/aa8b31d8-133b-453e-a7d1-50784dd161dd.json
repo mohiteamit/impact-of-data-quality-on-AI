@@ -1,0 +1,129 @@
+{
+    "survey_id": "aa8b31d8-133b-453e-a7d1-50784dd161dd",
+    "survey_name": "Urban Bike Commuter Experience Survey",
+    "survey_brief": "This survey aims to understand the experiences and challenges faced by urban bike commuters to improve cycling infrastructure and services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you commute by bicycle in urban areas?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Only occasionally"
+            ],
+            "routing_logic": "Always appears as first question",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: single-choice radio button",
+            "script": {
+                "question_text": "How often do you commute by bicycle in urban areas?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Only occasionally"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears as first question"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for commuting by bicycle? (Select all that apply)",
+            "answer_options": [
+                "Health and fitness benefits",
+                "Cost savings",
+                "Environmental concerns",
+                "Avoiding traffic congestion",
+                "Faster commute time",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Only occasionally'",
+            "client_notes": "Use checkboxes for multi-select. Include 'Other' as an open-text option if selected.",
+            "scripter_notes": "Field type: multi-choice checkbox with optional open-text",
+            "script": {
+                "question_text": "What are your primary reasons for commuting by bicycle? (Select all that apply)",
+                "answer_options": [
+                    "Health and fitness benefits",
+                    "Cost savings",
+                    "Environmental concerns",
+                    "Avoiding traffic congestion",
+                    "Faster commute time",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Only occasionally'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the current bicycle infrastructure (e.g., bike lanes, parking) in your city?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Only occasionally'",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure clear labeling.",
+            "scripter_notes": "Field type: single-choice radio button",
+            "script": {
+                "question_text": "How satisfied are you with the current bicycle infrastructure (e.g., bike lanes, parking) in your city?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Only occasionally'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges do you face while commuting by bicycle in urban areas? (Select all that apply)",
+            "answer_options": [
+                "Lack of dedicated bike lanes",
+                "Poor road conditions",
+                "Safety concerns (e.g., aggressive drivers)",
+                "Insufficient bike parking",
+                "Theft risk",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Only occasionally'",
+            "client_notes": "Use checkboxes for multi-select. Include 'Other' as an open-text option if selected.",
+            "scripter_notes": "Field type: multi-choice checkbox with optional open-text",
+            "script": {
+                "question_text": "What challenges do you face while commuting by bicycle in urban areas? (Select all that apply)",
+                "answer_options": [
+                    "Lack of dedicated bike lanes",
+                    "Poor road conditions",
+                    "Safety concerns (e.g., aggressive drivers)",
+                    "Insufficient bike parking",
+                    "Theft risk",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Only occasionally'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would make bicycle commuting more appealing to you?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is not 'Only occasionally'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Provide a text box with ample space.",
+            "scripter_notes": "Field type: open-text",
+            "script": {
+                "question_text": "What improvements would make bicycle commuting more appealing to you?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is not 'Only occasionally'"
+            }
+        }
+    ]
+}

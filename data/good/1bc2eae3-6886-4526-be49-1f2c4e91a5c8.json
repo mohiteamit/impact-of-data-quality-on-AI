@@ -1,0 +1,137 @@
+{
+    "survey_id": "1bc2eae3-6886-4526-be49-1f2c4e91a5c8",
+    "survey_name": "Electric Bike Commuter Experience Survey",
+    "survey_brief": "This survey aims to understand the commuting habits, satisfaction levels, and challenges faced by electric bike commuters to improve urban mobility solutions.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use an electric bike for commuting?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Only occasionally"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clear response capture.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use an electric bike for commuting?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Only occasionally"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons you choose an electric bike for commuting? (Select all that apply)",
+            "answer_options": [
+                "Environmental benefits",
+                "Cost savings",
+                "Avoiding traffic congestion",
+                "Health and fitness",
+                "Convenience",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections with checkboxes. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are the primary reasons you choose an electric bike for commuting? (Select all that apply)",
+                "answer_options": [
+                    "Environmental benefits",
+                    "Cost savings",
+                    "Avoiding traffic congestion",
+                    "Health and fitness",
+                    "Convenience",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with your electric bike's performance for commuting? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with a horizontal layout.",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with your electric bike's performance for commuting? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges do you face while commuting with an electric bike?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT) with a character limit.",
+            "script": {
+                "question_text": "What challenges do you face while commuting with an electric bike?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend electric bike commuting to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No, not at this time"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button. Include a follow-up question for 'No' responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Route to Q6 if 'No' is selected.",
+            "script": {
+                "question_text": "Would you recommend electric bike commuting to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No, not at this time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would make you more likely to recommend electric bike commuting?",
+            "answer_options": [],
+            "routing_logic": "Only if Q5 is answered with 'No, not at this time'",
+            "client_notes": "Open-ended question to capture specific concerns. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT) with conditional routing based on Q5.",
+            "script": {
+                "question_text": "What improvements would make you more likely to recommend electric bike commuting?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q5 is answered with 'No, not at this time'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,119 @@
+{
+    "survey_id": "57ff0683-1f02-48f0-af0d-c445d5dfbeb1",
+    "survey_name": "Corporate Sustainability Initiatives Feedback Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the company's sustainability initiatives, including awareness, participation, and suggestions for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with our company's current sustainability initiatives?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not familiar at all"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a Likert scale for familiarity assessment. Ensure options are clear and unambiguous.",
+            "scripter_notes": "Field type: single-choice radio buttons. Randomize options to avoid bias.",
+            "script": {
+                "question_text": "How familiar are you with our company's current sustainability initiatives?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainability initiatives have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Office recycling program",
+                "Paperless office initiatives",
+                "Energy-saving challenges",
+                "Sustainable commuting programs",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multiple selections to capture full participation. Include 'None of the above' for accuracy.",
+            "scripter_notes": "Field type: multi-choice checkboxes. Ensure 'None of the above' deselects other options if chosen.",
+            "script": {
+                "question_text": "Which of the following sustainability initiatives have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Office recycling program",
+                    "Paperless office initiatives",
+                    "Energy-saving challenges",
+                    "Sustainable commuting programs",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the company's efforts to promote sustainability?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a standard satisfaction scale. Consider adding a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: single-choice radio buttons. Display options vertically.",
+            "script": {
+                "question_text": "How satisfied are you with the company's efforts to promote sustainability?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional sustainability initiatives would you like to see implemented?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open-text input with character count validation.",
+            "script": {
+                "question_text": "What additional sustainability initiatives would you like to see implemented?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be interested in joining a sustainability task force or committee?",
+            "answer_options": [
+                "Yes, very interested",
+                "Yes, somewhat interested",
+                "No, not interested"
+            ],
+            "routing_logic": "Appears for all respondents except those who selected 'Not familiar at all' in Q1",
+            "client_notes": "Use a simple interest scale. Ensure routing logic excludes those unaware of initiatives.",
+            "scripter_notes": "Field type: single-choice radio buttons. Implement skip logic based on Q1 response.",
+            "script": {
+                "question_text": "Would you be interested in joining a sustainability task force or committee?",
+                "answer_options": [
+                    "Yes, very interested",
+                    "Yes, somewhat interested",
+                    "No, not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents except those who selected 'Not familiar at all' in Q1"
+            }
+        }
+    ]
+}

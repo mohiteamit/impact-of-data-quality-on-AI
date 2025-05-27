@@ -1,0 +1,173 @@
+{
+    "survey_id": "66e3155b-efd5-44ab-b897-349b88e33abd",
+    "survey_name": "Online Banking Fraud Awareness Survey",
+    "survey_brief": "This survey aims to understand customers' awareness and experiences with online banking fraud to improve security measures and customer education.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use online banking services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button format to ensure clarity and ease of response.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you use online banking services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Have you ever encountered or suspected online banking fraud?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "A 'No' or 'Unsure' response should route to Q5; 'Yes' routes to Q3.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Implement branching logic based on response.",
+            "script": {
+                "question_text": "Have you ever encountered or suspected online banking fraud?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What type of fraud did you encounter or suspect? (Select all that apply)",
+            "answer_options": [
+                "Phishing emails",
+                "Unauthorized transactions",
+                "Account takeover",
+                "Fake customer service calls",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears only for respondents who answered 'Yes' to Q2.",
+            "client_notes": "Use a multi-choice checkbox format. Include an open-text field for 'Other' responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What type of fraud did you encounter or suspect? (Select all that apply)",
+                "answer_options": [
+                    "Phishing emails",
+                    "Unauthorized transactions",
+                    "Account takeover",
+                    "Fake customer service calls",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears only for respondents who answered 'Yes' to Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How did you resolve the fraud issue?",
+            "answer_options": [
+                "Contacted the bank immediately",
+                "Used the bank's fraud reporting tool",
+                "Filed a police report",
+                "Ignored it",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears only for respondents who answered 'Yes' to Q2.",
+            "client_notes": "Include an open-text option for 'Other' to capture diverse responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "How did you resolve the fraud issue?",
+                "answer_options": [
+                    "Contacted the bank immediately",
+                    "Used the bank's fraud reporting tool",
+                    "Filed a police report",
+                    "Ignored it",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears only for respondents who answered 'Yes' to Q2."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What security measures do you use to protect your online banking? (Select all that apply)",
+            "answer_options": [
+                "Two-factor authentication",
+                "Strong passwords",
+                "Regular password changes",
+                "Monitoring account activity",
+                "None of the above"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Multi-choice format to capture multiple security practices.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes).",
+            "script": {
+                "question_text": "What security measures do you use to protect your online banking? (Select all that apply)",
+                "answer_options": [
+                    "Two-factor authentication",
+                    "Strong passwords",
+                    "Regular password changes",
+                    "Monitoring account activity",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with your bank's fraud prevention and response measures?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for consistency and ease of analysis.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with your bank's fraud prevention and response measures?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional fraud prevention measures would you like your bank to implement?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Open-ended question to gather qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with a character limit.",
+            "script": {
+                "question_text": "What additional fraud prevention measures would you like your bank to implement?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

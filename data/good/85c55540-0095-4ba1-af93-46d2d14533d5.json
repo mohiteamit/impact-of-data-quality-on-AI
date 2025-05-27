@@ -1,0 +1,127 @@
+{
+    "survey_id": "85c55540-0095-4ba1-af93-46d2d14533d5",
+    "survey_name": "Digital Wallet Adoption Survey",
+    "survey_brief": "This survey aims to understand user preferences and experiences with digital wallet services, including adoption barriers, usage frequency, and satisfaction levels.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use a digital wallet (e.g., Apple Pay, Google Pay, PayPal) for transactions?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button format for clarity. Ensure options cover the full range of usage frequencies.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use a digital wallet (e.g., Apple Pay, Google Pay, PayPal) for transactions?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features are most important to you when selecting a digital wallet? (Select all that apply)",
+            "answer_options": [
+                "Security and fraud protection",
+                "Ease of use",
+                "Compatibility with merchants",
+                "Rewards or cashback programs",
+                "Customer support",
+                "Transaction speed"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice checkbox format. Randomize answer options to minimize bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which of the following features are most important to you when selecting a digital wallet? (Select all that apply)",
+                "answer_options": [
+                    "Security and fraud protection",
+                    "Ease of use",
+                    "Compatibility with merchants",
+                    "Rewards or cashback programs",
+                    "Customer support",
+                    "Transaction speed"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you do not use a digital wallet?",
+            "answer_options": [
+                "Concerns about security",
+                "Lack of need",
+                "Prefer traditional payment methods",
+                "Limited merchant acceptance",
+                "Technical difficulties"
+            ],
+            "routing_logic": "Respondents who answered 'Never' to Q1",
+            "client_notes": "Display this question only to non-users. Use a single-choice radio button format.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "What is the primary reason you do not use a digital wallet?",
+                "answer_options": [
+                    "Concerns about security",
+                    "Lack of need",
+                    "Prefer traditional payment methods",
+                    "Limited merchant acceptance",
+                    "Technical difficulties"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current digital wallet service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who did not answer 'Never' to Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with your current digital wallet service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who did not answer 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for digital wallet services?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Limit response length to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text input box with character limit)",
+            "script": {
+                "question_text": "What improvements would you suggest for digital wallet services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

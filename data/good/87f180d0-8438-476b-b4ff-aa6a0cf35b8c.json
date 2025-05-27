@@ -1,0 +1,125 @@
+{
+  "survey_id": "SV5678",
+  "survey_name": "Urban Bike Lane Usage and Satisfaction Survey",
+  "survey_brief": "This survey aims to gather feedback on urban bike lane usage, safety perceptions, and overall satisfaction to help improve cycling infrastructure in the city.",
+  "questions": [
+    {
+      "qid": "Q1",
+      "question_text": "How frequently do you use urban bike lanes?",
+      "answer_options": [
+        "Daily",
+        "3-5 times per week",
+        "1-2 times per week",
+        "Less than once a week",
+        "Never"
+      ],
+      "routing_logic": "All respondents",
+      "client_notes": "Use a single-choice radio button for clarity. Ensure the options cover all frequency ranges.",
+      "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+      "script": {
+        "question_text": "How frequently do you use urban bike lanes?",
+        "answer_options": [
+          "Daily",
+          "3-5 times per week",
+          "1-2 times per week",
+          "Less than once a week",
+          "Never"
+        ],
+        "type": "SINGLE_CHOICE",
+        "routing_logic": "All respondents"
+      }
+    },
+    {
+      "qid": "Q2",
+      "question_text": "What is your primary reason for using bike lanes? (Select all that apply)",
+      "answer_options": [
+        "Commuting to work/school",
+        "Exercise/recreation",
+        "Environmental concerns",
+        "Cost savings (vs. driving/public transport)",
+        "Other (please specify)"
+      ],
+      "routing_logic": "Only if Q1 != 'Never'",
+      "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for specifics.",
+      "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), with conditional logic based on Q1.",
+      "script": {
+        "question_text": "What is your primary reason for using bike lanes? (Select all that apply)",
+        "answer_options": [
+          "Commuting to work/school",
+          "Exercise/recreation",
+          "Environmental concerns",
+          "Cost savings (vs. driving/public transport)",
+          "Other (please specify)"
+        ],
+        "type": "MULTI_CHOICE",
+        "routing_logic": "Only if Q1 != 'Never'"
+      }
+    },
+    {
+      "qid": "Q3",
+      "question_text": "On a scale of 1-5, how satisfied are you with the safety of urban bike lanes in your area? (1 = Very Unsatisfied, 5 = Very Satisfied)",
+      "answer_options": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ],
+      "routing_logic": "Only if Q1 != 'Never'",
+      "client_notes": "Use a Likert scale. Label endpoints for clarity.",
+      "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons), with conditional logic based on Q1.",
+      "script": {
+        "question_text": "On a scale of 1-5, how satisfied are you with the safety of urban bike lanes in your area? (1 = Very Unsatisfied, 5 = Very Satisfied)",
+        "answer_options": [
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "type": "SINGLE_CHOICE",
+        "routing_logic": "Only if Q1 != 'Never'"
+      }
+    },
+    {
+      "qid": "Q4",
+      "question_text": "What improvements would make you feel safer using bike lanes?",
+      "answer_options": [],
+      "routing_logic": "Only if Q1 != 'Never'",
+      "client_notes": "Open-ended to capture qualitative feedback. Use a text box with a character limit of 500.",
+      "scripter_notes": "Field type: OPEN_TEXT (text area), with conditional logic based on Q1.",
+      "script": {
+        "question_text": "What improvements would make you feel safer using bike lanes?",
+        "answer_options": [],
+        "type": "OPEN_TEXT",
+        "routing_logic": "Only if Q1 != 'Never'"
+      }
+    },
+    {
+      "qid": "Q5",
+      "question_text": "If you do not use bike lanes, what are the primary reasons? (Select all that apply)",
+      "answer_options": [
+        "Safety concerns",
+        "Lack of bike lanes in my area",
+        "Prefer other transportation methods",
+        "Physical limitations",
+        "Other (please specify)"
+      ],
+      "routing_logic": "Only if Q1 == 'Never'",
+      "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for specifics.",
+      "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), with conditional logic based on Q1.",
+      "script": {
+        "question_text": "If you do not use bike lanes, what are the primary reasons? (Select all that apply)",
+        "answer_options": [
+          "Safety concerns",
+          "Lack of bike lanes in my area",
+          "Prefer other transportation methods",
+          "Physical limitations",
+          "Other (please specify)"
+        ],
+        "type": "MULTI_CHOICE",
+        "routing_logic": "Only if Q1 == 'Never'"
+      }
+    }
+  ]
+}

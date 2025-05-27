@@ -1,0 +1,129 @@
+{
+    "survey_id": "dfb99f94-ff1d-44b4-9cf9-5ed2cde27649",
+    "survey_name": "Automated Checkout System Adoption Survey",
+    "survey_brief": "This survey aims to understand customer adoption and satisfaction with automated checkout systems in retail stores.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use automated checkout systems when shopping in retail stores?",
+            "answer_options": [
+                "Every time I shop",
+                "Most of the time",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point frequency scale to capture broad usage patterns. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: single-choice radio buttons. Randomize option order if needed.",
+            "script": {
+                "question_text": "How often do you use automated checkout systems when shopping in retail stores?",
+                "answer_options": [
+                    "Every time I shop",
+                    "Most of the time",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your decision to use automated checkout systems? (Select all that apply)",
+            "answer_options": [
+                "Speed of checkout",
+                "Avoiding interaction with cashiers",
+                "Perceived cleanliness/hygiene",
+                "Item quantity in my cart",
+                "Availability of staffed checkout lanes",
+                "Technical issues with automated systems",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Multi-select question to identify key drivers. Include an 'Other' option with text field for unlisted factors.",
+            "scripter_notes": "Field type: multi-choice checkboxes. Add optional text field for 'Other' response.",
+            "script": {
+                "question_text": "What factors influence your decision to use automated checkout systems? (Select all that apply)",
+                "answer_options": [
+                    "Speed of checkout",
+                    "Avoiding interaction with cashiers",
+                    "Perceived cleanliness/hygiene",
+                    "Item quantity in my cart",
+                    "Availability of staffed checkout lanes",
+                    "Technical issues with automated systems",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please describe any challenges you've experienced when using automated checkout systems.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 300 characters.",
+            "scripter_notes": "Field type: open-text with character limit. Display only for users who have used automated checkouts.",
+            "script": {
+                "question_text": "Please describe any challenges you've experienced when using automated checkout systems.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your overall experience using automated checkout systems?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "5-point Likert scale to measure satisfaction. Include 'Neutral' midpoint option.",
+            "scripter_notes": "Field type: single-choice radio buttons. Display only for users who have used automated checkouts.",
+            "script": {
+                "question_text": "How satisfied are you with your overall experience using automated checkout systems?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend automated checkout systems to other shoppers?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, probably",
+                "Maybe",
+                "Probably not",
+                "Definitely not"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "NPS-style question to measure recommendation likelihood. Use standard 5-point scale.",
+            "scripter_notes": "Field type: single-choice radio buttons. Display only for users who have used automated checkouts.",
+            "script": {
+                "question_text": "Would you recommend automated checkout systems to other shoppers?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, probably",
+                    "Maybe",
+                    "Probably not",
+                    "Definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        }
+    ]
+}

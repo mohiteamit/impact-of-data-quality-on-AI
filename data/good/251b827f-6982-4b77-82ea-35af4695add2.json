@@ -1,0 +1,125 @@
+{
+    "survey_id": "251b827f-6982-4b77-82ea-35af4695add2",
+    "survey_name": "AI-Powered Personal Fitness Trainer Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from users of AI-powered personal fitness trainers to evaluate satisfaction levels, feature usability, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use your AI-powered personal fitness trainer?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Not currently using"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure the options cover a broad range of usage frequencies to capture accurate data.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How frequently do you use your AI-powered personal fitness trainer?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Not currently using"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of the AI-powered personal fitness trainer do you find most valuable? (Select all that apply)",
+            "answer_options": [
+                "Personalized workout plans",
+                "Real-time form correction",
+                "Progress tracking",
+                "Nutrition advice",
+                "Motivational reminders",
+                "Integration with other fitness apps"
+            ],
+            "routing_logic": "All respondents except those who answered 'Not currently using' in Q1",
+            "client_notes": "This question helps identify which features are most appreciated by users.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "Which features of the AI-powered personal fitness trainer do you find most valuable? (Select all that apply)",
+                "answer_options": [
+                    "Personalized workout plans",
+                    "Real-time form correction",
+                    "Progress tracking",
+                    "Nutrition advice",
+                    "Motivational reminders",
+                    "Integration with other fitness apps"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Not currently using' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of the AI-powered personal fitness trainer's feedback?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents except those who answered 'Not currently using' in Q1",
+            "client_notes": "Use a Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of the AI-powered personal fitness trainer's feedback?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Not currently using' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for your AI-powered personal fitness trainer?",
+            "answer_options": [],
+            "routing_logic": "All respondents except those who answered 'Not currently using' in Q1",
+            "client_notes": "This open-ended question allows users to provide detailed feedback for improvement.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would you suggest for your AI-powered personal fitness trainer?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents except those who answered 'Not currently using' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your AI-powered personal fitness trainer to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No, probably not",
+                "No, definitely not"
+            ],
+            "routing_logic": "All respondents except those who answered 'Not currently using' in Q1",
+            "client_notes": "This question measures net promoter score (NPS) potential.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Would you recommend your AI-powered personal fitness trainer to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No, probably not",
+                    "No, definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Not currently using' in Q1"
+            }
+        }
+    ]
+}

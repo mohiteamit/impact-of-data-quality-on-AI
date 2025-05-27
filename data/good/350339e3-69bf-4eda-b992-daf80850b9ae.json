@@ -1,0 +1,129 @@
+{
+    "survey_id": "350339e3-69bf-4eda-b992-daf80850b9ae",
+    "survey_name": "Workspace Air Quality and Productivity Survey",
+    "survey_brief": "This survey aims to understand employees' perception of workplace air quality and its impact on their productivity and well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you rate the air quality in your primary workspace?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Fair",
+                "Poor",
+                "Very Poor"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure mobile-friendly dropdown implementation.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How would you rate the air quality in your primary workspace?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Fair",
+                    "Poor",
+                    "Very Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following air quality issues have you experienced in your workspace? (Select all that apply)",
+            "answer_options": [
+                "Stuffy or stale air",
+                "Unpleasant odors",
+                "Excessive dust",
+                "Temperature fluctuations",
+                "Dry air",
+                "Humid air",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Multi-select question. Include 'None of the above' to capture negative cases.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which of the following air quality issues have you experienced in your workspace? (Select all that apply)",
+                "answer_options": [
+                    "Stuffy or stale air",
+                    "Unpleasant odors",
+                    "Excessive dust",
+                    "Temperature fluctuations",
+                    "Dry air",
+                    "Humid air",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you experience discomfort due to air quality in your workspace?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Always"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Likert scale for frequency. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you experience discomfort due to air quality in your workspace?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "In your opinion, how does air quality affect your productivity at work?",
+            "answer_options": [
+                "Significantly improves",
+                "Slightly improves",
+                "No effect",
+                "Slightly reduces",
+                "Significantly reduces"
+            ],
+            "routing_logic": "Appears if Q1 ≠ 'Excellent'",
+            "client_notes": "Use a balanced scale with neutral midpoint.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Skip logic based on Q1.",
+            "script": {
+                "question_text": "In your opinion, how does air quality affect your productivity at work?",
+                "answer_options": [
+                    "Significantly improves",
+                    "Slightly improves",
+                    "No effect",
+                    "Slightly reduces",
+                    "Significantly reduces"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 ≠ 'Excellent'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any specific changes you would recommend to improve air quality in your workspace.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 rating is 'Fair', 'Poor', or 'Very Poor'",
+            "client_notes": "Open-ended to capture qualitative feedback. Limit to 300 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with character limit)",
+            "script": {
+                "question_text": "Please describe any specific changes you would recommend to improve air quality in your workspace.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 rating is 'Fair', 'Poor', or 'Very Poor'"
+            }
+        }
+    ]
+}

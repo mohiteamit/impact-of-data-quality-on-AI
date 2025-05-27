@@ -1,0 +1,133 @@
+{
+    "survey_id": "bf575665-db2f-4e95-856f-57c29717b29c",
+    "survey_name": "Smartphone Battery Performance and User Behavior Survey",
+    "survey_brief": "This survey aims to understand user experiences and behaviors related to smartphone battery performance, charging habits, and satisfaction levels to help manufacturers improve product design.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "On average, how long does your smartphone battery last on a full charge under normal usage?",
+            "answer_options": [
+                "Less than 6 hours",
+                "6-12 hours",
+                "12-18 hours",
+                "More than 18 hours",
+                "I don't track this"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure options cover typical ranges; consider adding 'I don't know' if needed.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "On average, how long does your smartphone battery last on a full charge under normal usage?",
+                "answer_options": [
+                    "Less than 6 hours",
+                    "6-12 hours",
+                    "12-18 hours",
+                    "More than 18 hours",
+                    "I don't track this"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors most affect your smartphone's battery life? (Select up to 3)",
+            "answer_options": [
+                "Screen brightness",
+                "App usage (e.g., social media, gaming)",
+                "Background app activity",
+                "Network connectivity (Wi-Fi, cellular)",
+                "Battery age/health",
+                "Operating system updates",
+                "Extreme temperatures",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-select format; limit selections to 3 for focused insights.",
+            "scripter_notes": "Field type: multi-choice checkboxes with max. 3 selections allowed.",
+            "script": {
+                "question_text": "Which of the following factors most affect your smartphone's battery life? (Select up to 3)",
+                "answer_options": [
+                    "Screen brightness",
+                    "App usage (e.g., social media, gaming)",
+                    "Background app activity",
+                    "Network connectivity (Wi-Fi, cellular)",
+                    "Battery age/health",
+                    "Operating system updates",
+                    "Extreme temperatures",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your current smartphone's battery performance?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a standard 5-point Likert scale for consistency.",
+            "scripter_notes": "Field type: single-choice radio buttons with horizontal layout.",
+            "script": {
+                "question_text": "How satisfied are you with your current smartphone's battery performance?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe any specific battery-related issues you've experienced with your smartphone.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Somewhat dissatisfied' or 'Very dissatisfied' in Q3",
+            "client_notes": "Open-ended question to capture detailed pain points.",
+            "scripter_notes": "Field type: open-text input with character limit (500).",
+            "script": {
+                "question_text": "Describe any specific battery-related issues you've experienced with your smartphone.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Somewhat dissatisfied' or 'Very dissatisfied' in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What type of charger do you primarily use for your smartphone?",
+            "answer_options": [
+                "Standard charger (included with phone)",
+                "Fast charger",
+                "Wireless charger",
+                "Portable power bank",
+                "Car charger",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include common charging methods; allow for 'Other' specification.",
+            "scripter_notes": "Field type: single-choice with 'Other' triggering a text input.",
+            "script": {
+                "question_text": "What type of charger do you primarily use for your smartphone?",
+                "answer_options": [
+                    "Standard charger (included with phone)",
+                    "Fast charger",
+                    "Wireless charger",
+                    "Portable power bank",
+                    "Car charger",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

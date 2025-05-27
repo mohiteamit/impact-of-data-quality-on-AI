@@ -1,0 +1,121 @@
+{
+    "survey_id": "ce6a8830-b0b6-491a-bb7e-334bf046bace",
+    "survey_name": "Workplace Ergonomics and Productivity Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction with current workplace ergonomics and its perceived impact on productivity and well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the ergonomic setup of your current workstation (e.g., chair, desk, monitor height)?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a 5-point Likert scale for consistency; ensure mobile-friendly vertical layout.",
+            "scripter_notes": "Field type: radio buttons (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the ergonomic setup of your current workstation (e.g., chair, desk, monitor height)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following ergonomic issues have you experienced in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Neck or back pain",
+                "Eye strain",
+                "Wrist or hand discomfort",
+                "Leg or foot discomfort",
+                "None of the above"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Multi-select with 'None of the above' as an exclusive option; randomize option order.",
+            "scripter_notes": "Field type: checkboxes (multi-choice) with validation to prevent 'None' + other selections.",
+            "script": {
+                "question_text": "Which of the following ergonomic issues have you experienced in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Neck or back pain",
+                    "Eye strain",
+                    "Wrist or hand discomfort",
+                    "Leg or foot discomfort",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you take breaks to stretch or adjust your posture during a typical workday?",
+            "answer_options": [
+                "Every 30-60 minutes",
+                "Every 1-2 hours",
+                "Every 2-4 hours",
+                "Rarely or never"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Include 'Prefer not to answer' if sensitive; use horizontal layout for desktop.",
+            "scripter_notes": "Field type: radio buttons (single-choice) with 'Other' open-text option.",
+            "script": {
+                "question_text": "How often do you take breaks to stretch or adjust your posture during a typical workday?",
+                "answer_options": [
+                    "Every 30-60 minutes",
+                    "Every 1-2 hours",
+                    "Every 2-4 hours",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional ergonomic equipment would improve your work experience? (e.g., standing desk, ergonomic keyboard)",
+            "answer_options": [],
+            "routing_logic": "Shown if Q1 response is 'Somewhat dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open-ended to capture specific needs; limit to 200 characters.",
+            "scripter_notes": "Field type: open-text with character counter.",
+            "script": {
+                "question_text": "What additional ergonomic equipment would improve your work experience? (e.g., standing desk, ergonomic keyboard)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q1 response is 'Somewhat dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "To what extent do you believe better ergonomics would increase your productivity?",
+            "answer_options": [
+                "Significantly increase",
+                "Moderately increase",
+                "Slightly increase",
+                "No impact"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Include a neutral midpoint; avoid leading language.",
+            "scripter_notes": "Field type: radio buttons (single-choice).",
+            "script": {
+                "question_text": "To what extent do you believe better ergonomics would increase your productivity?",
+                "answer_options": [
+                    "Significantly increase",
+                    "Moderately increase",
+                    "Slightly increase",
+                    "No impact"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

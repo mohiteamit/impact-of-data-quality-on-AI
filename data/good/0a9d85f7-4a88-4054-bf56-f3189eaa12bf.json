@@ -1,0 +1,129 @@
+{
+    "survey_id": "0a9d85f7-4a88-4054-bf56-f3189eaa12bf",
+    "survey_name": "Customer Satisfaction Survey for Online Grocery Shopping",
+    "survey_brief": "This survey aims to gather feedback from customers about their experience with online grocery shopping services, including ease of use, product quality, and delivery satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use online grocery shopping services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Occasionally",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use online grocery shopping services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Occasionally",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following online grocery shopping platforms have you used in the past 3 months? (Select all that apply)",
+            "answer_options": [
+                "Instacart",
+                "Amazon Fresh",
+                "Walmart Grocery",
+                "Kroger Delivery",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Occasionally' in Q1.",
+            "client_notes": "Use a multi-choice checkbox for this question to allow multiple selections.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an 'Other' option with a text field for specification.",
+            "script": {
+                "question_text": "Which of the following online grocery shopping platforms have you used in the past 3 months? (Select all that apply)",
+                "answer_options": [
+                    "Instacart",
+                    "Amazon Fresh",
+                    "Walmart Grocery",
+                    "Kroger Delivery",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Occasionally' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing an online grocery shopping service? (Select up to 3)",
+            "answer_options": [
+                "Delivery speed",
+                "Product quality",
+                "Price competitiveness",
+                "User-friendly app/website",
+                "Customer service",
+                "Product availability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Occasionally' in Q1.",
+            "client_notes": "Use a multi-choice checkbox with a limit of 3 selections to prioritize factors.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with a maximum of 3 selections allowed. Include an 'Other' option with a text field for specification.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing an online grocery shopping service? (Select up to 3)",
+                "answer_options": [
+                    "Delivery speed",
+                    "Product quality",
+                    "Price competitiveness",
+                    "User-friendly app/website",
+                    "Customer service",
+                    "Product availability",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Occasionally' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the overall experience of online grocery shopping?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Occasionally' in Q1.",
+            "client_notes": "Use a Likert scale (single-choice) for this question to measure satisfaction levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the overall experience of online grocery shopping?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Occasionally' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest to enhance your online grocery shopping experience?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use an open-ended text field to gather qualitative feedback.",
+            "scripter_notes": "Field type: text area (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance your online grocery shopping experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

@@ -1,0 +1,105 @@
+{
+    "survey_id": "bf5a9d26-41b8-4206-ba34-4d79a75ad41c",
+    "survey_name": "Campus Food Truck Vendor Satisfaction Survey",
+    "survey_brief": "This survey aims to assess student and staff satisfaction with food truck vendors on campus, focusing on food quality, variety, pricing, and service efficiency.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase from food trucks on campus?",
+            "answer_options": [
+                "Daily",
+                "2-3 times per week",
+                "Once a week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure the options cover a broad range of frequencies to capture varied usage patterns.",
+            "scripter_notes": "Use a single-choice radio button for this question.",
+            "script": {
+                "question_text": "How often do you purchase from food trucks on campus?",
+                "answer_options": [
+                    "Daily",
+                    "2-3 times per week",
+                    "Once a week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors are most important to you when choosing a food truck? (Select up to 3)",
+            "answer_options": [
+                "Food quality",
+                "Price",
+                "Variety of options",
+                "Speed of service",
+                "Location/convenience",
+                "Dietary accommodations (e.g., vegan, gluten-free)",
+                "Cleanliness",
+                "Customer service"
+            ],
+            "routing_logic": "Only respondents who answered 'Daily', '2-3 times per week', or 'Once a week' to Q1",
+            "client_notes": "This multi-choice question helps identify priority areas for vendors to focus on.",
+            "scripter_notes": "Use checkboxes for multi-select options with a max selection limit of 3.",
+            "script": {
+                "question_text": "Which of the following factors are most important to you when choosing a food truck? (Select up to 3)",
+                "answer_options": [
+                    "Food quality",
+                    "Price",
+                    "Variety of options",
+                    "Speed of service",
+                    "Location/convenience",
+                    "Dietary accommodations (e.g., vegan, gluten-free)",
+                    "Cleanliness",
+                    "Customer service"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only respondents who answered 'Daily', '2-3 times per week', or 'Once a week' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the overall quality of food from campus food trucks?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "Only respondents who answered 'Daily', '2-3 times per week', or 'Once a week' to Q1",
+            "client_notes": "A standard Likert scale is used here for consistent feedback on food quality.",
+            "scripter_notes": "Single-choice radio button with the above options.",
+            "script": {
+                "question_text": "How would you rate the overall quality of food from campus food trucks?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only respondents who answered 'Daily', '2-3 times per week', or 'Once a week' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for campus food truck vendors?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended responses can provide qualitative insights for vendors.",
+            "scripter_notes": "Use an open-text field for free-form responses.",
+            "script": {
+                "question_text": "What improvements would you suggest for campus food truck vendors?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "survey_id": "23ad909e-f0aa-4079-8d55-bf5af54e8a0f",
+    "survey_name": "Corporate Sustainability Initiatives Employee Engagement Survey",
+    "survey_brief": "This survey aims to assess employee awareness, participation, and satisfaction with corporate sustainability initiatives.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How aware are you of your company's sustainability initiatives?",
+            "answer_options": [
+                "Very aware",
+                "Somewhat aware",
+                "Not very aware",
+                "Not aware at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 4-point scale to measure awareness levels clearly.",
+            "scripter_notes": "Single-choice radio buttons; ensure mobile-friendly layout.",
+            "script": {
+                "question_text": "How aware are you of your company's sustainability initiatives?",
+                "answer_options": [
+                    "Very aware",
+                    "Somewhat aware",
+                    "Not very aware",
+                    "Not aware at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainability initiatives have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Recycling programs",
+                "Energy-saving challenges",
+                "Sustainable commuting incentives",
+                "Volunteer green teams",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question; include 'None of the above' to capture non-participation.",
+            "scripter_notes": "Checkbox inputs; allow multiple selections.",
+            "script": {
+                "question_text": "Which of the following sustainability initiatives have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Recycling programs",
+                    "Energy-saving challenges",
+                    "Sustainable commuting incentives",
+                    "Volunteer green teams",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the company's efforts to promote sustainability?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point Likert scale for nuanced feedback.",
+            "scripter_notes": "Single-choice radio buttons; randomize option order if needed.",
+            "script": {
+                "question_text": "How satisfied are you with the company's efforts to promote sustainability?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional sustainability initiatives would you like to see implemented?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture innovative suggestions.",
+            "scripter_notes": "Text input field; limit to 500 characters.",
+            "script": {
+                "question_text": "What additional sustainability initiatives would you like to see implemented?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Do you feel that your actions contribute to the company's sustainability goals?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No, not really",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents except those who selected 'Not aware at all' in Q1",
+            "client_notes": "Exclude unaware employees to maintain relevance.",
+            "scripter_notes": "Single-choice radio buttons; apply skip logic based on Q1.",
+            "script": {
+                "question_text": "Do you feel that your actions contribute to the company's sustainability goals?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No, not really",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'Not aware at all' in Q1"
+            }
+        }
+    ]
+}

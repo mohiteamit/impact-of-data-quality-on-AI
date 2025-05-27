@@ -1,0 +1,131 @@
+{
+    "survey_id": "1ad01523-88db-467e-98de-3ceb1543237c",
+    "survey_name": "Museum Visitor Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from museum visitors to improve exhibits, services, and overall visitor experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied were you with your overall museum visit today?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always shown as opening question",
+            "client_notes": "Use a standard 5-point Likert scale for consistency. This question sets the tone for the survey.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Ensure mobile-responsive layout.",
+            "script": {
+                "question_text": "How satisfied were you with your overall museum visit today?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown as opening question"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following museum areas did you visit today? (Select all that apply)",
+            "answer_options": [
+                "Permanent collections",
+                "Special exhibitions",
+                "Children's area",
+                "Café/Restaurant",
+                "Museum shop",
+                "Education center",
+                "Outdoor spaces"
+            ],
+            "routing_logic": "Always shown after Q1",
+            "client_notes": "Multi-select question to understand visitor flow patterns. Consider adding 'Other' with open text if needed.",
+            "scripter_notes": "Field type: checkboxes (MULTI_CHOICE). Allow for at least 3 selections.",
+            "script": {
+                "question_text": "Which of the following museum areas did you visit today? (Select all that apply)",
+                "answer_options": [
+                    "Permanent collections",
+                    "Special exhibitions",
+                    "Children's area",
+                    "Café/Restaurant",
+                    "Museum shop",
+                    "Education center",
+                    "Outdoor spaces"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown after Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the quality of information provided (e.g., labels, audio guides, staff knowledge)?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Below average",
+                "Poor"
+            ],
+            "routing_logic": "Shown if Q2 includes 'Permanent collections' or 'Special exhibitions'",
+            "client_notes": "Important metric for exhibit design. Consider benchmarking against previous results.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Randomize option order to prevent bias.",
+            "script": {
+                "question_text": "How would you rate the quality of information provided (e.g., labels, audio guides, staff knowledge)?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Below average",
+                    "Poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q2 includes 'Permanent collections' or 'Special exhibitions'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What was your primary reason for visiting the museum today?",
+            "answer_options": [
+                "Personal interest",
+                "Family outing",
+                "Educational purpose",
+                "Tourist activity",
+                "Special event/program",
+                "Other"
+            ],
+            "routing_logic": "Always shown after Q2",
+            "client_notes": "Helps segment visitor demographics and motivations. Add open text field if 'Other' is selected.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with conditional text input for 'Other'.",
+            "script": {
+                "question_text": "What was your primary reason for visiting the museum today?",
+                "answer_options": [
+                    "Personal interest",
+                    "Family outing",
+                    "Educational purpose",
+                    "Tourist activity",
+                    "Special event/program",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown after Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please share any specific suggestions for improving the museum experience:",
+            "answer_options": [],
+            "routing_logic": "Always shown as final question",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT) with character counter. Make box large enough for mobile users.",
+            "script": {
+                "question_text": "Please share any specific suggestions for improving the museum experience:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown as final question"
+            }
+        }
+    ]
+}

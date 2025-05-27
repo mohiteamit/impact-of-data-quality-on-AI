@@ -1,0 +1,117 @@
+{
+    "survey_id": "ac38aa16-368e-4e36-b861-32b6743ada3e",
+    "survey_name": "Smart Pet Feeder User Satisfaction Survey",
+    "survey_brief": "This survey aims to assess customer satisfaction with smart pet feeder devices, focusing on usability, features, and reliability to inform product improvements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your smart pet feeder overall?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "Use a 5-point Likert scale for clear sentiment measurement. Ensure mobile-friendly layout for touch selection.",
+            "scripter_notes": "Field type: Radio buttons (SINGLE_CHOICE). Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "How satisfied are you with your smart pet feeder overall?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you use regularly in your smart pet feeder? (Select all that apply)",
+            "answer_options": [
+                "Scheduled feeding",
+                "Portion control",
+                "Voice alerts",
+                "Mobile app notifications",
+                "Manual override",
+                "Camera monitoring",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "Multi-select format. Include 'Other' with open-text field for unlisted features.",
+            "scripter_notes": "Field type: Checkboxes (MULTI_CHOICE). Add conditional text input for 'Other' selection.",
+            "script": {
+                "question_text": "Which features do you use regularly in your smart pet feeder? (Select all that apply)",
+                "answer_options": [
+                    "Scheduled feeding",
+                    "Portion control",
+                    "Voice alerts",
+                    "Mobile app notifications",
+                    "Manual override",
+                    "Camera monitoring",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Describe any technical issues you've encountered with your smart pet feeder.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is 'Somewhat dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open-ended to capture specific pain points. Limit response to 500 characters.",
+            "scripter_notes": "Field type: Open text area with character counter (OPEN_TEXT).",
+            "script": {
+                "question_text": "Describe any technical issues you've encountered with your smart pet feeder.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is 'Somewhat dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How easy was it to set up your smart pet feeder?",
+            "answer_options": [
+                "Extremely easy",
+                "Somewhat easy",
+                "Neutral",
+                "Somewhat difficult",
+                "Extremely difficult"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "5-point scale with clear polarity. Include 'I did not set it up myself' as an opt-out.",
+            "scripter_notes": "Field type: Radio buttons (SINGLE_CHOICE). Add 'Prefer not to answer' option.",
+            "script": {
+                "question_text": "How easy was it to set up your smart pet feeder?",
+                "answer_options": [
+                    "Extremely easy",
+                    "Somewhat easy",
+                    "Neutral",
+                    "Somewhat difficult",
+                    "Extremely difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for future smart pet feeder models?",
+            "answer_options": [],
+            "routing_logic": "Always appears",
+            "client_notes": "Open-ended to gather innovation ideas. Use AI sentiment analysis in post-processing.",
+            "scripter_notes": "Field type: Paragraph text box (OPEN_TEXT). Enable spell-check.",
+            "script": {
+                "question_text": "What improvements would you suggest for future smart pet feeder models?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always appears"
+            }
+        }
+    ]
+}

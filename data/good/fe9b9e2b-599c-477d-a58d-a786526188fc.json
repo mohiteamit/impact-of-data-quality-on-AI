@@ -1,0 +1,127 @@
+{
+    "survey_id": "fe9b9e2b-599c-477d-a58d-a786526188fc",
+    "survey_name": "Tourist Destination Preferences Survey",
+    "survey_brief": "This survey aims to understand traveler preferences and decision-making factors when choosing vacation destinations.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "When planning a vacation, which of the following factors is most important to you?",
+            "answer_options": [
+                "Cost/budget",
+                "Cultural attractions",
+                "Natural scenery",
+                "Culinary experiences",
+                "Adventure activities"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Recommend using a forced-choice single selection to identify primary decision drivers",
+            "scripter_notes": "Field type: radio button, single selection required",
+            "script": {
+                "question_text": "When planning a vacation, which of the following factors is most important to you?",
+                "answer_options": [
+                    "Cost/budget",
+                    "Cultural attractions",
+                    "Natural scenery",
+                    "Culinary experiences",
+                    "Adventure activities"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of accommodations do you typically prefer when traveling? (Select all that apply)",
+            "answer_options": [
+                "Luxury hotels",
+                "Boutique hotels",
+                "Vacation rentals (e.g., Airbnb)",
+                "Hostels",
+                "Eco-lodges",
+                "All-inclusive resorts"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Consider limiting selections to 3 options if analyzing for patterns",
+            "scripter_notes": "Field type: checkbox, multiple selections allowed",
+            "script": {
+                "question_text": "Which types of accommodations do you typically prefer when traveling? (Select all that apply)",
+                "answer_options": [
+                    "Luxury hotels",
+                    "Boutique hotels",
+                    "Vacation rentals (e.g., Airbnb)",
+                    "Hostels",
+                    "Eco-lodges",
+                    "All-inclusive resorts"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What percentage of your annual income do you allocate to travel?",
+            "answer_options": [
+                "Less than 5%",
+                "5-10%",
+                "11-15%",
+                "16-20%",
+                "More than 20%"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use percentage ranges rather than exact figures for better response rates",
+            "scripter_notes": "Field type: radio button with vertical layout",
+            "script": {
+                "question_text": "What percentage of your annual income do you allocate to travel?",
+                "answer_options": [
+                    "Less than 5%",
+                    "5-10%",
+                    "11-15%",
+                    "16-20%",
+                    "More than 20%"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe your ideal vacation in 2-3 sentences.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Keep open-ended questions to minimum for better completion rates",
+            "scripter_notes": "Field type: text area with 250 character limit",
+            "script": {
+                "question_text": "Describe your ideal vacation in 2-3 sentences.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How many international trips do you typically take per year?",
+            "answer_options": [
+                "None",
+                "1",
+                "2",
+                "3",
+                "4 or more"
+            ],
+            "routing_logic": "All respondents except those who selected 'None' in Q3",
+            "client_notes": "Consider adding a follow-up question about domestic trips if budget allows",
+            "scripter_notes": "Field type: radio button with horizontal layout",
+            "script": {
+                "question_text": "How many international trips do you typically take per year?",
+                "answer_options": [
+                    "None",
+                    "1",
+                    "2",
+                    "3",
+                    "4 or more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'None' in Q3"
+            }
+        }
+    ]
+}

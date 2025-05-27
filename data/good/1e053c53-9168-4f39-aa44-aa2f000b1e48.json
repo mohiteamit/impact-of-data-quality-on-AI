@@ -1,0 +1,115 @@
+{
+    "survey_id": "1e053c53-9168-4f39-aa44-aa2f000b1e48",
+    "survey_name": "Corporate Travel Policy Satisfaction Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction with the company's current corporate travel policies and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you travel for business purposes under the current corporate travel policy?",
+            "answer_options": [
+                "Once a month or less",
+                "2-4 times per month",
+                "5 or more times per month",
+                "I do not travel for business"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button scale for clarity. Consider adding 'Not applicable' if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you travel for business purposes under the current corporate travel policy?",
+                "answer_options": [
+                    "Once a month or less",
+                    "2-4 times per month",
+                    "5 or more times per month",
+                    "I do not travel for business"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which aspects of the corporate travel policy work well for you? (Select all that apply)",
+            "answer_options": [
+                "Booking process",
+                "Approval workflow",
+                "Travel budget allowances",
+                "Accommodation options",
+                "Transportation options",
+                "Expense reimbursement process",
+                "None of the above"
+            ],
+            "routing_logic": "If Q1 != 'I do not travel for business'",
+            "client_notes": "Checkbox format allows multiple selections. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which aspects of the corporate travel policy work well for you? (Select all that apply)",
+                "answer_options": [
+                    "Booking process",
+                    "Approval workflow",
+                    "Travel budget allowances",
+                    "Accommodation options",
+                    "Transportation options",
+                    "Expense reimbursement process",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 != 'I do not travel for business'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your overall satisfaction level with the current corporate travel policy?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 != 'I do not travel for business'",
+            "client_notes": "5-point Likert scale provides balanced measurement. Include 'Neutral' midpoint.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "What is your overall satisfaction level with the current corporate travel policy?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 != 'I do not travel for business'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any specific challenges you've encountered with the corporate travel policy:",
+            "answer_options": [],
+            "routing_logic": "If Q3 is 'Somewhat dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open text field allows for detailed feedback. Limit to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with character limit)",
+            "script": {
+                "question_text": "Please describe any specific challenges you've encountered with the corporate travel policy:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q3 is 'Somewhat dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend any changes to the current corporate travel policy? If yes, please specify:",
+            "answer_options": [],
+            "routing_logic": "All respondents who travel for business",
+            "client_notes": "Optional open-ended question to capture improvement suggestions.",
+            "scripter_notes": "Field type: OPEN_TEXT with conditional display based on Q1",
+            "script": {
+                "question_text": "Would you recommend any changes to the current corporate travel policy? If yes, please specify:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents who travel for business"
+            }
+        }
+    ]
+}

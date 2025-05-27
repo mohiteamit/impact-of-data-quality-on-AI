@@ -1,0 +1,127 @@
+{
+    "survey_id": "449ae830-b360-4588-a783-0ccec7176387",
+    "survey_name": "In-Flight Wi-Fi Service Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate passenger satisfaction with in-flight Wi-Fi services to improve connectivity offerings and user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use in-flight Wi-Fi services when available?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Include 'Never' as an option to filter non-users for follow-up questions.",
+            "scripter_notes": "Field type: Single-choice radio button. Default selection: None.",
+            "script": {
+                "question_text": "How often do you use in-flight Wi-Fi services when available?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors most influence your decision to use in-flight Wi-Fi? (Select all that apply)",
+            "answer_options": [
+                "Price",
+                "Connection speed",
+                "Ease of access/login process",
+                "Need for work-related tasks",
+                "Entertainment options (streaming, social media, etc.)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'Never'",
+            "client_notes": "Use multi-choice checkboxes. Include an optional open-text field for 'Other' to capture unique responses.",
+            "scripter_notes": "Field type: Multi-choice checkboxes. Add an open-text field conditional on 'Other' selection.",
+            "script": {
+                "question_text": "Which of the following factors most influence your decision to use in-flight Wi-Fi? (Select all that apply)",
+                "answer_options": [
+                    "Price",
+                    "Connection speed",
+                    "Ease of access/login process",
+                    "Need for work-related tasks",
+                    "Entertainment options (streaming, social media, etc.)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the speed of in-flight Wi-Fi?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale for granular feedback. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: Single-choice radio button. Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "How satisfied are you with the speed of in-flight Wi-Fi?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for in-flight Wi-Fi services?",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q1 answer is not 'Never'",
+            "client_notes": "Use an open-text field to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: Open-text input with character limit validation.",
+            "script": {
+                "question_text": "What improvements would you suggest for in-flight Wi-Fi services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you have never used in-flight Wi-Fi, please specify the primary reason:",
+            "answer_options": [
+                "Too expensive",
+                "Concerns about security/privacy",
+                "Limited usefulness for my needs",
+                "Technical issues in past experiences",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 answer is 'Never'",
+            "client_notes": "Single-choice with optional 'Other' open-text. Helps identify barriers to adoption.",
+            "scripter_notes": "Field type: Single-choice radio button with conditional open-text for 'Other'.",
+            "script": {
+                "question_text": "If you have never used in-flight Wi-Fi, please specify the primary reason:",
+                "answer_options": [
+                    "Too expensive",
+                    "Concerns about security/privacy",
+                    "Limited usefulness for my needs",
+                    "Technical issues in past experiences",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is 'Never'"
+            }
+        }
+    ]
+}

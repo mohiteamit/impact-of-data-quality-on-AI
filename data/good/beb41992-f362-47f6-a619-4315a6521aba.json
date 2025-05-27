@@ -1,0 +1,123 @@
+{
+    "survey_id": "beb41992-f362-47f6-a619-4315a6521aba",
+    "survey_name": "Electric Bicycle Commuter Experience Survey",
+    "survey_brief": "This survey aims to understand the experiences and satisfaction levels of commuters using electric bicycles for daily travel.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use an electric bicycle for commuting?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Occasionally (less than once a week)",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a single-choice question to easily categorize frequency of usage.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often do you use an electric bicycle for commuting?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Occasionally (less than once a week)",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influenced your decision to use an electric bicycle for commuting? (Select all that apply)",
+            "answer_options": [
+                "Cost savings on fuel/public transport",
+                "Environmental concerns",
+                "Convenience/ease of use",
+                "Health benefits",
+                "Avoiding traffic congestion",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Multi-choice question to capture multiple influencing factors.",
+            "scripter_notes": "Field type: checkbox with an 'Other' option as open-ended.",
+            "script": {
+                "question_text": "What factors influenced your decision to use an electric bicycle for commuting? (Select all that apply)",
+                "answer_options": [
+                    "Cost savings on fuel/public transport",
+                    "Environmental concerns",
+                    "Convenience/ease of use",
+                    "Health benefits",
+                    "Avoiding traffic congestion",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the battery life of your electric bicycle?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Use a Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How satisfied are you with the battery life of your electric bicycle?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced while using an electric bicycle for commuting?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Open-ended question to gather qualitative feedback on challenges.",
+            "scripter_notes": "Field type: text area for open-ended responses.",
+            "script": {
+                "question_text": "What challenges have you faced while using an electric bicycle for commuting?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend using an electric bicycle for commuting to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Simple single-choice question to measure recommendation likelihood.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "Would you recommend using an electric bicycle for commuting to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        }
+    ]
+}

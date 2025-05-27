@@ -1,0 +1,127 @@
+{
+    "survey_id": "387456a3-3d5a-44e2-aacb-28f544983b63",
+    "survey_name": "Customer Satisfaction Survey for Smart Kitchen Appliances",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and user experience with smart kitchen appliances, focusing on usability, features, and overall performance.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which smart kitchen appliances do you currently own?",
+            "answer_options": [
+                "Smart refrigerator",
+                "Smart oven",
+                "Smart coffee maker",
+                "Smart blender",
+                "Smart dishwasher",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use checkboxes for multi-selection. Ensure options cover common smart kitchen appliances.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "Which smart kitchen appliances do you currently own?",
+                "answer_options": [
+                    "Smart refrigerator",
+                    "Smart oven",
+                    "Smart coffee maker",
+                    "Smart blender",
+                    "Smart dishwasher",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the performance of your smart kitchen appliances?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale for consistency. Mobile-friendly radio buttons recommended.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How satisfied are you with the performance of your smart kitchen appliances?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you use most frequently in your smart kitchen appliances?",
+            "answer_options": [
+                "Remote control via app",
+                "Voice control",
+                "Automated cooking programs",
+                "Energy usage tracking",
+                "Recipe suggestions"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'None of the above'",
+            "client_notes": "Multi-select options. Ensure clarity in feature descriptions.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "What features do you use most frequently in your smart kitchen appliances?",
+                "answer_options": [
+                    "Remote control via app",
+                    "Voice control",
+                    "Automated cooking programs",
+                    "Energy usage tracking",
+                    "Recipe suggestions"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for smart kitchen appliances?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is not 'None of the above'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Provide a text box with sufficient space.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box)",
+            "script": {
+                "question_text": "What improvements would you suggest for smart kitchen appliances?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your smart kitchen appliances to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale for consistency. Mobile-friendly radio buttons recommended.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How likely are you to recommend your smart kitchen appliances to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'None of the above'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "survey_id": "13e7d465-ea30-4930-9338-567d544bdd93",
+    "survey_name": "Hotel Spa Services Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate guest satisfaction with the spa services offered at our hotel, including the quality of treatments, staff professionalism, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following spa services did you use during your stay? (Select all that apply)",
+            "answer_options": [
+                "Massage",
+                "Facial",
+                "Body Treatment",
+                "Manicure/Pedicure",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Use a multi-choice format to capture all services used. Include an 'Other' option to account for less common treatments.",
+            "scripter_notes": "Implement as a multi-choice question with checkboxes. Include a text field for 'Other' responses.",
+            "script": {
+                "question_text": "Which of the following spa services did you use during your stay? (Select all that apply)",
+                "answer_options": [
+                    "Massage",
+                    "Facial",
+                    "Body Treatment",
+                    "Manicure/Pedicure",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied were you with the quality of the spa treatments you received?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display if Q1 has any selected options",
+            "client_notes": "Use a single-choice scale. Ensure the question appears only if the respondent used at least one spa service.",
+            "scripter_notes": "Implement as a single-choice radio button question. Use conditional logic based on Q1 responses.",
+            "script": {
+                "question_text": "How satisfied were you with the quality of the spa treatments you received?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 has any selected options"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the professionalism and friendliness of the spa staff?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "Display if Q1 has any selected options",
+            "client_notes": "Use a single-choice scale to measure staff interactions. Ensure the question appears only for spa service users.",
+            "scripter_notes": "Implement as a single-choice radio button question with conditional logic based on Q1.",
+            "script": {
+                "question_text": "How would you rate the professionalism and friendliness of the spa staff?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 has any selected options"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What could we improve about our spa services?",
+            "answer_options": [],
+            "routing_logic": "Display if Q2 or Q3 response is 'Dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open-ended question to capture specific feedback. Display only for respondents who expressed dissatisfaction.",
+            "scripter_notes": "Implement as an open-text field. Use conditional logic based on Q2 and Q3 responses.",
+            "script": {
+                "question_text": "What could we improve about our spa services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q2 or Q3 response is 'Dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend our spa services to other guests?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No"
+            ],
+            "routing_logic": "Display if Q1 has any selected options",
+            "client_notes": "Use a single-choice scale to measure likelihood of recommendation.",
+            "scripter_notes": "Implement as a single-choice radio button question with conditional logic based on Q1.",
+            "script": {
+                "question_text": "Would you recommend our spa services to other guests?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 has any selected options"
+            }
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+{
+    "survey_id": "013986b8-be76-46ba-92b4-476e4243ae76",
+    "survey_name": "Digital Wallet Usage and Satisfaction Survey",
+    "survey_brief": "This survey aims to gather insights on user satisfaction and usage patterns of digital wallet services to help improve features and user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which digital wallet service do you primarily use?",
+            "answer_options": [
+                "Apple Pay",
+                "Google Pay",
+                "Samsung Pay",
+                "PayPal",
+                "Venmo",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Ensure 'Other' option includes a text field for specification.",
+            "scripter_notes": "Use a single-choice dropdown with an optional text field for 'Other'.",
+            "script": {
+                "question_text": "Which digital wallet service do you primarily use?",
+                "answer_options": [
+                    "Apple Pay",
+                    "Google Pay",
+                    "Samsung Pay",
+                    "PayPal",
+                    "Venmo",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you use your digital wallet service?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents who selected a digital wallet service in Q1.",
+            "client_notes": "Use a clear frequency scale to gauge usage habits.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use your digital wallet service?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents who selected a digital wallet service in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you value the most in your digital wallet service? (Select all that apply)",
+            "answer_options": [
+                "Ease of use",
+                "Security features",
+                "Integration with other apps",
+                "Rewards or cashback",
+                "Customer support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for all respondents who use a digital wallet service at least 'Rarely' in Q2.",
+            "client_notes": "Allow multiple selections to understand prioritized features.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "What features do you value the most in your digital wallet service? (Select all that apply)",
+                "answer_options": [
+                    "Ease of use",
+                    "Security features",
+                    "Integration with other apps",
+                    "Rewards or cashback",
+                    "Customer support",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents who use a digital wallet service at least 'Rarely' in Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your digital wallet service overall?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for all respondents who use a digital wallet service at least 'Rarely' in Q2.",
+            "client_notes": "Use a standard satisfaction scale for consistency.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with your digital wallet service overall?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents who use a digital wallet service at least 'Rarely' in Q2."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for your digital wallet service?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q4.",
+            "client_notes": "Provide an open-ended text box for detailed feedback.",
+            "scripter_notes": "Use a text area for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would you suggest for your digital wallet service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q4."
+            }
+        }
+    ]
+}

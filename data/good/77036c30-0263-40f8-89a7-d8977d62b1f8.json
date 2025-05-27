@@ -1,0 +1,145 @@
+{
+    "survey_id": "77036c30-0263-40f8-89a7-d8977d62b1f8",
+    "survey_name": "Contactless Payment Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and experiences with contactless payment methods in retail environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use contactless payment methods (e.g., mobile wallets, contactless cards) for in-store purchases?",
+            "answer_options": [
+                "Never",
+                "Rarely (less than once a month)",
+                "Occasionally (1-3 times a month)",
+                "Frequently (at least once a week)",
+                "Almost exclusively (for most purchases)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point scale for better granularity. Display options vertically for mobile compatibility.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "How frequently do you use contactless payment methods (e.g., mobile wallets, contactless cards) for in-store purchases?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (less than once a month)",
+                    "Occasionally (1-3 times a month)",
+                    "Frequently (at least once a week)",
+                    "Almost exclusively (for most purchases)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which factors most influence your decision to use contactless payments? (Select up to 3)",
+            "answer_options": [
+                "Speed of transaction",
+                "Hygiene/safety concerns",
+                "No physical card required",
+                "Retailer incentives/discounts",
+                "Integration with loyalty programs",
+                "Perceived security",
+                "Ease of use",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Consider adding 'Other' with a text field to capture unlisted factors. Limit selections to 3 for focused data.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with max. 3 selections. Include 'Other' with conditional text input.",
+            "script": {
+                "question_text": "Which factors most influence your decision to use contactless payments? (Select up to 3)",
+                "answer_options": [
+                    "Speed of transaction",
+                    "Hygiene/safety concerns",
+                    "No physical card required",
+                    "Retailer incentives/discounts",
+                    "Integration with loyalty programs",
+                    "Perceived security",
+                    "Ease of use",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, do you have about using contactless payment methods?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to uncover unanticipated concerns. Suggest a 200-character limit.",
+            "scripter_notes": "Field type: Open-text with character counter. Display after Q2.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using contactless payment methods?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which types of stores do you MOST prefer using contactless payments in?",
+            "answer_options": [
+                "Grocery stores",
+                "Convenience stores",
+                "Restaurants/cafés",
+                "Department stores",
+                "Gas stations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "Include visual icons for each store type if survey platform supports it.",
+            "scripter_notes": "Field type: Multi-choice checkboxes. Randomize first 5 options, keep 'Other' last.",
+            "script": {
+                "question_text": "Which types of stores do you MOST prefer using contactless payments in?",
+                "answer_options": [
+                    "Grocery stores",
+                    "Convenience stores",
+                    "Restaurants/cafés",
+                    "Department stores",
+                    "Gas stations",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you ever experienced a technical issue when attempting to use contactless payment?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No, never",
+                "I don't recall"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "Follow-up with Q6 only if 'Yes' options are selected.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Route to Q6 only if options 1 or 2 are selected.",
+            "script": {
+                "question_text": "Have you ever experienced a technical issue when attempting to use contactless payment?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No, never",
+                    "I don't recall"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What was the nature of the technical issue you encountered?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Yes, frequently' or 'Yes, occasionally' in Q5",
+            "client_notes": "Use text analysis later to categorize common issues (e.g., terminal errors, connectivity).",
+            "scripter_notes": "Field type: Open-text. Display only after Q5 selections 1 or 2.",
+            "script": {
+                "question_text": "What was the nature of the technical issue you encountered?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Yes, frequently' or 'Yes, occasionally' in Q5"
+            }
+        }
+    ]
+}

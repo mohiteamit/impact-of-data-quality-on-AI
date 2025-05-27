@@ -1,0 +1,101 @@
+{
+    "survey_id": "d231195b-3214-434a-a188-5d89e4de663d",
+    "survey_name": "Online Grocery Shopping Preferences Survey",
+    "survey_brief": "This survey aims to understand customer preferences and behaviors related to online grocery shopping to enhance service offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you shop for groceries online?",
+            "answer_options": [
+                "Weekly",
+                "Bi-weekly",
+                "Monthly",
+                "Less than once a month",
+                "Never"
+            ],
+            "routing_logic": "Shown to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure the option 'Never' routes respondents to a different set of questions about in-store shopping if applicable.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you shop for groceries online?",
+                "answer_options": [
+                    "Weekly",
+                    "Bi-weekly",
+                    "Monthly",
+                    "Less than once a month",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors are most important to you when choosing an online grocery service? (Select all that apply)",
+            "answer_options": [
+                "Delivery speed",
+                "Product quality",
+                "Pricing",
+                "User-friendly website/app",
+                "Customer service",
+                "Availability of organic/local products"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'Never'",
+            "client_notes": "Use a multi-choice checkbox format. Consider randomizing the order of options to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which of the following factors are most important to you when choosing an online grocery service? (Select all that apply)",
+                "answer_options": [
+                    "Delivery speed",
+                    "Product quality",
+                    "Pricing",
+                    "User-friendly website/app",
+                    "Customer service",
+                    "Availability of organic/local products"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for your preferred online grocery service?",
+            "answer_options": [],
+            "routing_logic": "Shown if Q1 answer is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What improvements would you suggest for your preferred online grocery service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the delivery reliability of your current online grocery service? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale for single-choice responses. Ensure the scale is clearly labeled for accessibility.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the delivery reliability of your current online grocery service? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'Never'"
+            }
+        }
+    ]
+}

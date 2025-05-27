@@ -1,0 +1,163 @@
+{
+    "survey_id": "1648f978-d0c9-4476-aa4c-514c5913244a",
+    "survey_name": "Urban Bike Sharing Program Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from users of urban bike-sharing programs to understand satisfaction levels, identify pain points, and improve service offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the urban bike-sharing program?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Occasionally",
+                "First-time user"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all possible usage frequencies.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How frequently do you use the urban bike-sharing program?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Occasionally",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using the bike-sharing program?",
+            "answer_options": [
+                "Commuting to work/school",
+                "Exercise/health",
+                "Running errands",
+                "Leisure/recreation",
+                "Environmental concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Allow multiple selections if applicable. Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is your primary reason for using the bike-sharing program?",
+                "answer_options": [
+                    "Commuting to work/school",
+                    "Exercise/health",
+                    "Running errands",
+                    "Leisure/recreation",
+                    "Environmental concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of bikes at your preferred stations?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a Likert scale for satisfaction levels. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the availability of bikes at your preferred stations?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you experienced any technical issues with the bike-sharing app or kiosks?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No, never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice question to identify common technical issues. Follow up with an open-ended question if 'Yes' is selected.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Have you experienced any technical issues with the bike-sharing app or kiosks?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No, never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe the technical issues you encountered (if any).",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q4 is answered with 'Yes, frequently' or 'Yes, occasionally'.",
+            "client_notes": "Use an open-text field to capture detailed feedback. Encourage respondents to be specific.",
+            "scripter_notes": "Field type: OPEN_TEXT.",
+            "script": {
+                "question_text": "Please describe the technical issues you encountered (if any).",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q4 is answered with 'Yes, frequently' or 'Yes, occasionally'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend the bike-sharing program to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a standard NPS (Net Promoter Score) scale. Ensure the question is clear and concise.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How likely are you to recommend the bike-sharing program to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What improvements would you suggest for the bike-sharing program?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use an open-text field to gather qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT.",
+            "script": {
+                "question_text": "What improvements would you suggest for the bike-sharing program?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

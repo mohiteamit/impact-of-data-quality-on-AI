@@ -1,0 +1,123 @@
+{
+    "survey_id": "1805cd7b-266d-4c35-9d76-806834d43102",
+    "survey_name": "Customer Satisfaction Survey for Smartphone Repairs",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with smartphone repair services, including turnaround time, service quality, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the overall service provided by our smartphone repair center?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for better granularity in responses.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the overall service provided by our smartphone repair center?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following aspects of our service met your expectations? (Select all that apply)",
+            "answer_options": [
+                "Turnaround time",
+                "Pricing",
+                "Customer service",
+                "Quality of repair",
+                "Communication updates"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to identify strengths.",
+            "scripter_notes": "Field type: Multi-choice checkboxes.",
+            "script": {
+                "question_text": "Which of the following aspects of our service met your expectations? (Select all that apply)",
+                "answer_options": [
+                    "Turnaround time",
+                    "Pricing",
+                    "Customer service",
+                    "Quality of repair",
+                    "Communication updates"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the repair turnaround time compared to your initial expectation?",
+            "answer_options": [
+                "Much faster than expected",
+                "Slightly faster than expected",
+                "Met expectations",
+                "Slightly slower than expected",
+                "Much slower than expected"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use comparative scale to assess expectations vs reality.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How would you rate the repair turnaround time compared to your initial expectation?",
+                "answer_options": [
+                    "Much faster than expected",
+                    "Slightly faster than expected",
+                    "Met expectations",
+                    "Slightly slower than expected",
+                    "Much slower than expected"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any issues you encountered during the repair process.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q1",
+            "client_notes": "Open-ended to capture detailed feedback for improvement.",
+            "scripter_notes": "Field type: Open-text input.",
+            "script": {
+                "question_text": "Please describe any issues you encountered during the repair process.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend our smartphone repair services to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No, probably not",
+                "No, definitely not"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Net Promoter Score (NPS) variation to gauge likelihood of recommendation.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "Would you recommend our smartphone repair services to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No, probably not",
+                    "No, definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

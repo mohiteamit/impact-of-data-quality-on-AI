@@ -1,0 +1,103 @@
+{
+    "survey_id": "5995f1b7-11fd-427f-aaa8-0ec880e3512f",
+    "survey_name": "Customer Satisfaction Survey for Coffee Shops",
+    "survey_brief": "This survey aims to gather feedback from customers about their experience and satisfaction with coffee shop services, products, and overall ambiance.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit coffee shops?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "First time"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for this question. Ensure options cover all possible frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you visit coffee shops?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "First time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing a coffee shop? (Select all that apply)",
+            "answer_options": [
+                "Quality of coffee",
+                "Price",
+                "Ambiance",
+                "Location",
+                "Customer service",
+                "Food options",
+                "Speed of service"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use checkboxes for this multi-choice question. Ensure options cover key decision factors.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a coffee shop? (Select all that apply)",
+                "answer_options": [
+                    "Quality of coffee",
+                    "Price",
+                    "Ambiance",
+                    "Location",
+                    "Customer service",
+                    "Food options",
+                    "Speed of service"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall quality of coffee at this coffee shop?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for respondents who selected 'Quality of coffee' in Q2.",
+            "client_notes": "Use a Likert scale for this single-choice question. Ensure clarity in satisfaction levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of coffee at this coffee shop?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 'Quality of coffee' in Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any specific improvements you would like to see at this coffee shop.",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use an open-ended text box for qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: text area (OPEN_TEXT).",
+            "script": {
+                "question_text": "Please describe any specific improvements you would like to see at this coffee shop.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

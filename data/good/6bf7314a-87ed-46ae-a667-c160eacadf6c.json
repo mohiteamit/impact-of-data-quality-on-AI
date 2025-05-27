@@ -1,0 +1,127 @@
+{
+    "survey_id": "6bf7314a-87ed-46ae-a667-c160eacadf6c",
+    "survey_name": "Customer Satisfaction Survey for Pet Insurance Providers",
+    "survey_brief": "This survey aims to assess customer satisfaction levels with pet insurance providers, focusing on coverage, claims process, and overall service quality.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your current pet insurance provider?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction levels. Ensure options are clearly labeled to avoid ambiguity.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with your current pet insurance provider?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors are most important to you when selecting a pet insurance provider? (Select all that apply)",
+            "answer_options": [
+                "Coverage options",
+                "Premiums and cost",
+                "Claims process speed",
+                "Customer service",
+                "Veterinary network",
+                "Policy flexibility"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Allow multiple selections to identify key decision-making factors. Ensure mobile-friendly layout for checkboxes.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following factors are most important to you when selecting a pet insurance provider? (Select all that apply)",
+                "answer_options": [
+                    "Coverage options",
+                    "Premiums and cost",
+                    "Claims process speed",
+                    "Customer service",
+                    "Veterinary network",
+                    "Policy flexibility"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the ease of submitting a claim with your provider?",
+            "answer_options": [
+                "Very easy",
+                "Easy",
+                "Neutral",
+                "Difficult",
+                "Very difficult"
+            ],
+            "routing_logic": "Show to all respondents who selected 'Claims process speed' in Q2 or rated satisfaction <=3 in Q1",
+            "client_notes": "Use a 5-point Likert scale for consistency. Route based on prior responses to focus on relevant feedback.",
+            "scripter_notes": "Field type: radio button (single-choice). Apply routing logic.",
+            "script": {
+                "question_text": "How would you rate the ease of submitting a claim with your provider?",
+                "answer_options": [
+                    "Very easy",
+                    "Easy",
+                    "Neutral",
+                    "Difficult",
+                    "Very difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents who selected 'Claims process speed' in Q2 or rated satisfaction <=3 in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any challenges you have faced with your pet insurance provider.",
+            "answer_options": [],
+            "routing_logic": "Show to respondents who rated satisfaction <=3 in Q1",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open text. Apply routing logic.",
+            "script": {
+                "question_text": "Please describe any challenges you have faced with your pet insurance provider.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show to respondents who rated satisfaction <=3 in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your pet insurance provider to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use a 5-point Likert scale to measure Net Promoter Score (NPS).",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend your pet insurance provider to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        }
+    ]
+}

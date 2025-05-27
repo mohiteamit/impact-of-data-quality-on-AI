@@ -1,0 +1,103 @@
+{
+    "survey_id": "f21b831f-c22d-4b00-9b36-9f72d32f2f71",
+    "survey_name": "Customer Satisfaction Survey for Electric Vehicle Charging Stations",
+    "survey_brief": "This survey aims to gather feedback from electric vehicle (EV) owners about their experiences with public EV charging stations, including ease of use, reliability, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use public EV charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button format for clarity. This question helps segment users by frequency of use.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use public EV charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors are most important to you when selecting a public EV charging station? (Select all that apply)",
+            "answer_options": [
+                "Proximity to your location",
+                "Charging speed (e.g., Level 2, DC Fast Charging)",
+                "Cost per charging session",
+                "Availability of charging spots",
+                "Ease of payment",
+                "Network reliability (e.g., minimal downtime)",
+                "Additional amenities (e.g., restrooms, cafes)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice checkbox format. This question identifies key priorities for users.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which of the following factors are most important to you when selecting a public EV charging station? (Select all that apply)",
+                "answer_options": [
+                    "Proximity to your location",
+                    "Charging speed (e.g., Level 2, DC Fast Charging)",
+                    "Cost per charging session",
+                    "Availability of charging spots",
+                    "Ease of payment",
+                    "Network reliability (e.g., minimal downtime)",
+                    "Additional amenities (e.g., restrooms, cafes)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the reliability of public EV charging stations you have used?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the reliability of public EV charging stations you have used?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in public EV charging stations?",
+            "answer_options": [],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What improvements would you like to see in public EV charging stations?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        }
+    ]
+}

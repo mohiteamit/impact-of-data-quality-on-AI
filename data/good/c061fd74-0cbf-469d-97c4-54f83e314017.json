@@ -1,0 +1,115 @@
+{
+    "survey_id": "c061fd74-0cbf-469d-97c4-54f83e314017",
+    "survey_name": "Sustainable Tourism Practices Survey",
+    "survey_brief": "This survey aims to understand traveler preferences and behaviors regarding sustainable tourism practices to help businesses adopt eco-friendly initiatives.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How important is sustainability when choosing travel accommodations?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale to measure importance. Ensure options are randomized for bias reduction.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How important is sustainability when choosing travel accommodations?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainable practices do you actively seek when traveling? (Select all that apply)",
+            "answer_options": [
+                "Eco-certified accommodations",
+                "Carbon offset programs",
+                "Locally sourced food",
+                "Plastic-free amenities",
+                "Public transportation options",
+                "Wildlife conservation efforts",
+                "None of the above"
+            ],
+            "routing_logic": "Appears if respondent selects 'Extremely important' or 'Very important' in Q1.",
+            "client_notes": "Allow multiple selections but include an explicit 'None of the above' option.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following sustainable practices do you actively seek when traveling? (Select all that apply)",
+                "answer_options": [
+                    "Eco-certified accommodations",
+                    "Carbon offset programs",
+                    "Locally sourced food",
+                    "Plastic-free amenities",
+                    "Public transportation options",
+                    "Wildlife conservation efforts",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if respondent selects 'Extremely important' or 'Very important' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers, if any, prevent you from choosing sustainable travel options?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative insights. Limit response to 300 characters.",
+            "scripter_notes": "Field type: text input (open-ended).",
+            "script": {
+                "question_text": "What barriers, if any, prevent you from choosing sustainable travel options?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Would you pay a premium (5-10% higher cost) for accommodations with verified sustainability certifications?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, but only if the price difference is minimal",
+                "No, I prefer standard options regardless of sustainability",
+                "Unsure"
+            ],
+            "routing_logic": "Appears if respondent does not select 'Not important at all' in Q1.",
+            "client_notes": "Include a neutral option ('Unsure') to avoid forcing a choice.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Would you pay a premium (5-10% higher cost) for accommodations with verified sustainability certifications?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, but only if the price difference is minimal",
+                    "No, I prefer standard options regardless of sustainability",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if respondent does not select 'Not important at all' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which destinations have you visited in the past year that you felt excelled in sustainability practices?",
+            "answer_options": [],
+            "routing_logic": "Appears if respondent selects at least one option in Q2.",
+            "client_notes": "Open-ended question to identify best practices. Suggest a 200-character limit.",
+            "scripter_notes": "Field type: text input (open-ended).",
+            "script": {
+                "question_text": "Which destinations have you visited in the past year that you felt excelled in sustainability practices?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if respondent selects at least one option in Q2."
+            }
+        }
+    ]
+}

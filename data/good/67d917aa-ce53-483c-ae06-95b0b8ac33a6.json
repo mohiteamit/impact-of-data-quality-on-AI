@@ -1,0 +1,183 @@
+{
+    "survey_id": "67d917aa-ce53-483c-ae06-95b0b8ac33a6",
+    "survey_name": "Apartment Resident Community Engagement Survey",
+    "survey_brief": "This survey aims to assess resident satisfaction with community engagement initiatives and identify opportunities for improving social interactions within the apartment complex.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the current community engagement activities offered in your apartment complex?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: Radio button (single choice)",
+            "script": {
+                "question_text": "How satisfied are you with the current community engagement activities offered in your apartment complex?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of community events would you be most interested in attending? (Select all that apply)",
+            "answer_options": [
+                "Social mixers/happy hours",
+                "Fitness classes (yoga, Zumba, etc.)",
+                "Educational workshops",
+                "Family-friendly events",
+                "Outdoor activities (hiking, picnics)",
+                "Volunteer/community service events",
+                "Cultural celebrations",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Allow multiple selections. Consider follow-up questions for 'None of the above' responses.",
+            "scripter_notes": "Field type: Checkbox (multi-choice)",
+            "script": {
+                "question_text": "Which types of community events would you be most interested in attending? (Select all that apply)",
+                "answer_options": [
+                    "Social mixers/happy hours",
+                    "Fitness classes (yoga, Zumba, etc.)",
+                    "Educational workshops",
+                    "Family-friendly events",
+                    "Outdoor activities (hiking, picnics)",
+                    "Volunteer/community service events",
+                    "Cultural celebrations",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors prevent you from participating in community events?",
+            "answer_options": [
+                "Scheduling conflicts",
+                "Lack of interest in offered activities",
+                "Unaware of event schedules",
+                "Prefer not to socialize with neighbors",
+                "Physical accessibility concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to respondents who selected 'None of the above' in Q2 or rated satisfaction 3 or below in Q1",
+            "client_notes": "Include 'Other' with open text field. Useful for identifying barriers.",
+            "scripter_notes": "Field type: Checkbox with optional text input",
+            "script": {
+                "question_text": "What factors prevent you from participating in community events?",
+                "answer_options": [
+                    "Scheduling conflicts",
+                    "Lack of interest in offered activities",
+                    "Unaware of event schedules",
+                    "Prefer not to socialize with neighbors",
+                    "Physical accessibility concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'None of the above' in Q2 or rated satisfaction 3 or below in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you interact with neighbors in common areas?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Helps gauge baseline community interaction levels.",
+            "scripter_notes": "Field type: Radio button (single choice)",
+            "script": {
+                "question_text": "How often do you interact with neighbors in common areas?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would make you more likely to participate in community activities?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended to capture unique suggestions. Limit to 300 characters.",
+            "scripter_notes": "Field type: Open text with character counter",
+            "script": {
+                "question_text": "What improvements would make you more likely to participate in community activities?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you be interested in helping organize community events?",
+            "answer_options": [
+                "Yes, very interested",
+                "Possibly, depending on the event",
+                "No, not interested"
+            ],
+            "routing_logic": "Appears to respondents who rated satisfaction 4 or above in Q1",
+            "client_notes": "Identifies potential event ambassadors. Follow up with interested respondents.",
+            "scripter_notes": "Field type: Radio button (single choice)",
+            "script": {
+                "question_text": "Would you be interested in helping organize community events?",
+                "answer_options": [
+                    "Yes, very interested",
+                    "Possibly, depending on the event",
+                    "No, not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who rated satisfaction 4 or above in Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which communication channel do you prefer for receiving event information?",
+            "answer_options": [
+                "Email newsletters",
+                "Mobile app notifications",
+                "Physical bulletin boards",
+                "Text messages",
+                "Social media",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Important for optimizing outreach efforts. 'Other' field reveals new channels.",
+            "scripter_notes": "Field type: Checkbox with optional text input",
+            "script": {
+                "question_text": "Which communication channel do you prefer for receiving event information?",
+                "answer_options": [
+                    "Email newsletters",
+                    "Mobile app notifications",
+                    "Physical bulletin boards",
+                    "Text messages",
+                    "Social media",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

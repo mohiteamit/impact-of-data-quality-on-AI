@@ -1,0 +1,137 @@
+{
+    "survey_id": "0dd0705e-c3f3-4353-881c-4c429656b34f",
+    "survey_name": "Campus Wellness Program Feedback Survey",
+    "survey_brief": "This survey aims to gather feedback from university students regarding their experience with the campus wellness programs to help improve future offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in campus wellness programs?",
+            "answer_options": [
+                "Regularly (once a week or more)",
+                "Occasionally (once a month)",
+                "Rarely (a few times a year)",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button layout for clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you participate in campus wellness programs?",
+                "answer_options": [
+                    "Regularly (once a week or more)",
+                    "Occasionally (once a month)",
+                    "Rarely (a few times a year)",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which wellness programs have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Yoga classes",
+                "Mental health workshops",
+                "Nutrition counseling",
+                "Fitness challenges",
+                "Meditation sessions",
+                "None of the above"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option if needed.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which wellness programs have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Yoga classes",
+                    "Mental health workshops",
+                    "Nutrition counseling",
+                    "Fitness challenges",
+                    "Meditation sessions",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What do you like most about the campus wellness programs?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Open-ended responses can provide qualitative insights. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What do you like most about the campus wellness programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the variety of wellness programs offered?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use a Likert scale layout (single-choice).",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the variety of wellness programs offered?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for future wellness programs?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Encourage detailed feedback. Mobile-friendly text input required.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for future wellness programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you recommend the campus wellness programs to other students?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No, probably not",
+                "No, definitely not"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use a single-choice radio button layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you recommend the campus wellness programs to other students?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No, probably not",
+                    "No, definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        }
+    ]
+}

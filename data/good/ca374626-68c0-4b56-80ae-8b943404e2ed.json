@@ -1,0 +1,131 @@
+{
+    "survey_id": "ca374626-68c0-4b56-80ae-8b943404e2ed",
+    "survey_name": "Co-Working Space Amenities Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from users of co-working spaces to evaluate satisfaction with available amenities and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use a co-working space?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely"
+            ],
+            "routing_logic": "Always appears as first question.",
+            "client_notes": "Use a clear frequency scale to capture usage patterns.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you use a co-working space?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears as first question."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which amenities do you use most frequently in your co-working space? (Select all that apply)",
+            "answer_options": [
+                "High-speed internet",
+                "Meeting rooms",
+                "Private offices",
+                "Printing/scanning services",
+                "Kitchen facilities",
+                "Lounge areas",
+                "Event spaces",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears after Q1.",
+            "client_notes": "Allow multi-selection to capture comprehensive data.",
+            "scripter_notes": "Field type: Checkbox (multi-choice) with an 'Other' open-text field.",
+            "script": {
+                "question_text": "Which amenities do you use most frequently in your co-working space? (Select all that apply)",
+                "answer_options": [
+                    "High-speed internet",
+                    "Meeting rooms",
+                    "Private offices",
+                    "Printing/scanning services",
+                    "Kitchen facilities",
+                    "Lounge areas",
+                    "Event spaces",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears after Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness and maintenance of the co-working space?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears after Q2.",
+            "client_notes": "Use a 5-point Likert scale for standardized responses.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and maintenance of the co-working space?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears after Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional amenities would improve your co-working experience?",
+            "answer_options": [],
+            "routing_logic": "Appears after Q3.",
+            "client_notes": "Open-ended to capture qualitative feedback.",
+            "scripter_notes": "Field type: Open text.",
+            "script": {
+                "question_text": "What additional amenities would improve your co-working experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears after Q3."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend this co-working space to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears after Q4.",
+            "client_notes": "Net Promoter Score (NPS) style question for benchmarking.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend this co-working space to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears after Q4."
+            }
+        }
+    ]
+}

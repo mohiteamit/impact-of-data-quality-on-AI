@@ -1,0 +1,139 @@
+{
+    "survey_id": "e998245e-e856-490c-b98b-7c7886c091c8",
+    "survey_name": "Telemedicine Platform Usability Survey",
+    "survey_brief": "This survey aims to gather user feedback on the usability, features, and overall satisfaction with our telemedicine platform to identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use our telemedicine platform?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "This is my first time"
+            ],
+            "routing_logic": "Asked to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How often do you use our telemedicine platform?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Asked to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Video consultations",
+                "Chat with doctors",
+                "Prescription refills",
+                "Health records access",
+                "Symptom checker",
+                "Appointment scheduling"
+            ],
+            "routing_logic": "Asked to respondents who use the platform at least rarely",
+            "client_notes": "Use checkboxes for multiple selections. Randomize answer order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "Which features do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Video consultations",
+                    "Chat with doctors",
+                    "Prescription refills",
+                    "Health records access",
+                    "Symptom checker",
+                    "Appointment scheduling"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Asked to respondents who use the platform at least rarely"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the video consultation quality?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Asked if 'Video consultations' is selected in Q2",
+            "client_notes": "Use a 5-point Likert scale. Consider adding an N/A option if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with the video consultation quality?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Asked if 'Video consultations' is selected in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced while using our telemedicine platform?",
+            "answer_options": [],
+            "routing_logic": "Asked to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Set a reasonable character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What challenges have you faced while using our telemedicine platform?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Asked to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend our telemedicine platform to others?",
+            "answer_options": [
+                "0 - Not at all likely",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 - Extremely likely"
+            ],
+            "routing_logic": "Asked to all respondents",
+            "client_notes": "Use an 11-point NPS scale. Display as a horizontal slider for better UX.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with slider visualization",
+            "script": {
+                "question_text": "How likely are you to recommend our telemedicine platform to others?",
+                "answer_options": [
+                    "0 - Not at all likely",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 - Extremely likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Asked to all respondents"
+            }
+        }
+    ]
+}

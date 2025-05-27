@@ -1,0 +1,165 @@
+{
+    "survey_id": "35b63bbf-508e-4f15-9631-5814bd7d760c",
+    "survey_name": "Campus Bicycle Infrastructure Feedback Survey",
+    "survey_brief": "This survey aims to gather student and faculty feedback on the current bicycle infrastructure and amenities on campus to identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use a bicycle on campus?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a single-choice radio button layout for simplicity. Ensure options cover all possible usage frequencies.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How frequently do you use a bicycle on campus?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons you use a bicycle on campus? (Select all that apply)",
+            "answer_options": [
+                "Commuting to class/work",
+                "Exercise/recreation",
+                "Environmental benefits",
+                "Faster than walking",
+                "Cost-effective transportation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q1 != 'Never'",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an 'Other' option with an open-text follow-up if selected.",
+            "script": {
+                "question_text": "What are the primary reasons you use a bicycle on campus? (Select all that apply)",
+                "answer_options": [
+                    "Commuting to class/work",
+                    "Exercise/recreation",
+                    "Environmental benefits",
+                    "Faster than walking",
+                    "Cost-effective transportation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the current bicycle parking availability on campus?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display if Q1 != 'Never'",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the current bicycle parking availability on campus?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in campus bicycle infrastructure? (Select all that apply)",
+            "answer_options": [
+                "More bicycle racks",
+                "Covered/sheltered parking",
+                "Better lighting near bike parking",
+                "More bike lanes on campus roads",
+                "Bike repair stations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q1 != 'Never'",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an 'Other' option with an open-text follow-up if selected.",
+            "script": {
+                "question_text": "What improvements would you like to see in campus bicycle infrastructure? (Select all that apply)",
+                "answer_options": [
+                    "More bicycle racks",
+                    "Covered/sheltered parking",
+                    "Better lighting near bike parking",
+                    "More bike lanes on campus roads",
+                    "Bike repair stations",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any safety concerns while cycling on campus? If yes, please describe.",
+            "answer_options": [],
+            "routing_logic": "Display if Q1 != 'Never'",
+            "client_notes": "Use an open-text field to allow detailed responses. Ensure the field is large enough for detailed feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "Have you experienced any safety concerns while cycling on campus? If yes, please describe.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you be interested in a campus bike-sharing program if one were introduced?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a single-choice radio button layout for simplicity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Would you be interested in a campus bike-sharing program if one were introduced?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Any additional comments or suggestions regarding bicycle infrastructure on campus?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use an open-text field to capture any final thoughts. Ensure the field is large enough for detailed feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "Any additional comments or suggestions regarding bicycle infrastructure on campus?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        }
+    ]
+}

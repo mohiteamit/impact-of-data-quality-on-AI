@@ -1,0 +1,125 @@
+{
+    "survey_id": "129ff612-3dfe-4e95-bd4c-44c8c7add3ce",
+    "survey_name": "University Campus Parking Satisfaction Survey",
+    "survey_brief": "This survey aims to assess student and faculty satisfaction with campus parking availability, convenience, and safety to inform future improvements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use campus parking facilities?",
+            "answer_options": [
+                "Daily",
+                "3-4 times per week",
+                "1-2 times per week",
+                "Less than once per week",
+                "Never"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a radio button scale for clear single selection. Mobile-friendly layout recommended.",
+            "scripter_notes": "Field type: single-choice radio buttons, required question",
+            "script": {
+                "question_text": "How often do you use campus parking facilities?",
+                "answer_options": [
+                    "Daily",
+                    "3-4 times per week",
+                    "1-2 times per week",
+                    "Less than once per week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which parking issues have you encountered? (Select all that apply)",
+            "answer_options": [
+                "Insufficient parking spaces",
+                "Poor lighting/safety concerns",
+                "Difficulty finding spots during peak hours",
+                "High parking permit costs",
+                "Poor signage/difficult navigation",
+                "None of the above"
+            ],
+            "routing_logic": "Display if Q1 ≠ 'Never'",
+            "client_notes": "Use checkboxes for multi-select. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: multi-choice checkboxes, include 'Select all that apply' instruction",
+            "script": {
+                "question_text": "Which parking issues have you encountered? (Select all that apply)",
+                "answer_options": [
+                    "Insufficient parking spaces",
+                    "Poor lighting/safety concerns",
+                    "Difficulty finding spots during peak hours",
+                    "High parking permit costs",
+                    "Poor signage/difficult navigation",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness of parking facilities?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display if Q1 ≠ 'Never'",
+            "client_notes": "5-point Likert scale. Include N/A option if needed.",
+            "scripter_notes": "Field type: single-choice radio buttons with horizontal layout",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness of parking facilities?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would make campus parking more convenient? (Open text)",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Limit response to 300 characters. Useful for qualitative insights.",
+            "scripter_notes": "Field type: open-text with character counter",
+            "script": {
+                "question_text": "What improvements would make campus parking more convenient? (Open text)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay for reserved parking if it guaranteed availability?",
+            "answer_options": [
+                "Yes, at current rates",
+                "Yes, at reduced rates",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Display if Q1 ≠ 'Never'",
+            "client_notes": "Include an opt-out option for non-drivers.",
+            "scripter_notes": "Field type: single-choice radio buttons with 'Prefer not to answer' option",
+            "script": {
+                "question_text": "Would you be willing to pay for reserved parking if it guaranteed availability?",
+                "answer_options": [
+                    "Yes, at current rates",
+                    "Yes, at reduced rates",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 ≠ 'Never'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "survey_id": "9e65dbb0-d4f6-4483-a426-165f0d2e9c9b",
+    "survey_name": "Electric Scooter Sharing Service Safety Perception Survey",
+    "survey_brief": "This survey aims to gather user feedback on safety perceptions and experiences with electric scooter sharing services in urban areas.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use electric scooter sharing services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "First-time user"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How frequently do you use electric scooter sharing services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What safety concerns do you have when using electric scooter sharing services? (Select all that apply)",
+            "answer_options": [
+                "Poor road conditions",
+                "Lack of dedicated bike/scooter lanes",
+                "Other vehicles not respecting scooters",
+                "Scooter mechanical failures",
+                "Night-time visibility issues",
+                "None, I feel completely safe"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use checkboxes for multi-select. Include an option for no concerns.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "What safety concerns do you have when using electric scooter sharing services? (Select all that apply)",
+                "answer_options": [
+                    "Poor road conditions",
+                    "Lack of dedicated bike/scooter lanes",
+                    "Other vehicles not respecting scooters",
+                    "Scooter mechanical failures",
+                    "Night-time visibility issues",
+                    "None, I feel completely safe"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the effectiveness of safety features on the scooters (e.g., lights, brakes, speed limits)?",
+            "answer_options": [
+                "Very effective",
+                "Somewhat effective",
+                "Neutral",
+                "Somewhat ineffective",
+                "Very ineffective",
+                "Not applicable (haven't noticed)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'First-time user'",
+            "client_notes": "Use a 5-point Likert scale with neutral midpoint. Include N/A option.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How would you rate the effectiveness of safety features on the scooters (e.g., lights, brakes, speed limits)?",
+                "answer_options": [
+                    "Very effective",
+                    "Somewhat effective",
+                    "Neutral",
+                    "Somewhat ineffective",
+                    "Very ineffective",
+                    "Not applicable (haven't noticed)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'First-time user'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you ever been involved in or witnessed an accident while using an electric scooter sharing service?",
+            "answer_options": [
+                "Yes, I was involved",
+                "Yes, I witnessed",
+                "No"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use radio buttons. Follow-up with Q5 if 'Yes' is selected.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Have you ever been involved in or witnessed an accident while using an electric scooter sharing service?",
+                "answer_options": [
+                    "Yes, I was involved",
+                    "Yes, I witnessed",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If yes, please briefly describe what happened and any contributing factors you observed.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q4 answer is 'Yes, I was involved' or 'Yes, I witnessed'",
+            "client_notes": "Open-ended text field. Allow for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "If yes, please briefly describe what happened and any contributing factors you observed.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q4 answer is 'Yes, I was involved' or 'Yes, I witnessed'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What safety improvements would you recommend for electric scooter sharing services?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Use a text area box.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What safety improvements would you recommend for electric scooter sharing services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

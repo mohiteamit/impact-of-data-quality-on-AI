@@ -1,0 +1,113 @@
+{
+    "survey_id": "ce0c89e9-9358-49b6-bfe2-b289e77705ec",
+    "survey_name": "Post-Conference Networking Effectiveness Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness of networking opportunities provided at the recent conference, to improve future events.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied were you with the networking opportunities at the conference?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure the options are displayed vertically for mobile users.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How satisfied were you with the networking opportunities at the conference?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which networking formats did you participate in? (Select all that apply)",
+            "answer_options": [
+                "Roundtable discussions",
+                "Speed networking sessions",
+                "Social mixers",
+                "One-on-one meetings",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. Ensure the 'None of the above' option deselects other choices if selected.",
+            "scripter_notes": "Field type: checkbox with logic to deselect other options if 'None of the above' is selected.",
+            "script": {
+                "question_text": "Which networking formats did you participate in? (Select all that apply)",
+                "answer_options": [
+                    "Roundtable discussions",
+                    "Speed networking sessions",
+                    "Social mixers",
+                    "One-on-one meetings",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What was the most valuable networking activity for you, and why?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected any networking format in Q2 except 'None of the above'",
+            "client_notes": "Open-ended question to capture qualitative insights. Limit response to 300 characters.",
+            "scripter_notes": "Field type: open text with character limit.",
+            "script": {
+                "question_text": "What was the most valuable networking activity for you, and why?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected any networking format in Q2 except 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How many meaningful professional connections did you make at the conference?",
+            "answer_options": [
+                "0",
+                "1-2",
+                "3-5",
+                "6-10",
+                "More than 10"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a categorical scale for ease of response. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How many meaningful professional connections did you make at the conference?",
+                "answer_options": [
+                    "0",
+                    "1-2",
+                    "3-5",
+                    "6-10",
+                    "More than 10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for future conference networking opportunities?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather actionable feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: open text with character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for future conference networking opportunities?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

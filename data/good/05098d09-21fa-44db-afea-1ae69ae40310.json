@@ -1,0 +1,135 @@
+{
+    "survey_id": "05098d09-21fa-44db-afea-1ae69ae40310",
+    "survey_name": "AI-Powered Personal Assistant Usage Survey",
+    "survey_brief": "This survey aims to understand user preferences, satisfaction levels, and pain points regarding AI-powered personal assistants across various devices and platforms.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which AI-powered personal assistant(s) do you regularly use?",
+            "answer_options": [
+                "Amazon Alexa",
+                "Google Assistant",
+                "Apple Siri",
+                "Microsoft Cortana",
+                "Samsung Bixby",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Consider adding an 'Other' option with a text field to capture niche assistants. Mobile-friendly checkbox implementation recommended.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional text input for 'Other'",
+            "script": {
+                "question_text": "Which AI-powered personal assistant(s) do you regularly use?",
+                "answer_options": [
+                    "Amazon Alexa",
+                    "Google Assistant",
+                    "Apple Siri",
+                    "Microsoft Cortana",
+                    "Samsung Bixby",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary AI assistant's ability to understand and respond to your requests?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents who selected at least one assistant in Q1",
+            "client_notes": "Use a 5-point Likert scale for consistency. Randomize scale direction for 10% of respondents to avoid bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Implement scale randomization logic.",
+            "script": {
+                "question_text": "How satisfied are you with your primary AI assistant's ability to understand and respond to your requests?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected at least one assistant in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What types of tasks do you most frequently use your AI assistant for? (Select all that apply)",
+            "answer_options": [
+                "Setting reminders/alarms",
+                "Playing music/podcasts",
+                "Checking weather",
+                "Controlling smart home devices",
+                "Making purchases",
+                "Getting directions",
+                "Answering general knowledge questions",
+                "Sending messages/making calls",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents who selected at least one assistant in Q1",
+            "client_notes": "Consider grouping similar tasks if the list becomes too long. Mobile users may need a scrollable checkbox list.",
+            "scripter_notes": "Field type: MULTI_CHOICE with optional text input for 'Other'",
+            "script": {
+                "question_text": "What types of tasks do you most frequently use your AI assistant for? (Select all that apply)",
+                "answer_options": [
+                    "Setting reminders/alarms",
+                    "Playing music/podcasts",
+                    "Checking weather",
+                    "Controlling smart home devices",
+                    "Making purchases",
+                    "Getting directions",
+                    "Answering general knowledge questions",
+                    "Sending messages/making calls",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents who selected at least one assistant in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the single most frustrating limitation you've encountered when using AI assistants?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended responses may reveal unexpected pain points. Consider adding a character limit (e.g., 250 chars).",
+            "scripter_notes": "Field type: OPEN_TEXT with character counter",
+            "script": {
+                "question_text": "What is the single most frustrating limitation you've encountered when using AI assistants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How concerned are you about privacy when using AI-powered personal assistants?",
+            "answer_options": [
+                "Extremely concerned",
+                "Very concerned",
+                "Somewhat concerned",
+                "Slightly concerned",
+                "Not at all concerned"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a balanced 5-point scale. Consider adding a follow-up question about specific privacy concerns for respondents selecting 'Extremely' or 'Very' concerned.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Implement conditional routing to potential follow-up questions.",
+            "script": {
+                "question_text": "How concerned are you about privacy when using AI-powered personal assistants?",
+                "answer_options": [
+                    "Extremely concerned",
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Slightly concerned",
+                    "Not at all concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

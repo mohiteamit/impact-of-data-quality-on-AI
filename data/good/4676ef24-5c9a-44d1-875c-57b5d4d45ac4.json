@@ -1,0 +1,137 @@
+{
+    "survey_id": "4676ef24-5c9a-44d1-875c-57b5d4d45ac4",
+    "survey_name": "Customer Satisfaction Survey for Electric Scooter Sharing Services",
+    "survey_brief": "This survey aims to gather feedback from users of electric scooter sharing services to improve service quality, safety, and overall user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use electric scooter sharing services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Occasionally",
+                "First time user"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for mobile-friendly response.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How often do you use electric scooter sharing services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Occasionally",
+                    "First time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing an electric scooter sharing service? (Select all that apply)",
+            "answer_options": [
+                "Price",
+                "Availability of scooters",
+                "Ease of use (app, unlocking)",
+                "Battery life",
+                "Safety features",
+                "Customer support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use multi-choice checkboxes. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE with optional open text for 'Other'.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing an electric scooter sharing service? (Select all that apply)",
+                "answer_options": [
+                    "Price",
+                    "Availability of scooters",
+                    "Ease of use (app, unlocking)",
+                    "Battery life",
+                    "Safety features",
+                    "Customer support",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the current pricing of the electric scooter sharing service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents who use the service at least occasionally (Q1 not 'First time user').",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with the current pricing of the electric scooter sharing service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who use the service at least occasionally (Q1 not 'First time user')."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you experienced any safety concerns while using electric scooter sharing services?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a binary choice option. Follow up with an open-ended question if 'Yes' is selected.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Have you experienced any safety concerns while using electric scooter sharing services?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe the safety concern you experienced.",
+            "answer_options": [],
+            "routing_logic": "Only if Q4 is 'Yes'.",
+            "client_notes": "Open-ended text box for detailed feedback. Ensure mobile responsiveness.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "Please describe the safety concern you experienced.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q4 is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would you suggest for electric scooter sharing services?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you suggest for electric scooter sharing services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

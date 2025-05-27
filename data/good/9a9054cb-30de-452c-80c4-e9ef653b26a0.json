@@ -1,0 +1,125 @@
+{
+    "survey_id": "9a9054cb-30de-452c-80c4-e9ef653b26a0",
+    "survey_name": "Corporate Sustainability Initiatives Employee Engagement Survey",
+    "survey_brief": "This survey aims to assess employee awareness, engagement, and satisfaction with the company's sustainability initiatives to improve future programs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with our company's current sustainability initiatives?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a Likert scale to measure awareness levels. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Mandatory response.",
+            "script": {
+                "question_text": "How familiar are you with our company's current sustainability initiatives?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of these sustainability initiatives have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Recycling programs",
+                "Energy-saving challenges",
+                "Sustainable commuting incentives",
+                "Paperless office initiatives",
+                "Green team activities",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Checkbox format allows multiple selections. Include 'None' option to capture non-participation.",
+            "scripter_notes": "Field type: Multi-choice checkboxes. Optional response.",
+            "script": {
+                "question_text": "Which of these sustainability initiatives have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Recycling programs",
+                    "Energy-saving challenges",
+                    "Sustainable commuting incentives",
+                    "Paperless office initiatives",
+                    "Green team activities",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the company's efforts to promote sustainability in the workplace?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "5-point Likert scale provides balanced satisfaction measurement. Randomize scale order if possible.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Mandatory response.",
+            "script": {
+                "question_text": "How satisfied are you with the company's efforts to promote sustainability in the workplace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What suggestions do you have for improving our sustainability initiatives?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question captures qualitative feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: Open text with character counter. Optional response.",
+            "script": {
+                "question_text": "What suggestions do you have for improving our sustainability initiatives?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be interested in joining a 'Green Team' to help shape future sustainability initiatives?",
+            "answer_options": [
+                "Yes, very interested",
+                "Possibly interested",
+                "Neutral",
+                "Not very interested",
+                "Not at all interested"
+            ],
+            "routing_logic": "Appears only if Q2 response includes participation in any initiative",
+            "client_notes": "Measure engagement potential among active participants. Include 'Neutral' option.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Optional response.",
+            "script": {
+                "question_text": "Would you be interested in joining a 'Green Team' to help shape future sustainability initiatives?",
+                "answer_options": [
+                    "Yes, very interested",
+                    "Possibly interested",
+                    "Neutral",
+                    "Not very interested",
+                    "Not at all interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q2 response includes participation in any initiative"
+            }
+        }
+    ]
+}

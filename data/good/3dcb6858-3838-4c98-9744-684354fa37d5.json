@@ -1,0 +1,127 @@
+{
+    "survey_id": "3dcb6858-3838-4c98-9744-684354fa37d5",
+    "survey_name": "Campus Recycling Program Participation Survey",
+    "survey_brief": "This survey aims to assess student and faculty participation in, and satisfaction with, the campus recycling program to identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the recycling bins on campus?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure mobile-friendly dropdown for answer options.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "How often do you use the recycling bins on campus?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of materials do you typically recycle on campus? (Select all that apply)",
+            "answer_options": [
+                "Paper",
+                "Plastic",
+                "Glass",
+                "Metal",
+                "Organic waste",
+                "I don't recycle on campus"
+            ],
+            "routing_logic": "This question appears for respondents who answered 'Always', 'Often', or 'Sometimes' to Q1.",
+            "client_notes": "Multi-select options. Include 'Other' with a text field if needed.",
+            "scripter_notes": "Field type: multi-choice (checkboxes).",
+            "script": {
+                "question_text": "Which types of materials do you typically recycle on campus? (Select all that apply)",
+                "answer_options": [
+                    "Paper",
+                    "Plastic",
+                    "Glass",
+                    "Metal",
+                    "Organic waste",
+                    "I don't recycle on campus"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who answered 'Always', 'Often', or 'Sometimes' to Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers prevent you from using the campus recycling program?",
+            "answer_options": [
+                "Lack of convenient bin locations",
+                "Unclear signage",
+                "Lack of awareness about the program",
+                "No interest in recycling",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for respondents who answered 'Rarely' or 'Never' to Q1.",
+            "client_notes": "Include an optional open-text field for 'Other' responses.",
+            "scripter_notes": "Field type: multi-choice with optional open-text.",
+            "script": {
+                "question_text": "What barriers prevent you from using the campus recycling program?",
+                "answer_options": [
+                    "Lack of convenient bin locations",
+                    "Unclear signage",
+                    "Lack of awareness about the program",
+                    "No interest in recycling",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who answered 'Rarely' or 'Never' to Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the current recycling bin locations on campus?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for respondents who answered 'Always', 'Often', or 'Sometimes' to Q1.",
+            "client_notes": "Use a 5-point Likert scale. Ensure clear labeling.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the current recycling bin locations on campus?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who answered 'Always', 'Often', or 'Sometimes' to Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What suggestions do you have to improve the campus recycling program?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 250 characters.",
+            "scripter_notes": "Field type: open-text (text area).",
+            "script": {
+                "question_text": "What suggestions do you have to improve the campus recycling program?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

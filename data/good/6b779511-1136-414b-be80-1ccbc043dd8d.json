@@ -1,0 +1,123 @@
+{
+    "survey_id": "6b779511-1136-414b-be80-1ccbc043dd8d",
+    "survey_name": "Sustainability Practices in Coffee Shops Survey",
+    "survey_brief": "This survey aims to gather customer feedback on sustainability practices implemented by coffee shops, including waste reduction, sourcing, and energy efficiency.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit coffee shops?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. This helps segment frequent vs. occasional visitors.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you visit coffee shops?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainability practices do you notice or value in coffee shops? (Select all that apply)",
+            "answer_options": [
+                "Recyclable or compostable cups/containers",
+                "Ethically sourced coffee beans",
+                "Energy-efficient appliances",
+                "Discounts for bringing reusable cups",
+                "Food waste reduction programs",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use checkboxes (MULTI_CHOICE) to allow multiple selections. Helps identify which practices resonate most.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following sustainability practices do you notice or value in coffee shops? (Select all that apply)",
+                "answer_options": [
+                    "Recyclable or compostable cups/containers",
+                    "Ethically sourced coffee beans",
+                    "Energy-efficient appliances",
+                    "Discounts for bringing reusable cups",
+                    "Food waste reduction programs",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How important are sustainability practices in your decision to frequent a coffee shop?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a Likert scale (SINGLE_CHOICE) to measure perceived importance.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How important are sustainability practices in your decision to frequent a coffee shop?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Would you be willing to pay slightly more for coffee if the shop demonstrated strong sustainability practices?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Depends on the price difference"
+            ],
+            "routing_logic": "Appears if Q3 answer is 'Extremely important', 'Very important', or 'Moderately important'",
+            "client_notes": "Single-choice question to gauge price sensitivity tied to sustainability.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE); add skip logic based on Q3 responses.",
+            "script": {
+                "question_text": "Would you be willing to pay slightly more for coffee if the shop demonstrated strong sustainability practices?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Depends on the price difference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q3 answer is 'Extremely important', 'Very important', or 'Moderately important'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional sustainability initiatives would you like to see coffee shops adopt?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Keep the text box mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What additional sustainability initiatives would you like to see coffee shops adopt?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

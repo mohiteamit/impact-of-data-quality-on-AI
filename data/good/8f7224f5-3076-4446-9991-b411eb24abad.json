@@ -1,0 +1,115 @@
+{
+    "survey_id": "8f7224f5-3076-4446-9991-b411eb24abad",
+    "survey_name": "Home Water Conservation Practices Survey",
+    "survey_brief": "This survey aims to understand household water conservation practices and identify opportunities for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you consciously try to conserve water in your household?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a Likert scale for consistency. Ensure answer options are balanced.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you consciously try to conserve water in your household?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following water-saving devices do you currently have installed in your home? (Select all that apply)",
+            "answer_options": [
+                "Low-flow showerheads",
+                "Dual-flush toilets",
+                "Faucet aerators",
+                "Rainwater harvesting systems",
+                "Smart irrigation controllers",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Checkbox format allows multiple selections. Include 'None of the above' to capture non-adopters.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes)",
+            "script": {
+                "question_text": "Which of the following water-saving devices do you currently have installed in your home? (Select all that apply)",
+                "answer_options": [
+                    "Low-flow showerheads",
+                    "Dual-flush toilets",
+                    "Faucet aerators",
+                    "Rainwater harvesting systems",
+                    "Smart irrigation controllers",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you conserve water at home?",
+            "answer_options": [
+                "To reduce utility bills",
+                "Environmental concerns",
+                "Local water restrictions",
+                "Personal values",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to respondents who answered 'Always', 'Often', or 'Sometimes' in Q1",
+            "client_notes": "Include 'Other' option with open text field for unlisted reasons.",
+            "scripter_notes": "Field type: Single-choice with open-ended option (radio buttons with text input)",
+            "script": {
+                "question_text": "What is the primary reason you conserve water at home?",
+                "answer_options": [
+                    "To reduce utility bills",
+                    "Environmental concerns",
+                    "Local water restrictions",
+                    "Personal values",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who answered 'Always', 'Often', or 'Sometimes' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you selected 'Other' in the previous question, please specify your primary reason for conserving water:",
+            "answer_options": [],
+            "routing_logic": "Appears only if 'Other' is selected in Q3",
+            "client_notes": "Keep open text field concise but allow for detailed responses.",
+            "scripter_notes": "Field type: Open text (text input)",
+            "script": {
+                "question_text": "If you selected 'Other' in the previous question, please specify your primary reason for conserving water:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if 'Other' is selected in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional water conservation measures would you consider adopting in your home?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to gather qualitative insights. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: Open text (textarea)",
+            "script": {
+                "question_text": "What additional water conservation measures would you consider adopting in your home?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "survey_id": "62663fd9-a7b5-49f0-9ce3-8cb77cdfdccf",
+    "survey_name": "Electric Vehicle Charging Infrastructure Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from electric vehicle (EV) owners about their satisfaction with current charging infrastructure, including accessibility, reliability, and ease of use.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use public EV charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format to simplify responses and enhance readability.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How often do you use public EV charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons you use public EV charging stations? (Select all that apply)",
+            "answer_options": [
+                "Lack of home charging options",
+                "Long-distance travel",
+                "Convenience while running errands",
+                "Workplace charging unavailable",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 is not 'Never'",
+            "client_notes": "Use a multi-choice format to capture multiple reasons.",
+            "scripter_notes": "Field type: checkbox with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What are the primary reasons you use public EV charging stations? (Select all that apply)",
+                "answer_options": [
+                    "Lack of home charging options",
+                    "Long-distance travel",
+                    "Convenience while running errands",
+                    "Workplace charging unavailable",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of public EV charging stations in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 is not 'Never'",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How satisfied are you with the availability of public EV charging stations in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced when using public EV charging stations?",
+            "answer_options": [],
+            "routing_logic": "If Q1 is not 'Never'",
+            "client_notes": "Open-ended question to capture detailed feedback.",
+            "scripter_notes": "Field type: open-text",
+            "script": {
+                "question_text": "What challenges have you faced when using public EV charging stations?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend public EV charging stations to other EV owners?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "If Q1 is not 'Never'",
+            "client_notes": "Simple yes/no question to gauge overall satisfaction.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "Would you recommend public EV charging stations to other EV owners?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 is not 'Never'"
+            }
+        }
+    ]
+}

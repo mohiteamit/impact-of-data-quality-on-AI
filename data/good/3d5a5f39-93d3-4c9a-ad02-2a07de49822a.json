@@ -1,0 +1,127 @@
+{
+    "survey_id": "3d5a5f39-93d3-4c9a-ad02-2a07de49822a",
+    "survey_name": "Corporate Sustainability Initiatives Employee Engagement Survey",
+    "survey_brief": "This survey aims to assess employee awareness, participation, and satisfaction with current corporate sustainability initiatives to guide future improvements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with your company's current sustainability initiatives?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a balanced 4-point Likert scale to avoid neutral midpoint bias. Ensure mobile-friendly dropdown for answer selection.",
+            "scripter_notes": "Single-choice radio buttons with mandatory response.",
+            "script": {
+                "question_text": "How familiar are you with your company's current sustainability initiatives?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainability programs have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Office recycling program",
+                "Paperless initiative",
+                "Energy-saving competitions",
+                "Sustainable commuting incentives",
+                "Green team/committee",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question with 'None of the above' as explicit opt-out. Consider randomizing option order to reduce primacy bias.",
+            "scripter_notes": "Multi-choice checkboxes with 'Select all that apply' instruction.",
+            "script": {
+                "question_text": "Which of the following sustainability programs have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Office recycling program",
+                    "Paperless initiative",
+                    "Energy-saving competitions",
+                    "Sustainable commuting incentives",
+                    "Green team/committee",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your company's efforts to promote sustainability?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard 5-point Likert scale. Include 'Prefer not to answer' option if anonymity concerns exist.",
+            "scripter_notes": "Single-choice radio buttons with vertical layout for readability.",
+            "script": {
+                "question_text": "How satisfied are you with your company's efforts to promote sustainability?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional sustainability initiatives would you like to see implemented at your workplace?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question placed after initial structured questions to capture unprompted feedback. Limit to 250 characters to ensure actionable responses.",
+            "scripter_notes": "Open-text field with character counter.",
+            "script": {
+                "question_text": "What additional sustainability initiatives would you like to see implemented at your workplace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following factors would most motivate you to participate more in sustainability programs?",
+            "answer_options": [
+                "Financial incentives",
+                "Recognition/rewards",
+                "Clear environmental impact data",
+                "More convenient participation options",
+                "Leadership role opportunities",
+                "Team-based challenges"
+            ],
+            "routing_logic": "If Q2 != 'None of the above'",
+            "client_notes": "Prioritization question. Randomize first 4 options to avoid order bias. Include 'Other' with text field if budget allows.",
+            "scripter_notes": "Single-choice radio buttons with 'Select top priority' instruction.",
+            "script": {
+                "question_text": "Which of the following factors would most motivate you to participate more in sustainability programs?",
+                "answer_options": [
+                    "Financial incentives",
+                    "Recognition/rewards",
+                    "Clear environmental impact data",
+                    "More convenient participation options",
+                    "Leadership role opportunities",
+                    "Team-based challenges"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q2 != 'None of the above'"
+            }
+        }
+    ]
+}

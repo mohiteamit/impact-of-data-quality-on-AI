@@ -1,0 +1,159 @@
+{
+    "survey_id": "bb0b8820-975d-41bb-865e-4e56bc0d19da",
+    "survey_name": "Urban Micro-Mobility Usage Patterns Survey",
+    "survey_brief": "This survey aims to understand user behaviors, preferences, and challenges related to urban micro-mobility solutions like e-scooters and bike-sharing programs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which micro-mobility options have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "E-scooters (e.g., Lime, Bird)",
+                "Bike-sharing programs",
+                "Electric bikes",
+                "Electric skateboards",
+                "None of the above"
+            ],
+            "routing_logic": "If 'None of the above' is selected, skip to Q5.",
+            "client_notes": "Use a multi-select format to allow for multiple responses. Ensure the list covers common urban micro-mobility options.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE). Include 'None of the above' as an exclusive option with routing logic.",
+            "script": {
+                "question_text": "Which micro-mobility options have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "E-scooters (e.g., Lime, Bird)",
+                    "Bike-sharing programs",
+                    "Electric bikes",
+                    "Electric skateboards",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If 'None of the above' is selected, skip to Q5."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How frequently do you use micro-mobility services per week?",
+            "answer_options": [
+                "Less than once",
+                "1-3 times",
+                "4-6 times",
+                "Daily",
+                "Multiple times a day"
+            ],
+            "routing_logic": "All respondents who selected any micro-mobility option in Q1 proceed to this question.",
+            "client_notes": "Use a single-choice radio button format. Include a range that captures both occasional and frequent users.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use micro-mobility services per week?",
+                "answer_options": [
+                    "Less than once",
+                    "1-3 times",
+                    "4-6 times",
+                    "Daily",
+                    "Multiple times a day"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected any micro-mobility option in Q1 proceed to this question."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary reason for using micro-mobility services?",
+            "answer_options": [
+                "Commuting to work/school",
+                "Running errands",
+                "Leisure/recreation",
+                "Avoiding public transport",
+                "Environmental concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents who selected any micro-mobility option in Q1 proceed to this question.",
+            "client_notes": "Include an 'Other' option with a text field for additional input. Use a single-choice format with an optional open-text follow-up.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is your primary reason for using micro-mobility services?",
+                "answer_options": [
+                    "Commuting to work/school",
+                    "Running errands",
+                    "Leisure/recreation",
+                    "Avoiding public transport",
+                    "Environmental concerns",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected any micro-mobility option in Q1 proceed to this question."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would make you use micro-mobility services more often? (Select up to 3)",
+            "answer_options": [
+                "Lower pricing",
+                "More availability/parking spots",
+                "Better safety features (e.g., helmets, lights)",
+                "Improved app functionality",
+                "Expanded service areas",
+                "Better maintenance of vehicles",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents who selected any micro-mobility option in Q1 proceed to this question.",
+            "client_notes": "Use a multi-select format with a limit of 3 selections. Include an 'Other' option for additional feedback.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE) with a max selection limit of 3 and an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What improvements would make you use micro-mobility services more often? (Select up to 3)",
+                "answer_options": [
+                    "Lower pricing",
+                    "More availability/parking spots",
+                    "Better safety features (e.g., helmets, lights)",
+                    "Improved app functionality",
+                    "Expanded service areas",
+                    "Better maintenance of vehicles",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents who selected any micro-mobility option in Q1 proceed to this question."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you have never used micro-mobility services, what is the main reason?",
+            "answer_options": [
+                "Safety concerns",
+                "Lack of availability in my area",
+                "Prefer other transportation methods",
+                "Too expensive",
+                "Not aware of how they work",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if 'None of the above' was selected in Q1.",
+            "client_notes": "Use a single-choice format with an 'Other' option for additional feedback. This question targets non-users to identify barriers to adoption.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "If you have never used micro-mobility services, what is the main reason?",
+                "answer_options": [
+                    "Safety concerns",
+                    "Lack of availability in my area",
+                    "Prefer other transportation methods",
+                    "Too expensive",
+                    "Not aware of how they work",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if 'None of the above' was selected in Q1."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional features would encourage you to try micro-mobility services for the first time?",
+            "answer_options": [],
+            "routing_logic": "Only appears if 'None of the above' was selected in Q1.",
+            "client_notes": "Use an open-ended text field to gather qualitative insights from non-users.",
+            "scripter_notes": "Field type: Open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What additional features would encourage you to try micro-mobility services for the first time?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only appears if 'None of the above' was selected in Q1."
+            }
+        }
+    ]
+}

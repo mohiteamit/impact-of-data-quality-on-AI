@@ -1,0 +1,163 @@
+{
+    "survey_id": "0fa5d6f5-28ce-411a-9e80-892a3ec428e7",
+    "survey_name": "Digital Nomad Accommodation Preferences Survey",
+    "survey_brief": "This survey aims to understand the accommodation preferences and challenges faced by digital nomads to help service providers better cater to their needs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you change your accommodation location as a digital nomad?",
+            "answer_options": [
+                "Every few days",
+                "Every 1-2 weeks",
+                "Every 1-3 months",
+                "Every 4-6 months",
+                "Less frequently than every 6 months"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clear response capture. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you change your accommodation location as a digital nomad?",
+                "answer_options": [
+                    "Every few days",
+                    "Every 1-2 weeks",
+                    "Every 1-3 months",
+                    "Every 4-6 months",
+                    "Less frequently than every 6 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of accommodation do you typically use? (Select all that apply)",
+            "answer_options": [
+                "Hostels",
+                "Hotels",
+                "Airbnb/rental apartments",
+                "Co-living spaces",
+                "House sitting",
+                "Friends/family homes",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with text field for additional responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "Which types of accommodation do you typically use? (Select all that apply)",
+                "answer_options": [
+                    "Hostels",
+                    "Hotels",
+                    "Airbnb/rental apartments",
+                    "Co-living spaces",
+                    "House sitting",
+                    "Friends/family homes",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the three most important factors when choosing accommodation?",
+            "answer_options": [
+                "Reliable high-speed internet",
+                "Work-friendly environment",
+                "Cost/price",
+                "Location/safety",
+                "Community/networking opportunities",
+                "Flexibility of stay duration",
+                "Amenities (kitchen, laundry, etc.)",
+                "Quiet/private workspace",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 'Select up to 3' multi-choice format. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: multi-select with max 3 choices (MULTI_CHOICE with validation)",
+            "script": {
+                "question_text": "What are the three most important factors when choosing accommodation?",
+                "answer_options": [
+                    "Reliable high-speed internet",
+                    "Work-friendly environment",
+                    "Cost/price",
+                    "Location/safety",
+                    "Community/networking opportunities",
+                    "Flexibility of stay duration",
+                    "Amenities (kitchen, laundry, etc.)",
+                    "Quiet/private workspace",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe your biggest challenge when finding suitable accommodation as a digital nomad:",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a text box with a 500-character limit. Include placeholder text: 'e.g., unreliable internet, short-term lease restrictions, etc.'",
+            "scripter_notes": "Field type: open text (OPEN_TEXT) with character counter",
+            "script": {
+                "question_text": "Please describe your biggest challenge when finding suitable accommodation as a digital nomad:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be interested in a subscription-based accommodation service specifically designed for digital nomads?",
+            "answer_options": [
+                "Yes, definitely",
+                "Maybe, depending on features/price",
+                "No, I prefer arranging my own accommodation",
+                "Don't know/unsure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include a follow-up question (Q5a) for respondents who select 'Yes' or 'Maybe'",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with conditional routing",
+            "script": {
+                "question_text": "Would you be interested in a subscription-based accommodation service specifically designed for digital nomads?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Maybe, depending on features/price",
+                    "No, I prefer arranging my own accommodation",
+                    "Don't know/unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5a",
+            "question_text": "What features would make you most likely to use a digital nomad accommodation subscription service?",
+            "answer_options": [
+                "Guaranteed workspace quality",
+                "Flexible move-in/move-out dates",
+                "Global network of verified locations",
+                "Built-in community events",
+                "All-inclusive pricing (utilities, cleaning, etc.)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q5 response is 'Yes, definitely' or 'Maybe, depending on features/price'",
+            "client_notes": "Allow multiple selections. Include text field for 'Other' responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with conditional display",
+            "script": {
+                "question_text": "What features would make you most likely to use a digital nomad accommodation subscription service?",
+                "answer_options": [
+                    "Guaranteed workspace quality",
+                    "Flexible move-in/move-out dates",
+                    "Global network of verified locations",
+                    "Built-in community events",
+                    "All-inclusive pricing (utilities, cleaning, etc.)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q5 response is 'Yes, definitely' or 'Maybe, depending on features/price'"
+            }
+        }
+    ]
+}

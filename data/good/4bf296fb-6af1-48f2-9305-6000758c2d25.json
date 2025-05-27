@@ -1,0 +1,143 @@
+{
+    "survey_id": "4bf296fb-6af1-48f2-9305-6000758c2d25",
+    "survey_name": "Digital Wallet Adoption and Usage Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, adoption rates, and usage patterns of digital wallet services to improve product offerings and user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which digital wallet services have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Apple Pay",
+                "Google Pay",
+                "Samsung Pay",
+                "PayPal",
+                "Venmo",
+                "Cash App",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with open-text field for additional responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an 'Other' option triggering a text input if selected.",
+            "script": {
+                "question_text": "Which digital wallet services have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Apple Pay",
+                    "Google Pay",
+                    "Samsung Pay",
+                    "PayPal",
+                    "Venmo",
+                    "Cash App",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How frequently do you use digital wallet services for transactions?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use radio buttons for single-select. Ensure the scale is clear and options are mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How frequently do you use digital wallet services for transactions?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing a digital wallet service? (Select up to 3)",
+            "answer_options": [
+                "Ease of use",
+                "Security features",
+                "Transaction speed",
+                "Compatibility with merchants",
+                "Rewards or cashback",
+                "Low fees",
+                "Customer support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use checkboxes with a limit of 3 selections. Include an 'Other' option with open-text field for additional responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max selections set to 3 and an 'Other' option triggering a text input if selected.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a digital wallet service? (Select up to 3)",
+                "answer_options": [
+                    "Ease of use",
+                    "Security features",
+                    "Transaction speed",
+                    "Compatibility with merchants",
+                    "Rewards or cashback",
+                    "Low fees",
+                    "Customer support",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about using digital wallet services?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Open-ended question to capture qualitative feedback. Use a text box with a character limit of 500.",
+            "scripter_notes": "Field type: OPEN_TEXT with max character limit of 500.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using digital wallet services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any issues with digital wallet transactions in the past year?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use radio buttons for single-select. Follow up with Q6 if 'Yes' is selected.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Route to Q6 if 'Yes' is selected.",
+            "script": {
+                "question_text": "Have you experienced any issues with digital wallet transactions in the past year?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe the issue(s) you encountered with digital wallet transactions.",
+            "answer_options": [],
+            "routing_logic": "Shown if Q5 answer is 'Yes'",
+            "client_notes": "Open-ended question to capture details of issues faced. Use a text box with a character limit of 500.",
+            "scripter_notes": "Field type: OPEN_TEXT with max character limit of 500. Only show if Q5 answer is 'Yes'.",
+            "script": {
+                "question_text": "Please describe the issue(s) you encountered with digital wallet transactions.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q5 answer is 'Yes'"
+            }
+        }
+    ]
+}

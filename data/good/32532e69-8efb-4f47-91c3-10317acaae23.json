@@ -1,0 +1,139 @@
+{
+    "survey_id": "32532e69-8efb-4f47-91c3-10317acaae23",
+    "survey_name": "Smart Thermostat Adoption Barriers Survey",
+    "survey_brief": "This survey aims to understand the key barriers and motivators for homeowners when considering the adoption of smart thermostat technology to improve energy efficiency.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with smart thermostat technology?",
+            "answer_options": [
+                "Not familiar at all",
+                "Slightly familiar",
+                "Moderately familiar",
+                "Very familiar",
+                "Extremely familiar"
+            ],
+            "routing_logic": "Always display",
+            "client_notes": "Use a 5-point Likert scale for familiarity assessment. Consider randomizing the order of options to avoid bias.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Display all options vertically.",
+            "script": {
+                "question_text": "How familiar are you with smart thermostat technology?",
+                "answer_options": [
+                    "Not familiar at all",
+                    "Slightly familiar",
+                    "Moderately familiar",
+                    "Very familiar",
+                    "Extremely familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always display"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary concerns about installing a smart thermostat in your home? (Select all that apply)",
+            "answer_options": [
+                "High upfront cost",
+                "Complex installation process",
+                "Data privacy concerns",
+                "Compatibility with my HVAC system",
+                "Difficulty of use",
+                "Uncertainty about energy savings",
+                "Dependence on internet connectivity",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q1 response is not 'Not familiar at all'",
+            "client_notes": "Include an 'Other' option with text field to capture unique concerns. Randomize option order except for 'Other'.",
+            "scripter_notes": "Field type: Multi-choice checkboxes. Include text input field for 'Other' option.",
+            "script": {
+                "question_text": "What are your primary concerns about installing a smart thermostat in your home? (Select all that apply)",
+                "answer_options": [
+                    "High upfront cost",
+                    "Complex installation process",
+                    "Data privacy concerns",
+                    "Compatibility with my HVAC system",
+                    "Difficulty of use",
+                    "Uncertainty about energy savings",
+                    "Dependence on internet connectivity",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 response is not 'Not familiar at all'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What potential benefits would most motivate you to adopt a smart thermostat?",
+            "answer_options": [
+                "Energy cost savings",
+                "Environmental benefits",
+                "Remote temperature control",
+                "Automated scheduling features",
+                "Integration with other smart home devices",
+                "Utility company rebates/incentives",
+                "Increased home value",
+                "None of the above"
+            ],
+            "routing_logic": "Display if Q1 response is not 'Not familiar at all'",
+            "client_notes": "Randomize options except 'None of the above' which should appear last. Consider follow-up questions based on selections.",
+            "scripter_notes": "Field type: Single-choice radio buttons. May need conditional logic for follow-ups.",
+            "script": {
+                "question_text": "What potential benefits would most motivate you to adopt a smart thermostat?",
+                "answer_options": [
+                    "Energy cost savings",
+                    "Environmental benefits",
+                    "Remote temperature control",
+                    "Automated scheduling features",
+                    "Integration with other smart home devices",
+                    "Utility company rebates/incentives",
+                    "Increased home value",
+                    "None of the above"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 response is not 'Not familiar at all'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What price range would you consider reasonable for a smart thermostat with basic features?",
+            "answer_options": [
+                "Under $50",
+                "$50 - $100",
+                "$101 - $150",
+                "$151 - $200",
+                "Over $200",
+                "I wouldn't purchase at any price"
+            ],
+            "routing_logic": "Display if Q3 response is not 'None of the above'",
+            "client_notes": "Use realistic price brackets based on market research. Include exit option for those completely opposed.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Display in logical price order.",
+            "script": {
+                "question_text": "What price range would you consider reasonable for a smart thermostat with basic features?",
+                "answer_options": [
+                    "Under $50",
+                    "$50 - $100",
+                    "$101 - $150",
+                    "$151 - $200",
+                    "Over $200",
+                    "I wouldn't purchase at any price"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q3 response is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional information or assurances would help you feel more comfortable about adopting smart thermostat technology?",
+            "answer_options": [],
+            "routing_logic": "Display if Q2 contains any selection other than 'Other'",
+            "client_notes": "Leave ample space for detailed responses. Useful for identifying communication gaps.",
+            "scripter_notes": "Field type: Open-text response. Set character limit to 500.",
+            "script": {
+                "question_text": "What additional information or assurances would help you feel more comfortable about adopting smart thermostat technology?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q2 contains any selection other than 'Other'"
+            }
+        }
+    ]
+}

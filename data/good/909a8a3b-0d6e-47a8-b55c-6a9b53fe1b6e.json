@@ -1,0 +1,123 @@
+{
+    "survey_id": "909a8a3b-0d6e-47a8-b55c-6a9b53fe1b6e",
+    "survey_name": "Urban Bike Sharing Program Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from users of urban bike-sharing programs to assess satisfaction levels, identify areas for improvement, and understand usage patterns.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the urban bike-sharing service?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Occasionally",
+                "First-time user"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice format to simplify data analysis. Ensure options cover all potential usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use the urban bike-sharing service?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Occasionally",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors are most important to you when using the bike-sharing service? (Select all that apply)",
+            "answer_options": [
+                "Availability of bikes",
+                "Pricing",
+                "Ease of access (locations)",
+                "Bike condition",
+                "Mobile app usability",
+                "Safety features"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a multi-choice format to allow respondents to select multiple factors. Consider randomizing options to avoid bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following factors are most important to you when using the bike-sharing service? (Select all that apply)",
+                "answer_options": [
+                    "Availability of bikes",
+                    "Pricing",
+                    "Ease of access (locations)",
+                    "Bike condition",
+                    "Mobile app usability",
+                    "Safety features"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the condition of the bikes provided by the service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents except first-time users (Q1 != 'First-time user')",
+            "client_notes": "Use a Likert scale to measure satisfaction levels. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the condition of the bikes provided by the service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents except first-time users (Q1 != 'First-time user')"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest to enhance the urban bike-sharing service?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Allow open-ended responses to capture qualitative feedback. Consider limiting response length for readability.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance the urban bike-sharing service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend the urban bike-sharing service to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Appears to all respondents except first-time users (Q1 != 'First-time user')",
+            "client_notes": "Use a simple single-choice question to measure Net Promoter Score (NPS) potential.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend the urban bike-sharing service to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents except first-time users (Q1 != 'First-time user')"
+            }
+        }
+    ]
+}

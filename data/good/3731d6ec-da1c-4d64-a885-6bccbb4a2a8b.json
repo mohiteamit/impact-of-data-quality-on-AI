@@ -1,0 +1,121 @@
+{
+    "survey_id": "3731d6ec-da1c-4d64-a885-6bccbb4a2a8b",
+    "survey_name": "Corporate Coffee Service Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with the current corporate coffee service, including quality, variety, and accessibility, to inform potential improvements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the corporate coffee service?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use the corporate coffee service?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following coffee options do you typically consume? (Select all that apply)",
+            "answer_options": [
+                "Black coffee",
+                "Espresso",
+                "Latte/Cappuccino",
+                "Tea",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1",
+            "client_notes": "Use a multi-choice checkbox. Include an 'Other' option with a text field for customization.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an open-text follow-up if 'Other' is selected.",
+            "script": {
+                "question_text": "Which of the following coffee options do you typically consume? (Select all that apply)",
+                "answer_options": [
+                    "Black coffee",
+                    "Espresso",
+                    "Latte/Cappuccino",
+                    "Tea",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the quality of the coffee provided?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the quality of the coffee provided?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the corporate coffee service?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to capture qualitative feedback. Limit to 500 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for the corporate coffee service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to participate in a focus group to discuss coffee service improvements?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe, depending on timing"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button with clear options. Follow up with email collection if 'Yes' or 'Maybe' is selected.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with conditional routing for follow-up questions.",
+            "script": {
+                "question_text": "Would you be willing to participate in a focus group to discuss coffee service improvements?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe, depending on timing"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

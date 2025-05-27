@@ -1,0 +1,125 @@
+{
+    "survey_id": "2675eb3b-9c74-419d-9f50-1a773ee9bb1e",
+    "survey_name": "Customer Satisfaction Survey for Coffee Shops",
+    "survey_brief": "This survey aims to gather customer feedback on their experience at coffee shops to improve service quality and customer satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit coffee shops?",
+            "answer_options": [
+                "Daily",
+                "2-3 times a week",
+                "Once a week",
+                "2-3 times a month",
+                "Less than once a month"
+            ],
+            "routing_logic": "Always shown.",
+            "client_notes": "Use a single-choice radio button for better readability on mobile devices.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How often do you visit coffee shops?",
+                "answer_options": [
+                    "Daily",
+                    "2-3 times a week",
+                    "Once a week",
+                    "2-3 times a month",
+                    "Less than once a month"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing a coffee shop? (Select up to 3)",
+            "answer_options": [
+                "Quality of coffee",
+                "Price",
+                "Atmosphere",
+                "Location",
+                "Customer service",
+                "Variety of menu items",
+                "Speed of service"
+            ],
+            "routing_logic": "Always shown.",
+            "client_notes": "Use a multi-choice checkbox format. Limit selections to 3 for better data quality.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max_selections=3.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a coffee shop? (Select up to 3)",
+                "answer_options": [
+                    "Quality of coffee",
+                    "Price",
+                    "Atmosphere",
+                    "Location",
+                    "Customer service",
+                    "Variety of menu items",
+                    "Speed of service"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall cleanliness of the coffee shop?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always shown.",
+            "client_notes": "Use a 5-point Likert scale for consistency.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How satisfied are you with the overall cleanliness of the coffee shop?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any specific issues you encountered during your last visit.",
+            "answer_options": [],
+            "routing_logic": "Shown if Q3 response is 'Dissatisfied' or 'Very dissatisfied'.",
+            "client_notes": "Allow for open-ended feedback to capture detailed issues.",
+            "scripter_notes": "Field type: OPEN_TEXT.",
+            "script": {
+                "question_text": "Please describe any specific issues you encountered during your last visit.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q3 response is 'Dissatisfied' or 'Very dissatisfied'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend this coffee shop to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Always shown.",
+            "client_notes": "Use a simple single-choice question for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "Would you recommend this coffee shop to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown."
+            }
+        }
+    ]
+}

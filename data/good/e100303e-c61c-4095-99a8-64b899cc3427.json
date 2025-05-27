@@ -1,0 +1,123 @@
+{
+    "survey_id": "e100303e-c61c-4095-99a8-64b899cc3427",
+    "survey_name": "Sustainable Packaging Preferences in E-Commerce Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and attitudes toward sustainable packaging in online shopping, helping businesses align with environmental expectations.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you consider the sustainability of packaging when making an online purchase?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure mobile-friendly radio buttons.",
+            "scripter_notes": "Field type: Single-choice radio buttons; randomize options to reduce bias.",
+            "script": {
+                "question_text": "How often do you consider the sustainability of packaging when making an online purchase?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainable packaging materials do you prefer? (Select all that apply)",
+            "answer_options": [
+                "Recycled cardboard",
+                "Biodegradable plastics",
+                "Compostable materials",
+                "Reusable containers",
+                "No preference"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question; limit selections to 3 to prioritize top preferences.",
+            "scripter_notes": "Field type: Multi-choice checkboxes; include 'Select all that apply' instruction.",
+            "script": {
+                "question_text": "Which of the following sustainable packaging materials do you prefer? (Select all that apply)",
+                "answer_options": [
+                    "Recycled cardboard",
+                    "Biodegradable plastics",
+                    "Compostable materials",
+                    "Reusable containers",
+                    "No preference"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Would you pay a premium (e.g., 5-10% more) for products with sustainable packaging?",
+            "answer_options": [
+                "Yes, regularly",
+                "Yes, occasionally",
+                "No, unless price-matched",
+                "No, never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Clarify premium range in the question. Use single-choice for clear segmentation.",
+            "scripter_notes": "Field type: Single-choice radio buttons; display options vertically.",
+            "script": {
+                "question_text": "Would you pay a premium (e.g., 5-10% more) for products with sustainable packaging?",
+                "answer_options": [
+                    "Yes, regularly",
+                    "Yes, occasionally",
+                    "No, unless price-matched",
+                    "No, never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe any frustrations you’ve experienced with sustainable packaging (e.g., durability, convenience).",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Sometimes', 'Often', or 'Always' in Q1",
+            "client_notes": "Open-ended question to capture qualitative insights. Limit to 250 characters.",
+            "scripter_notes": "Field type: Open-text; enable character counter.",
+            "script": {
+                "question_text": "Describe any frustrations you’ve experienced with sustainable packaging (e.g., durability, convenience).",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Sometimes', 'Often', or 'Always' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to switch to a brand that offers more sustainable packaging?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point scale for trend analysis. Place after Q3 to assess willingness vs. action.",
+            "scripter_notes": "Field type: Single-choice radio buttons; randomize scale if possible.",
+            "script": {
+                "question_text": "How likely are you to switch to a brand that offers more sustainable packaging?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

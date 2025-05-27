@@ -1,0 +1,133 @@
+{
+    "survey_id": "d6ddefcc-ca54-4f21-90d5-2f6383c30089",
+    "survey_name": "Customer Satisfaction Survey for Electric Toothbrush Users",
+    "survey_brief": "This survey aims to gather feedback from users of electric toothbrushes to understand satisfaction levels, common usage patterns, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your current electric toothbrush?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for clear satisfaction measurement. Ensure mobile-friendly layout for smooth user experience.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with your current electric toothbrush?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you use most frequently on your electric toothbrush? (Select all that apply)",
+            "answer_options": [
+                "Pressure sensor",
+                "Timer",
+                "Multiple brushing modes",
+                "Bluetooth connectivity",
+                "Travel case"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Allow multiple selections to capture feature usage accurately. Ensure options are clearly distinct.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which features do you use most frequently on your electric toothbrush? (Select all that apply)",
+                "answer_options": [
+                    "Pressure sensor",
+                    "Timer",
+                    "Multiple brushing modes",
+                    "Bluetooth connectivity",
+                    "Travel case"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you replace the brush head of your electric toothbrush?",
+            "answer_options": [
+                "Every 1-2 months",
+                "Every 3-4 months",
+                "Every 5-6 months",
+                "Less frequently than every 6 months",
+                "I don't replace it"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use clear time intervals to avoid ambiguity. Include an option for non-replacers.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you replace the brush head of your electric toothbrush?",
+                "answer_options": [
+                    "Every 1-2 months",
+                    "Every 3-4 months",
+                    "Every 5-6 months",
+                    "Less frequently than every 6 months",
+                    "I don't replace it"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in your next electric toothbrush?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 200 characters for brevity.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT). Apply character limit validation.",
+            "script": {
+                "question_text": "What improvements would you like to see in your next electric toothbrush?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Did you experience any technical issues with your electric toothbrush?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Simple yes/no question to filter for follow-up. Ensure clear phrasing.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Did you experience any technical issues with your electric toothbrush?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If yes, please describe the technical issue you encountered.",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q5 is answered as 'Yes'.",
+            "client_notes": "Open-ended follow-up for detailed issue reporting. Limit to 300 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT). Apply conditional display logic based on Q5.",
+            "script": {
+                "question_text": "If yes, please describe the technical issue you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q5 is answered as 'Yes'."
+            }
+        }
+    ]
+}

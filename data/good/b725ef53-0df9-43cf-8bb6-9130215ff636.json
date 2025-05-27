@@ -1,0 +1,117 @@
+{
+    "survey_id": "b725ef53-0df9-43cf-8bb6-9130215ff636",
+    "survey_name": "Workplace Collaboration Tools Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from employees regarding their satisfaction with the collaboration tools provided by the company, to identify areas for improvement and ensure optimal productivity.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which collaboration tools do you frequently use for work? (Select all that apply)",
+            "answer_options": [
+                "Slack",
+                "Microsoft Teams",
+                "Zoom",
+                "Google Workspace (Docs, Sheets, etc.)",
+                "Trello",
+                "Asana",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use checkboxes for multi-selection to capture all tools in use.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an 'Other' option for open-ended input.",
+            "script": {
+                "question_text": "Which collaboration tools do you frequently use for work? (Select all that apply)",
+                "answer_options": [
+                    "Slack",
+                    "Microsoft Teams",
+                    "Zoom",
+                    "Google Workspace (Docs, Sheets, etc.)",
+                    "Trello",
+                    "Asana",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the overall performance of the collaboration tools you use?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents who selected at least one tool in Q1.",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the overall performance of the collaboration tools you use?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected at least one tool in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges, if any, do you face when using these collaboration tools?",
+            "answer_options": [],
+            "routing_logic": "Appears to respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q2.",
+            "client_notes": "Open-ended question to capture specific pain points.",
+            "scripter_notes": "Field type: OPEN_TEXT with a text box for detailed responses.",
+            "script": {
+                "question_text": "What challenges, if any, do you face when using these collaboration tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you experience technical issues with these tools (e.g., crashes, slow performance)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a frequency scale to identify common technical issues.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How often do you experience technical issues with these tools (e.g., crashes, slow performance)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional collaboration tools or features would you like to see implemented?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Open-ended question to gather suggestions for improvement.",
+            "scripter_notes": "Field type: OPEN_TEXT with a text box for detailed responses.",
+            "script": {
+                "question_text": "What additional collaboration tools or features would you like to see implemented?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents."
+            }
+        }
+    ]
+}

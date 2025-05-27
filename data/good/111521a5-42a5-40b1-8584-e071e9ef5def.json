@@ -1,0 +1,125 @@
+{
+    "survey_id": "111521a5-42a5-40b1-8584-e071e9ef5def",
+    "survey_name": "Urban Micro-Mobility Usage Patterns Survey",
+    "survey_brief": "This survey aims to understand user behaviors, preferences, and satisfaction levels regarding micro-mobility solutions (e.g., e-scooters, e-bikes) in urban environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use micro-mobility services (e.g., e-scooters, e-bikes)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point scale for frequency to capture granularity without overwhelming users.",
+            "scripter_notes": "Single-choice radio buttons; randomize options to avoid bias.",
+            "script": {
+                "question_text": "How frequently do you use micro-mobility services (e.g., e-scooters, e-bikes)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which micro-mobility services have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Standing e-scooters",
+                "Seated e-scooters",
+                "E-bikes",
+                "Shared bicycles (non-electric)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 ≠ 'Never'",
+            "client_notes": "Include 'Other' with open-text option to capture unlisted services.",
+            "scripter_notes": "Multi-choice checkboxes; add open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which micro-mobility services have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Standing e-scooters",
+                    "Seated e-scooters",
+                    "E-bikes",
+                    "Shared bicycles (non-electric)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary reason for using micro-mobility services?",
+            "answer_options": [
+                "Commuting to work/school",
+                "Running errands",
+                "Leisure/recreation",
+                "Avoiding public transport",
+                "Environmental concerns"
+            ],
+            "routing_logic": "Only if Q1 ≠ 'Never'",
+            "client_notes": "Pre-populate common reasons but allow 'Other' if needed.",
+            "scripter_notes": "Single-choice dropdown with 'Other' option triggering open-text.",
+            "script": {
+                "question_text": "What is your primary reason for using micro-mobility services?",
+                "answer_options": [
+                    "Commuting to work/school",
+                    "Running errands",
+                    "Leisure/recreation",
+                    "Avoiding public transport",
+                    "Environmental concerns"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would make you use micro-mobility services more often?",
+            "answer_options": [],
+            "routing_logic": "Only if Q1 ≠ 'Never'",
+            "client_notes": "Open-ended to capture qualitative insights; limit to 250 characters.",
+            "scripter_notes": "Open-text field with character counter.",
+            "script": {
+                "question_text": "What improvements would make you use micro-mobility services more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the pricing of micro-mobility services?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 ≠ 'Never'",
+            "client_notes": "5-point Likert scale for consistency; include N/A option if needed.",
+            "scripter_notes": "Single-choice matrix question for mobile compatibility.",
+            "script": {
+                "question_text": "How satisfied are you with the pricing of micro-mobility services?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 ≠ 'Never'"
+            }
+        }
+    ]
+}

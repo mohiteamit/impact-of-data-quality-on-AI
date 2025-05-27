@@ -1,0 +1,115 @@
+{
+    "survey_id": "2ee2003c-17ab-4c83-aec9-e3f5018c4435",
+    "survey_name": "Customer Satisfaction Survey for Autonomous Vehicle Rides",
+    "survey_brief": "This survey aims to gather feedback from users who have experienced rides in autonomous vehicles to assess satisfaction levels, identify areas for improvement, and understand user expectations.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you rate your overall satisfaction with your recent autonomous vehicle ride?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a standard Likert scale for consistent measurement. Ensure the scale is balanced to capture genuine sentiment.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Randomize options to minimize bias.",
+            "script": {
+                "question_text": "How would you rate your overall satisfaction with your recent autonomous vehicle ride?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which aspects of the autonomous vehicle ride did you find most satisfactory? (Select all that apply)",
+            "answer_options": [
+                "Safety features",
+                "Comfort of the ride",
+                "Ease of booking",
+                "Cleanliness of the vehicle",
+                "Response time to pick-up",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Multi-choice question allows respondents to highlight multiple positives. Include an 'Other' option for unexpected feedback.",
+            "scripter_notes": "Field type: Multi-choice checkboxes. Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which aspects of the autonomous vehicle ride did you find most satisfactory? (Select all that apply)",
+                "answer_options": [
+                    "Safety features",
+                    "Comfort of the ride",
+                    "Ease of booking",
+                    "Cleanliness of the vehicle",
+                    "Response time to pick-up",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please describe any concerns or issues you encountered during your autonomous vehicle ride.",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture detailed feedback. Useful for identifying unexpected problems.",
+            "scripter_notes": "Field type: Open-text. Ensure the input box is large enough for detailed responses.",
+            "script": {
+                "question_text": "Please describe any concerns or issues you encountered during your autonomous vehicle ride.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to use an autonomous vehicle service again in the future?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Likert scale to measure future usage intent. Critical for assessing customer retention.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Randomize options if needed.",
+            "script": {
+                "question_text": "How likely are you to use an autonomous vehicle service again in the future?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would make you more likely to choose autonomous vehicle rides over traditional rides?",
+            "answer_options": [],
+            "routing_logic": "Appears to respondents who selected 'Unlikely' or 'Very unlikely' in Q4",
+            "client_notes": "Targeted open-ended question to gather constructive feedback from less satisfied users.",
+            "scripter_notes": "Field type: Open-text. Display only if Q4 response is 'Unlikely' or 'Very unlikely'.",
+            "script": {
+                "question_text": "What improvements would make you more likely to choose autonomous vehicle rides over traditional rides?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to respondents who selected 'Unlikely' or 'Very unlikely' in Q4"
+            }
+        }
+    ]
+}

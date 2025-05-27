@@ -1,0 +1,125 @@
+{
+    "survey_id": "28f22453-d31f-4bd4-9f38-483cec04e4cd",
+    "survey_name": "Corporate Travel Policy Satisfaction Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the current corporate travel policies, identifying areas of satisfaction and potential improvements to enhance the travel experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the current corporate travel policy?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents must answer this question.",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: radio button for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the current corporate travel policy?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents must answer this question."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which aspects of the travel policy do you find most beneficial? (Select all that apply)",
+            "answer_options": [
+                "Flight booking flexibility",
+                "Hotel accommodation options",
+                "Per diem allowances",
+                "Ground transportation coverage",
+                "Travel insurance benefits",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if respondent selects 'Satisfied' or 'Very satisfied' in Q1.",
+            "client_notes": "Allow for multiple selections and an optional open-ended response for 'Other'.",
+            "scripter_notes": "Field type: checkbox for multi-choice selection. Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which aspects of the travel policy do you find most beneficial? (Select all that apply)",
+                "answer_options": [
+                    "Flight booking flexibility",
+                    "Hotel accommodation options",
+                    "Per diem allowances",
+                    "Ground transportation coverage",
+                    "Travel insurance benefits",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if respondent selects 'Satisfied' or 'Very satisfied' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for the corporate travel policy?",
+            "answer_options": [],
+            "routing_logic": "Appears if respondent selects 'Neutral', 'Dissatisfied', or 'Very dissatisfied' in Q1.",
+            "client_notes": "Encourage detailed feedback. Use an open-text field for comprehensive responses.",
+            "scripter_notes": "Field type: open-text for free-form responses.",
+            "script": {
+                "question_text": "What improvements would you suggest for the corporate travel policy?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if respondent selects 'Neutral', 'Dissatisfied', or 'Very dissatisfied' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you travel for business purposes?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "Quarterly",
+                "Annually",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents must answer this question.",
+            "client_notes": "Use a clear frequency scale. Ensure the question is easy to understand.",
+            "scripter_notes": "Field type: radio button for single-choice selection.",
+            "script": {
+                "question_text": "How often do you travel for business purposes?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "Quarterly",
+                    "Annually",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents must answer this question."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Do you feel the current travel policy supports your work-life balance?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No, not at all",
+                "Not applicable"
+            ],
+            "routing_logic": "Appears if respondent selects 'Weekly', 'Monthly', or 'Quarterly' in Q4.",
+            "client_notes": "Include an option for non-applicability to account for infrequent travelers.",
+            "scripter_notes": "Field type: radio button for single-choice selection.",
+            "script": {
+                "question_text": "Do you feel the current travel policy supports your work-life balance?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No, not at all",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if respondent selects 'Weekly', 'Monthly', or 'Quarterly' in Q4."
+            }
+        }
+    ]
+}

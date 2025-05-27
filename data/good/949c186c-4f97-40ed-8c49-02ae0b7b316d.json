@@ -1,0 +1,121 @@
+{
+    "survey_id": "949c186c-4f97-40ed-8c49-02ae0b7b316d",
+    "survey_name": "Consumer Preferences for Plant-Based Meat Alternatives Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, purchasing habits, and perceptions regarding plant-based meat alternatives to guide product development and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you consume plant-based meat alternatives?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always shown to all respondents.",
+            "client_notes": "Use a single-choice radio button format for clear response capture.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you consume plant-based meat alternatives?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors influence your decision to purchase plant-based meat alternatives? (Select all that apply)",
+            "answer_options": [
+                "Health benefits",
+                "Environmental concerns",
+                "Animal welfare",
+                "Taste and texture",
+                "Price",
+                "Availability in stores",
+                "Brand reputation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown only if Q1 response is not 'Never'.",
+            "client_notes": "Allow multiple selections with checkboxes. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). If 'Other' is selected, display a follow-up open-text field.",
+            "script": {
+                "question_text": "Which of the following factors influence your decision to purchase plant-based meat alternatives? (Select all that apply)",
+                "answer_options": [
+                    "Health benefits",
+                    "Environmental concerns",
+                    "Animal welfare",
+                    "Taste and texture",
+                    "Price",
+                    "Availability in stores",
+                    "Brand reputation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown only if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you like to see in plant-based meat alternatives?",
+            "answer_options": [],
+            "routing_logic": "Shown only if Q1 response is not 'Never'.",
+            "client_notes": "Open-ended question to capture detailed feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you like to see in plant-based meat alternatives?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown only if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend plant-based meat alternatives to others?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Shown only if Q1 response is not 'Never'.",
+            "client_notes": "Use a Likert scale for standardized sentiment analysis.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How likely are you to recommend plant-based meat alternatives to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown only if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What is your primary reason for not consuming plant-based meat alternatives?",
+            "answer_options": [],
+            "routing_logic": "Shown only if Q1 response is 'Never'.",
+            "client_notes": "Open-ended question to identify barriers. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What is your primary reason for not consuming plant-based meat alternatives?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown only if Q1 response is 'Never'."
+            }
+        }
+    ]
+}

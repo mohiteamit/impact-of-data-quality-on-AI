@@ -1,0 +1,127 @@
+{
+    "survey_id": "64db043a-093c-4f72-a2b3-7d798b00e85f",
+    "survey_name": "Corporate Training Program Effectiveness Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness of corporate training programs offered by your organization, focusing on relevance, delivery, and impact on employee performance.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in corporate training programs?",
+            "answer_options": [
+                "Monthly",
+                "Quarterly",
+                "Biannually",
+                "Annually",
+                "Less than once a year"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a clear frequency scale. Ensure options cover all likely participation intervals.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you participate in corporate training programs?",
+                "answer_options": [
+                    "Monthly",
+                    "Quarterly",
+                    "Biannually",
+                    "Annually",
+                    "Less than once a year"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which topics were covered in the most recent training program you attended? (Select all that apply)",
+            "answer_options": [
+                "Leadership Development",
+                "Technical Skills",
+                "Soft Skills (e.g., Communication, Teamwork)",
+                "Compliance and Legal",
+                "Diversity and Inclusion",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is answered with any option except 'Less than once a year'",
+            "client_notes": "Provide an 'Other' option for respondents to specify unlisted topics.",
+            "scripter_notes": "Field type: checkbox (multi-choice). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which topics were covered in the most recent training program you attended? (Select all that apply)",
+                "answer_options": [
+                    "Leadership Development",
+                    "Technical Skills",
+                    "Soft Skills (e.g., Communication, Teamwork)",
+                    "Compliance and Legal",
+                    "Diversity and Inclusion",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is answered with any option except 'Less than once a year'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the relevance of the training content to your job role?",
+            "answer_options": [
+                "Very Relevant",
+                "Somewhat Relevant",
+                "Neutral",
+                "Somewhat Irrelevant",
+                "Very Irrelevant"
+            ],
+            "routing_logic": "Appears if Q1 is answered with any option except 'Less than once a year'",
+            "client_notes": "Use a balanced Likert scale to capture nuanced feedback.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How would you rate the relevance of the training content to your job role?",
+                "answer_options": [
+                    "Very Relevant",
+                    "Somewhat Relevant",
+                    "Neutral",
+                    "Somewhat Irrelevant",
+                    "Very Irrelevant"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is answered with any option except 'Less than once a year'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for future training programs?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Encourage detailed feedback with an open-ended question.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What improvements would you suggest for future training programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Has the training improved your job performance?",
+            "answer_options": [
+                "Significantly Improved",
+                "Slightly Improved",
+                "No Change",
+                "Slightly Declined",
+                "Significantly Declined"
+            ],
+            "routing_logic": "Appears if Q1 is answered with any option except 'Less than once a year'",
+            "client_notes": "Use a Likert scale to measure impact objectively.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Has the training improved your job performance?",
+                "answer_options": [
+                    "Significantly Improved",
+                    "Slightly Improved",
+                    "No Change",
+                    "Slightly Declined",
+                    "Significantly Declined"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is answered with any option except 'Less than once a year'"
+            }
+        }
+    ]
+}

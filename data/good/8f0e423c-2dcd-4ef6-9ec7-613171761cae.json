@@ -1,0 +1,179 @@
+{
+    "survey_id": "8f0e423c-2dcd-4ef6-9ec7-613171761cae",
+    "survey_name": "Post-Vaccination Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from individuals who have recently received a vaccination to understand their experience, side effects, and overall satisfaction with the vaccination process.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which vaccine did you receive most recently?",
+            "answer_options": [
+                "Pfizer-BioNTech",
+                "Moderna",
+                "Johnson & Johnson",
+                "AstraZeneca",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Ensure all major vaccines are included. 'Other' option allows for additional input.",
+            "scripter_notes": "Field type: Single-choice radio buttons with an optional text field for 'Other'.",
+            "script": {
+                "question_text": "Which vaccine did you receive most recently?",
+                "answer_options": [
+                    "Pfizer-BioNTech",
+                    "Moderna",
+                    "Johnson & Johnson",
+                    "AstraZeneca",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How would you rate your overall experience with the vaccination process?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a standard 5-point Likert scale for consistency.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How would you rate your overall experience with the vaccination process?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Did you experience any side effects after receiving the vaccine?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Simple yes/no question to filter for follow-up questions.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "Did you experience any side effects after receiving the vaccine?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If yes, please describe the side effects you experienced.",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q3 is answered with 'Yes'.",
+            "client_notes": "Open-ended to allow detailed responses. Mobile-friendly text input recommended.",
+            "scripter_notes": "Field type: Open text input.",
+            "script": {
+                "question_text": "If yes, please describe the side effects you experienced.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q3 is answered with 'Yes'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How long did the side effects last?",
+            "answer_options": [
+                "Less than 24 hours",
+                "1-2 days",
+                "3-5 days",
+                "More than 5 days"
+            ],
+            "routing_logic": "Appears only if Q3 is answered with 'Yes'.",
+            "client_notes": "Provides quantifiable data on side effect duration.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How long did the side effects last?",
+                "answer_options": [
+                    "Less than 24 hours",
+                    "1-2 days",
+                    "3-5 days",
+                    "More than 5 days"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q3 is answered with 'Yes'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How convenient was the location where you received your vaccine?",
+            "answer_options": [
+                "Very convenient",
+                "Somewhat convenient",
+                "Neutral",
+                "Somewhat inconvenient",
+                "Very inconvenient"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Assesses accessibility of vaccination sites.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How convenient was the location where you received your vaccine?",
+                "answer_options": [
+                    "Very convenient",
+                    "Somewhat convenient",
+                    "Neutral",
+                    "Somewhat inconvenient",
+                    "Very inconvenient"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Would you recommend this vaccination site to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Simple recommendation metric.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "Would you recommend this vaccination site to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Any additional comments or feedback about your vaccination experience?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended to capture any unaddressed concerns or praises.",
+            "scripter_notes": "Field type: Open text input.",
+            "script": {
+                "question_text": "Any additional comments or feedback about your vaccination experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

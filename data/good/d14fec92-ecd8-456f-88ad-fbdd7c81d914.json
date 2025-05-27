@@ -1,0 +1,125 @@
+{
+    "survey_id": "d14fec92-ecd8-456f-88ad-fbdd7c81d914",
+    "survey_name": "Sustainable Office Waste Management Survey",
+    "survey_brief": "This survey aims to evaluate employee awareness, participation, and satisfaction with current office waste management practices, focusing on sustainability initiatives.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with your company's current office waste management policies?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a simple 4-point Likert scale for clarity. Consider adding a 'Not applicable' option if policies are not clearly communicated.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Mandatory question.",
+            "script": {
+                "question_text": "How familiar are you with your company's current office waste management policies?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following waste reduction practices are currently available in your office? (Select all that apply)",
+            "answer_options": [
+                "Paper recycling bins",
+                "Plastic/glass/metal recycling",
+                "Composting for food waste",
+                "Electronic waste collection",
+                "Reusable dishware program",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: Multi-choice checkboxes. Include 'Other (please specify)' if needed.",
+            "script": {
+                "question_text": "Which of the following waste reduction practices are currently available in your office? (Select all that apply)",
+                "answer_options": [
+                    "Paper recycling bins",
+                    "Plastic/glass/metal recycling",
+                    "Composting for food waste",
+                    "Electronic waste collection",
+                    "Reusable dishware program",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you actively participate in office waste reduction programs?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point frequency scale. Anchor with clear definitions if needed.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Vertical layout for mobile.",
+            "script": {
+                "question_text": "How often do you actively participate in office waste reduction programs?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What barriers prevent you from participating more in waste reduction initiatives?",
+            "answer_options": [
+                "Lack of convenient disposal options",
+                "Unclear guidelines",
+                "Lack of time",
+                "Perceived inefficacy",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Sometimes', 'Rarely', or 'Never' in Q3",
+            "client_notes": "Multi-select with optional open-ended for 'Other'. Use skip logic from Q3.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with optional text input. Conditional display based on Q3.",
+            "script": {
+                "question_text": "What barriers prevent you from participating more in waste reduction initiatives?",
+                "answer_options": [
+                    "Lack of convenient disposal options",
+                    "Unclear guidelines",
+                    "Lack of time",
+                    "Perceived inefficacy",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Sometimes', 'Rarely', or 'Never' in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional waste reduction initiatives would you like to see implemented in your office?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture innovative ideas. Limit to 250 characters.",
+            "scripter_notes": "Field type: Open text input with character counter.",
+            "script": {
+                "question_text": "What additional waste reduction initiatives would you like to see implemented in your office?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,127 @@
+{
+    "survey_id": "a080f978-591b-492b-b1f4-692856cda7a5",
+    "survey_name": "Smart Speaker User Satisfaction Survey",
+    "survey_brief": "This survey aims to assess user satisfaction with smart speaker devices, focusing on usability, features, and overall experience to guide future product improvements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which smart speaker brand do you currently use most frequently?",
+            "answer_options": [
+                "Amazon Echo",
+                "Google Nest",
+                "Apple HomePod",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "This question helps segment respondents by brand for subsequent analysis. Ensure 'Other' includes an open-text field for specification.",
+            "scripter_notes": "Use a single-choice radio button with an 'Other' option triggering an open-text field.",
+            "script": {
+                "question_text": "Which smart speaker brand do you currently use most frequently?",
+                "answer_options": [
+                    "Amazon Echo",
+                    "Google Nest",
+                    "Apple HomePod",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your smart speaker's voice recognition accuracy?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement. Consider randomization to avoid bias in option order.",
+            "scripter_notes": "Implement as a single-choice radio button question.",
+            "script": {
+                "question_text": "How satisfied are you with your smart speaker's voice recognition accuracy?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following features do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Music streaming",
+                "Smart home control",
+                "Alarms/reminders",
+                "Weather updates",
+                "News briefings",
+                "Online shopping",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "This multi-select question helps identify popular features. Ensure mobile-friendly layout for long option lists.",
+            "scripter_notes": "Implement as a multi-choice checkbox question with an 'Other' option triggering an open-text field.",
+            "script": {
+                "question_text": "Which of the following features do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Music streaming",
+                    "Smart home control",
+                    "Alarms/reminders",
+                    "Weather updates",
+                    "News briefings",
+                    "Online shopping",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in future smart speaker models?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Set a 300-character limit for manageable analysis.",
+            "scripter_notes": "Implement as an open-text field with character count validation.",
+            "script": {
+                "question_text": "What improvements would you like to see in future smart speaker models?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your smart speaker to friends or family?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears to all respondents except those who answered 'Very dissatisfied' to Q2",
+            "client_notes": "This is a standard Net Promoter Score (NPS) question. Exclude highly dissatisfied users to focus on potential promoters.",
+            "scripter_notes": "Single-choice radio button question with skip logic based on Q2 response.",
+            "script": {
+                "question_text": "How likely are you to recommend your smart speaker to friends or family?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents except those who answered 'Very dissatisfied' to Q2"
+            }
+        }
+    ]
+}

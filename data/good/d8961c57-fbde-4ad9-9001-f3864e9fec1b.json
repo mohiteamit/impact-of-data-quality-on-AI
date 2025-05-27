@@ -1,0 +1,125 @@
+{
+    "survey_id": "d8961c57-fbde-4ad9-9001-f3864e9fec1b",
+    "survey_name": "Electric Car Charging Station Accessibility Survey",
+    "survey_brief": "This survey aims to gather feedback on the accessibility and user experience of electric car charging stations to help improve services and infrastructure.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public electric car charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for easy selection. Ensure the options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use public electric car charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons you use public charging stations? (Select all that apply)",
+            "answer_options": [
+                "No home charging option",
+                "Convenience while traveling",
+                "Faster charging speeds",
+                "Lower cost compared to home charging",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is NOT 'Never'.",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional open text for 'Other'.",
+            "script": {
+                "question_text": "What are the primary reasons you use public charging stations? (Select all that apply)",
+                "answer_options": [
+                    "No home charging option",
+                    "Convenience while traveling",
+                    "Faster charging speeds",
+                    "Lower cost compared to home charging",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is NOT 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of charging stations in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is NOT 'Never'.",
+            "client_notes": "Use a Likert scale for satisfaction levels. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the availability of charging stations in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is NOT 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in public charging stations?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is NOT 'Never'.",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you like to see in public charging stations?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is NOT 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What barriers prevent you from using public charging stations more often?",
+            "answer_options": [
+                "Limited availability",
+                "Long wait times",
+                "High costs",
+                "Poor location",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is 'Rarely' or 'Never'.",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional open text for 'Other'.",
+            "script": {
+                "question_text": "What barriers prevent you from using public charging stations more often?",
+                "answer_options": [
+                    "Limited availability",
+                    "Long wait times",
+                    "High costs",
+                    "Poor location",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is 'Rarely' or 'Never'."
+            }
+        }
+    ]
+}

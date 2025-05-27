@@ -1,0 +1,123 @@
+{
+    "survey_id": "bf7bb774-d657-4de6-bfd5-30ec13202f24",
+    "survey_name": "Customer Satisfaction Survey for Indoor Cycling Studios",
+    "survey_brief": "This survey aims to gather feedback from customers about their experience with indoor cycling studios to help improve services and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you attend indoor cycling classes per week?",
+            "answer_options": [
+                "1-2 times",
+                "3-4 times",
+                "5 or more times",
+                "Less than once a week"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice format for clarity. Ensure options cover typical attendance frequencies.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often do you attend indoor cycling classes per week?",
+                "answer_options": [
+                    "1-2 times",
+                    "3-4 times",
+                    "5 or more times",
+                    "Less than once a week"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors are most important to you when choosing an indoor cycling studio? (Select all that apply)",
+            "answer_options": [
+                "Class schedule flexibility",
+                "Instructor quality",
+                "Studio cleanliness",
+                "Music selection",
+                "Equipment quality",
+                "Pricing",
+                "Location convenience"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a multi-choice format to allow multiple selections. Ensure options cover key decision factors.",
+            "scripter_notes": "Field type: checkbox.",
+            "script": {
+                "question_text": "Which of the following factors are most important to you when choosing an indoor cycling studio? (Select all that apply)",
+                "answer_options": [
+                    "Class schedule flexibility",
+                    "Instructor quality",
+                    "Studio cleanliness",
+                    "Music selection",
+                    "Equipment quality",
+                    "Pricing",
+                    "Location convenience"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall experience at your current indoor cycling studio?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels. Ensure scale is balanced.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How satisfied are you with the overall experience at your current indoor cycling studio?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest to enhance your indoor cycling experience?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q3 response is 'Dissatisfied' or 'Very dissatisfied'.",
+            "client_notes": "Use an open-ended format to gather qualitative feedback. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance your indoor cycling experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q3 response is 'Dissatisfied' or 'Very dissatisfied'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend this indoor cycling studio to a friend or colleague?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice format. This is a standard Net Promoter Score (NPS) question.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "Would you recommend this indoor cycling studio to a friend or colleague?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

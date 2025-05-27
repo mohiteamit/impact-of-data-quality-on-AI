@@ -1,0 +1,119 @@
+{
+  "survey_id": "SV5678",
+  "survey_name": "Online Banking Feature Prioritization Survey",
+  "survey_brief": "This survey aims to gather customer feedback on which new features should be prioritized in our online banking platform development roadmap.",
+  "questions": [
+    {
+      "qid": "Q1",
+      "question_text": "How frequently do you use our online banking platform?",
+      "answer_options": [
+        "Daily",
+        "Weekly",
+        "Monthly",
+        "Rarely",
+        "Never"
+      ],
+      "routing_logic": "This question appears for all respondents.",
+      "client_notes": "Use a radio button scale for clear single selection. Consider randomizing the order of options to prevent bias.",
+      "scripter_notes": "Field type: Radio button (single choice)",
+      "script": {
+        "question_text": "How frequently do you use our online banking platform?",
+        "answer_options": [
+          "Daily",
+          "Weekly",
+          "Monthly",
+          "Rarely",
+          "Never"
+        ],
+        "type": "SINGLE_CHOICE",
+        "routing_logic": "This question appears for all respondents."
+      }
+    },
+    {
+      "qid": "Q2",
+      "question_text": "Which of these potential new features would be most valuable to you? (Select up to 3)",
+      "answer_options": [
+        "Personal financial dashboard",
+        "Voice-activated banking",
+        "Automated savings rules",
+        "Real-time spending notifications",
+        "Peer-to-peer payments",
+        "Subscription management",
+        "Customizable security alerts",
+        "Investment portfolio integration"
+      ],
+      "routing_logic": "Appears for all respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1.",
+      "client_notes": "Use checkboxes for multi-select. Randomize option order to prevent positional bias.",
+      "scripter_notes": "Field type: Checkboxes (multi-choice with max 3 selections)",
+      "script": {
+        "question_text": "Which of these potential new features would be most valuable to you? (Select up to 3)",
+        "answer_options": [
+          "Personal financial dashboard",
+          "Voice-activated banking",
+          "Automated savings rules",
+          "Real-time spending notifications",
+          "Peer-to-peer payments",
+          "Subscription management",
+          "Customizable security alerts",
+          "Investment portfolio integration"
+        ],
+        "type": "MULTI_CHOICE",
+        "routing_logic": "Appears for all respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1."
+      }
+    },
+    {
+      "qid": "Q3",
+      "question_text": "What security concerns, if any, prevent you from using online banking more frequently?",
+      "answer_options": [],
+      "routing_logic": "Appears only for respondents who selected 'Rarely' or 'Never' in Q1.",
+      "client_notes": "Open-ended response will provide qualitative insights. Ensure mobile-friendly text entry field.",
+      "scripter_notes": "Field type: Open text (paragraph format)",
+      "script": {
+        "question_text": "What security concerns, if any, prevent you from using online banking more frequently?",
+        "answer_options": [],
+        "type": "OPEN_TEXT",
+        "routing_logic": "Appears only for respondents who selected 'Rarely' or 'Never' in Q1."
+      }
+    },
+    {
+      "qid": "Q4",
+      "question_text": "How satisfied are you with our current mobile banking app's user interface?",
+      "answer_options": [
+        "Very satisfied",
+        "Somewhat satisfied",
+        "Neutral",
+        "Somewhat dissatisfied",
+        "Very dissatisfied"
+      ],
+      "routing_logic": "Appears for all respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1.",
+      "client_notes": "Use a 5-point Likert scale with radio buttons. Consider adding a 'Not applicable' option if needed.",
+      "scripter_notes": "Field type: Radio button (single choice)",
+      "script": {
+        "question_text": "How satisfied are you with our current mobile banking app's user interface?",
+        "answer_options": [
+          "Very satisfied",
+          "Somewhat satisfied",
+          "Neutral",
+          "Somewhat dissatisfied",
+          "Very dissatisfied"
+        ],
+        "type": "SINGLE_CHOICE",
+        "routing_logic": "Appears for all respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1."
+      }
+    },
+    {
+      "qid": "Q5",
+      "question_text": "What other banking features would you like to see that we haven't mentioned?",
+      "answer_options": [],
+      "routing_logic": "Appears for all respondents.",
+      "client_notes": "Open-ended question to capture innovative ideas. Provide sufficient space for detailed responses.",
+      "scripter_notes": "Field type: Open text (paragraph format)",
+      "script": {
+        "question_text": "What other banking features would you like to see that we haven't mentioned?",
+        "answer_options": [],
+        "type": "OPEN_TEXT",
+        "routing_logic": "Appears for all respondents."
+      }
+    }
+  ]
+}

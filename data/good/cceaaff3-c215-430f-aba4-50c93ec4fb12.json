@@ -1,0 +1,155 @@
+{
+    "survey_id": "cceaaff3-c215-430f-aba4-50c93ec4fb12",
+    "survey_name": "Electric Vehicle Charging Station Accessibility Survey",
+    "survey_brief": "This survey aims to gather feedback on the accessibility, usability, and satisfaction levels of public electric vehicle (EV) charging stations to improve infrastructure and user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public electric vehicle charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for this question. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you use public electric vehicle charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for using public EV charging stations? (Select all that apply)",
+            "answer_options": [
+                "No home charging option",
+                "Convenience while traveling",
+                "Faster charging speeds",
+                "Lower cost than home charging",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q1",
+            "client_notes": "Use a multi-choice checkbox format. Include an 'Other' option with an open-text field for additional input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What are your primary reasons for using public EV charging stations? (Select all that apply)",
+                "answer_options": [
+                    "No home charging option",
+                    "Convenience while traveling",
+                    "Faster charging speeds",
+                    "Lower cost than home charging",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of EV charging stations in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q1",
+            "client_notes": "Use a 5-point Likert scale with single-choice radio buttons.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the availability of EV charging stations in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced when using public EV charging stations?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q1",
+            "client_notes": "Use an open-text field to capture detailed responses. Ensure the input box is large enough for comprehensive feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What challenges have you faced when using public EV charging stations?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following improvements would encourage you to use public EV charging stations more often? (Select up to 3)",
+            "answer_options": [
+                "More stations in convenient locations",
+                "Faster charging technology",
+                "Lower pricing",
+                "Better maintenance of existing stations",
+                "Clearer signage and instructions",
+                "Mobile app for station availability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q1",
+            "client_notes": "Use a multi-choice checkbox format with a limit of 3 selections. Include an 'Other' option with an open-text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with a max selection of 3 and an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which of the following improvements would encourage you to use public EV charging stations more often? (Select up to 3)",
+                "answer_options": [
+                    "More stations in convenient locations",
+                    "Faster charging technology",
+                    "Lower pricing",
+                    "Better maintenance of existing stations",
+                    "Clearer signage and instructions",
+                    "Mobile app for station availability",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you have never used public EV charging stations, what is the primary reason?",
+            "answer_options": [
+                "I charge at home exclusively",
+                "Lack of nearby stations",
+                "Concerns about reliability",
+                "High cost",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Never' in Q1",
+            "client_notes": "Use a single-choice radio button format with an 'Other' option that includes an open-text field.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "If you have never used public EV charging stations, what is the primary reason?",
+                "answer_options": [
+                    "I charge at home exclusively",
+                    "Lack of nearby stations",
+                    "Concerns about reliability",
+                    "High cost",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Never' in Q1"
+            }
+        }
+    ]
+}

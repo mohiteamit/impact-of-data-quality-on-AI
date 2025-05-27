@@ -1,0 +1,123 @@
+{
+    "survey_id": "394e453b-6cfb-4c3c-b8d5-cbf6c8848875",
+    "survey_name": "Home Internet Service Reliability Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and reliability of home internet services, focusing on connection stability, speed, and customer support experiences.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the reliability of your home internet connection?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the reliability of your home internet connection?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "On average, how often do you experience internet outages in a month?",
+            "answer_options": [
+                "Never",
+                "1-2 times",
+                "3-5 times",
+                "More than 5 times"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Provide clear frequency ranges. Avoid overlapping options.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "On average, how often do you experience internet outages in a month?",
+                "answer_options": [
+                    "Never",
+                    "1-2 times",
+                    "3-5 times",
+                    "More than 5 times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following issues have you encountered with your home internet service? (Select all that apply)",
+            "answer_options": [
+                "Slow speeds during peak hours",
+                "Frequent disconnections",
+                "Poor customer support",
+                "Billing errors",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Allow multiple selections. Include an option for no issues.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following issues have you encountered with your home internet service? (Select all that apply)",
+                "answer_options": [
+                    "Slow speeds during peak hours",
+                    "Frequent disconnections",
+                    "Poor customer support",
+                    "Billing errors",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the responsiveness of your internet service provider's customer support?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "Appears if Q3 includes 'Poor customer support' or 'Billing errors'.",
+            "client_notes": "Use a 5-point scale. Ensure routing logic is correctly implemented.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How would you rate the responsiveness of your internet service provider's customer support?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q3 includes 'Poor customer support' or 'Billing errors'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any specific incidents where your internet service did not meet your expectations.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is 'Dissatisfied' or 'Very dissatisfied'.",
+            "client_notes": "Leave as open-ended to capture detailed feedback. Encourage honesty.",
+            "scripter_notes": "Field type: text box (OPEN_TEXT).",
+            "script": {
+                "question_text": "Please describe any specific incidents where your internet service did not meet your expectations.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is 'Dissatisfied' or 'Very dissatisfied'."
+            }
+        }
+    ]
+}

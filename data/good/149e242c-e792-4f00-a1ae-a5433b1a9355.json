@@ -1,0 +1,121 @@
+{
+    "survey_id": "149e242c-e792-4f00-a1ae-a5433b1a9355",
+    "survey_name": "Apartment Resident Community Engagement Survey",
+    "survey_brief": "This survey aims to assess the level of engagement and satisfaction among residents of a shared apartment community, focusing on communal facilities, events, and overall living experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the cleanliness and maintenance of communal areas (e.g., lobby, gym, rooftop)?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure mobile-friendly layout for easy selection.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and maintenance of communal areas (e.g., lobby, gym, rooftop)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which communal facilities do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Gym",
+                "Rooftop terrace",
+                "Laundry room",
+                "Lobby lounge",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multi-selection. Ensure checkboxes are clearly labeled for accessibility.",
+            "scripter_notes": "Field type: multi-choice (checkboxes).",
+            "script": {
+                "question_text": "Which communal facilities do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Gym",
+                    "Rooftop terrace",
+                    "Laundry room",
+                    "Lobby lounge",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Have you attended any community events organized by the building management in the past 6 months?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I was unaware of events"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an option for unawareness to capture communication gaps.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "Have you attended any community events organized by the building management in the past 6 months?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I was unaware of events"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you have attended events, how would you rate their quality?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Did not attend"
+            ],
+            "routing_logic": "Shown if Q3 answer is 'Yes'",
+            "client_notes": "Provide an option for non-attendees to skip gracefully.",
+            "scripter_notes": "Field type: single-choice (radio buttons) with conditional display.",
+            "script": {
+                "question_text": "If you have attended events, how would you rate their quality?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Did not attend"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q3 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What types of community events would you like to see more of? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Encourage detailed responses. Limit text input to 500 characters.",
+            "scripter_notes": "Field type: open-text (text area).",
+            "script": {
+                "question_text": "What types of community events would you like to see more of? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

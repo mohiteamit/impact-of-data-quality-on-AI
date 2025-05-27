@@ -1,0 +1,115 @@
+{
+    "survey_id": "9b5e6791-d23e-412f-8f9c-0fa9fd595e33",
+    "survey_name": "Customer Satisfaction Survey for Home Appliance Repair Services",
+    "survey_brief": "This survey aims to gather feedback from customers who have recently used home appliance repair services to evaluate their satisfaction levels and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the overall quality of the repair service provided?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction levels. Ensure the options are displayed in a single-column format for clarity.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Ensure the question is mandatory.",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of the repair service provided?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following aspects of the service were most important to you? (Select up to 3)",
+            "answer_options": [
+                "Speed of service",
+                "Quality of repair",
+                "Professionalism of technicians",
+                "Cost of service",
+                "Communication and updates",
+                "Cleanliness after repair"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow respondents to select multiple options to identify key service priorities.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes). Limit selections to 3 options.",
+            "script": {
+                "question_text": "Which of the following aspects of the service were most important to you? (Select up to 3)",
+                "answer_options": [
+                    "Speed of service",
+                    "Quality of repair",
+                    "Professionalism of technicians",
+                    "Cost of service",
+                    "Communication and updates",
+                    "Cleanliness after repair"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How likely are you to recommend this repair service to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question measures Net Promoter Score (NPS) potential. Display as a single-choice question.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Ensure the question is mandatory.",
+            "script": {
+                "question_text": "How likely are you to recommend this repair service to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any issues or concerns you encountered during the repair process.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q1",
+            "client_notes": "Open-ended question to capture detailed feedback. Provide a text box with sufficient space for responses.",
+            "scripter_notes": "Field type: Open-text (text area). Display only if Q1 response is 'Dissatisfied' or 'Very dissatisfied'.",
+            "script": {
+                "question_text": "Please describe any issues or concerns you encountered during the repair process.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What could the service provider improve to enhance your experience in the future?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather constructive feedback. Encourage respondents to provide specific suggestions.",
+            "scripter_notes": "Field type: Open-text (text area). Optional question.",
+            "script": {
+                "question_text": "What could the service provider improve to enhance your experience in the future?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "survey_id": "e5143ca8-078b-46fe-a2c5-a3da273a1a92",
+    "survey_name": "Home Internet Service Reliability Survey",
+    "survey_brief": "This survey aims to assess customer satisfaction and reliability perceptions of home internet service providers, focusing on connectivity, speed, and customer support experiences.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the overall reliability of your home internet service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency and ease of analysis. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the overall reliability of your home internet service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you experience internet outages or disruptions in a typical month?",
+            "answer_options": [
+                "Never",
+                "1-2 times",
+                "3-5 times",
+                "More than 5 times"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Provide clear frequency ranges to avoid ambiguity.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you experience internet outages or disruptions in a typical month?",
+                "answer_options": [
+                    "Never",
+                    "1-2 times",
+                    "3-5 times",
+                    "More than 5 times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary use for home internet? (Select all that apply)",
+            "answer_options": [
+                "Work/remote work",
+                "Streaming (e.g., Netflix, YouTube)",
+                "Online gaming",
+                "Social media",
+                "General browsing",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections for comprehensive insights.",
+            "scripter_notes": "Field type: Checkbox (multi-choice). Include an 'Other' option with a text field for additional input.",
+            "script": {
+                "question_text": "What is your primary use for home internet? (Select all that apply)",
+                "answer_options": [
+                    "Work/remote work",
+                    "Streaming (e.g., Netflix, YouTube)",
+                    "Online gaming",
+                    "Social media",
+                    "General browsing",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe any recent issues you've faced with your internet service provider (e.g., slow speeds, poor customer support).",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q1",
+            "client_notes": "Open-ended responses can reveal specific pain points for targeted improvements.",
+            "scripter_notes": "Field type: Open text. Display only if Q1 answer is 'Dissatisfied' or 'Very dissatisfied'.",
+            "script": {
+                "question_text": "Describe any recent issues you've faced with your internet service provider (e.g., slow speeds, poor customer support).",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your current internet service provider to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "A simple yes/no/unsure question helps gauge overall satisfaction and loyalty.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "Would you recommend your current internet service provider to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

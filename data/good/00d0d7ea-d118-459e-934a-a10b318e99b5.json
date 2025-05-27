@@ -1,0 +1,125 @@
+{
+    "survey_id": "00d0d7ea-d118-459e-934a-a10b318e99b5",
+    "survey_name": "Urban Commuter Bicycle Usage Survey",
+    "survey_brief": "This survey aims to gather insights on urban commuter bicycle usage patterns, preferences, and challenges to improve cycling infrastructure and services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use a bicycle for commuting in urban areas?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Consider adding a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use a bicycle for commuting in urban areas?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for using a bicycle for commuting? (Select all that apply)",
+            "answer_options": [
+                "Health and fitness",
+                "Cost savings",
+                "Environmental concerns",
+                "Avoiding traffic congestion",
+                "Convenience",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', '3-5 times per week', or '1-2 times per week' to Q1",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What are your primary reasons for using a bicycle for commuting? (Select all that apply)",
+                "answer_options": [
+                    "Health and fitness",
+                    "Cost savings",
+                    "Environmental concerns",
+                    "Avoiding traffic congestion",
+                    "Convenience",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', '3-5 times per week', or '1-2 times per week' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the biggest challenges you face when cycling in urban areas?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'Daily', '3-5 times per week', or '1-2 times per week' to Q1",
+            "client_notes": "Open-ended question to capture detailed feedback. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What are the biggest challenges you face when cycling in urban areas?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'Daily', '3-5 times per week', or '1-2 times per week' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the current bicycle infrastructure (e.g., bike lanes, parking) in your city?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', '3-5 times per week', or '1-2 times per week' to Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Single-choice radio button recommended.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the current bicycle infrastructure (e.g., bike lanes, parking) in your city?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', '3-5 times per week', or '1-2 times per week' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be interested in using a bike-sharing program if available in your city?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe",
+                "Already using one"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question with clear options. Include an option for current users.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you be interested in using a bike-sharing program if available in your city?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe",
+                    "Already using one"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,119 @@
+{
+    "survey_id": "391b7b89-682b-43da-8291-04c9af83118e",
+    "survey_name": "Campus Bicycle Infrastructure Feedback Survey",
+    "survey_brief": "This survey aims to gather feedback from university students and staff regarding the bicycle infrastructure on campus, including safety, convenience, and suggestions for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use bicycle facilities on campus?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Display to all respondents.",
+            "client_notes": "Use a single-choice radio button for clarity.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "How often do you use bicycle facilities on campus?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which bicycle facilities do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Bike lanes",
+                "Bike racks",
+                "Bike repair stations",
+                "Bike-sharing program",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q1 is not 'Never'.",
+            "client_notes": "Use a multi-choice checkbox format.",
+            "scripter_notes": "Field type: multi-choice (checkboxes). Include an 'Other' option with a text field.",
+            "script": {
+                "question_text": "Which bicycle facilities do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Bike lanes",
+                    "Bike racks",
+                    "Bike repair stations",
+                    "Bike-sharing program",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the safety of bicycle lanes on campus?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display if Q1 is not 'Never'.",
+            "client_notes": "Use a Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the safety of bicycle lanes on campus?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for bicycle infrastructure on campus?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents.",
+            "client_notes": "Open-ended question to capture detailed feedback.",
+            "scripter_notes": "Field type: open-text (text area).",
+            "script": {
+                "question_text": "What improvements would you suggest for bicycle infrastructure on campus?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any issues with bicycle theft or vandalism on campus?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Display if Q1 is not 'Never'.",
+            "client_notes": "Binary response for quick feedback.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "Have you experienced any issues with bicycle theft or vandalism on campus?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 is not 'Never'."
+            }
+        }
+    ]
+}

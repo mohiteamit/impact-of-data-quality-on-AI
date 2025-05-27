@@ -1,0 +1,123 @@
+{
+    "survey_id": "f5f70bf3-2776-487b-a68d-d679eee858c9",
+    "survey_name": "Smartphone Battery Life and Charging Habits Survey",
+    "survey_brief": "This survey aims to understand user habits, satisfaction levels, and pain points related to smartphone battery life and charging behaviors.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your current smartphone's battery life?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction. Ensure the scale is balanced with clear labels.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with your current smartphone's battery life?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "On average, how many times do you charge your smartphone in a day?",
+            "answer_options": [
+                "Once",
+                "Twice",
+                "3 times",
+                "More than 3 times",
+                "I rarely need to charge it daily"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Provide clear, mutually exclusive options to capture accurate charging frequency.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "On average, how many times do you charge your smartphone in a day?",
+                "answer_options": [
+                    "Once",
+                    "Twice",
+                    "3 times",
+                    "More than 3 times",
+                    "I rarely need to charge it daily"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What type of charging method do you primarily use? (Select all that apply)",
+            "answer_options": [
+                "Wired charging (USB-C/Lightning)",
+                "Wireless charging pad",
+                "Fast charging (e.g., Quick Charge, Power Delivery)",
+                "Portable power bank",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Allow multiple selections to capture diverse charging habits. Include an 'Other' option for uncommon methods.",
+            "scripter_notes": "Field type: checkbox (multi-choice). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "What type of charging method do you primarily use? (Select all that apply)",
+                "answer_options": [
+                    "Wired charging (USB-C/Lightning)",
+                    "Wireless charging pad",
+                    "Fast charging (e.g., Quick Charge, Power Delivery)",
+                    "Portable power bank",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What frustrates you the most about your smartphone's battery performance?",
+            "answer_options": [],
+            "routing_logic": "This question appears if Q1 response is 'Somewhat dissatisfied' or 'Very dissatisfied'.",
+            "client_notes": "Open-ended question to capture qualitative pain points. Limit response length to 200 characters.",
+            "scripter_notes": "Field type: open-text with character limit.",
+            "script": {
+                "question_text": "What frustrates you the most about your smartphone's battery performance?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if Q1 response is 'Somewhat dissatisfied' or 'Very dissatisfied'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay more for a smartphone with significantly better battery life?",
+            "answer_options": [
+                "Yes, definitely",
+                "Possibly, depending on the price",
+                "No, battery life is not a priority for me",
+                "Unsure"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice format to gauge willingness to pay. Include a neutral option for undecided respondents.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Would you be willing to pay more for a smartphone with significantly better battery life?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Possibly, depending on the price",
+                    "No, battery life is not a priority for me",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

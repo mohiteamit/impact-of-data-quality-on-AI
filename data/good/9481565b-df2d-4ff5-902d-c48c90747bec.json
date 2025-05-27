@@ -1,0 +1,135 @@
+{
+    "survey_id": "9481565b-df2d-4ff5-902d-c48c90747bec",
+    "survey_name": "Customer Satisfaction Survey for Electric Scooter Sharing Services",
+    "survey_brief": "This survey aims to gather feedback from users of electric scooter sharing services to understand their satisfaction levels and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use electric scooter sharing services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "First-time user"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for this question. Ensure options are clear and cover all usage frequencies.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How frequently do you use electric scooter sharing services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your choice of electric scooter sharing service? (Select all that apply)",
+            "answer_options": [
+                "Price",
+                "Availability",
+                "App usability",
+                "Scooter condition",
+                "Safety features",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a multi-choice checkbox for this question. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What factors influence your choice of electric scooter sharing service? (Select all that apply)",
+                "answer_options": [
+                    "Price",
+                    "Availability",
+                    "App usability",
+                    "Scooter condition",
+                    "Safety features",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the ease of locating and unlocking scooters?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point Likert scale for this question. Ensure the scale is balanced and clearly labeled.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with the ease of locating and unlocking scooters?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for electric scooter sharing services?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use an open-text field for this question to gather qualitative feedback. Ensure the field is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you suggest for electric scooter sharing services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any safety issues while using electric scooter sharing services?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for this question. If 'Yes' is selected, follow up with Q6.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with conditional routing to Q6 if 'Yes' is selected",
+            "script": {
+                "question_text": "Have you experienced any safety issues while using electric scooter sharing services?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe the safety issue you encountered.",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q5 is answered with 'Yes'",
+            "client_notes": "Use an open-text field for this question to gather detailed feedback on safety issues. Ensure the field is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "Please describe the safety issue you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q5 is answered with 'Yes'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,133 @@
+{
+    "survey_id": "ad9be3f4-eb65-4af6-bcf3-786b9d595e3a",
+    "survey_name": "Electric Scooter Safety Awareness Survey",
+    "survey_brief": "This survey aims to gather insights on user experiences and safety perceptions regarding electric scooter usage in urban areas.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use electric scooters for commuting or leisure?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always ask",
+            "client_notes": "To assess frequency of use, which may influence safety perceptions.",
+            "scripter_notes": "Single-choice question (radio buttons).",
+            "script": {
+                "question_text": "How frequently do you use electric scooters for commuting or leisure?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always ask"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What safety gear do you typically use when riding an electric scooter? (Select all that apply)",
+            "answer_options": [
+                "Helmet",
+                "Knee pads",
+                "Elbow pads",
+                "Reflective clothing",
+                "None"
+            ],
+            "routing_logic": "Ask if Q1 answer is not 'Never'",
+            "client_notes": "Understanding gear usage can help identify gaps in safety practices.",
+            "scripter_notes": "Multi-choice question (checkboxes).",
+            "script": {
+                "question_text": "What safety gear do you typically use when riding an electric scooter? (Select all that apply)",
+                "answer_options": [
+                    "Helmet",
+                    "Knee pads",
+                    "Elbow pads",
+                    "Reflective clothing",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Ask if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate your overall experience with electric scooter safety features (e.g., brakes, lights, stability)?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Ask if Q1 answer is not 'Never'",
+            "client_notes": "5-point Likert scale to gauge satisfaction with built-in safety features.",
+            "scripter_notes": "Single-choice question (radio buttons).",
+            "script": {
+                "question_text": "How would you rate your overall experience with electric scooter safety features (e.g., brakes, lights, stability)?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you ever been involved in an accident or near-miss incident while riding an electric scooter?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Ask if Q1 answer is not 'Never'",
+            "client_notes": "Binary question to identify accident rates.",
+            "scripter_notes": "Single-choice question (radio buttons).",
+            "script": {
+                "question_text": "Have you ever been involved in an accident or near-miss incident while riding an electric scooter?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If yes, please describe the incident briefly (optional).",
+            "answer_options": [],
+            "routing_logic": "Ask if Q4 answer is 'Yes'",
+            "client_notes": "Open-ended to gather qualitative data on incidents.",
+            "scripter_notes": "Open-text question (text input).",
+            "script": {
+                "question_text": "If yes, please describe the incident briefly (optional).",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Ask if Q4 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would you suggest to enhance electric scooter safety in your city?",
+            "answer_options": [],
+            "routing_logic": "Always ask",
+            "client_notes": "Open-ended to capture user suggestions for policy or design improvements.",
+            "scripter_notes": "Open-text question (text input).",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance electric scooter safety in your city?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always ask"
+            }
+        }
+    ]
+}

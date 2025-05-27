@@ -1,0 +1,229 @@
+{
+    "survey_id": "f1d84154-3a04-463a-9c39-a4a6e91ee369",
+    "survey_name": "Bike Commuter Infrastructure Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from urban bike commuters about the quality and safety of cycling infrastructure in their city, including bike lanes, parking, and amenities.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you commute by bicycle?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Occasionally (less than once a week)",
+                "Never (if selected, skip to Q10)"
+            ],
+            "routing_logic": "If 'Never' is selected, skip to Q10.",
+            "client_notes": "Use a single-choice radio button format. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you commute by bicycle?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Occasionally (less than once a week)",
+                    "Never (if selected, skip to Q10)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'Never' is selected, skip to Q10."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following bike infrastructure improvements would most encourage you to cycle more often? (Select up to 3)",
+            "answer_options": [
+                "More protected bike lanes",
+                "Better bike parking facilities",
+                "More bike repair stations",
+                "Improved road surface quality",
+                "More traffic-calming measures",
+                "Better lighting on bike paths",
+                "Increased bike-sharing availability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 is not 'Never'.",
+            "client_notes": "Use a multi-choice checkbox format. Include an 'Other' option with a text field for additional comments.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional text input for 'Other'.",
+            "script": {
+                "question_text": "Which of the following bike infrastructure improvements would most encourage you to cycle more often? (Select up to 3)",
+                "answer_options": [
+                    "More protected bike lanes",
+                    "Better bike parking facilities",
+                    "More bike repair stations",
+                    "Improved road surface quality",
+                    "More traffic-calming measures",
+                    "Better lighting on bike paths",
+                    "Increased bike-sharing availability",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with the current bike lane network in your city? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears only if Q1 is not 'Never'.",
+            "client_notes": "Use a Likert scale format (single-choice). Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the current bike lane network in your city? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the biggest challenge you face when cycling in your city?",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q1 is not 'Never'.",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: OPEN_TEXT (text input).",
+            "script": {
+                "question_text": "What is the biggest challenge you face when cycling in your city?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you ever avoided cycling due to safety concerns?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears only if Q1 is not 'Never'.",
+            "client_notes": "Use a single-choice radio button format.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Have you ever avoided cycling due to safety concerns?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which safety measures would make you feel more comfortable cycling? (Select all that apply)",
+            "answer_options": [
+                "More protected bike lanes",
+                "Better intersection design",
+                "Reduced vehicle speed limits",
+                "Increased law enforcement for bike safety",
+                "More bike-friendly traffic signals",
+                "Public awareness campaigns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q5 is 'Yes'.",
+            "client_notes": "Use a multi-choice checkbox format with an optional text field for 'Other'.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional text input for 'Other'.",
+            "script": {
+                "question_text": "Which safety measures would make you feel more comfortable cycling? (Select all that apply)",
+                "answer_options": [
+                    "More protected bike lanes",
+                    "Better intersection design",
+                    "Reduced vehicle speed limits",
+                    "Increased law enforcement for bike safety",
+                    "More bike-friendly traffic signals",
+                    "Public awareness campaigns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q5 is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How often do you use bike-sharing services (if available in your city)?",
+            "answer_options": [
+                "Frequently (at least once a week)",
+                "Occasionally (a few times a month)",
+                "Rarely (a few times a year)",
+                "Never"
+            ],
+            "routing_logic": "Appears only if Q1 is not 'Never'.",
+            "client_notes": "Use a single-choice radio button format.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you use bike-sharing services (if available in your city)?",
+                "answer_options": [
+                    "Frequently (at least once a week)",
+                    "Occasionally (a few times a month)",
+                    "Rarely (a few times a year)",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What would encourage you to use bike-sharing services more often?",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q7 is not 'Never'.",
+            "client_notes": "Open-ended question for qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT (text input).",
+            "script": {
+                "question_text": "What would encourage you to use bike-sharing services more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q7 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Do you have any additional comments about bike infrastructure in your city?",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q1 is not 'Never'.",
+            "client_notes": "Open-ended question for general feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT (text input).",
+            "script": {
+                "question_text": "Do you have any additional comments about bike infrastructure in your city?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Would you consider cycling as a primary mode of transportation if infrastructure improved?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Always appears.",
+            "client_notes": "Use a single-choice radio button format.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Would you consider cycling as a primary mode of transportation if infrastructure improved?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears."
+            }
+        }
+    ]
+}

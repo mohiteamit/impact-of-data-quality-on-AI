@@ -1,0 +1,127 @@
+{
+    "survey_id": "fa007fff-4fea-490f-8a97-2ccab2aa584d",
+    "survey_name": "Urban Commuter Rail Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate rider satisfaction with urban commuter rail services, focusing on reliability, comfort, and amenities to identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the urban commuter rail service?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once per week",
+                "First-time user"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use a single-choice radio button format for clarity. Consider adding a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you use the urban commuter rail service?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once per week",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the punctuality of the commuter rail service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Show to all respondents except 'First-time user' from Q1",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the punctuality of the commuter rail service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents except 'First-time user' from Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which amenities would improve your commute experience? (Select all that apply)",
+            "answer_options": [
+                "Free Wi-Fi",
+                "Power outlets at seats",
+                "Improved seating comfort",
+                "Better climate control",
+                "Real-time delay notifications",
+                "On-board food/drink options"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Allow multi-selection. Consider randomizing option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which amenities would improve your commute experience? (Select all that apply)",
+                "answer_options": [
+                    "Free Wi-Fi",
+                    "Power outlets at seats",
+                    "Improved seating comfort",
+                    "Better climate control",
+                    "Real-time delay notifications",
+                    "On-board food/drink options"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe any recent negative experiences with the commuter rail service:",
+            "answer_options": [],
+            "routing_logic": "Show if Q2 answer is 'Dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Use an open-text field with character limit (max 500). Include placeholder text: 'Please describe briefly'.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "Describe any recent negative experiences with the commuter rail service:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q2 answer is 'Dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend this commuter rail service to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Show to all respondents except 'First-time user' from Q1",
+            "client_notes": "Use a standard NPS-style question format. Display as a horizontal radio button scale on desktop.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to recommend this commuter rail service to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents except 'First-time user' from Q1"
+            }
+        }
+    ]
+}
