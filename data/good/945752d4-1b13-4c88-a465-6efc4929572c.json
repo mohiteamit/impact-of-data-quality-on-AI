@@ -1,0 +1,129 @@
+{
+    "survey_id": "945752d4-1b13-4c88-a465-6efc4929572c",
+    "survey_name": "Consumer Preferences for Sustainable Coffee Brands Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding sustainable coffee brands, including purchasing habits, brand awareness, and willingness to pay a premium for sustainable products.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase coffee?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps segment respondents based on coffee consumption frequency. Use a single-choice radio button for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How often do you purchase coffee?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainable coffee brands are you aware of? (Select all that apply)",
+            "answer_options": [
+                "Brand A",
+                "Brand B",
+                "Brand C",
+                "Brand D",
+                "None of the above"
+            ],
+            "routing_logic": "Respondents who answered 'Daily' to 'A few times a month' in Q1",
+            "client_notes": "This question measures brand awareness. Use a multi-choice checkbox format to allow multiple selections.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "Which of the following sustainable coffee brands are you aware of? (Select all that apply)",
+                "answer_options": [
+                    "Brand A",
+                    "Brand B",
+                    "Brand C",
+                    "Brand D",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily' to 'A few times a month' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influence your decision to purchase sustainable coffee? (Select up to 3)",
+            "answer_options": [
+                "Environmental impact",
+                "Fair trade certification",
+                "Organic certification",
+                "Brand reputation",
+                "Price",
+                "Taste",
+                "Packaging sustainability"
+            ],
+            "routing_logic": "Respondents who selected at least one brand in Q2",
+            "client_notes": "This question identifies key purchasing drivers. Limit selections to 3 to prioritize responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox with max 3 selections)",
+            "script": {
+                "question_text": "What factors influence your decision to purchase sustainable coffee? (Select up to 3)",
+                "answer_options": [
+                    "Environmental impact",
+                    "Fair trade certification",
+                    "Organic certification",
+                    "Brand reputation",
+                    "Price",
+                    "Taste",
+                    "Packaging sustainability"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected at least one brand in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much more are you willing to pay for sustainable coffee compared to conventional coffee?",
+            "answer_options": [
+                "Not willing to pay more",
+                "Up to 10% more",
+                "11-20% more",
+                "21-30% more",
+                "More than 30% more"
+            ],
+            "routing_logic": "Respondents who selected at least one brand in Q2",
+            "client_notes": "This question gauges price sensitivity. Use a single-choice radio button for clear responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How much more are you willing to pay for sustainable coffee compared to conventional coffee?",
+                "answer_options": [
+                    "Not willing to pay more",
+                    "Up to 10% more",
+                    "11-20% more",
+                    "21-30% more",
+                    "More than 30% more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one brand in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to purchase more sustainable coffee? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "This open-ended question captures qualitative insights. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box)",
+            "script": {
+                "question_text": "What improvements would encourage you to purchase more sustainable coffee? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+{
+    "survey_id": "faa4dfa7-c6a0-40e9-853c-64a1ea30e80a",
+    "survey_name": "Employee Satisfaction with Corporate Wellness Programs Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction with current corporate wellness programs and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the corporate wellness programs offered by your employer?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure mobile-friendly layout for dropdown or radio buttons.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the corporate wellness programs offered by your employer?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which wellness programs do you currently participate in? (Select all that apply)",
+            "answer_options": [
+                "Fitness classes",
+                "Mental health support",
+                "Nutritional counseling",
+                "Health screenings",
+                "Financial wellness workshops",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option if space allows for additional responses.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which wellness programs do you currently participate in? (Select all that apply)",
+                "answer_options": [
+                    "Fitness classes",
+                    "Mental health support",
+                    "Nutritional counseling",
+                    "Health screenings",
+                    "Financial wellness workshops",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What additional wellness programs would you like to see offered by your employer?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: text input (open-ended).",
+            "script": {
+                "question_text": "What additional wellness programs would you like to see offered by your employer?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you participate in corporate wellness programs?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure answer options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you participate in corporate wellness programs?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What barriers prevent you from participating in corporate wellness programs? (Select all that apply)",
+            "answer_options": [
+                "Lack of time",
+                "Programs not relevant to my needs",
+                "Lack of awareness about programs",
+                "Scheduling conflicts",
+                "No interest",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents who selected 'Rarely' or 'Never' in Q4",
+            "client_notes": "Include an 'Other' option with a text field for additional details.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with an optional open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What barriers prevent you from participating in corporate wellness programs? (Select all that apply)",
+                "answer_options": [
+                    "Lack of time",
+                    "Programs not relevant to my needs",
+                    "Lack of awareness about programs",
+                    "Scheduling conflicts",
+                    "No interest",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents who selected 'Rarely' or 'Never' in Q4"
+            }
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+{
+    "survey_id": "faba04cf-25de-4be3-b3bd-d62932a153fe",
+    "survey_name": "Plant-Based Food Preferences Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding plant-based food products, including motivations for choosing them and barriers to adoption.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you consume plant-based food products?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a frequency scale to capture consumption habits. Ensure options cover the full range of possible responses.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you consume plant-based food products?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for choosing plant-based food products? (Select all that apply)",
+            "answer_options": [
+                "Health benefits",
+                "Environmental concerns",
+                "Animal welfare",
+                "Taste preferences",
+                "Dietary restrictions",
+                "Curiosity or experimentation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Daily' to 'A few times a month' in Q1",
+            "client_notes": "Allow multi-selection to capture overlapping motivations. Include an 'Other' option for unique responses.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "What are your primary reasons for choosing plant-based food products? (Select all that apply)",
+                "answer_options": [
+                    "Health benefits",
+                    "Environmental concerns",
+                    "Animal welfare",
+                    "Taste preferences",
+                    "Dietary restrictions",
+                    "Curiosity or experimentation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily' to 'A few times a month' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers, if any, prevent you from consuming more plant-based food products?",
+            "answer_options": [
+                "Higher cost",
+                "Limited availability",
+                "Lack of familiarity with preparation",
+                "Perceived taste or texture issues",
+                "Nutritional concerns",
+                "None, I already consume enough",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'A few times a month' to 'Never' in Q1",
+            "client_notes": "Use a multi-choice format to identify common barriers. Include an optional 'Other' field for additional insights.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "What barriers, if any, prevent you from consuming more plant-based food products?",
+                "answer_options": [
+                    "Higher cost",
+                    "Limited availability",
+                    "Lack of familiarity with preparation",
+                    "Perceived taste or texture issues",
+                    "Nutritional concerns",
+                    "None, I already consume enough",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'A few times a month' to 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you selected 'Other' in the previous question, please specify the barrier(s):",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Other' in Q3",
+            "client_notes": "Open-ended field to capture unique responses. Keep it optional.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "If you selected 'Other' in the previous question, please specify the barrier(s):",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Other' in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend plant-based food products to friends or family?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale to measure advocacy potential. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend plant-based food products to friends or family?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+{
+    "survey_id": "05ac6bca-ee19-4e7c-b2f5-fe41d1b8000c",
+    "survey_name": "Consumer Preferences for Smart Home Automation Systems Survey",
+    "survey_brief": "This survey aims to gather insights on consumer preferences, adoption barriers, and satisfaction levels regarding smart home automation systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home automation systems are you currently using? (Select all that apply)",
+            "answer_options": [
+                "Smart lighting systems",
+                "Smart thermostats",
+                "Smart security systems",
+                "Smart entertainment systems",
+                "Smart kitchen appliances",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use checkboxes for multiple selections. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "Which of the following smart home automation systems are you currently using? (Select all that apply)",
+                "answer_options": [
+                    "Smart lighting systems",
+                    "Smart thermostats",
+                    "Smart security systems",
+                    "Smart entertainment systems",
+                    "Smart kitchen appliances",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current smart home automation system?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if respondent selected any smart home system in Q1",
+            "client_notes": "Use a 5-point Likert scale. Randomize order to avoid bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home automation system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if respondent selected any smart home system in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you have not adopted a smart home automation system?",
+            "answer_options": [
+                "High cost",
+                "Privacy concerns",
+                "Lack of perceived need",
+                "Complexity of installation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if respondent selected 'None of the above' in Q1",
+            "client_notes": "Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What is the primary reason you have not adopted a smart home automation system?",
+                "answer_options": [
+                    "High cost",
+                    "Privacy concerns",
+                    "Lack of perceived need",
+                    "Complexity of installation",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if respondent selected 'None of the above' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which features are most important to you when considering a smart home automation system? (Select up to 3)",
+            "answer_options": [
+                "Ease of use",
+                "Integration with other devices",
+                "Energy efficiency",
+                "Security features",
+                "Remote access via mobile app",
+                "Voice control compatibility",
+                "Customization options"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Limit selections to 3. Randomize option order to avoid primacy bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max selection limit of 3",
+            "script": {
+                "question_text": "Which features are most important to you when considering a smart home automation system? (Select up to 3)",
+                "answer_options": [
+                    "Ease of use",
+                    "Integration with other devices",
+                    "Energy efficiency",
+                    "Security features",
+                    "Remote access via mobile app",
+                    "Voice control compatibility",
+                    "Customization options"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What concerns, if any, do you have about using smart home automation systems?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using smart home automation systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

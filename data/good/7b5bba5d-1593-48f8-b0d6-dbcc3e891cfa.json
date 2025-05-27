@@ -1,0 +1,127 @@
+{
+    "survey_id": "7b5bba5d-1593-48f8-b0d6-dbcc3e891cfa",
+    "survey_name": "Consumer Preferences for Smart Home Security Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, concerns, and adoption factors related to smart home security systems to help manufacturers and service providers tailor their offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home security features do you currently use or have installed in your home?",
+            "answer_options": [
+                "Smart doorbell/camera",
+                "Smart locks",
+                "Motion sensors",
+                "Window/door sensors",
+                "Security alarm system",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use checkboxes for multi-select. Consider randomizing option order to minimize bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Ensure 'None of the above' deselects other options if chosen.",
+            "script": {
+                "question_text": "Which of the following smart home security features do you currently use or have installed in your home?",
+                "answer_options": [
+                    "Smart doorbell/camera",
+                    "Smart locks",
+                    "Motion sensors",
+                    "Window/door sensors",
+                    "Security alarm system",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How important is each of the following factors when choosing a smart home security system?",
+            "answer_options": [
+                "Very important",
+                "Somewhat important",
+                "Neutral",
+                "Somewhat unimportant",
+                "Not at all important"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a matrix question with rows: 'Ease of installation', 'Cost', 'Brand reputation', 'Integration with other smart devices', 'Data privacy protections'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE per row (radio buttons). Randomize row order if possible.",
+            "script": {
+                "question_text": "How important is each of the following factors when choosing a smart home security system?",
+                "answer_options": [
+                    "Very important",
+                    "Somewhat important",
+                    "Neutral",
+                    "Somewhat unimportant",
+                    "Not at all important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your biggest concern about adopting a smart home security system?",
+            "answer_options": [
+                "Data privacy/security risks",
+                "High cost",
+                "Complex installation",
+                "Reliability issues",
+                "Lack of compatibility with other devices",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Include an open-text 'Other' field. Mobile-friendly dropdown recommended for small screens.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (dropdown with 'Other' triggering a text box).",
+            "script": {
+                "question_text": "What is your biggest concern about adopting a smart home security system?",
+                "answer_options": [
+                    "Data privacy/security risks",
+                    "High cost",
+                    "Complex installation",
+                    "Reliability issues",
+                    "Lack of compatibility with other devices",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Would you be willing to share anonymized security system data (e.g., motion patterns) with manufacturers to improve future products?",
+            "answer_options": [
+                "Yes, with no compensation",
+                "Yes, but only for discounts/free services",
+                "No, under any circumstances",
+                "Unsure"
+            ],
+            "routing_logic": "Appears for respondents who selected any feature in Q1",
+            "client_notes": "Consider adding a follow-up open-ended question for 'Unsure' respondents to clarify hesitations.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Would you be willing to share anonymized security system data (e.g., motion patterns) with manufacturers to improve future products?",
+                "answer_options": [
+                    "Yes, with no compensation",
+                    "Yes, but only for discounts/free services",
+                    "No, under any circumstances",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected any feature in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features would encourage you to upgrade your current smart home security system?",
+            "answer_options": [],
+            "routing_logic": "Appears for respondents who selected any feature in Q1",
+            "client_notes": "Use a text box with a 200-character limit to encourage concise responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with character counter).",
+            "script": {
+                "question_text": "What additional features would encourage you to upgrade your current smart home security system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for respondents who selected any feature in Q1"
+            }
+        }
+    ]
+}

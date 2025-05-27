@@ -1,0 +1,119 @@
+{
+    "survey_id": "c83ce4b5-970d-4dd4-a953-a622ed2eb5ff",
+    "survey_name": "Telemedicine Patient Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from patients who have used telemedicine services to understand their experience, satisfaction levels, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often have you used telemedicine services in the past 12 months?",
+            "answer_options": [
+                "Never",
+                "1-2 times",
+                "3-5 times",
+                "More than 5 times"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for ease of response. Ensure the options cover the full range of possible usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often have you used telemedicine services in the past 12 months?",
+                "answer_options": [
+                    "Never",
+                    "1-2 times",
+                    "3-5 times",
+                    "More than 5 times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following telemedicine platforms have you used? (Select all that apply)",
+            "answer_options": [
+                "Zoom for Healthcare",
+                "Doxy.me",
+                "Teladoc",
+                "Amwell",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice checkbox format. Include an 'Other' option with a text field for unspecified platforms.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE), with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which of the following telemedicine platforms have you used? (Select all that apply)",
+                "answer_options": [
+                    "Zoom for Healthcare",
+                    "Doxy.me",
+                    "Teladoc",
+                    "Amwell",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall quality of care received through telemedicine?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents who selected '1-2 times', '3-5 times', or 'More than 5 times' in Q1",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Ensure the scale is balanced and covers the full range of possible responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of care received through telemedicine?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected '1-2 times', '3-5 times', or 'More than 5 times' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What are the biggest challenges you have faced when using telemedicine services?",
+            "answer_options": [],
+            "routing_logic": "All respondents who selected '1-2 times', '3-5 times', or 'More than 5 times' in Q1",
+            "client_notes": "Open-ended question to capture detailed feedback. Ensure the text box is large enough for comprehensive responses.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What are the biggest challenges you have faced when using telemedicine services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents who selected '1-2 times', '3-5 times', or 'More than 5 times' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend telemedicine services to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents who selected '1-2 times', '3-5 times', or 'More than 5 times' in Q1",
+            "client_notes": "Simple yes/no/not sure question to gauge willingness to recommend. Use radio buttons for clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend telemedicine services to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected '1-2 times', '3-5 times', or 'More than 5 times' in Q1"
+            }
+        }
+    ]
+}

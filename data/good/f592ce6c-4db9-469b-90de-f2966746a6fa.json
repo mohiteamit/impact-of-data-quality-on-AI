@@ -1,0 +1,129 @@
+{
+    "survey_id": "f592ce6c-4db9-469b-90de-f2966746a6fa",
+    "survey_name": "Consumer Preferences for Plant-Based Dairy Alternatives Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding plant-based dairy alternatives, including purchasing habits, taste preferences, and factors influencing their choices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you consume plant-based dairy alternatives?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for better mobile responsiveness.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you consume plant-based dairy alternatives?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of plant-based dairy alternatives do you typically purchase? (Select all that apply)",
+            "answer_options": [
+                "Almond milk",
+                "Soy milk",
+                "Oat milk",
+                "Coconut milk",
+                "Cashew milk",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1.",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open text field for 'Other'.",
+            "script": {
+                "question_text": "What types of plant-based dairy alternatives do you typically purchase? (Select all that apply)",
+                "answer_options": [
+                    "Almond milk",
+                    "Soy milk",
+                    "Oat milk",
+                    "Coconut milk",
+                    "Cashew milk",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors most influence your choice of plant-based dairy alternatives? (Rank in order of importance)",
+            "answer_options": [
+                "Taste",
+                "Price",
+                "Nutritional content",
+                "Environmental impact",
+                "Brand reputation",
+                "Availability"
+            ],
+            "routing_logic": "This question appears for respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1.",
+            "client_notes": "Use a drag-and-drop ranking question for desktop users; consider a simpler dropdown for mobile.",
+            "scripter_notes": "Field type: ranking (MULTI_CHOICE with ranking logic). Implement fallback for mobile if ranking is unsupported.",
+            "script": {
+                "question_text": "What factors most influence your choice of plant-based dairy alternatives? (Rank in order of importance)",
+                "answer_options": [
+                    "Taste",
+                    "Price",
+                    "Nutritional content",
+                    "Environmental impact",
+                    "Brand reputation",
+                    "Availability"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you rarely or never consume plant-based dairy alternatives, what are the main reasons?",
+            "answer_options": [
+                "Prefer the taste of traditional dairy",
+                "Higher cost",
+                "Limited availability",
+                "Lack of familiarity with products",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for respondents who answered 'A few times a month' or 'Rarely or never' to Q1.",
+            "client_notes": "Use a single-choice radio button with an optional 'Other' text field.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with an optional open text field for 'Other'.",
+            "script": {
+                "question_text": "If you rarely or never consume plant-based dairy alternatives, what are the main reasons?",
+                "answer_options": [
+                    "Prefer the taste of traditional dairy",
+                    "Higher cost",
+                    "Limited availability",
+                    "Lack of familiarity with products",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who answered 'A few times a month' or 'Rarely or never' to Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to consume more plant-based dairy alternatives?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would encourage you to consume more plant-based dairy alternatives?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

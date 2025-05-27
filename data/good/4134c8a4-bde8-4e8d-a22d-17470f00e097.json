@@ -1,0 +1,135 @@
+{
+    "survey_id": "4134c8a4-bde8-4e8d-a22d-17470f00e097",
+    "survey_name": "Home Fitness Equipment Usage Survey",
+    "survey_brief": "This survey aims to understand consumer usage patterns, preferences, and satisfaction levels with home fitness equipment purchased in the last 12 months.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which types of home fitness equipment have you purchased or used in the last 12 months? (Select all that apply)",
+            "answer_options": [
+                "Treadmill",
+                "Stationary bike",
+                "Elliptical machine",
+                "Rowing machine",
+                "Dumbbells or free weights",
+                "Resistance bands",
+                "Yoga mat or accessories",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a multi-choice format to capture diverse equipment usage. Include an 'Other' option with open-text field for uncommon equipment.",
+            "scripter_notes": "Field type: MULTI_CHOICE checkbox with an open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "Which types of home fitness equipment have you purchased or used in the last 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Treadmill",
+                    "Stationary bike",
+                    "Elliptical machine",
+                    "Rowing machine",
+                    "Dumbbells or free weights",
+                    "Resistance bands",
+                    "Yoga mat or accessories",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How frequently do you use your home fitness equipment per week?",
+            "answer_options": [
+                "Not at all",
+                "1-2 times",
+                "3-4 times",
+                "5 or more times"
+            ],
+            "routing_logic": "Show only if Q1 has at least one selection",
+            "client_notes": "Use a single-choice radio button for clarity. Consider benchmarking against industry averages.",
+            "scripter_notes": "Field type: SINGLE_CHOICE radio buttons.",
+            "script": {
+                "question_text": "How frequently do you use your home fitness equipment per week?",
+                "answer_options": [
+                    "Not at all",
+                    "1-2 times",
+                    "3-4 times",
+                    "5 or more times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show only if Q1 has at least one selection"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influenced your purchase decision for home fitness equipment? (Select up to 3)",
+            "answer_options": [
+                "Price",
+                "Brand reputation",
+                "Space requirements",
+                "Online reviews",
+                "Personal trainer recommendation",
+                "Desire for convenience",
+                "Health concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Limit selections to 3 to prioritize key decision drivers. Include an open-text 'Other' option.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max 3 selections and open-text for 'Other'.",
+            "script": {
+                "question_text": "What factors influenced your purchase decision for home fitness equipment? (Select up to 3)",
+                "answer_options": [
+                    "Price",
+                    "Brand reputation",
+                    "Space requirements",
+                    "Online reviews",
+                    "Personal trainer recommendation",
+                    "Desire for convenience",
+                    "Health concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your home fitness equipment overall?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Show only if Q1 has at least one selection",
+            "client_notes": "Use a standard 5-point Likert scale for consistency in satisfaction metrics.",
+            "scripter_notes": "Field type: SINGLE_CHOICE radio buttons in a horizontal layout.",
+            "script": {
+                "question_text": "How satisfied are you with your home fitness equipment overall?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show only if Q1 has at least one selection"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for your home fitness equipment?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended to capture qualitative feedback. Ensure mobile-friendly text box.",
+            "scripter_notes": "Field type: OPEN_TEXT with a large input box.",
+            "script": {
+                "question_text": "What improvements would you suggest for your home fitness equipment?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

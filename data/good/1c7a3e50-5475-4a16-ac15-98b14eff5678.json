@@ -1,0 +1,131 @@
+{
+    "survey_id": "1c7a3e50-5475-4a16-ac15-98b14eff5678",
+    "survey_name": "Consumer Preferences for Plant-Based Dairy Alternatives Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and attitudes towards plant-based dairy alternatives, including purchase drivers, barriers, and product satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you consume plant-based dairy alternatives (e.g., almond milk, oat milk, soy yogurt)?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Randomize options to avoid bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Ensure mobile-friendly layout.",
+            "script": {
+                "question_text": "How often do you consume plant-based dairy alternatives (e.g., almond milk, oat milk, soy yogurt)?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which plant-based dairy alternatives do you typically purchase? (Select all that apply)",
+            "answer_options": [
+                "Almond milk",
+                "Oat milk",
+                "Soy milk",
+                "Coconut milk",
+                "Cashew milk",
+                "Rice milk",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q1 != 'Rarely or never'",
+            "client_notes": "Multiple-choice checkboxes. Include 'Other' with an open-text field for specificity.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Add optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which plant-based dairy alternatives do you typically purchase? (Select all that apply)",
+                "answer_options": [
+                    "Almond milk",
+                    "Oat milk",
+                    "Soy milk",
+                    "Coconut milk",
+                    "Cashew milk",
+                    "Rice milk",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 != 'Rarely or never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you choose plant-based dairy alternatives over traditional dairy products?",
+            "answer_options": [
+                "Health benefits",
+                "Environmental concerns",
+                "Lactose intolerance or dairy allergies",
+                "Ethical reasons (e.g., animal welfare)",
+                "Taste preference",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q1 != 'Rarely or never'",
+            "client_notes": "Single-choice with an 'Other' option. Randomize non-'Other' options to reduce order bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Include optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you choose plant-based dairy alternatives over traditional dairy products?",
+                "answer_options": [
+                    "Health benefits",
+                    "Environmental concerns",
+                    "Lactose intolerance or dairy allergies",
+                    "Ethical reasons (e.g., animal welfare)",
+                    "Taste preference",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 != 'Rarely or never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would make plant-based dairy alternatives more appealing to you?",
+            "answer_options": [],
+            "routing_logic": "Shown if Q1 != 'Rarely or never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT. Set character limit and display counter.",
+            "script": {
+                "question_text": "What improvements would make plant-based dairy alternatives more appealing to you?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q1 != 'Rarely or never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your preferred plant-based dairy alternative to others?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Shown if Q1 != 'Rarely or never'",
+            "client_notes": "5-point Likert scale for nuanced responses. Label all points for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Horizontal layout for desktop, stacked for mobile.",
+            "script": {
+                "question_text": "How likely are you to recommend your preferred plant-based dairy alternative to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 != 'Rarely or never'"
+            }
+        }
+    ]
+}

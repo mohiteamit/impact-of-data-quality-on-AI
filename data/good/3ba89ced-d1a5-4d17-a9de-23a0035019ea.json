@@ -1,0 +1,129 @@
+{
+    "survey_id": "3ba89ced-d1a5-4d17-a9de-23a0035019ea",
+    "survey_name": "Urban Mobility and Microtransit Adoption Survey",
+    "survey_brief": "This survey aims to understand public preferences and barriers regarding microtransit solutions (e-bikes, e-scooters, shared rides) in urban areas to improve last-mile connectivity.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which microtransit options have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Shared e-scooters",
+                "Shared e-bikes",
+                "Ride-hailing services (e.g., Uber, Lyft)",
+                "On-demand shuttle services",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkbox format for multi-select. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE. Enable 'Other' with text input.",
+            "script": {
+                "question_text": "Which microtransit options have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Shared e-scooters",
+                    "Shared e-bikes",
+                    "Ride-hailing services (e.g., Uber, Lyft)",
+                    "On-demand shuttle services",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using microtransit services?",
+            "answer_options": [
+                "Cost savings compared to car ownership",
+                "Environmental concerns",
+                "Convenience/last-mile solution",
+                "Avoiding parking challenges",
+                "Physical exercise (for bike/scooter users)"
+            ],
+            "routing_logic": "If Q1 ≠ 'None of the above'",
+            "client_notes": "Single-select with option randomization. Include 'Other' with specify field.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Set conditional display based on Q1.",
+            "script": {
+                "question_text": "What is your primary reason for using microtransit services?",
+                "answer_options": [
+                    "Cost savings compared to car ownership",
+                    "Environmental concerns",
+                    "Convenience/last-mile solution",
+                    "Avoiding parking challenges",
+                    "Physical exercise (for bike/scooter users)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 ≠ 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with the availability of microtransit options in your area? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons with clear endpoint labels. Mobile-friendly slider alternative recommended.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Label endpoints: '1 - Very dissatisfied' and '5 - Very satisfied'.",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the availability of microtransit options in your area? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would encourage you to use microtransit more frequently?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-text with character limit (300). Use input validation to prevent gibberish.",
+            "scripter_notes": "Field type: OPEN_TEXT. Set max-length attribute.",
+            "script": {
+                "question_text": "What improvements would encourage you to use microtransit more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which safety features are most important to you when using shared microtransit? (Select top 3)",
+            "answer_options": [
+                "Helmet availability",
+                "Vehicle maintenance standards",
+                "Geo-fenced speed limits",
+                "Emergency contact integration",
+                "In-app safety tutorials",
+                "Visible identification numbers",
+                "24/7 customer support"
+            ],
+            "routing_logic": "If Q1 ≠ 'None of the above'",
+            "client_notes": "Use drag-and-drop ranking or checkboxes with max selection enforcement.",
+            "scripter_notes": "Field type: MULTI_CHOICE with validation for exactly 3 selections.",
+            "script": {
+                "question_text": "Which safety features are most important to you when using shared microtransit? (Select top 3)",
+                "answer_options": [
+                    "Helmet availability",
+                    "Vehicle maintenance standards",
+                    "Geo-fenced speed limits",
+                    "Emergency contact integration",
+                    "In-app safety tutorials",
+                    "Visible identification numbers",
+                    "24/7 customer support"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 ≠ 'None of the above'"
+            }
+        }
+    ]
+}

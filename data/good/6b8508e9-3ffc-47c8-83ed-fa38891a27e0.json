@@ -1,0 +1,125 @@
+{
+    "survey_id": "6b8508e9-3ffc-47c8-83ed-fa38891a27e0",
+    "survey_name": "Consumer Preferences for Sustainable Grocery Shopping Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors related to sustainable grocery shopping, including packaging preferences, product sourcing, and willingness to pay for eco-friendly options.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you consider sustainability when grocery shopping?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Use a Likert scale for consistency. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you consider sustainability when grocery shopping?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainable practices are most important to you when shopping for groceries? (Select all that apply)",
+            "answer_options": [
+                "Minimal or recyclable packaging",
+                "Locally sourced products",
+                "Organic certification",
+                "Fair trade certification",
+                "Carbon-neutral shipping",
+                "None of the above"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Multiple selections allowed. Randomize the order of options to avoid bias.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "Which of the following sustainable practices are most important to you when shopping for groceries? (Select all that apply)",
+                "answer_options": [
+                    "Minimal or recyclable packaging",
+                    "Locally sourced products",
+                    "Organic certification",
+                    "Fair trade certification",
+                    "Carbon-neutral shipping",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How much more are you willing to pay for groceries with sustainable packaging compared to conventional packaging?",
+            "answer_options": [
+                "Not willing to pay more",
+                "1-5% more",
+                "6-10% more",
+                "11-15% more",
+                "More than 15% more"
+            ],
+            "routing_logic": "Ask if Q1 is not 'Never'",
+            "client_notes": "Use percentage ranges for clarity. Ensure options are mutually exclusive.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How much more are you willing to pay for groceries with sustainable packaging compared to conventional packaging?",
+                "answer_options": [
+                    "Not willing to pay more",
+                    "1-5% more",
+                    "6-10% more",
+                    "11-15% more",
+                    "More than 15% more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What barriers, if any, prevent you from shopping more sustainably for groceries?",
+            "answer_options": [],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Open-ended question to capture nuanced responses. Allow for a 200-character limit.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What barriers, if any, prevent you from shopping more sustainably for groceries?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Do you actively seek out grocery stores or brands that prioritize sustainability?",
+            "answer_options": [
+                "Yes, regularly",
+                "Yes, occasionally",
+                "No, but I would if it were more convenient",
+                "No, not interested"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Use mutually exclusive options to avoid ambiguity.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Do you actively seek out grocery stores or brands that prioritize sustainability?",
+                "answer_options": [
+                    "Yes, regularly",
+                    "Yes, occasionally",
+                    "No, but I would if it were more convenient",
+                    "No, not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        }
+    ]
+}

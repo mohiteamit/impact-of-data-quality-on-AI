@@ -1,0 +1,125 @@
+{
+    "survey_id": "ab673781-ffa3-4f8c-96f0-855cbd16b0a5",
+    "survey_name": "Corporate Wellness Program Effectiveness Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness of corporate wellness programs in improving employee health and productivity.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How long have you participated in your company's wellness program?",
+            "answer_options": [
+                "Less than 6 months",
+                "6 months to 1 year",
+                "1 to 2 years",
+                "More than 2 years",
+                "I have not participated"
+            ],
+            "routing_logic": "Required for all respondents",
+            "client_notes": "Use a radio button for single-choice response. Ensure options cover all possible participation durations.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How long have you participated in your company's wellness program?",
+                "answer_options": [
+                    "Less than 6 months",
+                    "6 months to 1 year",
+                    "1 to 2 years",
+                    "More than 2 years",
+                    "I have not participated"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Required for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which wellness program activities have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Fitness challenges",
+                "Nutrition workshops",
+                "Mental health seminars",
+                "Health screenings",
+                "Smoking cessation programs",
+                "None of the above"
+            ],
+            "routing_logic": "Appears if Q1 is not 'I have not participated'",
+            "client_notes": "Use checkboxes for multi-choice responses. Include an option for non-participation.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which wellness program activities have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Fitness challenges",
+                    "Nutrition workshops",
+                    "Mental health seminars",
+                    "Health screenings",
+                    "Smoking cessation programs",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'I have not participated'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with your company's wellness program? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears if Q1 is not 'I have not participated'",
+            "client_notes": "Use a radio button for single-choice response. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with your company's wellness program? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'I have not participated'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for your company's wellness program?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is not 'I have not participated'",
+            "client_notes": "Use an open-text field for qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for your company's wellness program?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is not 'I have not participated'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Has your participation in the wellness program positively impacted your overall health and well-being?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No, not at all",
+                "I'm not sure"
+            ],
+            "routing_logic": "Appears if Q1 is not 'I have not participated'",
+            "client_notes": "Use a radio button for single-choice response. Include a neutral option.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Has your participation in the wellness program positively impacted your overall health and well-being?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No, not at all",
+                    "I'm not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'I have not participated'"
+            }
+        }
+    ]
+}

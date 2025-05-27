@@ -1,0 +1,151 @@
+{
+    "survey_id": "1c197d4a-9111-420b-8885-2ec540d7c24d",
+    "survey_name": "Urban Mobility and Microtransit Adoption Survey",
+    "survey_brief": "This survey aims to understand user preferences, experiences, and barriers related to microtransit services such as bike-sharing, e-scooters, and ride-pooling in urban areas.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use microtransit services (e.g., bike-sharing, e-scooters, ride-pooling)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a single-choice radio button for clarity. Include an option for non-users to route them to questions about barriers.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How frequently do you use microtransit services (e.g., bike-sharing, e-scooters, ride-pooling)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which microtransit services have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Bike-sharing",
+                "E-scooters",
+                "Ride-pooling (e.g., Uber Pool, Lyft Shared)",
+                "Car-sharing (e.g., Zipcar)",
+                "None of the above"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'Never'.",
+            "client_notes": "Use checkboxes for multi-select. Include 'None of the above' for validation.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes).",
+            "script": {
+                "question_text": "Which microtransit services have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Bike-sharing",
+                    "E-scooters",
+                    "Ride-pooling (e.g., Uber Pool, Lyft Shared)",
+                    "Car-sharing (e.g., Zipcar)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing a microtransit service? (Rank top 3)",
+            "answer_options": [
+                "Cost",
+                "Convenience",
+                "Availability",
+                "Safety",
+                "Environmental impact",
+                "Speed"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'Never'.",
+            "client_notes": "Use a drag-and-drop ranking question. Limit to top 3 selections for clarity.",
+            "scripter_notes": "Field type: RANKING (top 3). Ensure mobile-friendly design.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a microtransit service? (Rank top 3)",
+                "answer_options": [
+                    "Cost",
+                    "Convenience",
+                    "Availability",
+                    "Safety",
+                    "Environmental impact",
+                    "Speed"
+                ],
+                "type": "RANKING",
+                "routing_logic": "Appears only if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What barriers prevent you from using microtransit services more often?",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q1 answer is 'Rarely' or 'Never'.",
+            "client_notes": "Open-ended question to capture qualitative insights. Use a text box with a character limit of 500.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What barriers prevent you from using microtransit services more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q1 answer is 'Rarely' or 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the availability of microtransit options in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'Never'.",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Include a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the availability of microtransit options in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you be more likely to use microtransit services if they were integrated with public transportation apps?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, somewhat",
+                "No change",
+                "No, unlikely"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Single-choice question to gauge potential adoption drivers.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Would you be more likely to use microtransit services if they were integrated with public transportation apps?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, somewhat",
+                    "No change",
+                    "No, unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        }
+    ]
+}

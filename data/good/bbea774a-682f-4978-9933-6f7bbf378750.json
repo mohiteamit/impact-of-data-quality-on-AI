@@ -1,0 +1,143 @@
+{
+    "survey_id": "bbea774a-682f-4978-9933-6f7bbf378750",
+    "survey_name": "Corporate Social Responsibility (CSR) Initiatives Impact Survey",
+    "survey_brief": "This survey aims to evaluate employee perceptions and engagement with the company's CSR initiatives, measuring awareness, participation, and overall impact.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with our company's current CSR initiatives?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a Likert scale to measure familiarity levels. Ensure mobile-friendly dropdown or radio buttons.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "How familiar are you with our company's current CSR initiatives?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of our CSR initiatives are you aware of? (Select all that apply)",
+            "answer_options": [
+                "Environmental sustainability programs",
+                "Community volunteering opportunities",
+                "Diversity and inclusion efforts",
+                "Ethical sourcing practices",
+                "None of the above"
+            ],
+            "routing_logic": "Appears if Q1 response is 'Very familiar' or 'Somewhat familiar'.",
+            "client_notes": "Multi-select options. Consider adding an 'Other' field for additional inputs.",
+            "scripter_notes": "Field type: multi-choice (checkboxes).",
+            "script": {
+                "question_text": "Which of our CSR initiatives are you aware of? (Select all that apply)",
+                "answer_options": [
+                    "Environmental sustainability programs",
+                    "Community volunteering opportunities",
+                    "Diversity and inclusion efforts",
+                    "Ethical sourcing practices",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is 'Very familiar' or 'Somewhat familiar'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Have you participated in any of our CSR initiatives in the past year?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Binary choice. Follow-up with Q4 if 'Yes' is selected.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "Have you participated in any of our CSR initiatives in the past year?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which CSR initiatives have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Environmental sustainability programs",
+                "Community volunteering opportunities",
+                "Diversity and inclusion efforts",
+                "Ethical sourcing practices",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q3 response is 'Yes'.",
+            "client_notes": "Multi-select with an open-text option for 'Other'.",
+            "scripter_notes": "Field type: multi-choice (checkboxes) with an open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which CSR initiatives have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Environmental sustainability programs",
+                    "Community volunteering opportunities",
+                    "Diversity and inclusion efforts",
+                    "Ethical sourcing practices",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q3 response is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the opportunities provided to engage in CSR initiatives?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "5-point Likert scale. Ensure clear labeling of scale points.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the opportunities provided to engage in CSR initiatives?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What suggestions do you have for improving our CSR initiatives?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 500 characters.",
+            "scripter_notes": "Field type: open-text (text area).",
+            "script": {
+                "question_text": "What suggestions do you have for improving our CSR initiatives?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

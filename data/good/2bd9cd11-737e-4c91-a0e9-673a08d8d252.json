@@ -1,0 +1,123 @@
+{
+    "survey_id": "2bd9cd11-737e-4c91-a0e9-673a08d8d252",
+    "survey_name": "Workplace Digital Detox Practices Survey",
+    "survey_brief": "This survey aims to understand employee practices and perceptions regarding digital detox in the workplace to improve focus and reduce digital fatigue.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you take intentional breaks from digital devices during your workday?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clear selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you take intentional breaks from digital devices during your workday?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of digital detox practices have you tried at work? (Select all that apply)",
+            "answer_options": [
+                "Scheduled no-email periods",
+                "Designated device-free meeting times",
+                "Screen-free lunch breaks",
+                "Using apps to limit screen time",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice checkbox format. Include 'None of the above' to capture non-participants.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What types of digital detox practices have you tried at work? (Select all that apply)",
+                "answer_options": [
+                    "Scheduled no-email periods",
+                    "Designated device-free meeting times",
+                    "Screen-free lunch breaks",
+                    "Using apps to limit screen time",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How effective do you find digital detox practices in improving your productivity?",
+            "answer_options": [
+                "Very effective",
+                "Somewhat effective",
+                "Neutral",
+                "Somewhat ineffective",
+                "Very ineffective"
+            ],
+            "routing_logic": "All respondents except those who selected 'None of the above' in Q2",
+            "client_notes": "5-point Likert scale. Randomize order if possible to avoid bias.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Add skip logic for Q2 'None of the above' respondents.",
+            "script": {
+                "question_text": "How effective do you find digital detox practices in improving your productivity?",
+                "answer_options": [
+                    "Very effective",
+                    "Somewhat effective",
+                    "Neutral",
+                    "Somewhat ineffective",
+                    "Very ineffective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What barriers prevent you from practicing digital detox at work?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative insights. Limit to 200 characters.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT). Add character limit validation.",
+            "script": {
+                "question_text": "What barriers prevent you from practicing digital detox at work?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you support a company-wide 'digital detox hour' policy?",
+            "answer_options": [
+                "Yes, strongly support",
+                "Yes, with reservations",
+                "Neutral",
+                "No, prefer individual flexibility",
+                "No, would hinder work"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice with nuanced options to gauge sentiment.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Display vertically on mobile.",
+            "script": {
+                "question_text": "Would you support a company-wide 'digital detox hour' policy?",
+                "answer_options": [
+                    "Yes, strongly support",
+                    "Yes, with reservations",
+                    "Neutral",
+                    "No, prefer individual flexibility",
+                    "No, would hinder work"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

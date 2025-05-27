@@ -1,0 +1,137 @@
+{
+    "survey_id": "65797540-ff6b-4602-b60a-aae0190372fd",
+    "survey_name": "Consumer Preferences for Smart Home Lighting Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding smart home lighting systems, including adoption drivers, usage patterns, and satisfaction levels.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own or use a smart home lighting system?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I plan to purchase one in the next 6 months"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a simple yes/no format to filter respondents for further questions.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Do you currently own or use a smart home lighting system?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I plan to purchase one in the next 6 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influenced your decision to purchase a smart home lighting system? (Select all that apply)",
+            "answer_options": [
+                "Energy efficiency",
+                "Convenience (e.g., voice control, remote access)",
+                "Enhanced home security",
+                "Aesthetic appeal",
+                "Integration with other smart home devices",
+                "Recommendation from friends/family",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 answer is 'Yes' or 'I plan to purchase one in the next 6 months'.",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option with a text field for unique responses.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What factors influenced your decision to purchase a smart home lighting system? (Select all that apply)",
+                "answer_options": [
+                    "Energy efficiency",
+                    "Convenience (e.g., voice control, remote access)",
+                    "Enhanced home security",
+                    "Aesthetic appeal",
+                    "Integration with other smart home devices",
+                    "Recommendation from friends/family",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if Q1 answer is 'Yes' or 'I plan to purchase one in the next 6 months'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which features do you value most in a smart lighting system? (Rank top 3)",
+            "answer_options": [
+                "Voice control (e.g., Alexa, Google Assistant)",
+                "Automation/scheduling",
+                "Color customization",
+                "Energy usage monitoring",
+                "Integration with security systems",
+                "Geofencing (lights adjust based on location)"
+            ],
+            "routing_logic": "Only appears if Q1 answer is 'Yes'.",
+            "client_notes": "Use a ranking question format (drag-and-drop or numbered selection). Limit to top 3 choices.",
+            "scripter_notes": "Field type: ranking (single-choice per rank, max 3 selections).",
+            "script": {
+                "question_text": "Which features do you value most in a smart lighting system? (Rank top 3)",
+                "answer_options": [
+                    "Voice control (e.g., Alexa, Google Assistant)",
+                    "Automation/scheduling",
+                    "Color customization",
+                    "Energy usage monitoring",
+                    "Integration with security systems",
+                    "Geofencing (lights adjust based on location)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 answer is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced with your smart lighting system?",
+            "answer_options": [],
+            "routing_logic": "Only appears if Q1 answer is 'Yes'.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Use a text box with a 300-character limit.",
+            "scripter_notes": "Field type: open-text (limit 300 characters).",
+            "script": {
+                "question_text": "What challenges have you faced with your smart lighting system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only appears if Q1 answer is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your smart lighting system to others? (Scale 1-10)",
+            "answer_options": [
+                "1 (Not at all likely)",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 (Extremely likely)"
+            ],
+            "routing_logic": "Only appears if Q1 answer is 'Yes'.",
+            "client_notes": "Use a 10-point scale for granularity. Label only the endpoints.",
+            "scripter_notes": "Field type: radio button (single-choice, 10 options).",
+            "script": {
+                "question_text": "How likely are you to recommend your smart lighting system to others? (Scale 1-10)",
+                "answer_options": [
+                    "1 (Not at all likely)",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 (Extremely likely)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 answer is 'Yes'."
+            }
+        }
+    ]
+}

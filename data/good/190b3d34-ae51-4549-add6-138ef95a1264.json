@@ -1,0 +1,123 @@
+{
+    "survey_id": "190b3d34-ae51-4549-add6-138ef95a1264",
+    "survey_name": "AI-Powered Virtual Meeting Assistant User Experience Survey",
+    "survey_brief": "This survey aims to gather feedback on user experiences with AI-powered virtual meeting assistants to improve functionality and user satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use an AI-powered virtual meeting assistant?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How frequently do you use an AI-powered virtual meeting assistant?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of your AI-powered virtual meeting assistant do you find most useful? (Select all that apply)",
+            "answer_options": [
+                "Automated meeting summaries",
+                "Real-time transcription",
+                "Action item tracking",
+                "Voice recognition for commands",
+                "Integration with calendar apps",
+                "Language translation"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use checkboxes for multi-selection. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "Which features of your AI-powered virtual meeting assistant do you find most useful? (Select all that apply)",
+                "answer_options": [
+                    "Automated meeting summaries",
+                    "Real-time transcription",
+                    "Action item tracking",
+                    "Voice recognition for commands",
+                    "Integration with calendar apps",
+                    "Language translation"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for your AI-powered virtual meeting assistant?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use an open-text field to capture detailed feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you suggest for your AI-powered virtual meeting assistant?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accuracy of real-time transcriptions provided by your AI-powered virtual meeting assistant?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Real-time transcription' in Q2",
+            "client_notes": "Use a Likert scale for consistency. Include a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of real-time transcriptions provided by your AI-powered virtual meeting assistant?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Real-time transcription' in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your AI-powered virtual meeting assistant to colleagues or peers?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No, I would not recommend it"
+            ],
+            "routing_logic": "All respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a single-choice radio button. Consider adding a follow-up question for 'No' responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Would you recommend your AI-powered virtual meeting assistant to colleagues or peers?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No, I would not recommend it"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        }
+    ]
+}

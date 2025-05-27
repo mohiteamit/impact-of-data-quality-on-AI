@@ -1,0 +1,129 @@
+{
+    "survey_id": "b9b4c901-1d66-4643-be9b-01756f47e58c",
+    "survey_name": "Consumer Preferences for Meal Planning Apps Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and experiences with meal planning applications to help improve future app development and features.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use a meal planning app?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button for simplicity. Ensure the options cover all possible usage frequencies.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How often do you use a meal planning app?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you value the most in a meal planning app? (Select all that apply)",
+            "answer_options": [
+                "Recipe suggestions based on dietary preferences",
+                "Grocery list generation",
+                "Nutritional information",
+                "Meal prep tutorials",
+                "Integration with grocery delivery services",
+                "Customizable meal plans",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 is not 'Never'",
+            "client_notes": "Use a multi-choice checkbox format. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which features do you value the most in a meal planning app? (Select all that apply)",
+                "answer_options": [
+                    "Recipe suggestions based on dietary preferences",
+                    "Grocery list generation",
+                    "Nutritional information",
+                    "Meal prep tutorials",
+                    "Integration with grocery delivery services",
+                    "Customizable meal plans",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you do not use a meal planning app?",
+            "answer_options": [
+                "Prefer to plan meals manually",
+                "Not aware of suitable apps",
+                "Apps are too expensive",
+                "Apps lack desired features",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 is 'Never'",
+            "client_notes": "Use a single-choice radio button with an 'Other' option for additional input.",
+            "scripter_notes": "Field type: radio button with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What is the primary reason you do not use a meal planning app?",
+                "answer_options": [
+                    "Prefer to plan meals manually",
+                    "Not aware of suitable apps",
+                    "Apps are too expensive",
+                    "Apps lack desired features",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 is 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current meal planning app?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Show if Q1 is not 'Never'",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How satisfied are you with your current meal planning app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in meal planning apps?",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 is not 'Never'",
+            "client_notes": "Use an open-ended text field to capture detailed feedback.",
+            "scripter_notes": "Field type: open-text",
+            "script": {
+                "question_text": "What improvements would you like to see in meal planning apps?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 is not 'Never'"
+            }
+        }
+    ]
+}

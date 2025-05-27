@@ -1,0 +1,149 @@
+{
+    "survey_id": "d3473637-7736-4d1a-a0eb-a78bbb622bb9",
+    "survey_name": "Customer Satisfaction Survey for Electric Vehicle Charging Stations",
+    "survey_brief": "This survey aims to gather feedback from users of electric vehicle (EV) charging stations to improve service quality, accessibility, and user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public electric vehicle (EV) charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "First-time user"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for mobile-friendly selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use public electric vehicle (EV) charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What type of EV charging station do you primarily use?",
+            "answer_options": [
+                "Level 1 (120V)",
+                "Level 2 (240V)",
+                "DC Fast Charging",
+                "Not sure"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Ensure options are clearly distinguishable for non-technical users.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What type of EV charging station do you primarily use?",
+                "answer_options": [
+                    "Level 1 (120V)",
+                    "Level 2 (240V)",
+                    "DC Fast Charging",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when selecting an EV charging station? (Select up to 3)",
+            "answer_options": [
+                "Proximity to destination",
+                "Charging speed",
+                "Cost per session",
+                "Availability of amenities (e.g., restrooms, cafes)",
+                "Ease of payment",
+                "Network reliability",
+                "Safety of location"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use checkboxes for multi-select; limit selections to 3 for data clarity.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with max selection = 3",
+            "script": {
+                "question_text": "What factors are most important to you when selecting an EV charging station? (Select up to 3)",
+                "answer_options": [
+                    "Proximity to destination",
+                    "Charging speed",
+                    "Cost per session",
+                    "Availability of amenities (e.g., restrooms, cafes)",
+                    "Ease of payment",
+                    "Network reliability",
+                    "Safety of location"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1-5, how satisfied are you with the availability of EV charging stations in your area? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a Likert scale for standardized satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the availability of EV charging stations in your area? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced while using public EV charging stations? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow for detailed feedback; ensure mobile UI accommodates long-text input.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What challenges have you faced while using public EV charging stations? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you be willing to pay a premium for reserved or guaranteed charging slots?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe, depending on price"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Weekly', 'Monthly', or 'Daily' in Q1",
+            "client_notes": "Target frequent users to gauge monetization potential.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE); display only if Q1 answer is 'Weekly', 'Monthly', or 'Daily'",
+            "script": {
+                "question_text": "Would you be willing to pay a premium for reserved or guaranteed charging slots?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe, depending on price"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Weekly', 'Monthly', or 'Daily' in Q1"
+            }
+        }
+    ]
+}

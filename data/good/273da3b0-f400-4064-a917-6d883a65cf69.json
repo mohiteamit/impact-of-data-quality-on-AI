@@ -1,0 +1,123 @@
+{
+    "survey_id": "273da3b0-f400-4064-a917-6d883a65cf69",
+    "survey_name": "Consumer Preferences for Autonomous Vehicle Features Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and concerns regarding features in autonomous vehicles to guide future development and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with autonomous vehicle technology?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for this question to ensure clear response selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How familiar are you with autonomous vehicle technology?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following autonomous vehicle features are most important to you? (Select up to 3)",
+            "answer_options": [
+                "Safety systems (e.g., collision avoidance)",
+                "Self-parking capabilities",
+                "Traffic and navigation optimization",
+                "Entertainment systems (e.g., in-car streaming)",
+                "Voice-activated controls",
+                "Remote vehicle monitoring",
+                "Energy efficiency features"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use checkboxes for multi-selection. Limit selections to 3 to prioritize preferences.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with max selections set to 3.",
+            "script": {
+                "question_text": "Which of the following autonomous vehicle features are most important to you? (Select up to 3)",
+                "answer_options": [
+                    "Safety systems (e.g., collision avoidance)",
+                    "Self-parking capabilities",
+                    "Traffic and navigation optimization",
+                    "Entertainment systems (e.g., in-car streaming)",
+                    "Voice-activated controls",
+                    "Remote vehicle monitoring",
+                    "Energy efficiency features"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, do you have about autonomous vehicles?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative insights. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What concerns, if any, do you have about autonomous vehicles?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Would you be willing to pay a premium for an autonomous vehicle with advanced safety features?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, but only a small premium",
+                "No, I would not pay extra",
+                "Unsure"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Safety systems' in Q2.",
+            "client_notes": "Use a single-choice radio button. Route only to respondents who prioritized safety features.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Routing condition: if 'Safety systems' is selected in Q2.",
+            "script": {
+                "question_text": "Would you be willing to pay a premium for an autonomous vehicle with advanced safety features?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, but only a small premium",
+                    "No, I would not pay extra",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Safety systems' in Q2."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to consider purchasing an autonomous vehicle in the next 5 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Not very likely",
+                "Not at all likely"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button. This question gauges market readiness.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How likely are you to consider purchasing an autonomous vehicle in the next 5 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Not very likely",
+                    "Not at all likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

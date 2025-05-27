@@ -1,0 +1,103 @@
+{
+    "survey_id": "e00380df-e276-4e80-853e-b38f2a56f2a6",
+    "survey_name": "Home Security System Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and barriers regarding the adoption of home security systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently use a home security system?",
+            "answer_options": [
+                "Yes, a professionally monitored system",
+                "Yes, a self-monitored system",
+                "No, but I plan to install one in the next 12 months",
+                "No, and I do not plan to install one"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps segment respondents. Use radio buttons for single-choice selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Do you currently use a home security system?",
+                "answer_options": [
+                    "Yes, a professionally monitored system",
+                    "Yes, a self-monitored system",
+                    "No, but I plan to install one in the next 12 months",
+                    "No, and I do not plan to install one"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing a home security system? (Select up to 3)",
+            "answer_options": [
+                "Cost of installation",
+                "Monthly monitoring fees",
+                "Ease of use",
+                "Integration with smart home devices",
+                "Quality of customer support",
+                "Brand reputation",
+                "Mobile app functionality",
+                "Contract flexibility"
+            ],
+            "routing_logic": "Only displayed if respondent answered 'Yes' or 'Plan to install' in Q1",
+            "client_notes": "This question helps identify key decision-making factors. Use checkboxes for multi-choice.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a home security system? (Select up to 3)",
+                "answer_options": [
+                    "Cost of installation",
+                    "Monthly monitoring fees",
+                    "Ease of use",
+                    "Integration with smart home devices",
+                    "Quality of customer support",
+                    "Brand reputation",
+                    "Mobile app functionality",
+                    "Contract flexibility"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only displayed if respondent answered 'Yes' or 'Plan to install' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, have prevented you from installing a home security system?",
+            "answer_options": [],
+            "routing_logic": "Only displayed if respondent answered 'No, and do not plan to install' in Q1",
+            "client_notes": "Open-ended question to capture qualitative insights. Ensure mobile-friendly text box.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What concerns, if any, have prevented you from installing a home security system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only displayed if respondent answered 'No, and do not plan to install' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current home security system?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only displayed if respondent answered 'Yes' in Q1",
+            "client_notes": "5-point Likert scale for measuring satisfaction. Randomize options if needed to avoid bias.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with your current home security system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only displayed if respondent answered 'Yes' in Q1"
+            }
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "survey_id": "afb3feb7-7cf5-438c-8f2f-c8f1a551a344",
+    "survey_name": "Sustainable Product Preferences Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding sustainable products to help businesses tailor their offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you intentionally purchase sustainable or eco-friendly products?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a 5-point scale to capture frequency accurately. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Randomize option order to minimize bias.",
+            "script": {
+                "question_text": "How often do you intentionally purchase sustainable or eco-friendly products?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors most influence your decision to buy sustainable products? (Select up to 3)",
+            "answer_options": [
+                "Environmental impact",
+                "Product quality",
+                "Price",
+                "Brand reputation",
+                "Certifications (e.g., Fair Trade, Organic)",
+                "Packaging sustainability",
+                "Personal health benefits"
+            ],
+            "routing_logic": "Appears to all respondents who selected 'Always', 'Often', or 'Occasionally' in Q1.",
+            "client_notes": "Multi-choice question. Limit selections to 3 to prioritize top influences.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes). Include a 'Select up to 3' instruction.",
+            "script": {
+                "question_text": "Which of the following factors most influence your decision to buy sustainable products? (Select up to 3)",
+                "answer_options": [
+                    "Environmental impact",
+                    "Product quality",
+                    "Price",
+                    "Brand reputation",
+                    "Certifications (e.g., Fair Trade, Organic)",
+                    "Packaging sustainability",
+                    "Personal health benefits"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents who selected 'Always', 'Often', or 'Occasionally' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the main reason you do not purchase sustainable products more often?",
+            "answer_options": [
+                "Higher cost",
+                "Lack of availability",
+                "Uncertainty about claims",
+                "Prefer other brands",
+                "No specific reason"
+            ],
+            "routing_logic": "Appears only to respondents who selected 'Rarely' or 'Never' in Q1.",
+            "client_notes": "Single-choice question. Helps identify barriers to sustainable purchasing.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Include 'Other' with a text box for additional reasons.",
+            "script": {
+                "question_text": "What is the main reason you do not purchase sustainable products more often?",
+                "answer_options": [
+                    "Higher cost",
+                    "Lack of availability",
+                    "Uncertainty about claims",
+                    "Prefer other brands",
+                    "No specific reason"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only to respondents who selected 'Rarely' or 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would encourage you to buy more sustainable products?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Open-ended question to capture qualitative insights. Limit response length to 200 characters.",
+            "scripter_notes": "Field type: Open-text (text box). Add character limit validation.",
+            "script": {
+                "question_text": "What improvements would encourage you to buy more sustainable products?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents."
+            }
+        }
+    ]
+}

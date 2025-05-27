@@ -1,0 +1,149 @@
+{
+    "survey_id": "9dddc63f-8a10-425d-a44c-0ddc6de6af15",
+    "survey_name": "AI in Creative Industries Adoption Survey",
+    "survey_brief": "This survey aims to understand the adoption and perception of AI tools among professionals in creative industries such as design, music, writing, and film.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which creative industry do you primarily work in?",
+            "answer_options": [
+                "Graphic Design",
+                "Music Production",
+                "Writing/Content Creation",
+                "Film/Video Production",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use a dropdown menu for mobile-friendliness. Include an 'Other' option with a text field for specificity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional open-text for 'Other'.",
+            "script": {
+                "question_text": "Which creative industry do you primarily work in?",
+                "answer_options": [
+                    "Graphic Design",
+                    "Music Production",
+                    "Writing/Content Creation",
+                    "Film/Video Production",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Have you used any AI-powered tools in your creative work?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No, but I am interested",
+                "No, and I am not interested"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use a radio button for clarity. Ensure the options cover all potential levels of adoption.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "Have you used any AI-powered tools in your creative work?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No, but I am interested",
+                    "No, and I am not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which AI tools have you used? (Select all that apply)",
+            "answer_options": [
+                "AI-powered design tools (e.g., Adobe Firefly, Canva AI)",
+                "AI music composition tools (e.g., AIVA, Amper Music)",
+                "AI writing assistants (e.g., ChatGPT, Grammarly)",
+                "AI video editing tools (e.g., Runway ML, Descript)",
+                "None"
+            ],
+            "routing_logic": "Show if Q2 answer is 'Yes, frequently' or 'Yes, occasionally'",
+            "client_notes": "Use checkboxes for multi-selection. Include a 'None' option for validation.",
+            "scripter_notes": "Field type: MULTI_CHOICE.",
+            "script": {
+                "question_text": "Which AI tools have you used? (Select all that apply)",
+                "answer_options": [
+                    "AI-powered design tools (e.g., Adobe Firefly, Canva AI)",
+                    "AI music composition tools (e.g., AIVA, Amper Music)",
+                    "AI writing assistants (e.g., ChatGPT, Grammarly)",
+                    "AI video editing tools (e.g., Runway ML, Descript)",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q2 answer is 'Yes, frequently' or 'Yes, occasionally'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What are the biggest benefits of using AI in your creative work?",
+            "answer_options": [
+                "Saves time",
+                "Enhances creativity",
+                "Reduces costs",
+                "Improves quality",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q2 answer is 'Yes, frequently' or 'Yes, occasionally'",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field for additional insights.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What are the biggest benefits of using AI in your creative work?",
+                "answer_options": [
+                    "Saves time",
+                    "Enhances creativity",
+                    "Reduces costs",
+                    "Improves quality",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q2 answer is 'Yes, frequently' or 'Yes, occasionally'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What concerns do you have about using AI in creative work?",
+            "answer_options": [
+                "Loss of human touch/authenticity",
+                "Ethical concerns (e.g., copyright, originality)",
+                "Dependence on technology",
+                "Quality control issues",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option to capture unlisted concerns.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What concerns do you have about using AI in creative work?",
+                "answer_options": [
+                    "Loss of human touch/authenticity",
+                    "Ethical concerns (e.g., copyright, originality)",
+                    "Dependence on technology",
+                    "Quality control issues",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How do you think AI will impact the creative industries in the next 5 years?",
+            "answer_options": [],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use an open-text field to allow detailed responses. Limit to 500 characters for readability.",
+            "scripter_notes": "Field type: OPEN_TEXT with a character limit.",
+            "script": {
+                "question_text": "How do you think AI will impact the creative industries in the next 5 years?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show to all respondents"
+            }
+        }
+    ]
+}

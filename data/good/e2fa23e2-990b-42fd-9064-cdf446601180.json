@@ -1,0 +1,129 @@
+{
+    "survey_id": "e2fa23e2-990b-42fd-9064-cdf446601180",
+    "survey_name": "Consumer Preferences for AI-Powered Home Assistants Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, adoption barriers, and satisfaction levels with AI-powered home assistant devices (e.g., Amazon Alexa, Google Home).",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following AI-powered home assistant devices do you currently own or use regularly?",
+            "answer_options": [
+                "Amazon Alexa (Echo)",
+                "Google Home/Nest",
+                "Apple HomePod",
+                "Other (please specify)",
+                "None"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use multi-choice with an 'Other' option to capture niche brands. Ensure 'None' is included to filter non-users in later questions.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which of the following AI-powered home assistant devices do you currently own or use regularly?",
+                "answer_options": [
+                    "Amazon Alexa (Echo)",
+                    "Google Home/Nest",
+                    "Apple HomePod",
+                    "Other (please specify)",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary AI-powered home assistant device?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only appears if Q1 answer is not 'None'",
+            "client_notes": "Use a 5-point Likert scale for granularity. Consider adding an N/A option for multi-device owners.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with your primary AI-powered home assistant device?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 answer is not 'None'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you do not own an AI-powered home assistant device?",
+            "answer_options": [
+                "Privacy concerns",
+                "Lack of perceived usefulness",
+                "High cost",
+                "Preference for manual control",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 answer is 'None'",
+            "client_notes": "Pre-fill common barriers but leave room for unique responses via 'Other'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you do not own an AI-powered home assistant device?",
+                "answer_options": [
+                    "Privacy concerns",
+                    "Lack of perceived usefulness",
+                    "High cost",
+                    "Preference for manual control",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 answer is 'None'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What features do you value most in an AI-powered home assistant? (Select up to 3)",
+            "answer_options": [
+                "Voice recognition accuracy",
+                "Smart home integration",
+                "Music/podcast playback",
+                "News/weather updates",
+                "Third-party app support",
+                "Privacy controls",
+                "Customizable routines"
+            ],
+            "routing_logic": "Only appears if Q1 answer is not 'None'",
+            "client_notes": "Limit selections to prioritize top preferences. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with max_selections=3.",
+            "script": {
+                "question_text": "What features do you value most in an AI-powered home assistant? (Select up to 3)",
+                "answer_options": [
+                    "Voice recognition accuracy",
+                    "Smart home integration",
+                    "Music/podcast playback",
+                    "News/weather updates",
+                    "Third-party app support",
+                    "Privacy controls",
+                    "Customizable routines"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if Q1 answer is not 'None'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional functionality would encourage you to use an AI-powered home assistant more frequently?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended to uncover unmet needs. Use word clouds for qualitative analysis.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What additional functionality would encourage you to use an AI-powered home assistant more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

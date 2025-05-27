@@ -1,0 +1,125 @@
+{
+    "survey_id": "8872dc64-68f6-4e22-b8bd-73cb35275a4e",
+    "survey_name": "Corporate Sustainability and Green Office Practices Survey",
+    "survey_brief": "This survey aims to assess employee awareness and engagement with sustainability initiatives and green office practices within the organization.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the company's sustainability initiatives?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Slightly familiar",
+                "Not familiar at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 4-point Likert scale for this question to measure awareness levels. Avoid neutral options to force direction.",
+            "scripter_notes": "Single-choice radio buttons, mandatory response.",
+            "script": {
+                "question_text": "How familiar are you with the company's sustainability initiatives?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Slightly familiar",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following green office practices do you regularly participate in? (Select all that apply)",
+            "answer_options": [
+                "Paperless documentation",
+                "Recycling programs",
+                "Energy-saving measures (e.g., turning off lights, using natural light)",
+                "Sustainable commuting (e.g., biking, public transport, carpooling)",
+                "Using reusable utensils and containers",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question to gauge participation diversity. 'None of the above' should be mutually exclusive.",
+            "scripter_notes": "Multi-choice checkboxes, with 'None of the above' deselecting other options if chosen.",
+            "script": {
+                "question_text": "Which of the following green office practices do you regularly participate in? (Select all that apply)",
+                "answer_options": [
+                    "Paperless documentation",
+                    "Recycling programs",
+                    "Energy-saving measures (e.g., turning off lights, using natural light)",
+                    "Sustainable commuting (e.g., biking, public transport, carpooling)",
+                    "Using reusable utensils and containers",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What motivates you to participate in the company's sustainability programs?",
+            "answer_options": [
+                "Environmental concern",
+                "Company incentives/rewards",
+                "Peer influence/team participation",
+                "Personal values alignment",
+                "Not motivated to participate"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice to identify primary motivators. Include an option for non-participation to capture barriers.",
+            "scripter_notes": "Single-choice radio buttons, mandatory response.",
+            "script": {
+                "question_text": "What motivates you to participate in the company's sustainability programs?",
+                "answer_options": [
+                    "Environmental concern",
+                    "Company incentives/rewards",
+                    "Peer influence/team participation",
+                    "Personal values alignment",
+                    "Not motivated to participate"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional sustainability initiatives would you like to see implemented in the workplace?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Limit to 250 characters to ensure concise responses.",
+            "scripter_notes": "Open-text field with character limit validation.",
+            "script": {
+                "question_text": "What additional sustainability initiatives would you like to see implemented in the workplace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How effective do you think the company's current sustainability programs are?",
+            "answer_options": [
+                "Very effective",
+                "Somewhat effective",
+                "Slightly effective",
+                "Not effective at all",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents except those who answered 'Not familiar at all' to Q1",
+            "client_notes": "5-point Likert scale with an 'Unsure' option for those with limited exposure.",
+            "scripter_notes": "Single-choice radio buttons, skip logic applies if Q1 = 'Not familiar at all'.",
+            "script": {
+                "question_text": "How effective do you think the company's current sustainability programs are?",
+                "answer_options": [
+                    "Very effective",
+                    "Somewhat effective",
+                    "Slightly effective",
+                    "Not effective at all",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Not familiar at all' to Q1"
+            }
+        }
+    ]
+}

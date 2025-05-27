@@ -1,0 +1,157 @@
+{
+    "survey_id": "113bf01a-66f5-44b0-939a-04895baebf79",
+    "survey_name": "Consumer Preferences for Smart Home Assistants Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, usage patterns, and barriers related to smart home assistant devices (e.g., Amazon Echo, Google Nest).",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own or regularly use a smart home assistant device (e.g., Amazon Echo, Google Nest)?",
+            "answer_options": [
+                "Yes, I own one",
+                "No, but I plan to purchase one in the next 6 months",
+                "No, and I don't plan to purchase one",
+                "I previously owned one but no longer use it"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice response. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "Do you currently own or regularly use a smart home assistant device (e.g., Amazon Echo, Google Nest)?",
+                "answer_options": [
+                    "Yes, I own one",
+                    "No, but I plan to purchase one in the next 6 months",
+                    "No, and I don't plan to purchase one",
+                    "I previously owned one but no longer use it"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for using a smart home assistant? (Select all that apply)",
+            "answer_options": [
+                "Voice-controlled music/podcast playback",
+                "Smart home device control (lights, thermostat, etc.)",
+                "General information queries (weather, news, etc.)",
+                "Shopping/order management",
+                "Entertainment (jokes, games, etc.)",
+                "Reminders/alarms",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes, I own one'",
+            "client_notes": "Use checkboxes for multi-select. Include 'Other' as an open-text option if selected.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with open-text follow-up if 'Other' is selected",
+            "script": {
+                "question_text": "What are your primary reasons for using a smart home assistant? (Select all that apply)",
+                "answer_options": [
+                    "Voice-controlled music/podcast playback",
+                    "Smart home device control (lights, thermostat, etc.)",
+                    "General information queries (weather, news, etc.)",
+                    "Shopping/order management",
+                    "Entertainment (jokes, games, etc.)",
+                    "Reminders/alarms",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes, I own one'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, have prevented you from purchasing or using a smart home assistant? (Select all that apply)",
+            "answer_options": [
+                "Privacy/data security concerns",
+                "High cost of devices",
+                "Limited usefulness for my lifestyle",
+                "Technical complexity/setup challenges",
+                "Preference for manual control",
+                "No specific concerns; just haven't purchased one",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 starts with 'No'",
+            "client_notes": "Use checkboxes for multi-select. Include 'Other' as an open-text option if selected.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with open-text follow-up if 'Other' is selected",
+            "script": {
+                "question_text": "What concerns, if any, have prevented you from purchasing or using a smart home assistant? (Select all that apply)",
+                "answer_options": [
+                    "Privacy/data security concerns",
+                    "High cost of devices",
+                    "Limited usefulness for my lifestyle",
+                    "Technical complexity/setup challenges",
+                    "Preference for manual control",
+                    "No specific concerns; just haven't purchased one",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 starts with 'No'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which brand of smart home assistant do you primarily use?",
+            "answer_options": [
+                "Amazon (Echo/Alexa)",
+                "Google (Nest/Assistant)",
+                "Apple (HomePod/Siri)",
+                "Other (please specify)",
+                "I don't know"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes, I own one'",
+            "client_notes": "Use a radio button for single-choice response. Include 'Other' as an open-text option if selected.",
+            "scripter_notes": "Field type: radio button (single-choice) with open-text follow-up if 'Other' is selected",
+            "script": {
+                "question_text": "Which brand of smart home assistant do you primarily use?",
+                "answer_options": [
+                    "Amazon (Echo/Alexa)",
+                    "Google (Nest/Assistant)",
+                    "Apple (HomePod/Siri)",
+                    "Other (please specify)",
+                    "I don't know"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes, I own one'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with your smart home assistant overall?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes, I own one'",
+            "client_notes": "Use a 5-point Likert scale for satisfaction. Randomize display order to avoid bias.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How satisfied are you with your smart home assistant overall?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes, I own one'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional features or improvements would you like to see in smart home assistants?",
+            "answer_options": [],
+            "routing_logic": "Only if Q1 = 'Yes, I own one'",
+            "client_notes": "Use an open-text field. Limit response to 250 characters.",
+            "scripter_notes": "Field type: open-text with character limit",
+            "script": {
+                "question_text": "What additional features or improvements would you like to see in smart home assistants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q1 = 'Yes, I own one'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "survey_id": "bb1438e7-b4f7-4be7-a02f-d19db3786a8f",
+    "survey_name": "Urban Mobility and Shared Bike Usage Survey",
+    "survey_brief": "This survey aims to understand user preferences, satisfaction levels, and challenges regarding shared bike services in urban areas.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use shared bike services in your city?",
+            "answer_options": [
+                "Daily",
+                "2-3 times per week",
+                "Once a week",
+                "A few times per month",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a single-choice radio button format for clear response capture.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How frequently do you use shared bike services in your city?",
+                "answer_options": [
+                    "Daily",
+                    "2-3 times per week",
+                    "Once a week",
+                    "A few times per month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for using shared bike services? (Select all that apply)",
+            "answer_options": [
+                "Convenience",
+                "Cost savings",
+                "Environmental concerns",
+                "Health/fitness benefits",
+                "Avoiding traffic congestion",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Rarely or never'.",
+            "client_notes": "Use multi-select checkboxes with an 'Other' option for comprehensive insights.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes) with optional text input for 'Other'.",
+            "script": {
+                "question_text": "What are your primary reasons for using shared bike services? (Select all that apply)",
+                "answer_options": [
+                    "Convenience",
+                    "Cost savings",
+                    "Environmental concerns",
+                    "Health/fitness benefits",
+                    "Avoiding traffic congestion",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Rarely or never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for shared bike services in your area?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Open-ended format to capture qualitative feedback. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: Open-text (textarea).",
+            "script": {
+                "question_text": "What improvements would you suggest for shared bike services in your area?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the availability of shared bikes in your preferred locations?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Rarely or never'.",
+            "client_notes": "5-point Likert scale for nuanced satisfaction measurement.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the availability of shared bikes in your preferred locations?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Rarely or never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any safety concerns while using shared bike services?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Rarely or never'.",
+            "client_notes": "Binary response followed by optional text for details if needed.",
+            "scripter_notes": "Field type: Single-choice (radio buttons) with conditional follow-up.",
+            "script": {
+                "question_text": "Have you experienced any safety concerns while using shared bike services?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Rarely or never'."
+            }
+        }
+    ]
+}

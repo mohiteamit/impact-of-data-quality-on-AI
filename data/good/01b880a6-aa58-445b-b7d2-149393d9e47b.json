@@ -1,0 +1,129 @@
+{
+    "survey_id": "01b880a6-aa58-445b-b7d2-149393d9e47b",
+    "survey_name": "Telecommuting Workstation Ergonomics Survey",
+    "survey_brief": "This survey aims to understand the ergonomic setup of employees' home workstations, identify common discomforts, and gather feedback on potential improvements to enhance productivity and well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following best describes your current telecommuting workstation setup?",
+            "answer_options": [
+                "Dedicated home office with ergonomic furniture",
+                "Shared space (e.g., dining table, couch) with some ergonomic adjustments",
+                "Non-dedicated space without ergonomic adjustments",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Consider adding an 'Other' option with a text field for unique setups.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following best describes your current telecommuting workstation setup?",
+                "answer_options": [
+                    "Dedicated home office with ergonomic furniture",
+                    "Shared space (e.g., dining table, couch) with some ergonomic adjustments",
+                    "Non-dedicated space without ergonomic adjustments",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you experience discomfort (e.g., back pain, eye strain) while working from your home workstation?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for frequency. Ensure options cover the full range of possible responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How often do you experience discomfort (e.g., back pain, eye strain) while working from your home workstation?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What types of discomfort do you most frequently experience? (Select all that apply)",
+            "answer_options": [
+                "Neck/shoulder pain",
+                "Back pain",
+                "Eye strain",
+                "Wrist/hand discomfort",
+                "Leg/foot discomfort",
+                "Headaches",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily' or 'Several times a week' in Q2",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option for unlisted discomforts.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What types of discomfort do you most frequently experience? (Select all that apply)",
+                "answer_options": [
+                    "Neck/shoulder pain",
+                    "Back pain",
+                    "Eye strain",
+                    "Wrist/hand discomfort",
+                    "Leg/foot discomfort",
+                    "Headaches",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily' or 'Several times a week' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which ergonomic equipment does your employer currently provide for your home workstation? (Select all that apply)",
+            "answer_options": [
+                "Adjustable chair",
+                "Monitor stand/riser",
+                "External keyboard/mouse",
+                "Desk (sit-stand or fixed)",
+                "Footrest",
+                "None",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multiple selections. Include 'None' as an option for respondents without employer-provided equipment.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which ergonomic equipment does your employer currently provide for your home workstation? (Select all that apply)",
+                "answer_options": [
+                    "Adjustable chair",
+                    "Monitor stand/riser",
+                    "External keyboard/mouse",
+                    "Desk (sit-stand or fixed)",
+                    "Footrest",
+                    "None",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional ergonomic support or equipment would you find most beneficial for your home workstation?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture specific needs. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT.",
+            "script": {
+                "question_text": "What additional ergonomic support or equipment would you find most beneficial for your home workstation?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

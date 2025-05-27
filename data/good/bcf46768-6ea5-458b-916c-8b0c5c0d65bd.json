@@ -1,0 +1,129 @@
+{
+    "survey_id": "bcf46768-6ea5-458b-916c-8b0c5c0d65bd",
+    "survey_name": "Consumer Preferences for Indoor Air Quality Products Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, awareness, and purchasing behaviors related to indoor air quality products such as air purifiers, humidifiers, and dehumidifiers.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How concerned are you about the indoor air quality in your home?",
+            "answer_options": [
+                "Very concerned",
+                "Somewhat concerned",
+                "Neutral",
+                "Not very concerned",
+                "Not at all concerned"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a Likert scale for better sentiment analysis. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How concerned are you about the indoor air quality in your home?",
+                "answer_options": [
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Neutral",
+                    "Not very concerned",
+                    "Not at all concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following indoor air quality products do you currently own? (Select all that apply)",
+            "answer_options": [
+                "Air purifier",
+                "Humidifier",
+                "Dehumidifier",
+                "Air quality monitor",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multiple selections. Randomize order of options to avoid bias.",
+            "scripter_notes": "Field type: multi-choice checkboxes.",
+            "script": {
+                "question_text": "Which of the following indoor air quality products do you currently own? (Select all that apply)",
+                "answer_options": [
+                    "Air purifier",
+                    "Humidifier",
+                    "Dehumidifier",
+                    "Air quality monitor",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when purchasing an indoor air quality product? (Rank top 3)",
+            "answer_options": [
+                "Price",
+                "Brand reputation",
+                "Energy efficiency",
+                "Noise level",
+                "Smart features (e.g., app connectivity)",
+                "Ease of maintenance",
+                "Effectiveness"
+            ],
+            "routing_logic": "Appears if Q2 != 'None of the above'",
+            "client_notes": "Use a drag-and-drop ranking interface if possible. Limit to top 3 to simplify analysis.",
+            "scripter_notes": "Field type: ranking question with max 3 selections.",
+            "script": {
+                "question_text": "What factors are most important to you when purchasing an indoor air quality product? (Rank top 3)",
+                "answer_options": [
+                    "Price",
+                    "Brand reputation",
+                    "Energy efficiency",
+                    "Noise level",
+                    "Smart features (e.g., app connectivity)",
+                    "Ease of maintenance",
+                    "Effectiveness"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q2 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in future indoor air quality products?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 250 characters.",
+            "scripter_notes": "Field type: open-text with character limit.",
+            "script": {
+                "question_text": "What improvements would you like to see in future indoor air quality products?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to purchase an indoor air quality product in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a standard likelihood scale. Include 'Neutral' option.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How likely are you to purchase an indoor air quality product in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,133 @@
+{
+    "survey_id": "690eb270-b958-4392-9d10-4c244fbc2c91",
+    "survey_name": "Consumer Preferences for Autonomous Vehicle Features Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and concerns regarding features in autonomous vehicles to help manufacturers prioritize development efforts.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How interested are you in owning or using an autonomous vehicle in the future?",
+            "answer_options": [
+                "Very interested",
+                "Somewhat interested",
+                "Neutral",
+                "Not very interested",
+                "Not at all interested"
+            ],
+            "routing_logic": "This question appears to all respondents.",
+            "client_notes": "Use a 5-point Likert scale to measure interest levels effectively. Ensure mobile-friendly layout for easy selection.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How interested are you in owning or using an autonomous vehicle in the future?",
+                "answer_options": [
+                    "Very interested",
+                    "Somewhat interested",
+                    "Neutral",
+                    "Not very interested",
+                    "Not at all interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following autonomous vehicle features are most important to you? (Select all that apply)",
+            "answer_options": [
+                "Collision avoidance systems",
+                "Automatic parking",
+                "Traffic jam assist",
+                "Self-driving on highways",
+                "Fully autonomous city driving",
+                "Voice-controlled navigation",
+                "Integration with smart home devices"
+            ],
+            "routing_logic": "This question appears if respondent selects 'Very interested' or 'Somewhat interested' in Q1.",
+            "client_notes": "Allow multiple selections to capture prioritized features. Randomize option order to minimize bias.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes).",
+            "script": {
+                "question_text": "Which of the following autonomous vehicle features are most important to you? (Select all that apply)",
+                "answer_options": [
+                    "Collision avoidance systems",
+                    "Automatic parking",
+                    "Traffic jam assist",
+                    "Self-driving on highways",
+                    "Fully autonomous city driving",
+                    "Voice-controlled navigation",
+                    "Integration with smart home devices"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if respondent selects 'Very interested' or 'Somewhat interested' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your biggest concern about using autonomous vehicles?",
+            "answer_options": [
+                "Safety and reliability",
+                "Data privacy and security",
+                "Legal liability in accidents",
+                "High cost",
+                "Loss of driving enjoyment",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears to all respondents.",
+            "client_notes": "Include an 'Other' option with open-ended follow-up to capture unique concerns.",
+            "scripter_notes": "Field type: Single-choice (radio buttons) with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What is your biggest concern about using autonomous vehicles?",
+                "answer_options": [
+                    "Safety and reliability",
+                    "Data privacy and security",
+                    "Legal liability in accidents",
+                    "High cost",
+                    "Loss of driving enjoyment",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much would you be willing to pay for a fully autonomous vehicle compared to a conventional vehicle?",
+            "answer_options": [
+                "Up to 10% more",
+                "11-20% more",
+                "21-30% more",
+                "31-40% more",
+                "More than 40% more",
+                "Not willing to pay extra"
+            ],
+            "routing_logic": "This question appears if respondent selects 'Very interested', 'Somewhat interested', or 'Neutral' in Q1.",
+            "client_notes": "Use percentage ranges to normalize responses across income levels.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How much would you be willing to pay for a fully autonomous vehicle compared to a conventional vehicle?",
+                "answer_options": [
+                    "Up to 10% more",
+                    "11-20% more",
+                    "21-30% more",
+                    "31-40% more",
+                    "More than 40% more",
+                    "Not willing to pay extra"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if respondent selects 'Very interested', 'Somewhat interested', or 'Neutral' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any additional features you would like to see in autonomous vehicles that were not listed above.",
+            "answer_options": [],
+            "routing_logic": "This question appears if respondent selects 'Very interested' or 'Somewhat interested' in Q1.",
+            "client_notes": "Open-ended question to capture innovative ideas. Limit response length to 300 characters.",
+            "scripter_notes": "Field type: Open-text (text area with character limit).",
+            "script": {
+                "question_text": "Please describe any additional features you would like to see in autonomous vehicles that were not listed above.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if respondent selects 'Very interested' or 'Somewhat interested' in Q1."
+            }
+        }
+    ]
+}

@@ -1,0 +1,103 @@
+{
+    "survey_id": "15356264-17b6-48f2-8f5d-689ea6b5be84",
+    "survey_name": "Digital Wallet Usage and Preferences Survey",
+    "survey_brief": "This survey aims to gather insights on consumer usage patterns, preferences, and concerns regarding digital wallet services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following digital wallet services have you used in the past 6 months?",
+            "answer_options": [
+                "Apple Pay",
+                "Google Pay",
+                "Samsung Pay",
+                "PayPal",
+                "Venmo",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multi-selection to capture usage across multiple platforms. Include an 'Other' option with text input for unspecified services.",
+            "scripter_notes": "Field type: MULTI_CHOICE with checkbox inputs. Ensure 'Other' option triggers a text input field.",
+            "script": {
+                "question_text": "Which of the following digital wallet services have you used in the past 6 months?",
+                "answer_options": [
+                    "Apple Pay",
+                    "Google Pay",
+                    "Samsung Pay",
+                    "PayPal",
+                    "Venmo",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using a digital wallet?",
+            "answer_options": [
+                "Convenience",
+                "Speed of transactions",
+                "Security features",
+                "Rewards or cashback offers",
+                "Contactless payment preference",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who selected at least one option in Q1",
+            "client_notes": "Single-choice question to identify the main driver of usage. Include 'Other' for unique responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons. 'Other' should trigger a text input field.",
+            "script": {
+                "question_text": "What is your primary reason for using a digital wallet?",
+                "answer_options": [
+                    "Convenience",
+                    "Speed of transactions",
+                    "Security features",
+                    "Rewards or cashback offers",
+                    "Contactless payment preference",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected at least one option in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How concerned are you about the security of your personal/financial data when using digital wallets?",
+            "answer_options": [
+                "Not at all concerned",
+                "Slightly concerned",
+                "Moderately concerned",
+                "Very concerned",
+                "Extremely concerned"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a Likert scale to measure sentiment. Ensure mobile-friendly vertical layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons displayed vertically.",
+            "script": {
+                "question_text": "How concerned are you about the security of your personal/financial data when using digital wallets?",
+                "answer_options": [
+                    "Not at all concerned",
+                    "Slightly concerned",
+                    "Moderately concerned",
+                    "Very concerned",
+                    "Extremely concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What features would encourage you to use a digital wallet more frequently?",
+            "answer_options": [],
+            "routing_logic": "Appears for respondents who selected at least one option in Q1",
+            "client_notes": "Open-ended to capture qualitative insights. Limit response to 200 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit validation.",
+            "script": {
+                "question_text": "What features would encourage you to use a digital wallet more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for respondents who selected at least one option in Q1"
+            }
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+{
+    "survey_id": "152521b2-7335-4587-b0cf-e33e8e5b35c7",
+    "survey_name": "Consumer Preferences for Smart Home Appliances Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and adoption barriers for smart home appliances.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home appliances do you currently own?",
+            "answer_options": [
+                "Smart thermostat",
+                "Smart lighting system",
+                "Smart security camera",
+                "Smart refrigerator",
+                "Smart washing machine",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes to allow multiple selections. Ensure the 'None of the above' option is clearly visible.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "Which of the following smart home appliances do you currently own?",
+                "answer_options": [
+                    "Smart thermostat",
+                    "Smart lighting system",
+                    "Smart security camera",
+                    "Smart refrigerator",
+                    "Smart washing machine",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your smart home appliances?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected at least one smart appliance in Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the question is skipped for respondents who selected 'None of the above' in Q1.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with your smart home appliances?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one smart appliance in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influenced your decision to purchase smart home appliances?",
+            "answer_options": [
+                "Energy efficiency",
+                "Convenience",
+                "Cost savings",
+                "Home security",
+                "Recommendation from friends/family",
+                "Other"
+            ],
+            "routing_logic": "Respondents who selected at least one smart appliance in Q1",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What factors influenced your decision to purchase smart home appliances?",
+                "answer_options": [
+                    "Energy efficiency",
+                    "Convenience",
+                    "Cost savings",
+                    "Home security",
+                    "Recommendation from friends/family",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected at least one smart appliance in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the biggest barrier preventing you from purchasing smart home appliances?",
+            "answer_options": [
+                "High cost",
+                "Privacy concerns",
+                "Complexity of setup",
+                "Lack of perceived benefit",
+                "Not compatible with my home",
+                "Other"
+            ],
+            "routing_logic": "Respondents who selected 'None of the above' in Q1",
+            "client_notes": "Use radio buttons for single selection. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What is the biggest barrier preventing you from purchasing smart home appliances?",
+                "answer_options": [
+                    "High cost",
+                    "Privacy concerns",
+                    "Complexity of setup",
+                    "Lack of perceived benefit",
+                    "Not compatible with my home",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'None of the above' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please share any additional thoughts or concerns you have about smart home appliances.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to allow detailed responses. Keep the field mobile-friendly.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "Please share any additional thoughts or concerns you have about smart home appliances.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "survey_id": "df6ece6a-f29e-40f8-87fe-3ec9fb62b078",
+    "survey_name": "Consumer Preferences for Smart Home Automation Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and adoption barriers related to smart home automation systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with smart home automation systems?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button format for mobile-friendly response.",
+            "scripter_notes": "Type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How familiar are you with smart home automation systems?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following smart home automation features do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Smart lighting",
+                "Smart thermostats",
+                "Smart security systems",
+                "Smart speakers/voice assistants",
+                "Smart plugs/switches",
+                "None of the above"
+            ],
+            "routing_logic": "This question appears if Q1 response is 'Very familiar' or 'Somewhat familiar'.",
+            "client_notes": "Use a multi-choice checkbox format. Ensure 'None of the above' is mutually exclusive if selected.",
+            "scripter_notes": "Type: MULTI_CHOICE",
+            "script": {
+                "question_text": "Which of the following smart home automation features do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Smart lighting",
+                    "Smart thermostats",
+                    "Smart security systems",
+                    "Smart speakers/voice assistants",
+                    "Smart plugs/switches",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q1 response is 'Very familiar' or 'Somewhat familiar'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the primary reasons you have not adopted smart home automation systems?",
+            "answer_options": [
+                "High cost",
+                "Privacy concerns",
+                "Lack of perceived need",
+                "Too complex to set up",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q1 response is 'Not very familiar' or 'Not at all familiar'.",
+            "client_notes": "Use a single-choice format with an optional open-text field for 'Other'.",
+            "scripter_notes": "Type: SINGLE_CHOICE with an optional open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What are the primary reasons you have not adopted smart home automation systems?",
+                "answer_options": [
+                    "High cost",
+                    "Privacy concerns",
+                    "Lack of perceived need",
+                    "Too complex to set up",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 response is 'Not very familiar' or 'Not at all familiar'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to purchase a smart home automation system in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button format on a 5-point Likert scale.",
+            "scripter_notes": "Type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How likely are you to purchase a smart home automation system in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features would most likely encourage you to adopt a smart home automation system?",
+            "answer_options": [],
+            "routing_logic": "This question appears if Q4 response is 'Very likely' or 'Somewhat likely'.",
+            "client_notes": "Use an open-text field for detailed responses.",
+            "scripter_notes": "Type: OPEN_TEXT",
+            "script": {
+                "question_text": "What features would most likely encourage you to adopt a smart home automation system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if Q4 response is 'Very likely' or 'Somewhat likely'."
+            }
+        }
+    ]
+}

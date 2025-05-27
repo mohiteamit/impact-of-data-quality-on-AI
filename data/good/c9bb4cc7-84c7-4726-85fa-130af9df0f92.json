@@ -1,0 +1,129 @@
+{
+    "survey_id": "c9bb4cc7-84c7-4726-85fa-130af9df0f92",
+    "survey_name": "AI-Powered Virtual Fitness Coach User Experience Survey",
+    "survey_brief": "This survey aims to gather user feedback on AI-powered virtual fitness coaching platforms to improve service quality, features, and user engagement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use an AI-powered virtual fitness coaching platform?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once per week",
+                "This is my first time"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button scale for clean mobile response. Consider adding visual frequency indicators if space allows.",
+            "scripter_notes": "Field type: Radio buttons (single choice), mandatory response",
+            "script": {
+                "question_text": "How often do you use an AI-powered virtual fitness coaching platform?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once per week",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you value most in your virtual fitness coach? (Select up to 3)",
+            "answer_options": [
+                "Personalized workout plans",
+                "Real-time form correction",
+                "Progress tracking analytics",
+                "Nutritional guidance",
+                "Motivational prompts",
+                "Community challenges",
+                "Injury prevention tips"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Checkbox selection with clear max selection indicator. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: Checkboxes (multi-choice), maximum 3 selections",
+            "script": {
+                "question_text": "Which features do you value most in your virtual fitness coach? (Select up to 3)",
+                "answer_options": [
+                    "Personalized workout plans",
+                    "Real-time form correction",
+                    "Progress tracking analytics",
+                    "Nutritional guidance",
+                    "Motivational prompts",
+                    "Community challenges",
+                    "Injury prevention tips"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would enhance your experience with the AI fitness coach?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open text field with character limiter (500 chars). Include placeholder text: 'e.g., better voice cues, more modifications...'",
+            "scripter_notes": "Field type: Open text input with character counter",
+            "script": {
+                "question_text": "What improvements would enhance your experience with the AI fitness coach?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accuracy of the AI's exercise form feedback?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only show if Q1 ≠ 'This is my first time'",
+            "client_notes": "5-point Likert scale with emoji support for visual clarity on mobile devices.",
+            "scripter_notes": "Field type: Radio buttons (single choice), include 'Prefer not to answer' option",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of the AI's exercise form feedback?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only show if Q1 ≠ 'This is my first time'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your AI fitness coach to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Neutral",
+                "Probably not",
+                "Definitely not"
+            ],
+            "routing_logic": "Only show if Q1 ≠ 'This is my first time'",
+            "client_notes": "Include NPS-style follow-up for 'Detractors' (options 4-5) asking for primary reason.",
+            "scripter_notes": "Field type: Radio buttons with conditional follow-up",
+            "script": {
+                "question_text": "Would you recommend your AI fitness coach to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Neutral",
+                    "Probably not",
+                    "Definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only show if Q1 ≠ 'This is my first time'"
+            }
+        }
+    ]
+}

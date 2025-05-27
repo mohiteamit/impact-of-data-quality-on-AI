@@ -1,0 +1,129 @@
+{
+    "survey_id": "ee3109eb-6efe-41f7-b131-badd78d55086",
+    "survey_name": "Employee Feedback on Hybrid Work Schedules Survey",
+    "survey_brief": "This survey gathers employee feedback on hybrid work schedules to assess satisfaction, productivity, and challenges experienced in a hybrid work environment.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you currently work remotely in your hybrid schedule?",
+            "answer_options": [
+                "1 day",
+                "2 days",
+                "3 days",
+                "4 days",
+                "Full-time remote",
+                "Full-time in-office"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a radio button for single selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How many days per week do you currently work remotely in your hybrid schedule?",
+                "answer_options": [
+                    "1 day",
+                    "2 days",
+                    "3 days",
+                    "4 days",
+                    "Full-time remote",
+                    "Full-time in-office"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following tools do you use to collaborate with your team while working remotely? (Select all that apply)",
+            "answer_options": [
+                "Slack",
+                "Microsoft Teams",
+                "Zoom",
+                "Google Meet",
+                "Email",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who selected 1-4 days or full-time remote in Q1",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "Which of the following tools do you use to collaborate with your team while working remotely? (Select all that apply)",
+                "answer_options": [
+                    "Slack",
+                    "Microsoft Teams",
+                    "Zoom",
+                    "Google Meet",
+                    "Email",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who selected 1-4 days or full-time remote in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your current hybrid work schedule?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point Likert scale with radio buttons. Randomize options if possible to reduce bias.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with your current hybrid work schedule?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges, if any, have you faced with the hybrid work schedule?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended response. Allow for a paragraph-length answer. Mobile-friendly text input.",
+            "scripter_notes": "Field type: text area (OPEN_TEXT)",
+            "script": {
+                "question_text": "What challenges, if any, have you faced with the hybrid work schedule?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you prefer to adjust your current hybrid work schedule?",
+            "answer_options": [
+                "Yes, I would like more remote days",
+                "Yes, I would like more in-office days",
+                "No, I am satisfied with my current schedule",
+                "I would prefer fully remote",
+                "I would prefer fully in-office"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use radio buttons for single selection. Include an optional comment field for elaboration.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with optional text input",
+            "script": {
+                "question_text": "Would you prefer to adjust your current hybrid work schedule?",
+                "answer_options": [
+                    "Yes, I would like more remote days",
+                    "Yes, I would like more in-office days",
+                    "No, I am satisfied with my current schedule",
+                    "I would prefer fully remote",
+                    "I would prefer fully in-office"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

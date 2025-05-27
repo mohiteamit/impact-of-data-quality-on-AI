@@ -1,0 +1,123 @@
+{
+    "survey_id": "73da5ef7-fbd0-4038-aa96-92b9f62a623f",
+    "survey_name": "Corporate Coffee Consumption Habits Survey",
+    "survey_brief": "This survey aims to understand employee coffee consumption habits in corporate settings to optimize workplace coffee services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many cups of coffee do you typically consume during a workday?",
+            "answer_options": [
+                "0 cups (I do not drink coffee)",
+                "1-2 cups",
+                "3-4 cups",
+                "5 or more cups"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button layout for clarity. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How many cups of coffee do you typically consume during a workday?",
+                "answer_options": [
+                    "0 cups (I do not drink coffee)",
+                    "1-2 cups",
+                    "3-4 cups",
+                    "5 or more cups"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What type of coffee do you most frequently consume at work?",
+            "answer_options": [
+                "Black coffee",
+                "Latte/Cappuccino",
+                "Espresso",
+                "Instant coffee",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for respondents who selected 1 or more cups in Q1.",
+            "client_notes": "Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What type of coffee do you most frequently consume at work?",
+                "answer_options": [
+                    "Black coffee",
+                    "Latte/Cappuccino",
+                    "Espresso",
+                    "Instant coffee",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 1 or more cups in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Where do you typically get your coffee during work hours? (Select all that apply)",
+            "answer_options": [
+                "Office coffee machine",
+                "Cafeteria/Canteen",
+                "Nearby coffee shop",
+                "Bring from home",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for respondents who selected 1 or more cups in Q1.",
+            "client_notes": "Use checkboxes for multiple selections. Ensure 'Other' includes a text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "Where do you typically get your coffee during work hours? (Select all that apply)",
+                "answer_options": [
+                    "Office coffee machine",
+                    "Cafeteria/Canteen",
+                    "Nearby coffee shop",
+                    "Bring from home",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 1 or more cups in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the quality of coffee provided in your workplace?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for respondents who selected 'Office coffee machine' or 'Cafeteria/Canteen' in Q3.",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the quality of coffee provided in your workplace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 'Office coffee machine' or 'Cafeteria/Canteen' in Q3."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for the workplace coffee service?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents who answered Q1 with 1 or more cups.",
+            "client_notes": "Allow open-ended responses to gather qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What improvements would you suggest for the workplace coffee service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents who answered Q1 with 1 or more cups."
+            }
+        }
+    ]
+}

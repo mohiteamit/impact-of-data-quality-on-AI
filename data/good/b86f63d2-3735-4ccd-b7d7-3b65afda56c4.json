@@ -1,0 +1,133 @@
+{
+    "survey_id": "b86f63d2-3735-4ccd-b7d7-3b65afda56c4",
+    "survey_name": "Consumer Preferences for Meal Kit Delivery Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, satisfaction levels, and barriers related to meal kit delivery services to help improve service offerings and customer experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use meal kit delivery services?",
+            "answer_options": [
+                "Weekly",
+                "Bi-weekly",
+                "Monthly",
+                "Less than once a month",
+                "Never used before"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How often do you use meal kit delivery services?",
+                "answer_options": [
+                    "Weekly",
+                    "Bi-weekly",
+                    "Monthly",
+                    "Less than once a month",
+                    "Never used before"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing a meal kit delivery service? (Select up to 3)",
+            "answer_options": [
+                "Price",
+                "Variety of meal options",
+                "Dietary restrictions (e.g., vegetarian, gluten-free)",
+                "Convenience (preparation time)",
+                "Ingredient quality",
+                "Eco-friendly packaging",
+                "Customer service",
+                "Delivery flexibility"
+            ],
+            "routing_logic": "Show if Q1 != 'Never used before'",
+            "client_notes": "Use checkboxes for multi-choice selection. Limit selections to 3 to prioritize key factors.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max selections = 3",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a meal kit delivery service? (Select up to 3)",
+                "answer_options": [
+                    "Price",
+                    "Variety of meal options",
+                    "Dietary restrictions (e.g., vegetarian, gluten-free)",
+                    "Convenience (preparation time)",
+                    "Ingredient quality",
+                    "Eco-friendly packaging",
+                    "Customer service",
+                    "Delivery flexibility"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 != 'Never used before'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would encourage you to use meal kit delivery services more frequently?",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 != 'Never used before'",
+            "client_notes": "Use an open-text field to capture qualitative feedback. Ensure mobile-friendly input.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would encourage you to use meal kit delivery services more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 != 'Never used before'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you have never used a meal kit delivery service?",
+            "answer_options": [
+                "Too expensive",
+                "Prefer grocery shopping",
+                "Concerns about food quality",
+                "Limited dietary options",
+                "Not aware of available services",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 == 'Never used before'",
+            "client_notes": "Include an 'Other' option with a text field to capture nuanced responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What is the primary reason you have never used a meal kit delivery service?",
+                "answer_options": [
+                    "Too expensive",
+                    "Prefer grocery shopping",
+                    "Concerns about food quality",
+                    "Limited dietary options",
+                    "Not aware of available services",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 == 'Never used before'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "On a scale of 1-5, how satisfied are you with your most recent meal kit delivery experience?",
+            "answer_options": [
+                "1 - Very dissatisfied",
+                "2 - Dissatisfied",
+                "3 - Neutral",
+                "4 - Satisfied",
+                "5 - Very satisfied"
+            ],
+            "routing_logic": "Show if Q1 != 'Never used before'",
+            "client_notes": "Use a Likert scale with clear labels for each point to ensure accurate responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with your most recent meal kit delivery experience?",
+                "answer_options": [
+                    "1 - Very dissatisfied",
+                    "2 - Dissatisfied",
+                    "3 - Neutral",
+                    "4 - Satisfied",
+                    "5 - Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 != 'Never used before'"
+            }
+        }
+    ]
+}

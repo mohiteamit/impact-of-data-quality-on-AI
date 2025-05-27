@@ -1,0 +1,115 @@
+{
+    "survey_id": "12387f28-c9a1-4fd9-8d8c-da824e7aa7b2",
+    "survey_name": "Telecommuting Technology Tools Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with the technology tools provided for telecommuting and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following telecommuting technology tools do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Video conferencing software (e.g., Zoom, Microsoft Teams)",
+                "Collaboration platforms (e.g., Slack, Microsoft Teams)",
+                "Project management tools (e.g., Trello, Asana)",
+                "Cloud storage services (e.g., Google Drive, Dropbox)",
+                "VPN access",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Ensure the survey platform allows multi-select functionality for respondents to choose multiple options.",
+            "scripter_notes": "Field type: Checkbox (Multi-choice), Include an 'Other' option with a text box for specification.",
+            "script": {
+                "question_text": "Which of the following telecommuting technology tools do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Video conferencing software (e.g., Zoom, Microsoft Teams)",
+                    "Collaboration platforms (e.g., Slack, Microsoft Teams)",
+                    "Project management tools (e.g., Trello, Asana)",
+                    "Cloud storage services (e.g., Google Drive, Dropbox)",
+                    "VPN access",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the video conferencing tools provided for telecommuting?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 includes 'Video conferencing software (e.g., Zoom, Microsoft Teams)'",
+            "client_notes": "Use a standard 5-point Likert scale for consistency and ease of analysis.",
+            "scripter_notes": "Field type: Radio button (Single-choice), Ensure question is only shown if the respondent selected the corresponding option in Q1.",
+            "script": {
+                "question_text": "How satisfied are you with the video conferencing tools provided for telecommuting?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 includes 'Video conferencing software (e.g., Zoom, Microsoft Teams)'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges do you face with the telecommuting technology tools?",
+            "answer_options": [],
+            "routing_logic": "All participants",
+            "client_notes": "Open-ended question to gather qualitative insights. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: Open text, No answer options required.",
+            "script": {
+                "question_text": "What challenges do you face with the telecommuting technology tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you experience technical issues with your telecommuting tools?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Use a frequency scale to quantify the occurrence of technical issues.",
+            "scripter_notes": "Field type: Radio button (Single-choice), Ensure all options are mutually exclusive.",
+            "script": {
+                "question_text": "How often do you experience technical issues with your telecommuting tools?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional technology tools would improve your telecommuting experience?",
+            "answer_options": [],
+            "routing_logic": "All participants",
+            "client_notes": "Open-ended question to gather suggestions for improvement. Encourage respondents to be specific.",
+            "scripter_notes": "Field type: Open text, No answer options required.",
+            "script": {
+                "question_text": "What additional technology tools would improve your telecommuting experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All participants"
+            }
+        }
+    ]
+}

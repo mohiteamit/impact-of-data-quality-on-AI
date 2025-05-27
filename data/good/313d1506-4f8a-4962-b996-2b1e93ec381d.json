@@ -1,0 +1,115 @@
+{
+    "survey_id": "313d1506-4f8a-4962-b996-2b1e93ec381d",
+    "survey_name": "Parental Satisfaction with Online Learning Platforms Survey",
+    "survey_brief": "This survey aims to gather feedback from parents about their satisfaction and experiences with online learning platforms used by their children, focusing on usability, effectiveness, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often does your child use an online learning platform for educational purposes?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for this question. Ensure the options cover all possible frequencies of use.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often does your child use an online learning platform for educational purposes?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following online learning platforms does your child use? (Select all that apply)",
+            "answer_options": [
+                "Khan Academy",
+                "ABCmouse",
+                "Outschool",
+                "Prodigy Math",
+                "Duolingo",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1.",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with an open text field for additional platforms not listed.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an 'Other' option with a text input field for specification.",
+            "script": {
+                "question_text": "Which of the following online learning platforms does your child use? (Select all that apply)",
+                "answer_options": [
+                    "Khan Academy",
+                    "ABCmouse",
+                    "Outschool",
+                    "Prodigy Math",
+                    "Duolingo",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall effectiveness of the online learning platform(s) your child uses?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1.",
+            "client_notes": "Use a single-choice radio button with a 5-point Likert scale for measuring satisfaction.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the overall effectiveness of the online learning platform(s) your child uses?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the online learning platform(s) your child uses?",
+            "answer_options": [],
+            "routing_logic": "This question appears for respondents who selected 'Somewhat dissatisfied' or 'Very dissatisfied' in Q3.",
+            "client_notes": "Use an open-text field to gather detailed feedback. Ensure the input box is large enough for comprehensive responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for the online learning platform(s) your child uses?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for respondents who selected 'Somewhat dissatisfied' or 'Very dissatisfied' in Q3."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features do you value the most in an online learning platform?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents who did not select 'Never' in Q1.",
+            "client_notes": "Use an open-text field to allow parents to describe the features they find most valuable. This helps identify key selling points for platform developers.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What features do you value the most in an online learning platform?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents who did not select 'Never' in Q1."
+            }
+        }
+    ]
+}

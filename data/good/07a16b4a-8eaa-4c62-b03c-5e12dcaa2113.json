@@ -1,0 +1,125 @@
+{
+    "survey_id": "07a16b4a-8eaa-4c62-b03c-5e12dcaa2113",
+    "survey_name": "Augmented Reality (AR) Retail Shopping Experience Survey",
+    "survey_brief": "This survey aims to gather consumer feedback on the use of augmented reality (AR) technology in retail shopping experiences, including preferences, satisfaction levels, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with augmented reality (AR) technology in retail shopping?",
+            "answer_options": [
+                "Very familiar - I use it regularly",
+                "Somewhat familiar - I have tried it before",
+                "Not very familiar - I know about it but haven't used it",
+                "Not at all familiar - I have never heard of it until now"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button format for clarity. This question helps segment respondents based on their familiarity with AR.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How familiar are you with augmented reality (AR) technology in retail shopping?",
+                "answer_options": [
+                    "Very familiar - I use it regularly",
+                    "Somewhat familiar - I have tried it before",
+                    "Not very familiar - I know about it but haven't used it",
+                    "Not at all familiar - I have never heard of it until now"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AR retail experiences have you used? (Select all that apply)",
+            "answer_options": [
+                "Virtual try-on for clothing/apparel",
+                "AR product visualization (e.g., furniture in your home)",
+                "Interactive in-store AR navigation",
+                "AR-powered loyalty/rewards programs",
+                "None of the above"
+            ],
+            "routing_logic": "Respondents who selected 'Very familiar' or 'Somewhat familiar' in Q1",
+            "client_notes": "Use a multi-choice checkbox format. 'None of the above' should deselect other options if chosen.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes)",
+            "script": {
+                "question_text": "Which of the following AR retail experiences have you used? (Select all that apply)",
+                "answer_options": [
+                    "Virtual try-on for clothing/apparel",
+                    "AR product visualization (e.g., furniture in your home)",
+                    "Interactive in-store AR navigation",
+                    "AR-powered loyalty/rewards programs",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Very familiar' or 'Somewhat familiar' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with AR retail experiences you've used?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (haven't used AR retail experiences)"
+            ],
+            "routing_logic": "Respondents who selected at least one AR experience in Q2",
+            "client_notes": "Use a 5-point Likert scale with an opt-out option for those who haven't used AR.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with AR retail experiences you've used?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (haven't used AR retail experiences)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one AR experience in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for AR retail experiences?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: Open text (text area with character limit)",
+            "script": {
+                "question_text": "What improvements would you suggest for AR retail experiences?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to use AR technology for future retail purchases?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to gauge future adoption intent. Include a neutral option.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to use AR technology for future retail purchases?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

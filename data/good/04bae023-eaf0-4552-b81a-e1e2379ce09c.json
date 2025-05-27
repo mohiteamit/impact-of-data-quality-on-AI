@@ -1,0 +1,159 @@
+{
+    "survey_id": "04bae023-eaf0-4552-b81a-e1e2379ce09c",
+    "survey_name": "Consumer Preferences for Smart Wearable Fitness Devices Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, usage patterns, and satisfaction levels regarding smart wearable fitness devices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart wearable fitness devices do you currently own or use? (Select all that apply)",
+            "answer_options": [
+                "Smartwatch (e.g., Apple Watch, Samsung Galaxy Watch)",
+                "Fitness Tracker (e.g., Fitbit, Garmin)",
+                "Smart Ring (e.g., Oura Ring)",
+                "Smart Clothing (e.g., Under Armour Athlete Recovery)",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multiple selections. Ensure the options cover popular brands and categories.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "Which of the following smart wearable fitness devices do you currently own or use? (Select all that apply)",
+                "answer_options": [
+                    "Smartwatch (e.g., Apple Watch, Samsung Galaxy Watch)",
+                    "Fitness Tracker (e.g., Fitbit, Garmin)",
+                    "Smart Ring (e.g., Oura Ring)",
+                    "Smart Clothing (e.g., Under Armour Athlete Recovery)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you use your smart wearable fitness device?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Less than once a week",
+                "Rarely or never"
+            ],
+            "routing_logic": "Respondents who selected any device in Q1",
+            "client_notes": "Use radio buttons for single selection. Consider adding a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How often do you use your smart wearable fitness device?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Less than once a week",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any device in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features are most important to you in a smart wearable fitness device? (Select up to 3)",
+            "answer_options": [
+                "Heart rate monitoring",
+                "Step counting",
+                "Sleep tracking",
+                "GPS tracking",
+                "Calorie tracking",
+                "Water resistance",
+                "Battery life",
+                "Notifications (e.g., calls, messages)",
+                "Compatibility with other apps (e.g., Strava, MyFitnessPal)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes with a limit of 3 selections. Randomize the order of options to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max selections = 3",
+            "script": {
+                "question_text": "What features are most important to you in a smart wearable fitness device? (Select up to 3)",
+                "answer_options": [
+                    "Heart rate monitoring",
+                    "Step counting",
+                    "Sleep tracking",
+                    "GPS tracking",
+                    "Calorie tracking",
+                    "Water resistance",
+                    "Battery life",
+                    "Notifications (e.g., calls, messages)",
+                    "Compatibility with other apps (e.g., Strava, MyFitnessPal)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you use a smart wearable fitness device?",
+            "answer_options": [
+                "To track fitness goals",
+                "To monitor health metrics",
+                "To stay motivated",
+                "To receive notifications",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected any device in Q1",
+            "client_notes": "Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an open-text follow-up if 'Other' is selected",
+            "script": {
+                "question_text": "What is the primary reason you use a smart wearable fitness device?",
+                "answer_options": [
+                    "To track fitness goals",
+                    "To monitor health metrics",
+                    "To stay motivated",
+                    "To receive notifications",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any device in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with your current smart wearable fitness device?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected any device in Q1",
+            "client_notes": "Use a 5-point Likert scale. Consider adding an 'N/A' option if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with your current smart wearable fitness device?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any device in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would you like to see in future smart wearable fitness devices?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow for open-ended responses to gather qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you like to see in future smart wearable fitness devices?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

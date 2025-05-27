@@ -1,0 +1,127 @@
+{
+    "survey_id": "1f1ea433-ea4b-46a3-8e2e-9e9f0643cb0a",
+    "survey_name": "Consumer Preferences for Augmented Reality in Retail Experiences Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and experiences with augmented reality (AR) in retail settings, including online and in-store applications.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you ever used augmented reality (AR) features while shopping online or in-store?",
+            "answer_options": [
+                "Yes, online shopping",
+                "Yes, in-store shopping",
+                "Yes, both online and in-store",
+                "No, never used AR for shopping"
+            ],
+            "routing_logic": "If 'No, never used AR for shopping' is selected, skip to Q4.",
+            "client_notes": "Use a single-choice radio button for this question to ensure respondents select only one option.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Have you ever used augmented reality (AR) features while shopping online or in-store?",
+                "answer_options": [
+                    "Yes, online shopping",
+                    "Yes, in-store shopping",
+                    "Yes, both online and in-store",
+                    "No, never used AR for shopping"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'No, never used AR for shopping' is selected, skip to Q4."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of products have you used AR for when shopping? (Select all that apply)",
+            "answer_options": [
+                "Clothing and apparel",
+                "Furniture and home decor",
+                "Electronics",
+                "Beauty and cosmetics",
+                "Jewelry and accessories",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 is not 'No, never used AR for shopping'.",
+            "client_notes": "Allow multiple selections with checkboxes (MULTI_CHOICE). Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which types of products have you used AR for when shopping? (Select all that apply)",
+                "answer_options": [
+                    "Clothing and apparel",
+                    "Furniture and home decor",
+                    "Electronics",
+                    "Beauty and cosmetics",
+                    "Jewelry and accessories",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if Q1 is not 'No, never used AR for shopping'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your experience using AR for shopping?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only appears if Q1 is not 'No, never used AR for shopping'.",
+            "client_notes": "Use a Likert scale with single-choice radio buttons.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with your experience using AR for shopping?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 is not 'No, never used AR for shopping'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors would encourage you to use AR for shopping in the future?",
+            "answer_options": [
+                "Better accuracy of AR representations",
+                "More product categories available",
+                "Easier-to-use interfaces",
+                "Faster loading times",
+                "Integration with more retailers",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Allow multiple selections with checkboxes (MULTI_CHOICE). Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "What factors would encourage you to use AR for shopping in the future?",
+                "answer_options": [
+                    "Better accuracy of AR representations",
+                    "More product categories available",
+                    "Easier-to-use interfaces",
+                    "Faster loading times",
+                    "Integration with more retailers",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please share any additional comments or suggestions about your experience with AR in retail.",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use an open-text field to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "Please share any additional comments or suggestions about your experience with AR in retail.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

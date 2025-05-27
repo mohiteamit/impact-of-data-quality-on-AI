@@ -1,0 +1,127 @@
+{
+    "survey_id": "72d01031-565a-4d50-9b5a-74841c30cff8",
+    "survey_name": "Public Library Digital Resource Usage Survey",
+    "survey_brief": "This survey aims to understand how patrons use digital resources offered by public libraries to improve services and accessibility.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you access digital resources (e-books, audiobooks, databases, etc.) provided by your local public library?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale for clarity. Ensure mobile-friendly dropdown if implemented.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you access digital resources (e-books, audiobooks, databases, etc.) provided by your local public library?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of digital library resources do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "E-books",
+                "Audiobooks",
+                "Online databases (e.g., research, genealogy)",
+                "Digital magazines/newspapers",
+                "Streaming movies/music",
+                "Educational courses/tutorials",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question. Include an 'Other' option with text field for specificity.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Add optional text input for 'Other'.",
+            "script": {
+                "question_text": "Which types of digital library resources do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "E-books",
+                    "Audiobooks",
+                    "Online databases (e.g., research, genealogy)",
+                    "Digital magazines/newspapers",
+                    "Streaming movies/music",
+                    "Educational courses/tutorials",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges, if any, do you face when using the library's digital resources?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Limit to 250 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT) with character limit.",
+            "script": {
+                "question_text": "What challenges, if any, do you face when using the library's digital resources?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the variety of digital resources available through your library?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "5-point Likert scale for granular feedback. Hide if Q1 = 'Never'.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Skip logic: show only if Q1 ≠ 'Never'.",
+            "script": {
+                "question_text": "How satisfied are you with the variety of digital resources available through your library?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be interested in training sessions to better utilize the library's digital resources?",
+            "answer_options": [
+                "Yes, in-person",
+                "Yes, online",
+                "No, I’m comfortable with current resources",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice with practical options for program planning.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you be interested in training sessions to better utilize the library's digital resources?",
+                "answer_options": [
+                    "Yes, in-person",
+                    "Yes, online",
+                    "No, I’m comfortable with current resources",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

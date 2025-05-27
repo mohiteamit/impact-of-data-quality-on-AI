@@ -1,0 +1,133 @@
+{
+    "survey_id": "bff54bd5-a3de-4a34-b68f-f64a477b316d",
+    "survey_name": "Consumer Preferences for Home Energy Efficiency Practices Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, behaviors, and barriers related to home energy efficiency practices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How important is energy efficiency to you when making decisions about your home?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale to measure importance levels clearly.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How important is energy efficiency to you when making decisions about your home?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following energy efficiency practices have you implemented in your home? (Select all that apply)",
+            "answer_options": [
+                "LED lighting",
+                "Smart thermostats",
+                "Energy-efficient appliances",
+                "Solar panels",
+                "Improved insulation",
+                "Double-pane windows",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture diverse practices.",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "Which of the following energy efficiency practices have you implemented in your home? (Select all that apply)",
+                "answer_options": [
+                    "LED lighting",
+                    "Smart thermostats",
+                    "Energy-efficient appliances",
+                    "Solar panels",
+                    "Improved insulation",
+                    "Double-pane windows",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you have not implemented more energy efficiency practices in your home?",
+            "answer_options": [
+                "High upfront costs",
+                "Lack of information/knowledge",
+                "Renting/lack of ownership",
+                "Perceived inconvenience",
+                "No interest",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q2 includes 'None of the above' or fewer than 2 options selected",
+            "client_notes": "Include an 'Other' option with a text field for detailed responses.",
+            "scripter_notes": "Field type: radio button with optional open text (single-choice with other)",
+            "script": {
+                "question_text": "What is the primary reason you have not implemented more energy efficiency practices in your home?",
+                "answer_options": [
+                    "High upfront costs",
+                    "Lack of information/knowledge",
+                    "Renting/lack of ownership",
+                    "Perceived inconvenience",
+                    "No interest",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q2 includes 'None of the above' or fewer than 2 options selected"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What incentives would most encourage you to adopt more energy efficiency practices in your home?",
+            "answer_options": [
+                "Government rebates/tax credits",
+                "Lower utility bills",
+                "Increased home value",
+                "Environmental benefits",
+                "Ease of installation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections if needed, but clarify instructions.",
+            "scripter_notes": "Field type: checkbox with optional open text (multi-choice with other)",
+            "script": {
+                "question_text": "What incentives would most encourage you to adopt more energy efficiency practices in your home?",
+                "answer_options": [
+                    "Government rebates/tax credits",
+                    "Lower utility bills",
+                    "Increased home value",
+                    "Environmental benefits",
+                    "Ease of installation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any challenges you have faced when trying to improve your home's energy efficiency.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture nuanced responses; limit to 250 characters.",
+            "scripter_notes": "Field type: open text",
+            "script": {
+                "question_text": "Please describe any challenges you have faced when trying to improve your home's energy efficiency.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

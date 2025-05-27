@@ -1,0 +1,145 @@
+{
+    "survey_id": "d47ebe68-88d4-42a2-b56b-47006bbbb3fa",
+    "survey_name": "Corporate Sustainability Initiatives Perception Survey",
+    "survey_brief": "This survey aims to gather employee perceptions and feedback on corporate sustainability initiatives, including awareness, participation, and perceived impact.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with your company's sustainability initiatives?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not familiar at all"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a Likert scale for familiarity assessment. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio buttons (single-choice).",
+            "script": {
+                "question_text": "How familiar are you with your company's sustainability initiatives?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainability initiatives are you aware of in your company? (Select all that apply)",
+            "answer_options": [
+                "Recycling programs",
+                "Energy-efficient office upgrades",
+                "Carbon offset programs",
+                "Sustainable procurement policies",
+                "Employee sustainability training",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Allow multiple selections. Include an option for 'None of the above' to capture lack of awareness.",
+            "scripter_notes": "Field type: checkboxes (multi-choice).",
+            "script": {
+                "question_text": "Which of the following sustainability initiatives are you aware of in your company? (Select all that apply)",
+                "answer_options": [
+                    "Recycling programs",
+                    "Energy-efficient office upgrades",
+                    "Carbon offset programs",
+                    "Sustainable procurement policies",
+                    "Employee sustainability training",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate your company's efforts in promoting sustainability?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a balanced 5-point scale for rating. Ensure neutral midpoint.",
+            "scripter_notes": "Field type: radio buttons (single-choice).",
+            "script": {
+                "question_text": "How would you rate your company's efforts in promoting sustainability?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What suggestions do you have to improve your company's sustainability initiatives?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: text box (open-ended).",
+            "script": {
+                "question_text": "What suggestions do you have to improve your company's sustainability initiatives?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you personally participated in any of the company's sustainability initiatives?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Binary question to gauge participation. Follow up with Q6 if 'Yes' is selected.",
+            "scripter_notes": "Field type: radio buttons (single-choice).",
+            "script": {
+                "question_text": "Have you personally participated in any of the company's sustainability initiatives?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which sustainability initiatives have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Recycling programs",
+                "Energy-saving challenges",
+                "Sustainable commuting programs",
+                "Volunteer environmental activities",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q5 is 'Yes'",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with text field for specificity.",
+            "scripter_notes": "Field type: checkboxes (multi-choice) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which sustainability initiatives have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Recycling programs",
+                    "Energy-saving challenges",
+                    "Sustainable commuting programs",
+                    "Volunteer environmental activities",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q5 is 'Yes'"
+            }
+        }
+    ]
+}

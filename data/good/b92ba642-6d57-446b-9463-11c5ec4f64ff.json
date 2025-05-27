@@ -1,0 +1,125 @@
+{
+    "survey_id": "b92ba642-6d57-446b-9463-11c5ec4f64ff",
+    "survey_name": "Consumer Preferences for Contactless Payment Methods Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding contactless payment methods, including adoption rates, perceived benefits, and concerns.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use contactless payment methods (e.g., mobile wallets, contactless cards)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice format for clarity. Ensure the options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use contactless payment methods (e.g., mobile wallets, contactless cards)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following contactless payment methods have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Mobile wallet (e.g., Apple Pay, Google Pay)",
+                "Contactless credit/debit card",
+                "QR code payments (e.g., Venmo, PayPal)",
+                "Wearable devices (e.g., smartwatch payments)",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a multi-choice format to allow multiple selections. This helps identify popular methods.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following contactless payment methods have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Mobile wallet (e.g., Apple Pay, Google Pay)",
+                    "Contactless credit/debit card",
+                    "QR code payments (e.g., Venmo, PayPal)",
+                    "Wearable devices (e.g., smartwatch payments)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you prefer contactless payments over traditional payment methods?",
+            "answer_options": [
+                "Faster checkout",
+                "Hygiene/safety concerns",
+                "Convenience",
+                "Rewards or discounts",
+                "Other"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Single-choice format. Include an 'Other' option to capture unique responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What is the primary reason you prefer contactless payments over traditional payment methods?",
+                "answer_options": [
+                    "Faster checkout",
+                    "Hygiene/safety concerns",
+                    "Convenience",
+                    "Rewards or discounts",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about using contactless payment methods?",
+            "answer_options": [
+                "Security/fraud risk",
+                "Limited merchant acceptance",
+                "Technical issues (e.g., device compatibility)",
+                "Lack of awareness on how to use",
+                "No concerns"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Multi-choice format to allow multiple concerns to be selected.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using contactless payment methods?",
+                "answer_options": [
+                    "Security/fraud risk",
+                    "Limited merchant acceptance",
+                    "Technical issues (e.g., device compatibility)",
+                    "Lack of awareness on how to use",
+                    "No concerns"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please share any additional comments or suggestions regarding contactless payment methods.",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended format to capture qualitative feedback. Keep the field mobile-friendly.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT)",
+            "script": {
+                "question_text": "Please share any additional comments or suggestions regarding contactless payment methods.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

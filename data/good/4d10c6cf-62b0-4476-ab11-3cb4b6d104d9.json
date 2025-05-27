@@ -1,0 +1,129 @@
+{
+    "survey_id": "4d10c6cf-62b0-4476-ab11-3cb4b6d104d9",
+    "survey_name": "Consumer Preferences for Plant-Based Dairy Alternatives Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and attitudes towards plant-based dairy alternatives, including purchasing habits, taste preferences, and barriers to adoption.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you consume plant-based dairy alternatives (e.g., almond milk, soy yogurt)?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover the full range of consumption frequencies.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you consume plant-based dairy alternatives (e.g., almond milk, soy yogurt)?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for consuming plant-based dairy alternatives? (Select all that apply)",
+            "answer_options": [
+                "Health benefits",
+                "Environmental concerns",
+                "Animal welfare",
+                "Lactose intolerance or dairy allergies",
+                "Taste preferences",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Rarely or never'",
+            "client_notes": "Use multi-choice checkboxes. Include an 'Other' option with a text field for additional reasons.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are your primary reasons for consuming plant-based dairy alternatives? (Select all that apply)",
+                "answer_options": [
+                    "Health benefits",
+                    "Environmental concerns",
+                    "Animal welfare",
+                    "Lactose intolerance or dairy allergies",
+                    "Taste preferences",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Rarely or never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers prevent you from consuming more plant-based dairy alternatives?",
+            "answer_options": [
+                "Higher cost compared to dairy products",
+                "Limited availability in stores",
+                "Taste preferences",
+                "Lack of familiarity with products",
+                "Nutritional concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use multi-choice checkboxes. Include an 'Other' option with a text field for additional barriers.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What barriers prevent you from consuming more plant-based dairy alternatives?",
+                "answer_options": [
+                    "Higher cost compared to dairy products",
+                    "Limited availability in stores",
+                    "Taste preferences",
+                    "Lack of familiarity with products",
+                    "Nutritional concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the taste of plant-based dairy alternatives compared to traditional dairy products?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Rarely or never'",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the taste of plant-based dairy alternatives compared to traditional dairy products?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Rarely or never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to consume more plant-based dairy alternatives?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use an open-ended text box to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with character limit).",
+            "script": {
+                "question_text": "What improvements would encourage you to consume more plant-based dairy alternatives?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

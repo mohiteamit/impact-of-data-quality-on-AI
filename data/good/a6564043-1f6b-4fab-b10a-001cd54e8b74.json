@@ -1,0 +1,125 @@
+{
+    "survey_id": "a6564043-1f6b-4fab-b10a-001cd54e8b74",
+    "survey_name": "Workplace Mental Health Support Survey",
+    "survey_brief": "This survey aims to assess employees' perceptions of mental health support and resources provided by their employer, as well as identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the mental health support and resources provided by your employer?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure mobile-friendly layout for ease of response.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the mental health support and resources provided by your employer?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following mental health resources have you utilized in the past 12 months? (Select all that apply)",
+            "answer_options": [
+                "Employee Assistance Program (EAP)",
+                "Counseling services",
+                "Mental health workshops",
+                "Stress management programs",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Select all applicable responses. Include a clear 'None of the above' option.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following mental health resources have you utilized in the past 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Employee Assistance Program (EAP)",
+                    "Counseling services",
+                    "Mental health workshops",
+                    "Stress management programs",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How comfortable do you feel discussing mental health concerns with your immediate supervisor?",
+            "answer_options": [
+                "Very comfortable",
+                "Somewhat comfortable",
+                "Neutral",
+                "Somewhat uncomfortable",
+                "Very uncomfortable"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point Likert scale recommended. Ensure anonymity for honest responses.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How comfortable do you feel discussing mental health concerns with your immediate supervisor?",
+                "answer_options": [
+                    "Very comfortable",
+                    "Somewhat comfortable",
+                    "Neutral",
+                    "Somewhat uncomfortable",
+                    "Very uncomfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional mental health support or resources would you like to see offered by your employer?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Provide sufficient space for detailed responses.",
+            "scripter_notes": "Field type: open text (text box).",
+            "script": {
+                "question_text": "What additional mental health support or resources would you like to see offered by your employer?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Has your employer's mental health support positively impacted your work performance or overall well-being?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No impact",
+                "No, made it somewhat worse",
+                "No, made it significantly worse"
+            ],
+            "routing_logic": "Respondents who selected any option other than 'None of the above' in Q2",
+            "client_notes": "Conditional question based on Q2 responses. Use a 5-point scale for nuanced feedback.",
+            "scripter_notes": "Field type: radio button (single-choice). Apply skip logic based on Q2 responses.",
+            "script": {
+                "question_text": "Has your employer's mental health support positively impacted your work performance or overall well-being?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No impact",
+                    "No, made it somewhat worse",
+                    "No, made it significantly worse"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any option other than 'None of the above' in Q2"
+            }
+        }
+    ]
+}

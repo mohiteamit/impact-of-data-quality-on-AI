@@ -1,0 +1,153 @@
+{
+    "survey_id": "9e500c2d-e47b-44e3-83c8-a75c08ca07d2",
+    "survey_name": "Consumer Preferences for Smart Home Health Monitoring Devices Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and attitudes towards smart home health monitoring devices, including usage patterns, perceived benefits, and barriers to adoption.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Are you currently using any smart home health monitoring devices (e.g., blood pressure monitors, glucose meters, sleep trackers)?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a clear and concise question to gauge current usage. Avoid jargon to ensure all respondents understand the question.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "Are you currently using any smart home health monitoring devices (e.g., blood pressure monitors, glucose meters, sleep trackers)?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of smart home health monitoring devices do you use? (Select all that apply)",
+            "answer_options": [
+                "Blood pressure monitors",
+                "Glucose meters",
+                "Sleep trackers",
+                "Weight scales",
+                "ECG monitors",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 is 'Yes'",
+            "client_notes": "Include an 'Other' option to capture any devices not listed. Ensure the options cover common health monitoring devices.",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "What types of smart home health monitoring devices do you use? (Select all that apply)",
+                "answer_options": [
+                    "Blood pressure monitors",
+                    "Glucose meters",
+                    "Sleep trackers",
+                    "Weight scales",
+                    "ECG monitors",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What benefits do you perceive from using smart home health monitoring devices? (Select all that apply)",
+            "answer_options": [
+                "Convenience",
+                "Better health tracking",
+                "Early detection of health issues",
+                "Integration with other smart home devices",
+                "Peace of mind",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 is 'Yes'",
+            "client_notes": "List common benefits but leave room for respondents to add their own. Ensure the options are clear and relatable.",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "What benefits do you perceive from using smart home health monitoring devices? (Select all that apply)",
+                "answer_options": [
+                    "Convenience",
+                    "Better health tracking",
+                    "Early detection of health issues",
+                    "Integration with other smart home devices",
+                    "Peace of mind",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What are the main barriers preventing you from using smart home health monitoring devices? (Select all that apply)",
+            "answer_options": [
+                "High cost",
+                "Privacy concerns",
+                "Lack of perceived need",
+                "Complexity of setup",
+                "Limited device compatibility",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 is 'No' or 'Not sure'",
+            "client_notes": "Include common barriers to adoption. The 'Other' option helps capture unique concerns.",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "What are the main barriers preventing you from using smart home health monitoring devices? (Select all that apply)",
+                "answer_options": [
+                    "High cost",
+                    "Privacy concerns",
+                    "Lack of perceived need",
+                    "Complexity of setup",
+                    "Limited device compatibility",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if Q1 is 'No' or 'Not sure'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How important is data privacy when choosing a smart health monitoring device?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a Likert scale to measure the importance of privacy. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How important is data privacy when choosing a smart health monitoring device?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What features would encourage you to adopt or continue using smart home health monitoring devices?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to gather qualitative insights. Keep it broad to capture a wide range of responses.",
+            "scripter_notes": "Field type: open text",
+            "script": {
+                "question_text": "What features would encourage you to adopt or continue using smart home health monitoring devices?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

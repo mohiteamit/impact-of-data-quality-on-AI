@@ -1,0 +1,117 @@
+{
+    "survey_id": "d74d66ed-daa4-42c9-8253-a8ecb0a80a8f",
+    "survey_name": "Home Energy Efficiency and Smart Thermostat Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding home energy efficiency practices and the adoption of smart thermostat technology.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How important is energy efficiency to you when managing your home?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure mobile-friendly layout for buttons.",
+            "scripter_notes": "Single-choice radio buttons. Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "How important is energy efficiency to you when managing your home?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following energy-saving practices do you currently use in your home? (Select all that apply)",
+            "answer_options": [
+                "LED lighting",
+                "Smart thermostat",
+                "Energy-efficient appliances",
+                "Solar panels",
+                "Proper insulation",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multi-select. Include 'None of the above' to capture non-adopters.",
+            "scripter_notes": "Multi-choice checkboxes. Ensure responsive design for mobile users.",
+            "script": {
+                "question_text": "Which of the following energy-saving practices do you currently use in your home? (Select all that apply)",
+                "answer_options": [
+                    "LED lighting",
+                    "Smart thermostat",
+                    "Energy-efficient appliances",
+                    "Solar panels",
+                    "Proper insulation",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "If you own a smart thermostat, what brand/model do you use?",
+            "answer_options": [],
+            "routing_logic": "If Q2 includes 'Smart thermostat'",
+            "client_notes": "Open-ended to capture specific brands. Include character limit (100 chars).",
+            "scripter_notes": "Open-text field with input validation for length.",
+            "script": {
+                "question_text": "If you own a smart thermostat, what brand/model do you use?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q2 includes 'Smart thermostat'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors would encourage you to adopt a smart thermostat in the future?",
+            "answer_options": [
+                "Cost savings on energy bills",
+                "Government rebates or incentives",
+                "Ease of installation",
+                "Remote control via smartphone",
+                "Integration with other smart home devices",
+                "Environmental benefits"
+            ],
+            "routing_logic": "If Q2 does NOT include 'Smart thermostat'",
+            "client_notes": "Multi-choice but allow 'Other' with open-text option.",
+            "scripter_notes": "Checkboxes with an 'Other' field that triggers text input.",
+            "script": {
+                "question_text": "What factors would encourage you to adopt a smart thermostat in the future?",
+                "answer_options": [
+                    "Cost savings on energy bills",
+                    "Government rebates or incentives",
+                    "Ease of installation",
+                    "Remote control via smartphone",
+                    "Integration with other smart home devices",
+                    "Environmental benefits"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q2 does NOT include 'Smart thermostat'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What is your biggest concern about using smart thermostats?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative insights. Use optional field.",
+            "scripter_notes": "Text area with 300-character limit.",
+            "script": {
+                "question_text": "What is your biggest concern about using smart thermostats?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

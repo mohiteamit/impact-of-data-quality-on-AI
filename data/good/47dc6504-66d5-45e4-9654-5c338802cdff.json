@@ -1,0 +1,113 @@
+{
+    "survey_id": "47dc6504-66d5-45e4-9654-5c338802cdff",
+    "survey_name": "Consumer Preferences for Smart Home Lighting Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding smart home lighting systems, including adoption drivers, feature preferences, and barriers to purchase.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own any smart home lighting systems?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I plan to purchase one in the next 6 months"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use a single-choice radio button for simplicity. Ensure the options are mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Do you currently own any smart home lighting systems?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I plan to purchase one in the next 6 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following smart lighting features are most important to you? (Select up to 3)",
+            "answer_options": [
+                "Voice control (e.g., Alexa, Google Assistant)",
+                "Color-changing capabilities",
+                "Scheduling/timer functionality",
+                "Energy-saving modes",
+                "Integration with other smart home devices",
+                "Remote control via smartphone app",
+                "Motion-sensing activation"
+            ],
+            "routing_logic": "Shown only if Q1 answer is 'Yes' or 'I plan to purchase one in the next 6 months'.",
+            "client_notes": "Use a multi-choice checkbox format. Randomize the order of options to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes).",
+            "script": {
+                "question_text": "Which of the following smart lighting features are most important to you? (Select up to 3)",
+                "answer_options": [
+                    "Voice control (e.g., Alexa, Google Assistant)",
+                    "Color-changing capabilities",
+                    "Scheduling/timer functionality",
+                    "Energy-saving modes",
+                    "Integration with other smart home devices",
+                    "Remote control via smartphone app",
+                    "Motion-sensing activation"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown only if Q1 answer is 'Yes' or 'I plan to purchase one in the next 6 months'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors would motivate you to purchase a smart home lighting system?",
+            "answer_options": [],
+            "routing_logic": "Shown only if Q1 answer is 'No'.",
+            "client_notes": "Use an open-text field to capture qualitative insights. Ensure the input box is mobile-friendly.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What factors would motivate you to purchase a smart home lighting system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown only if Q1 answer is 'No'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current smart home lighting system?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Shown only if Q1 answer is 'Yes'.",
+            "client_notes": "Use a 5-point Likert scale with balanced positive/negative options. Randomize scale direction for a subset of respondents.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home lighting system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown only if Q1 answer is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What is the biggest challenge or concern you have regarding smart home lighting systems?",
+            "answer_options": [],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Open-ended question to identify pain points. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with character limit).",
+            "script": {
+                "question_text": "What is the biggest challenge or concern you have regarding smart home lighting systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        }
+    ]
+}

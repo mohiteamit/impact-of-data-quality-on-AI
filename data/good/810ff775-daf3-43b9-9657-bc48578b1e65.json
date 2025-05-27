@@ -1,0 +1,137 @@
+{
+    "survey_id": "810ff775-daf3-43b9-9657-bc48578b1e65",
+    "survey_name": "Consumer Preferences for Electric Vehicle Charging Stations Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, behaviors, and barriers related to electric vehicle (EV) charging stations to help improve infrastructure and services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use public EV charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for ease of response. Ensure the options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use public EV charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What type of EV charging station do you most frequently use?",
+            "answer_options": [
+                "Level 1 (120V)",
+                "Level 2 (240V)",
+                "DC Fast Charging",
+                "Not sure"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1",
+            "client_notes": "Include an option for users who may not know the technical differences between charging levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Apply skip logic based on Q1 responses.",
+            "script": {
+                "question_text": "What type of EV charging station do you most frequently use?",
+                "answer_options": [
+                    "Level 1 (120V)",
+                    "Level 2 (240V)",
+                    "DC Fast Charging",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influence your choice of EV charging station? (Select all that apply)",
+            "answer_options": [
+                "Proximity to my location",
+                "Availability of charging spots",
+                "Speed of charging",
+                "Cost of charging",
+                "Ease of payment",
+                "Amenities nearby (e.g., restaurants, shopping)",
+                "Safety of the location"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1",
+            "client_notes": "Use checkboxes for multiple selections. Ensure options cover key factors influencing user decisions.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Apply skip logic based on Q1 responses.",
+            "script": {
+                "question_text": "What factors influence your choice of EV charging station? (Select all that apply)",
+                "answer_options": [
+                    "Proximity to my location",
+                    "Availability of charging spots",
+                    "Speed of charging",
+                    "Cost of charging",
+                    "Ease of payment",
+                    "Amenities nearby (e.g., restaurants, shopping)",
+                    "Safety of the location"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the biggest challenge you face when using public EV charging stations?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1",
+            "client_notes": "Open-ended question to capture qualitative insights. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT). Apply skip logic based on Q1 responses.",
+            "script": {
+                "question_text": "What is the biggest challenge you face when using public EV charging stations?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay more for faster or more convenient charging options?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Depends on the price difference"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to gauge willingness to pay. Include a neutral option ('Depends').",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you be willing to pay more for faster or more convenient charging options?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Depends on the price difference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional features would improve your experience with EV charging stations? (e.g., real-time availability, mobile app integration, loyalty programs)",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture innovative ideas. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What additional features would improve your experience with EV charging stations? (e.g., real-time availability, mobile app integration, loyalty programs)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

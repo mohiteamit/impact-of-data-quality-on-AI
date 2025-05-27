@@ -1,0 +1,165 @@
+{
+    "survey_id": "81ba5df2-2e76-41ae-8201-35e1c1b2d6ef",
+    "survey_name": "Consumer Preferences for Smart Home Security Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding smart home security systems, including adoption barriers, feature preferences, and brand perceptions.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own or use a smart home security system?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Planning to purchase within the next 6 months"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps segment respondents for further questioning. Ensure answer options are clear and mutually exclusive.",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "Do you currently own or use a smart home security system?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Planning to purchase within the next 6 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influenced your decision to purchase your current smart home security system? (Select all that apply)",
+            "answer_options": [
+                "Brand reputation",
+                "Price",
+                "Ease of installation",
+                "Features offered",
+                "Recommendation from friends/family",
+                "Professional monitoring services",
+                "Integration with other smart home devices",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes' or 'Planning to purchase within the next 6 months'",
+            "client_notes": "Use a multi-choice format to capture multiple influencing factors. Include an 'Other' option for unlisted reasons.",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "What factors influenced your decision to purchase your current smart home security system? (Select all that apply)",
+                "answer_options": [
+                    "Brand reputation",
+                    "Price",
+                    "Ease of installation",
+                    "Features offered",
+                    "Recommendation from friends/family",
+                    "Professional monitoring services",
+                    "Integration with other smart home devices",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes' or 'Planning to purchase within the next 6 months'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following features are most important to you in a smart home security system? (Rank top 3)",
+            "answer_options": [
+                "24/7 professional monitoring",
+                "Mobile app control",
+                "Video doorbell",
+                "Motion sensors",
+                "Smart locks",
+                "Environmental monitoring (e.g., smoke, CO2)",
+                "Automated alerts",
+                "Local storage for video footage",
+                "Cloud storage for video footage",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes' or 'Planning to purchase within the next 6 months'",
+            "client_notes": "Use a ranking question format to prioritize features. Limit to top 3 choices to simplify analysis.",
+            "scripter_notes": "Field type: ranking (multi-choice with ranking logic)",
+            "script": {
+                "question_text": "Which of the following features are most important to you in a smart home security system? (Rank top 3)",
+                "answer_options": [
+                    "24/7 professional monitoring",
+                    "Mobile app control",
+                    "Video doorbell",
+                    "Motion sensors",
+                    "Smart locks",
+                    "Environmental monitoring (e.g., smoke, CO2)",
+                    "Automated alerts",
+                    "Local storage for video footage",
+                    "Cloud storage for video footage",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes' or 'Planning to purchase within the next 6 months'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you have not purchased a smart home security system?",
+            "answer_options": [
+                "Cost is too high",
+                "Concerns about privacy/data security",
+                "Don't see the need for one",
+                "Too complicated to install/use",
+                "Prefer traditional security systems",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'No'",
+            "client_notes": "This question helps identify barriers to adoption. Include an 'Other' option for unlisted reasons.",
+            "scripter_notes": "Field type: radio button (single choice with 'Other' as open-text follow-up)",
+            "script": {
+                "question_text": "What is the primary reason you have not purchased a smart home security system?",
+                "answer_options": [
+                    "Cost is too high",
+                    "Concerns about privacy/data security",
+                    "Don't see the need for one",
+                    "Too complicated to install/use",
+                    "Prefer traditional security systems",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'No'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How much would you be willing to spend on a smart home security system (including installation and any monthly fees)?",
+            "answer_options": [
+                "Less than $100",
+                "$100 - $299",
+                "$300 - $499",
+                "$500 - $999",
+                "$1,000 or more"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use clear price ranges to gauge budget expectations. Ensure ranges are realistic and non-overlapping.",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "How much would you be willing to spend on a smart home security system (including installation and any monthly fees)?",
+                "answer_options": [
+                    "Less than $100",
+                    "$100 - $299",
+                    "$300 - $499",
+                    "$500 - $999",
+                    "$1,000 or more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional comments or concerns do you have about smart home security systems?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Useful for identifying unanticipated concerns or suggestions.",
+            "scripter_notes": "Field type: open text",
+            "script": {
+                "question_text": "What additional comments or concerns do you have about smart home security systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

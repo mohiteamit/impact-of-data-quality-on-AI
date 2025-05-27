@@ -1,0 +1,125 @@
+{
+    "survey_id": "6d441ed0-0f47-4426-bc48-dacc2ccad08f",
+    "survey_name": "Airline In-Flight Comfort Preferences Survey",
+    "survey_brief": "This survey aims to gather passenger feedback on in-flight comfort features to improve future airline services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the legroom provided in your seating class?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency. Consider benchmarking against industry standards.",
+            "scripter_notes": "Field type: Radio buttons (single-choice)",
+            "script": {
+                "question_text": "How satisfied are you with the legroom provided in your seating class?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following in-flight comfort features are most important to you? (Select all that apply)",
+            "answer_options": [
+                "Adjustable headrest",
+                "Seat recline",
+                "Footrest",
+                "USB/power ports",
+                "Personal entertainment screen",
+                "Blanket/pillow provided"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question. Limit to 6 options for mobile-friendliness.",
+            "scripter_notes": "Field type: Checkboxes (multi-choice)",
+            "script": {
+                "question_text": "Which of the following in-flight comfort features are most important to you? (Select all that apply)",
+                "answer_options": [
+                    "Adjustable headrest",
+                    "Seat recline",
+                    "Footrest",
+                    "USB/power ports",
+                    "Personal entertainment screen",
+                    "Blanket/pillow provided"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for in-flight seating comfort?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q1",
+            "client_notes": "Open-ended to capture qualitative insights. Set character limit to 500.",
+            "scripter_notes": "Field type: Text input (open-ended)",
+            "script": {
+                "question_text": "What improvements would you suggest for in-flight seating comfort?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you use adjustable headrests when available on flights?",
+            "answer_options": [
+                "Always",
+                "Frequently",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents who selected 'Adjustable headrest' in Q2",
+            "client_notes": "5-point frequency scale. Helps prioritize feature upgrades.",
+            "scripter_notes": "Field type: Radio buttons (single-choice)",
+            "script": {
+                "question_text": "How often do you use adjustable headrests when available on flights?",
+                "answer_options": [
+                    "Always",
+                    "Frequently",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected 'Adjustable headrest' in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay extra for premium comfort features?",
+            "answer_options": [
+                "Yes, regularly",
+                "Yes, occasionally",
+                "Only for long-haul flights",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Critical for revenue strategy. Include 'long-haul' option for segmentation.",
+            "scripter_notes": "Field type: Radio buttons (single-choice)",
+            "script": {
+                "question_text": "Would you be willing to pay extra for premium comfort features?",
+                "answer_options": [
+                    "Yes, regularly",
+                    "Yes, occasionally",
+                    "Only for long-haul flights",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

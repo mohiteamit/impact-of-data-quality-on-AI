@@ -1,0 +1,125 @@
+{
+    "survey_id": "6af45a67-9777-4951-9c74-a1e8dadfe9ef",
+    "survey_name": "Consumer Preferences for Smart Home Lighting Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and adoption trends regarding smart home lighting systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own any smart home lighting products?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a simple yes/no question to quickly segment respondents.",
+            "scripter_notes": "Field type: radio button (single choice).",
+            "script": {
+                "question_text": "Do you currently own any smart home lighting products?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current smart home lighting system?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only appears if Q1 is 'Yes'",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (single choice).",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home lighting system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features are most important to you when choosing a smart home lighting system? (Select all that apply)",
+            "answer_options": [
+                "Voice control (e.g., Alexa, Google Assistant)",
+                "Mobile app control",
+                "Energy efficiency",
+                "Customizable lighting scenes",
+                "Integration with other smart home devices",
+                "Ease of installation",
+                "Color-changing capabilities"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture feature priorities.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "What features are most important to you when choosing a smart home lighting system? (Select all that apply)",
+                "answer_options": [
+                    "Voice control (e.g., Alexa, Google Assistant)",
+                    "Mobile app control",
+                    "Energy efficiency",
+                    "Customizable lighting scenes",
+                    "Integration with other smart home devices",
+                    "Ease of installation",
+                    "Color-changing capabilities"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you have not adopted smart home lighting systems yet?",
+            "answer_options": [
+                "Too expensive",
+                "Uncertain about the benefits",
+                "Too complicated to install/use",
+                "Privacy/security concerns",
+                "Prefer traditional lighting",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 is 'No'",
+            "client_notes": "Include an 'Other' option with open text for unique responses.",
+            "scripter_notes": "Field type: radio button with optional open text (single choice).",
+            "script": {
+                "question_text": "What is the primary reason you have not adopted smart home lighting systems yet?",
+                "answer_options": [
+                    "Too expensive",
+                    "Uncertain about the benefits",
+                    "Too complicated to install/use",
+                    "Privacy/security concerns",
+                    "Prefer traditional lighting",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 is 'No'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to adopt or upgrade your smart home lighting system?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would encourage you to adopt or upgrade your smart home lighting system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "survey_id": "f5300519-5843-4c7f-9f72-9e5bd4742919",
+    "survey_name": "Customer Satisfaction with Airport Lounge Services Survey",
+    "survey_brief": "This survey aims to gather feedback from travelers regarding their experience with airport lounge services to identify areas for improvement and enhance customer satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use airport lounge services?",
+            "answer_options": [
+                "Never",
+                "Rarely (1-2 times per year)",
+                "Occasionally (3-5 times per year)",
+                "Frequently (6 or more times per year)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button layout for mobile-friendliness.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use airport lounge services?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (1-2 times per year)",
+                    "Occasionally (3-5 times per year)",
+                    "Frequently (6 or more times per year)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following airport lounge amenities do you value the most? (Select all that apply)",
+            "answer_options": [
+                "Comfortable seating",
+                "Free Wi-Fi",
+                "Food and beverage options",
+                "Quiet work areas",
+                "Shower facilities",
+                "Entertainment (TV, magazines)"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Rarely', 'Occasionally', or 'Frequently' in Q1.",
+            "client_notes": "Use checkboxes for multi-select and ensure options are vertically aligned for readability.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following airport lounge amenities do you value the most? (Select all that apply)",
+                "answer_options": [
+                    "Comfortable seating",
+                    "Free Wi-Fi",
+                    "Food and beverage options",
+                    "Quiet work areas",
+                    "Shower facilities",
+                    "Entertainment (TV, magazines)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Rarely', 'Occasionally', or 'Frequently' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness and maintenance of airport lounges?",
+            "answer_options": [
+                "Very unsatisfied",
+                "Unsatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Rarely', 'Occasionally', or 'Frequently' in Q1.",
+            "client_notes": "Use a 5-point Likert scale with radio buttons for consistent responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and maintenance of airport lounges?",
+                "answer_options": [
+                    "Very unsatisfied",
+                    "Unsatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Rarely', 'Occasionally', or 'Frequently' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for airport lounge services?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use an open-text field with a character limit of 500 to encourage detailed but concise feedback.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for airport lounge services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay for premium lounge services if additional amenities were offered?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe, depending on the amenities"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Rarely', 'Occasionally', or 'Frequently' in Q1.",
+            "client_notes": "Use a single-choice radio button layout with an optional 'Maybe' response to capture nuanced opinions.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you be willing to pay for premium lounge services if additional amenities were offered?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe, depending on the amenities"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Rarely', 'Occasionally', or 'Frequently' in Q1."
+            }
+        }
+    ]
+}

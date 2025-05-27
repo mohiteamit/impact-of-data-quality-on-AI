@@ -1,0 +1,169 @@
+{
+    "survey_id": "ddbda94b-77f7-4df2-b373-d369edb9ddc1",
+    "survey_name": "AI-Powered Recruitment Tools Adoption Survey",
+    "survey_brief": "This survey aims to understand HR professionals' adoption, satisfaction, and challenges with AI-powered recruitment tools.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following AI-powered recruitment tools does your organization currently use? (Select all that apply)",
+            "answer_options": [
+                "Resume screening/shortlisting tools",
+                "Automated interview scheduling",
+                "Chatbot-based candidate engagement",
+                "Skill assessment automation",
+                "Predictive analytics for candidate success",
+                "Bias detection/reduction tools",
+                "None of the above"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use checkboxes for multi-select. Include 'Other' option if needed for comprehensive responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox). Ensure 'None of the above' deselects other options if selected.",
+            "script": {
+                "question_text": "Which of the following AI-powered recruitment tools does your organization currently use? (Select all that apply)",
+                "answer_options": [
+                    "Resume screening/shortlisting tools",
+                    "Automated interview scheduling",
+                    "Chatbot-based candidate engagement",
+                    "Skill assessment automation",
+                    "Predictive analytics for candidate success",
+                    "Bias detection/reduction tools",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary AI recruitment tool?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "Show if Q1 ≠ 'None of the above'",
+            "client_notes": "5-point Likert scale with neutral midpoint. Include N/A for respondents who haven't used tools.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Randomize order except for N/A.",
+            "script": {
+                "question_text": "How satisfied are you with your primary AI recruitment tool?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 ≠ 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the biggest challenges your organization faces when implementing AI recruitment tools? (Select up to 3)",
+            "answer_options": [
+                "Integration with existing HR systems",
+                "Data privacy/security concerns",
+                "Candidate resistance to AI processes",
+                "High implementation costs",
+                "Lack of internal technical expertise",
+                "Difficulty evaluating tool effectiveness",
+                "Regulatory/compliance uncertainties",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Limit to 3 selections. Include open-text 'Other' option with character limit.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max 3 selections. Add open-text field when 'Other' is selected.",
+            "script": {
+                "question_text": "What are the biggest challenges your organization faces when implementing AI recruitment tools? (Select up to 3)",
+                "answer_options": [
+                    "Integration with existing HR systems",
+                    "Data privacy/security concerns",
+                    "Candidate resistance to AI processes",
+                    "High implementation costs",
+                    "Lack of internal technical expertise",
+                    "Difficulty evaluating tool effectiveness",
+                    "Regulatory/compliance uncertainties",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How has AI implementation affected your average time-to-hire metric?",
+            "answer_options": [
+                "Decreased significantly (25%+ reduction)",
+                "Decreased moderately (10-24% reduction)",
+                "Decreased slightly (<10% reduction)",
+                "No measurable change",
+                "Increased (please explain)"
+            ],
+            "routing_logic": "Show if Q1 ≠ 'None of the above'",
+            "client_notes": "Include percentage benchmarks for clarity. Open-text follow-up for 'Increased' response.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with conditional open-text field. Ensure mobile-friendly percentage displays.",
+            "script": {
+                "question_text": "How has AI implementation affected your average time-to-hire metric?",
+                "answer_options": [
+                    "Decreased significantly (25%+ reduction)",
+                    "Decreased moderately (10-24% reduction)",
+                    "Decreased slightly (<10% reduction)",
+                    "No measurable change",
+                    "Increased (please explain)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 ≠ 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What factors were most important in your selection of an AI recruitment tool? (Rank top 3)",
+            "answer_options": [
+                "Cost-effectiveness",
+                "Ease of integration",
+                "Vendor reputation",
+                "Customization options",
+                "Data security certifications",
+                "Candidate experience features",
+                "Reporting/analytics capabilities",
+                "Diversity/inclusion features"
+            ],
+            "routing_logic": "Show if Q1 ≠ 'None of the above'",
+            "client_notes": "Use drag-and-drop ranking for digital surveys. For phone surveys, ask for top 3 verbally.",
+            "scripter_notes": "Field type: RANKING (limit 3). Ensure visual ranking works on mobile devices.",
+            "script": {
+                "question_text": "What factors were most important in your selection of an AI recruitment tool? (Rank top 3)",
+                "answer_options": [
+                    "Cost-effectiveness",
+                    "Ease of integration",
+                    "Vendor reputation",
+                    "Customization options",
+                    "Data security certifications",
+                    "Candidate experience features",
+                    "Reporting/analytics capabilities",
+                    "Diversity/inclusion features"
+                ],
+                "type": "RANKING",
+                "routing_logic": "Show if Q1 ≠ 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe how your organization measures the ROI of AI recruitment tools:",
+            "answer_options": [],
+            "routing_logic": "Show if Q2 answer ≤ 'Somewhat satisfied' OR Q2 answer = 'Not applicable'",
+            "client_notes": "Open-ended to capture qualitative insights. Suggest 200-character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT with character counter. Mobile-friendly text box.",
+            "script": {
+                "question_text": "Please describe how your organization measures the ROI of AI recruitment tools:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q2 answer ≤ 'Somewhat satisfied' OR Q2 answer = 'Not applicable'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,127 @@
+{
+    "survey_id": "72681d21-dc00-4b79-b541-2256d548751c",
+    "survey_name": "Urban Bike Share Program User Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from users of the city's bike share program to evaluate satisfaction levels, identify pain points, and improve service quality.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the city's bike share program?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Occasionally (less than once a month)",
+                "First-time user"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use the city's bike share program?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Occasionally (less than once a month)",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for using the bike share program? (Select all that apply)",
+            "answer_options": [
+                "Commuting to work/school",
+                "Exercise/recreation",
+                "Running errands",
+                "Environmental reasons",
+                "Cost savings",
+                "Avoiding traffic/public transit delays"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with open text if needed.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What are your primary reasons for using the bike share program? (Select all that apply)",
+                "answer_options": [
+                    "Commuting to work/school",
+                    "Exercise/recreation",
+                    "Running errands",
+                    "Environmental reasons",
+                    "Cost savings",
+                    "Avoiding traffic/public transit delays"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of bikes at your usual stations?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents except 'First-time user' in Q1",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the availability of bikes at your usual stations?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except 'First-time user' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the bike share program?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for the bike share program?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend the bike share program to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a standard NPS-like scale. Ensure clear labeling of endpoints.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to recommend the bike share program to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+{
+    "survey_id": "610c7170-2605-467c-9e00-ba9b34ba0a69",
+    "survey_name": "Employee Satisfaction with Workplace Cafeteria Services Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the quality, variety, and accessibility of workplace cafeteria services to improve offerings and satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the workplace cafeteria services?",
+            "answer_options": [
+                "Daily",
+                "2-3 times a week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale to measure frequency accurately.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How frequently do you use the workplace cafeteria services?",
+                "answer_options": [
+                    "Daily",
+                    "2-3 times a week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your decision to use the cafeteria? (Select all that apply)",
+            "answer_options": [
+                "Food quality",
+                "Price",
+                "Convenience",
+                "Variety of options",
+                "Dietary accommodations (e.g., vegetarian, gluten-free)",
+                "None of the above"
+            ],
+            "routing_logic": "If Q1 response is not 'Never'",
+            "client_notes": "Use multi-choice to allow respondents to select multiple influencing factors.",
+            "scripter_notes": "Field type: checkbox",
+            "script": {
+                "question_text": "What factors influence your decision to use the cafeteria? (Select all that apply)",
+                "answer_options": [
+                    "Food quality",
+                    "Price",
+                    "Convenience",
+                    "Variety of options",
+                    "Dietary accommodations (e.g., vegetarian, gluten-free)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the current variety of food options available in the cafeteria?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 response is not 'Never'",
+            "client_notes": "Use a Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How satisfied are you with the current variety of food options available in the cafeteria?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the workplace cafeteria services?",
+            "answer_options": [],
+            "routing_logic": "If Q1 response is not 'Never'",
+            "client_notes": "Open-ended question to gather qualitative feedback.",
+            "scripter_notes": "Field type: text input",
+            "script": {
+                "question_text": "What improvements would you suggest for the workplace cafeteria services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you rarely or never use the cafeteria, please briefly explain why.",
+            "answer_options": [],
+            "routing_logic": "If Q1 response is 'Rarely' or 'Never'",
+            "client_notes": "Open-ended question to understand barriers to cafeteria usage.",
+            "scripter_notes": "Field type: text input",
+            "script": {
+                "question_text": "If you rarely or never use the cafeteria, please briefly explain why.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 response is 'Rarely' or 'Never'"
+            }
+        }
+    ]
+}

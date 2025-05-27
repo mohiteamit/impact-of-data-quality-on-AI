@@ -1,0 +1,125 @@
+{
+    "survey_id": "10b339de-8ced-4ef3-beb5-849b6cf7d9ed",
+    "survey_name": "Workplace Noise and Productivity Survey",
+    "survey_brief": "This survey aims to understand the impact of workplace noise on employee productivity and satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you experience distracting noise in your workplace?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Always"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure options are clear and mutually exclusive.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you experience distracting noise in your workplace?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of noise are most distracting to you? (Select all that apply)",
+            "answer_options": [
+                "Conversations among colleagues",
+                "Phone calls",
+                "Office equipment (printers, etc.)",
+                "Construction or external noise",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is 'Sometimes', 'Often', or 'Always'.",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox (multi-choice). Include a text input for 'Other'.",
+            "script": {
+                "question_text": "What types of noise are most distracting to you? (Select all that apply)",
+                "answer_options": [
+                    "Conversations among colleagues",
+                    "Phone calls",
+                    "Office equipment (printers, etc.)",
+                    "Construction or external noise",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is 'Sometimes', 'Often', or 'Always'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How does workplace noise affect your productivity?",
+            "answer_options": [
+                "Significantly decreases",
+                "Slightly decreases",
+                "No effect",
+                "Slightly increases",
+                "Significantly increases"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure options are clear and mutually exclusive.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How does workplace noise affect your productivity?",
+                "answer_options": [
+                    "Significantly decreases",
+                    "Slightly decreases",
+                    "No effect",
+                    "Slightly increases",
+                    "Significantly increases"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What strategies do you use to cope with workplace noise?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is 'Sometimes', 'Often', or 'Always'.",
+            "client_notes": "Open-ended question to capture qualitative insights. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What strategies do you use to cope with workplace noise?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is 'Sometimes', 'Often', or 'Always'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you support the implementation of noise-reduction measures in your workplace?",
+            "answer_options": [
+                "Yes, strongly support",
+                "Yes, somewhat support",
+                "Neutral",
+                "No, somewhat oppose",
+                "No, strongly oppose"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure options are clear and mutually exclusive.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Would you support the implementation of noise-reduction measures in your workplace?",
+                "answer_options": [
+                    "Yes, strongly support",
+                    "Yes, somewhat support",
+                    "Neutral",
+                    "No, somewhat oppose",
+                    "No, strongly oppose"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

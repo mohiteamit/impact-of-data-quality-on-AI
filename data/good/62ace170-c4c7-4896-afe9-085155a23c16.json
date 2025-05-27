@@ -1,0 +1,159 @@
+{
+    "survey_id": "62ace170-c4c7-4896-afe9-085155a23c16",
+    "survey_name": "Consumer Preferences for Smart Home Voice Assistants Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and usage patterns related to smart home voice assistants, including features, brands, and privacy concerns.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which smart home voice assistant do you primarily use?",
+            "answer_options": [
+                "Amazon Alexa",
+                "Google Assistant",
+                "Apple Siri",
+                "Other (please specify)",
+                "None, I do not use a smart home voice assistant"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Ensure 'Other' includes a text field for specification. Consider randomizing options to avoid bias.",
+            "scripter_notes": "Field type: Single-choice with an 'Other' text input option.",
+            "script": {
+                "question_text": "Which smart home voice assistant do you primarily use?",
+                "answer_options": [
+                    "Amazon Alexa",
+                    "Google Assistant",
+                    "Apple Siri",
+                    "Other (please specify)",
+                    "None, I do not use a smart home voice assistant"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How frequently do you use your smart home voice assistant?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Once a week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "Appears if Q1 is not 'None, I do not use a smart home voice assistant'",
+            "client_notes": "Use a clear frequency scale. Consider adding 'Not applicable' if needed.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How frequently do you use your smart home voice assistant?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Once a week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'None, I do not use a smart home voice assistant'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the primary tasks you use your smart home voice assistant for? (Select all that apply)",
+            "answer_options": [
+                "Playing music or podcasts",
+                "Setting alarms or reminders",
+                "Controlling smart home devices (e.g., lights, thermostat)",
+                "Getting weather updates",
+                "Asking general questions",
+                "Shopping or making purchases",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'None, I do not use a smart home voice assistant'",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: Multi-choice checkboxes.",
+            "script": {
+                "question_text": "What are the primary tasks you use your smart home voice assistant for? (Select all that apply)",
+                "answer_options": [
+                    "Playing music or podcasts",
+                    "Setting alarms or reminders",
+                    "Controlling smart home devices (e.g., lights, thermostat)",
+                    "Getting weather updates",
+                    "Asking general questions",
+                    "Shopping or making purchases",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'None, I do not use a smart home voice assistant'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your smart home voice assistant's ability to understand and respond to your commands?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 is not 'None, I do not use a smart home voice assistant'",
+            "client_notes": "Use a standard satisfaction scale. Consider adding a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with your smart home voice assistant's ability to understand and respond to your commands?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'None, I do not use a smart home voice assistant'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What concerns, if any, do you have about using a smart home voice assistant? (Select all that apply)",
+            "answer_options": [
+                "Privacy and data security",
+                "Accuracy of responses",
+                "Limited functionality",
+                "Integration with other devices",
+                "None, I have no concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: Multi-choice checkboxes.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using a smart home voice assistant? (Select all that apply)",
+                "answer_options": [
+                    "Privacy and data security",
+                    "Accuracy of responses",
+                    "Limited functionality",
+                    "Integration with other devices",
+                    "None, I have no concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional features would you like to see in smart home voice assistants?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: Open-text.",
+            "script": {
+                "question_text": "What additional features would you like to see in smart home voice assistants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

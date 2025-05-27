@@ -1,0 +1,137 @@
+{
+    "survey_id": "7efb42ec-952d-470a-81c2-e855e94c549b",
+    "survey_name": "Consumer Preferences for Home Automation Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and adoption barriers related to home automation systems to help manufacturers and service providers improve product offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with home automation systems?",
+            "answer_options": [
+                "Very familiar - I currently use one or more systems",
+                "Somewhat familiar - I know about them but don't use any",
+                "Not very familiar - I've heard of them but don't know details",
+                "Not at all familiar"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This introductory question helps segment respondents by familiarity level. Consider scaling follow-up questions based on responses.",
+            "scripter_notes": "Single-choice radio buttons. Randomize option order if needed.",
+            "script": {
+                "question_text": "How familiar are you with home automation systems?",
+                "answer_options": [
+                    "Very familiar - I currently use one or more systems",
+                    "Somewhat familiar - I know about them but don't use any",
+                    "Not very familiar - I've heard of them but don't know details",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following home automation features interest you the most? (Select up to 3)",
+            "answer_options": [
+                "Smart lighting control",
+                "Thermostat/Climate control",
+                "Security cameras/monitoring",
+                "Smart locks/door access",
+                "Voice assistant integration",
+                "Appliance automation",
+                "Energy usage monitoring",
+                "Water leak detection",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question helps identify priority features. Include an 'Other' option to capture unlisted features.",
+            "scripter_notes": "Multi-choice checkboxes with max selection limit of 3. Include text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which of the following home automation features interest you the most? (Select up to 3)",
+                "answer_options": [
+                    "Smart lighting control",
+                    "Thermostat/Climate control",
+                    "Security cameras/monitoring",
+                    "Smart locks/door access",
+                    "Voice assistant integration",
+                    "Appliance automation",
+                    "Energy usage monitoring",
+                    "Water leak detection",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, do you have about adopting home automation systems?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to uncover barriers. Useful for qualitative analysis.",
+            "scripter_notes": "Open-text field with character limit of 500.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about adopting home automation systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which factors would most influence your decision to purchase a home automation system? (Rank top 3)",
+            "answer_options": [
+                "Cost/Price",
+                "Ease of use",
+                "Brand reputation",
+                "Compatibility with existing devices",
+                "Installation requirements",
+                "Privacy/data security",
+                "Energy savings potential",
+                "Home security benefits",
+                "Recommendations from friends/family"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ranking question helps identify key decision factors. Consider using drag-and-drop interface for ranking.",
+            "scripter_notes": "Ranking question type where respondents can drag to reorder options. Limit to top 3 rankings.",
+            "script": {
+                "question_text": "Which factors would most influence your decision to purchase a home automation system? (Rank top 3)",
+                "answer_options": [
+                    "Cost/Price",
+                    "Ease of use",
+                    "Brand reputation",
+                    "Compatibility with existing devices",
+                    "Installation requirements",
+                    "Privacy/data security",
+                    "Energy savings potential",
+                    "Home security benefits",
+                    "Recommendations from friends/family"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you prefer a professionally installed system or a DIY setup?",
+            "answer_options": [
+                "Professionally installed",
+                "DIY setup",
+                "Not sure",
+                "Depends on the complexity/cost"
+            ],
+            "routing_logic": "Respondents who selected 'Somewhat familiar' or 'Very familiar' in Q1",
+            "client_notes": "This question helps understand installation preferences among aware consumers.",
+            "scripter_notes": "Single-choice radio buttons with conditional display based on Q1 responses.",
+            "script": {
+                "question_text": "Would you prefer a professionally installed system or a DIY setup?",
+                "answer_options": [
+                    "Professionally installed",
+                    "DIY setup",
+                    "Not sure",
+                    "Depends on the complexity/cost"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Somewhat familiar' or 'Very familiar' in Q1"
+            }
+        }
+    ]
+}

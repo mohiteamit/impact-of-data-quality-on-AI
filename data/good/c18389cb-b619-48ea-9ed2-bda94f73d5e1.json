@@ -1,0 +1,131 @@
+{
+    "survey_id": "c18389cb-b619-48ea-9ed2-bda94f73d5e1",
+    "survey_name": "Employee Feedback on Workplace Flexibility Options",
+    "survey_brief": "This survey aims to gather employee feedback on current and potential workplace flexibility options to better align company policies with employee needs and preferences.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following workplace flexibility options do you currently utilize? (Select all that apply)",
+            "answer_options": [
+                "Flexible start/end times",
+                "Compressed workweek (e.g., 4-day workweek)",
+                "Remote work (full-time)",
+                "Hybrid work schedule (part remote, part in-office)",
+                "Job sharing",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a multi-choice format to allow for multiple selections. Ensure options cover common flexibility arrangements.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an 'Other' option with a text field if needed.",
+            "script": {
+                "question_text": "Which of the following workplace flexibility options do you currently utilize? (Select all that apply)",
+                "answer_options": [
+                    "Flexible start/end times",
+                    "Compressed workweek (e.g., 4-day workweek)",
+                    "Remote work (full-time)",
+                    "Hybrid work schedule (part remote, part in-office)",
+                    "Job sharing",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current workplace flexibility arrangements?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (I do not use any flexibility options)"
+            ],
+            "routing_logic": "Appears for all respondents except those who selected 'None of the above' in Q1",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement. Include an N/A option for those not utilizing flexibility options.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Ensure conditional routing based on Q1 response.",
+            "script": {
+                "question_text": "How satisfied are you with your current workplace flexibility arrangements?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (I do not use any flexibility options)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents except those who selected 'None of the above' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What additional workplace flexibility options would you like to see implemented? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Leave this as an open-ended question to capture unique suggestions. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT). No answer options required.",
+            "script": {
+                "question_text": "What additional workplace flexibility options would you like to see implemented? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How has workplace flexibility impacted your overall job satisfaction?",
+            "answer_options": [
+                "Significantly increased",
+                "Slightly increased",
+                "No impact",
+                "Slightly decreased",
+                "Significantly decreased"
+            ],
+            "routing_logic": "Appears for all respondents except those who selected 'None of the above' in Q1",
+            "client_notes": "Use a 5-point scale to measure impact. Ensure clarity in the wording to differentiate between levels of impact.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Conditional routing based on Q1 response.",
+            "script": {
+                "question_text": "How has workplace flexibility impacted your overall job satisfaction?",
+                "answer_options": [
+                    "Significantly increased",
+                    "Slightly increased",
+                    "No impact",
+                    "Slightly decreased",
+                    "Significantly decreased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents except those who selected 'None of the above' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What barriers, if any, have you encountered when utilizing workplace flexibility options? (Select all that apply)",
+            "answer_options": [
+                "Lack of manager support",
+                "Technology limitations",
+                "Difficulty collaborating with colleagues",
+                "Company policies restricting flexibility",
+                "Personal workstyle preferences",
+                "None, I have encountered no barriers"
+            ],
+            "routing_logic": "Appears for all respondents except those who selected 'None of the above' in Q1",
+            "client_notes": "Use a multi-choice format with an option to select no barriers. Include an 'Other' option with a text field if needed.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Conditional routing based on Q1 response.",
+            "script": {
+                "question_text": "What barriers, if any, have you encountered when utilizing workplace flexibility options? (Select all that apply)",
+                "answer_options": [
+                    "Lack of manager support",
+                    "Technology limitations",
+                    "Difficulty collaborating with colleagues",
+                    "Company policies restricting flexibility",
+                    "Personal workstyle preferences",
+                    "None, I have encountered no barriers"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents except those who selected 'None of the above' in Q1"
+            }
+        }
+    ]
+}

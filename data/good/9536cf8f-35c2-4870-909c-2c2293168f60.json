@@ -1,0 +1,161 @@
+{
+    "survey_id": "9536cf8f-35c2-4870-909c-2c2293168f60",
+    "survey_name": "Consumer Preferences for Reusable Water Bottles Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, usage habits, and purchasing behaviors related to reusable water bottles to inform product development and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use a reusable water bottle?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button format for easy selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use a reusable water bottle?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What features are most important to you when choosing a reusable water bottle? (Select all that apply)",
+            "answer_options": [
+                "Durability",
+                "Leak-proof design",
+                "Insulation (keeps liquids hot/cold)",
+                "Eco-friendly materials",
+                "Design/aesthetics",
+                "Ease of cleaning",
+                "Size/capacity",
+                "Price"
+            ],
+            "routing_logic": "Shows if Q1 answer is not 'Never'",
+            "client_notes": "Use a multi-select checkbox format. Randomize options to reduce bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Skip logic: Q1 != 'Never'.",
+            "script": {
+                "question_text": "What features are most important to you when choosing a reusable water bottle? (Select all that apply)",
+                "answer_options": [
+                    "Durability",
+                    "Leak-proof design",
+                    "Insulation (keeps liquids hot/cold)",
+                    "Eco-friendly materials",
+                    "Design/aesthetics",
+                    "Ease of cleaning",
+                    "Size/capacity",
+                    "Price"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shows if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you do not use a reusable water bottle?",
+            "answer_options": [
+                "Prefer disposable bottles for convenience",
+                "Don’t like carrying a bottle",
+                "Concerns about cleanliness/maintenance",
+                "Haven’t found a design I like",
+                "Cost of reusable bottles",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shows only if Q1 answer is 'Never'",
+            "client_notes": "Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: radio button with optional open-text (SINGLE_CHOICE). Skip logic: Q1 == 'Never'.",
+            "script": {
+                "question_text": "What is the primary reason you do not use a reusable water bottle?",
+                "answer_options": [
+                    "Prefer disposable bottles for convenience",
+                    "Don’t like carrying a bottle",
+                    "Concerns about cleanliness/maintenance",
+                    "Haven’t found a design I like",
+                    "Cost of reusable bottles",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shows only if Q1 answer is 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much would you typically spend on a reusable water bottle?",
+            "answer_options": [
+                "Less than $10",
+                "$10 - $20",
+                "$21 - $30",
+                "$31 - $50",
+                "More than $50"
+            ],
+            "routing_logic": "Shows if Q1 answer is not 'Never'",
+            "client_notes": "Use a single-choice scale. Ensure price ranges are realistic.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Skip logic: Q1 != 'Never'.",
+            "script": {
+                "question_text": "How much would you typically spend on a reusable water bottle?",
+                "answer_options": [
+                    "Less than $10",
+                    "$10 - $20",
+                    "$21 - $30",
+                    "$31 - $50",
+                    "More than $50"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shows if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What would encourage you to use a reusable water bottle more often?",
+            "answer_options": [
+                "Better designs/styles",
+                "More affordable options",
+                "Improved portability (e.g., collapsible)",
+                "Easier cleaning features",
+                "Environmental awareness campaigns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Include an open-text option for additional feedback.",
+            "scripter_notes": "Field type: checkbox with optional open-text (MULTI_CHOICE).",
+            "script": {
+                "question_text": "What would encourage you to use a reusable water bottle more often?",
+                "answer_options": [
+                    "Better designs/styles",
+                    "More affordable options",
+                    "Improved portability (e.g., collapsible)",
+                    "Easier cleaning features",
+                    "Environmental awareness campaigns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please share any additional thoughts or suggestions about reusable water bottles.",
+            "answer_options": [],
+            "routing_logic": "Optional question for all respondents",
+            "client_notes": "Use an open-text field to capture qualitative feedback.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "Please share any additional thoughts or suggestions about reusable water bottles.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional question for all respondents"
+            }
+        }
+    ]
+}

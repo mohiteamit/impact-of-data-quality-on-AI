@@ -1,0 +1,129 @@
+{
+    "survey_id": "878fc99f-40cb-485c-a23f-80e9dc47a602",
+    "survey_name": "Online Grocery Shopping Habits Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors related to online grocery shopping, including frequency, preferred platforms, and pain points.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you shop for groceries online?",
+            "answer_options": [
+                "Weekly",
+                "Bi-weekly",
+                "Monthly",
+                "Less than once a month",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "How often do you shop for groceries online?",
+                "answer_options": [
+                    "Weekly",
+                    "Bi-weekly",
+                    "Monthly",
+                    "Less than once a month",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which online grocery platforms do you use? (Select all that apply)",
+            "answer_options": [
+                "Amazon Fresh",
+                "Instacart",
+                "Walmart Grocery",
+                "Kroger Delivery",
+                "FreshDirect",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Use multi-choice checkboxes. Include 'Other' with an open-text field for unexpected responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Add an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which online grocery platforms do you use? (Select all that apply)",
+                "answer_options": [
+                    "Amazon Fresh",
+                    "Instacart",
+                    "Walmart Grocery",
+                    "Kroger Delivery",
+                    "FreshDirect",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you choose to shop for groceries online?",
+            "answer_options": [
+                "Convenience",
+                "Time-saving",
+                "Better prices or discounts",
+                "Access to a wider product selection",
+                "Avoiding in-store crowds",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Single-choice with an 'Other' option. Randomize order of options to reduce bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button). Randomize option order.",
+            "script": {
+                "question_text": "What is the primary reason you choose to shop for groceries online?",
+                "answer_options": [
+                    "Convenience",
+                    "Time-saving",
+                    "Better prices or discounts",
+                    "Access to a wider product selection",
+                    "Avoiding in-store crowds",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would encourage you to shop for groceries online more often?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Open-text field to capture qualitative feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What improvements would encourage you to shop for groceries online more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What is the main reason you do not shop for groceries online?",
+            "answer_options": [
+                "Prefer to select items in person",
+                "Delivery fees are too high",
+                "Concerns about product quality",
+                "Limited availability in my area",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is 'Never'.",
+            "client_notes": "Single-choice with an 'Other' option. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "What is the main reason you do not shop for groceries online?",
+                "answer_options": [
+                    "Prefer to select items in person",
+                    "Delivery fees are too high",
+                    "Concerns about product quality",
+                    "Limited availability in my area",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is 'Never'."
+            }
+        }
+    ]
+}

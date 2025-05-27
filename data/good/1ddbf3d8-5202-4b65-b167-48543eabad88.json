@@ -1,0 +1,101 @@
+{
+    "survey_id": "1ddbf3d8-5202-4b65-b167-48543eabad88",
+    "survey_name": "Employee Satisfaction with Workplace Cafeteria Services Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the quality, variety, and overall satisfaction with the workplace cafeteria services to identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the workplace cafeteria services?",
+            "answer_options": [
+                "Daily",
+                "3-4 times a week",
+                "1-2 times a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button format for single-choice responses. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use the workplace cafeteria services?",
+                "answer_options": [
+                    "Daily",
+                    "3-4 times a week",
+                    "1-2 times a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your decision to use the workplace cafeteria? (Select all that apply)",
+            "answer_options": [
+                "Convenience",
+                "Food quality",
+                "Price",
+                "Variety of options",
+                "Dietary accommodations (e.g., vegan, gluten-free)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', '3-4 times a week', or '1-2 times a week' in Q1",
+            "client_notes": "Use a checkbox format for multi-choice responses. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What factors influence your decision to use the workplace cafeteria? (Select all that apply)",
+                "answer_options": [
+                    "Convenience",
+                    "Food quality",
+                    "Price",
+                    "Variety of options",
+                    "Dietary accommodations (e.g., vegan, gluten-free)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', '3-4 times a week', or '1-2 times a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall quality of food served in the workplace cafeteria?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', '3-4 times a week', or '1-2 times a week' in Q1",
+            "client_notes": "Use a Likert scale format for single-choice responses. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of food served in the workplace cafeteria?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', '3-4 times a week', or '1-2 times a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the workplace cafeteria services?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field for detailed responses. Encourage respondents to provide specific suggestions.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for the workplace cafeteria services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

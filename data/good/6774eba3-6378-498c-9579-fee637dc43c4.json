@@ -1,0 +1,179 @@
+{
+    "survey_id": "6774eba3-6378-498c-9579-fee637dc43c4",
+    "survey_name": "Smart Home Water Conservation Device Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer awareness, adoption, and satisfaction levels with smart home water conservation devices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Are you aware of smart home water conservation devices (e.g., smart irrigation systems, leak detectors)?",
+            "answer_options": [
+                "Yes, very aware",
+                "Somewhat aware",
+                "Not aware"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Consider adding an image of such devices to aid respondents unfamiliar with them.",
+            "scripter_notes": "Single-choice radio buttons with 3 options.",
+            "script": {
+                "question_text": "Are you aware of smart home water conservation devices (e.g., smart irrigation systems, leak detectors)?",
+                "answer_options": [
+                    "Yes, very aware",
+                    "Somewhat aware",
+                    "Not aware"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Do you currently own or use any smart water conservation devices in your home?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This is a key screening question - consider placing it early in the survey.",
+            "scripter_notes": "Single-choice radio buttons with Yes/No options.",
+            "script": {
+                "question_text": "Do you currently own or use any smart water conservation devices in your home?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which types of smart water conservation devices have you used? (Select all that apply)",
+            "answer_options": [
+                "Smart irrigation/watering systems",
+                "Smart leak detectors",
+                "Smart shower monitors",
+                "Smart faucet controllers",
+                "Whole-home smart water monitors",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q2 = 'Yes'",
+            "client_notes": "This multi-select question helps identify product categories used.",
+            "scripter_notes": "Multi-choice checkboxes with an 'Other' open text field.",
+            "script": {
+                "question_text": "Which types of smart water conservation devices have you used? (Select all that apply)",
+                "answer_options": [
+                    "Smart irrigation/watering systems",
+                    "Smart leak detectors",
+                    "Smart shower monitors",
+                    "Smart faucet controllers",
+                    "Whole-home smart water monitors",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q2 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors influenced your decision to purchase smart water conservation devices?",
+            "answer_options": [
+                "Potential water cost savings",
+                "Environmental concerns",
+                "Home automation integration",
+                "Government/utility rebates",
+                "Recommendation from friends/family",
+                "Media/advertising influence",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q2 = 'Yes'",
+            "client_notes": "Identify key purchase motivators to inform marketing strategies.",
+            "scripter_notes": "Multi-choice checkboxes with an 'Other' open text field.",
+            "script": {
+                "question_text": "What factors influenced your decision to purchase smart water conservation devices?",
+                "answer_options": [
+                    "Potential water cost savings",
+                    "Environmental concerns",
+                    "Home automation integration",
+                    "Government/utility rebates",
+                    "Recommendation from friends/family",
+                    "Media/advertising influence",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q2 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with your smart water conservation devices?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "N/A - haven't used enough to form opinion"
+            ],
+            "routing_logic": "Only if Q2 = 'Yes'",
+            "client_notes": "5-point satisfaction scale with N/A option for newer adopters.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with your smart water conservation devices?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "N/A - haven't used enough to form opinion"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q2 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What concerns, if any, have prevented you from adopting smart water conservation technology?",
+            "answer_options": [
+                "High upfront cost",
+                "Perceived complexity of installation/use",
+                "Uncertainty about water savings",
+                "Lack of compatible smart home infrastructure",
+                "Privacy/data security concerns",
+                "No perceived need",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q2 = 'No'",
+            "client_notes": "Identify barriers to adoption that could be addressed in marketing.",
+            "scripter_notes": "Multi-choice checkboxes with an 'Other' open text field.",
+            "script": {
+                "question_text": "What concerns, if any, have prevented you from adopting smart water conservation technology?",
+                "answer_options": [
+                    "High upfront cost",
+                    "Perceived complexity of installation/use",
+                    "Uncertainty about water savings",
+                    "Lack of compatible smart home infrastructure",
+                    "Privacy/data security concerns",
+                    "No perceived need",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q2 = 'No'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional features would you like to see in future smart water conservation devices?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture innovative ideas from respondents.",
+            "scripter_notes": "Open text field with character limit of 500.",
+            "script": {
+                "question_text": "What additional features would you like to see in future smart water conservation devices?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

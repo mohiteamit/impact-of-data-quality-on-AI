@@ -1,0 +1,157 @@
+{
+    "survey_id": "ab8528cf-c28a-4c8d-af86-41dbc58132eb",
+    "survey_name": "Adoption and Usage of Digital Wallets in Retail Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, concerns, and usage patterns regarding digital wallet adoption in retail transactions.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use digital wallets for retail purchases?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button layout for clarity. Ensure the options cover the full spectrum of usage frequency.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How frequently do you use digital wallets for retail purchases?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which digital wallet services have you used in the past 3 months? (Select all that apply)",
+            "answer_options": [
+                "Apple Pay",
+                "Google Pay",
+                "Samsung Pay",
+                "PayPal",
+                "Venmo",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an open-text option for 'Other'.",
+            "script": {
+                "question_text": "Which digital wallet services have you used in the past 3 months? (Select all that apply)",
+                "answer_options": [
+                    "Apple Pay",
+                    "Google Pay",
+                    "Samsung Pay",
+                    "PayPal",
+                    "Venmo",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors most influence your decision to use a digital wallet for retail transactions?",
+            "answer_options": [
+                "Convenience",
+                "Speed of transaction",
+                "Security features",
+                "Rewards or cashback offers",
+                "Merchant acceptance",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Multi-choice question with an optional 'Other' field. Randomize the order of options to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE with randomization enabled.",
+            "script": {
+                "question_text": "What factors most influence your decision to use a digital wallet for retail transactions?",
+                "answer_options": [
+                    "Convenience",
+                    "Speed of transaction",
+                    "Security features",
+                    "Rewards or cashback offers",
+                    "Merchant acceptance",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about using digital wallets for retail transactions?",
+            "answer_options": [
+                "Security risks",
+                "Privacy issues",
+                "Limited merchant acceptance",
+                "Technical glitches",
+                "Lack of trust in the technology",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Multi-choice question with an 'Other' option. Include a tooltip explaining what 'technical glitches' might entail.",
+            "scripter_notes": "Field type: MULTI_CHOICE with hover-over tooltip for 'Technical glitches'.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using digital wallets for retail transactions?",
+                "answer_options": [
+                    "Security risks",
+                    "Privacy issues",
+                    "Limited merchant acceptance",
+                    "Technical glitches",
+                    "Lack of trust in the technology",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the security features of your preferred digital wallet?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'.",
+            "client_notes": "Use a 5-point Likert scale. Ensure the scale is balanced and labeled clearly.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the security features of your preferred digital wallet?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would encourage you to use digital wallets more frequently?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit.",
+            "script": {
+                "question_text": "What improvements would encourage you to use digital wallets more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

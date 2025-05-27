@@ -1,0 +1,127 @@
+{
+    "survey_id": "23883929-e749-4570-b0a5-f3a7bba1c45c",
+    "survey_name": "Consumer Preferences for Subscription-Based Fitness Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels with subscription-based fitness services, including factors influencing subscription choices and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which subscription-based fitness services have you used in the past 12 months?",
+            "answer_options": [
+                "Online workout classes (e.g., Peloton, Beachbody)",
+                "Gym membership with digital content (e.g., 24 Hour Fitness, Planet Fitness)",
+                "Specialized fitness apps (e.g., Nike Training Club, Freeletics)",
+                "Personalized coaching platforms (e.g., Future, Fitbod)",
+                "None of the above"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Use checkboxes for multiple selections. Ensure options cover major market players.",
+            "scripter_notes": "Field type: MULTI_CHOICE. Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "Which subscription-based fitness services have you used in the past 12 months?",
+                "answer_options": [
+                    "Online workout classes (e.g., Peloton, Beachbody)",
+                    "Gym membership with digital content (e.g., 24 Hour Fitness, Planet Fitness)",
+                    "Specialized fitness apps (e.g., Nike Training Club, Freeletics)",
+                    "Personalized coaching platforms (e.g., Future, Fitbod)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is the primary reason you subscribe to a fitness service?",
+            "answer_options": [
+                "Convenience of home workouts",
+                "Access to expert trainers",
+                "Variety of workout options",
+                "Cost-effectiveness compared to gyms",
+                "Community or social features",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Ask if Q1 answer is not 'None of the above'",
+            "client_notes": "Include an open-ended 'Other' option to capture unique responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Add an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "What is the primary reason you subscribe to a fitness service?",
+                "answer_options": [
+                    "Convenience of home workouts",
+                    "Access to expert trainers",
+                    "Variety of workout options",
+                    "Cost-effectiveness compared to gyms",
+                    "Community or social features",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your current subscription-based fitness service?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Ask if Q1 answer is not 'None of the above'",
+            "client_notes": "Use a balanced 5-point Likert scale for accurate sentiment measurement.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Display options vertically.",
+            "script": {
+                "question_text": "How satisfied are you with your current subscription-based fitness service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What features would make you more likely to recommend a fitness subscription service to others?",
+            "answer_options": [],
+            "routing_logic": "Ask if Q3 answer is 'Very satisfied' or 'Somewhat satisfied'",
+            "client_notes": "Open-ended question to identify promoters' key drivers. Limit response to 300 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT. Add character counter.",
+            "script": {
+                "question_text": "What features would make you more likely to recommend a fitness subscription service to others?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Ask if Q3 answer is 'Very satisfied' or 'Somewhat satisfied'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What is the maximum monthly price you would pay for a premium fitness subscription service?",
+            "answer_options": [
+                "Under $10",
+                "$10-$19",
+                "$20-$29",
+                "$30-$49",
+                "$50 or more"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Price buckets should reflect current market tiers. Randomize order for half of respondents to reduce anchoring bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Enable randomization group for answer options.",
+            "script": {
+                "question_text": "What is the maximum monthly price you would pay for a premium fitness subscription service?",
+                "answer_options": [
+                    "Under $10",
+                    "$10-$19",
+                    "$20-$29",
+                    "$30-$49",
+                    "$50 or more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        }
+    ]
+}

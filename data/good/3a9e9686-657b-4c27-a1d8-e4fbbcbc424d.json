@@ -1,0 +1,123 @@
+{
+    "survey_id": "3a9e9686-657b-4c27-a1d8-e4fbbcbc424d",
+    "survey_name": "Telehealth Platform User Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from users of telehealth platforms to understand their experiences, satisfaction levels, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use telehealth services?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "This is my first time"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice question to easily categorize usage frequency.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How often do you use telehealth services?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features do you value most in a telehealth platform? (Select up to 3)",
+            "answer_options": [
+                "Ease of scheduling appointments",
+                "Video call quality",
+                "Availability of specialists",
+                "Prescription refill services",
+                "Integration with electronic health records",
+                "Mobile app functionality",
+                "Customer support"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice question to identify prioritized features.",
+            "scripter_notes": "Field type: checkbox with a limit of 3 selections",
+            "script": {
+                "question_text": "Which of the following features do you value most in a telehealth platform? (Select up to 3)",
+                "answer_options": [
+                    "Ease of scheduling appointments",
+                    "Video call quality",
+                    "Availability of specialists",
+                    "Prescription refill services",
+                    "Integration with electronic health records",
+                    "Mobile app functionality",
+                    "Customer support"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall quality of care received through telehealth services?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of care received through telehealth services?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced while using telehealth services?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture diverse responses.",
+            "scripter_notes": "Field type: text area",
+            "script": {
+                "question_text": "What challenges have you faced while using telehealth services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your telehealth platform to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents except those who answered 'This is my first time' to Q1",
+            "client_notes": "Use a single-choice question to measure Net Promoter Score (NPS) potential.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "Would you recommend your telehealth platform to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'This is my first time' to Q1"
+            }
+        }
+    ]
+}

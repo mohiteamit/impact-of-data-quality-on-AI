@@ -1,0 +1,173 @@
+{
+    "survey_id": "28960fd6-f5c2-4388-aaea-99e74811a98e",
+    "survey_name": "Consumer Preferences for Home Fitness Equipment Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, purchasing behaviors, and satisfaction levels regarding home fitness equipment.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following types of home fitness equipment do you currently own? (Select all that apply)",
+            "answer_options": [
+                "Treadmill",
+                "Stationary Bike",
+                "Elliptical Machine",
+                "Rowing Machine",
+                "Dumbbells/Kettlebells",
+                "Resistance Bands",
+                "Yoga Mat",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure the 'Other' option includes a text field for open-ended responses.",
+            "scripter_notes": "Use a MULTI_CHOICE field type with checkboxes. Include an 'Other' option with an open text follow-up.",
+            "script": {
+                "question_text": "Which of the following types of home fitness equipment do you currently own? (Select all that apply)",
+                "answer_options": [
+                    "Treadmill",
+                    "Stationary Bike",
+                    "Elliptical Machine",
+                    "Rowing Machine",
+                    "Dumbbells/Kettlebells",
+                    "Resistance Bands",
+                    "Yoga Mat",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you use your home fitness equipment?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once per week",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents who selected at least one equipment type in Q1",
+            "client_notes": "This helps gauge usage frequency for product improvement.",
+            "scripter_notes": "Use a SINGLE_CHOICE field type (radio buttons).",
+            "script": {
+                "question_text": "How often do you use your home fitness equipment?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once per week",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected at least one equipment type in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influenced your decision to purchase home fitness equipment? (Select up to 3)",
+            "answer_options": [
+                "Convenience",
+                "Cost savings (vs. gym membership)",
+                "Privacy",
+                "Health concerns",
+                "Recommendations from friends/family",
+                "Online reviews",
+                "Brand reputation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents who selected at least one equipment type in Q1",
+            "client_notes": "Limit selections to 3 to prioritize top influences.",
+            "scripter_notes": "Use a MULTI_CHOICE field type with a max selection limit of 3.",
+            "script": {
+                "question_text": "What factors influenced your decision to purchase home fitness equipment? (Select up to 3)",
+                "answer_options": [
+                    "Convenience",
+                    "Cost savings (vs. gym membership)",
+                    "Privacy",
+                    "Health concerns",
+                    "Recommendations from friends/family",
+                    "Online reviews",
+                    "Brand reputation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents who selected at least one equipment type in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your most frequently used home fitness equipment?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents who selected at least one equipment type in Q1",
+            "client_notes": "Include a follow-up open-ended question for dissatisfied respondents.",
+            "scripter_notes": "Use a SINGLE_CHOICE field type. Route to Q5 if 'Somewhat dissatisfied' or 'Very dissatisfied' is selected.",
+            "script": {
+                "question_text": "How satisfied are you with your most frequently used home fitness equipment?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected at least one equipment type in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for your current home fitness equipment?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Somewhat dissatisfied' or 'Very dissatisfied' in Q4",
+            "client_notes": "Open-ended feedback is valuable for product development.",
+            "scripter_notes": "Use an OPEN_TEXT field type.",
+            "script": {
+                "question_text": "What improvements would you suggest for your current home fitness equipment?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Somewhat dissatisfied' or 'Very dissatisfied' in Q4"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you consider purchasing additional home fitness equipment in the next 12 months?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This helps forecast market demand.",
+            "scripter_notes": "Use a SINGLE_CHOICE field type.",
+            "script": {
+                "question_text": "Would you consider purchasing additional home fitness equipment in the next 12 months?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional features would you like to see in future home fitness equipment?",
+            "answer_options": [],
+            "routing_logic": "All respondents who answered 'Yes' or 'Unsure' in Q6",
+            "client_notes": "Open-ended responses can reveal innovation opportunities.",
+            "scripter_notes": "Use an OPEN_TEXT field type.",
+            "script": {
+                "question_text": "What additional features would you like to see in future home fitness equipment?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents who answered 'Yes' or 'Unsure' in Q6"
+            }
+        }
+    ]
+}

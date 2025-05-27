@@ -1,0 +1,139 @@
+{
+    "survey_id": "7273f9cb-c6b2-4055-8e45-27bef89ac04c",
+    "survey_name": "Digital Banking App User Experience Survey",
+    "survey_brief": "This survey aims to gather user feedback on the functionality, usability, and overall experience of our digital banking app to improve future iterations.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use our digital banking app in a typical week?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Once a week",
+                "Less than once a week"
+            ],
+            "routing_logic": "Always appears first.",
+            "client_notes": "Use a radio button list for single selection. Ensure options are clear and mutually exclusive.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often do you use our digital banking app in a typical week?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Once a week",
+                    "Less than once a week"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears first."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of our digital banking app do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Account balance check",
+                "Fund transfers",
+                "Bill payments",
+                "Mobile check deposit",
+                "Transaction history review",
+                "Customer support chat",
+                "Budgeting tools",
+                "None of the above"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Less than once a week'.",
+            "client_notes": "Use checkboxes for multi-selection. Include an optional 'Other' field if needed.",
+            "scripter_notes": "Field type: checkbox.",
+            "script": {
+                "question_text": "Which features of our digital banking app do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Account balance check",
+                    "Fund transfers",
+                    "Bill payments",
+                    "Mobile check deposit",
+                    "Transaction history review",
+                    "Customer support chat",
+                    "Budgeting tools",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Less than once a week'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the overall performance of our digital banking app?",
+            "answer_options": [
+                "1 - Very dissatisfied",
+                "2 - Dissatisfied",
+                "3 - Neutral",
+                "4 - Satisfied",
+                "5 - Very satisfied"
+            ],
+            "routing_logic": "Always appears after Q2.",
+            "client_notes": "Use a Likert scale for clarity. Ensure the scale is balanced to avoid bias.",
+            "scripter_notes": "Field type: radio button with a 5-point scale.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the overall performance of our digital banking app?",
+                "answer_options": [
+                    "1 - Very dissatisfied",
+                    "2 - Dissatisfied",
+                    "3 - Neutral",
+                    "4 - Satisfied",
+                    "5 - Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears after Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in our digital banking app?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q3 answer is '1 - Very dissatisfied', '2 - Dissatisfied', or '3 - Neutral'.",
+            "client_notes": "Leave this as an open text field for detailed feedback. Keep mobile-friendly with a large input box.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you like to see in our digital banking app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q3 answer is '1 - Very dissatisfied', '2 - Dissatisfied', or '3 - Neutral'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any technical issues while using our digital banking app in the past 3 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Always appears after Q3.",
+            "client_notes": "Use a simple yes/no radio button. Follow up with Q6 if 'Yes' is selected.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "Have you experienced any technical issues while using our digital banking app in the past 3 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears after Q3."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe the technical issue(s) you encountered.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q5 answer is 'Yes'.",
+            "client_notes": "Open text field for detailed descriptions. Provide examples (e.g., app crashes, slow loading).",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "Please describe the technical issue(s) you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q5 answer is 'Yes'."
+            }
+        }
+    ]
+}

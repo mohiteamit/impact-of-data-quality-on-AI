@@ -1,0 +1,133 @@
+{
+    "survey_id": "01cb885d-5811-43b3-b8f0-056900eddc59",
+    "survey_name": "Hybrid Event Technology Platform Evaluation Survey",
+    "survey_brief": "This survey aims to gather feedback from event organizers and attendees about their experience with hybrid event technology platforms, focusing on usability, features, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which hybrid event technology platform(s) have you used in the past 12 months?",
+            "answer_options": [
+                "Zoom Events",
+                "Hopin",
+                "Whova",
+                "Brella",
+                "EventMobi",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a multi-select format to allow for multiple platform selections. Include an 'Other' option with a text field for unlisted platforms.",
+            "scripter_notes": "Field type: MULTI_CHOICE checkbox with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which hybrid event technology platform(s) have you used in the past 12 months?",
+                "answer_options": [
+                    "Zoom Events",
+                    "Hopin",
+                    "Whova",
+                    "Brella",
+                    "EventMobi",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the overall performance of the hybrid event platform you used most recently?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who selected at least one platform in Q1",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure the question is mobile-friendly with large tap targets.",
+            "scripter_notes": "Field type: SINGLE_CHOICE radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the overall performance of the hybrid event platform you used most recently?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected at least one platform in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you consider most important when selecting a hybrid event platform? (Select up to 3)",
+            "answer_options": [
+                "Ease of use for attendees",
+                "Reliable streaming quality",
+                "Networking capabilities",
+                "Analytics and reporting",
+                "Integration with other tools",
+                "Custom branding options",
+                "Technical support responsiveness",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Limit selections to 3 to prioritize responses. Randomize answer options to reduce order bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max 3 selections allowed. Include an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What features do you consider most important when selecting a hybrid event platform? (Select up to 3)",
+                "answer_options": [
+                    "Ease of use for attendees",
+                    "Reliable streaming quality",
+                    "Networking capabilities",
+                    "Analytics and reporting",
+                    "Integration with other tools",
+                    "Custom branding options",
+                    "Technical support responsiveness",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced when using hybrid event platforms?",
+            "answer_options": [],
+            "routing_logic": "Appears to respondents who selected at least one platform in Q1",
+            "client_notes": "Use an open-ended question to capture detailed feedback. Allow for long-form responses.",
+            "scripter_notes": "Field type: OPEN_TEXT with a large input box.",
+            "script": {
+                "question_text": "What challenges have you faced when using hybrid event platforms?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to respondents who selected at least one platform in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend the hybrid event platform you used most recently to a colleague?",
+            "answer_options": [
+                "Extremely likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Extremely unlikely"
+            ],
+            "routing_logic": "Appears to respondents who selected at least one platform in Q1",
+            "client_notes": "This is a standard NPS-style question. Use a single-choice format for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE radio buttons.",
+            "script": {
+                "question_text": "How likely are you to recommend the hybrid event platform you used most recently to a colleague?",
+                "answer_options": [
+                    "Extremely likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Extremely unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected at least one platform in Q1"
+            }
+        }
+    ]
+}

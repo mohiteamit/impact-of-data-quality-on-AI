@@ -1,0 +1,149 @@
+{
+    "survey_id": "dc5dca77-7442-48cb-8a33-e0101592b0cf",
+    "survey_name": "Corporate Volunteer Program Participation Survey",
+    "survey_brief": "This survey aims to understand employee participation and satisfaction with the company's volunteer programs, identifying opportunities for improvement and alignment with employee interests.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you participated in any corporate-sponsored volunteer programs in the past 12 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "If 'No', skip to Q5.",
+            "client_notes": "This initial filter question helps segment respondents for relevant follow-up questions.",
+            "scripter_notes": "Use a radio button for single-choice selection.",
+            "script": {
+                "question_text": "Have you participated in any corporate-sponsored volunteer programs in the past 12 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'No', skip to Q5."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the volunteer opportunities provided by the company?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears only if respondent answered 'Yes' to Q1.",
+            "client_notes": "Use a 5-point Likert scale for nuanced feedback.",
+            "scripter_notes": "Radio buttons for single-choice response.",
+            "script": {
+                "question_text": "How satisfied are you with the volunteer opportunities provided by the company?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if respondent answered 'Yes' to Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What types of volunteer activities would you prefer the company to offer? (Select all that apply)",
+            "answer_options": [
+                "Environmental conservation",
+                "Education and youth mentoring",
+                "Community food drives",
+                "Animal shelters",
+                "Health and wellness initiatives",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if respondent answered 'Yes' to Q1.",
+            "client_notes": "Multi-select question to identify popular categories.",
+            "scripter_notes": "Checkboxes for multi-choice selection; include an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What types of volunteer activities would you prefer the company to offer? (Select all that apply)",
+                "answer_options": [
+                    "Environmental conservation",
+                    "Education and youth mentoring",
+                    "Community food drives",
+                    "Animal shelters",
+                    "Health and wellness initiatives",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if respondent answered 'Yes' to Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any challenges you faced while participating in the volunteer programs.",
+            "answer_options": [],
+            "routing_logic": "Appears only if respondent answered 'Yes' to Q1.",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Text input field for open-ended responses.",
+            "script": {
+                "question_text": "Please describe any challenges you faced while participating in the volunteer programs.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if respondent answered 'Yes' to Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What factors would encourage you to participate in future volunteer programs? (Select up to 3)",
+            "answer_options": [
+                "Flexible scheduling",
+                "Paid volunteer time off",
+                "Alignment with personal interests",
+                "Team-building opportunities",
+                "Recognition or awards",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown to all respondents.",
+            "client_notes": "Ranking question to prioritize incentives.",
+            "scripter_notes": "Checkboxes with a max selection limit of 3; include optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What factors would encourage you to participate in future volunteer programs? (Select up to 3)",
+                "answer_options": [
+                    "Flexible scheduling",
+                    "Paid volunteer time off",
+                    "Alignment with personal interests",
+                    "Team-building opportunities",
+                    "Recognition or awards",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Do you believe the company’s volunteer programs align with its corporate values?",
+            "answer_options": [
+                "Strongly agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly disagree"
+            ],
+            "routing_logic": "Shown to all respondents.",
+            "client_notes": "Likert scale to measure perception of program alignment.",
+            "scripter_notes": "Radio buttons for single-choice response.",
+            "script": {
+                "question_text": "Do you believe the company’s volunteer programs align with its corporate values?",
+                "answer_options": [
+                    "Strongly agree",
+                    "Agree",
+                    "Neutral",
+                    "Disagree",
+                    "Strongly disagree"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown to all respondents."
+            }
+        }
+    ]
+}

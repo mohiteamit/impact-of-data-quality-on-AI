@@ -1,0 +1,127 @@
+{
+    "survey_id": "acd34a42-06b7-4b5b-b5bb-7355f0cae947",
+    "survey_name": "AI-Powered Career Coaching Platform Feedback Survey",
+    "survey_brief": "This survey aims to gather user feedback on AI-powered career coaching platforms to understand user satisfaction, feature preferences, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use AI-powered career coaching platforms?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "This is my first time"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice format to simplify response collection. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How often do you use AI-powered career coaching platforms?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you find most valuable in AI career coaching platforms? (Select all that apply)",
+            "answer_options": [
+                "Personalized career path recommendations",
+                "Resume optimization tools",
+                "Interview preparation simulations",
+                "Salary negotiation guidance",
+                "Networking suggestions",
+                "Skill gap analysis"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a multi-choice format to allow selection of multiple features. Consider randomizing option order to reduce bias.",
+            "scripter_notes": "Field type: checkbox",
+            "script": {
+                "question_text": "Which features do you find most valuable in AI career coaching platforms? (Select all that apply)",
+                "answer_options": [
+                    "Personalized career path recommendations",
+                    "Resume optimization tools",
+                    "Interview preparation simulations",
+                    "Salary negotiation guidance",
+                    "Networking suggestions",
+                    "Skill gap analysis"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of career recommendations provided by AI coaching platforms?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who answered 'Weekly', 'Monthly', or 'Rarely' to Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Include neutral option to capture ambivalent responses.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of career recommendations provided by AI coaching platforms?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who answered 'Weekly', 'Monthly', or 'Rarely' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for AI career coaching platforms?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters for easier analysis.",
+            "scripter_notes": "Field type: text area with character limit",
+            "script": {
+                "question_text": "What improvements would you suggest for AI career coaching platforms?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your current AI career coaching platform to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Not sure",
+                "Probably not",
+                "Definitely not"
+            ],
+            "routing_logic": "Appears to respondents who answered 'Weekly', 'Monthly', or 'Rarely' to Q1",
+            "client_notes": "Net Promoter Score-style question to gauge overall satisfaction. Include clear response options.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "Would you recommend your current AI career coaching platform to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Not sure",
+                    "Probably not",
+                    "Definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who answered 'Weekly', 'Monthly', or 'Rarely' to Q1"
+            }
+        }
+    ]
+}

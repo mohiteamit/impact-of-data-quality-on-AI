@@ -1,0 +1,101 @@
+{
+    "survey_id": "2da012d9-3226-4092-a2d0-af4900feb68c",
+    "survey_name": "Consumer Preferences for In-Car Connectivity Features Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels regarding in-car connectivity features such as navigation, entertainment, and smartphone integration.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How important is in-car connectivity (e.g., Bluetooth, Apple CarPlay, Android Auto) when purchasing a new vehicle?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "This question appears to all participants.",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure options are balanced to avoid bias.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How important is in-car connectivity (e.g., Bluetooth, Apple CarPlay, Android Auto) when purchasing a new vehicle?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears to all participants."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following in-car connectivity features do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Bluetooth audio streaming",
+                "Apple CarPlay/Android Auto",
+                "Built-in navigation system",
+                "Voice command assistance",
+                "Wi-Fi hotspot",
+                "None of the above"
+            ],
+            "routing_logic": "This question appears to participants who rated in-car connectivity as at least 'Slightly important' in Q1.",
+            "client_notes": "Allow multiple selections. Include an 'Other' option if additional features are likely.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following in-car connectivity features do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Bluetooth audio streaming",
+                    "Apple CarPlay/Android Auto",
+                    "Built-in navigation system",
+                    "Voice command assistance",
+                    "Wi-Fi hotspot",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears to participants who rated in-car connectivity as at least 'Slightly important' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the current in-car connectivity features in your vehicle?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears to participants who use at least one in-car connectivity feature in Q2.",
+            "client_notes": "Use a 5-point scale for granular feedback. Consider adding a follow-up open-ended question for detailed feedback.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the current in-car connectivity features in your vehicle?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears to participants who use at least one in-car connectivity feature in Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in future in-car connectivity systems?",
+            "answer_options": [],
+            "routing_logic": "This question appears to participants who rated satisfaction as 'Neutral' or below in Q3.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you like to see in future in-car connectivity systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears to participants who rated satisfaction as 'Neutral' or below in Q3."
+            }
+        }
+    ]
+}

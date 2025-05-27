@@ -1,0 +1,127 @@
+{
+    "survey_id": "7ff607b2-4a2f-4fd8-8c8e-cf269bb34cbf",
+    "survey_name": "Corporate Green Commuting Program Feedback Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the company's green commuting initiatives, including bike-to-work programs, electric vehicle charging stations, and public transit subsidies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following green commuting options have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Bike-to-work program",
+                "Electric vehicle charging stations",
+                "Public transit subsidy",
+                "Carpool matching service",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a multi-choice format to allow for multiple selections. Ensure options are mobile-friendly with clear checkboxes.",
+            "scripter_notes": "Field type: MULTI_CHOICE. Include 'None of the above' as an option to capture non-users.",
+            "script": {
+                "question_text": "Which of the following green commuting options have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Bike-to-work program",
+                    "Electric vehicle charging stations",
+                    "Public transit subsidy",
+                    "Carpool matching service",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the availability and functionality of electric vehicle charging stations at your workplace?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (I do not use EV charging)"
+            ],
+            "routing_logic": "Appears if 'Electric vehicle charging stations' is selected in Q1",
+            "client_notes": "Use a 5-point Likert scale with a 'Not applicable' option. Randomize scale order to reduce bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Ensure the 'Not applicable' option is clearly differentiated.",
+            "script": {
+                "question_text": "How satisfied are you with the availability and functionality of electric vehicle charging stations at your workplace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (I do not use EV charging)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if 'Electric vehicle charging stations' is selected in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would encourage you to use green commuting options more frequently?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 250 characters for manageability.",
+            "scripter_notes": "Field type: OPEN_TEXT. Include character counter to inform respondents.",
+            "script": {
+                "question_text": "What improvements would encourage you to use green commuting options more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you use the company's bike-to-work program?",
+            "answer_options": [
+                "Daily",
+                "3-4 times per week",
+                "1-2 times per week",
+                "Less than once per week",
+                "Never"
+            ],
+            "routing_logic": "Appears if 'Bike-to-work program' is selected in Q1",
+            "client_notes": "Use a frequency scale with clear intervals. Randomize options to reduce order bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Ensure mobile-friendly dropdown for smaller screens.",
+            "script": {
+                "question_text": "How often do you use the company's bike-to-work program?",
+                "answer_options": [
+                    "Daily",
+                    "3-4 times per week",
+                    "1-2 times per week",
+                    "Less than once per week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if 'Bike-to-work program' is selected in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend the company's green commuting program to a colleague?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Neutral",
+                "Probably not",
+                "Definitely not"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point recommendation scale. Include a neutral midpoint.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Display as a horizontal radio button scale for desktop users.",
+            "script": {
+                "question_text": "Would you recommend the company's green commuting program to a colleague?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Neutral",
+                    "Probably not",
+                    "Definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

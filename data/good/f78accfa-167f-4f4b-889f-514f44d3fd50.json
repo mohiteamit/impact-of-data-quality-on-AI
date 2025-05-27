@@ -1,0 +1,127 @@
+{
+    "survey_id": "f78accfa-167f-4f4b-889f-514f44d3fd50",
+    "survey_name": "Employee Experience with AI-Powered HR Tools Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the effectiveness and usability of AI-powered HR tools implemented in the workplace.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use AI-powered HR tools (e.g., chatbots, resume screening, scheduling assistants) in your workplace?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a consistent frequency scale. Consider adding a tooltip with examples of AI-powered HR tools for clarity.",
+            "scripter_notes": "Single-choice radio buttons with vertical layout. Include 'Prefer not to answer' option if required.",
+            "script": {
+                "question_text": "How frequently do you use AI-powered HR tools (e.g., chatbots, resume screening, scheduling assistants) in your workplace?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which AI-powered HR tools have you used? (Select all that apply)",
+            "answer_options": [
+                "Recruitment chatbots",
+                "Automated resume screening",
+                "AI-driven interview scheduling",
+                "Employee onboarding assistants",
+                "Performance management analytics",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select with clear category distinctions. Randomize option order to avoid bias.",
+            "scripter_notes": "Multi-choice checkboxes with 'Select all that apply' instruction. Include 'Other' with text field if needed.",
+            "script": {
+                "question_text": "Which AI-powered HR tools have you used? (Select all that apply)",
+                "answer_options": [
+                    "Recruitment chatbots",
+                    "Automated resume screening",
+                    "AI-driven interview scheduling",
+                    "Employee onboarding assistants",
+                    "Performance management analytics",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of AI-powered HR tools in understanding and addressing your needs?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected any tool in Q2 except 'None of the above'",
+            "client_notes": "5-point Likert scale with balanced anchors. Include N/A option if necessary.",
+            "scripter_notes": "Single-choice radio buttons displayed horizontally on desktop. Ensure mobile responsiveness.",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of AI-powered HR tools in understanding and addressing your needs?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any tool in Q2 except 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the AI-powered HR tools used in your organization?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Limit to 500 characters with counter.",
+            "scripter_notes": "Open-text field with character limit validation. Use multi-line input box.",
+            "script": {
+                "question_text": "What improvements would you suggest for the AI-powered HR tools used in your organization?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How has the introduction of AI-powered HR tools impacted your overall work experience?",
+            "answer_options": [
+                "Significantly improved",
+                "Slightly improved",
+                "No change",
+                "Slightly worsened",
+                "Significantly worsened"
+            ],
+            "routing_logic": "Respondents who selected any tool in Q2 except 'None of the above'",
+            "client_notes": "Bipolar scale measuring net impact. Include 'Not applicable' for non-users.",
+            "scripter_notes": "Single-choice radio buttons with neutral midpoint. Display as horizontal scale on desktop.",
+            "script": {
+                "question_text": "How has the introduction of AI-powered HR tools impacted your overall work experience?",
+                "answer_options": [
+                    "Significantly improved",
+                    "Slightly improved",
+                    "No change",
+                    "Slightly worsened",
+                    "Significantly worsened"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any tool in Q2 except 'None of the above'"
+            }
+        }
+    ]
+}

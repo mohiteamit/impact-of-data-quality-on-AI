@@ -1,0 +1,127 @@
+{
+    "survey_id": "8a237a96-fb19-468b-a5ed-daac90169da9",
+    "survey_name": "Employee Satisfaction with On-Site Childcare Facilities Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with the company's on-site childcare facilities, gather feedback on current services, and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you utilize the on-site childcare facilities?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Few times a month",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you utilize the on-site childcare facilities?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Few times a month",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons for using the on-site childcare facilities? (Select all that apply)",
+            "answer_options": [
+                "Convenience",
+                "Affordability",
+                "Quality of care",
+                "Trust in caregivers",
+                "Proximity to workplace",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Several times a week', 'Once a week', or 'Few times a month' in Q1",
+            "client_notes": "Use checkboxes for multi-select responses. Include an 'Other' option with an open-text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What are the primary reasons for using the on-site childcare facilities? (Select all that apply)",
+                "answer_options": [
+                    "Convenience",
+                    "Affordability",
+                    "Quality of care",
+                    "Trust in caregivers",
+                    "Proximity to workplace",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Several times a week', 'Once a week', or 'Few times a month' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the quality of care provided at the on-site childcare facilities?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Several times a week', 'Once a week', or 'Few times a month' in Q1",
+            "client_notes": "Use a 5-point Likert scale with radio buttons. Avoid neutral bias.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the quality of care provided at the on-site childcare facilities?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Several times a week', 'Once a week', or 'Few times a month' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the on-site childcare facilities?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-text response. Limit to 500 characters for concise feedback.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT) with character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for the on-site childcare facilities?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend the on-site childcare facilities to a colleague?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Several times a week', 'Once a week', or 'Few times a month' in Q1",
+            "client_notes": "Use radio buttons for single-choice selection. Include a 'Not sure' option.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend the on-site childcare facilities to a colleague?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Several times a week', 'Once a week', or 'Few times a month' in Q1"
+            }
+        }
+    ]
+}

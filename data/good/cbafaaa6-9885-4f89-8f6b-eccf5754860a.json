@@ -1,0 +1,125 @@
+{
+    "survey_id": "cbafaaa6-9885-4f89-8f6b-eccf5754860a",
+    "survey_name": "Corporate Wellness Program Engagement Survey",
+    "survey_brief": "This survey aims to assess employee engagement with and satisfaction towards the current corporate wellness programs offered, identifying areas for improvement to enhance employee health and productivity.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the wellness programs currently offered by your employer?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button for clarity. This question helps gauge awareness levels before diving into specifics.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How familiar are you with the wellness programs currently offered by your employer?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following wellness programs have you participated in during the past 12 months? (Select all that apply)",
+            "answer_options": [
+                "Mental health workshops",
+                "Physical fitness challenges",
+                "Nutritional counseling",
+                "Smoking cessation programs",
+                "Financial wellness seminars",
+                "None of the above"
+            ],
+            "routing_logic": "Skip if Q1 = 'Not at all familiar'",
+            "client_notes": "Use checkboxes (MULTI_CHOICE) to allow multiple selections. Include 'None of the above' to capture non-participation.",
+            "scripter_notes": "Field type: Checkboxes (MULTI_CHOICE). Ensure 'None of the above' deselects other options if chosen.",
+            "script": {
+                "question_text": "Which of the following wellness programs have you participated in during the past 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Mental health workshops",
+                    "Physical fitness challenges",
+                    "Nutritional counseling",
+                    "Smoking cessation programs",
+                    "Financial wellness seminars",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Skip if Q1 = 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the wellness programs available? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Skip if Q2 includes 'None of the above'",
+            "client_notes": "Use a Likert scale for single-choice responses. Label endpoints clearly for consistency.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE). Display as a horizontal scale for mobile-friendliness.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the wellness programs available? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Skip if Q2 includes 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional wellness initiatives would you like your employer to offer?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 250 characters.",
+            "scripter_notes": "Field type: Open text (OPEN_TEXT). Add character counter.",
+            "script": {
+                "question_text": "What additional wellness initiatives would you like your employer to offer?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What barriers prevent you from participating in wellness programs more often?",
+            "answer_options": [
+                "Lack of time",
+                "Programs not relevant to my needs",
+                "Unaware of schedule",
+                "Lack of incentives",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Skip if Q2 = 'None of the above'",
+            "client_notes": "Multi-choice with optional 'Other' field. Helps identify systemic issues.",
+            "scripter_notes": "Field type: Checkboxes (MULTI_CHOICE) with open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What barriers prevent you from participating in wellness programs more often?",
+                "answer_options": [
+                    "Lack of time",
+                    "Programs not relevant to my needs",
+                    "Unaware of schedule",
+                    "Lack of incentives",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Skip if Q2 = 'None of the above'"
+            }
+        }
+    ]
+}

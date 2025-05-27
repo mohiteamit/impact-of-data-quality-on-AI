@@ -1,0 +1,131 @@
+{
+    "survey_id": "ebf0574e-0b7f-4148-8429-77ce62fe55c8",
+    "survey_name": "Consumer Preferences for Electric Skateboards Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, usage patterns, and purchasing considerations for electric skateboards.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you ever used an electric skateboard?",
+            "answer_options": [
+                "Yes, I currently own one",
+                "Yes, but I no longer own one",
+                "No, but I am interested in trying one",
+                "No, and I am not interested"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button format for clarity. Ensure mobile-friendly design.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Have you ever used an electric skateboard?",
+                "answer_options": [
+                    "Yes, I currently own one",
+                    "Yes, but I no longer own one",
+                    "No, but I am interested in trying one",
+                    "No, and I am not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when considering purchasing an electric skateboard? (Select up to 3)",
+            "answer_options": [
+                "Battery life",
+                "Top speed",
+                "Range per charge",
+                "Weight and portability",
+                "Price",
+                "Brand reputation",
+                "Safety features",
+                "Design and aesthetics",
+                "Customer reviews"
+            ],
+            "routing_logic": "Show only if Q1 response is 'Yes, I currently own one' or 'No, but I am interested in trying one'",
+            "client_notes": "Use a multi-choice checkbox format with a limit of 3 selections. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with max 3 selections)",
+            "script": {
+                "question_text": "What factors are most important to you when considering purchasing an electric skateboard? (Select up to 3)",
+                "answer_options": [
+                    "Battery life",
+                    "Top speed",
+                    "Range per charge",
+                    "Weight and portability",
+                    "Price",
+                    "Brand reputation",
+                    "Safety features",
+                    "Design and aesthetics",
+                    "Customer reviews"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show only if Q1 response is 'Yes, I currently own one' or 'No, but I am interested in trying one'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How much would you be willing to spend on an electric skateboard?",
+            "answer_options": [
+                "Less than $300",
+                "$300 - $600",
+                "$601 - $900",
+                "$901 - $1200",
+                "More than $1200"
+            ],
+            "routing_logic": "Show only if Q1 response is 'Yes, I currently own one' or 'No, but I am interested in trying one'",
+            "client_notes": "Use a single-choice radio button format with clear price ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How much would you be willing to spend on an electric skateboard?",
+                "answer_options": [
+                    "Less than $300",
+                    "$300 - $600",
+                    "$601 - $900",
+                    "$901 - $1200",
+                    "More than $1200"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show only if Q1 response is 'Yes, I currently own one' or 'No, but I am interested in trying one'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about using an electric skateboard?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to capture qualitative feedback. Provide a character limit of 500.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with 500-character limit)",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using an electric skateboard?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you use (or would you use) an electric skateboard?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely"
+            ],
+            "routing_logic": "Show only if Q1 response is 'Yes, I currently own one' or 'No, but I am interested in trying one'",
+            "client_notes": "Use a single-choice radio button format with clear frequency options.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use (or would you use) an electric skateboard?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show only if Q1 response is 'Yes, I currently own one' or 'No, but I am interested in trying one'"
+            }
+        }
+    ]
+}

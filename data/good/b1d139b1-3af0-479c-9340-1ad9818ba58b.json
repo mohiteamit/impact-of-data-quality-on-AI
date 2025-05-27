@@ -1,0 +1,133 @@
+{
+    "survey_id": "b1d139b1-3af0-479c-9340-1ad9818ba58b",
+    "survey_name": "Consumer Preferences for On-Demand Streaming Content Survey",
+    "survey_brief": "This survey aims to understand user preferences and behaviors regarding on-demand streaming content to help platforms tailor their offerings and improve user satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use on-demand streaming services (e.g., Netflix, Hulu, Disney+)?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "Always appears as the first question.",
+            "client_notes": "Use a single-choice format to simplify response tracking. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use on-demand streaming services (e.g., Netflix, Hulu, Disney+)?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears as the first question."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of content do you primarily watch on streaming platforms? (Select all that apply)",
+            "answer_options": [
+                "TV Shows",
+                "Movies",
+                "Documentaries",
+                "Stand-up Comedy",
+                "Reality TV",
+                "Kids' Content",
+                "Sports",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a multi-choice format to capture diverse preferences. Include an 'Other' option for completeness.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which types of content do you primarily watch on streaming platforms? (Select all that apply)",
+                "answer_options": [
+                    "TV Shows",
+                    "Movies",
+                    "Documentaries",
+                    "Stand-up Comedy",
+                    "Reality TV",
+                    "Kids' Content",
+                    "Sports",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influence your choice of a streaming platform? (Rank in order of importance, 1 being most important)",
+            "answer_options": [
+                "Content Library",
+                "Price",
+                "User Interface",
+                "Recommendation Algorithms",
+                "Original Content",
+                "Streaming Quality"
+            ],
+            "routing_logic": "Appears for respondents who use streaming services at least once a week (Q1: 'Daily', 'Several times a week', or 'Once a week').",
+            "client_notes": "Use a ranking question type. Ensure the platform supports drag-and-drop or numeric input for ranking.",
+            "scripter_notes": "Field type: ranking (SINGLE_CHOICE per rank). Display only for qualified respondents.",
+            "script": {
+                "question_text": "What factors influence your choice of a streaming platform? (Rank in order of importance, 1 being most important)",
+                "answer_options": [
+                    "Content Library",
+                    "Price",
+                    "User Interface",
+                    "Recommendation Algorithms",
+                    "Original Content",
+                    "Streaming Quality"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who use streaming services at least once a week (Q1: 'Daily', 'Several times a week', or 'Once a week')."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the recommendation algorithms on your primary streaming platform?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents who use streaming services at least once a week (Q1: 'Daily', 'Several times a week', or 'Once a week').",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Display only for qualified respondents.",
+            "script": {
+                "question_text": "How satisfied are you with the recommendation algorithms on your primary streaming platform?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who use streaming services at least once a week (Q1: 'Daily', 'Several times a week', or 'Once a week')."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in your primary streaming platform?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use an open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT). Include character limit validation.",
+            "script": {
+                "question_text": "What improvements would you like to see in your primary streaming platform?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

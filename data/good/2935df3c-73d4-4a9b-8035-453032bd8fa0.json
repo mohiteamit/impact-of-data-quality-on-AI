@@ -1,0 +1,119 @@
+{
+    "survey_id": "2935df3c-73d4-4a9b-8035-453032bd8fa0",
+    "survey_name": "Home Gardening Practices and Preferences Survey",
+    "survey_brief": "This survey aims to understand the gardening habits, challenges, and preferences of home gardeners to inform product development and educational resources.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you engage in gardening activities at home?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Seasonally",
+                "Rarely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for easy selection. Ensure options cover all common frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you engage in gardening activities at home?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Seasonally",
+                    "Rarely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of plants do you typically grow? (Select all that apply)",
+            "answer_options": [
+                "Vegetables",
+                "Herbs",
+                "Flowers",
+                "Fruits",
+                "Succulents/Cacti",
+                "Indoor houseplants",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Add an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "What types of plants do you typically grow? (Select all that apply)",
+                "answer_options": [
+                    "Vegetables",
+                    "Herbs",
+                    "Flowers",
+                    "Fruits",
+                    "Succulents/Cacti",
+                    "Indoor houseplants",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary motivation for gardening?",
+            "answer_options": [
+                "Fresh produce/herbs",
+                "Mental relaxation",
+                "Home aesthetics",
+                "Environmental benefits",
+                "Hobby/leisure",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice with an 'Other' option for unlisted motivations.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with conditional text input if 'Other' is selected.",
+            "script": {
+                "question_text": "What is your primary motivation for gardening?",
+                "answer_options": [
+                    "Fresh produce/herbs",
+                    "Mental relaxation",
+                    "Home aesthetics",
+                    "Environmental benefits",
+                    "Hobby/leisure",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What are the biggest challenges you face in home gardening?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture diverse challenges. Limit response to 250 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT) with character limit.",
+            "script": {
+                "question_text": "What are the biggest challenges you face in home gardening?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which gardening tools or products do you wish were more accessible or affordable?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Rarely' in Q1 skip this question",
+            "client_notes": "Open-ended to identify market gaps. Display only for active gardeners.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT). Apply skip logic based on Q1.",
+            "script": {
+                "question_text": "Which gardening tools or products do you wish were more accessible or affordable?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Rarely' in Q1 skip this question"
+            }
+        }
+    ]
+}

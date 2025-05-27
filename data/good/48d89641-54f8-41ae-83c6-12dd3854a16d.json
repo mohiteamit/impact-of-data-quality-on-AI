@@ -1,0 +1,147 @@
+{
+    "survey_id": "48d89641-54f8-41ae-83c6-12dd3854a16d",
+    "survey_name": "Boutique Hotel Guest Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from guests about their recent stay at our boutique hotel to improve service quality and overall guest satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied were you with your overall stay at our hotel?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for ease of analysis. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "How satisfied were you with your overall stay at our hotel?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following amenities did you use during your stay? (Select all that apply)",
+            "answer_options": [
+                "Spa services",
+                "Fitness center",
+                "On-site restaurant",
+                "Pool",
+                "Room service",
+                "Concierge services"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to identify popular amenities. Ensure the options are exhaustive.",
+            "scripter_notes": "Field type: Checkbox (multi-choice)",
+            "script": {
+                "question_text": "Which of the following amenities did you use during your stay? (Select all that apply)",
+                "answer_options": [
+                    "Spa services",
+                    "Fitness center",
+                    "On-site restaurant",
+                    "Pool",
+                    "Room service",
+                    "Concierge services"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the cleanliness of your room?",
+            "answer_options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor",
+                "Very poor"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Another 5-point scale to gauge cleanliness, a critical factor for guest satisfaction.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "How would you rate the cleanliness of your room?",
+                "answer_options": [
+                    "Excellent",
+                    "Good",
+                    "Average",
+                    "Poor",
+                    "Very poor"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any issues you encountered during your stay:",
+            "answer_options": [],
+            "routing_logic": "If Q1 answer is 'Dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open-ended to capture specific issues. Useful for qualitative feedback.",
+            "scripter_notes": "Field type: Open text (text box)",
+            "script": {
+                "question_text": "Please describe any issues you encountered during your stay:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 answer is 'Dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend our hotel to friends or family?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Simple yes/no/maybe question to measure Net Promoter Score (NPS) potential.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "Would you recommend our hotel to friends or family?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What was the primary reason for your stay?",
+            "answer_options": [
+                "Business",
+                "Leisure",
+                "Special occasion (e.g., anniversary, birthday)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with text entry for flexibility.",
+            "scripter_notes": "Field type: Radio button with 'Other' option triggering a text box.",
+            "script": {
+                "question_text": "What was the primary reason for your stay?",
+                "answer_options": [
+                    "Business",
+                    "Leisure",
+                    "Special occasion (e.g., anniversary, birthday)",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

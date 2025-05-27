@@ -1,0 +1,137 @@
+{
+    "survey_id": "0a41b9c6-1843-47b4-bfc1-343eac4d2e2b",
+    "survey_name": "Consumer Preferences for Wearable Fitness Technology Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, usage patterns, and satisfaction levels with wearable fitness technology such as smartwatches, fitness bands, and health trackers.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following wearable fitness technologies do you currently own or use regularly?",
+            "answer_options": [
+                "Smartwatch (e.g., Apple Watch, Samsung Galaxy Watch)",
+                "Fitness band (e.g., Fitbit, Xiaomi Mi Band)",
+                "Health tracker (e.g., Garmin, Polar)",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to allow for multiple selections. Ensure options cover major market players.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes).",
+            "script": {
+                "question_text": "Which of the following wearable fitness technologies do you currently own or use regularly?",
+                "answer_options": [
+                    "Smartwatch (e.g., Apple Watch, Samsung Galaxy Watch)",
+                    "Fitness band (e.g., Fitbit, Xiaomi Mi Band)",
+                    "Health tracker (e.g., Garmin, Polar)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary wearable fitness device?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (I do not use one)"
+            ],
+            "routing_logic": "If Q1 answer is not 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale. Include a 'Not applicable' option for those who do not use wearable tech.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with your primary wearable fitness device?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (I do not use one)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you value the most in a wearable fitness device? (Select up to 3)",
+            "answer_options": [
+                "Step counting",
+                "Heart rate monitoring",
+                "Sleep tracking",
+                "GPS tracking",
+                "Calorie tracking",
+                "Water resistance",
+                "Battery life",
+                "Notifications (e.g., calls, messages)",
+                "Customizable watch faces",
+                "Integration with fitness apps"
+            ],
+            "routing_logic": "If Q1 answer is not 'None of the above'",
+            "client_notes": "Limit selections to 3 to prioritize top features. Randomize answer order to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with max selections = 3.",
+            "script": {
+                "question_text": "What features do you value the most in a wearable fitness device? (Select up to 3)",
+                "answer_options": [
+                    "Step counting",
+                    "Heart rate monitoring",
+                    "Sleep tracking",
+                    "GPS tracking",
+                    "Calorie tracking",
+                    "Water resistance",
+                    "Battery life",
+                    "Notifications (e.g., calls, messages)",
+                    "Customizable watch faces",
+                    "Integration with fitness apps"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you do not use a wearable fitness device?",
+            "answer_options": [
+                "Too expensive",
+                "Not useful for my lifestyle",
+                "Privacy concerns",
+                "Prefer using my smartphone for tracking",
+                "Uncomfortable to wear",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 answer is 'None of the above'",
+            "client_notes": "Include an 'Other' option with a text field for additional reasons. Ensure mobile-friendly design.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with an 'Other' option triggering an open-text field.",
+            "script": {
+                "question_text": "What is the primary reason you do not use a wearable fitness device?",
+                "answer_options": [
+                    "Too expensive",
+                    "Not useful for my lifestyle",
+                    "Privacy concerns",
+                    "Prefer using my smartphone for tracking",
+                    "Uncomfortable to wear",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 answer is 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "In your own words, what improvements would make you more likely to use or continue using a wearable fitness device?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-ended format to capture qualitative insights. Limit response length to 200 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit.",
+            "script": {
+                "question_text": "In your own words, what improvements would make you more likely to use or continue using a wearable fitness device?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

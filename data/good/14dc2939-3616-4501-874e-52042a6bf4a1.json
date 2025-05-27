@@ -1,0 +1,153 @@
+{
+    "survey_id": "14dc2939-3616-4501-874e-52042a6bf4a1",
+    "survey_name": "Smart City Public Wi-Fi Usage and Satisfaction Survey",
+    "survey_brief": "This survey aims to assess public satisfaction and usage patterns of smart city-provided free Wi-Fi services to improve coverage, speed, and reliability.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the city's free public Wi-Fi service?",
+            "answer_options": [
+                "Daily",
+                "Several times per week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point frequency scale to capture usage patterns. Consider making this a required question.",
+            "scripter_notes": "Single-choice radio buttons with 'Never' as an opt-out option.",
+            "script": {
+                "question_text": "How frequently do you use the city's free public Wi-Fi service?",
+                "answer_options": [
+                    "Daily",
+                    "Several times per week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary locations for using public Wi-Fi? (Select all that apply)",
+            "answer_options": [
+                "Parks and recreational areas",
+                "Public transportation hubs",
+                "Libraries",
+                "Government buildings",
+                "Downtown areas",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Skip if Q1 = 'Never'",
+            "client_notes": "Multi-select question to identify hotspot usage patterns. Include an 'Other' option with text field.",
+            "scripter_notes": "Multi-choice checkboxes with an 'Other' option that triggers a text input field.",
+            "script": {
+                "question_text": "What are your primary locations for using public Wi-Fi? (Select all that apply)",
+                "answer_options": [
+                    "Parks and recreational areas",
+                    "Public transportation hubs",
+                    "Libraries",
+                    "Government buildings",
+                    "Downtown areas",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Skip if Q1 = 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the reliability of the public Wi-Fi connection?",
+            "answer_options": [
+                "Very reliable - almost no disconnections",
+                "Somewhat reliable - occasional issues",
+                "Neutral",
+                "Somewhat unreliable - frequent disconnections",
+                "Very unreliable - rarely works"
+            ],
+            "routing_logic": "Skip if Q1 = 'Never'",
+            "client_notes": "5-point Likert scale for reliability assessment. Consider adding a 'Not applicable' option if needed.",
+            "scripter_notes": "Single-choice radio buttons with neutral midpoint.",
+            "script": {
+                "question_text": "How would you rate the reliability of the public Wi-Fi connection?",
+                "answer_options": [
+                    "Very reliable - almost no disconnections",
+                    "Somewhat reliable - occasional issues",
+                    "Neutral",
+                    "Somewhat unreliable - frequent disconnections",
+                    "Very unreliable - rarely works"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Skip if Q1 = 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What types of activities do you typically perform using public Wi-Fi? (Select all that apply)",
+            "answer_options": [
+                "Checking email",
+                "Social media browsing",
+                "Streaming music/video",
+                "Online banking",
+                "Work-related tasks",
+                "School/educational activities",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Skip if Q1 = 'Never'",
+            "client_notes": "Multi-select to understand usage behavior. Important for infrastructure planning.",
+            "scripter_notes": "Multi-choice checkboxes with 'Other' text field option.",
+            "script": {
+                "question_text": "What types of activities do you typically perform using public Wi-Fi? (Select all that apply)",
+                "answer_options": [
+                    "Checking email",
+                    "Social media browsing",
+                    "Streaming music/video",
+                    "Online banking",
+                    "Work-related tasks",
+                    "School/educational activities",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Skip if Q1 = 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for the city's public Wi-Fi service?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Consider character limit (300-500 chars).",
+            "scripter_notes": "Open text field with character counter.",
+            "script": {
+                "question_text": "What improvements would you suggest for the city's public Wi-Fi service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you be willing to participate in a follow-up focus group about public Wi-Fi services?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe (please specify availability)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Recruitment question for qualitative research. Include conditional text field for 'Maybe'.",
+            "scripter_notes": "Single-choice with conditional text input for 'Maybe' selection.",
+            "script": {
+                "question_text": "Would you be willing to participate in a follow-up focus group about public Wi-Fi services?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe (please specify availability)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

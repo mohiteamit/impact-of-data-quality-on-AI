@@ -1,0 +1,95 @@
+{
+    "survey_id": "73d97298-ffdb-4338-ba04-c7b99d4cf841",
+    "survey_name": "Remote Learning Parental Support Survey",
+    "survey_brief": "This survey aims to understand the challenges and support needs of parents with children engaged in remote learning, to improve educational tools and resources.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many children in your household are currently engaged in remote learning?",
+            "answer_options": [
+                "1",
+                "2",
+                "3 or more"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a dropdown menu for mobile-friendly response collection.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How many children in your household are currently engaged in remote learning?",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3 or more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following challenges have you faced while supporting your child's remote learning? (Select all that apply)",
+            "answer_options": [
+                "Technical issues (e.g., internet connectivity, device availability)",
+                "Time management (balancing work and supervision)",
+                "Difficulty explaining academic content",
+                "Lack of engagement from child",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents with at least 1 child in remote learning (Q1 ≥ 1).",
+            "client_notes": "Ensure checkboxes are clearly labeled for multi-selection.",
+            "scripter_notes": "Field type: checkbox (multi-choice). Include an 'Other' option with open-text follow-up.",
+            "script": {
+                "question_text": "Which of the following challenges have you faced while supporting your child's remote learning? (Select all that apply)",
+                "answer_options": [
+                    "Technical issues (e.g., internet connectivity, device availability)",
+                    "Time management (balancing work and supervision)",
+                    "Difficulty explaining academic content",
+                    "Lack of engagement from child",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents with at least 1 child in remote learning (Q1 ≥ 1)."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What additional resources or support would help you better assist your child's remote learning?",
+            "answer_options": [],
+            "routing_logic": "Appears if respondent selected any option in Q2.",
+            "client_notes": "Allow for detailed responses; consider a larger text box.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What additional resources or support would help you better assist your child's remote learning?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if respondent selected any option in Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your child's current remote learning platform?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents with at least 1 child in remote learning (Q1 ≥ 1).",
+            "client_notes": "Use a Likert scale for clarity.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with your child's current remote learning platform?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents with at least 1 child in remote learning (Q1 ≥ 1)."
+            }
+        }
+    ]
+}

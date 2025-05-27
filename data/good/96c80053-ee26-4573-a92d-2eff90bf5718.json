@@ -1,0 +1,125 @@
+{
+    "survey_id": "96c80053-ee26-4573-a92d-2eff90bf5718",
+    "survey_name": "Consumer Preferences for Home Automation Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding home automation systems, including usage patterns, preferred features, and barriers to adoption.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently use any home automation systems in your household?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "If 'No' is selected, skip to Q4.",
+            "client_notes": "This question helps segment respondents based on their current usage of home automation systems.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Do you currently use any home automation systems in your household?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'No' is selected, skip to Q4."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following home automation features do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Smart lighting",
+                "Smart thermostats",
+                "Smart security systems",
+                "Smart speakers/voice assistants",
+                "Smart appliances",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if 'Yes' is selected in Q1.",
+            "client_notes": "Multi-choice question to identify the most popular features among current users.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes).",
+            "script": {
+                "question_text": "Which of the following home automation features do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Smart lighting",
+                    "Smart thermostats",
+                    "Smart security systems",
+                    "Smart speakers/voice assistants",
+                    "Smart appliances",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if 'Yes' is selected in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with your current home automation system? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Only appears if 'Yes' is selected in Q1.",
+            "client_notes": "Likert scale question to measure satisfaction levels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with your current home automation system? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if 'Yes' is selected in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors would encourage you to adopt or expand your use of home automation systems?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to gather qualitative insights on adoption drivers.",
+            "scripter_notes": "Field type: OPEN_TEXT (text input).",
+            "script": {
+                "question_text": "What factors would encourage you to adopt or expand your use of home automation systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following are barriers to your adoption of home automation systems? (Select all that apply)",
+            "answer_options": [
+                "High cost",
+                "Privacy concerns",
+                "Complexity of installation/use",
+                "Lack of perceived need",
+                "Compatibility issues with existing devices",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Multi-choice question to identify common barriers.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes).",
+            "script": {
+                "question_text": "Which of the following are barriers to your adoption of home automation systems? (Select all that apply)",
+                "answer_options": [
+                    "High cost",
+                    "Privacy concerns",
+                    "Complexity of installation/use",
+                    "Lack of perceived need",
+                    "Compatibility issues with existing devices",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

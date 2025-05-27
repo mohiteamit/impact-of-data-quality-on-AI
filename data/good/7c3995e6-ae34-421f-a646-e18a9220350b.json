@@ -1,0 +1,131 @@
+{
+    "survey_id": "7c3995e6-ae34-421f-a646-e18a9220350b",
+    "survey_name": "Consumer Preferences for Smart Home Security Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, concerns, and adoption barriers related to smart home security systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home security features do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Smart doorbell cameras",
+                "Smart locks",
+                "Motion-activated lighting",
+                "Window/door sensors",
+                "Security alarms with smart monitoring",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a multi-select format to allow multiple responses. Ensure options are mobile-friendly and clearly labeled.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "Which of the following smart home security features do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Smart doorbell cameras",
+                    "Smart locks",
+                    "Motion-activated lighting",
+                    "Window/door sensors",
+                    "Security alarms with smart monitoring",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current smart home security system?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (do not own one)"
+            ],
+            "routing_logic": "Appears if Q1 does not select 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale with clear labels. Include a 'Not applicable' option.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home security system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (do not own one)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you have not adopted a smart home security system?",
+            "answer_options": [
+                "High cost of equipment/subscription",
+                "Privacy/security concerns",
+                "Complexity of installation",
+                "Lack of perceived need",
+                "Prefer traditional security systems",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 selects 'None of the above'",
+            "client_notes": "Include an 'Other' option with a text field for additional details.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional open-text (radio button + conditional text input)",
+            "script": {
+                "question_text": "What is the primary reason you have not adopted a smart home security system?",
+                "answer_options": [
+                    "High cost of equipment/subscription",
+                    "Privacy/security concerns",
+                    "Complexity of installation",
+                    "Lack of perceived need",
+                    "Prefer traditional security systems",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 selects 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional features would encourage you to adopt or upgrade your smart home security system?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use an open-ended format to capture qualitative insights. Limit response length to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with character limit)",
+            "script": {
+                "question_text": "What additional features would encourage you to adopt or upgrade your smart home security system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How important is professional installation support when purchasing a smart home security system?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point importance scale. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button, randomized order)",
+            "script": {
+                "question_text": "How important is professional installation support when purchasing a smart home security system?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

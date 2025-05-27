@@ -1,0 +1,151 @@
+{
+    "survey_id": "f834618f-cb05-4d8c-b2e9-79e8677480a9",
+    "survey_name": "Pet Ownership and Lifestyle Survey",
+    "survey_brief": "This survey aims to understand the relationship between pet ownership and lifestyle choices, including pet care habits, spending patterns, and overall satisfaction with pet ownership.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own a pet?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Binary question to segment respondents. Ensure clear wording.",
+            "scripter_notes": "Single-choice radio button.",
+            "script": {
+                "question_text": "Do you currently own a pet?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What type of pet do you own? (Select all that apply)",
+            "answer_options": [
+                "Dog",
+                "Cat",
+                "Bird",
+                "Fish",
+                "Reptile",
+                "Small mammal (e.g., hamster, rabbit)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Multi-choice question to capture diverse pet ownership. Include 'Other' for uncommon pets.",
+            "scripter_notes": "Multi-choice checkbox with an open-text option if 'Other' selected.",
+            "script": {
+                "question_text": "What type of pet do you own? (Select all that apply)",
+                "answer_options": [
+                    "Dog",
+                    "Cat",
+                    "Bird",
+                    "Fish",
+                    "Reptile",
+                    "Small mammal (e.g., hamster, rabbit)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate your overall satisfaction with pet ownership?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Likert scale question to measure satisfaction. Ensure balanced options.",
+            "scripter_notes": "Single-choice radio button.",
+            "script": {
+                "question_text": "How would you rate your overall satisfaction with pet ownership?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On average, how much do you spend monthly on pet care (including food, vet visits, toys, etc.)?",
+            "answer_options": [
+                "Less than $50",
+                "$50 - $100",
+                "$101 - $200",
+                "$201 - $300",
+                "More than $300"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Provide clear spending brackets to capture financial commitment.",
+            "scripter_notes": "Single-choice radio button.",
+            "script": {
+                "question_text": "On average, how much do you spend monthly on pet care (including food, vet visits, toys, etc.)?",
+                "answer_options": [
+                    "Less than $50",
+                    "$50 - $100",
+                    "$101 - $200",
+                    "$201 - $300",
+                    "More than $300"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you do not currently own a pet, what is the primary reason?",
+            "answer_options": [
+                "Allergies",
+                "Lack of time",
+                "Cost concerns",
+                "Housing restrictions",
+                "Prefer not to own a pet",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'No'",
+            "client_notes": "Multi-choice question to understand barriers to pet ownership.",
+            "scripter_notes": "Single-choice radio button with open-text option if 'Other' selected.",
+            "script": {
+                "question_text": "If you do not currently own a pet, what is the primary reason?",
+                "answer_options": [
+                    "Allergies",
+                    "Lack of time",
+                    "Cost concerns",
+                    "Housing restrictions",
+                    "Prefer not to own a pet",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'No'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How has owning a pet impacted your daily routine or lifestyle?",
+            "answer_options": [],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Open-ended question to capture qualitative insights. Limit response length to 250 characters.",
+            "scripter_notes": "Open-text field with character limit.",
+            "script": {
+                "question_text": "How has owning a pet impacted your daily routine or lifestyle?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,99 @@
+{
+    "survey_id": "f50ed91e-a4ba-4427-989a-05f4383f3d30",
+    "survey_name": "Corporate Travel Policy Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with the current corporate travel policies and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you travel for business purposes?",
+            "answer_options": [
+                "More than once a month",
+                "Once a month",
+                "Once every 2-3 months",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you travel for business purposes?",
+                "answer_options": [
+                    "More than once a month",
+                    "Once a month",
+                    "Once every 2-3 months",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following aspects of the corporate travel policy do you find most restrictive? (Select all that apply)",
+            "answer_options": [
+                "Budget limits for flights",
+                "Budget limits for accommodation",
+                "Approval process complexity",
+                "Limited choice of airlines/hotels",
+                "Lack of flexibility in travel dates"
+            ],
+            "routing_logic": "Respondents who answered 'More than once a month', 'Once a month', or 'Once every 2-3 months' in Q1",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option if needed.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following aspects of the corporate travel policy do you find most restrictive? (Select all that apply)",
+                "answer_options": [
+                    "Budget limits for flights",
+                    "Budget limits for accommodation",
+                    "Approval process complexity",
+                    "Limited choice of airlines/hotels",
+                    "Lack of flexibility in travel dates"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'More than once a month', 'Once a month', or 'Once every 2-3 months' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the support provided by the company's travel booking system?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered 'More than once a month', 'Once a month', or 'Once every 2-3 months' in Q1",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the support provided by the company's travel booking system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'More than once a month', 'Once a month', or 'Once every 2-3 months' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any additional challenges you face with the current corporate travel policy.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to capture qualitative feedback. Ensure the field is mobile-friendly.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT)",
+            "script": {
+                "question_text": "Please describe any additional challenges you face with the current corporate travel policy.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

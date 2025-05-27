@@ -1,0 +1,131 @@
+{
+    "survey_id": "cefacccd-16a0-48c7-ae39-6a1c897a0a34",
+    "survey_name": "Sustainable Grocery Shopping Behaviors Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors related to sustainable grocery shopping, including factors influencing purchasing decisions and barriers to adopting eco-friendly practices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you prioritize purchasing sustainably sourced groceries?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a balanced 5-point frequency scale for reliable data. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Single-choice radio buttons, mandatory response.",
+            "script": {
+                "question_text": "How often do you prioritize purchasing sustainably sourced groceries?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors most influence your sustainable grocery purchases? (Select up to 3)",
+            "answer_options": [
+                "Product packaging",
+                "Certifications (e.g., organic, fair trade)",
+                "Brand's sustainability reputation",
+                "Local sourcing",
+                "Price",
+                "Personal health benefits",
+                "Environmental impact"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Multi-select with max 3 choices. Randomize option order to reduce bias.",
+            "scripter_notes": "Checkbox input with selection limit enforced.",
+            "script": {
+                "question_text": "Which of the following factors most influence your sustainable grocery purchases? (Select up to 3)",
+                "answer_options": [
+                    "Product packaging",
+                    "Certifications (e.g., organic, fair trade)",
+                    "Brand's sustainability reputation",
+                    "Local sourcing",
+                    "Price",
+                    "Personal health benefits",
+                    "Environmental impact"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the main barriers that prevent you from purchasing more sustainable groceries?",
+            "answer_options": [
+                "Higher cost",
+                "Limited availability",
+                "Lack of clear labeling",
+                "Inconvenience",
+                "Perceived lack of quality",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is 'Sometimes', 'Rarely', or 'Never'",
+            "client_notes": "Include 'Other' with text field for nuanced responses. Display logic targets less frequent sustainable shoppers.",
+            "scripter_notes": "Checkbox input with optional 'Other' text field.",
+            "script": {
+                "question_text": "What are the main barriers that prevent you from purchasing more sustainable groceries?",
+                "answer_options": [
+                    "Higher cost",
+                    "Limited availability",
+                    "Lack of clear labeling",
+                    "Inconvenience",
+                    "Perceived lack of quality",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is 'Sometimes', 'Rarely', or 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much more would you be willing to pay for groceries with certified sustainable packaging?",
+            "answer_options": [
+                "Not willing to pay more",
+                "1-5% more",
+                "6-10% more",
+                "11-15% more",
+                "Over 15% more"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use percentage ranges for actionable pricing insights. Avoid overlapping ranges.",
+            "scripter_notes": "Single-choice radio buttons with 'Not willing' as first option.",
+            "script": {
+                "question_text": "How much more would you be willing to pay for groceries with certified sustainable packaging?",
+                "answer_options": [
+                    "Not willing to pay more",
+                    "1-5% more",
+                    "6-10% more",
+                    "11-15% more",
+                    "Over 15% more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to buy more sustainable groceries? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-text field to capture qualitative insights. Set 300-character limit.",
+            "scripter_notes": "Text area input with character counter.",
+            "script": {
+                "question_text": "What improvements would encourage you to buy more sustainable groceries? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,223 @@
+{
+    "survey_id": "dcdd919a-d407-4988-82b4-df4578a7c476",
+    "survey_name": "Consumer Preferences for Smart Home Automation Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding smart home automation systems, including adoption barriers, feature priorities, and satisfaction levels.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home automation systems do you currently own or use? (Select all that apply)",
+            "answer_options": [
+                "Smart lighting systems",
+                "Smart thermostats",
+                "Smart security cameras",
+                "Smart door locks",
+                "Smart voice assistants (e.g., Amazon Alexa, Google Home)",
+                "Smart plugs or outlets",
+                "Smart home hubs",
+                "None of the above"
+            ],
+            "routing_logic": "If 'None of the above' is selected, skip to Q5.",
+            "client_notes": "This is a multi-choice question. Ensure the options cover a broad range of smart home devices for comprehensive insights.",
+            "scripter_notes": "Field type: checkbox. Allow multiple selections.",
+            "script": {
+                "question_text": "Which of the following smart home automation systems do you currently own or use? (Select all that apply)",
+                "answer_options": [
+                    "Smart lighting systems",
+                    "Smart thermostats",
+                    "Smart security cameras",
+                    "Smart door locks",
+                    "Smart voice assistants (e.g., Amazon Alexa, Google Home)",
+                    "Smart plugs or outlets",
+                    "Smart home hubs",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If 'None of the above' is selected, skip to Q5."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What was the primary reason for purchasing your smart home automation system(s)?",
+            "answer_options": [
+                "Energy efficiency and cost savings",
+                "Enhanced security",
+                "Convenience and automation",
+                "Remote access and control",
+                "Recommendation from friends/family",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If 'Other (please specify)' is selected, display an open-text field for elaboration.",
+            "client_notes": "Include an open-text option for respondents to provide unique reasons not listed.",
+            "scripter_notes": "Field type: radio button with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What was the primary reason for purchasing your smart home automation system(s)?",
+                "answer_options": [
+                    "Energy efficiency and cost savings",
+                    "Enhanced security",
+                    "Convenience and automation",
+                    "Remote access and control",
+                    "Recommendation from friends/family",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'Other (please specify)' is selected, display an open-text field for elaboration."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your current smart home automation system(s)?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'None of the above'.",
+            "client_notes": "Use a standard 5-point Likert scale for consistency.",
+            "scripter_notes": "Field type: radio button. Ensure question is skipped if Q1 answer is 'None of the above'.",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home automation system(s)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'None of the above'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which features are most important to you when selecting a smart home automation system? (Select up to 3)",
+            "answer_options": [
+                "Ease of installation",
+                "Compatibility with other devices",
+                "Voice control capabilities",
+                "Mobile app functionality",
+                "Energy-saving features",
+                "Security features",
+                "Customer support",
+                "Price/affordability"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'None of the above'.",
+            "client_notes": "Limit selections to 3 to prioritize top features. Randomize answer options to reduce bias.",
+            "scripter_notes": "Field type: checkbox with a maximum of 3 selections. Randomize answer options.",
+            "script": {
+                "question_text": "Which features are most important to you when selecting a smart home automation system? (Select up to 3)",
+                "answer_options": [
+                    "Ease of installation",
+                    "Compatibility with other devices",
+                    "Voice control capabilities",
+                    "Mobile app functionality",
+                    "Energy-saving features",
+                    "Security features",
+                    "Customer support",
+                    "Price/affordability"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'None of the above'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you do not currently own a smart home automation system, what is the primary reason?",
+            "answer_options": [
+                "High cost",
+                "Privacy concerns",
+                "Lack of perceived need",
+                "Complexity of setup/use",
+                "Prefer non-smart alternatives",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 answer is 'None of the above'.",
+            "client_notes": "Include an open-text option for respondents to provide unique reasons not listed.",
+            "scripter_notes": "Field type: radio button with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "If you do not currently own a smart home automation system, what is the primary reason?",
+                "answer_options": [
+                    "High cost",
+                    "Privacy concerns",
+                    "Lack of perceived need",
+                    "Complexity of setup/use",
+                    "Prefer non-smart alternatives",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is 'None of the above'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What factors would encourage you to adopt or expand your use of smart home automation systems? (Select all that apply)",
+            "answer_options": [
+                "Lower prices",
+                "Better privacy protections",
+                "Simpler setup and use",
+                "More reliable performance",
+                "Integration with existing devices",
+                "Positive reviews/recommendations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If 'Other (please specify)' is selected, display an open-text field for elaboration.",
+            "client_notes": "This question helps identify barriers to adoption. Include an open-text option for unique responses.",
+            "scripter_notes": "Field type: checkbox with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What factors would encourage you to adopt or expand your use of smart home automation systems? (Select all that apply)",
+                "answer_options": [
+                    "Lower prices",
+                    "Better privacy protections",
+                    "Simpler setup and use",
+                    "More reliable performance",
+                    "Integration with existing devices",
+                    "Positive reviews/recommendations",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If 'Other (please specify)' is selected, display an open-text field for elaboration."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to purchase a smart home automation system in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a standard 5-point Likert scale to measure purchase intent.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How likely are you to purchase a smart home automation system in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Please share any additional comments or concerns you have about smart home automation systems.",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative insights. Ensure the response box is large enough for detailed feedback.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "Please share any additional comments or concerns you have about smart home automation systems.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

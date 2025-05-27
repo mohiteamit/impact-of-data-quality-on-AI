@@ -1,0 +1,137 @@
+{
+    "survey_id": "b1537761-96cb-4de0-9a4a-686787f0e560",
+    "survey_name": "Consumer Preferences for Home Meal Kit Delivery Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, satisfaction levels, and pain points related to home meal kit delivery services to help providers improve their offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you currently use meal kit delivery services?",
+            "answer_options": [
+                "Weekly",
+                "Bi-weekly",
+                "Monthly",
+                "Less than once a month",
+                "Never used"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a radio button scale for clear single-selection. This helps segment users from non-users for subsequent questions.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "How frequently do you currently use meal kit delivery services?",
+                "answer_options": [
+                    "Weekly",
+                    "Bi-weekly",
+                    "Monthly",
+                    "Less than once a month",
+                    "Never used"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which factors are most important to you when selecting a meal kit service? (Select up to 3)",
+            "answer_options": [
+                "Price",
+                "Variety of meals",
+                "Freshness of ingredients",
+                "Ease of preparation",
+                "Dietary restrictions accommodated",
+                "Organic/sustainable sourcing",
+                "Portion sizes",
+                "Delivery flexibility"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'Never used'",
+            "client_notes": "Use checkboxes for multi-select. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: Checkbox (multi-choice) with max 3 selections",
+            "script": {
+                "question_text": "Which factors are most important to you when selecting a meal kit service? (Select up to 3)",
+                "answer_options": [
+                    "Price",
+                    "Variety of meals",
+                    "Freshness of ingredients",
+                    "Ease of preparation",
+                    "Dietary restrictions accommodated",
+                    "Organic/sustainable sourcing",
+                    "Portion sizes",
+                    "Delivery flexibility"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'Never used'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary reason for not using meal kit delivery services?",
+            "answer_options": [
+                "Too expensive",
+                "Prefer grocery shopping",
+                "Not enough meal variety",
+                "Concerns about ingredient quality",
+                "Don't cook enough at home",
+                "Environmental packaging concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 answer is 'Never used'",
+            "client_notes": "Include an 'Other' open-field option to capture unlisted reasons.",
+            "scripter_notes": "Field type: Radio button with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What is your primary reason for not using meal kit delivery services?",
+                "answer_options": [
+                    "Too expensive",
+                    "Prefer grocery shopping",
+                    "Not enough meal variety",
+                    "Concerns about ingredient quality",
+                    "Don't cook enough at home",
+                    "Environmental packaging concerns",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is 'Never used'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current meal kit service in terms of recipe clarity and instructions?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "N/A (don't use)"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'Never used'",
+            "client_notes": "5-point Likert scale with neutral midpoint. Mobile-friendly vertical layout.",
+            "scripter_notes": "Field type: Radio button with emoji support for visual scale",
+            "script": {
+                "question_text": "How satisfied are you with your current meal kit service in terms of recipe clarity and instructions?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "N/A (don't use)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'Never used'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would make you more likely to use or continue using meal kit services?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended to capture qualitative insights. Set character limit to 500.",
+            "scripter_notes": "Field type: Open text box with validation",
+            "script": {
+                "question_text": "What improvements would make you more likely to use or continue using meal kit services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

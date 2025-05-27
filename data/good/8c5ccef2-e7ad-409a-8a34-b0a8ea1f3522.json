@@ -1,0 +1,131 @@
+{
+    "survey_id": "8c5ccef2-e7ad-409a-8a34-b0a8ea1f3522",
+    "survey_name": "Home Office Design and Productivity Survey",
+    "survey_brief": "This survey aims to understand how home office design impacts productivity and comfort among remote workers.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you work from your home office?",
+            "answer_options": [
+                "Every workday",
+                "3-4 days a week",
+                "1-2 days a week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "Use a single-choice format. Consider randomizing options to minimize order bias.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How often do you work from your home office?",
+                "answer_options": [
+                    "Every workday",
+                    "3-4 days a week",
+                    "1-2 days a week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following home office features do you consider essential? (Select all that apply)",
+            "answer_options": [
+                "Ergonomic chair",
+                "Standing desk",
+                "Proper lighting",
+                "Noise-canceling headphones",
+                "Multiple monitors",
+                "Plants or greenery",
+                "Natural light",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use a multi-choice format. Include 'Other' with a text field for additional input.",
+            "scripter_notes": "Field type: checkboxes with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which of the following home office features do you consider essential? (Select all that apply)",
+                "answer_options": [
+                    "Ergonomic chair",
+                    "Standing desk",
+                    "Proper lighting",
+                    "Noise-canceling headphones",
+                    "Multiple monitors",
+                    "Plants or greenery",
+                    "Natural light",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the overall comfort of your home office setup?",
+            "answer_options": [
+                "Very uncomfortable",
+                "Somewhat uncomfortable",
+                "Neutral",
+                "Somewhat comfortable",
+                "Very comfortable"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use a Likert scale for consistency. Include a 'Neutral' midpoint option.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How would you rate the overall comfort of your home office setup?",
+                "answer_options": [
+                    "Very uncomfortable",
+                    "Somewhat uncomfortable",
+                    "Neutral",
+                    "Somewhat comfortable",
+                    "Very comfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the biggest challenge you face with your current home office setup?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 250 characters.",
+            "scripter_notes": "Field type: open-text with character limit",
+            "script": {
+                "question_text": "What is the biggest challenge you face with your current home office setup?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Has your productivity changed since setting up your home office?",
+            "answer_options": [
+                "Significantly decreased",
+                "Slightly decreased",
+                "No change",
+                "Slightly increased",
+                "Significantly increased"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use a balanced Likert scale. Randomize order for half of respondents to reduce bias.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "Has your productivity changed since setting up your home office?",
+                "answer_options": [
+                    "Significantly decreased",
+                    "Slightly decreased",
+                    "No change",
+                    "Slightly increased",
+                    "Significantly increased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        }
+    ]
+}

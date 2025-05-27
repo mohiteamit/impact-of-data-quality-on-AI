@@ -1,0 +1,143 @@
+{
+    "survey_id": "9b3580c5-3af1-4b32-b2be-4d84e3dced9a",
+    "survey_name": "Consumer Preferences for Smart Home Device Integration Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and challenges related to integrating various smart home devices into a unified ecosystem.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many smart home devices do you currently own?",
+            "answer_options": [
+                "None",
+                "1-2 devices",
+                "3-5 devices",
+                "6-10 devices",
+                "More than 10 devices"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a radio button scale for easy selection. Ensure the ranges are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How many smart home devices do you currently own?",
+                "answer_options": [
+                    "None",
+                    "1-2 devices",
+                    "3-5 devices",
+                    "6-10 devices",
+                    "More than 10 devices"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following smart home device categories do you own? (Select all that apply)",
+            "answer_options": [
+                "Smart lighting",
+                "Smart thermostats",
+                "Smart security cameras",
+                "Smart speakers/assistants",
+                "Smart plugs/switches",
+                "Smart door locks",
+                "Smart appliances (e.g., fridge, oven)",
+                "Smart TVs/entertainment systems",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who own at least 1 device (Q1 ≠ 'None')",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with text entry.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with optional text entry for 'Other'",
+            "script": {
+                "question_text": "Which of the following smart home device categories do you own? (Select all that apply)",
+                "answer_options": [
+                    "Smart lighting",
+                    "Smart thermostats",
+                    "Smart security cameras",
+                    "Smart speakers/assistants",
+                    "Smart plugs/switches",
+                    "Smart door locks",
+                    "Smart appliances (e.g., fridge, oven)",
+                    "Smart TVs/entertainment systems",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who own at least 1 device (Q1 ≠ 'None')"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your biggest challenge when integrating different smart home devices?",
+            "answer_options": [
+                "Compatibility issues between brands",
+                "Complex setup processes",
+                "Limited functionality when integrated",
+                "Security/privacy concerns",
+                "High cost of integration",
+                "Lack of technical support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who own multiple device categories (Q2 selected >1 category excluding 'Other')",
+            "client_notes": "Single-choice with radio buttons. Include an 'Other' option with text entry for unlisted challenges.",
+            "scripter_notes": "Field type: radio button (single-choice) with optional text entry for 'Other'",
+            "script": {
+                "question_text": "What is your biggest challenge when integrating different smart home devices?",
+                "answer_options": [
+                    "Compatibility issues between brands",
+                    "Complex setup processes",
+                    "Limited functionality when integrated",
+                    "Security/privacy concerns",
+                    "High cost of integration",
+                    "Lack of technical support",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who own multiple device categories (Q2 selected >1 category excluding 'Other')"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which factors are most important to you when choosing a smart home ecosystem? (Rank top 3, where 1 is most important)",
+            "answer_options": [
+                "Device compatibility",
+                "Ease of use",
+                "Privacy/security features",
+                "Brand reputation",
+                "Price/affordability",
+                "Customer support",
+                "Integration with other services (e.g., voice assistants)",
+                "Regular software updates"
+            ],
+            "routing_logic": "Appears for all respondents who own at least 1 device (Q1 ≠ 'None')",
+            "client_notes": "Use a ranking question type where respondents can drag and drop or assign numbers to their top 3 choices.",
+            "scripter_notes": "Field type: ranking question (select and order 3 options)",
+            "script": {
+                "question_text": "Which factors are most important to you when choosing a smart home ecosystem? (Rank top 3, where 1 is most important)",
+                "answer_options": [
+                    "Device compatibility",
+                    "Ease of use",
+                    "Privacy/security features",
+                    "Brand reputation",
+                    "Price/affordability",
+                    "Customer support",
+                    "Integration with other services (e.g., voice assistants)",
+                    "Regular software updates"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents who own at least 1 device (Q1 ≠ 'None')"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What would encourage you to purchase additional smart home devices to integrate with your current setup?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents who own at least 1 device (Q1 ≠ 'None')",
+            "client_notes": "Open-ended question to capture qualitative insights. Use a text box with a 500-character limit.",
+            "scripter_notes": "Field type: open text (500-character limit)",
+            "script": {
+                "question_text": "What would encourage you to purchase additional smart home devices to integrate with your current setup?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents who own at least 1 device (Q1 ≠ 'None')"
+            }
+        }
+    ]
+}

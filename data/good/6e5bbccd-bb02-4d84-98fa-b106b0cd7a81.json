@@ -1,0 +1,133 @@
+{
+    "survey_id": "6e5bbccd-bb02-4d84-98fa-b106b0cd7a81",
+    "survey_name": "Eco-Friendly Commuting Preferences Survey",
+    "survey_brief": "This survey aims to understand preferences and challenges related to eco-friendly commuting options among urban professionals.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following eco-friendly commuting options do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Public transportation (bus, train, subway)",
+                "Bicycle (personal or shared)",
+                "Electric scooter or bike (shared or personal)",
+                "Walking",
+                "Carpooling or ridesharing",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a multi-choice format to capture diverse commuting habits. Ensure options are mutually exclusive where possible.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox). Randomize answer options to avoid bias.",
+            "script": {
+                "question_text": "Which of the following eco-friendly commuting options do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Public transportation (bus, train, subway)",
+                    "Bicycle (personal or shared)",
+                    "Electric scooter or bike (shared or personal)",
+                    "Walking",
+                    "Carpooling or ridesharing",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is the primary reason you choose eco-friendly commuting options?",
+            "answer_options": [
+                "Environmental concerns",
+                "Cost savings",
+                "Health and fitness benefits",
+                "Convenience",
+                "Employer incentives (e.g., subsidies)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 ≠ 'None of the above'",
+            "client_notes": "Include an 'Other' option with a text field for qualitative insights. Consider a single-choice format for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you choose eco-friendly commuting options?",
+                "answer_options": [
+                    "Environmental concerns",
+                    "Cost savings",
+                    "Health and fitness benefits",
+                    "Convenience",
+                    "Employer incentives (e.g., subsidies)",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 ≠ 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers prevent you from using eco-friendly commuting options more frequently? (Select up to 3)",
+            "answer_options": [
+                "Limited availability in my area",
+                "Longer travel time",
+                "Safety concerns",
+                "Unreliable infrastructure (e.g., bike lanes)",
+                "Lack of employer support",
+                "Personal comfort preferences",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a multi-choice format with a limit of 3 selections to prioritize barriers. Randomize options to avoid order bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with max_selections=3.",
+            "script": {
+                "question_text": "What barriers prevent you from using eco-friendly commuting options more frequently? (Select up to 3)",
+                "answer_options": [
+                    "Limited availability in my area",
+                    "Longer travel time",
+                    "Safety concerns",
+                    "Unreliable infrastructure (e.g., bike lanes)",
+                    "Lack of employer support",
+                    "Personal comfort preferences",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to switch to an eco-friendly commuting option if your employer offered financial incentives (e.g., subsidies, rewards)?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a Likert scale for measurable insights. Include a 'Neutral' midpoint to avoid forced responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button). Display options vertically.",
+            "script": {
+                "question_text": "How likely are you to switch to an eco-friendly commuting option if your employer offered financial incentives (e.g., subsidies, rewards)?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to use eco-friendly commuting options more often? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use an open-text field to gather qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit validation.",
+            "script": {
+                "question_text": "What improvements would encourage you to use eco-friendly commuting options more often? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

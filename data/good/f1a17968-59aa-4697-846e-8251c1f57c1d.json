@@ -1,0 +1,135 @@
+{
+    "survey_id": "f1a17968-59aa-4697-846e-8251c1f57c1d",
+    "survey_name": "Consumer Preferences for Smart Home Security Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and concerns regarding smart home security systems to help manufacturers and service providers better meet customer needs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home security features do you currently use?",
+            "answer_options": [
+                "Smart doorbell cameras",
+                "Smart locks",
+                "Motion sensors",
+                "Window/door sensors",
+                "Glass break sensors",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use checkboxes for multiple selections. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "Which of the following smart home security features do you currently use?",
+                "answer_options": [
+                    "Smart doorbell cameras",
+                    "Smart locks",
+                    "Motion sensors",
+                    "Window/door sensors",
+                    "Glass break sensors",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current smart home security system?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale. Randomize order if possible to reduce bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home security system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the top three factors you consider when choosing a smart home security system?",
+            "answer_options": [
+                "Price",
+                "Ease of installation",
+                "Brand reputation",
+                "Integration with other smart devices",
+                "Customer support",
+                "Advanced features (e.g., facial recognition)",
+                "Data privacy and security",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow respondents to select up to three options. Include an 'Other' field with text input.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max_selections=3 and optional open-text for 'Other'",
+            "script": {
+                "question_text": "What are the top three factors you consider when choosing a smart home security system?",
+                "answer_options": [
+                    "Price",
+                    "Ease of installation",
+                    "Brand reputation",
+                    "Integration with other smart devices",
+                    "Customer support",
+                    "Advanced features (e.g., facial recognition)",
+                    "Data privacy and security",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about using smart home security systems?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using smart home security systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your current smart home security system to others?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely",
+                "Not applicable (I don't use a smart home security system)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Include a 'Not applicable' option for respondents without a system.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How likely are you to recommend your current smart home security system to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely",
+                    "Not applicable (I don't use a smart home security system)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

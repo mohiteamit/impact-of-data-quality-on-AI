@@ -1,0 +1,129 @@
+{
+    "survey_id": "6d7d804c-7826-46f4-95af-4413dd1b24d6",
+    "survey_name": "Community Solar Energy Adoption Survey",
+    "survey_brief": "This survey aims to understand community interest and barriers in adopting solar energy solutions for residential use.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with residential solar energy systems?",
+            "answer_options": [
+                "Not at all familiar",
+                "Slightly familiar",
+                "Moderately familiar",
+                "Very familiar",
+                "Extremely familiar"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point Likert scale for familiarity assessment. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Single-choice radio buttons, mandatory response.",
+            "script": {
+                "question_text": "How familiar are you with residential solar energy systems?",
+                "answer_options": [
+                    "Not at all familiar",
+                    "Slightly familiar",
+                    "Moderately familiar",
+                    "Very familiar",
+                    "Extremely familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors would motivate you to consider installing solar panels? (Select all that apply)",
+            "answer_options": [
+                "Reducing electricity bills",
+                "Environmental benefits",
+                "Government incentives/rebates",
+                "Increasing home value",
+                "Energy independence",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Multi-select question. Include 'None of the above' option to capture negative responses.",
+            "scripter_notes": "Multi-choice checkboxes, at least one selection required.",
+            "script": {
+                "question_text": "Which of the following factors would motivate you to consider installing solar panels? (Select all that apply)",
+                "answer_options": [
+                    "Reducing electricity bills",
+                    "Environmental benefits",
+                    "Government incentives/rebates",
+                    "Increasing home value",
+                    "Energy independence",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary barrier preventing you from adopting solar energy for your home?",
+            "answer_options": [
+                "High upfront costs",
+                "Uncertainty about savings",
+                "Roof suitability/issues",
+                "Lack of information",
+                "HOA/community restrictions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Extremely familiar'",
+            "client_notes": "Include 'Other' with open-text field for unique responses. Display logic based on Q1 response.",
+            "scripter_notes": "Single-choice with radio buttons and optional text field for 'Other'.",
+            "script": {
+                "question_text": "What is the primary barrier preventing you from adopting solar energy for your home?",
+                "answer_options": [
+                    "High upfront costs",
+                    "Uncertainty about savings",
+                    "Roof suitability/issues",
+                    "Lack of information",
+                    "HOA/community restrictions",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Extremely familiar'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to participate in a community solar program if it reduced your electricity costs by 10-20%?",
+            "answer_options": [
+                "Very unlikely",
+                "Unlikely",
+                "Neutral",
+                "Likely",
+                "Very likely"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "5-point Likert scale for likelihood assessment. Randomize scale if possible to reduce bias.",
+            "scripter_notes": "Single-choice radio buttons, mandatory response.",
+            "script": {
+                "question_text": "How likely are you to participate in a community solar program if it reduced your electricity costs by 10-20%?",
+                "answer_options": [
+                    "Very unlikely",
+                    "Unlikely",
+                    "Neutral",
+                    "Likely",
+                    "Very likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional information would you need to make an informed decision about solar energy for your home?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q3 response is 'Lack of information'",
+            "client_notes": "Open-ended question to capture specific information needs. Character limit: 500.",
+            "scripter_notes": "Open-text field with character counter.",
+            "script": {
+                "question_text": "What additional information would you need to make an informed decision about solar energy for your home?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q3 response is 'Lack of information'"
+            }
+        }
+    ]
+}

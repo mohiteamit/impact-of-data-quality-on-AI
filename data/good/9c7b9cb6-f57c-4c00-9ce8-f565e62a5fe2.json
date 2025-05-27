@@ -1,0 +1,129 @@
+{
+    "survey_id": "9c7b9cb6-f57c-4c00-9ce8-f565e62a5fe2",
+    "survey_name": "Consumer Preferences for Smart Home Health Monitoring Devices Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and adoption barriers related to smart home health monitoring devices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Are you currently using any smart home health monitoring devices (e.g., smart scales, blood pressure monitors, sleep trackers)?",
+            "answer_options": [
+                "Yes, I currently use one or more devices",
+                "No, but I am considering purchasing one",
+                "No, and I am not interested in purchasing one"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps segment the audience based on current usage. Ensure mobile-friendly radio button options.",
+            "scripter_notes": "Field type: single-choice (radio buttons)",
+            "script": {
+                "question_text": "Are you currently using any smart home health monitoring devices (e.g., smart scales, blood pressure monitors, sleep trackers)?",
+                "answer_options": [
+                    "Yes, I currently use one or more devices",
+                    "No, but I am considering purchasing one",
+                    "No, and I am not interested in purchasing one"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following smart home health monitoring devices do you currently own? (Select all that apply)",
+            "answer_options": [
+                "Smart scale",
+                "Blood pressure monitor",
+                "Sleep tracker",
+                "Glucose monitor",
+                "Pulse oximeter",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only shown if Q1 = 'Yes, I currently use one or more devices'",
+            "client_notes": "Multi-choice question to identify device penetration. Include an 'Other' option with text input for unspecified devices.",
+            "scripter_notes": "Field type: multi-choice (checkboxes) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which of the following smart home health monitoring devices do you currently own? (Select all that apply)",
+                "answer_options": [
+                    "Smart scale",
+                    "Blood pressure monitor",
+                    "Sleep tracker",
+                    "Glucose monitor",
+                    "Pulse oximeter",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 = 'Yes, I currently use one or more devices'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influenced your decision to purchase your smart home health monitoring device(s)? (Select up to 3)",
+            "answer_options": [
+                "Doctor's recommendation",
+                "Personal health goals",
+                "Ease of use",
+                "Data accuracy",
+                "Integration with other devices/apps",
+                "Price",
+                "Brand reputation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only shown if Q1 = 'Yes, I currently use one or more devices'",
+            "client_notes": "Limit selections to 3 to identify primary decision drivers. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: multi-choice (checkboxes) with max selections = 3 and an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What factors influenced your decision to purchase your smart home health monitoring device(s)? (Select up to 3)",
+                "answer_options": [
+                    "Doctor's recommendation",
+                    "Personal health goals",
+                    "Ease of use",
+                    "Data accuracy",
+                    "Integration with other devices/apps",
+                    "Price",
+                    "Brand reputation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 = 'Yes, I currently use one or more devices'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about using smart home health monitoring devices?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative insights. Use a text box with a 500-character limit.",
+            "scripter_notes": "Field type: open-text with character limit",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using smart home health monitoring devices?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend smart home health monitoring devices to friends or family?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Only shown if Q1 = 'Yes, I currently use one or more devices'",
+            "client_notes": "Standard NPS-style question. Use a 5-point Likert scale for consistency.",
+            "scripter_notes": "Field type: single-choice (radio buttons), displayed horizontally on desktop",
+            "script": {
+                "question_text": "How likely are you to recommend smart home health monitoring devices to friends or family?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 = 'Yes, I currently use one or more devices'"
+            }
+        }
+    ]
+}

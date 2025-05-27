@@ -1,0 +1,157 @@
+{
+    "survey_id": "95b0e255-efe7-47dd-a8e5-679a8d624e49",
+    "survey_name": "Consumer Preferences for Plant-Based Dairy Alternatives Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding plant-based dairy alternatives, including motivations for use, preferred types, and barriers to adoption.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you consume plant-based dairy alternatives (e.g., almond milk, soy yogurt, oat cheese)?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use a single-choice scale to measure frequency. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you consume plant-based dairy alternatives (e.g., almond milk, soy yogurt, oat cheese)?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for choosing plant-based dairy alternatives? (Select all that apply)",
+            "answer_options": [
+                "Health benefits",
+                "Environmental concerns",
+                "Animal welfare",
+                "Dietary restrictions/allergies",
+                "Taste preference",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question is shown if Q1 is not 'Rarely or never'.",
+            "client_notes": "Use a multi-choice format to capture multiple motivations. Include an 'Other' option with open-ended follow-up.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What are your primary reasons for choosing plant-based dairy alternatives? (Select all that apply)",
+                "answer_options": [
+                    "Health benefits",
+                    "Environmental concerns",
+                    "Animal welfare",
+                    "Dietary restrictions/allergies",
+                    "Taste preference",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question is shown if Q1 is not 'Rarely or never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What types of plant-based dairy alternatives do you consume most frequently?",
+            "answer_options": [
+                "Plant-based milk (e.g., almond, oat, soy)",
+                "Plant-based yogurt",
+                "Plant-based cheese",
+                "Plant-based butter",
+                "Plant-based ice cream",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question is shown if Q1 is not 'Rarely or never'.",
+            "client_notes": "Use a single-choice format but allow an 'Other' option. Consider follow-up questions for specific product categories.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What types of plant-based dairy alternatives do you consume most frequently?",
+                "answer_options": [
+                    "Plant-based milk (e.g., almond, oat, soy)",
+                    "Plant-based yogurt",
+                    "Plant-based cheese",
+                    "Plant-based butter",
+                    "Plant-based ice cream",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown if Q1 is not 'Rarely or never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What barriers, if any, prevent you from consuming more plant-based dairy alternatives?",
+            "answer_options": [
+                "Price",
+                "Taste/texture",
+                "Limited availability",
+                "Lack of familiarity",
+                "Nutritional concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use a multi-choice format to identify key barriers. Include 'None' if applicable.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What barriers, if any, prevent you from consuming more plant-based dairy alternatives?",
+                "answer_options": [
+                    "Price",
+                    "Taste/texture",
+                    "Limited availability",
+                    "Lack of familiarity",
+                    "Nutritional concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How important is sustainability (e.g., carbon footprint, water usage) in your decision to purchase plant-based dairy alternatives?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "This question is shown if Q1 is not 'Rarely or never'.",
+            "client_notes": "Use a Likert scale to measure importance. Ensure neutral/middle option is clear.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How important is sustainability (e.g., carbon footprint, water usage) in your decision to purchase plant-based dairy alternatives?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown if Q1 is not 'Rarely or never'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional features or improvements would encourage you to purchase more plant-based dairy alternatives?",
+            "answer_options": [],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use an open-ended format to capture qualitative insights. Limit response length to 250 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT) with character limit.",
+            "script": {
+                "question_text": "What additional features or improvements would encourage you to purchase more plant-based dairy alternatives?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        }
+    ]
+}

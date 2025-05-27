@@ -1,0 +1,127 @@
+{
+    "survey_id": "0c859b30-a4f3-436e-bddd-f6f16c4695e4",
+    "survey_name": "Hybrid Event Attendee Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from participants of hybrid events (both in-person and virtual) to evaluate their overall experience, engagement, and suggestions for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which type of event did you primarily attend?",
+            "answer_options": [
+                "In-person only",
+                "Virtual only",
+                "Both in-person and virtual"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This helps segment responses for further analysis based on attendance type.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Default selection: None required.",
+            "script": {
+                "question_text": "Which type of event did you primarily attend?",
+                "answer_options": [
+                    "In-person only",
+                    "Virtual only",
+                    "Both in-person and virtual"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied were you with the event's overall organization?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a standard Likert scale for consistency. Include a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Randomize answer options if possible to avoid bias.",
+            "script": {
+                "question_text": "How satisfied were you with the event's overall organization?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What was the most valuable aspect of the event? (Select up to 3)",
+            "answer_options": [
+                "Keynote speeches",
+                "Breakout sessions",
+                "Networking opportunities",
+                "Exhibitor booths",
+                "Virtual platform features",
+                "Content quality",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow respondents to select multiple options but limit to 3 to prioritize feedback.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes). Include 'Other' as an open-text option if selected.",
+            "script": {
+                "question_text": "What was the most valuable aspect of the event? (Select up to 3)",
+                "answer_options": [
+                    "Keynote speeches",
+                    "Breakout sessions",
+                    "Networking opportunities",
+                    "Exhibitor booths",
+                    "Virtual platform features",
+                    "Content quality",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the ease of navigation for the virtual event platform?",
+            "answer_options": [
+                "Very easy",
+                "Easy",
+                "Neutral",
+                "Difficult",
+                "Very difficult",
+                "Not applicable (attended in-person only)"
+            ],
+            "routing_logic": "Respondents who selected 'Virtual only' or 'Both in-person and virtual' in Q1",
+            "client_notes": "This question should only appear for virtual attendees. Include a 'Not applicable' option for clarity.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Skip logic based on Q1 response.",
+            "script": {
+                "question_text": "How would you rate the ease of navigation for the virtual event platform?",
+                "answer_options": [
+                    "Very easy",
+                    "Easy",
+                    "Neutral",
+                    "Difficult",
+                    "Very difficult",
+                    "Not applicable (attended in-person only)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Virtual only' or 'Both in-person and virtual' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for future hybrid events?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: Open-text (text area). No answer options.",
+            "script": {
+                "question_text": "What improvements would you suggest for future hybrid events?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

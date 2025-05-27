@@ -1,0 +1,123 @@
+{
+    "survey_id": "e765cb4f-9042-4a0d-8d37-1b71159bd7de",
+    "survey_name": "Corporate Social Responsibility (CSR) Perception Survey",
+    "survey_brief": "This survey aims to understand how employees and customers perceive the company's CSR initiatives and their impact on brand loyalty and employee engagement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with our company's Corporate Social Responsibility (CSR) initiatives?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not familiar at all"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a single-choice scale to gauge baseline awareness. Consider adding a 'Prefer not to answer' option for sensitive respondents.",
+            "scripter_notes": "Field type: single-choice (radio buttons). Randomize answer options to avoid bias.",
+            "script": {
+                "question_text": "How familiar are you with our company's Corporate Social Responsibility (CSR) initiatives?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following CSR initiatives are you most interested in? (Select all that apply)",
+            "answer_options": [
+                "Environmental sustainability programs",
+                "Community volunteering opportunities",
+                "Charitable donations and partnerships",
+                "Ethical labor practices",
+                "Diversity and inclusion efforts",
+                "None of the above"
+            ],
+            "routing_logic": "Shown if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "Use multi-choice to allow multiple selections. Include an 'Other' open-text field if needed.",
+            "scripter_notes": "Field type: multi-choice (checkboxes). Ensure 'None of the above' deselects other options.",
+            "script": {
+                "question_text": "Which of the following CSR initiatives are you most interested in? (Select all that apply)",
+                "answer_options": [
+                    "Environmental sustainability programs",
+                    "Community volunteering opportunities",
+                    "Charitable donations and partnerships",
+                    "Ethical labor practices",
+                    "Diversity and inclusion efforts",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How has our company's CSR efforts influenced your perception of the brand?",
+            "answer_options": [
+                "Significantly improved",
+                "Slightly improved",
+                "No change",
+                "Slightly worsened",
+                "Significantly worsened"
+            ],
+            "routing_logic": "Shown if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "Use a Likert scale for nuanced feedback. Randomize positive/negative options to avoid order bias.",
+            "scripter_notes": "Field type: single-choice (radio buttons). Display vertically for mobile-friendliness.",
+            "script": {
+                "question_text": "How has our company's CSR efforts influenced your perception of the brand?",
+                "answer_options": [
+                    "Significantly improved",
+                    "Slightly improved",
+                    "No change",
+                    "Slightly worsened",
+                    "Significantly worsened"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What suggestions do you have for improving our CSR initiatives?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Open-text field to capture qualitative insights. Limit response to 500 characters.",
+            "scripter_notes": "Field type: open-text (text area). Enable character counter.",
+            "script": {
+                "question_text": "What suggestions do you have for improving our CSR initiatives?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you participate in future CSR-related activities if given the opportunity?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, depending on the activity",
+                "No, not interested",
+                "Unsure"
+            ],
+            "routing_logic": "Shown if respondent is an employee (determined by user metadata)",
+            "client_notes": "Single-choice with neutral option. Exclude for customer respondents.",
+            "scripter_notes": "Field type: single-choice (radio buttons). Trigger via user metadata filter.",
+            "script": {
+                "question_text": "Would you participate in future CSR-related activities if given the opportunity?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, depending on the activity",
+                    "No, not interested",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if respondent is an employee (determined by user metadata)"
+            }
+        }
+    ]
+}

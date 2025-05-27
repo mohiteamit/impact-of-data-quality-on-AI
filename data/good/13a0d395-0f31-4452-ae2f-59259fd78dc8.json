@@ -1,0 +1,127 @@
+{
+    "survey_id": "13a0d395-0f31-4452-ae2f-59259fd78dc8",
+    "survey_name": "Consumer Preferences for Smart Home Security Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, concerns, and adoption factors related to smart home security systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home security features do you currently use or are most interested in?",
+            "answer_options": [
+                "Smart doorbell with video",
+                "Smart locks",
+                "Security cameras (indoor/outdoor)",
+                "Motion sensors",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a multi-choice format to allow selection of multiple features if applicable.",
+            "scripter_notes": "Field type: Multi-choice (checkbox)",
+            "script": {
+                "question_text": "Which of the following smart home security features do you currently use or are most interested in?",
+                "answer_options": [
+                    "Smart doorbell with video",
+                    "Smart locks",
+                    "Security cameras (indoor/outdoor)",
+                    "Motion sensors",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for considering or using a smart home security system?",
+            "answer_options": [
+                "Enhanced security and safety",
+                "Remote monitoring capabilities",
+                "Integration with other smart home devices",
+                "Insurance discounts",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 != 'None of the above'",
+            "client_notes": "Include an 'Other' option with a text field for responses not listed.",
+            "scripter_notes": "Field type: Single-choice (radio button) with optional open text for 'Other'",
+            "script": {
+                "question_text": "What is your primary reason for considering or using a smart home security system?",
+                "answer_options": [
+                    "Enhanced security and safety",
+                    "Remote monitoring capabilities",
+                    "Integration with other smart home devices",
+                    "Insurance discounts",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How concerned are you about the privacy risks associated with smart home security systems?",
+            "answer_options": [
+                "Very concerned",
+                "Somewhat concerned",
+                "Neutral",
+                "Not very concerned",
+                "Not at all concerned"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a Likert scale for measuring levels of concern.",
+            "scripter_notes": "Field type: Single-choice (radio button)",
+            "script": {
+                "question_text": "How concerned are you about the privacy risks associated with smart home security systems?",
+                "answer_options": [
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Neutral",
+                    "Not very concerned",
+                    "Not at all concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors would most influence your decision to purchase a smart home security system?",
+            "answer_options": [
+                "Price and affordability",
+                "Ease of installation and use",
+                "Brand reputation",
+                "Customer reviews and ratings",
+                "Integration with existing smart home devices",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Allow multiple selections to gauge relative importance of factors.",
+            "scripter_notes": "Field type: Multi-choice (checkbox) with optional open text for 'Other'",
+            "script": {
+                "question_text": "What factors would most influence your decision to purchase a smart home security system?",
+                "answer_options": [
+                    "Price and affordability",
+                    "Ease of installation and use",
+                    "Brand reputation",
+                    "Customer reviews and ratings",
+                    "Integration with existing smart home devices",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features or improvements would you like to see in smart home security systems?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 != 'None of the above'",
+            "client_notes": "Open-ended question to capture qualitative feedback on desired features.",
+            "scripter_notes": "Field type: Open text",
+            "script": {
+                "question_text": "What additional features or improvements would you like to see in smart home security systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 != 'None of the above'"
+            }
+        }
+    ]
+}

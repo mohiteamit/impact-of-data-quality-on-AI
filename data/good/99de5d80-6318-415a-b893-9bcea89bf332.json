@@ -1,0 +1,133 @@
+{
+    "survey_id": "99de5d80-6318-415a-b893-9bcea89bf332",
+    "survey_name": "Consumer Preferences for Smart Fitness Wearables Survey",
+    "survey_brief": "This survey aims to gather insights into consumer preferences and behaviors regarding smart fitness wearables, including usage patterns, feature priorities, and purchasing considerations.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart fitness wearables do you currently own or use regularly?",
+            "answer_options": [
+                "Smartwatch (e.g., Apple Watch, Samsung Galaxy Watch)",
+                "Fitness tracker (e.g., Fitbit, Garmin)",
+                "Smart ring (e.g., Oura Ring)",
+                "Smart clothing (e.g., embedded sensors in shirts, shoes)",
+                "None of the above"
+            ],
+            "routing_logic": "Display for all respondents.",
+            "client_notes": "Ensure options cover major market segments. Consider adding an 'Other' option if niche products are relevant.",
+            "scripter_notes": "Field type: MULTI_CHOICE (allow multiple selections).",
+            "script": {
+                "question_text": "Which of the following smart fitness wearables do you currently own or use regularly?",
+                "answer_options": [
+                    "Smartwatch (e.g., Apple Watch, Samsung Galaxy Watch)",
+                    "Fitness tracker (e.g., Fitbit, Garmin)",
+                    "Smart ring (e.g., Oura Ring)",
+                    "Smart clothing (e.g., embedded sensors in shirts, shoes)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you use your smart fitness wearable?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Rarely or only for specific activities",
+                "No longer use it"
+            ],
+            "routing_logic": "Display if Q1 answer is not 'None of the above'.",
+            "client_notes": "Use a balanced scale to capture habitual vs. occasional usage.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you use your smart fitness wearable?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Rarely or only for specific activities",
+                    "No longer use it"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 answer is not 'None of the above'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features are most important to you when selecting a smart fitness wearable? (Select up to 3)",
+            "answer_options": [
+                "Heart rate monitoring",
+                "Sleep tracking",
+                "Step counting",
+                "GPS tracking",
+                "Water resistance",
+                "Battery life",
+                "Integration with other apps (e.g., Strava, MyFitnessPal)",
+                "Design/aesthetics",
+                "Price"
+            ],
+            "routing_logic": "Display for all respondents.",
+            "client_notes": "Limit selections to prioritize top features. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (max 3 selections).",
+            "script": {
+                "question_text": "What features are most important to you when selecting a smart fitness wearable? (Select up to 3)",
+                "answer_options": [
+                    "Heart rate monitoring",
+                    "Sleep tracking",
+                    "Step counting",
+                    "GPS tracking",
+                    "Water resistance",
+                    "Battery life",
+                    "Integration with other apps (e.g., Strava, MyFitnessPal)",
+                    "Design/aesthetics",
+                    "Price"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you have not purchased a smart fitness wearable?",
+            "answer_options": [
+                "Too expensive",
+                "Don't see the value",
+                "Privacy concerns",
+                "Already track fitness manually/with other tools",
+                "Prefer not to wear devices"
+            ],
+            "routing_logic": "Display only if Q1 answer is 'None of the above'.",
+            "client_notes": "Include an open-ended 'Other' option if needed to capture nuanced responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional 'Other' text field.",
+            "script": {
+                "question_text": "What is the primary reason you have not purchased a smart fitness wearable?",
+                "answer_options": [
+                    "Too expensive",
+                    "Don't see the value",
+                    "Privacy concerns",
+                    "Already track fitness manually/with other tools",
+                    "Prefer not to wear devices"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 answer is 'None of the above'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to use your smart fitness wearable more often?",
+            "answer_options": [],
+            "routing_logic": "Display if Q2 answer is 'Rarely or only for specific activities' or 'No longer use it'.",
+            "client_notes": "Open-ended to uncover pain points. Suggest a 100-character limit for readability.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with character limit).",
+            "script": {
+                "question_text": "What improvements would encourage you to use your smart fitness wearable more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q2 answer is 'Rarely or only for specific activities' or 'No longer use it'."
+            }
+        }
+    ]
+}

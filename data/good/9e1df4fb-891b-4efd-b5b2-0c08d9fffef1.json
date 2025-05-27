@@ -1,0 +1,127 @@
+{
+    "survey_id": "9e1df4fb-891b-4efd-b5b2-0c08d9fffef1",
+    "survey_name": "Consumer Preferences for Subscription-Based Fitness Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels regarding subscription-based fitness services, including digital platforms and hybrid (online + in-person) offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following subscription-based fitness services have you used in the past 12 months? (Select all that apply)",
+            "answer_options": [
+                "Digital-only fitness platforms (e.g., Peloton, Apple Fitness+)",
+                "Hybrid fitness memberships (online + in-person access)",
+                "Live-streamed class subscriptions",
+                "On-demand workout libraries",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option if space permits.",
+            "scripter_notes": "Field type: MULTI_CHOICE. Ensure 'None of the above' deselects other options if chosen.",
+            "script": {
+                "question_text": "Which of the following subscription-based fitness services have you used in the past 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Digital-only fitness platforms (e.g., Peloton, Apple Fitness+)",
+                    "Hybrid fitness memberships (online + in-person access)",
+                    "Live-streamed class subscriptions",
+                    "On-demand workout libraries",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary subscription fitness service?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'None of the above'",
+            "client_notes": "5-point Likert scale recommended. Randomize polarity if survey fatigue is a concern.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Display logic: Q1 != 'None of the above'.",
+            "script": {
+                "question_text": "How satisfied are you with your primary subscription fitness service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the most important factor when choosing a fitness subscription service?",
+            "answer_options": [
+                "Cost/value",
+                "Variety of workout types",
+                "Instructor quality",
+                "Community features",
+                "Personalization",
+                "Equipment requirements"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Single-select preferred for prioritization. Consider follow-up open-ended for elaboration.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with 'Other' text field optional.",
+            "script": {
+                "question_text": "What is the most important factor when choosing a fitness subscription service?",
+                "answer_options": [
+                    "Cost/value",
+                    "Variety of workout types",
+                    "Instructor quality",
+                    "Community features",
+                    "Personalization",
+                    "Equipment requirements"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What monthly price would you consider reasonable for a premium digital fitness subscription?",
+            "answer_options": [
+                "Under $10",
+                "$10-$19",
+                "$20-$29",
+                "$30-$39",
+                "$40+"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Bracket pricing based on market research. Include currency symbol for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with horizontal layout if space allows.",
+            "script": {
+                "question_text": "What monthly price would you consider reasonable for a premium digital fitness subscription?",
+                "answer_options": [
+                    "Under $10",
+                    "$10-$19",
+                    "$20-$29",
+                    "$30-$39",
+                    "$40+"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any features you wish existing fitness subscriptions offered but currently don't:",
+            "answer_options": [],
+            "routing_logic": "Appears if Q2 response is 'Somewhat dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Open-text allows for qualitative insights. Set character limit to 500.",
+            "scripter_notes": "Field type: OPEN_TEXT with input validation for max length.",
+            "script": {
+                "question_text": "Please describe any features you wish existing fitness subscriptions offered but currently don't:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q2 response is 'Somewhat dissatisfied' or 'Very dissatisfied'"
+            }
+        }
+    ]
+}

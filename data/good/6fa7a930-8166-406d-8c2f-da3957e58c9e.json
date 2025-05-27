@@ -1,0 +1,133 @@
+{
+    "survey_id": "6fa7a930-8166-406d-8c2f-da3957e58c9e",
+    "survey_name": "Consumer Preferences for Smart Home Security Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding smart home security systems, including adoption drivers, feature preferences, and barriers to purchase.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own a smart home security system?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Planning to purchase within the next 6 months"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Use a simple single-choice format to capture initial adoption status. Ensure mobile-friendly design for easy selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Do you currently own a smart home security system?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Planning to purchase within the next 6 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features are most important to you in a smart home security system? (Select up to 3)",
+            "answer_options": [
+                "24/7 professional monitoring",
+                "Motion detection",
+                "Door/window sensors",
+                "Smart locks",
+                "Video doorbell",
+                "Mobile app control",
+                "Integration with other smart home devices",
+                "Alarm sirens",
+                "Environmental monitoring (e.g., smoke, CO2)"
+            ],
+            "routing_logic": "Only appears if Q1 is 'Yes' or 'Planning to purchase within the next 6 months'.",
+            "client_notes": "Use a multi-choice format to allow respondents to select up to 3 features. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with max 3 selections.",
+            "script": {
+                "question_text": "Which features are most important to you in a smart home security system? (Select up to 3)",
+                "answer_options": [
+                    "24/7 professional monitoring",
+                    "Motion detection",
+                    "Door/window sensors",
+                    "Smart locks",
+                    "Video doorbell",
+                    "Mobile app control",
+                    "Integration with other smart home devices",
+                    "Alarm sirens",
+                    "Environmental monitoring (e.g., smoke, CO2)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if Q1 is 'Yes' or 'Planning to purchase within the next 6 months'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you have not purchased a smart home security system?",
+            "answer_options": [
+                "High cost",
+                "Privacy concerns",
+                "Difficult to install",
+                "Not necessary for my living situation",
+                "Prefer traditional security systems",
+                "Lack of trusted brands",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 is 'No'.",
+            "client_notes": "Include an 'Other' option with an open-text field to capture unique responses. Use a single-choice format.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you have not purchased a smart home security system?",
+                "answer_options": [
+                    "High cost",
+                    "Privacy concerns",
+                    "Difficult to install",
+                    "Not necessary for my living situation",
+                    "Prefer traditional security systems",
+                    "Lack of trusted brands",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 is 'No'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1-5, how satisfied are you with your current smart home security system? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Only appears if Q1 is 'Yes'.",
+            "client_notes": "Use a Likert scale for easy quantification. Ensure the scale is clearly labeled for respondents.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with a 5-point scale.",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with your current smart home security system? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in future smart home security systems?",
+            "answer_options": [],
+            "routing_logic": "Only appears if Q1 is 'Yes' or 'Planning to purchase within the next 6 months'.",
+            "client_notes": "Use an open-text field to capture qualitative feedback. Limit response length to 500 characters for concise answers.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT) with character limit.",
+            "script": {
+                "question_text": "What improvements would you like to see in future smart home security systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only appears if Q1 is 'Yes' or 'Planning to purchase within the next 6 months'."
+            }
+        }
+    ]
+}

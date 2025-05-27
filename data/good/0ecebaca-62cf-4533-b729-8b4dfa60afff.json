@@ -1,0 +1,191 @@
+{
+    "survey_id": "0ecebaca-62cf-4533-b729-8b4dfa60afff",
+    "survey_name": "Consumer Preferences for Indoor Air Quality Products Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, purchasing behaviors, and awareness levels regarding indoor air quality improvement products.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How concerned are you about indoor air quality in your home?",
+            "answer_options": [
+                "Very concerned",
+                "Somewhat concerned",
+                "Neutral",
+                "Not very concerned",
+                "Not at all concerned"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a Likert scale for better granularity. Ensure mobile-friendly display of options.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How concerned are you about indoor air quality in your home?",
+                "answer_options": [
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Neutral",
+                    "Not very concerned",
+                    "Not at all concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following indoor air quality products do you currently own? (Select all that apply)",
+            "answer_options": [
+                "Air purifiers",
+                "Humidifiers",
+                "Dehumidifiers",
+                "Houseplants marketed for air purification",
+                "Ventilation systems",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multi-select. Include 'None of the above' to capture non-owners.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which of the following indoor air quality products do you currently own? (Select all that apply)",
+                "answer_options": [
+                    "Air purifiers",
+                    "Humidifiers",
+                    "Dehumidifiers",
+                    "Houseplants marketed for air purification",
+                    "Ventilation systems",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when purchasing an indoor air quality product? (Rank top 3)",
+            "answer_options": [
+                "Effectiveness",
+                "Price",
+                "Energy efficiency",
+                "Brand reputation",
+                "Ease of maintenance",
+                "Noise level",
+                "Design/aesthetics",
+                "Smart features (e.g., app connectivity)"
+            ],
+            "routing_logic": "Appears if Q2 != 'None of the above' OR Q1 == 'Very concerned'/'Somewhat concerned'",
+            "client_notes": "Implement drag-and-drop ranking for best UX. Limit to top 3 selections.",
+            "scripter_notes": "Field type: RANKING (limit 3 selections)",
+            "script": {
+                "question_text": "What factors are most important to you when purchasing an indoor air quality product? (Rank top 3)",
+                "answer_options": [
+                    "Effectiveness",
+                    "Price",
+                    "Energy efficiency",
+                    "Brand reputation",
+                    "Ease of maintenance",
+                    "Noise level",
+                    "Design/aesthetics",
+                    "Smart features (e.g., app connectivity)"
+                ],
+                "type": "RANKING",
+                "routing_logic": "Appears if Q2 != 'None of the above' OR Q1 == 'Very concerned'/'Somewhat concerned'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you have not purchased indoor air quality products?",
+            "answer_options": [
+                "Lack of awareness about options",
+                "Perceived high cost",
+                "Don't believe they're necessary",
+                "Unsure about effectiveness",
+                "Space constraints",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q2 == 'None of the above'",
+            "client_notes": "Include an 'Other' option with text field for nuanced responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional text input for 'Other'",
+            "script": {
+                "question_text": "What is the primary reason you have not purchased indoor air quality products?",
+                "answer_options": [
+                    "Lack of awareness about options",
+                    "Perceived high cost",
+                    "Don't believe they're necessary",
+                    "Unsure about effectiveness",
+                    "Space constraints",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q2 == 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How much would you typically be willing to spend on an air purifier for a standard-sized room?",
+            "answer_options": [
+                "Less than $50",
+                "$50-$100",
+                "$101-$200",
+                "$201-$300",
+                "More than $300"
+            ],
+            "routing_logic": "Appears if Q1 == 'Very concerned'/'Somewhat concerned'",
+            "client_notes": "Use price brackets relevant to market ranges. Randomize order to prevent bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How much would you typically be willing to spend on an air purifier for a standard-sized room?",
+                "answer_options": [
+                    "Less than $50",
+                    "$50-$100",
+                    "$101-$200",
+                    "$201-$300",
+                    "More than $300"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 == 'Very concerned'/'Somewhat concerned'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional features would motivate you to purchase a premium indoor air quality product?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q5 == '$201-$300'/'More than $300'",
+            "client_notes": "Open-ended to capture qualitative insights. Set 200 character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with character counter)",
+            "script": {
+                "question_text": "What additional features would motivate you to purchase a premium indoor air quality product?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q5 == '$201-$300'/'More than $300'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How do you typically learn about new indoor air quality products?",
+            "answer_options": [
+                "Online research",
+                "Social media",
+                "Word of mouth",
+                "In-store displays",
+                "Professional recommendation (e.g., doctor)",
+                "Home improvement shows/podcasts",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Multi-select allowed. Include 'Other' for completeness.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with optional text input)",
+            "script": {
+                "question_text": "How do you typically learn about new indoor air quality products?",
+                "answer_options": [
+                    "Online research",
+                    "Social media",
+                    "Word of mouth",
+                    "In-store displays",
+                    "Professional recommendation (e.g., doctor)",
+                    "Home improvement shows/podcasts",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

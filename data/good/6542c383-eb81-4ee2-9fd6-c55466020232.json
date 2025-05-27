@@ -1,0 +1,125 @@
+{
+    "survey_id": "6542c383-eb81-4ee2-9fd6-c55466020232",
+    "survey_name": "Consumer Preferences for Smart Home Lighting Systems Survey",
+    "survey_brief": "This survey aims to gather insights on consumer preferences and behaviors related to smart home lighting systems, including usage patterns, features, and barriers to adoption.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own or use any smart home lighting systems?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "This question serves as a screener to identify users versus non-users of smart home lighting systems.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Do you currently own or use any smart home lighting systems?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influenced your decision to adopt smart home lighting systems? (Select all that apply)",
+            "answer_options": [
+                "Energy efficiency",
+                "Convenience/remote control",
+                "Customizable lighting options",
+                "Integration with other smart home devices",
+                "Security features",
+                "Cost savings",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 is answered with 'Yes'.",
+            "client_notes": "This question helps identify the primary motivations behind adoption. Include an 'Other' option to capture unique responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include a text field for 'Other' responses.",
+            "script": {
+                "question_text": "What factors influenced your decision to adopt smart home lighting systems? (Select all that apply)",
+                "answer_options": [
+                    "Energy efficiency",
+                    "Convenience/remote control",
+                    "Customizable lighting options",
+                    "Integration with other smart home devices",
+                    "Security features",
+                    "Cost savings",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 is answered with 'Yes'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers have prevented you from adopting smart home lighting systems? (Select all that apply)",
+            "answer_options": [
+                "High initial cost",
+                "Lack of perceived need",
+                "Concerns about privacy/security",
+                "Complexity of installation",
+                "Limited knowledge about available options",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 is answered with 'No' or 'Not sure'.",
+            "client_notes": "This question helps identify key barriers to adoption. Include an 'Other' option to capture unique responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include a text field for 'Other' responses.",
+            "script": {
+                "question_text": "What barriers have prevented you from adopting smart home lighting systems? (Select all that apply)",
+                "answer_options": [
+                    "High initial cost",
+                    "Lack of perceived need",
+                    "Concerns about privacy/security",
+                    "Complexity of installation",
+                    "Limited knowledge about available options",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 is answered with 'No' or 'Not sure'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you use your smart home lighting system?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Once a month or less"
+            ],
+            "routing_logic": "Appears only if Q1 is answered with 'Yes'.",
+            "client_notes": "This question gauges the frequency of usage to understand engagement levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use your smart home lighting system?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Once a month or less"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 is answered with 'Yes'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features would make you more likely to adopt a smart home lighting system in the future?",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q1 is answered with 'No' or 'Not sure'.",
+            "client_notes": "This open-ended question allows respondents to describe features that would incentivize adoption.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What features would make you more likely to adopt a smart home lighting system in the future?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q1 is answered with 'No' or 'Not sure'."
+            }
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "survey_id": "00dba146-758e-4aac-a24a-6075c5716287",
+    "survey_name": "Smart Retail Checkout Experience Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and preferences regarding smart checkout technologies in retail stores, including self-checkout kiosks, mobile scan-and-go, and cashier-assisted options.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use smart checkout options (e.g., self-checkout, mobile scan-and-go) when shopping in retail stores?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point frequency scale for measurable insights. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "How frequently do you use smart checkout options (e.g., self-checkout, mobile scan-and-go) when shopping in retail stores?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which smart checkout method do you prefer? (Select all that apply)",
+            "answer_options": [
+                "Self-checkout kiosks",
+                "Mobile scan-and-go apps",
+                "Cashier-assisted with digital payment",
+                "No preference"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Multi-select question. Include an 'Other' open-field option if added manually.",
+            "scripter_notes": "Field type: Multi-choice checkboxes. Add 'Other' text field if specified.",
+            "script": {
+                "question_text": "Which smart checkout method do you prefer? (Select all that apply)",
+                "answer_options": [
+                    "Self-checkout kiosks",
+                    "Mobile scan-and-go apps",
+                    "Cashier-assisted with digital payment",
+                    "No preference"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you choose smart checkout options?",
+            "answer_options": [
+                "Faster transaction time",
+                "Avoiding human interaction",
+                "Perceived hygiene benefits",
+                "Convenience",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q1 ≠ 'Never'",
+            "client_notes": "Include an open-text 'Other' field for qualitative insights.",
+            "scripter_notes": "Field type: Single-choice with optional text input for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you choose smart checkout options?",
+                "answer_options": [
+                    "Faster transaction time",
+                    "Avoiding human interaction",
+                    "Perceived hygiene benefits",
+                    "Convenience",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe any challenges you've faced with smart checkout systems.",
+            "answer_options": [],
+            "routing_logic": "Display if Q1 ≠ 'Never'",
+            "client_notes": "Open-ended to capture unanticipated pain points. Limit to 300 characters.",
+            "scripter_notes": "Field type: Open-text with character limit validation.",
+            "script": {
+                "question_text": "Describe any challenges you've faced with smart checkout systems.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your preferred checkout method to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Display if Q1 ≠ 'Never'",
+            "client_notes": "Use a standardized NPS-style scale for benchmarking.",
+            "scripter_notes": "Field type: Single-choice radio buttons with required validation.",
+            "script": {
+                "question_text": "How likely are you to recommend your preferred checkout method to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 ≠ 'Never'"
+            }
+        }
+    ]
+}

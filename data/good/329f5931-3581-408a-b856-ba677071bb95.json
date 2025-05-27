@@ -1,0 +1,121 @@
+{
+    "survey_id": "329f5931-3581-408a-b856-ba677071bb95",
+    "survey_name": "Consumer Preferences for Augmented Reality Shopping Experiences Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and experiences with augmented reality (AR) features in online shopping platforms to improve user engagement and satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with augmented reality (AR) features in online shopping?",
+            "answer_options": [
+                "Very familiar, I use them frequently",
+                "Somewhat familiar, I have used them a few times",
+                "Not very familiar, I have heard of them but not used",
+                "Not at all familiar"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for familiarity to gauge awareness and usage.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How familiar are you with augmented reality (AR) features in online shopping?",
+                "answer_options": [
+                    "Very familiar, I use them frequently",
+                    "Somewhat familiar, I have used them a few times",
+                    "Not very familiar, I have heard of them but not used",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of products have you used AR features to preview before purchasing? (Select all that apply)",
+            "answer_options": [
+                "Furniture and home decor",
+                "Clothing and accessories",
+                "Electronics",
+                "Beauty and cosmetics",
+                "None of the above"
+            ],
+            "routing_logic": "If Q1 != 'Not at all familiar'",
+            "client_notes": "The 'None of the above' option helps filter non-users.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which types of products have you used AR features to preview before purchasing? (Select all that apply)",
+                "answer_options": [
+                    "Furniture and home decor",
+                    "Clothing and accessories",
+                    "Electronics",
+                    "Beauty and cosmetics",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 != 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the current AR shopping features you have used?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q2 != 'None of the above'",
+            "client_notes": "Use a 5-point satisfaction scale for nuanced feedback.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the current AR shopping features you have used?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q2 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for AR shopping features?",
+            "answer_options": [],
+            "routing_logic": "If Q2 != 'None of the above'",
+            "client_notes": "Open-ended to capture qualitative insights.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for AR shopping features?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q2 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be more likely to purchase a product if it had an AR preview feature?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, somewhat",
+                "No effect",
+                "No, less likely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Assesses the potential impact of AR on purchase decisions.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you be more likely to purchase a product if it had an AR preview feature?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, somewhat",
+                    "No effect",
+                    "No, less likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,167 @@
+{
+    "survey_id": "9702a373-3afb-4eff-99a4-6284036bdd7b",
+    "survey_name": "Consumer Preferences for Smart Home Device Integration Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding the integration of various smart home devices in their households.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home devices do you currently own? (Select all that apply)",
+            "answer_options": [
+                "Smart Thermostat",
+                "Smart Lighting",
+                "Smart Security Camera",
+                "Smart Speaker (e.g., Amazon Echo, Google Home)",
+                "Smart Lock",
+                "Smart TV",
+                "Smart Appliances (e.g., Refrigerator, Washing Machine)",
+                "None of the above"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use checkboxes for multi-select options. Ensure the options are easily readable on both mobile and desktop devices.",
+            "scripter_notes": "Field type: MULTI_CHOICE. Display all answer options as checkboxes.",
+            "script": {
+                "question_text": "Which of the following smart home devices do you currently own? (Select all that apply)",
+                "answer_options": [
+                    "Smart Thermostat",
+                    "Smart Lighting",
+                    "Smart Security Camera",
+                    "Smart Speaker (e.g., Amazon Echo, Google Home)",
+                    "Smart Lock",
+                    "Smart TV",
+                    "Smart Appliances (e.g., Refrigerator, Washing Machine)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the integration between your smart home devices?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied",
+                "Not Applicable (I do not have multiple smart home devices)"
+            ],
+            "routing_logic": "Show this question only if Q1 has at least two options selected excluding 'None of the above'.",
+            "client_notes": "Use a radio button scale. Consider adding a tooltip explaining what 'integration' means in this context.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Display as radio buttons. Implement routing logic based on Q1 selections.",
+            "script": {
+                "question_text": "How satisfied are you with the integration between your smart home devices?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied",
+                    "Not Applicable (I do not have multiple smart home devices)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show this question only if Q1 has at least two options selected excluding 'None of the above'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced when integrating smart home devices? (Select all that apply)",
+            "answer_options": [
+                "Compatibility issues between brands",
+                "Complex setup process",
+                "Poor user interface",
+                "Lack of customer support",
+                "Security concerns",
+                "None of the above"
+            ],
+            "routing_logic": "Show this question only if Q1 has at least one option selected excluding 'None of the above'.",
+            "client_notes": "Use checkboxes for multi-select options. Include an 'Other (please specify)' option if needed.",
+            "scripter_notes": "Field type: MULTI_CHOICE. Display all answer options as checkboxes.",
+            "script": {
+                "question_text": "What challenges have you faced when integrating smart home devices? (Select all that apply)",
+                "answer_options": [
+                    "Compatibility issues between brands",
+                    "Complex setup process",
+                    "Poor user interface",
+                    "Lack of customer support",
+                    "Security concerns",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show this question only if Q1 has at least one option selected excluding 'None of the above'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to purchase additional smart home devices in the next 12 months?",
+            "answer_options": [
+                "Very Likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very Unlikely"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use a radio button scale. Ensure the options are evenly spaced for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Display as radio buttons.",
+            "script": {
+                "question_text": "How likely are you to purchase additional smart home devices in the next 12 months?",
+                "answer_options": [
+                    "Very Likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features are most important to you when choosing a smart home device? (Select up to 3)",
+            "answer_options": [
+                "Ease of Use",
+                "Compatibility with Other Devices",
+                "Brand Reputation",
+                "Price",
+                "Security Features",
+                "Customer Support",
+                "Energy Efficiency",
+                "Design and Aesthetics"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use checkboxes but limit selection to 3 options. Consider randomizing the order of options to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max selection of 3. Display all answer options as checkboxes.",
+            "script": {
+                "question_text": "What features are most important to you when choosing a smart home device? (Select up to 3)",
+                "answer_options": [
+                    "Ease of Use",
+                    "Compatibility with Other Devices",
+                    "Brand Reputation",
+                    "Price",
+                    "Security Features",
+                    "Customer Support",
+                    "Energy Efficiency",
+                    "Design and Aesthetics"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe any additional comments or concerns you have about smart home device integration.",
+            "answer_options": [],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use an open-text field. Allow for a minimum of 50 characters to encourage detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT. Display as a text box with a character minimum.",
+            "script": {
+                "question_text": "Please describe any additional comments or concerns you have about smart home device integration.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        }
+    ]
+}

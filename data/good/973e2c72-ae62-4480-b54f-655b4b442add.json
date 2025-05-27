@@ -1,0 +1,135 @@
+{
+    "survey_id": "973e2c72-ae62-4480-b54f-655b4b442add",
+    "survey_name": "Consumer Preferences for In-Car Technology Features Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels regarding various in-car technology features to help automotive manufacturers prioritize future innovations.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How important are in-car technology features when purchasing a new vehicle?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point Likert scale for clear differentiation. Ensure question is mobile-friendly.",
+            "scripter_notes": "Field type: radio button for single-choice response.",
+            "script": {
+                "question_text": "How important are in-car technology features when purchasing a new vehicle?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following in-car technology features do you currently use regularly? (Select all that apply)",
+            "answer_options": [
+                "Bluetooth connectivity",
+                "Apple CarPlay/Android Auto",
+                "Built-in navigation system",
+                "Voice command system",
+                "Wireless charging pad",
+                "Heated/cooled seats",
+                "Adaptive cruise control",
+                "Lane-keeping assist",
+                "None of the above"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Allow multiple selections. Randomize option order to minimize bias.",
+            "scripter_notes": "Field type: checkbox for multi-choice response.",
+            "script": {
+                "question_text": "Which of the following in-car technology features do you currently use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Bluetooth connectivity",
+                    "Apple CarPlay/Android Auto",
+                    "Built-in navigation system",
+                    "Voice command system",
+                    "Wireless charging pad",
+                    "Heated/cooled seats",
+                    "Adaptive cruise control",
+                    "Lane-keeping assist",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the voice command system in your current vehicle?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neither satisfied nor dissatisfied",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "I don't use this feature"
+            ],
+            "routing_logic": "Show if 'Voice command system' is selected in Q2",
+            "client_notes": "Include an option for non-users to avoid forcing responses.",
+            "scripter_notes": "Field type: radio button with conditional routing.",
+            "script": {
+                "question_text": "How satisfied are you with the voice command system in your current vehicle?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neither satisfied nor dissatisfied",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "I don't use this feature"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if 'Voice command system' is selected in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional in-car technology features would you like to see in future vehicles?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended to capture innovative ideas. Limit response to 250 characters.",
+            "scripter_notes": "Field type: open text with character limit.",
+            "script": {
+                "question_text": "What additional in-car technology features would you like to see in future vehicles?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to pay extra for advanced in-car technology features in your next vehicle purchase?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neither likely nor unlikely",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point scale to measure purchase intent.",
+            "scripter_notes": "Field type: radio button with neutral midpoint.",
+            "script": {
+                "question_text": "How likely are you to pay extra for advanced in-car technology features in your next vehicle purchase?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neither likely nor unlikely",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

@@ -1,0 +1,133 @@
+{
+    "survey_id": "35a7b721-ba3f-4e61-a144-48c4a3acdd43",
+    "survey_name": "Consumer Preferences for Home Energy Efficiency Practices Survey",
+    "survey_brief": "This survey aims to gather insights on consumer preferences and behaviors related to home energy efficiency practices to better understand adoption barriers and motivations.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How important is energy efficiency to you when making decisions about your home?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale to measure importance. Ensure the scale is balanced with clear labels.",
+            "scripter_notes": "Display as single-choice radio buttons. Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "How important is energy efficiency to you when making decisions about your home?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following energy-efficient home upgrades have you implemented in the past 5 years? (Select all that apply)",
+            "answer_options": [
+                "LED lighting",
+                "Smart thermostat",
+                "Energy-efficient appliances",
+                "Solar panels",
+                "Improved insulation",
+                "Double/triple-pane windows",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. Include an 'Other' option if needed for additional responses.",
+            "scripter_notes": "Display as multi-choice checkboxes. Include an 'Other' open-text field if selected.",
+            "script": {
+                "question_text": "Which of the following energy-efficient home upgrades have you implemented in the past 5 years? (Select all that apply)",
+                "answer_options": [
+                    "LED lighting",
+                    "Smart thermostat",
+                    "Energy-efficient appliances",
+                    "Solar panels",
+                    "Improved insulation",
+                    "Double/triple-pane windows",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the primary reasons you have not implemented more energy-efficient upgrades in your home?",
+            "answer_options": [
+                "High upfront costs",
+                "Lack of information",
+                "Uncertainty about savings",
+                "Rental property restrictions",
+                "No perceived need",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q2 includes 'None of the above' or fewer than 2 selections",
+            "client_notes": "This question should only appear for respondents with limited adoption. Include an open-text option for detailed feedback.",
+            "scripter_notes": "Display as multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are the primary reasons you have not implemented more energy-efficient upgrades in your home?",
+                "answer_options": [
+                    "High upfront costs",
+                    "Lack of information",
+                    "Uncertainty about savings",
+                    "Rental property restrictions",
+                    "No perceived need",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q2 includes 'None of the above' or fewer than 2 selections"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much would you be willing to invest upfront for a home energy upgrade that reduces your monthly utility bill by 20%?",
+            "answer_options": [
+                "Less than $500",
+                "$500 - $1,000",
+                "$1,001 - $2,500",
+                "$2,501 - $5,000",
+                "More than $5,000",
+                "I would not invest upfront"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use predefined ranges to standardize responses. Ensure ranges are realistic for the target demographic.",
+            "scripter_notes": "Display as single-choice radio buttons. Randomize option order except for the last option.",
+            "script": {
+                "question_text": "How much would you be willing to invest upfront for a home energy upgrade that reduces your monthly utility bill by 20%?",
+                "answer_options": [
+                    "Less than $500",
+                    "$500 - $1,000",
+                    "$1,001 - $2,500",
+                    "$2,501 - $5,000",
+                    "More than $5,000",
+                    "I would not invest upfront"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional information or incentives would encourage you to adopt more energy-efficient practices in your home?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative insights. Limit response length to 250 characters.",
+            "scripter_notes": "Display as an open-text field with character limit validation.",
+            "script": {
+                "question_text": "What additional information or incentives would encourage you to adopt more energy-efficient practices in your home?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

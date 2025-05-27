@@ -1,0 +1,127 @@
+{
+    "survey_id": "b7cd9ad8-1a10-4743-8dcf-0cb2be9ce250",
+    "survey_name": "Consumer Preferences for Drone Delivery Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, concerns, and potential adoption barriers related to drone delivery services for retail and food delivery.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with drone delivery services?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a balanced 4-point scale to avoid neutral midpoint bias. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: single-choice radio buttons; randomize option order to prevent bias.",
+            "script": {
+                "question_text": "How familiar are you with drone delivery services?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following items would you be willing to receive via drone delivery? (Select all that apply)",
+            "answer_options": [
+                "Food/meals",
+                "Pharmaceuticals",
+                "Electronics",
+                "Clothing/apparel",
+                "Groceries",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Multi-select question with 'None' option to capture opt-outs. Consider limiting to 6 items for mobile usability.",
+            "scripter_notes": "Field type: multi-choice checkboxes; include 'Select All' and 'Clear All' buttons for UX.",
+            "script": {
+                "question_text": "Which of the following items would you be willing to receive via drone delivery? (Select all that apply)",
+                "answer_options": [
+                    "Food/meals",
+                    "Pharmaceuticals",
+                    "Electronics",
+                    "Clothing/apparel",
+                    "Groceries",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your biggest concern about drone delivery services?",
+            "answer_options": [
+                "Privacy issues",
+                "Safety/accident risk",
+                "Package damage/theft",
+                "Weather limitations",
+                "Noise pollution",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents who selected at least one item in Q2",
+            "client_notes": "Include 'Other' with open-text field to capture unlisted concerns. Display as dropdown on mobile to save space.",
+            "scripter_notes": "Field type: single-choice dropdown with text field for 'Other'; implement skip logic from Q2.",
+            "script": {
+                "question_text": "What is your biggest concern about drone delivery services?",
+                "answer_options": [
+                    "Privacy issues",
+                    "Safety/accident risk",
+                    "Package damage/theft",
+                    "Weather limitations",
+                    "Noise pollution",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected at least one item in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "In your own words, what would motivate you to try drone delivery for the first time?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended to capture qualitative insights. Set character limit to 300 with real-time counter.",
+            "scripter_notes": "Field type: open-text response with input validation.",
+            "script": {
+                "question_text": "In your own words, what would motivate you to try drone delivery for the first time?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How much extra would you pay for drone delivery compared to standard delivery?",
+            "answer_options": [
+                "Nothing - should be free",
+                "Up to 10% more",
+                "11-20% more",
+                "21-30% more",
+                "More than 30%"
+            ],
+            "routing_logic": "Appears to all respondents who selected at least one item in Q2",
+            "client_notes": "Price sensitivity question with percentage ranges. Randomize option order for half of respondents to mitigate order bias.",
+            "scripter_notes": "Field type: single-choice radio buttons with randomization group.",
+            "script": {
+                "question_text": "How much extra would you pay for drone delivery compared to standard delivery?",
+                "answer_options": [
+                    "Nothing - should be free",
+                    "Up to 10% more",
+                    "11-20% more",
+                    "21-30% more",
+                    "More than 30%"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected at least one item in Q2"
+            }
+        }
+    ]
+}

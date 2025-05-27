@@ -1,0 +1,129 @@
+{
+    "survey_id": "5d9e012d-867c-4bbe-8af3-65ba0fe97294",
+    "survey_name": "Electric Vehicle Charging Station Accessibility Survey",
+    "survey_brief": "This survey aims to gather feedback on the accessibility, convenience, and user experience of public electric vehicle (EV) charging stations to help improve infrastructure and services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public EV charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for easy mobile response. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use public EV charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What type of EV charging connector do you most commonly use?",
+            "answer_options": [
+                "CCS (Combined Charging System)",
+                "CHAdeMO",
+                "Type 2 (Mennekes)",
+                "Tesla Supercharger",
+                "Other"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Include an 'Other' option for less common connectors. Use dropdown for mobile-friendliness.",
+            "scripter_notes": "Field type: dropdown (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "What type of EV charging connector do you most commonly use?",
+                "answer_options": [
+                    "CCS (Combined Charging System)",
+                    "CHAdeMO",
+                    "Type 2 (Mennekes)",
+                    "Tesla Supercharger",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when selecting a public EV charging station? (Select all that apply)",
+            "answer_options": [
+                "Proximity to my location",
+                "Charging speed",
+                "Availability (number of chargers)",
+                "Pricing/cost",
+                "Ease of payment",
+                "Safety of the location",
+                "Amenities nearby (e.g., restaurants, shops)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Allow multiple selections. Use checkboxes for clarity.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "What factors are most important to you when selecting a public EV charging station? (Select all that apply)",
+                "answer_options": [
+                    "Proximity to my location",
+                    "Charging speed",
+                    "Availability (number of chargers)",
+                    "Pricing/cost",
+                    "Ease of payment",
+                    "Safety of the location",
+                    "Amenities nearby (e.g., restaurants, shops)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the current availability of public EV charging stations in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Use a 5-point Likert scale for standardized responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the current availability of public EV charging stations in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest to enhance public EV charging station infrastructure?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Open-ended question to gather qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance public EV charging station infrastructure?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        }
+    ]
+}

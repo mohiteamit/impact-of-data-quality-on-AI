@@ -1,0 +1,121 @@
+{
+    "survey_id": "56de014e-7eab-4a3d-acc6-a019e516f911",
+    "survey_name": "Smart Home Device Integration Preferences Survey",
+    "survey_brief": "This survey aims to gather insights on consumer preferences and challenges related to integrating smart home devices with existing home automation systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many smart home devices do you currently own?",
+            "answer_options": [
+                "None",
+                "1-3 devices",
+                "4-6 devices",
+                "7 or more devices"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button format for cleaner mobile interaction. This question sets the baseline for further routing.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Display logic: Always show.",
+            "script": {
+                "question_text": "How many smart home devices do you currently own?",
+                "answer_options": [
+                    "None",
+                    "1-3 devices",
+                    "4-6 devices",
+                    "7 or more devices"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which smart home ecosystems do you use? (Select all that apply)",
+            "answer_options": [
+                "Amazon Alexa",
+                "Google Home",
+                "Apple HomeKit",
+                "Samsung SmartThings",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only shown if Q1 ≠ 'None'",
+            "client_notes": "Checkbox format recommended. Include an 'Other' option with text input to capture niche platforms.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Display logic: Q1 ≠ 'None'.",
+            "script": {
+                "question_text": "Which smart home ecosystems do you use? (Select all that apply)",
+                "answer_options": [
+                    "Amazon Alexa",
+                    "Google Home",
+                    "Apple HomeKit",
+                    "Samsung SmartThings",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 ≠ 'None'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced when integrating new smart home devices?",
+            "answer_options": [],
+            "routing_logic": "Only shown if Q1 ≠ 'None'",
+            "client_notes": "Open-text field to capture qualitative insights. Use a mobile-friendly large text box.",
+            "scripter_notes": "Field type: OPEN_TEXT. Display logic: Q1 ≠ 'None'.",
+            "script": {
+                "question_text": "What challenges have you faced when integrating new smart home devices?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only shown if Q1 ≠ 'None'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How important is cross-platform compatibility when purchasing a new smart home device?",
+            "answer_options": [
+                "Not important",
+                "Slightly important",
+                "Moderately important",
+                "Very important",
+                "Extremely important"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point Likert scale for granularity. Randomize scale order to avoid bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Display logic: Always show.",
+            "script": {
+                "question_text": "How important is cross-platform compatibility when purchasing a new smart home device?",
+                "answer_options": [
+                    "Not important",
+                    "Slightly important",
+                    "Moderately important",
+                    "Very important",
+                    "Extremely important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you pay a premium for a unified smart home hub that integrates all your devices?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, if reasonably priced",
+                "Unsure",
+                "No"
+            ],
+            "routing_logic": "Only shown if Q1 ≠ 'None'",
+            "client_notes": "Include a visual price range slider in digital implementations for 'reasonably priced' follow-ups.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Display logic: Q1 ≠ 'None'.",
+            "script": {
+                "question_text": "Would you pay a premium for a unified smart home hub that integrates all your devices?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, if reasonably priced",
+                    "Unsure",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 ≠ 'None'"
+            }
+        }
+    ]
+}

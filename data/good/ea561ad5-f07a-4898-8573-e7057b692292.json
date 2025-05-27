@@ -1,0 +1,131 @@
+{
+    "survey_id": "ea561ad5-f07a-4898-8573-e7057b692292",
+    "survey_name": "Consumer Preferences for Autonomous Vehicle Features Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and concerns regarding features in autonomous vehicles to guide future product development and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How likely are you to consider purchasing or using an autonomous vehicle in the next 5 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point Likert scale for clearer sentiment analysis. Ensure mobile-friendly display of options.",
+            "scripter_notes": "Field type: single-choice radio buttons. Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "How likely are you to consider purchasing or using an autonomous vehicle in the next 5 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following autonomous vehicle features are MOST important to you? (Select up to 3)",
+            "answer_options": [
+                "Collision avoidance systems",
+                "Self-parking capability",
+                "Real-time traffic navigation",
+                "Passenger entertainment systems",
+                "Biometric security (e.g., facial recognition)",
+                "Energy efficiency",
+                "Customizable ride experience (e.g., seating, lighting)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Limit selections to 3 to force prioritization. Include 'Other' with open field if needed.",
+            "scripter_notes": "Field type: multi-choice checkboxes with max selection validation.",
+            "script": {
+                "question_text": "Which of the following autonomous vehicle features are MOST important to you? (Select up to 3)",
+                "answer_options": [
+                    "Collision avoidance systems",
+                    "Self-parking capability",
+                    "Real-time traffic navigation",
+                    "Passenger entertainment systems",
+                    "Biometric security (e.g., facial recognition)",
+                    "Energy efficiency",
+                    "Customizable ride experience (e.g., seating, lighting)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your PRIMARY concern about autonomous vehicle technology?",
+            "answer_options": [
+                "Safety and reliability",
+                "Data privacy",
+                "Legal liability in accidents",
+                "High cost",
+                "Loss of driving enjoyment",
+                "Job displacement for drivers"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Include an 'Other' option with text field to capture unlisted concerns.",
+            "scripter_notes": "Field type: single-choice with optional 'Other' text input.",
+            "script": {
+                "question_text": "What is your PRIMARY concern about autonomous vehicle technology?",
+                "answer_options": [
+                    "Safety and reliability",
+                    "Data privacy",
+                    "Legal liability in accidents",
+                    "High cost",
+                    "Loss of driving enjoyment",
+                    "Job displacement for drivers"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much would you be willing to pay for autonomous features as an upgrade to a standard vehicle?",
+            "answer_options": [
+                "Less than $1,000",
+                "$1,000 - $5,000",
+                "$5,001 - $10,000",
+                "More than $10,000",
+                "I would not pay extra"
+            ],
+            "routing_logic": "Appears if Q1 response is 'Very likely' or 'Somewhat likely'",
+            "client_notes": "Use price brackets relevant to current market data. Randomize order to mitigate primacy bias.",
+            "scripter_notes": "Field type: single-choice radio buttons with conditional display logic.",
+            "script": {
+                "question_text": "How much would you be willing to pay for autonomous features as an upgrade to a standard vehicle?",
+                "answer_options": [
+                    "Less than $1,000",
+                    "$1,000 - $5,000",
+                    "$5,001 - $10,000",
+                    "More than $10,000",
+                    "I would not pay extra"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is 'Very likely' or 'Somewhat likely'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe in your own words what would make you trust an autonomous vehicle enough to use it daily.",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use open-ended to capture qualitative insights. Set character limit to 500 for readability.",
+            "scripter_notes": "Field type: open-text with input validation.",
+            "script": {
+                "question_text": "Please describe in your own words what would make you trust an autonomous vehicle enough to use it daily.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

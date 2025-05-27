@@ -1,0 +1,119 @@
+{
+    "survey_id": "76d399a1-0fd8-4287-81de-43c4c4e3fe5e",
+    "survey_name": "Cybersecurity Awareness and Practices Survey",
+    "survey_brief": "This survey aims to assess the current level of cybersecurity awareness and practices among employees in various organizations to identify potential gaps and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you receive cybersecurity training from your employer?",
+            "answer_options": [
+                "Never",
+                "Once a year",
+                "Twice a year",
+                "Quarterly",
+                "Monthly or more frequently"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a single-choice scale to measure frequency. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you receive cybersecurity training from your employer?",
+                "answer_options": [
+                    "Never",
+                    "Once a year",
+                    "Twice a year",
+                    "Quarterly",
+                    "Monthly or more frequently"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following cybersecurity practices do you regularly follow? (Select all that apply)",
+            "answer_options": [
+                "Using strong, unique passwords",
+                "Enabling two-factor authentication",
+                "Avoiding clicking on suspicious links or attachments",
+                "Regularly updating software and systems",
+                "Using a VPN when accessing work remotely"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Allow multiple selections to identify common practices. Ensure options are clear and actionable.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following cybersecurity practices do you regularly follow? (Select all that apply)",
+                "answer_options": [
+                    "Using strong, unique passwords",
+                    "Enabling two-factor authentication",
+                    "Avoiding clicking on suspicious links or attachments",
+                    "Regularly updating software and systems",
+                    "Using a VPN when accessing work remotely"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Have you ever encountered a cybersecurity incident (e.g., phishing attempt, malware, data breach) at work?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I'm not sure"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a single-choice scale to gauge incident exposure. Include 'I'm not sure' for respondents who may lack awareness.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Have you ever encountered a cybersecurity incident (e.g., phishing attempt, malware, data breach) at work?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I'm not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you encountered a cybersecurity incident, how did you respond?",
+            "answer_options": [
+                "Reported it to IT/security team immediately",
+                "Handled it myself",
+                "Ignored it",
+                "I'm not sure what to do in such cases"
+            ],
+            "routing_logic": "Display if Q3 is 'Yes'",
+            "client_notes": "Use a single-choice scale to measure response behavior. Include an option for respondents who are unsure.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "If you encountered a cybersecurity incident, how did you respond?",
+                "answer_options": [
+                    "Reported it to IT/security team immediately",
+                    "Handled it myself",
+                    "Ignored it",
+                    "I'm not sure what to do in such cases"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q3 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional cybersecurity training or resources would you find helpful?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What additional cybersecurity training or resources would you find helpful?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        }
+    ]
+}

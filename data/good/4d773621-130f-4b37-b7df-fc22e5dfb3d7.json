@@ -1,0 +1,121 @@
+{
+    "survey_id": "4d773621-130f-4b37-b7df-fc22e5dfb3d7",
+    "survey_name": "In-Flight Connectivity and Digital Services Satisfaction Survey",
+    "survey_brief": "This survey aims to gather passenger feedback on the quality, usability, and satisfaction with in-flight connectivity and digital entertainment services provided by airlines.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "On your most recent flight, did you use the in-flight Wi-Fi service?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not available on my flight"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons for single-choice response. Include 'Not available' option to filter accurately.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "On your most recent flight, did you use the in-flight Wi-Fi service?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not available on my flight"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied were you with the speed and reliability of the in-flight Wi-Fi?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Did not use"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes'",
+            "client_notes": "5-point Likert scale with neutral midpoint. Include 'Did not use' for consistency.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied were you with the speed and reliability of the in-flight Wi-Fi?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Did not use"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following in-flight digital services did you use? (Select all that apply)",
+            "answer_options": [
+                "Streaming entertainment (movies/TV)",
+                "Live TV/news",
+                "Interactive flight maps",
+                "Messaging/chat services",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select checkboxes with 'None' option to avoid forced responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which of the following in-flight digital services did you use? (Select all that apply)",
+                "answer_options": [
+                    "Streaming entertainment (movies/TV)",
+                    "Live TV/news",
+                    "Interactive flight maps",
+                    "Messaging/chat services",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for in-flight digital services?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Limit to 250 characters for mobile-friendliness.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box with character limit)",
+            "script": {
+                "question_text": "What improvements would you suggest for in-flight digital services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay a premium for faster or more reliable in-flight Wi-Fi?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, depending on price",
+                "No, it should be free",
+                "Unsure"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes' or 'Not available on my flight'",
+            "client_notes": "Include pricing sensitivity option. Use balanced response scale.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Would you be willing to pay a premium for faster or more reliable in-flight Wi-Fi?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, depending on price",
+                    "No, it should be free",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes' or 'Not available on my flight'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+{
+    "survey_id": "6f934128-44cb-4cad-899a-9666f19f528f",
+    "survey_name": "Consumer Preferences for Smart Home Lighting Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels regarding smart home lighting systems, including features, usability, and integration with other smart home devices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home lighting systems do you currently use?",
+            "answer_options": [
+                "Philips Hue",
+                "LIFX",
+                "Nanoleaf",
+                "Sengled",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure the 'Other' option includes a text field for additional input. Mobile-friendly dropdowns are recommended.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-ended 'Other' response.",
+            "script": {
+                "question_text": "Which of the following smart home lighting systems do you currently use?",
+                "answer_options": [
+                    "Philips Hue",
+                    "LIFX",
+                    "Nanoleaf",
+                    "Sengled",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current smart home lighting system?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered Q1 with at least one selected option",
+            "client_notes": "Use a Likert scale for better readability. Ensure the scale is consistent across similar questions.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home lighting system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered Q1 with at least one selected option"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you value the most in a smart home lighting system? (Select all that apply)",
+            "answer_options": [
+                "Voice control (e.g., Alexa, Google Assistant)",
+                "Mobile app control",
+                "Color customization",
+                "Energy efficiency",
+                "Integration with other smart home devices",
+                "Scheduling/timers",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with a text field for additional responses. Ensure multi-select functionality is clear.",
+            "scripter_notes": "Field type: MULTI_CHOICE with optional open-ended 'Other' response.",
+            "script": {
+                "question_text": "What features do you value the most in a smart home lighting system? (Select all that apply)",
+                "answer_options": [
+                    "Voice control (e.g., Alexa, Google Assistant)",
+                    "Mobile app control",
+                    "Color customization",
+                    "Energy efficiency",
+                    "Integration with other smart home devices",
+                    "Scheduling/timers",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced with your smart home lighting system?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered Q1 with at least one selected option",
+            "client_notes": "Allow for open-ended responses to capture detailed feedback. Ensure the text box is large enough for thorough answers.",
+            "scripter_notes": "Field type: OPEN_TEXT.",
+            "script": {
+                "question_text": "What challenges have you faced with your smart home lighting system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered Q1 with at least one selected option"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your smart home lighting system to a friend or colleague?",
+            "answer_options": [
+                "Extremely likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Extremely unlikely"
+            ],
+            "routing_logic": "Respondents who answered Q1 with at least one selected option",
+            "client_notes": "Use a standard NPS-like scale. Ensure the question is clear and concise.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How likely are you to recommend your smart home lighting system to a friend or colleague?",
+                "answer_options": [
+                    "Extremely likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Extremely unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered Q1 with at least one selected option"
+            }
+        }
+    ]
+}

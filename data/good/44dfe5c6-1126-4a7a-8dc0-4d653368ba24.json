@@ -1,0 +1,127 @@
+{
+    "survey_id": "44dfe5c6-1126-4a7a-8dc0-4d653368ba24",
+    "survey_name": "AI-Assisted Medical Diagnosis Acceptance Survey",
+    "survey_brief": "This survey aims to understand public perception and acceptance levels of AI-assisted medical diagnosis tools among patients and healthcare providers.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with AI-assisted medical diagnosis tools?",
+            "answer_options": [
+                "Very familiar (I use or interact with them regularly)",
+                "Somewhat familiar (I know about them but have limited experience)",
+                "Not very familiar (I’ve heard of them but don’t know details)",
+                "Not at all familiar (This is my first time hearing about them)"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a single-choice radio button layout. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Enable 'Require response'.",
+            "script": {
+                "question_text": "How familiar are you with AI-assisted medical diagnosis tools?",
+                "answer_options": [
+                    "Very familiar (I use or interact with them regularly)",
+                    "Somewhat familiar (I know about them but have limited experience)",
+                    "Not very familiar (I’ve heard of them but don’t know details)",
+                    "Not at all familiar (This is my first time hearing about them)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI-assisted medical diagnosis tools have you used or encountered? (Select all that apply)",
+            "answer_options": [
+                "Radiology imaging analysis (e.g., X-ray, MRI)",
+                "Symptom checkers or triage chatbots",
+                "Pathology slide analysis",
+                "Predictive analytics for disease risk",
+                "None of the above"
+            ],
+            "routing_logic": "Display if Q1 ≠ 'Not at all familiar'",
+            "client_notes": "Multi-select checklist. Include 'None of the above' as an explicit option to avoid forced responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Apply logic from Q1.",
+            "script": {
+                "question_text": "Which of the following AI-assisted medical diagnosis tools have you used or encountered? (Select all that apply)",
+                "answer_options": [
+                    "Radiology imaging analysis (e.g., X-ray, MRI)",
+                    "Symptom checkers or triage chatbots",
+                    "Pathology slide analysis",
+                    "Predictive analytics for disease risk",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 ≠ 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How comfortable would you be receiving a primary diagnosis from an AI system in the following scenarios?",
+            "answer_options": [
+                "Very comfortable",
+                "Somewhat comfortable",
+                "Neutral",
+                "Somewhat uncomfortable",
+                "Very uncomfortable"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a matrix question type with rows for each scenario. Label columns clearly. Randomize row order.",
+            "scripter_notes": "Field type: matrix (SINGLE_CHOICE per row). Scenarios: [1] Routine check-up, [2] Chronic condition monitoring, [3] Emergency triage.",
+            "script": {
+                "question_text": "How comfortable would you be receiving a primary diagnosis from an AI system in the following scenarios?",
+                "answer_options": [
+                    "Very comfortable",
+                    "Somewhat comfortable",
+                    "Neutral",
+                    "Somewhat uncomfortable",
+                    "Very uncomfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors would increase your trust in AI-assisted medical diagnosis? (Select up to 3)",
+            "answer_options": [
+                "FDA or other regulatory approval",
+                "Transparency about how decisions are made",
+                "Human doctor oversight/review",
+                "High accuracy rates in clinical trials",
+                "Personal positive past experiences",
+                "Recommendation from my physician",
+                "Peer-reviewed research studies"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a limited multi-select (3 max) with clear instructions. Consider displaying as a drag-and-rank question for premium respondents.",
+            "scripter_notes": "Field type: checkbox with max selection validation (MULTI_CHOICE). Mobile-friendly grid layout.",
+            "script": {
+                "question_text": "What factors would increase your trust in AI-assisted medical diagnosis? (Select up to 3)",
+                "answer_options": [
+                    "FDA or other regulatory approval",
+                    "Transparency about how decisions are made",
+                    "Human doctor oversight/review",
+                    "High accuracy rates in clinical trials",
+                    "Personal positive past experiences",
+                    "Recommendation from my physician",
+                    "Peer-reviewed research studies"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any concerns you have about AI-assisted medical diagnosis in your own words:",
+            "answer_options": [],
+            "routing_logic": "Display if Q3 includes 'Somewhat uncomfortable' or 'Very uncomfortable'",
+            "client_notes": "Open text field with 500-character limit. Place after all rating questions to avoid priming bias.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT). Apply skip logic from Q3 responses.",
+            "script": {
+                "question_text": "Please describe any concerns you have about AI-assisted medical diagnosis in your own words:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q3 includes 'Somewhat uncomfortable' or 'Very uncomfortable'"
+            }
+        }
+    ]
+}

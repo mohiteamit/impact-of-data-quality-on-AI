@@ -1,0 +1,113 @@
+{
+    "survey_id": "5f7f61ea-5bd1-4d52-a228-ce588adaceeb",
+    "survey_name": "AI-Powered Personal Shopping Assistant Usage Survey",
+    "survey_brief": "This survey aims to understand consumer usage and satisfaction with AI-powered personal shopping assistants, including adoption barriers, feature preferences, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you ever used an AI-powered personal shopping assistant (e.g., chatbot, voice assistant, or recommendation engine)?",
+            "answer_options": [
+                "Yes, regularly",
+                "Yes, occasionally",
+                "No, but I am aware of them",
+                "No, and I was not aware of them"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice question with clear answer options. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Have you ever used an AI-powered personal shopping assistant (e.g., chatbot, voice assistant, or recommendation engine)?",
+                "answer_options": [
+                    "Yes, regularly",
+                    "Yes, occasionally",
+                    "No, but I am aware of them",
+                    "No, and I was not aware of them"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI-powered shopping assistant features do you find most valuable? (Select all that apply)",
+            "answer_options": [
+                "Personalized product recommendations",
+                "Voice or text-based search",
+                "Price comparison",
+                "Inventory availability notifications",
+                "Style or outfit suggestions",
+                "None of the above"
+            ],
+            "routing_logic": "Only respondents who selected 'Yes, regularly' or 'Yes, occasionally' in Q1",
+            "client_notes": "Use a multi-choice question with checkboxes. Ensure the options are clear and not overlapping.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following AI-powered shopping assistant features do you find most valuable? (Select all that apply)",
+                "answer_options": [
+                    "Personalized product recommendations",
+                    "Voice or text-based search",
+                    "Price comparison",
+                    "Inventory availability notifications",
+                    "Style or outfit suggestions",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only respondents who selected 'Yes, regularly' or 'Yes, occasionally' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors would encourage you to use an AI-powered personal shopping assistant more frequently?",
+            "answer_options": [],
+            "routing_logic": "Only respondents who selected 'No, but I am aware of them' or 'No, and I was not aware of them' in Q1",
+            "client_notes": "Use an open-ended question to capture detailed responses. Encourage respondents to provide specific reasons.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What factors would encourage you to use an AI-powered personal shopping assistant more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only respondents who selected 'No, but I am aware of them' or 'No, and I was not aware of them' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the accuracy of AI-powered shopping assistant recommendations? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Only respondents who selected 'Yes, regularly' or 'Yes, occasionally' in Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is balanced and clearly labeled.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the accuracy of AI-powered shopping assistant recommendations? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only respondents who selected 'Yes, regularly' or 'Yes, occasionally' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for AI-powered personal shopping assistants?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-ended question to allow respondents to provide detailed feedback. Encourage specificity.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-powered personal shopping assistants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

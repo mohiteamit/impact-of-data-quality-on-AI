@@ -1,0 +1,113 @@
+{
+    "survey_id": "c37d269e-2a15-4d53-acca-07d7259d6399",
+    "survey_name": "Subscription Service User Feedback Survey",
+    "survey_brief": "This survey aims to gather feedback from users of subscription-based services to understand satisfaction levels, usage patterns, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which subscription service(s) do you currently use?",
+            "answer_options": [
+                "Streaming (e.g., Netflix, Disney+)",
+                "Meal Kits (e.g., HelloFresh, Blue Apron)",
+                "Fitness (e.g., Peloton, Apple Fitness+)",
+                "Software (e.g., Adobe Creative Cloud, Microsoft 365)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a multi-choice format to allow selection of multiple services. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE with checkboxes. Include an 'Other' option that triggers a text input when selected.",
+            "script": {
+                "question_text": "Which subscription service(s) do you currently use?",
+                "answer_options": [
+                    "Streaming (e.g., Netflix, Disney+)",
+                    "Meal Kits (e.g., HelloFresh, Blue Apron)",
+                    "Fitness (e.g., Peloton, Apple Fitness+)",
+                    "Software (e.g., Adobe Creative Cloud, Microsoft 365)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary subscription service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 has at least one selected option.",
+            "client_notes": "Use a single-choice Likert scale. Ensure the question refers to the 'primary' service if the user selected multiple services in Q1.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with your primary subscription service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 has at least one selected option."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason for your satisfaction or dissatisfaction?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q2 is answered (any option selected).",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit.",
+            "script": {
+                "question_text": "What is the primary reason for your satisfaction or dissatisfaction?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q2 is answered (any option selected)."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend your primary subscription service to a friend or colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears if Q1 has at least one selected option.",
+            "client_notes": "Single-choice question to measure Net Promoter Score (NPS) potential. Use a 5-point scale for simplicity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How likely are you to recommend your primary subscription service to a friend or colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 has at least one selected option."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for your primary subscription service?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture innovation ideas. Encourage detailed responses but limit to 300 characters for brevity.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for your primary subscription service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

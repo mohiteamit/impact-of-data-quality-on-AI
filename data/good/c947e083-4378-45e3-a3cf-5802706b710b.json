@@ -1,0 +1,107 @@
+{
+    "survey_id": "c947e083-4378-45e3-a3cf-5802706b710b",
+    "survey_name": "Consumer Preferences for Hybrid Vehicle Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and barriers regarding the adoption of hybrid vehicles to help manufacturers and policymakers better address market needs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How likely are you to consider purchasing a hybrid vehicle within the next 5 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure mobile-friendly drop-down options.",
+            "scripter_notes": "Single-choice radio buttons. Randomize answer order to mitigate bias.",
+            "script": {
+                "question_text": "How likely are you to consider purchasing a hybrid vehicle within the next 5 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the most important factors influencing your decision to purchase a hybrid vehicle? (Select up to 3)",
+            "answer_options": [
+                "Fuel efficiency",
+                "Environmental impact",
+                "Government incentives",
+                "Cost savings over time",
+                "Availability of charging infrastructure",
+                "Vehicle performance",
+                "Brand reputation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Multi-choice with a limit of 3 selections. Include an 'Other' option with text field.",
+            "scripter_notes": "Checkbox input type with validation for max 3 selections. 'Other' option triggers open-text field.",
+            "script": {
+                "question_text": "What are the most important factors influencing your decision to purchase a hybrid vehicle? (Select up to 3)",
+                "answer_options": [
+                    "Fuel efficiency",
+                    "Environmental impact",
+                    "Government incentives",
+                    "Cost savings over time",
+                    "Availability of charging infrastructure",
+                    "Vehicle performance",
+                    "Brand reputation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, do you have about owning a hybrid vehicle?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended to capture qualitative insights. Limit response to 200 characters.",
+            "scripter_notes": "Text input field with character counter.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about owning a hybrid vehicle?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which of the following would most incentivize you to purchase a hybrid vehicle?",
+            "answer_options": [
+                "Tax credits or rebates",
+                "Lower upfront cost",
+                "Free charging stations",
+                "Extended warranty",
+                "Lower maintenance costs",
+                "None of the above"
+            ],
+            "routing_logic": "Shown if Q1 response is 'Somewhat likely', 'Neutral', or 'Somewhat unlikely'.",
+            "client_notes": "Single-choice question targeting hesitant buyers. Include 'None of the above' option.",
+            "scripter_notes": "Radio buttons with mandatory selection.",
+            "script": {
+                "question_text": "Which of the following would most incentivize you to purchase a hybrid vehicle?",
+                "answer_options": [
+                    "Tax credits or rebates",
+                    "Lower upfront cost",
+                    "Free charging stations",
+                    "Extended warranty",
+                    "Lower maintenance costs",
+                    "None of the above"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 response is 'Somewhat likely', 'Neutral', or 'Somewhat unlikely'."
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "survey_id": "1c4fc9a5-8db3-45bf-9299-f219e4afe14d",
+    "survey_name": "Public Health Clinic Patient Satisfaction Survey",
+    "survey_brief": "This survey aims to assess patient satisfaction with services provided at public health clinics, focusing on appointment scheduling, waiting times, staff interactions, and overall experience to identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the ease of scheduling your most recent appointment at the clinic?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for balanced measurement. Ensure mobile-responsive layout for accessibility.",
+            "scripter_notes": "Field type: Radio buttons (SINGLE_CHOICE). Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "How satisfied are you with the ease of scheduling your most recent appointment at the clinic?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following appointment scheduling methods have you used? (Select all that apply)",
+            "answer_options": [
+                "Online portal",
+                "Phone call",
+                "Mobile app",
+                "Walk-in",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' field with text entry for unlisted options. Mobile users may prefer checkboxes over dropdowns.",
+            "scripter_notes": "Field type: Checkboxes (MULTI_CHOICE). Add conditional text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which of the following appointment scheduling methods have you used? (Select all that apply)",
+                "answer_options": [
+                    "Online portal",
+                    "Phone call",
+                    "Mobile app",
+                    "Walk-in",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How long did you wait beyond your scheduled appointment time to be seen by a healthcare provider?",
+            "answer_options": [
+                "No wait time",
+                "1-15 minutes",
+                "16-30 minutes",
+                "31-45 minutes",
+                "More than 45 minutes"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Benchmarking question for operational efficiency. Group time ranges logically.",
+            "scripter_notes": "Field type: Radio buttons (SINGLE_CHOICE). Display options vertically.",
+            "script": {
+                "question_text": "How long did you wait beyond your scheduled appointment time to be seen by a healthcare provider?",
+                "answer_options": [
+                    "No wait time",
+                    "1-15 minutes",
+                    "16-30 minutes",
+                    "31-45 minutes",
+                    "More than 45 minutes"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any specific positive experiences or areas for improvement during your visit:",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended responses provide qualitative insights. Set a 500-character limit for manageable analysis.",
+            "scripter_notes": "Field type: Open text area (OPEN_TEXT). Enable spell-check for mobile users.",
+            "script": {
+                "question_text": "Please describe any specific positive experiences or areas for improvement during your visit:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend this clinic to others based on your recent experience?",
+            "answer_options": [
+                "Extremely likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Extremely unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard Net Promoter Score (NPS) question. Display as 5-point scale for consistency with Q1.",
+            "scripter_notes": "Field type: Radio buttons (SINGLE_CHOICE). Label endpoints clearly.",
+            "script": {
+                "question_text": "How likely are you to recommend this clinic to others based on your recent experience?",
+                "answer_options": [
+                    "Extremely likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Extremely unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

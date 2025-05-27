@@ -1,0 +1,133 @@
+{
+    "survey_id": "1f73a532-6b2d-4053-a2f6-477643430d9d",
+    "survey_name": "Consumer Preferences for Eco-Friendly Cleaning Products Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and purchasing behaviors regarding eco-friendly cleaning products to help businesses tailor their offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase eco-friendly cleaning products?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "Every few months",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice question format to capture frequency of purchase. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you purchase eco-friendly cleaning products?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "Every few months",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which factors influence your decision to buy eco-friendly cleaning products? (Select all that apply)",
+            "answer_options": [
+                "Environmental impact",
+                "Health benefits",
+                "Product effectiveness",
+                "Brand reputation",
+                "Price",
+                "Packaging sustainability",
+                "Availability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a multi-choice question format. Include an 'Other' option to capture additional responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which factors influence your decision to buy eco-friendly cleaning products? (Select all that apply)",
+                "answer_options": [
+                    "Environmental impact",
+                    "Health benefits",
+                    "Product effectiveness",
+                    "Brand reputation",
+                    "Price",
+                    "Packaging sustainability",
+                    "Availability",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you avoid purchasing eco-friendly cleaning products?",
+            "answer_options": [
+                "Higher cost",
+                "Limited availability",
+                "Perceived lower effectiveness",
+                "Lack of trust in eco-claims",
+                "No specific reason",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 response is 'Rarely' or 'Never'",
+            "client_notes": "This question should only appear for respondents who rarely or never purchase eco-friendly cleaning products.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "What is the primary reason you avoid purchasing eco-friendly cleaning products?",
+                "answer_options": [
+                    "Higher cost",
+                    "Limited availability",
+                    "Perceived lower effectiveness",
+                    "Lack of trust in eco-claims",
+                    "No specific reason",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 response is 'Rarely' or 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much more are you willing to pay for eco-friendly cleaning products compared to conventional ones?",
+            "answer_options": [
+                "Not willing to pay more",
+                "Up to 10% more",
+                "11-20% more",
+                "21-30% more",
+                "More than 30%"
+            ],
+            "routing_logic": "Show if Q1 response is not 'Never'",
+            "client_notes": "Use a single-choice question format to gauge price sensitivity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How much more are you willing to pay for eco-friendly cleaning products compared to conventional ones?",
+                "answer_options": [
+                    "Not willing to pay more",
+                    "Up to 10% more",
+                    "11-20% more",
+                    "21-30% more",
+                    "More than 30%"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to purchase more eco-friendly cleaning products?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Use an open-ended question to gather qualitative insights.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would encourage you to purchase more eco-friendly cleaning products?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

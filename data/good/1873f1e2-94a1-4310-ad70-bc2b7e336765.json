@@ -1,0 +1,125 @@
+{
+    "survey_id": "1873f1e2-94a1-4310-ad70-bc2b7e336765",
+    "survey_name": "EdTech Platform Usability Survey",
+    "survey_brief": "This survey aims to evaluate the usability and effectiveness of an educational technology platform from the perspective of both educators and students, focusing on interface design, learning tools, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the EdTech platform in a typical week?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Ensure options cover all possible usage frequencies to avoid respondent frustration.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use the EdTech platform in a typical week?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features do you find most useful? (Select all that apply)",
+            "answer_options": [
+                "Interactive quizzes",
+                "Video lectures",
+                "Discussion forums",
+                "Progress tracking",
+                "Assignment submission",
+                "None of the above"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Multi-select question; limit to 6 options for readability.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "Which of the following features do you find most useful? (Select all that apply)",
+                "answer_options": [
+                    "Interactive quizzes",
+                    "Video lectures",
+                    "Discussion forums",
+                    "Progress tracking",
+                    "Assignment submission",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how intuitive is the platform's interface? (1 = Not intuitive, 5 = Very intuitive)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Use a Likert scale for consistency; ensure labels are clear.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how intuitive is the platform's interface? (1 = Not intuitive, 5 = Very intuitive)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the platform?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback; limit to 300 characters.",
+            "scripter_notes": "Use a text input field with character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for the platform?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which device do you primarily use to access the platform?",
+            "answer_options": [
+                "Desktop/Laptop",
+                "Tablet",
+                "Smartphone",
+                "Other"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Include 'Other' option to capture outliers.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Which device do you primarily use to access the platform?",
+                "answer_options": [
+                    "Desktop/Laptop",
+                    "Tablet",
+                    "Smartphone",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        }
+    ]
+}

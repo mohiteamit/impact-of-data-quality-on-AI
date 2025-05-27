@@ -1,0 +1,153 @@
+{
+    "survey_id": "339f6b2c-bb09-4d0a-820d-d7cb80c2ad57",
+    "survey_name": "Corporate Volunteer Program Impact Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness and employee satisfaction with the corporate volunteer programs, identifying areas for improvement and measuring the perceived impact on community and employee engagement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in your company's volunteer programs?",
+            "answer_options": [
+                "Never",
+                "Once a year",
+                "A few times a year",
+                "Once a month",
+                "Multiple times a month"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice scale to measure frequency of participation. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you participate in your company's volunteer programs?",
+                "answer_options": [
+                    "Never",
+                    "Once a year",
+                    "A few times a year",
+                    "Once a month",
+                    "Multiple times a month"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following types of volunteer activities have you participated in through your company? (Select all that apply)",
+            "answer_options": [
+                "Environmental cleanup",
+                "Mentoring or tutoring",
+                "Food bank or homeless shelter assistance",
+                "Fundraising for non-profits",
+                "Skills-based volunteering (e.g., pro bono consulting)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 response is not 'Never'",
+            "client_notes": "Multi-choice question to capture diverse engagement. Include an 'Other' option for unexpected responses.",
+            "scripter_notes": "Field type: multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following types of volunteer activities have you participated in through your company? (Select all that apply)",
+                "answer_options": [
+                    "Environmental cleanup",
+                    "Mentoring or tutoring",
+                    "Food bank or homeless shelter assistance",
+                    "Fundraising for non-profits",
+                    "Skills-based volunteering (e.g., pro bono consulting)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the volunteer opportunities provided by your company?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "Only appears if Q1 response is not 'Never'",
+            "client_notes": "Use a Likert scale to measure satisfaction. Ensure balanced positive/negative options.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the volunteer opportunities provided by your company?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What barriers, if any, prevent you from participating more in volunteer programs?",
+            "answer_options": [
+                "Lack of time",
+                "Scheduling conflicts",
+                "Lack of interest in available programs",
+                "Lack of awareness about opportunities",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Multi-choice with an 'Other' option to capture unlisted barriers. Helps identify program improvements.",
+            "scripter_notes": "Field type: multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What barriers, if any, prevent you from participating more in volunteer programs?",
+                "answer_options": [
+                    "Lack of time",
+                    "Scheduling conflicts",
+                    "Lack of interest in available programs",
+                    "Lack of awareness about opportunities",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "In your opinion, what impact do corporate volunteer programs have on employee morale?",
+            "answer_options": [
+                "No impact",
+                "Slightly positive impact",
+                "Moderately positive impact",
+                "Very positive impact",
+                "Negative impact"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Single-choice scale to measure perceived impact on morale. Include a 'Negative impact' option for balanced feedback.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "In your opinion, what impact do corporate volunteer programs have on employee morale?",
+                "answer_options": [
+                    "No impact",
+                    "Slightly positive impact",
+                    "Moderately positive impact",
+                    "Very positive impact",
+                    "Negative impact"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What suggestions do you have to improve the company's volunteer programs?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Limit response length to 500 characters for concise answers.",
+            "scripter_notes": "Field type: open-text input with character limit.",
+            "script": {
+                "question_text": "What suggestions do you have to improve the company's volunteer programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

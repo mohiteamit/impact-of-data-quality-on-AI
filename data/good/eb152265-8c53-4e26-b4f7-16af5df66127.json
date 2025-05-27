@@ -1,0 +1,133 @@
+{
+    "survey_id": "eb152265-8c53-4e26-b4f7-16af5df66127",
+    "survey_name": "Consumer Preferences for Plant-Based Dairy Alternatives Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, purchasing behaviors, and attitudes towards plant-based dairy alternatives.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you consume plant-based dairy alternatives?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clear response capture. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you consume plant-based dairy alternatives?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which plant-based dairy alternatives do you consume? (Select all that apply)",
+            "answer_options": [
+                "Almond milk",
+                "Soy milk",
+                "Oat milk",
+                "Coconut milk",
+                "Cashew milk",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is not 'Never'",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional text input for 'Other'",
+            "script": {
+                "question_text": "Which plant-based dairy alternatives do you consume? (Select all that apply)",
+                "answer_options": [
+                    "Almond milk",
+                    "Soy milk",
+                    "Oat milk",
+                    "Coconut milk",
+                    "Cashew milk",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influence your choice of plant-based dairy alternatives? (Select up to 3)",
+            "answer_options": [
+                "Taste",
+                "Price",
+                "Health benefits",
+                "Environmental impact",
+                "Availability",
+                "Brand reputation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is not 'Never'",
+            "client_notes": "Limit selections to 3 to prioritize key factors. Use a multi-choice question with a max selection constraint.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with max selection limit of 3",
+            "script": {
+                "question_text": "What factors influence your choice of plant-based dairy alternatives? (Select up to 3)",
+                "answer_options": [
+                    "Taste",
+                    "Price",
+                    "Health benefits",
+                    "Environmental impact",
+                    "Availability",
+                    "Brand reputation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the taste of plant-based dairy alternatives compared to traditional dairy products?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 is not 'Never'",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the taste of plant-based dairy alternatives compared to traditional dairy products?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in plant-based dairy alternatives?",
+            "answer_options": [],
+            "routing_logic": "Only if Q1 is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Use a textbox for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (textbox)",
+            "script": {
+                "question_text": "What improvements would you like to see in plant-based dairy alternatives?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q1 is not 'Never'"
+            }
+        }
+    ]
+}

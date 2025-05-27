@@ -1,0 +1,149 @@
+{
+    "survey_id": "c827ab21-dbed-4e63-897f-f9a6ea01e867",
+    "survey_name": "Freelancer Tax Preparation Challenges Survey",
+    "survey_brief": "This survey aims to understand the challenges freelancers face when preparing and filing their taxes, including software usage, knowledge gaps, and pain points.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How do you currently prepare and file your taxes as a freelancer?",
+            "answer_options": [
+                "Use tax preparation software (e.g., TurboTax, H&R Block)",
+                "Hire a professional accountant or tax preparer",
+                "Manually file using paper forms",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Consider adding a follow-up open-ended question for 'Other' responses to capture unique methods.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an 'Other' option triggering a text input if selected.",
+            "script": {
+                "question_text": "How do you currently prepare and file your taxes as a freelancer?",
+                "answer_options": [
+                    "Use tax preparation software (e.g., TurboTax, H&R Block)",
+                    "Hire a professional accountant or tax preparer",
+                    "Manually file using paper forms",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your biggest challenges when preparing your freelance taxes? (Select all that apply)",
+            "answer_options": [
+                "Understanding deductible expenses",
+                "Tracking income from multiple clients",
+                "Quarterly estimated tax payments",
+                "State tax complexities",
+                "Software usability issues",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question to identify common pain points. Ensure mobile-friendly design for easy selection.",
+            "scripter_notes": "Field type: MULTI_CHOICE with checkbox inputs. Include 'Other' with open-text option.",
+            "script": {
+                "question_text": "What are your biggest challenges when preparing your freelance taxes? (Select all that apply)",
+                "answer_options": [
+                    "Understanding deductible expenses",
+                    "Tracking income from multiple clients",
+                    "Quarterly estimated tax payments",
+                    "State tax complexities",
+                    "Software usability issues",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How confident are you in your ability to accurately file your freelance taxes?",
+            "answer_options": [
+                "Very confident",
+                "Somewhat confident",
+                "Neutral",
+                "Not very confident",
+                "Not confident at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for consistent measurement. Randomize order if possible to avoid bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Avoid randomization if client prefers fixed order.",
+            "script": {
+                "question_text": "How confident are you in your ability to accurately file your freelance taxes?",
+                "answer_options": [
+                    "Very confident",
+                    "Somewhat confident",
+                    "Neutral",
+                    "Not very confident",
+                    "Not confident at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional resources or tools would help you with freelance tax preparation?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture unmet needs. Limit response length to 250 characters for brevity.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit validation.",
+            "script": {
+                "question_text": "What additional resources or tools would help you with freelance tax preparation?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Do you use accounting software (e.g., QuickBooks, FreshBooks) to track freelance income and expenses?",
+            "answer_options": [
+                "Yes, regularly",
+                "Occasionally",
+                "No, but I plan to",
+                "No, and I don’t plan to"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use this to segment respondents for follow-up questions about software preferences.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Route Q6 only if respondent selects 'Yes, regularly' or 'Occasionally'.",
+            "script": {
+                "question_text": "Do you use accounting software (e.g., QuickBooks, FreshBooks) to track freelance income and expenses?",
+                "answer_options": [
+                    "Yes, regularly",
+                    "Occasionally",
+                    "No, but I plan to",
+                    "No, and I don’t plan to"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which accounting software do you use for freelance work?",
+            "answer_options": [
+                "QuickBooks",
+                "FreshBooks",
+                "Wave",
+                "Xero",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only shown if Q5 response is 'Yes, regularly' or 'Occasionally'",
+            "client_notes": "Pre-populate common options but allow 'Other' for niche tools.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with conditional routing based on Q5.",
+            "script": {
+                "question_text": "Which accounting software do you use for freelance work?",
+                "answer_options": [
+                    "QuickBooks",
+                    "FreshBooks",
+                    "Wave",
+                    "Xero",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q5 response is 'Yes, regularly' or 'Occasionally'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,127 @@
+{
+    "survey_id": "44fb885f-a80b-4c4d-aa60-18b579c9c468",
+    "survey_name": "Employee Engagement and Job Satisfaction Survey",
+    "survey_brief": "This survey aims to measure employee engagement and job satisfaction levels within the organization to identify areas for improvement and enhance workplace morale.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with your current job?",
+            "answer_options": [
+                "1 - Very Dissatisfied",
+                "2 - Dissatisfied",
+                "3 - Neutral",
+                "4 - Satisfied",
+                "5 - Very Satisfied"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with your current job?",
+                "answer_options": [
+                    "1 - Very Dissatisfied",
+                    "2 - Dissatisfied",
+                    "3 - Neutral",
+                    "4 - Satisfied",
+                    "5 - Very Satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors contribute most to your job satisfaction? (Select all that apply)",
+            "answer_options": [
+                "Salary and benefits",
+                "Work-life balance",
+                "Career growth opportunities",
+                "Company culture",
+                "Relationship with colleagues",
+                "Recognition and rewards"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Allow multiple selections to capture nuanced responses.",
+            "scripter_notes": "Field type: Multi-choice checkboxes.",
+            "script": {
+                "question_text": "Which of the following factors contribute most to your job satisfaction? (Select all that apply)",
+                "answer_options": [
+                    "Salary and benefits",
+                    "Work-life balance",
+                    "Career growth opportunities",
+                    "Company culture",
+                    "Relationship with colleagues",
+                    "Recognition and rewards"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How likely are you to recommend this company as a great place to work to a friend or colleague?",
+            "answer_options": [
+                "Very Unlikely",
+                "Unlikely",
+                "Neutral",
+                "Likely",
+                "Very Likely"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "This is a standard Net Promoter Score (NPS) question variant.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How likely are you to recommend this company as a great place to work to a friend or colleague?",
+                "answer_options": [
+                    "Very Unlikely",
+                    "Unlikely",
+                    "Neutral",
+                    "Likely",
+                    "Very Likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional benefits or perks would improve your job satisfaction?",
+            "answer_options": [],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Open-ended responses can provide unexpected insights.",
+            "scripter_notes": "Field type: Open-text input.",
+            "script": {
+                "question_text": "What additional benefits or perks would improve your job satisfaction?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you receive feedback from your manager?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Occasionally",
+                "Frequently",
+                "Always"
+            ],
+            "routing_logic": "This question is shown to respondents who selected 'Career growth opportunities' in Q2.",
+            "client_notes": "Ensure the routing logic correctly filters respondents based on Q2 selections.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you receive feedback from your manager?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Occasionally",
+                    "Frequently",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to respondents who selected 'Career growth opportunities' in Q2."
+            }
+        }
+    ]
+}

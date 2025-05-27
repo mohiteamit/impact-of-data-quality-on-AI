@@ -1,0 +1,129 @@
+{
+    "survey_id": "17997e9c-30e9-4c27-b276-13d4f7f34fc1",
+    "survey_name": "Retail Employee Scheduling Satisfaction Survey",
+    "survey_brief": "This survey aims to understand employee satisfaction and challenges related to scheduling practices in retail environments, helping organizations optimize shift planning and work-life balance.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your current work schedule?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: single-choice radio buttons. Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "How satisfied are you with your current work schedule?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which aspects of schedule flexibility are most important to you? (Select all that apply)",
+            "answer_options": [
+                "Advance notice of shifts",
+                "Ability to swap shifts",
+                "Consistent days off",
+                "Part-time/full-time options",
+                "Seasonal hour adjustments",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question. Add 'Other' field for unlisted priorities.",
+            "scripter_notes": "Field type: multi-choice checkboxes with optional text input for 'Other'.",
+            "script": {
+                "question_text": "Which aspects of schedule flexibility are most important to you? (Select all that apply)",
+                "answer_options": [
+                    "Advance notice of shifts",
+                    "Ability to swap shifts",
+                    "Consistent days off",
+                    "Part-time/full-time options",
+                    "Seasonal hour adjustments",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How many days in advance do you typically receive your work schedule?",
+            "answer_options": [
+                "More than 3 weeks",
+                "2-3 weeks",
+                "1-2 weeks",
+                "Less than 1 week",
+                "Schedule changes frequently"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Critical metric for predictability. Include 'frequent changes' option for accuracy.",
+            "scripter_notes": "Field type: single-choice dropdown to save space.",
+            "script": {
+                "question_text": "How many days in advance do you typically receive your work schedule?",
+                "answer_options": [
+                    "More than 3 weeks",
+                    "2-3 weeks",
+                    "1-2 weeks",
+                    "Less than 1 week",
+                    "Schedule changes frequently"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe any challenges you face with your current scheduling system:",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Somewhat dissatisfied' or 'Very dissatisfied' in Q1",
+            "client_notes": "Open-ended to capture qualitative insights. Limit to 500 characters.",
+            "scripter_notes": "Field type: open-text with character counter. Show only if Q1 dissatisfaction indicated.",
+            "script": {
+                "question_text": "Describe any challenges you face with your current scheduling system:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Somewhat dissatisfied' or 'Very dissatisfied' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which scheduling tools does your workplace currently use?",
+            "answer_options": [
+                "Paper schedules",
+                "Email notifications",
+                "Scheduling software (e.g., When I Work, Homebase)",
+                "Mobile app",
+                "No formal system",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Helps assess technology adoption. Include 'Unsure' for temporary/seasonal staff.",
+            "scripter_notes": "Field type: single-choice with 'Other' write-in option.",
+            "script": {
+                "question_text": "Which scheduling tools does your workplace currently use?",
+                "answer_options": [
+                    "Paper schedules",
+                    "Email notifications",
+                    "Scheduling software (e.g., When I Work, Homebase)",
+                    "Mobile app",
+                    "No formal system",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

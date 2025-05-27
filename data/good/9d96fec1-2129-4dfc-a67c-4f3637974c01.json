@@ -1,0 +1,135 @@
+{
+    "survey_id": "9d96fec1-2129-4dfc-a67c-4f3637974c01",
+    "survey_name": "Consumer Preferences for Renewable Energy Providers Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and decision-making factors when choosing renewable energy providers.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following renewable energy sources are you currently using or considering for your household?",
+            "answer_options": [
+                "Solar power",
+                "Wind power",
+                "Hydropower",
+                "Geothermal energy",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkbox format to allow multiple selections. Ensure 'None of the above' is clearly distinct.",
+            "scripter_notes": "Field type: MULTI_CHOICE. Display as checkboxes with vertical layout.",
+            "script": {
+                "question_text": "Which of the following renewable energy sources are you currently using or considering for your household?",
+                "answer_options": [
+                    "Solar power",
+                    "Wind power",
+                    "Hydropower",
+                    "Geothermal energy",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How important are the following factors when selecting a renewable energy provider? (Rate each from 1-5, where 1=Not important and 5=Extremely important)",
+            "answer_options": [
+                "Price/affordability",
+                "Environmental impact",
+                "Provider reputation",
+                "Contract flexibility",
+                "Customer service quality",
+                "Ease of switching"
+            ],
+            "routing_logic": "All respondents who selected at least one energy source in Q1",
+            "client_notes": "Use a matrix question type with Likert scale. Randomize order of factors to prevent bias.",
+            "scripter_notes": "Field type: MATRIX_SINGLE_CHOICE. Implement 5-point Likert scale for each row. Ensure mobile-responsive design.",
+            "script": {
+                "question_text": "How important are the following factors when selecting a renewable energy provider? (Rate each from 1-5, where 1=Not important and 5=Extremely important)",
+                "answer_options": [
+                    "Price/affordability",
+                    "Environmental impact",
+                    "Provider reputation",
+                    "Contract flexibility",
+                    "Customer service quality",
+                    "Ease of switching"
+                ],
+                "type": "MATRIX_SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected at least one energy source in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What percentage premium would you be willing to pay for renewable energy compared to conventional energy sources?",
+            "answer_options": [
+                "0% (same price)",
+                "1-5% more",
+                "6-10% more",
+                "11-15% more",
+                "16-20% more",
+                "More than 20%"
+            ],
+            "routing_logic": "All respondents who selected at least one energy source in Q1",
+            "client_notes": "Use radio buttons with clear percentage ranges. Consider adding visual aids for price comparison.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Display as radio buttons with vertical layout.",
+            "script": {
+                "question_text": "What percentage premium would you be willing to pay for renewable energy compared to conventional energy sources?",
+                "answer_options": [
+                    "0% (same price)",
+                    "1-5% more",
+                    "6-10% more",
+                    "11-15% more",
+                    "16-20% more",
+                    "More than 20%"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected at least one energy source in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about switching to renewable energy providers?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative insights. Limit response to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT. Implement character counter with 250-character limit.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about switching to renewable energy providers?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following incentives would most encourage you to switch to a renewable energy provider? (Select up to 3)",
+            "answer_options": [
+                "Government tax credits",
+                "Lower upfront installation costs",
+                "Guaranteed price locking",
+                "Smart home energy monitoring tools",
+                "Community solar programs",
+                "Green energy certification",
+                "Referral bonuses",
+                "Flexible payment plans"
+            ],
+            "routing_logic": "All respondents who selected at least one energy source in Q1",
+            "client_notes": "Use checkbox format with clear instructions about selecting up to 3 options. Randomize option order.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max selection limit of 3. Implement JavaScript validation.",
+            "script": {
+                "question_text": "Which of the following incentives would most encourage you to switch to a renewable energy provider? (Select up to 3)",
+                "answer_options": [
+                    "Government tax credits",
+                    "Lower upfront installation costs",
+                    "Guaranteed price locking",
+                    "Smart home energy monitoring tools",
+                    "Community solar programs",
+                    "Green energy certification",
+                    "Referral bonuses",
+                    "Flexible payment plans"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents who selected at least one energy source in Q1"
+            }
+        }
+    ]
+}

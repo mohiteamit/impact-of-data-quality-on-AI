@@ -1,0 +1,125 @@
+{
+    "survey_id": "5e98d6f6-e6b4-4a22-96d9-d544c8fedec6",
+    "survey_name": "Urban Commuter E-Scooter Usage and Satisfaction Survey",
+    "survey_brief": "This survey aims to understand user satisfaction, preferences, and challenges related to urban e-scooter commuting to improve service offerings and infrastructure.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use e-scooters for urban commuting?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Only for special occasions"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a radio button scale for single-choice responses. Ensure mobile-friendly vertical layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Randomize options to avoid bias.",
+            "script": {
+                "question_text": "How frequently do you use e-scooters for urban commuting?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Only for special occasions"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for using e-scooters? (Select all that apply)",
+            "answer_options": [
+                "Avoiding traffic congestion",
+                "Cost-effectiveness",
+                "Environmental concerns",
+                "Convenience of parking",
+                "Speed compared to walking/public transit",
+                "Enjoyment/recreation"
+            ],
+            "routing_logic": "Appears to all respondents who selected any usage frequency in Q1",
+            "client_notes": "Multi-choice checkbox format. Limit to 6 options for readability.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Display 'Other' with text input if selected.",
+            "script": {
+                "question_text": "What are your primary reasons for using e-scooters? (Select all that apply)",
+                "answer_options": [
+                    "Avoiding traffic congestion",
+                    "Cost-effectiveness",
+                    "Environmental concerns",
+                    "Convenience of parking",
+                    "Speed compared to walking/public transit",
+                    "Enjoyment/recreation"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents who selected any usage frequency in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with current e-scooter availability in your area? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears to all respondents who selected any usage frequency in Q1",
+            "client_notes": "Likert scale with clear endpoint labels. Use star rating visualization if possible.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Ensure labels display on hover/tap.",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with current e-scooter availability in your area? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected any usage frequency in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would encourage you to use e-scooters more often?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents who selected any usage frequency in Q1",
+            "client_notes": "Open-ended to capture qualitative insights. Set 300-character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area). Enable spell-check.",
+            "script": {
+                "question_text": "What improvements would encourage you to use e-scooters more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents who selected any usage frequency in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any safety concerns while using e-scooters?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No, never",
+                "Prefer not to answer"
+            ],
+            "routing_logic": "Appears to all respondents who selected any usage frequency in Q1 except 'Only for special occasions'",
+            "client_notes": "Include neutral/prefer-not-to-answer option. Use conditional follow-up if 'Yes' selected.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Log response time for quality control.",
+            "script": {
+                "question_text": "Have you experienced any safety concerns while using e-scooters?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No, never",
+                    "Prefer not to answer"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected any usage frequency in Q1 except 'Only for special occasions'"
+            }
+        }
+    ]
+}

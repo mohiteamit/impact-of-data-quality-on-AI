@@ -1,0 +1,133 @@
+{
+    "survey_id": "47962ac8-d220-4f76-a786-10f6066ab288",
+    "survey_name": "Smart Office Technology Adoption Survey",
+    "survey_brief": "This survey aims to understand the adoption rates, satisfaction levels, and barriers related to smart office technologies in modern workplaces.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart office technologies does your organization currently use?",
+            "answer_options": [
+                "Smart lighting systems",
+                "Automated climate control",
+                "Smart meeting room booking systems",
+                "Occupancy sensors",
+                "AI-powered virtual assistants",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a multi-choice format to allow selection of multiple technologies. Ensure options are mutually exclusive where applicable.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include 'Other' with open-text option if needed.",
+            "script": {
+                "question_text": "Which of the following smart office technologies does your organization currently use?",
+                "answer_options": [
+                    "Smart lighting systems",
+                    "Automated climate control",
+                    "Smart meeting room booking systems",
+                    "Occupancy sensors",
+                    "AI-powered virtual assistants",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your organization's current smart office technologies?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale with a 'Not applicable' option. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Randomize options to avoid bias.",
+            "script": {
+                "question_text": "How satisfied are you with your organization's current smart office technologies?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the primary barriers to adopting smart office technologies in your organization?",
+            "answer_options": [
+                "High initial costs",
+                "Lack of IT infrastructure",
+                "Employee resistance to change",
+                "Data security concerns",
+                "Lack of perceived benefits",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multiple selections with an 'Other' open-text option. Group related barriers logically.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are the primary barriers to adopting smart office technologies in your organization?",
+                "answer_options": [
+                    "High initial costs",
+                    "Lack of IT infrastructure",
+                    "Employee resistance to change",
+                    "Data security concerns",
+                    "Lack of perceived benefits",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe how smart office technologies have impacted your daily work productivity (if applicable).",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is not 'None of the above'",
+            "client_notes": "Use an open-text field to capture qualitative feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit. Include a word counter.",
+            "script": {
+                "question_text": "Please describe how smart office technologies have impacted your daily work productivity (if applicable).",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which smart office technology would you most like your organization to adopt in the next 12 months?",
+            "answer_options": [
+                "IoT-enabled workspace analytics",
+                "Voice-controlled office systems",
+                "Smart energy management",
+                "Augmented reality for training",
+                "None, we are sufficiently equipped",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Single-choice question with an 'Other' option. Randomize options to avoid order bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "Which smart office technology would you most like your organization to adopt in the next 12 months?",
+                "answer_options": [
+                    "IoT-enabled workspace analytics",
+                    "Voice-controlled office systems",
+                    "Smart energy management",
+                    "Augmented reality for training",
+                    "None, we are sufficiently equipped",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

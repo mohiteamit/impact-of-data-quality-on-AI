@@ -1,0 +1,133 @@
+{
+    "survey_id": "95ad5b7c-8d2b-4420-9ce7-506df543aaf8",
+    "survey_name": "Consumer Preferences for Smart Refrigerators Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, adoption barriers, and feature priorities for smart refrigerators in the home appliance market.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with smart refrigerators?",
+            "answer_options": [
+                "Very familiar - I own or have used one",
+                "Somewhat familiar - I know basic features",
+                "Not very familiar - I've heard of them but don't know details",
+                "Not familiar at all"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Use a 4-point scale to force distinction. Consider mobile-friendly dropdown for space efficiency.",
+            "scripter_notes": "Single-choice radio buttons, required field",
+            "script": {
+                "question_text": "How familiar are you with smart refrigerators?",
+                "answer_options": [
+                    "Very familiar - I own or have used one",
+                    "Somewhat familiar - I know basic features",
+                    "Not very familiar - I've heard of them but don't know details",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which smart refrigerator features would be most valuable to you? (Select up to 3)",
+            "answer_options": [
+                "Inventory tracking/camera inside",
+                "Expiration date alerts",
+                "Recipe suggestions based on contents",
+                "Remote temperature adjustment via app",
+                "Voice assistant integration",
+                "Family calendar/scheduling display",
+                "Energy usage monitoring",
+                "Automatic grocery ordering"
+            ],
+            "routing_logic": "Shown only if Q1 ≠ 'Not familiar at all'",
+            "client_notes": "Randomize option order to minimize bias. Mobile users may need scrollable options.",
+            "scripter_notes": "Multi-choice checkbox with max 3 selections, optional field",
+            "script": {
+                "question_text": "Which smart refrigerator features would be most valuable to you? (Select up to 3)",
+                "answer_options": [
+                    "Inventory tracking/camera inside",
+                    "Expiration date alerts",
+                    "Recipe suggestions based on contents",
+                    "Remote temperature adjustment via app",
+                    "Voice assistant integration",
+                    "Family calendar/scheduling display",
+                    "Energy usage monitoring",
+                    "Automatic grocery ordering"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown only if Q1 ≠ 'Not familiar at all'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns would prevent you from purchasing a smart refrigerator?",
+            "answer_options": [
+                "High price",
+                "Privacy/security concerns",
+                "Complexity of use",
+                "Unreliable technology",
+                "Lack of need for smart features",
+                "Prefer traditional appliance reliability",
+                "None - I would purchase one"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Include 'None' option to capture positive sentiment. Consider 'Other' with text field if space allows.",
+            "scripter_notes": "Multi-choice checkbox (any number), optional field",
+            "script": {
+                "question_text": "What concerns would prevent you from purchasing a smart refrigerator?",
+                "answer_options": [
+                    "High price",
+                    "Privacy/security concerns",
+                    "Complexity of use",
+                    "Unreliable technology",
+                    "Lack of need for smart features",
+                    "Prefer traditional appliance reliability",
+                    "None - I would purchase one"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What price premium would you consider reasonable for smart refrigerator features compared to a standard model?",
+            "answer_options": [
+                "No premium - would only pay standard price",
+                "Up to 10% more",
+                "11-25% more",
+                "26-40% more",
+                "More than 40% premium"
+            ],
+            "routing_logic": "Shown only if Q3 ≠ 'None - I would purchase one'",
+            "client_notes": "Present as sliding scale in digital format, with anchored endpoints for clarity.",
+            "scripter_notes": "Single-choice radio buttons with 'Prefer not to say' option",
+            "script": {
+                "question_text": "What price premium would you consider reasonable for smart refrigerator features compared to a standard model?",
+                "answer_options": [
+                    "No premium - would only pay standard price",
+                    "Up to 10% more",
+                    "11-25% more",
+                    "26-40% more",
+                    "More than 40% premium"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown only if Q3 ≠ 'None - I would purchase one'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features would make a smart refrigerator truly valuable for your household?",
+            "answer_options": [],
+            "routing_logic": "Optional open-ended question for all respondents",
+            "client_notes": "Use text analysis for emerging themes. Limit response length for quality control.",
+            "scripter_notes": "Open text field with 300-character limit",
+            "script": {
+                "question_text": "What additional features would make a smart refrigerator truly valuable for your household?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional open-ended question for all respondents"
+            }
+        }
+    ]
+}

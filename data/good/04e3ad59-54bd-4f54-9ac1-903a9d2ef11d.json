@@ -1,0 +1,175 @@
+{
+    "survey_id": "04e3ad59-54bd-4f54-9ac1-903a9d2ef11d",
+    "survey_name": "Public Wi-Fi Safety Practices Survey",
+    "survey_brief": "This survey aims to understand user behaviors and concerns regarding the use of public Wi-Fi networks, focusing on security practices and awareness.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use public Wi-Fi networks (e.g., in cafes, airports, hotels)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use public Wi-Fi networks (e.g., in cafes, airports, hotels)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of activities do you typically perform on public Wi-Fi? (Select all that apply)",
+            "answer_options": [
+                "Browsing social media",
+                "Online banking or financial transactions",
+                "Checking emails",
+                "Streaming videos or music",
+                "Work-related tasks",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. Include an 'Other' option for unspecified activities.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What types of activities do you typically perform on public Wi-Fi? (Select all that apply)",
+                "answer_options": [
+                    "Browsing social media",
+                    "Online banking or financial transactions",
+                    "Checking emails",
+                    "Streaming videos or music",
+                    "Work-related tasks",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Do you take any security precautions when using public Wi-Fi?",
+            "answer_options": [
+                "Yes, always",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale to measure consistency of security practices.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Do you take any security precautions when using public Wi-Fi?",
+                "answer_options": [
+                    "Yes, always",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you take precautions, which of the following do you use? (Select all that apply)",
+            "answer_options": [
+                "Virtual Private Network (VPN)",
+                "Two-factor authentication (2FA)",
+                "Avoid accessing sensitive accounts",
+                "Use HTTPS websites only",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Yes, always', 'Sometimes', or 'Rarely' to Q3",
+            "client_notes": "Display only if respondent indicated taking precautions in Q3. Allow multiple selections.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "If you take precautions, which of the following do you use? (Select all that apply)",
+                "answer_options": [
+                    "Virtual Private Network (VPN)",
+                    "Two-factor authentication (2FA)",
+                    "Avoid accessing sensitive accounts",
+                    "Use HTTPS websites only",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes, always', 'Sometimes', or 'Rarely' to Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What concerns do you have about using public Wi-Fi networks? (Select all that apply)",
+            "answer_options": [
+                "Data theft or hacking",
+                "Malware or viruses",
+                "Privacy invasion",
+                "Slow or unreliable connection",
+                "None",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture varied concerns.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What concerns do you have about using public Wi-Fi networks? (Select all that apply)",
+                "answer_options": [
+                    "Data theft or hacking",
+                    "Malware or viruses",
+                    "Privacy invasion",
+                    "Slow or unreliable connection",
+                    "None",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you ever experienced a security issue (e.g., hacked account, stolen data) due to using public Wi-Fi?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I'm not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice question to gauge past incidents.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Have you ever experienced a security issue (e.g., hacked account, stolen data) due to using public Wi-Fi?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I'm not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional measures would encourage you to feel safer using public Wi-Fi?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 200 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text input with character limit).",
+            "script": {
+                "question_text": "What additional measures would encourage you to feel safer using public Wi-Fi?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

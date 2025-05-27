@@ -1,0 +1,125 @@
+{
+    "survey_id": "a51bc043-8d33-41d0-83f2-5f47666b9a99",
+    "survey_name": "Digital Nomad Lifestyle and Work Preferences Survey",
+    "survey_brief": "This survey aims to understand the preferences, challenges, and satisfaction levels of digital nomads regarding their work lifestyle, travel habits, and remote work tools.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How long have you been living as a digital nomad?",
+            "answer_options": [
+                "Less than 6 months",
+                "6 months to 1 year",
+                "1 to 3 years",
+                "More than 3 years"
+            ],
+            "routing_logic": "Always show this question.",
+            "client_notes": "Use a single-choice radio button format for clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How long have you been living as a digital nomad?",
+                "answer_options": [
+                    "Less than 6 months",
+                    "6 months to 1 year",
+                    "1 to 3 years",
+                    "More than 3 years"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show this question."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following tools do you use regularly for remote work? (Select all that apply)",
+            "answer_options": [
+                "Slack",
+                "Zoom",
+                "Trello",
+                "Asana",
+                "Google Workspace",
+                "Microsoft Teams",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show this question.",
+            "client_notes": "Allow multiple selections with checkboxes. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following tools do you use regularly for remote work? (Select all that apply)",
+                "answer_options": [
+                    "Slack",
+                    "Zoom",
+                    "Trello",
+                    "Asana",
+                    "Google Workspace",
+                    "Microsoft Teams",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show this question."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the biggest challenge you face as a digital nomad?",
+            "answer_options": [],
+            "routing_logic": "Always show this question.",
+            "client_notes": "Use an open-ended text box to capture detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What is the biggest challenge you face as a digital nomad?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show this question."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you change your location?",
+            "answer_options": [
+                "Every few weeks",
+                "Every 1-3 months",
+                "Every 3-6 months",
+                "Less frequently than every 6 months"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Less than 6 months'.",
+            "client_notes": "Use a single-choice radio button format. Skip if respondent is new to digital nomad lifestyle.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Apply routing logic based on Q1 response.",
+            "script": {
+                "question_text": "How often do you change your location?",
+                "answer_options": [
+                    "Every few weeks",
+                    "Every 1-3 months",
+                    "Every 3-6 months",
+                    "Less frequently than every 6 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Less than 6 months'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with your current internet connectivity while working remotely?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always show this question.",
+            "client_notes": "Use a Likert scale for satisfaction levels. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with a 5-point scale.",
+            "script": {
+                "question_text": "How satisfied are you with your current internet connectivity while working remotely?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show this question."
+            }
+        }
+    ]
+}

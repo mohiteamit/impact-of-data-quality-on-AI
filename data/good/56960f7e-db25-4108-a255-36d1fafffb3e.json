@@ -1,0 +1,125 @@
+{
+    "survey_id": "56960f7e-db25-4108-a255-36d1fafffb3e",
+    "survey_name": "Employee Feedback on Workplace Flexibility Options",
+    "survey_brief": "This survey aims to gather employee feedback on various workplace flexibility options to better understand preferences and improve work-life balance policies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following workplace flexibility options do you currently utilize?",
+            "answer_options": [
+                "Remote work",
+                "Flexible working hours",
+                "Compressed workweek",
+                "Job sharing",
+                "None of the above"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a multi-choice format to allow respondents to select all applicable options.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following workplace flexibility options do you currently utilize?",
+                "answer_options": [
+                    "Remote work",
+                    "Flexible working hours",
+                    "Compressed workweek",
+                    "Job sharing",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the current workplace flexibility options available to you?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice format with a Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the current workplace flexibility options available to you?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What additional workplace flexibility options would you like to see implemented?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use an open-ended format to capture detailed feedback.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT).",
+            "script": {
+                "question_text": "What additional workplace flexibility options would you like to see implemented?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you utilize flexible working hours?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears only if 'Flexible working hours' is selected in Q1.",
+            "client_notes": "Use a single-choice format to gauge frequency of usage.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Ensure routing logic checks Q1 selection.",
+            "script": {
+                "question_text": "How often do you utilize flexible working hours?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears only if 'Flexible working hours' is selected in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced with remote work? (Select all that apply)",
+            "answer_options": [
+                "Communication difficulties",
+                "Technology issues",
+                "Isolation",
+                "Distractions at home",
+                "None"
+            ],
+            "routing_logic": "This question appears only if 'Remote work' is selected in Q1.",
+            "client_notes": "Use a multi-choice format to allow respondents to select all applicable options.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Ensure routing logic checks Q1 selection.",
+            "script": {
+                "question_text": "What challenges have you faced with remote work? (Select all that apply)",
+                "answer_options": [
+                    "Communication difficulties",
+                    "Technology issues",
+                    "Isolation",
+                    "Distractions at home",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears only if 'Remote work' is selected in Q1."
+            }
+        }
+    ]
+}

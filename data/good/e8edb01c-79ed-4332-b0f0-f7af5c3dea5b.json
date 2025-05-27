@@ -1,0 +1,101 @@
+{
+    "survey_id": "e8edb01c-79ed-4332-b0f0-f7af5c3dea5b",
+    "survey_name": "Consumer Preferences for Zero-Waste Grocery Shopping Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding zero-waste grocery shopping, including barriers and motivations.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you engage in zero-waste grocery shopping (e.g., bulk bins, reusable containers)?",
+            "answer_options": [
+                "Never",
+                "Rarely (less than once a month)",
+                "Occasionally (1-3 times a month)",
+                "Frequently (once a week or more)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a balanced scale to avoid bias. Ensure mobile-friendly dropdown or radio buttons.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you engage in zero-waste grocery shopping (e.g., bulk bins, reusable containers)?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (less than once a month)",
+                    "Occasionally (1-3 times a month)",
+                    "Frequently (once a week or more)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the PRIMARY reasons you choose zero-waste grocery shopping? (Select up to 3)",
+            "answer_options": [
+                "Environmental concerns",
+                "Cost savings",
+                "Reducing plastic waste",
+                "Healthier food options",
+                "Supporting local/sustainable businesses",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Occasionally' or 'Frequently' in Q1",
+            "client_notes": "Multi-select with a max of 3 choices. Include an 'Other' option with text input.",
+            "scripter_notes": "Field type: multi-choice checkboxes with validation for max 3 selections.",
+            "script": {
+                "question_text": "What are the PRIMARY reasons you choose zero-waste grocery shopping? (Select up to 3)",
+                "answer_options": [
+                    "Environmental concerns",
+                    "Cost savings",
+                    "Reducing plastic waste",
+                    "Healthier food options",
+                    "Supporting local/sustainable businesses",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Occasionally' or 'Frequently' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers prevent you from engaging in zero-waste grocery shopping more often?",
+            "answer_options": [
+                "Lack of nearby stores offering bulk options",
+                "Inconvenience/time constraints",
+                "Higher perceived cost",
+                "Limited product selection",
+                "Unclear labeling or instructions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question. Randomize options to avoid order bias.",
+            "scripter_notes": "Field type: multi-choice checkboxes with 'Other' text input.",
+            "script": {
+                "question_text": "What barriers prevent you from engaging in zero-waste grocery shopping more often?",
+                "answer_options": [
+                    "Lack of nearby stores offering bulk options",
+                    "Inconvenience/time constraints",
+                    "Higher perceived cost",
+                    "Limited product selection",
+                    "Unclear labeling or instructions",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would encourage you to shop zero-waste more frequently?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative insights. Limit to 300 characters.",
+            "scripter_notes": "Field type: open-text input with character counter.",
+            "script": {
+                "question_text": "What improvements would encourage you to shop zero-waste more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "survey_id": "210e5440-ce7a-4828-8e11-0a3c0da2874a",
+    "survey_name": "Employee Feedback on Workplace Flexibility Options",
+    "survey_brief": "This survey aims to gather employee feedback on workplace flexibility options to improve overall job satisfaction and productivity.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the current workplace flexibility options available to you?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point Likert scale for better granularity in responses. Ensure the scale is balanced and neutral.",
+            "scripter_notes": "Field type: radio button (single-choice). The question is mandatory.",
+            "script": {
+                "question_text": "How satisfied are you with the current workplace flexibility options available to you?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following workplace flexibility options do you currently utilize? (Select all that apply)",
+            "answer_options": [
+                "Remote work",
+                "Flexible working hours",
+                "Compressed workweek",
+                "Job sharing",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Allow multiple selections to capture all utilized options. 'None of the above' should be an exclusive option.",
+            "scripter_notes": "Field type: checkbox (multi-choice). The question is mandatory.",
+            "script": {
+                "question_text": "Which of the following workplace flexibility options do you currently utilize? (Select all that apply)",
+                "answer_options": [
+                    "Remote work",
+                    "Flexible working hours",
+                    "Compressed workweek",
+                    "Job sharing",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What additional workplace flexibility options would you like to see implemented?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text. The question is optional.",
+            "script": {
+                "question_text": "What additional workplace flexibility options would you like to see implemented?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How has workplace flexibility impacted your productivity?",
+            "answer_options": [
+                "Significantly increased",
+                "Slightly increased",
+                "No impact",
+                "Slightly decreased",
+                "Significantly decreased"
+            ],
+            "routing_logic": "Appears only if Q2 is not 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale to measure perceived impact on productivity.",
+            "scripter_notes": "Field type: radio button (single-choice). The question is mandatory if shown.",
+            "script": {
+                "question_text": "How has workplace flexibility impacted your productivity?",
+                "answer_options": [
+                    "Significantly increased",
+                    "Slightly increased",
+                    "No impact",
+                    "Slightly decreased",
+                    "Significantly decreased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q2 is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced with workplace flexibility options?",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q2 is not 'None of the above'",
+            "client_notes": "Open-ended question to capture challenges. Useful for identifying areas for improvement.",
+            "scripter_notes": "Field type: open text. The question is optional if shown.",
+            "script": {
+                "question_text": "What challenges have you faced with workplace flexibility options?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q2 is not 'None of the above'"
+            }
+        }
+    ]
+}

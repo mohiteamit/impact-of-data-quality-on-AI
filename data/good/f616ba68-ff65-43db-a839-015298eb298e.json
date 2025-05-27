@@ -1,0 +1,135 @@
+{
+    "survey_id": "f616ba68-ff65-43db-a839-015298eb298e",
+    "survey_name": "Consumer Preferences for Subscription Box Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, satisfaction levels, and pain points related to subscription box services across various industries.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many subscription box services do you currently use?",
+            "answer_options": [
+                "None",
+                "1-2",
+                "3-5",
+                "More than 5"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for mobile-friendliness. Consider adding 'Prefer not to say' if sensitivity is a concern.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How many subscription box services do you currently use?",
+                "answer_options": [
+                    "None",
+                    "1-2",
+                    "3-5",
+                    "More than 5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of subscription boxes do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Beauty/Cosmetics",
+                "Food/Gourmet",
+                "Clothing/Fashion",
+                "Books/Media",
+                "Fitness/Wellness",
+                "Pet Supplies",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'None'",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "Which types of subscription boxes do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Beauty/Cosmetics",
+                    "Food/Gourmet",
+                    "Clothing/Fashion",
+                    "Books/Media",
+                    "Fitness/Wellness",
+                    "Pet Supplies",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'None'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing a subscription box service? (Rank top 3)",
+            "answer_options": [
+                "Price/Value for money",
+                "Product Quality",
+                "Customization/Personalization",
+                "Brand Reputation",
+                "Frequency of Delivery",
+                "Exclusive/Unique Products",
+                "Eco-Friendly Packaging"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'None'",
+            "client_notes": "Use a ranking question type. Limit to top 3 choices to reduce cognitive load.",
+            "scripter_notes": "Field type: ranking question (custom implementation). Max 3 selections.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a subscription box service? (Rank top 3)",
+                "answer_options": [
+                    "Price/Value for money",
+                    "Product Quality",
+                    "Customization/Personalization",
+                    "Brand Reputation",
+                    "Frequency of Delivery",
+                    "Exclusive/Unique Products",
+                    "Eco-Friendly Packaging"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'None'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is your primary reason for cancelling a subscription box service in the past?",
+            "answer_options": [
+                "Too expensive",
+                "Poor product quality",
+                "Lack of customization",
+                "Delivery issues",
+                "Changed needs/preferences",
+                "Never cancelled",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'None'",
+            "client_notes": "Include an 'Other' option to capture unique responses. Use radio buttons.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What is your primary reason for cancelling a subscription box service in the past?",
+                "answer_options": [
+                    "Too expensive",
+                    "Poor product quality",
+                    "Lack of customization",
+                    "Delivery issues",
+                    "Changed needs/preferences",
+                    "Never cancelled",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'None'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please share any additional feedback about your experiences with subscription box services:",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture qualitative insights. Use a large text box.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "Please share any additional feedback about your experiences with subscription box services:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

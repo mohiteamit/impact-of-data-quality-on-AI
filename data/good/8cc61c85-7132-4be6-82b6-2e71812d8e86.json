@@ -1,0 +1,133 @@
+{
+    "survey_id": "8cc61c85-7132-4be6-82b6-2e71812d8e86",
+    "survey_name": "Consumer Preferences for Virtual Fitness Classes",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels regarding virtual fitness classes, including preferred platforms, class types, and factors influencing participation.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in virtual fitness classes?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once per week",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice scale to measure frequency. Ensure the options cover the full range of possible participation levels.",
+            "scripter_notes": "Field type: single-choice (radio button).",
+            "script": {
+                "question_text": "How often do you participate in virtual fitness classes?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once per week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of virtual fitness classes do you prefer? (Select all that apply)",
+            "answer_options": [
+                "Yoga",
+                "HIIT",
+                "Pilates",
+                "Dance",
+                "Strength Training",
+                "Cycling",
+                "Meditation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Use a multi-choice format to capture diverse preferences. Include an 'Other' option for additional responses.",
+            "scripter_notes": "Field type: multi-choice (checkboxes). Include an optional open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "What types of virtual fitness classes do you prefer? (Select all that apply)",
+                "answer_options": [
+                    "Yoga",
+                    "HIIT",
+                    "Pilates",
+                    "Dance",
+                    "Strength Training",
+                    "Cycling",
+                    "Meditation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing a virtual fitness class?",
+            "answer_options": [
+                "Instructor quality",
+                "Class duration",
+                "Cost",
+                "Class schedule flexibility",
+                "Community or social interaction",
+                "Platform usability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Use a multi-choice format to identify key decision factors. Include an 'Other' option for additional responses.",
+            "scripter_notes": "Field type: multi-choice (checkboxes). Include an optional open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a virtual fitness class?",
+                "answer_options": [
+                    "Instructor quality",
+                    "Class duration",
+                    "Cost",
+                    "Class schedule flexibility",
+                    "Community or social interaction",
+                    "Platform usability",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges, if any, have you faced with virtual fitness classes?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Use an open-ended question to capture detailed feedback on challenges.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What challenges, if any, have you faced with virtual fitness classes?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend virtual fitness classes to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No, probably not",
+                "No, definitely not"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Use a single-choice scale to measure likelihood of recommendation.",
+            "scripter_notes": "Field type: single-choice (radio button).",
+            "script": {
+                "question_text": "Would you recommend virtual fitness classes to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No, probably not",
+                    "No, definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        }
+    ]
+}

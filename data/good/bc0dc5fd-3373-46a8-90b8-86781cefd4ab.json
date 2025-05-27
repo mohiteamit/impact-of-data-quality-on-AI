@@ -1,0 +1,125 @@
+{
+    "survey_id": "bc0dc5fd-3373-46a8-90b8-86781cefd4ab",
+    "survey_name": "Sustainable Office Supply Preferences Survey",
+    "survey_brief": "This survey aims to gather insights on employee preferences and usage patterns regarding sustainable office supplies within corporate environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use sustainable office supplies (e.g., recycled paper, refillable pens) in your daily work?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure mobile-friendly dropdown implementation.",
+            "scripter_notes": "Single-choice radio buttons. Default selection: 'Sometimes'.",
+            "script": {
+                "question_text": "How often do you use sustainable office supplies (e.g., recycled paper, refillable pens) in your daily work?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainable office supplies do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Recycled paper",
+                "Refillable pens/pencils",
+                "Eco-friendly cleaning products",
+                "Reusable binders/folders",
+                "Biodegradable packaging",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Multi-select checkbox format. Randomize option order to minimize bias.",
+            "scripter_notes": "Multi-choice checkboxes. Include 'Other (specify)' as an open-text option if needed.",
+            "script": {
+                "question_text": "Which of the following sustainable office supplies do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Recycled paper",
+                    "Refillable pens/pencils",
+                    "Eco-friendly cleaning products",
+                    "Reusable binders/folders",
+                    "Biodegradable packaging",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers prevent you from using more sustainable office supplies?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is 'Sometimes', 'Rarely', or 'Never'.",
+            "client_notes": "Open-ended to capture nuanced responses. Limit to 250 characters.",
+            "scripter_notes": "Open-text field with character counter.",
+            "script": {
+                "question_text": "What barriers prevent you from using more sustainable office supplies?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is 'Sometimes', 'Rarely', or 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How important is it for your company to prioritize sustainable office supplies?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "5-point Likert scale. Display vertically on mobile.",
+            "scripter_notes": "Single-choice radio buttons. No default selection.",
+            "script": {
+                "question_text": "How important is it for your company to prioritize sustainable office supplies?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to participate in a company program to promote sustainable office supply usage?",
+            "answer_options": [
+                "Yes, actively",
+                "Yes, passively",
+                "Unsure",
+                "No"
+            ],
+            "routing_logic": "Appears if Q4 response is 'Extremely', 'Very', or 'Moderately important'.",
+            "client_notes": "Include a skip logic explanation for survey transparency.",
+            "scripter_notes": "Single-choice dropdown with 'Unsure' as default.",
+            "script": {
+                "question_text": "Would you be willing to participate in a company program to promote sustainable office supply usage?",
+                "answer_options": [
+                    "Yes, actively",
+                    "Yes, passively",
+                    "Unsure",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q4 response is 'Extremely', 'Very', or 'Moderately important'."
+            }
+        }
+    ]
+}

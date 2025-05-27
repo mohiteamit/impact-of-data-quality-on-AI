@@ -1,0 +1,135 @@
+{
+    "survey_id": "1e18e762-e2e4-4092-8bda-1f4a2271f717",
+    "survey_name": "Consumer Preferences for Smart Home Automation Systems Survey",
+    "survey_brief": "This survey aims to gather insights into consumer preferences, adoption barriers, and satisfaction levels related to smart home automation systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which smart home automation features do you currently use in your household?",
+            "answer_options": [
+                "Smart lighting",
+                "Smart thermostats",
+                "Smart security systems",
+                "Smart speakers/voice assistants",
+                "Smart appliances",
+                "None of the above"
+            ],
+            "routing_logic": "Display always",
+            "client_notes": "Use a multi-choice format to allow selection of multiple features. Ensure options cover common smart home categories.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "Which smart home automation features do you currently use in your household?",
+                "answer_options": [
+                    "Smart lighting",
+                    "Smart thermostats",
+                    "Smart security systems",
+                    "Smart speakers/voice assistants",
+                    "Smart appliances",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display always"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is the primary reason for your interest in smart home automation systems?",
+            "answer_options": [
+                "Energy efficiency",
+                "Convenience",
+                "Security",
+                "Cost savings",
+                "Remote monitoring/control",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q1 != 'None of the above'",
+            "client_notes": "Include an 'Other' option with a text field for additional responses. Single-choice format recommended.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What is the primary reason for your interest in smart home automation systems?",
+                "answer_options": [
+                    "Energy efficiency",
+                    "Convenience",
+                    "Security",
+                    "Cost savings",
+                    "Remote monitoring/control",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when selecting a smart home automation system?",
+            "answer_options": [
+                "Ease of use",
+                "Compatibility with existing devices",
+                "Price",
+                "Brand reputation",
+                "Customer support",
+                "Data privacy/security",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display always",
+            "client_notes": "Allow multi-selection to identify top priorities. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What factors are most important to you when selecting a smart home automation system?",
+                "answer_options": [
+                    "Ease of use",
+                    "Compatibility with existing devices",
+                    "Price",
+                    "Brand reputation",
+                    "Customer support",
+                    "Data privacy/security",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display always"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current smart home automation system?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "Display if Q1 != 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement. Include 'Not applicable' for users without systems.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home automation system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in future smart home automation systems?",
+            "answer_options": [],
+            "routing_logic": "Display always",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit",
+            "script": {
+                "question_text": "What improvements would you like to see in future smart home automation systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display always"
+            }
+        }
+    ]
+}

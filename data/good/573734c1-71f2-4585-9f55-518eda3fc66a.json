@@ -1,0 +1,121 @@
+{
+    "survey_id": "573734c1-71f2-4585-9f55-518eda3fc66a",
+    "survey_name": "Campus Food Service Satisfaction Survey",
+    "survey_brief": "This survey aims to assess student satisfaction with campus food services, including quality, variety, and accessibility of food options.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the campus food services in a typical week?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Helps segment respondents by frequency of use.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use the campus food services in a typical week?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following campus food service locations do you visit most frequently? (Select all that apply)",
+            "answer_options": [
+                "Main dining hall",
+                "Campus café",
+                "Food trucks",
+                "Convenience store",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Daily', '3-5 times per week', or '1-2 times per week' in Q1",
+            "client_notes": "Use multi-choice checkboxes. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional open text for 'Other'",
+            "script": {
+                "question_text": "Which of the following campus food service locations do you visit most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Main dining hall",
+                    "Campus café",
+                    "Food trucks",
+                    "Convenience store",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Daily', '3-5 times per week', or '1-2 times per week' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the quality of food provided by campus food services?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Daily', '3-5 times per week', or '1-2 times per week' in Q1",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Single-choice radio buttons are recommended.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the quality of food provided by campus food services?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Daily', '3-5 times per week', or '1-2 times per week' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for campus food services?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What improvements would you suggest for campus food services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How important is the availability of dietary-specific options (e.g., vegan, gluten-free) to you?",
+            "answer_options": [
+                "Extremely important",
+                "Important",
+                "Somewhat important",
+                "Not important"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Single-choice radio buttons for clarity. Helps assess demand for specialized dietary options.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How important is the availability of dietary-specific options (e.g., vegan, gluten-free) to you?",
+                "answer_options": [
+                    "Extremely important",
+                    "Important",
+                    "Somewhat important",
+                    "Not important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

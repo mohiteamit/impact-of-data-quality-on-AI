@@ -1,0 +1,121 @@
+{
+    "survey_id": "88fd155d-048e-482b-b18e-d9d2567530f7",
+    "survey_name": "Consumer Preferences for In-Flight Wi-Fi Services Survey",
+    "survey_brief": "This survey aims to gather insights on passenger preferences and satisfaction levels regarding in-flight Wi-Fi services to help airlines improve connectivity offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use in-flight Wi-Fi services when available?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a simple scale to measure frequency of usage.",
+            "scripter_notes": "Field type: Radio button for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use in-flight Wi-Fi services when available?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using in-flight Wi-Fi?",
+            "answer_options": [
+                "Work or business communication",
+                "Entertainment (streaming, social media, etc.)",
+                "Staying connected with family/friends",
+                "General web browsing",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Include an 'Other' option to capture unique responses.",
+            "scripter_notes": "Field type: Multi-choice checkbox with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is your primary reason for using in-flight Wi-Fi?",
+                "answer_options": [
+                    "Work or business communication",
+                    "Entertainment (streaming, social media, etc.)",
+                    "Staying connected with family/friends",
+                    "General web browsing",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the speed and reliability of in-flight Wi-Fi?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: Radio button for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the speed and reliability of in-flight Wi-Fi?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in in-flight Wi-Fi services?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Allow respondents to provide open-ended feedback.",
+            "scripter_notes": "Field type: Open-text input for detailed responses.",
+            "script": {
+                "question_text": "What improvements would you like to see in in-flight Wi-Fi services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay for premium in-flight Wi-Fi with faster speeds?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe, depending on the price"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Use a simple yes/no/maybe scale to gauge willingness to pay.",
+            "scripter_notes": "Field type: Radio button for single-choice selection.",
+            "script": {
+                "question_text": "Would you be willing to pay for premium in-flight Wi-Fi with faster speeds?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe, depending on the price"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        }
+    ]
+}

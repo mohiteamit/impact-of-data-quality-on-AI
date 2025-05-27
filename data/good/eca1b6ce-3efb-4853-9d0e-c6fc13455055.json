@@ -1,0 +1,157 @@
+{
+    "survey_id": "eca1b6ce-3efb-4853-9d0e-c6fc13455055",
+    "survey_name": "Consumer Preferences for Smart Home Security Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding smart home security systems, including adoption drivers, feature preferences, and barriers to purchase.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own a smart home security system?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I plan to purchase one in the next 6 months"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps segment respondents for further questions. Ensure answer options are clear and mutually exclusive.",
+            "scripter_notes": "Use a single-choice radio button format.",
+            "script": {
+                "question_text": "Do you currently own a smart home security system?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I plan to purchase one in the next 6 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features are most important to you in a smart home security system? (Select up to 3)",
+            "answer_options": [
+                "24/7 Professional Monitoring",
+                "Motion Detection",
+                "Video Doorbell",
+                "Smart Lock Integration",
+                "Mobile App Alerts",
+                "Environmental Monitoring (e.g., smoke, CO2)",
+                "Two-Way Audio",
+                "Local Storage for Video Footage"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' or 'I plan to purchase one in the next 6 months' to Q1",
+            "client_notes": "This question helps identify priority features for product development and marketing.",
+            "scripter_notes": "Use a multi-choice checkbox format with a limit of 3 selections.",
+            "script": {
+                "question_text": "Which of the following features are most important to you in a smart home security system? (Select up to 3)",
+                "answer_options": [
+                    "24/7 Professional Monitoring",
+                    "Motion Detection",
+                    "Video Doorbell",
+                    "Smart Lock Integration",
+                    "Mobile App Alerts",
+                    "Environmental Monitoring (e.g., smoke, CO2)",
+                    "Two-Way Audio",
+                    "Local Storage for Video Footage"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' or 'I plan to purchase one in the next 6 months' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors would most influence your decision to purchase a smart home security system?",
+            "answer_options": [
+                "Price",
+                "Ease of Installation",
+                "Brand Reputation",
+                "Customer Reviews",
+                "Integration with Other Smart Devices",
+                "Data Privacy/Security",
+                "Contract Length (e.g., monthly vs. annual)"
+            ],
+            "routing_logic": "Respondents who answered 'No' or 'I plan to purchase one in the next 6 months' to Q1",
+            "client_notes": "This question helps understand barriers and decision-making criteria for potential buyers.",
+            "scripter_notes": "Use a multi-choice checkbox format with no selection limit.",
+            "script": {
+                "question_text": "What factors would most influence your decision to purchase a smart home security system?",
+                "answer_options": [
+                    "Price",
+                    "Ease of Installation",
+                    "Brand Reputation",
+                    "Customer Reviews",
+                    "Integration with Other Smart Devices",
+                    "Data Privacy/Security",
+                    "Contract Length (e.g., monthly vs. annual)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'No' or 'I plan to purchase one in the next 6 months' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much would you be willing to spend on a smart home security system (including any monthly fees)?",
+            "answer_options": [
+                "Less than $100",
+                "$100 - $299",
+                "$300 - $499",
+                "$500 - $999",
+                "$1,000 or more"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question provides insights into price sensitivity and budget expectations.",
+            "scripter_notes": "Use a single-choice radio button format with clear price ranges.",
+            "script": {
+                "question_text": "How much would you be willing to spend on a smart home security system (including any monthly fees)?",
+                "answer_options": [
+                    "Less than $100",
+                    "$100 - $299",
+                    "$300 - $499",
+                    "$500 - $999",
+                    "$1,000 or more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any concerns or hesitations you have about using a smart home security system.",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'No' to Q1",
+            "client_notes": "This open-ended question helps identify barriers to adoption that may not be covered in multiple-choice options.",
+            "scripter_notes": "Use an open-text field with a character limit of 500.",
+            "script": {
+                "question_text": "Please describe any concerns or hesitations you have about using a smart home security system.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'No' to Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with your current smart home security system?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "This question measures satisfaction levels among current users to identify areas for improvement.",
+            "scripter_notes": "Use a single-choice radio button format with a 5-point Likert scale.",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home security system?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        }
+    ]
+}

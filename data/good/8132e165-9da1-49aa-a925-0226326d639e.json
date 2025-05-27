@@ -1,0 +1,137 @@
+{
+    "survey_id": "8132e165-9da1-49aa-a925-0226326d639e",
+    "survey_name": "Consumer Preferences for Subscription-Based Pet Care Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels regarding subscription-based pet care services, including food delivery, grooming, and veterinary telehealth.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following subscription-based pet care services have you used in the past 12 months?",
+            "answer_options": [
+                "Pet food delivery",
+                "Automatic litter box refills",
+                "Grooming services",
+                "Veterinary telehealth consultations",
+                "Pet toy or accessory subscriptions",
+                "None of the above"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use checkboxes for multi-selection. Consider randomizing option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "Which of the following subscription-based pet care services have you used in the past 12 months?",
+                "answer_options": [
+                    "Pet food delivery",
+                    "Automatic litter box refills",
+                    "Grooming services",
+                    "Veterinary telehealth consultations",
+                    "Pet toy or accessory subscriptions",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the subscription-based pet care services you've used?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "Display if Q1 does not select 'None of the above'",
+            "client_notes": "Use a radio button scale. Include 'Not applicable' for respondents who may have tried but discontinued services.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with the subscription-based pet care services you've used?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing a pet care subscription service? (Select up to 3)",
+            "answer_options": [
+                "Cost/value for money",
+                "Convenience",
+                "Product quality",
+                "Customization options",
+                "Flexibility to pause/cancel",
+                "Brand reputation",
+                "Eco-friendly packaging",
+                "Customer service"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use checkboxes with a max selection limit of 3. Randomize option order.",
+            "scripter_notes": "Field type: MULTI_CHOICE with validation for max selections",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a pet care subscription service? (Select up to 3)",
+                "answer_options": [
+                    "Cost/value for money",
+                    "Convenience",
+                    "Product quality",
+                    "Customization options",
+                    "Flexibility to pause/cancel",
+                    "Brand reputation",
+                    "Eco-friendly packaging",
+                    "Customer service"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for subscription-based pet care services?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use open text field with character limit of 500. Mobile-friendly input recommended.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you suggest for subscription-based pet care services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your current pet care subscription service to others?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely",
+                "Not applicable"
+            ],
+            "routing_logic": "Display if Q1 does not select 'None of the above'",
+            "client_notes": "Use radio buttons as a standard NPS-style question. Include 'Not applicable'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How likely are you to recommend your current pet care subscription service to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 does not select 'None of the above'"
+            }
+        }
+    ]
+}

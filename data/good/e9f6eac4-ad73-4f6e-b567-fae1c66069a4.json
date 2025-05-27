@@ -1,0 +1,181 @@
+{
+    "survey_id": "e9f6eac4-ad73-4f6e-b567-fae1c66069a4",
+    "survey_name": "Smart Home Device Integration Preferences Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and challenges related to integrating various smart home devices into a unified system.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home devices do you currently own? (Select all that apply)",
+            "answer_options": [
+                "Smart thermostat",
+                "Smart lighting system",
+                "Smart security cameras",
+                "Smart door locks",
+                "Smart speakers (e.g., Amazon Echo, Google Home)",
+                "Smart appliances (e.g., refrigerator, oven)",
+                "Smart plugs/outlets",
+                "Smart blinds/curtains",
+                "Smart irrigation system",
+                "None of the above"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use checkbox format to allow multiple selections. Consider randomizing option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Randomize display order of options.",
+            "script": {
+                "question_text": "Which of the following smart home devices do you currently own? (Select all that apply)",
+                "answer_options": [
+                    "Smart thermostat",
+                    "Smart lighting system",
+                    "Smart security cameras",
+                    "Smart door locks",
+                    "Smart speakers (e.g., Amazon Echo, Google Home)",
+                    "Smart appliances (e.g., refrigerator, oven)",
+                    "Smart plugs/outlets",
+                    "Smart blinds/curtains",
+                    "Smart irrigation system",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the integration between your different smart home devices?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (I only own one type of device)"
+            ],
+            "routing_logic": "Show if Q1 has at least two smart device categories selected (excluding 'None of the above')",
+            "client_notes": "Use a 5-point Likert scale with neutral midpoint. Include N/A option for single-device owners.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Implement routing logic to show only for multi-device owners.",
+            "script": {
+                "question_text": "How satisfied are you with the integration between your different smart home devices?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (I only own one type of device)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 has at least two smart device categories selected (excluding 'None of the above')"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the biggest challenge you've encountered when trying to integrate smart home devices?",
+            "answer_options": [
+                "Compatibility issues between brands",
+                "Difficulty setting up automation rules",
+                "Unreliable connectivity",
+                "Too many different apps to manage",
+                "Privacy/security concerns",
+                "Lack of technical support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 has at least one smart device selected (excluding 'None of the above')",
+            "client_notes": "Include 'Other' with open-text field for additional insights. Randomize option order except 'Other'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with optional open-text field for 'Other'. Implement routing for device owners.",
+            "script": {
+                "question_text": "What is the biggest challenge you've encountered when trying to integrate smart home devices?",
+                "answer_options": [
+                    "Compatibility issues between brands",
+                    "Difficulty setting up automation rules",
+                    "Unreliable connectivity",
+                    "Too many different apps to manage",
+                    "Privacy/security concerns",
+                    "Lack of technical support",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 has at least one smart device selected (excluding 'None of the above')"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which ecosystem do you primarily use to control your smart home devices?",
+            "answer_options": [
+                "Amazon Alexa",
+                "Google Assistant",
+                "Apple HomeKit",
+                "Samsung SmartThings",
+                "Manufacturer-specific app only",
+                "I use multiple ecosystems equally",
+                "I don't use any central ecosystem"
+            ],
+            "routing_logic": "Show if Q1 has at least one smart device selected (excluding 'None of the above')",
+            "client_notes": "Include all major ecosystems. Randomize order to avoid bias toward top-listed options.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Implement routing for device owners.",
+            "script": {
+                "question_text": "Which ecosystem do you primarily use to control your smart home devices?",
+                "answer_options": [
+                    "Amazon Alexa",
+                    "Google Assistant",
+                    "Apple HomeKit",
+                    "Samsung SmartThings",
+                    "Manufacturer-specific app only",
+                    "I use multiple ecosystems equally",
+                    "I don't use any central ecosystem"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 has at least one smart device selected (excluding 'None of the above')"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features would encourage you to purchase additional smart home devices in the future? (Select up to 3)",
+            "answer_options": [
+                "Better interoperability between brands",
+                "Simplified setup process",
+                "Advanced automation capabilities",
+                "Improved security features",
+                "Energy-saving functionality",
+                "Voice control improvements",
+                "Better mobile app interface",
+                "Lower prices",
+                "More reliable connectivity",
+                "Better customer support"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 'select up to 3' format to prioritize responses. Consider using a drag-and-rank interface if possible.",
+            "scripter_notes": "Field type: MULTI_CHOICE with maximum 3 selections allowed. Randomize display order of options.",
+            "script": {
+                "question_text": "What features would encourage you to purchase additional smart home devices in the future? (Select up to 3)",
+                "answer_options": [
+                    "Better interoperability between brands",
+                    "Simplified setup process",
+                    "Advanced automation capabilities",
+                    "Improved security features",
+                    "Energy-saving functionality",
+                    "Voice control improvements",
+                    "Better mobile app interface",
+                    "Lower prices",
+                    "More reliable connectivity",
+                    "Better customer support"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe your ideal smart home integration experience in your own words:",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Use a large text box for detailed responses. Consider prompting with 'Think about ease of use, automation capabilities, and control options.'",
+            "scripter_notes": "Field type: OPEN_TEXT with multi-line input. No character limit recommended.",
+            "script": {
+                "question_text": "Please describe your ideal smart home integration experience in your own words:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

@@ -1,0 +1,127 @@
+{
+    "survey_id": "4fb93ea2-5736-4531-b8c7-bd09e6836436",
+    "survey_name": "Urban Mobility and Shared Scooter Usage Survey",
+    "survey_brief": "This survey aims to understand user preferences, satisfaction levels, and challenges related to shared electric scooter services in urban areas.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use shared electric scooters?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "None",
+            "client_notes": "Use a single-choice radio button for clear frequency selection. Ensure the options cover all potential usage patterns.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you use shared electric scooters?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "None"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for using shared electric scooters? (Select all that apply)",
+            "answer_options": [
+                "Convenience",
+                "Cost-effectiveness",
+                "Environmentally friendly",
+                "Avoiding traffic congestion",
+                "Last-mile connectivity",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a multi-choice checkbox format. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What are your primary reasons for using shared electric scooters? (Select all that apply)",
+                "answer_options": [
+                    "Convenience",
+                    "Cost-effectiveness",
+                    "Environmentally friendly",
+                    "Avoiding traffic congestion",
+                    "Last-mile connectivity",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of shared electric scooters in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the availability of shared electric scooters in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for shared electric scooter services in your city?",
+            "answer_options": [],
+            "routing_logic": "Only appears if Q1 answer is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (large text box)",
+            "script": {
+                "question_text": "What improvements would you suggest for shared electric scooter services in your city?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What factors would encourage you to use shared electric scooters more often?",
+            "answer_options": [
+                "Lower pricing",
+                "More parking stations",
+                "Better scooter maintenance",
+                "Improved safety features",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 answer is 'Rarely' or 'Never'",
+            "client_notes": "Multi-choice question with an 'Other' option for additional feedback. Useful for identifying barriers to adoption.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What factors would encourage you to use shared electric scooters more often?",
+                "answer_options": [
+                    "Lower pricing",
+                    "More parking stations",
+                    "Better scooter maintenance",
+                    "Improved safety features",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if Q1 answer is 'Rarely' or 'Never'"
+            }
+        }
+    ]
+}

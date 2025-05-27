@@ -1,0 +1,121 @@
+{
+    "survey_id": "c441e568-67fc-4799-a908-075072117f9a",
+    "survey_name": "Smartphone Security Practices Survey",
+    "survey_brief": "This survey aims to understand user behaviors and preferences regarding smartphone security measures, including authentication methods, app permissions, and data protection practices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following methods do you primarily use to unlock your smartphone?",
+            "answer_options": [
+                "Fingerprint scanner",
+                "Face recognition",
+                "PIN or password",
+                "Pattern",
+                "None (keep phone unlocked)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure options cover common authentication methods. Use radio buttons for single selection.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Randomize answer options to reduce bias.",
+            "script": {
+                "question_text": "Which of the following methods do you primarily use to unlock your smartphone?",
+                "answer_options": [
+                    "Fingerprint scanner",
+                    "Face recognition",
+                    "PIN or password",
+                    "Pattern",
+                    "None (keep phone unlocked)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you review app permissions on your smartphone?",
+            "answer_options": [
+                "Every time I install/update an app",
+                "At least once a month",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a balanced scale to capture frequency. Avoid leading language.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Display options vertically.",
+            "script": {
+                "question_text": "How often do you review app permissions on your smartphone?",
+                "answer_options": [
+                    "Every time I install/update an app",
+                    "At least once a month",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following smartphone security features have you enabled? (Select all that apply)",
+            "answer_options": [
+                "Two-factor authentication (2FA)",
+                "Find My Device / Remote wipe",
+                "Encrypted backups",
+                "App-specific passwords",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Checkbox format is necessary for multi-selection. Include 'None' option.",
+            "scripter_notes": "Field type: MULTI_CHOICE. Randomize options except 'None' to avoid order bias.",
+            "script": {
+                "question_text": "Which of the following smartphone security features have you enabled? (Select all that apply)",
+                "answer_options": [
+                    "Two-factor authentication (2FA)",
+                    "Find My Device / Remote wipe",
+                    "Encrypted backups",
+                    "App-specific passwords",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "In your own words, what is your biggest concern regarding smartphone security?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended responses may reveal unanticipated themes. Limit response length to 200 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT. Enable character counter.",
+            "script": {
+                "question_text": "In your own words, what is your biggest concern regarding smartphone security?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you pay for a premium smartphone security app if it offered advanced features like real-time threat detection?",
+            "answer_options": [
+                "Yes, immediately",
+                "Yes, after a free trial",
+                "No, I rely on built-in security",
+                "No, I don't see the need"
+            ],
+            "routing_logic": "All respondents except those who selected 'None of the above' in Q3",
+            "client_notes": "Strategic question for monetization insights. Place after behavior-related questions.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Skip logic required based on Q3 responses.",
+            "script": {
+                "question_text": "Would you pay for a premium smartphone security app if it offered advanced features like real-time threat detection?",
+                "answer_options": [
+                    "Yes, immediately",
+                    "Yes, after a free trial",
+                    "No, I rely on built-in security",
+                    "No, I don't see the need"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'None of the above' in Q3"
+            }
+        }
+    ]
+}

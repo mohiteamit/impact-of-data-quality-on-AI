@@ -1,0 +1,129 @@
+{
+    "survey_id": "492e1333-a720-4e52-a71a-1f2c21e3fe42",
+    "survey_name": "Consumer Preferences for Hybrid Vehicle Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and barriers related to hybrid vehicle adoption to inform marketing strategies and product development.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "What is your primary motivation for considering a hybrid vehicle?",
+            "answer_options": [
+                "Environmental concerns",
+                "Fuel cost savings",
+                "Government incentives",
+                "Future-proofing against stricter emissions regulations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Consider randomizing answer options to reduce order bias. Ensure 'Other' includes a text field for specification.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional text input for 'Other'.",
+            "script": {
+                "question_text": "What is your primary motivation for considering a hybrid vehicle?",
+                "answer_options": [
+                    "Environmental concerns",
+                    "Fuel cost savings",
+                    "Government incentives",
+                    "Future-proofing against stricter emissions regulations",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors would most discourage you from purchasing a hybrid vehicle? (Select all that apply)",
+            "answer_options": [
+                "Higher upfront cost",
+                "Limited model options",
+                "Concerns about battery life/replacement costs",
+                "Lack of charging infrastructure",
+                "Perceived lower performance",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This multi-select question helps identify key barriers. Consider capping selections at 3 to force prioritization.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max_selections=3 parameter.",
+            "script": {
+                "question_text": "Which of the following factors would most discourage you from purchasing a hybrid vehicle? (Select all that apply)",
+                "answer_options": [
+                    "Higher upfront cost",
+                    "Limited model options",
+                    "Concerns about battery life/replacement costs",
+                    "Lack of charging infrastructure",
+                    "Perceived lower performance",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the maximum price premium you would pay for a hybrid version compared to a conventional gasoline model?",
+            "answer_options": [
+                "Not willing to pay any premium",
+                "Up to 5% more",
+                "6-10% more",
+                "11-15% more",
+                "16-20% more",
+                "More than 20%"
+            ],
+            "routing_logic": "All respondents except those who selected 'None of the above' in Q2",
+            "client_notes": "Use percentage ranges rather than absolute values to account for different vehicle classes. Randomize mid-range options (6-10%, 11-15%).",
+            "scripter_notes": "Field type: SINGLE_CHOICE with option randomization between 2nd-5th options.",
+            "script": {
+                "question_text": "What is the maximum price premium you would pay for a hybrid version compared to a conventional gasoline model?",
+                "answer_options": [
+                    "Not willing to pay any premium",
+                    "Up to 5% more",
+                    "6-10% more",
+                    "11-15% more",
+                    "16-20% more",
+                    "More than 20%"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any specific features you would expect in a hybrid vehicle that would justify a higher price:",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected any premium option (6%+) in Q3",
+            "client_notes": "Open-ended question to capture qualitative insights. Limit response to 300 characters to ensure concise feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit enforcement.",
+            "script": {
+                "question_text": "Please describe any specific features you would expect in a hybrid vehicle that would justify a higher price:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected any premium option (6%+) in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How important is the availability of hybrid options across different vehicle types (e.g., SUVs, trucks, sedans)?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a standard 5-point Likert scale. Include a 'Not applicable' option if significant non-car-owner respondents are expected.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with balanced scale.",
+            "script": {
+                "question_text": "How important is the availability of hybrid options across different vehicle types (e.g., SUVs, trucks, sedans)?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

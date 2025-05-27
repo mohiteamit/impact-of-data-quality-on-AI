@@ -1,0 +1,135 @@
+{
+    "survey_id": "d4f05f04-d5e1-4059-aeb4-1d21aeae1aad",
+    "survey_name": "Consumer Preferences for Home Automation Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and adoption barriers related to home automation systems. The insights will help manufacturers and service providers improve product offerings and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following home automation systems are you currently using?",
+            "answer_options": [
+                "Smart lighting",
+                "Smart thermostats",
+                "Smart security systems",
+                "Smart appliances",
+                "Voice assistants (e.g., Alexa, Google Home)",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to allow selection of multiple systems. Ensure options cover major categories.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which of the following home automation systems are you currently using?",
+                "answer_options": [
+                    "Smart lighting",
+                    "Smart thermostats",
+                    "Smart security systems",
+                    "Smart appliances",
+                    "Voice assistants (e.g., Alexa, Google Home)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current home automation system(s)?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (do not use any)"
+            ],
+            "routing_logic": "All respondents except those who selected 'None of the above' in Q1",
+            "client_notes": "Use a single-choice Likert scale for satisfaction measurement. Include an N/A option for non-users.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with your current home automation system(s)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (do not use any)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'None of the above' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when considering a home automation system?",
+            "answer_options": [
+                "Ease of use",
+                "Cost",
+                "Compatibility with existing devices",
+                "Brand reputation",
+                "Security/privacy features",
+                "Energy efficiency",
+                "Customer support"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to identify key decision-making factors. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), randomize order",
+            "script": {
+                "question_text": "What factors are most important to you when considering a home automation system?",
+                "answer_options": [
+                    "Ease of use",
+                    "Cost",
+                    "Compatibility with existing devices",
+                    "Brand reputation",
+                    "Security/privacy features",
+                    "Energy efficiency",
+                    "Customer support"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about adopting home automation systems?",
+            "answer_options": [
+                "Privacy/security risks",
+                "High upfront costs",
+                "Technical complexity",
+                "Compatibility issues",
+                "Reliability concerns",
+                "No concerns"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice with an option for 'No concerns'. Add an 'Other (please specify)' option if needed.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional 'Other' text field",
+            "script": {
+                "question_text": "What concerns, if any, do you have about adopting home automation systems?",
+                "answer_options": [
+                    "Privacy/security risks",
+                    "High upfront costs",
+                    "Technical complexity",
+                    "Compatibility issues",
+                    "Reliability concerns",
+                    "No concerns"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features would encourage you to adopt or expand your home automation system?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Use a text box with a 250-character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area), max 250 characters",
+            "script": {
+                "question_text": "What additional features would encourage you to adopt or expand your home automation system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

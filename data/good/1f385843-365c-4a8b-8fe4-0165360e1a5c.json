@@ -1,0 +1,127 @@
+{
+    "survey_id": "1f385843-365c-4a8b-8fe4-0165360e1a5c",
+    "survey_name": "Home Office Productivity During Hybrid Work Survey",
+    "survey_brief": "This survey aims to understand how employees set up and utilize their home offices during hybrid work arrangements, focusing on productivity and comfort factors.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you typically work from home?",
+            "answer_options": [
+                "1 day",
+                "2 days",
+                "3 days",
+                "4 days",
+                "5 days (full-time remote)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a radio button scale for clear single-selection. Ensure mobile responsiveness for touch selection.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE). Randomize options to avoid order bias.",
+            "script": {
+                "question_text": "How many days per week do you typically work from home?",
+                "answer_options": [
+                    "1 day",
+                    "2 days",
+                    "3 days",
+                    "4 days",
+                    "5 days (full-time remote)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following home office equipment does your employer provide? (Select all that apply)",
+            "answer_options": [
+                "Ergonomic chair",
+                "Adjustable desk",
+                "Dual monitors",
+                "Noise-canceling headphones",
+                "High-speed internet subsidy",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Checkbox format allows multiple selections. Include an 'Other' open-field option if budget permits.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE). Add 'Select all that apply' instruction label.",
+            "script": {
+                "question_text": "Which of the following home office equipment does your employer provide? (Select all that apply)",
+                "answer_options": [
+                    "Ergonomic chair",
+                    "Adjustable desk",
+                    "Dual monitors",
+                    "Noise-canceling headphones",
+                    "High-speed internet subsidy",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Rate your satisfaction with your current home office setup for focused work (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears if Q1 answer is ≥ 1 day",
+            "client_notes": "5-point Likert scale with clear anchors. Consider displaying as a smiley face scale on mobile.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE). Show horizontal layout on desktop, stacked on mobile.",
+            "script": {
+                "question_text": "Rate your satisfaction with your current home office setup for focused work (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is ≥ 1 day"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the single biggest challenge you face when working from home?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended to capture nuanced responses. Limit to 250 characters to ensure concise answers.",
+            "scripter_notes": "Field type: Open text (OPEN_TEXT). Add character counter.",
+            "script": {
+                "question_text": "What is the single biggest challenge you face when working from home?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which productivity tools do you use daily in your home office?",
+            "answer_options": [
+                "Time-tracking software",
+                "Focus timer apps",
+                "Task management platforms",
+                "Whiteboarding tools",
+                "None"
+            ],
+            "routing_logic": "Appears if Q3 answer is ≤ 3",
+            "client_notes": "Multi-select with an 'Other' field to identify emerging tools. Randomize option order.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE). Include optional 'Other (please specify)' text input.",
+            "script": {
+                "question_text": "Which productivity tools do you use daily in your home office?",
+                "answer_options": [
+                    "Time-tracking software",
+                    "Focus timer apps",
+                    "Task management platforms",
+                    "Whiteboarding tools",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q3 answer is ≤ 3"
+            }
+        }
+    ]
+}

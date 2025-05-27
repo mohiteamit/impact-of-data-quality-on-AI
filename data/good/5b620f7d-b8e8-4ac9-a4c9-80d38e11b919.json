@@ -1,0 +1,107 @@
+{
+    "survey_id": "5b620f7d-b8e8-4ac9-a4c9-80d38e11b919",
+    "survey_name": "Community Feedback on Public Park Improvements",
+    "survey_brief": "This survey aims to gather community input on potential improvements and usage patterns of local public parks to enhance visitor experience and accessibility.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit your local public park?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for quick response. Ensure options are clearly distinguishable.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you visit your local public park?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons for your visits to the park? (Select all that apply)",
+            "answer_options": [
+                "Exercise (walking, jogging, etc.)",
+                "Relaxation or leisure",
+                "Social gatherings",
+                "Children's activities",
+                "Nature appreciation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Use multi-choice checkboxes to allow multiple selections. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are the primary reasons for your visits to the park? (Select all that apply)",
+                "answer_options": [
+                    "Exercise (walking, jogging, etc.)",
+                    "Relaxation or leisure",
+                    "Social gatherings",
+                    "Children's activities",
+                    "Nature appreciation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following improvements would most enhance your park experience? (Rank top 3)",
+            "answer_options": [
+                "More seating areas",
+                "Better playground equipment",
+                "Enhanced walking/jogging trails",
+                "Additional picnic areas",
+                "Improved lighting for safety",
+                "More frequent maintenance",
+                "Additional restrooms",
+                "Better signage/directional maps"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Use a ranking question type or allow respondents to select up to 3 options. Ensure mobile-friendly design.",
+            "scripter_notes": "Field type: MULTI_CHOICE (limit 3 selections).",
+            "script": {
+                "question_text": "Which of the following improvements would most enhance your park experience? (Rank top 3)",
+                "answer_options": [
+                    "More seating areas",
+                    "Better playground equipment",
+                    "Enhanced walking/jogging trails",
+                    "Additional picnic areas",
+                    "Improved lighting for safety",
+                    "More frequent maintenance",
+                    "Additional restrooms",
+                    "Better signage/directional maps"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Do you have any additional suggestions or concerns regarding the park?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use an open-text field to capture detailed feedback. Ensure the text box is large enough for thorough responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (large text box).",
+            "script": {
+                "question_text": "Do you have any additional suggestions or concerns regarding the park?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

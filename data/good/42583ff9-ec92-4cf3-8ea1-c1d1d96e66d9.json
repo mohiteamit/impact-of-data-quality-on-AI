@@ -1,0 +1,115 @@
+{
+    "survey_id": "42583ff9-ec92-4cf3-8ea1-c1d1d96e66d9",
+    "survey_name": "Consumer Preferences for Smart Home Integration with IoT Devices Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and challenges related to integrating smart home devices with IoT technology.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many smart home devices do you currently own?",
+            "answer_options": [
+                "None",
+                "1-2",
+                "3-5",
+                "6 or more"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Ensure the options cover a broad range to capture different levels of adoption.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How many smart home devices do you currently own?",
+                "answer_options": [
+                    "None",
+                    "1-2",
+                    "3-5",
+                    "6 or more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following smart home devices do you own? (Select all that apply)",
+            "answer_options": [
+                "Smart thermostats",
+                "Smart lights",
+                "Smart security cameras",
+                "Smart speakers",
+                "Smart door locks",
+                "Smart plugs",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'None'",
+            "client_notes": "Include an 'Other' option to capture devices not listed.",
+            "scripter_notes": "Use checkboxes for multi-choice selection and include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following smart home devices do you own? (Select all that apply)",
+                "answer_options": [
+                    "Smart thermostats",
+                    "Smart lights",
+                    "Smart security cameras",
+                    "Smart speakers",
+                    "Smart door locks",
+                    "Smart plugs",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'None'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the integration between your smart home devices and IoT platforms?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'None'",
+            "client_notes": "Use a Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the integration between your smart home devices and IoT platforms?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'None'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced when integrating smart home devices with IoT platforms?",
+            "answer_options": [],
+            "routing_logic": "Shown if Q3 answer is 'Dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Allow respondents to describe their challenges in detail.",
+            "scripter_notes": "Use an open-text field for detailed responses.",
+            "script": {
+                "question_text": "What challenges have you faced when integrating smart home devices with IoT platforms?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q3 answer is 'Dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features would you like to see improved in smart home IoT integration?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Encourage respondents to provide specific feature requests.",
+            "scripter_notes": "Use an open-text field for detailed responses.",
+            "script": {
+                "question_text": "What features would you like to see improved in smart home IoT integration?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

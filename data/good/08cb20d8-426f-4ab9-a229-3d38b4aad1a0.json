@@ -1,0 +1,191 @@
+{
+    "survey_id": "08cb20d8-426f-4ab9-a229-3d38b4aad1a0",
+    "survey_name": "Public Transportation Accessibility and Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback on the accessibility, reliability, and overall satisfaction with public transportation services in urban areas.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public transportation?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for mobile-friendly responses.",
+            "scripter_notes": "Field type: single-choice (radio button).",
+            "script": {
+                "question_text": "How frequently do you use public transportation?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which modes of public transportation do you typically use? (Select all that apply)",
+            "answer_options": [
+                "Bus",
+                "Subway/Metro",
+                "Commuter Rail",
+                "Light Rail/Tram",
+                "Ferry/Water Taxi",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents who use public transportation at least occasionally (Q1 not 'Rarely or never').",
+            "client_notes": "Use checkboxes for multi-select. Provide an 'Other' option with a text field for additional modes.",
+            "scripter_notes": "Field type: multi-choice (checkbox). Include an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "Which modes of public transportation do you typically use? (Select all that apply)",
+                "answer_options": [
+                    "Bus",
+                    "Subway/Metro",
+                    "Commuter Rail",
+                    "Light Rail/Tram",
+                    "Ferry/Water Taxi",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents who use public transportation at least occasionally (Q1 not 'Rarely or never')."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary reason for using public transportation?",
+            "answer_options": [
+                "Commuting to work/school",
+                "Avoiding traffic/parking issues",
+                "Environmental concerns",
+                "Cost savings",
+                "No access to a personal vehicle",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents who use public transportation at least occasionally (Q1 not 'Rarely or never').",
+            "client_notes": "Single-choice question with an 'Other' option for additional reasons.",
+            "scripter_notes": "Field type: single-choice (radio button) with an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "What is your primary reason for using public transportation?",
+                "answer_options": [
+                    "Commuting to work/school",
+                    "Avoiding traffic/parking issues",
+                    "Environmental concerns",
+                    "Cost savings",
+                    "No access to a personal vehicle",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who use public transportation at least occasionally (Q1 not 'Rarely or never')."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the overall reliability of public transportation services?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents who use public transportation at least occasionally (Q1 not 'Rarely or never').",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: single-choice (radio button).",
+            "script": {
+                "question_text": "How satisfied are you with the overall reliability of public transportation services?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who use public transportation at least occasionally (Q1 not 'Rarely or never')."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would make you more likely to use public transportation more frequently?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents who use public transportation less than daily (Q1 not 'Daily').",
+            "client_notes": "Open-ended question to gather qualitative feedback. Keep the text field size reasonable for mobile users.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What improvements would make you more likely to use public transportation more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents who use public transportation less than daily (Q1 not 'Daily')."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Have you encountered any accessibility barriers when using public transportation? (e.g., lack of ramps, elevators, etc.)",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not applicable (I do not have accessibility needs)"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Include an option for respondents without accessibility needs to skip follow-up questions.",
+            "scripter_notes": "Field type: single-choice (radio button).",
+            "script": {
+                "question_text": "Have you encountered any accessibility barriers when using public transportation? (e.g., lack of ramps, elevators, etc.)",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not applicable (I do not have accessibility needs)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If you answered 'Yes' to the previous question, please describe the accessibility barriers you have encountered.",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q6 is 'Yes'.",
+            "client_notes": "Open-ended question for detailed feedback. Ensure the text field is mobile-friendly.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "If you answered 'Yes' to the previous question, please describe the accessibility barriers you have encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q6 is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "How important is real-time tracking (e.g., apps, digital displays) for your public transportation experience?",
+            "answer_options": [
+                "Very important",
+                "Important",
+                "Neutral",
+                "Not important",
+                "Not applicable (I don't use real-time tracking)"
+            ],
+            "routing_logic": "Appears to all respondents who use public transportation at least occasionally (Q1 not 'Rarely or never').",
+            "client_notes": "Use a 5-point Likert scale for importance measurement.",
+            "scripter_notes": "Field type: single-choice (radio button).",
+            "script": {
+                "question_text": "How important is real-time tracking (e.g., apps, digital displays) for your public transportation experience?",
+                "answer_options": [
+                    "Very important",
+                    "Important",
+                    "Neutral",
+                    "Not important",
+                    "Not applicable (I don't use real-time tracking)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who use public transportation at least occasionally (Q1 not 'Rarely or never')."
+            }
+        }
+    ]
+}

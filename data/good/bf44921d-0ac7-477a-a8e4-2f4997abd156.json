@@ -1,0 +1,175 @@
+{
+    "survey_id": "bf44921d-0ac7-477a-a8e4-2f4997abd156",
+    "survey_name": "Consumer Preferences for Meal Planning Apps Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, usage patterns, and satisfaction levels with meal planning applications to help improve product offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently use any meal planning apps?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not currently, but I have in the past"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Use a single-choice radio button for clarity. This question serves as a filter for subsequent questions.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Do you currently use any meal planning apps?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not currently, but I have in the past"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which meal planning app(s) do you currently use?",
+            "answer_options": [
+                "Mealime",
+                "PlateJoy",
+                "Yummly",
+                "Paprika",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Allow multiple selections (checkboxes) since users may use more than one app.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an 'Other' option with a text field for manual entry.",
+            "script": {
+                "question_text": "Which meal planning app(s) do you currently use?",
+                "answer_options": [
+                    "Mealime",
+                    "PlateJoy",
+                    "Yummly",
+                    "Paprika",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you use meal planning apps?",
+            "answer_options": [
+                "Save time on meal preparation",
+                "Discover new recipes",
+                "Manage dietary restrictions",
+                "Reduce food waste",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes' or 'Not currently, but I have in the past'",
+            "client_notes": "Single-choice question to identify the main motivator. Include an 'Other' option for additional insights.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Include an 'Other' option with a text field for manual entry.",
+            "script": {
+                "question_text": "What is the primary reason you use meal planning apps?",
+                "answer_options": [
+                    "Save time on meal preparation",
+                    "Discover new recipes",
+                    "Manage dietary restrictions",
+                    "Reduce food waste",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes' or 'Not currently, but I have in the past'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate your overall satisfaction with your current meal planning app(s)?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How would you rate your overall satisfaction with your current meal planning app(s)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features do you value most in a meal planning app?",
+            "answer_options": [
+                "Customizable meal plans",
+                "Grocery list generation",
+                "Nutritional information",
+                "Integration with grocery delivery",
+                "Recipe variety",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Allow multiple selections to identify top-valued features. Include an 'Other' option for additional feedback.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an 'Other' option with a text field for manual entry.",
+            "script": {
+                "question_text": "What features do you value most in a meal planning app?",
+                "answer_options": [
+                    "Customizable meal plans",
+                    "Grocery list generation",
+                    "Nutritional information",
+                    "Integration with grocery delivery",
+                    "Recipe variety",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you do not currently use a meal planning app, what is the main reason?",
+            "answer_options": [
+                "Prefer to plan meals manually",
+                "Not aware of available apps",
+                "Cost of subscription",
+                "Privacy concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'No'",
+            "client_notes": "Single-choice question to identify barriers to adoption. Include an 'Other' option for nuanced responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Include an 'Other' option with a text field for manual entry.",
+            "script": {
+                "question_text": "If you do not currently use a meal planning app, what is the main reason?",
+                "answer_options": [
+                    "Prefer to plan meals manually",
+                    "Not aware of available apps",
+                    "Cost of subscription",
+                    "Privacy concerns",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'No'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional features would encourage you to use a meal planning app?",
+            "answer_options": [],
+            "routing_logic": "All participants",
+            "client_notes": "Open-ended question to gather qualitative feedback. Useful for identifying unmet needs.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What additional features would encourage you to use a meal planning app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All participants"
+            }
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+{
+    "survey_id": "255f78b7-5d68-46c4-8045-f03a9f9f40be",
+    "survey_name": "Home Solar Panel Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer attitudes towards home solar panel adoption, including perceived benefits, barriers, and preferences for installation services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with home solar panel systems?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a radio button scale for familiarity levels. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How familiar are you with home solar panel systems?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons you would consider installing solar panels at your home? (Select all that apply)",
+            "answer_options": [
+                "Reduce electricity bills",
+                "Environmental benefits",
+                "Energy independence",
+                "Government incentives/rebates",
+                "Increase home value",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Not at all familiar'",
+            "client_notes": "Allow multiple selections with an 'Other' open-text option. Group related motivations.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What are the primary reasons you would consider installing solar panels at your home? (Select all that apply)",
+                "answer_options": [
+                    "Reduce electricity bills",
+                    "Environmental benefits",
+                    "Energy independence",
+                    "Government incentives/rebates",
+                    "Increase home value",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, do you have about installing solar panels?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is not 'Not at all familiar'",
+            "client_notes": "Open-ended to capture nuanced responses. Use a text box with a 300-character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What concerns, if any, do you have about installing solar panels?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is not 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to install solar panels in the next 3 years?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "5-point Likert scale with clear labels. Randomize order for half of respondents to reduce bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with optional randomization",
+            "script": {
+                "question_text": "How likely are you to install solar panels in the next 3 years?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which solar panel installation features are most important to you? (Rank top 3)",
+            "answer_options": [
+                "Warranty length",
+                "Installation cost",
+                "Panel efficiency",
+                "Brand reputation",
+                "Financing options",
+                "Maintenance requirements",
+                "Aesthetics"
+            ],
+            "routing_logic": "Appears if Q4 response is 'Very likely' or 'Somewhat likely'",
+            "client_notes": "Use a drag-and-drop ranking interface for desktop, numeric dropdowns for mobile.",
+            "scripter_notes": "Field type: RANKING (3 selections required)",
+            "script": {
+                "question_text": "Which solar panel installation features are most important to you? (Rank top 3)",
+                "answer_options": [
+                    "Warranty length",
+                    "Installation cost",
+                    "Panel efficiency",
+                    "Brand reputation",
+                    "Financing options",
+                    "Maintenance requirements",
+                    "Aesthetics"
+                ],
+                "type": "RANKING",
+                "routing_logic": "Appears if Q4 response is 'Very likely' or 'Somewhat likely'"
+            }
+        }
+    ]
+}

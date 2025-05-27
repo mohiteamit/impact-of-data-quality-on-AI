@@ -1,0 +1,129 @@
+{
+    "survey_id": "e1e0fba3-50cd-4008-882b-f10a482ae122",
+    "survey_name": "Consumer Preferences for Local Grocery Delivery Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels with local grocery delivery services, including frequency of use, preferred platforms, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use local grocery delivery services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always shown.",
+            "client_notes": "Ensure options cover all possible usage frequencies for accurate segmentation.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use local grocery delivery services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which local grocery delivery platforms have you used in the past 3 months? (Select all that apply)",
+            "answer_options": [
+                "Instacart",
+                "Shipt",
+                "Amazon Fresh",
+                "Walmart Grocery",
+                "Local independent services",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'.",
+            "client_notes": "Include an 'Other' option to capture niche or regional platforms.",
+            "scripter_notes": "Use checkboxes for multi-choice selection. Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which local grocery delivery platforms have you used in the past 3 months? (Select all that apply)",
+                "answer_options": [
+                    "Instacart",
+                    "Shipt",
+                    "Amazon Fresh",
+                    "Walmart Grocery",
+                    "Local independent services",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing a grocery delivery service? (Select up to 3)",
+            "answer_options": [
+                "Delivery speed",
+                "Product quality",
+                "Price of service",
+                "Availability of local products",
+                "User-friendly app/website",
+                "Customer service",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'.",
+            "client_notes": "Limit selections to 3 to prioritize top preferences.",
+            "scripter_notes": "Use checkboxes with a max selection limit of 3. Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a grocery delivery service? (Select up to 3)",
+                "answer_options": [
+                    "Delivery speed",
+                    "Product quality",
+                    "Price of service",
+                    "Availability of local products",
+                    "User-friendly app/website",
+                    "Customer service",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in local grocery delivery services?",
+            "answer_options": [],
+            "routing_logic": "Shown if Q1 is not 'Never'.",
+            "client_notes": "Open-ended to capture qualitative feedback.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would you like to see in local grocery delivery services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your preferred grocery delivery service to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'.",
+            "client_notes": "Use a standard Net Promoter Score (NPS) scale for consistency.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Would you recommend your preferred grocery delivery service to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'."
+            }
+        }
+    ]
+}

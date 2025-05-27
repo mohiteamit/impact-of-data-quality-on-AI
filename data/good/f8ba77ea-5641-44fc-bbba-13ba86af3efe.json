@@ -1,0 +1,127 @@
+{
+    "survey_id": "f8ba77ea-5641-44fc-bbba-13ba86af3efe",
+    "survey_name": "Public Transportation User Experience Survey",
+    "survey_brief": "This survey aims to gather feedback on the quality, convenience, and overall satisfaction of public transportation services among daily commuters.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use public transportation?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps segment respondents by frequency of use, which may influence their responses to subsequent questions.",
+            "scripter_notes": "Use a single-choice radio button for this question.",
+            "script": {
+                "question_text": "How often do you use public transportation?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which modes of public transportation do you use? (Select all that apply)",
+            "answer_options": [
+                "Bus",
+                "Subway/Metro",
+                "Train",
+                "Tram/Light Rail",
+                "Ride-sharing/Taxi",
+                "Other"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1",
+            "client_notes": "This multi-choice question helps identify the most commonly used transportation modes among frequent users.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "Which modes of public transportation do you use? (Select all that apply)",
+                "answer_options": [
+                    "Bus",
+                    "Subway/Metro",
+                    "Train",
+                    "Tram/Light Rail",
+                    "Ride-sharing/Taxi",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness of the public transportation vehicles you use?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected at least one mode in Q2",
+            "client_notes": "A 5-point Likert scale is recommended for measuring satisfaction levels.",
+            "scripter_notes": "Use a single-choice radio button for this question.",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness of the public transportation vehicles you use?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one mode in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest to enhance your public transportation experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents who selected at least one mode in Q2",
+            "client_notes": "An open-ended question allows respondents to provide detailed feedback and innovative suggestions.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance your public transportation experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents who selected at least one mode in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your public transportation service to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Respondents who selected at least one mode in Q2",
+            "client_notes": "This question measures the Net Promoter Score (NPS) for public transportation services.",
+            "scripter_notes": "Use a single-choice radio button for this question.",
+            "script": {
+                "question_text": "How likely are you to recommend your public transportation service to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one mode in Q2"
+            }
+        }
+    ]
+}

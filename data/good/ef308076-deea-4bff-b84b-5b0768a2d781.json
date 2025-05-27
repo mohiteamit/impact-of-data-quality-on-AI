@@ -1,0 +1,125 @@
+{
+    "survey_id": "ef308076-deea-4bff-b84b-5b0768a2d781",
+    "survey_name": "Corporate Mindfulness Program Feedback Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the effectiveness and perceived benefits of the corporate mindfulness program to improve future initiatives.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in the corporate mindfulness program activities?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button layout for clean mobile display. Consider randomizing options to reduce bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Ensure option 'Never' triggers follow-up logic.",
+            "script": {
+                "question_text": "How often do you participate in the corporate mindfulness program activities?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What specific mindfulness activities have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Guided meditation sessions",
+                "Breathing exercises",
+                "Mindfulness workshops",
+                "Yoga classes",
+                "Mindful walking groups",
+                "None of the above"
+            ],
+            "routing_logic": "Respondents who did not select 'Never' in Q1",
+            "client_notes": "Display as a multi-select grid with a 'None' opt-out. Limit to 5 visible options with scroll if needed.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Ensure 'None of the above' deselects other options.",
+            "script": {
+                "question_text": "What specific mindfulness activities have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Guided meditation sessions",
+                    "Breathing exercises",
+                    "Mindfulness workshops",
+                    "Yoga classes",
+                    "Mindful walking groups",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who did not select 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how effective has the mindfulness program been in reducing your work-related stress? (1 = Not at all effective, 5 = Extremely effective)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Respondents who did not select 'Never' in Q1",
+            "client_notes": "Use a horizontal Likert scale with numeric and verbal anchors. Include N/A option if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (star rating widget preferred). Ensure mobile-responsive design.",
+            "script": {
+                "question_text": "On a scale of 1-5, how effective has the mindfulness program been in reducing your work-related stress? (1 = Not at all effective, 5 = Extremely effective)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who did not select 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would increase your participation in mindfulness activities?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow for long-form responses. Suggest maximum 500 characters with a counter.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area). Implement character limit validation.",
+            "script": {
+                "question_text": "What improvements would increase your participation in mindfulness activities?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend the corporate mindfulness program to colleagues?",
+            "answer_options": [
+                "Yes, strongly recommend",
+                "Yes, with reservations",
+                "Neutral",
+                "No, would not recommend"
+            ],
+            "routing_logic": "Respondents who did not select 'Never' in Q1",
+            "client_notes": "Include a visual thumbs up/down scale for engagement. Randomize positive/negative options.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (emoji slider if platform supports).",
+            "script": {
+                "question_text": "Would you recommend the corporate mindfulness program to colleagues?",
+                "answer_options": [
+                    "Yes, strongly recommend",
+                    "Yes, with reservations",
+                    "Neutral",
+                    "No, would not recommend"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who did not select 'Never' in Q1"
+            }
+        }
+    ]
+}

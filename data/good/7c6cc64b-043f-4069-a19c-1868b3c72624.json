@@ -1,0 +1,133 @@
+{
+    "survey_id": "7c6cc64b-043f-4069-a19c-1868b3c72624",
+    "survey_name": "Consumer Preferences for Smart Home Health Monitoring Devices Survey",
+    "survey_brief": "This survey aims to gather insights into consumer preferences and usage patterns regarding smart home health monitoring devices, including factors influencing purchase decisions and satisfaction levels.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home health monitoring devices do you currently own or use?",
+            "answer_options": [
+                "Smart blood pressure monitor",
+                "Smart glucose meter",
+                "Smart scale with health metrics",
+                "Smart sleep tracker",
+                "Smart heart rate monitor",
+                "None of the above"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a multi-choice format to allow selection of multiple devices. Ensure options cover common health monitoring devices.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "Which of the following smart home health monitoring devices do you currently own or use?",
+                "answer_options": [
+                    "Smart blood pressure monitor",
+                    "Smart glucose meter",
+                    "Smart scale with health metrics",
+                    "Smart sleep tracker",
+                    "Smart heart rate monitor",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How important is data privacy when choosing a smart home health monitoring device?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a single-choice Likert scale to measure importance. Ensure clear differentiation between scale points.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How important is data privacy when choosing a smart home health monitoring device?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influenced your decision to purchase your smart home health monitoring device(s)?",
+            "answer_options": [
+                "Recommendation from healthcare provider",
+                "Online reviews",
+                "Price",
+                "Brand reputation",
+                "Ease of use",
+                "Integration with other smart home devices",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q1 answer is not 'None of the above'",
+            "client_notes": "Use a multi-choice format with an optional open-ended 'Other' option. Ensure options cover common purchase influencers.",
+            "scripter_notes": "Field type: MULTI_CHOICE with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What factors influenced your decision to purchase your smart home health monitoring device(s)?",
+                "answer_options": [
+                    "Recommendation from healthcare provider",
+                    "Online reviews",
+                    "Price",
+                    "Brand reputation",
+                    "Ease of use",
+                    "Integration with other smart home devices",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accuracy of the health data provided by your smart home health monitoring device(s)?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "Display if Q1 answer is not 'None of the above'",
+            "client_notes": "Use a single-choice Likert scale to measure satisfaction. Include a 'Not applicable' option for those who do not use the feature.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of the health data provided by your smart home health monitoring device(s)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features would you like to see in future smart home health monitoring devices?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use an open-ended question to gather qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box)",
+            "script": {
+                "question_text": "What additional features would you like to see in future smart home health monitoring devices?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        }
+    ]
+}

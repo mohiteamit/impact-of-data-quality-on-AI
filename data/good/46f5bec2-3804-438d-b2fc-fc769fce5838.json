@@ -1,0 +1,127 @@
+{
+    "survey_id": "46f5bec2-3804-438d-b2fc-fc769fce5838",
+    "survey_name": "Consumer Preferences for Sustainable Personal Care Products Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding sustainable personal care products, including purchasing habits, brand loyalty, and factors influencing their choices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase sustainable personal care products (e.g., eco-friendly shampoo, biodegradable toothbrushes, etc.)?",
+            "answer_options": [
+                "Never",
+                "Rarely (once a year or less)",
+                "Occasionally (a few times a year)",
+                "Frequently (monthly or more often)"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Ensure the options cover a broad range of purchasing frequencies to capture varied consumer behaviors.",
+            "scripter_notes": "Use a single-choice radio button format for this question.",
+            "script": {
+                "question_text": "How often do you purchase sustainable personal care products (e.g., eco-friendly shampoo, biodegradable toothbrushes, etc.)?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once a year or less)",
+                    "Occasionally (a few times a year)",
+                    "Frequently (monthly or more often)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors most influence your decision to purchase sustainable personal care products? (Select all that apply)",
+            "answer_options": [
+                "Environmental impact",
+                "Product ingredients",
+                "Brand reputation",
+                "Price",
+                "Packaging sustainability",
+                "Availability in stores",
+                "Recommendations from friends or family"
+            ],
+            "routing_logic": "This question is shown only if Q1 is not 'Never'.",
+            "client_notes": "Allow multiple selections to capture the complexity of consumer decision-making.",
+            "scripter_notes": "Use a multi-choice checkbox format for this question.",
+            "script": {
+                "question_text": "Which of the following factors most influence your decision to purchase sustainable personal care products? (Select all that apply)",
+                "answer_options": [
+                    "Environmental impact",
+                    "Product ingredients",
+                    "Brand reputation",
+                    "Price",
+                    "Packaging sustainability",
+                    "Availability in stores",
+                    "Recommendations from friends or family"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question is shown only if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you do not purchase sustainable personal care products?",
+            "answer_options": [
+                "Too expensive",
+                "Lack of availability",
+                "Don't believe they are effective",
+                "Not aware of options",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question is shown only if Q1 is 'Never'.",
+            "client_notes": "Include an 'Other' option to capture unique responses not listed.",
+            "scripter_notes": "Use a single-choice radio button format with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you do not purchase sustainable personal care products?",
+                "answer_options": [
+                    "Too expensive",
+                    "Lack of availability",
+                    "Don't believe they are effective",
+                    "Not aware of options",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown only if Q1 is 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much more are you willing to pay for sustainable personal care products compared to conventional ones?",
+            "answer_options": [
+                "Not willing to pay more",
+                "Up to 10% more",
+                "11-20% more",
+                "21-30% more",
+                "More than 30% more"
+            ],
+            "routing_logic": "This question is shown only if Q1 is not 'Never'.",
+            "client_notes": "This helps gauge price sensitivity among sustainability-conscious consumers.",
+            "scripter_notes": "Use a single-choice radio button format for this question.",
+            "script": {
+                "question_text": "How much more are you willing to pay for sustainable personal care products compared to conventional ones?",
+                "answer_options": [
+                    "Not willing to pay more",
+                    "Up to 10% more",
+                    "11-20% more",
+                    "21-30% more",
+                    "More than 30% more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown only if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to purchase more sustainable personal care products?",
+            "answer_options": [],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Open-ended questions can reveal unexpected insights about consumer preferences.",
+            "scripter_notes": "Use an open-text field for this question.",
+            "script": {
+                "question_text": "What improvements would encourage you to purchase more sustainable personal care products?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        }
+    ]
+}

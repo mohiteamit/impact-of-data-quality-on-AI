@@ -1,0 +1,129 @@
+{
+    "survey_id": "66d31eaf-622e-4a68-ac6d-f40df12bb52e",
+    "survey_name": "Gym Member Retention and Satisfaction Survey",
+    "survey_brief": "This survey aims to assess member satisfaction, identify areas for improvement, and understand factors influencing gym retention to enhance overall service quality.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit the gym in a typical week?",
+            "answer_options": [
+                "Less than once a week",
+                "1-2 times per week",
+                "3-4 times per week",
+                "5 or more times per week"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Mobile-friendly.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you visit the gym in a typical week?",
+                "answer_options": [
+                    "Less than once a week",
+                    "1-2 times per week",
+                    "3-4 times per week",
+                    "5 or more times per week"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing a gym? (Select up to 3)",
+            "answer_options": [
+                "Equipment variety",
+                "Cleanliness",
+                "Staff friendliness",
+                "Class offerings",
+                "Location convenience",
+                "Membership cost",
+                "Locker room amenities",
+                "Operating hours"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Multi-choice with max 3 selections. Helps prioritize improvements.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with max selection limit)",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a gym? (Select up to 3)",
+                "answer_options": [
+                    "Equipment variety",
+                    "Cleanliness",
+                    "Staff friendliness",
+                    "Class offerings",
+                    "Location convenience",
+                    "Membership cost",
+                    "Locker room amenities",
+                    "Operating hours"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness of the gym facilities?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "5-point Likert scale for nuanced feedback. Ensure mobile responsiveness.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons with horizontal layout)",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness of the gym facilities?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would encourage you to visit the gym more frequently?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is 'Less than once a week' or '1-2 times per week'",
+            "client_notes": "Open-ended to capture qualitative insights. Limit to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with character limit)",
+            "script": {
+                "question_text": "What improvements would encourage you to visit the gym more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is 'Less than once a week' or '1-2 times per week'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to renew your membership when it expires?",
+            "answer_options": [
+                "Very unlikely",
+                "Unlikely",
+                "Undecided",
+                "Likely",
+                "Very likely"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Critical retention metric. Use a prominent single-choice scale.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (required question, star rating visual optional)",
+            "script": {
+                "question_text": "How likely are you to renew your membership when it expires?",
+                "answer_options": [
+                    "Very unlikely",
+                    "Unlikely",
+                    "Undecided",
+                    "Likely",
+                    "Very likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+{
+    "survey_id": "5476220a-31a9-446b-a1e1-d742a8c1a821",
+    "survey_name": "AI-Powered Personal Finance Management Usage Survey",
+    "survey_brief": "This survey aims to understand user adoption, satisfaction, and challenges with AI-powered personal finance management tools.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following AI-powered personal finance tools do you currently use?",
+            "answer_options": [
+                "Mint",
+                "YNAB (You Need A Budget)",
+                "PocketGuard",
+                "Personal Capital",
+                "Other (please specify)",
+                "None"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a multi-choice format to capture multiple tool usage. Include an 'Other' option with a text field for specificity.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an 'Other' option triggering a text input if selected.",
+            "script": {
+                "question_text": "Which of the following AI-powered personal finance tools do you currently use?",
+                "answer_options": [
+                    "Mint",
+                    "YNAB (You Need A Budget)",
+                    "PocketGuard",
+                    "Personal Capital",
+                    "Other (please specify)",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary AI-powered finance tool?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears only if Q1 is not 'None'.",
+            "client_notes": "Use a 5-point Likert scale for balanced sentiment measurement. Ensure mobile-friendly radio buttons.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Skip logic: Display only if Q1 ≠ 'None'.",
+            "script": {
+                "question_text": "How satisfied are you with your primary AI-powered finance tool?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 is not 'None'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you value most in an AI-powered finance tool? (Select up to 3)",
+            "answer_options": [
+                "Automated budgeting",
+                "Expense categorization",
+                "Investment tracking",
+                "Bill payment reminders",
+                "Credit score monitoring",
+                "Savings recommendations",
+                "Fraud detection"
+            ],
+            "routing_logic": "Appears only if Q1 is not 'None'.",
+            "client_notes": "Limit selections to 3 to force prioritization. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max selections = 3. Skip logic: Display only if Q1 ≠ 'None'.",
+            "script": {
+                "question_text": "What features do you value most in an AI-powered finance tool? (Select up to 3)",
+                "answer_options": [
+                    "Automated budgeting",
+                    "Expense categorization",
+                    "Investment tracking",
+                    "Bill payment reminders",
+                    "Credit score monitoring",
+                    "Savings recommendations",
+                    "Fraud detection"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 is not 'None'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the biggest challenge you face when using AI-powered finance tools?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended to capture nuanced pain points. Set a 300-character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit validation.",
+            "script": {
+                "question_text": "What is the biggest challenge you face when using AI-powered finance tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your primary AI finance tool to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with reservations",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Appears only if Q1 is not 'None'.",
+            "client_notes": "Single-choice with neutral option. Track NPS (Net Promoter Score) potential.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Skip logic: Display only if Q1 ≠ 'None'.",
+            "script": {
+                "question_text": "Would you recommend your primary AI finance tool to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with reservations",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 is not 'None'."
+            }
+        }
+    ]
+}

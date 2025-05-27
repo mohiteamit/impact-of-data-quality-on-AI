@@ -1,0 +1,129 @@
+{
+    "survey_id": "58c64aa6-5da0-4f0d-9b24-93f1b8cf16c9",
+    "survey_name": "AI-Powered Job Matching Platform User Satisfaction Survey",
+    "survey_brief": "This survey aims to understand user satisfaction and areas for improvement for an AI-powered job matching platform, focusing on usability, effectiveness, and feature preferences.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the AI-powered job matching platform?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "First-time user"
+            ],
+            "routing_logic": "Shown to all respondents",
+            "client_notes": "Use a single-choice radio button format for clear response capture. Consider mobile-friendly design with adequate spacing.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How often do you use the AI-powered job matching platform?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of the platform do you find most valuable? (Select up to 3)",
+            "answer_options": [
+                "AI-generated job recommendations",
+                "Resume optimization tools",
+                "Interview preparation resources",
+                "Salary comparison tool",
+                "Company culture insights",
+                "Skill gap analysis",
+                "Networking opportunities"
+            ],
+            "routing_logic": "Shown to all respondents except 'First-time users' from Q1",
+            "client_notes": "Use a multi-select checkbox format with a limit of 3 selections. Ensure the options are randomized to avoid bias.",
+            "scripter_notes": "Field type: checkbox (multi-choice with max 3 selections)",
+            "script": {
+                "question_text": "Which features of the platform do you find most valuable? (Select up to 3)",
+                "answer_options": [
+                    "AI-generated job recommendations",
+                    "Resume optimization tools",
+                    "Interview preparation resources",
+                    "Salary comparison tool",
+                    "Company culture insights",
+                    "Skill gap analysis",
+                    "Networking opportunities"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown to all respondents except 'First-time users' from Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of the job matches provided by the AI?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Shown to all respondents except 'First-time users' from Q1",
+            "client_notes": "Use a 5-point Likert scale with clear labels. Consider adding a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of the job matches provided by the AI?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown to all respondents except 'First-time users' from Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the AI job matching algorithm?",
+            "answer_options": [],
+            "routing_logic": "Shown to respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q3",
+            "client_notes": "Use an open-text field with a character limit of 500. Provide an example placeholder text to guide responses.",
+            "scripter_notes": "Field type: open text (with character limit validation)",
+            "script": {
+                "question_text": "What improvements would you suggest for the AI job matching algorithm?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown to respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend this platform to other job seekers?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Shown to all respondents",
+            "client_notes": "Use a single-choice radio button format. This question measures Net Promoter Score (NPS) potential.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How likely are you to recommend this platform to other job seekers?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown to all respondents"
+            }
+        }
+    ]
+}

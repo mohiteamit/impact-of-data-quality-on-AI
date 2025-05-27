@@ -1,0 +1,129 @@
+{
+    "survey_id": "7120ebf1-320e-4440-8663-e10fd6823826",
+    "survey_name": "Customer Satisfaction Survey for E-Commerce Platforms",
+    "survey_brief": "This survey aims to gather feedback from customers about their shopping experience on various e-commerce platforms to identify areas of improvement and customer preferences.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you shop online?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover the full range of shopping frequencies.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often do you shop online?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which e-commerce platforms have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Amazon",
+                "eBay",
+                "Walmart",
+                "Target",
+                "Alibaba",
+                "Other"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option to capture additional platforms.",
+            "scripter_notes": "Field type: checkbox.",
+            "script": {
+                "question_text": "Which e-commerce platforms have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Amazon",
+                    "eBay",
+                    "Walmart",
+                    "Target",
+                    "Alibaba",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the most important factor for you when choosing an e-commerce platform?",
+            "answer_options": [
+                "Price",
+                "Delivery speed",
+                "Product variety",
+                "Customer service",
+                "User interface",
+                "Other"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button. Ensure the options cover common customer priorities.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "What is the most important factor for you when choosing an e-commerce platform?",
+                "answer_options": [
+                    "Price",
+                    "Delivery speed",
+                    "Product variety",
+                    "Customer service",
+                    "User interface",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any recent negative experience you had while shopping online.",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q1 is not 'Never'.",
+            "client_notes": "Use an open-ended text box. Encourage respondents to provide detailed feedback.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "Please describe any recent negative experience you had while shopping online.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with your overall online shopping experience? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears only if Q1 is not 'Never'.",
+            "client_notes": "Use a Likert scale. Clearly label the ends of the scale for clarity.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with your overall online shopping experience? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 is not 'Never'."
+            }
+        }
+    ]
+}

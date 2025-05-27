@@ -1,0 +1,131 @@
+{
+    "survey_id": "deb3c9e4-0a92-42ea-8986-ac1172ab2632",
+    "survey_name": "Consumer Preferences for Sustainable Coffee Brands Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and purchasing behaviors related to sustainable coffee brands, including factors influencing their choices and awareness of sustainability certifications.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase coffee labeled as 'sustainable' or 'ethically sourced'?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a balanced scale to capture frequency accurately. Mobile-friendly radio buttons recommended.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How often do you purchase coffee labeled as 'sustainable' or 'ethically sourced'?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainability certifications do you recognize? (Select all that apply)",
+            "answer_options": [
+                "Fair Trade",
+                "Rainforest Alliance",
+                "USDA Organic",
+                "Bird Friendly",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice format to allow multiple selections. Include an 'other' option if needed.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes)",
+            "script": {
+                "question_text": "Which of the following sustainability certifications do you recognize? (Select all that apply)",
+                "answer_options": [
+                    "Fair Trade",
+                    "Rainforest Alliance",
+                    "USDA Organic",
+                    "Bird Friendly",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors most influence your decision to purchase sustainable coffee? (Rank top 3)",
+            "answer_options": [
+                "Price",
+                "Brand reputation",
+                "Environmental impact",
+                "Social impact (e.g., fair wages for farmers)",
+                "Taste",
+                "Packaging sustainability",
+                "Availability"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a ranking question format (drag-and-drop or numeric inputs). Ensure mobile compatibility.",
+            "scripter_notes": "Field type: Ranking (custom scripting for top 3 selection)",
+            "script": {
+                "question_text": "What factors most influence your decision to purchase sustainable coffee? (Rank top 3)",
+                "answer_options": [
+                    "Price",
+                    "Brand reputation",
+                    "Environmental impact",
+                    "Social impact (e.g., fair wages for farmers)",
+                    "Taste",
+                    "Packaging sustainability",
+                    "Availability"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much more are you willing to pay for sustainable coffee compared to conventional coffee?",
+            "answer_options": [
+                "0-5% more",
+                "6-10% more",
+                "11-15% more",
+                "16-20% more",
+                "More than 20% more",
+                "Not willing to pay more"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Ensure clear percentage ranges. Use a single-choice radio button format.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How much more are you willing to pay for sustainable coffee compared to conventional coffee?",
+                "answer_options": [
+                    "0-5% more",
+                    "6-10% more",
+                    "11-15% more",
+                    "16-20% more",
+                    "More than 20% more",
+                    "Not willing to pay more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What would encourage you to purchase more sustainable coffee?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative insights. Limit to 200 characters for brevity.",
+            "scripter_notes": "Field type: Open-text (text area)",
+            "script": {
+                "question_text": "What would encourage you to purchase more sustainable coffee?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

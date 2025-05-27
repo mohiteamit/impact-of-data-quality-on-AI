@@ -1,0 +1,133 @@
+{
+    "survey_id": "51ad4e59-ea61-4fc4-84d2-60b1d6dba4eb",
+    "survey_name": "Consumer Preferences for Flexible Workspace Solutions Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding flexible workspace solutions, including coworking spaces, hybrid offices, and remote work setups.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use flexible workspace solutions (e.g., coworking spaces, hot desks, hybrid offices)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Occasionally (less than once a month)",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How frequently do you use flexible workspace solutions (e.g., coworking spaces, hot desks, hybrid offices)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Occasionally (less than once a month)",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features are most important to you in a flexible workspace? (Select up to 3)",
+            "answer_options": [
+                "High-speed internet",
+                "Quiet work areas",
+                "Meeting rooms",
+                "Networking opportunities",
+                "Ergonomic furniture",
+                "On-site cafes or restaurants",
+                "24/7 access",
+                "Wellness amenities (e.g., gym, meditation rooms)"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', 'Monthly', or 'Occasionally' to Q1",
+            "client_notes": "Use a multi-choice checkbox format. Limit selections to 3 to prioritize preferences.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max_selections = 3",
+            "script": {
+                "question_text": "Which of the following features are most important to you in a flexible workspace? (Select up to 3)",
+                "answer_options": [
+                    "High-speed internet",
+                    "Quiet work areas",
+                    "Meeting rooms",
+                    "Networking opportunities",
+                    "Ergonomic furniture",
+                    "On-site cafes or restaurants",
+                    "24/7 access",
+                    "Wellness amenities (e.g., gym, meditation rooms)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', 'Monthly', or 'Occasionally' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you use flexible workspace solutions?",
+            "answer_options": [
+                "Work requirements (e.g., employer policy, client meetings)",
+                "Avoiding home distractions",
+                "Networking and collaboration",
+                "Access to better amenities",
+                "Change of environment",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', 'Monthly', or 'Occasionally' to Q1",
+            "client_notes": "Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you use flexible workspace solutions?",
+                "answer_options": [
+                    "Work requirements (e.g., employer policy, client meetings)",
+                    "Avoiding home distractions",
+                    "Networking and collaboration",
+                    "Access to better amenities",
+                    "Change of environment",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', 'Monthly', or 'Occasionally' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you have never used flexible workspace solutions, what is the main reason?",
+            "answer_options": [
+                "Prefer working from home",
+                "Cost concerns",
+                "Lack of availability in my area",
+                "No need for it",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Never' to Q1",
+            "client_notes": "Use a single-choice format with an 'Other' option for detailed feedback.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "If you have never used flexible workspace solutions, what is the main reason?",
+                "answer_options": [
+                    "Prefer working from home",
+                    "Cost concerns",
+                    "Lack of availability in my area",
+                    "No need for it",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to use flexible workspace solutions more often?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to capture qualitative feedback. Ensure the field is mobile-friendly.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would encourage you to use flexible workspace solutions more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

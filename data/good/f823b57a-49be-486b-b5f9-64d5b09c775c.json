@@ -1,0 +1,157 @@
+{
+    "survey_id": "f823b57a-49be-486b-b5f9-64d5b09c775c",
+    "survey_name": "Consumer Preferences for Smart Kitchen Appliances Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, usage patterns, and barriers to adoption of smart kitchen appliances to inform product development and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own any smart kitchen appliances (e.g., smart refrigerators, ovens, coffee makers)?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a simple yes/no question to segment respondents for further questions. Ensure mobile-friendly button selection.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "Do you currently own any smart kitchen appliances (e.g., smart refrigerators, ovens, coffee makers)?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following smart kitchen appliances do you own? (Select all that apply)",
+            "answer_options": [
+                "Smart refrigerator",
+                "Smart oven",
+                "Smart coffee maker",
+                "Smart microwave",
+                "Smart blender/food processor",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 answer is 'Yes'",
+            "client_notes": "Multi-select question to gauge product penetration. Include an 'Other' option with text field for flexibility.",
+            "scripter_notes": "Field type: Checkbox (multi-choice) with optional text input for 'Other'",
+            "script": {
+                "question_text": "Which of the following smart kitchen appliances do you own? (Select all that apply)",
+                "answer_options": [
+                    "Smart refrigerator",
+                    "Smart oven",
+                    "Smart coffee maker",
+                    "Smart microwave",
+                    "Smart blender/food processor",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influenced your decision to purchase smart kitchen appliances? (Rank in order of importance, 1 being most important)",
+            "answer_options": [
+                "Energy efficiency",
+                "Remote control capabilities",
+                "Integration with other smart home devices",
+                "Advanced cooking features",
+                "Time-saving benefits",
+                "Status/prestige",
+                "Recommendation from friends/family"
+            ],
+            "routing_logic": "Only if Q1 answer is 'Yes'",
+            "client_notes": "Use a drag-and-drop ranking question if possible, or radio buttons for each ranking position. Explain the ranking scale clearly.",
+            "scripter_notes": "Field type: Ranking question (implement as drag-and-drop or series of single-choice questions per item)",
+            "script": {
+                "question_text": "What factors influenced your decision to purchase smart kitchen appliances? (Rank in order of importance, 1 being most important)",
+                "answer_options": [
+                    "Energy efficiency",
+                    "Remote control capabilities",
+                    "Integration with other smart home devices",
+                    "Advanced cooking features",
+                    "Time-saving benefits",
+                    "Status/prestige",
+                    "Recommendation from friends/family"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, have prevented you from purchasing smart kitchen appliances?",
+            "answer_options": [
+                "High cost",
+                "Privacy/security concerns",
+                "Unreliable technology",
+                "Complicated setup/use",
+                "Lack of perceived benefit",
+                "Preference for traditional appliances",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 answer is 'No'",
+            "client_notes": "Multi-select question to identify adoption barriers. Include an open-ended 'Other' option.",
+            "scripter_notes": "Field type: Checkbox (multi-choice) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What concerns, if any, have prevented you from purchasing smart kitchen appliances?",
+                "answer_options": [
+                    "High cost",
+                    "Privacy/security concerns",
+                    "Unreliable technology",
+                    "Complicated setup/use",
+                    "Lack of perceived benefit",
+                    "Preference for traditional appliances",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 answer is 'No'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What price range would you consider reasonable for a smart kitchen appliance (e.g., smart oven)?",
+            "answer_options": [
+                "Under $200",
+                "$200-$499",
+                "$500-$999",
+                "$1,000-$1,999",
+                "$2,000 or more",
+                "I would not purchase regardless of price"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Price sensitivity question with graduated options. Include a 'would not purchase' option.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "What price range would you consider reasonable for a smart kitchen appliance (e.g., smart oven)?",
+                "answer_options": [
+                    "Under $200",
+                    "$200-$499",
+                    "$500-$999",
+                    "$1,000-$1,999",
+                    "$2,000 or more",
+                    "I would not purchase regardless of price"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional features would motivate you to purchase a smart kitchen appliance in the future?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative insights. Limit response length to 200 characters.",
+            "scripter_notes": "Field type: Open text with character limit",
+            "script": {
+                "question_text": "What additional features would motivate you to purchase a smart kitchen appliance in the future?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

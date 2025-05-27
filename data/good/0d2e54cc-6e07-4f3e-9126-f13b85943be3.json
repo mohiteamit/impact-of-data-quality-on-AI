@@ -1,0 +1,129 @@
+{
+    "survey_id": "0d2e54cc-6e07-4f3e-9126-f13b85943be3",
+    "survey_name": "Consumer Preferences for Sustainable Coffee Brands Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding sustainable coffee brands, including purchasing habits, factors influencing choices, and awareness of sustainability certifications.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase coffee labeled as sustainable (e.g., Fair Trade, organic, Rainforest Alliance certified)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "Question appears to all respondents.",
+            "client_notes": "Use a radio button for single-choice response. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you purchase coffee labeled as sustainable (e.g., Fair Trade, organic, Rainforest Alliance certified)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Question appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors most influence your decision to purchase sustainable coffee? (Select all that apply)",
+            "answer_options": [
+                "Environmental impact",
+                "Fair labor practices",
+                "Quality/taste",
+                "Brand reputation",
+                "Price",
+                "Packaging sustainability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Question appears to all respondents except those who selected 'Never' in Q1.",
+            "client_notes": "Use checkboxes for multi-choice responses. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Add an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which of the following factors most influence your decision to purchase sustainable coffee? (Select all that apply)",
+                "answer_options": [
+                    "Environmental impact",
+                    "Fair labor practices",
+                    "Quality/taste",
+                    "Brand reputation",
+                    "Price",
+                    "Packaging sustainability",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Question appears to all respondents except those who selected 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the maximum price premium you would pay for sustainable coffee compared to conventional coffee?",
+            "answer_options": [
+                "5% or less",
+                "6–10%",
+                "11–20%",
+                "More than 20%",
+                "I would not pay a premium"
+            ],
+            "routing_logic": "Question appears to all respondents except those who selected 'Never' in Q1.",
+            "client_notes": "Use a radio button for single-choice response. Ensure the scale is clear and logical.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "What is the maximum price premium you would pay for sustainable coffee compared to conventional coffee?",
+                "answer_options": [
+                    "5% or less",
+                    "6–10%",
+                    "11–20%",
+                    "More than 20%",
+                    "I would not pay a premium"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Question appears to all respondents except those who selected 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How familiar are you with the following sustainability certifications for coffee? (Rate each on a scale from 1 = 'Not familiar at all' to 5 = 'Very familiar')",
+            "answer_options": [
+                "Fair Trade",
+                "Organic",
+                "Rainforest Alliance",
+                "Bird Friendly",
+                "UTZ Certified"
+            ],
+            "routing_logic": "Question appears to all respondents except those who selected 'Never' in Q1.",
+            "client_notes": "Use a Likert scale grid for each certification. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: grid (MULTI_CHOICE with scale 1–5 for each item).",
+            "script": {
+                "question_text": "How familiar are you with the following sustainability certifications for coffee? (Rate each on a scale from 1 = 'Not familiar at all' to 5 = 'Very familiar')",
+                "answer_options": [
+                    "Fair Trade",
+                    "Organic",
+                    "Rainforest Alliance",
+                    "Bird Friendly",
+                    "UTZ Certified"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Question appears to all respondents except those who selected 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to purchase more sustainable coffee?",
+            "answer_options": [],
+            "routing_logic": "Question appears to all respondents except those who selected 'Never' in Q1.",
+            "client_notes": "Use an open-text field to capture qualitative insights.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would encourage you to purchase more sustainable coffee?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Question appears to all respondents except those who selected 'Never' in Q1."
+            }
+        }
+    ]
+}

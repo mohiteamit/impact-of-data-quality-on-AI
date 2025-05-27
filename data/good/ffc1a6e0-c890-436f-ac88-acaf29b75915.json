@@ -1,0 +1,125 @@
+{
+    "survey_id": "ffc1a6e0-c890-436f-ac88-acaf29b75915",
+    "survey_name": "Smart City Public Safety Technology Adoption Survey",
+    "survey_brief": "This survey aims to understand public perceptions and willingness to adopt emerging smart city technologies for public safety, including surveillance systems, emergency response apps, and predictive policing tools.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the concept of 'smart city' technologies for public safety?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "Base question for all respondents",
+            "client_notes": "Use a 4-point Likert scale for balanced responses. Avoid neutral midpoint to force directional feedback.",
+            "scripter_notes": "Single-choice radio buttons displayed vertically. Include 'Prefer not to answer' option.",
+            "script": {
+                "question_text": "How familiar are you with the concept of 'smart city' technologies for public safety?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Base question for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following smart city safety technologies would you be willing to have in your neighborhood? (Select all that apply)",
+            "answer_options": [
+                "Smart street lighting with motion detection",
+                "Gunshot detection systems",
+                "AI-powered surveillance cameras",
+                "Emergency response apps with location tracking",
+                "Predictive policing algorithms",
+                "None of the above"
+            ],
+            "routing_logic": "Shown to all respondents",
+            "client_notes": "Multi-select question to understand technology preferences. Randomize option order to minimize bias.",
+            "scripter_notes": "Multi-choice checkboxes with 'Other (specify)' open field. Include 'Select all that apply' instruction text.",
+            "script": {
+                "question_text": "Which of the following smart city safety technologies would you be willing to have in your neighborhood? (Select all that apply)",
+                "answer_options": [
+                    "Smart street lighting with motion detection",
+                    "Gunshot detection systems",
+                    "AI-powered surveillance cameras",
+                    "Emergency response apps with location tracking",
+                    "Predictive policing algorithms",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, do you have about smart city safety technologies?",
+            "answer_options": [],
+            "routing_logic": "Shown to all respondents",
+            "client_notes": "Open-ended to capture unanticipated concerns. Limit response to 300 characters.",
+            "scripter_notes": "Open text field with character counter. Mobile-optimized input.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about smart city safety technologies?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How important is data privacy when considering the adoption of smart city safety technologies?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important"
+            ],
+            "routing_logic": "Shown to respondents who selected any technology in Q2",
+            "client_notes": "5-point importance scale. Anchor endpoints clearly.",
+            "scripter_notes": "Radio buttons displayed horizontally on desktop, vertically on mobile. Include tooltip explaining data privacy context.",
+            "script": {
+                "question_text": "How important is data privacy when considering the adoption of smart city safety technologies?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown to respondents who selected any technology in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay higher local taxes to fund smart city safety technologies in your community?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, somewhat",
+                "Unsure",
+                "No, probably not",
+                "No, definitely not"
+            ],
+            "routing_logic": "Shown to respondents who indicated at least 'Moderately important' in Q4",
+            "client_notes": "Payment willingness is sensitive; place after establishing technology value.",
+            "scripter_notes": "Single-choice with balanced scale. Include 'Prefer not to answer' option.",
+            "script": {
+                "question_text": "Would you be willing to pay higher local taxes to fund smart city safety technologies in your community?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, somewhat",
+                    "Unsure",
+                    "No, probably not",
+                    "No, definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown to respondents who indicated at least 'Moderately important' in Q4"
+            }
+        }
+    ]
+}

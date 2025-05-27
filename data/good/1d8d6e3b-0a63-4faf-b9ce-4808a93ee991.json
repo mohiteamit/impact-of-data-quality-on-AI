@@ -1,0 +1,131 @@
+{
+    "survey_id": "1d8d6e3b-0a63-4faf-b9ce-4808a93ee991",
+    "survey_name": "AI Adoption in Small Businesses Survey",
+    "survey_brief": "This survey aims to understand the adoption, challenges, and benefits of AI tools in small businesses across various industries.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following best describes your business size?",
+            "answer_options": [
+                "Micro business (1-9 employees)",
+                "Small business (10-49 employees)",
+                "Medium business (50-249 employees)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover typical small business classifications.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Which of the following best describes your business size?",
+                "answer_options": [
+                    "Micro business (1-9 employees)",
+                    "Small business (10-49 employees)",
+                    "Medium business (50-249 employees)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Does your business currently use any AI-powered tools or software?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This is a critical filter question. Use a single-choice format with clear options.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Does your business currently use any AI-powered tools or software?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What types of AI tools does your business use? (Select all that apply)",
+            "answer_options": [
+                "Customer service chatbots",
+                "Predictive analytics",
+                "Automated marketing tools",
+                "AI-powered accounting/finance tools",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q2",
+            "client_notes": "Use checkboxes for multi-select. Include 'Other' with a text field for unique responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE), add open-text field for 'Other'",
+            "script": {
+                "question_text": "What types of AI tools does your business use? (Select all that apply)",
+                "answer_options": [
+                    "Customer service chatbots",
+                    "Predictive analytics",
+                    "Automated marketing tools",
+                    "AI-powered accounting/finance tools",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What are the biggest challenges your business faces in adopting AI tools?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'No' or 'Not sure' to Q2",
+            "client_notes": "Open-ended question to capture qualitative insights. Limit response to 250 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT), character limit: 250",
+            "script": {
+                "question_text": "What are the biggest challenges your business faces in adopting AI tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'No' or 'Not sure' to Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the AI tools currently used in your business?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q2",
+            "client_notes": "Use a 5-point Likert scale for standardized sentiment measurement.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE), ensure scale is balanced.",
+            "script": {
+                "question_text": "How satisfied are you with the AI tools currently used in your business?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q2"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would make AI tools more valuable for your business?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to gather actionable feedback. Encourage brevity with a 200-character limit.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT), character limit: 200",
+            "script": {
+                "question_text": "What improvements would make AI tools more valuable for your business?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,151 @@
+{
+    "survey_id": "b57af66b-d95d-43c1-8c22-19a913de0d0f",
+    "survey_name": "Consumer Preferences for Smart Home Security Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding smart home security systems, including adoption drivers, feature preferences, and purchasing considerations.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home security features do you currently use or plan to use in the next 12 months?",
+            "answer_options": [
+                "Smart cameras",
+                "Smart doorbells",
+                "Smart locks",
+                "Motion sensors",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Consider adding 'Other' with a text field to capture unlisted features.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox).",
+            "script": {
+                "question_text": "Which of the following smart home security features do you currently use or plan to use in the next 12 months?",
+                "answer_options": [
+                    "Smart cameras",
+                    "Smart doorbells",
+                    "Smart locks",
+                    "Motion sensors",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is the primary reason you are interested in smart home security systems?",
+            "answer_options": [
+                "Enhanced security",
+                "Remote monitoring",
+                "Integration with other smart devices",
+                "Insurance discounts",
+                "Peace of mind"
+            ],
+            "routing_logic": "Appears if Q1 does not select 'None of the above'.",
+            "client_notes": "Use a single-choice radio button for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "What is the primary reason you are interested in smart home security systems?",
+                "answer_options": [
+                    "Enhanced security",
+                    "Remote monitoring",
+                    "Integration with other smart devices",
+                    "Insurance discounts",
+                    "Peace of mind"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 does not select 'None of the above'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How important is the ability to integrate your smart home security system with other smart devices (e.g., lights, thermostats)?",
+            "answer_options": [
+                "Very important",
+                "Somewhat important",
+                "Neutral",
+                "Not very important",
+                "Not important at all"
+            ],
+            "routing_logic": "Appears if Q1 does not select 'None of the above'.",
+            "client_notes": "Use a Likert scale for consistent measurement.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "How important is the ability to integrate your smart home security system with other smart devices (e.g., lights, thermostats)?",
+                "answer_options": [
+                    "Very important",
+                    "Somewhat important",
+                    "Neutral",
+                    "Not very important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 does not select 'None of the above'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about adopting a smart home security system?",
+            "answer_options": [
+                "Privacy issues",
+                "High cost",
+                "Complex setup",
+                "Reliability",
+                "No concerns"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Allow multiple selections to capture overlapping concerns.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox).",
+            "script": {
+                "question_text": "What concerns, if any, do you have about adopting a smart home security system?",
+                "answer_options": [
+                    "Privacy issues",
+                    "High cost",
+                    "Complex setup",
+                    "Reliability",
+                    "No concerns"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How much would you be willing to spend on a smart home security system annually, including subscription fees?",
+            "answer_options": [
+                "Less than $100",
+                "$100 - $200",
+                "$201 - $300",
+                "More than $300",
+                "I would not pay for a subscription"
+            ],
+            "routing_logic": "Appears if Q1 does not select 'None of the above'.",
+            "client_notes": "Use a single-choice radio button for clear budget ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "How much would you be willing to spend on a smart home security system annually, including subscription fees?",
+                "answer_options": [
+                    "Less than $100",
+                    "$100 - $200",
+                    "$201 - $300",
+                    "More than $300",
+                    "I would not pay for a subscription"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 does not select 'None of the above'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe any additional features you would like to see in future smart home security systems.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 does not select 'None of the above'.",
+            "client_notes": "Open-ended to capture innovative ideas.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "Please describe any additional features you would like to see in future smart home security systems.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 does not select 'None of the above'."
+            }
+        }
+    ]
+}

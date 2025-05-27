@@ -1,0 +1,105 @@
+{
+    "survey_id": "d7e72a10-b466-4870-84a9-890791be5f88",
+    "survey_name": "Local Park Usage and Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from community members about their usage patterns and satisfaction levels with local parks to inform future improvements and maintenance plans.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit your local park?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "Always appears as the first question.",
+            "client_notes": "Consider including 'Other' as an open-ended option for atypical responses.",
+            "scripter_notes": "Radio button selection for single-choice answers.",
+            "script": {
+                "question_text": "How often do you visit your local park?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears as the first question."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What activities do you typically engage in at the park? (Select all that apply)",
+            "answer_options": [
+                "Walking/Running",
+                "Cycling",
+                "Picnicking",
+                "Playing sports",
+                "Relaxing/Reading",
+                "Dog walking",
+                "Children's play area",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is answered with any option except 'Never'.",
+            "client_notes": "Ensure 'Other' option allows for text input for customization.",
+            "scripter_notes": "Checkbox selection for multi-choice answers with an optional text field for 'Other'.",
+            "script": {
+                "question_text": "What activities do you typically engage in at the park? (Select all that apply)",
+                "answer_options": [
+                    "Walking/Running",
+                    "Cycling",
+                    "Picnicking",
+                    "Playing sports",
+                    "Relaxing/Reading",
+                    "Dog walking",
+                    "Children's play area",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is answered with any option except 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness and maintenance of the park?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 is answered with any option except 'Never'.",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement.",
+            "scripter_notes": "Radio button selection for single-choice answers.",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and maintenance of the park?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is answered with any option except 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in your local park?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is answered with any option except 'Never'.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 500 characters.",
+            "scripter_notes": "Text input field for open-ended responses with a character limit.",
+            "script": {
+                "question_text": "What improvements would you like to see in your local park?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is answered with any option except 'Never'."
+            }
+        }
+    ]
+}

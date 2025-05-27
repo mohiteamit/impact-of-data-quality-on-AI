@@ -1,0 +1,181 @@
+{
+    "survey_id": "00dae292-96ac-42d3-8e57-76b54417a50b",
+    "survey_name": "Consumer Preferences for Smart Wearable Technology Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, usage patterns, and barriers related to smart wearable technology such as fitness trackers, smartwatches, and health monitors.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart wearable devices do you currently own or use regularly?",
+            "answer_options": [
+                "Fitness tracker (e.g., Fitbit, Garmin)",
+                "Smartwatch (e.g., Apple Watch, Samsung Galaxy Watch)",
+                "Health monitoring device (e.g., blood pressure monitor, glucose monitor)",
+                "Smart clothing (e.g., sensor-embedded shirts, shoes)",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to allow respondents to select all applicable options.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "Which of the following smart wearable devices do you currently own or use regularly?",
+                "answer_options": [
+                    "Fitness tracker (e.g., Fitbit, Garmin)",
+                    "Smartwatch (e.g., Apple Watch, Samsung Galaxy Watch)",
+                    "Health monitoring device (e.g., blood pressure monitor, glucose monitor)",
+                    "Smart clothing (e.g., sensor-embedded shirts, shoes)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary smart wearable device?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "N/A (do not own one)"
+            ],
+            "routing_logic": "If Q1 does not include 'None of the above'",
+            "client_notes": "Use a single-choice scale for clarity. Include an N/A option for those who do not own a device.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How satisfied are you with your primary smart wearable device?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "N/A (do not own one)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 does not include 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you use a smart wearable device?",
+            "answer_options": [
+                "Fitness tracking (e.g., steps, calories)",
+                "Health monitoring (e.g., heart rate, sleep)",
+                "Notifications and connectivity",
+                "Fashion or style",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 does not include 'None of the above'",
+            "client_notes": "Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional open-text follow-up",
+            "script": {
+                "question_text": "What is the primary reason you use a smart wearable device?",
+                "answer_options": [
+                    "Fitness tracking (e.g., steps, calories)",
+                    "Health monitoring (e.g., heart rate, sleep)",
+                    "Notifications and connectivity",
+                    "Fashion or style",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 does not include 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you do not own a smart wearable device, what is the main reason?",
+            "answer_options": [
+                "Too expensive",
+                "Not useful to me",
+                "Privacy concerns",
+                "Prefer other devices (e.g., smartphone)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 includes 'None of the above'",
+            "client_notes": "Use a single-choice format with an 'Other' option for detailed feedback.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional open-text follow-up",
+            "script": {
+                "question_text": "If you do not own a smart wearable device, what is the main reason?",
+                "answer_options": [
+                    "Too expensive",
+                    "Not useful to me",
+                    "Privacy concerns",
+                    "Prefer other devices (e.g., smartphone)",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 includes 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features would encourage you to purchase or upgrade a smart wearable device?",
+            "answer_options": [
+                "Longer battery life",
+                "More accurate health metrics",
+                "Lower price",
+                "Better integration with other devices",
+                "New or innovative features",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to capture multiple preferences. Include an 'Other' option for additional insights.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with optional open-text follow-up",
+            "script": {
+                "question_text": "What features would encourage you to purchase or upgrade a smart wearable device?",
+                "answer_options": [
+                    "Longer battery life",
+                    "More accurate health metrics",
+                    "Lower price",
+                    "Better integration with other devices",
+                    "New or innovative features",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How concerned are you about data privacy when using smart wearable devices?",
+            "answer_options": [
+                "Very concerned",
+                "Somewhat concerned",
+                "Neutral",
+                "Somewhat unconcerned",
+                "Very unconcerned"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale for easy interpretation.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How concerned are you about data privacy when using smart wearable devices?",
+                "answer_options": [
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Neutral",
+                    "Somewhat unconcerned",
+                    "Very unconcerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional comments or feedback do you have about smart wearable technology?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative insights.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box)",
+            "script": {
+                "question_text": "What additional comments or feedback do you have about smart wearable technology?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

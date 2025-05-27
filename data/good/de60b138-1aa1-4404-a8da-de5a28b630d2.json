@@ -1,0 +1,127 @@
+{
+    "survey_id": "de60b138-1aa1-4404-a8da-de5a28b630d2",
+    "survey_name": "Smart Office Technology Adoption Survey",
+    "survey_brief": "This survey aims to understand the adoption and satisfaction levels of smart office technologies among employees to enhance workplace efficiency and employee experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart office technologies does your workplace currently use?",
+            "answer_options": [
+                "Smart lighting systems",
+                "Automated climate control",
+                "Smart meeting room booking systems",
+                "Occupancy sensors",
+                "Voice-activated assistants",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to allow selection of multiple technologies. Ensure mobile-friendly layout for easy selection.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which of the following smart office technologies does your workplace currently use?",
+                "answer_options": [
+                    "Smart lighting systems",
+                    "Automated climate control",
+                    "Smart meeting room booking systems",
+                    "Occupancy sensors",
+                    "Voice-activated assistants",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the smart office technologies implemented in your workplace?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 != 'None of the above'",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Single-choice response.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the smart office technologies implemented in your workplace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary benefit you have experienced from using smart office technologies?",
+            "answer_options": [
+                "Increased productivity",
+                "Energy savings",
+                "Improved workplace comfort",
+                "Better space utilization",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 != 'None of the above'",
+            "client_notes": "Include an 'Other' option with a text field for additional input. Single-choice with optional open-ended follow-up.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with conditional open-text for 'Other' response.",
+            "script": {
+                "question_text": "What is the primary benefit you have experienced from using smart office technologies?",
+                "answer_options": [
+                    "Increased productivity",
+                    "Energy savings",
+                    "Improved workplace comfort",
+                    "Better space utilization",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If your workplace does not use smart office technologies, what is the main reason?",
+            "answer_options": [
+                "High implementation costs",
+                "Lack of awareness",
+                "Resistance to change",
+                "Not a priority for management",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 == 'None of the above'",
+            "client_notes": "Single-choice with optional open-ended follow-up for 'Other'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with conditional open-text for 'Other' response.",
+            "script": {
+                "question_text": "If your workplace does not use smart office technologies, what is the main reason?",
+                "answer_options": [
+                    "High implementation costs",
+                    "Lack of awareness",
+                    "Resistance to change",
+                    "Not a priority for management",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 == 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional smart office technologies would you like to see implemented in your workplace?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: OPEN_TEXT (free text input)",
+            "script": {
+                "question_text": "What additional smart office technologies would you like to see implemented in your workplace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

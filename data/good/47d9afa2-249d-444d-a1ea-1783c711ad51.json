@@ -1,0 +1,129 @@
+{
+    "survey_id": "47d9afa2-249d-444d-a1ea-1783c711ad51",
+    "survey_name": "Home Energy Efficiency Practices Survey",
+    "survey_brief": "This survey aims to understand household energy efficiency practices and identify areas for improvement to reduce energy consumption.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following best describes your primary residence?",
+            "answer_options": [
+                "Single-family home",
+                "Apartment or condo",
+                "Townhouse",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure options cover common housing types and include an 'Other' field for flexibility.",
+            "scripter_notes": "Field type: radio button with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following best describes your primary residence?",
+                "answer_options": [
+                    "Single-family home",
+                    "Apartment or condo",
+                    "Townhouse",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How often do you perform an energy audit of your home?",
+            "answer_options": [
+                "Never",
+                "Once every 5+ years",
+                "Once every 2-3 years",
+                "Annually",
+                "More than once a year"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert-like scale for frequency. Consider adding a tooltip explaining 'energy audit' if needed.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often do you perform an energy audit of your home?",
+                "answer_options": [
+                    "Never",
+                    "Once every 5+ years",
+                    "Once every 2-3 years",
+                    "Annually",
+                    "More than once a year"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following energy-saving measures have you implemented in your home? (Select all that apply)",
+            "answer_options": [
+                "LED lighting",
+                "Smart thermostat",
+                "Energy-efficient appliances",
+                "Solar panels",
+                "Improved insulation",
+                "Double/triple-pane windows",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question. Randomize answer order to avoid bias.",
+            "scripter_notes": "Field type: checkbox with 'None of the above' as an exclusive option.",
+            "script": {
+                "question_text": "Which of the following energy-saving measures have you implemented in your home? (Select all that apply)",
+                "answer_options": [
+                    "LED lighting",
+                    "Smart thermostat",
+                    "Energy-efficient appliances",
+                    "Solar panels",
+                    "Improved insulation",
+                    "Double/triple-pane windows",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary barrier preventing you from adopting more energy-efficient practices in your home?",
+            "answer_options": [
+                "High upfront costs",
+                "Lack of information",
+                "Rental/leasing restrictions",
+                "Perceived inconvenience",
+                "No barriers - I have adopted all possible measures",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option for unlisted barriers. Consider follow-up questions based on responses.",
+            "scripter_notes": "Field type: radio button with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is the primary barrier preventing you from adopting more energy-efficient practices in your home?",
+                "answer_options": [
+                    "High upfront costs",
+                    "Lack of information",
+                    "Rental/leasing restrictions",
+                    "Perceived inconvenience",
+                    "No barriers - I have adopted all possible measures",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any additional energy-saving practices you use that were not listed above.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture unique practices. Limit response length to 250 characters.",
+            "scripter_notes": "Field type: open-text with character limit.",
+            "script": {
+                "question_text": "Please describe any additional energy-saving practices you use that were not listed above.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

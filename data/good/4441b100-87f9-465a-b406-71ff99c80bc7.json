@@ -1,0 +1,187 @@
+{
+    "survey_id": "4441b100-87f9-465a-b406-71ff99c80bc7",
+    "survey_name": "Consumer Preferences for Smart Home Energy Management Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding smart home energy management systems to help companies improve product offerings and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home energy management systems are you currently using?",
+            "answer_options": [
+                "Nest Thermostat",
+                "Ecobee Smart Thermostat",
+                "Honeywell Home T9",
+                "Other (please specify)",
+                "None"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps identify market penetration of popular systems.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional 'Other' text input.",
+            "script": {
+                "question_text": "Which of the following smart home energy management systems are you currently using?",
+                "answer_options": [
+                    "Nest Thermostat",
+                    "Ecobee Smart Thermostat",
+                    "Honeywell Home T9",
+                    "Other (please specify)",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current smart home energy management system?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "If Q1 != 'None'",
+            "client_notes": "Use a 5-point Likert scale to gauge satisfaction levels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home energy management system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 != 'None'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influenced your decision to purchase your current smart home energy management system?",
+            "answer_options": [
+                "Energy savings",
+                "Ease of use",
+                "Brand reputation",
+                "Price",
+                "Features",
+                "Recommendation from friends/family",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 != 'None'",
+            "client_notes": "This helps understand key decision-making drivers.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional 'Other' text input.",
+            "script": {
+                "question_text": "What factors influenced your decision to purchase your current smart home energy management system?",
+                "answer_options": [
+                    "Energy savings",
+                    "Ease of use",
+                    "Brand reputation",
+                    "Price",
+                    "Features",
+                    "Recommendation from friends/family",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 != 'None'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend your current smart home energy management system to others?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely",
+                "Not applicable"
+            ],
+            "routing_logic": "If Q1 != 'None'",
+            "client_notes": "This measures Net Promoter Score (NPS) potential.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How likely are you to recommend your current smart home energy management system to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 != 'None'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features would you like to see in future smart home energy management systems?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture unmet needs and innovative ideas.",
+            "scripter_notes": "Field type: OPEN_TEXT.",
+            "script": {
+                "question_text": "What additional features would you like to see in future smart home energy management systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How important is compatibility with other smart home devices when choosing an energy management system?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point scale to assess importance of ecosystem integration.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How important is compatibility with other smart home devices when choosing an energy management system?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What is your primary reason for not using a smart home energy management system?",
+            "answer_options": [
+                "Too expensive",
+                "Don't see the benefit",
+                "Privacy concerns",
+                "Too complicated to install/use",
+                "Not aware of available options",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 == 'None'",
+            "client_notes": "Identifies barriers to adoption for non-users.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional 'Other' text input.",
+            "script": {
+                "question_text": "What is your primary reason for not using a smart home energy management system?",
+                "answer_options": [
+                    "Too expensive",
+                    "Don't see the benefit",
+                    "Privacy concerns",
+                    "Too complicated to install/use",
+                    "Not aware of available options",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 == 'None'"
+            }
+        }
+    ]
+}

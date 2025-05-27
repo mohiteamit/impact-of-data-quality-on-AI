@@ -1,0 +1,131 @@
+{
+    "survey_id": "0599e883-86c5-4f7c-83db-8e052e00f162",
+    "survey_name": "Consumer Preferences for Home Meal Delivery Kits Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, satisfaction levels, and factors influencing the choice of home meal delivery kits. The insights will help businesses optimize their offerings and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use home meal delivery kits?",
+            "answer_options": [
+                "Weekly",
+                "Bi-weekly",
+                "Monthly",
+                "Less than once a month",
+                "Never used"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "This helps segment users by frequency of use. Consider adding a follow-up for 'Never used' respondents to understand barriers.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use home meal delivery kits?",
+                "answer_options": [
+                    "Weekly",
+                    "Bi-weekly",
+                    "Monthly",
+                    "Less than once a month",
+                    "Never used"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which factors are most important to you when selecting a meal delivery kit service? (Select all that apply)",
+            "answer_options": [
+                "Price",
+                "Variety of meals",
+                "Dietary options (e.g., vegan, gluten-free)",
+                "Ease of preparation",
+                "Quality of ingredients",
+                "Delivery schedule flexibility",
+                "Environmental sustainability",
+                "Brand reputation"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never used'.",
+            "client_notes": "Multi-choice question to identify key decision drivers. Consider ranking importance in a follow-up if needed.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "Which factors are most important to you when selecting a meal delivery kit service? (Select all that apply)",
+                "answer_options": [
+                    "Price",
+                    "Variety of meals",
+                    "Dietary options (e.g., vegan, gluten-free)",
+                    "Ease of preparation",
+                    "Quality of ingredients",
+                    "Delivery schedule flexibility",
+                    "Environmental sustainability",
+                    "Brand reputation"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never used'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would make you more likely to use a meal delivery kit service?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is 'Never used' or 'Less than once a month'.",
+            "client_notes": "Open-ended to capture barriers or unmet needs. Useful for product development.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would make you more likely to use a meal delivery kit service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is 'Never used' or 'Less than once a month'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the portion sizes of the meals provided?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never used'.",
+            "client_notes": "5-point Likert scale to measure satisfaction. Helps identify potential areas for adjustment.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the portion sizes of the meals provided?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never used'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your current meal delivery kit service to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, probably",
+                "Not sure",
+                "No, probably not",
+                "No, definitely not"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never used'.",
+            "client_notes": "Net Promoter Score (NPS) style question to gauge loyalty and satisfaction.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Would you recommend your current meal delivery kit service to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, probably",
+                    "Not sure",
+                    "No, probably not",
+                    "No, definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never used'."
+            }
+        }
+    ]
+}

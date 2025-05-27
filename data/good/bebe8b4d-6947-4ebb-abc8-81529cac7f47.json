@@ -1,0 +1,133 @@
+{
+    "survey_id": "bebe8b4d-6947-4ebb-abc8-81529cac7f47",
+    "survey_name": "Consumer Preferences for Plant-Based Dairy Alternatives Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, purchasing habits, and attitudes toward plant-based dairy alternatives.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you consume plant-based dairy alternatives?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you consume plant-based dairy alternatives?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of plant-based dairy alternatives do you consume? (Select all that apply)",
+            "answer_options": [
+                "Almond milk",
+                "Soy milk",
+                "Oat milk",
+                "Coconut milk",
+                "Cashew milk",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only shown if Q1 answer is not 'Never'",
+            "client_notes": "Use a multi-choice checkbox format. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which types of plant-based dairy alternatives do you consume? (Select all that apply)",
+                "answer_options": [
+                    "Almond milk",
+                    "Soy milk",
+                    "Oat milk",
+                    "Coconut milk",
+                    "Cashew milk",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influence your decision to purchase plant-based dairy alternatives? (Select up to 3)",
+            "answer_options": [
+                "Health benefits",
+                "Environmental concerns",
+                "Animal welfare",
+                "Taste preference",
+                "Price",
+                "Availability",
+                "Dietary restrictions/allergies",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only shown if Q1 answer is not 'Never'",
+            "client_notes": "Limit selections to 3 to prioritize top factors. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with max selection limit of 3 and optional open-text for 'Other'",
+            "script": {
+                "question_text": "What factors influence your decision to purchase plant-based dairy alternatives? (Select up to 3)",
+                "answer_options": [
+                    "Health benefits",
+                    "Environmental concerns",
+                    "Animal welfare",
+                    "Taste preference",
+                    "Price",
+                    "Availability",
+                    "Dietary restrictions/allergies",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the taste of plant-based dairy alternatives compared to traditional dairy products?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only shown if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale for nuanced feedback. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the taste of plant-based dairy alternatives compared to traditional dairy products?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to purchase more plant-based dairy alternatives?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to capture qualitative insights. Ensure the field is mobile-friendly.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What improvements would encourage you to purchase more plant-based dairy alternatives?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

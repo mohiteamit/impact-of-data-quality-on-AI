@@ -1,0 +1,115 @@
+{
+    "survey_id": "a4183eb9-2c32-4eb4-9f81-fbf6fdf61050",
+    "survey_name": "Smart Retail Checkout Experience Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and preferences regarding smart checkout technologies in retail stores, including self-checkout kiosks and mobile payment integration.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use smart checkout options (e.g., self-checkout kiosks, mobile payment) when shopping in retail stores?",
+            "answer_options": [
+                "Every time I shop",
+                "Often",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a Likert scale to capture frequency. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "How frequently do you use smart checkout options (e.g., self-checkout kiosks, mobile payment) when shopping in retail stores?",
+                "answer_options": [
+                    "Every time I shop",
+                    "Often",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your decision to use smart checkout options? (Select all that apply)",
+            "answer_options": [
+                "Faster checkout process",
+                "Reduced human interaction",
+                "Convenience",
+                "Perceived hygiene benefits",
+                "Availability of staffed checkout",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q1 response is not 'Never'.",
+            "client_notes": "Allow multi-selection for comprehensive insights. Include an 'Other' option for additional feedback.",
+            "scripter_notes": "Field type: multi-choice (checkboxes). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What factors influence your decision to use smart checkout options? (Select all that apply)",
+                "answer_options": [
+                    "Faster checkout process",
+                    "Reduced human interaction",
+                    "Convenience",
+                    "Perceived hygiene benefits",
+                    "Availability of staffed checkout",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you encountered while using smart checkout systems?",
+            "answer_options": [],
+            "routing_logic": "This question appears if Q1 response is not 'Never'.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: open-text (text area).",
+            "script": {
+                "question_text": "What challenges have you encountered while using smart checkout systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the overall experience of using smart checkout options?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears if Q1 response is not 'Never'.",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the overall experience of using smart checkout options?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would enhance your smart checkout experience?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents who completed Q4.",
+            "client_notes": "Open-ended to gather actionable feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: open-text (text area).",
+            "script": {
+                "question_text": "What improvements would enhance your smart checkout experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents who completed Q4."
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "survey_id": "515e950b-2ea6-4bff-b40a-8e5ab172440b",
+    "survey_name": "Consumer Preferences for Car-Sharing Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, satisfaction levels, and barriers related to car-sharing services to improve service offerings and user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use car-sharing services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice format to measure usage frequency clearly.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use car-sharing services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which factors are most important to you when choosing a car-sharing service? (Select all that apply)",
+            "answer_options": [
+                "Price",
+                "Vehicle availability",
+                "Vehicle cleanliness",
+                "Ease of booking",
+                "Mobile app usability",
+                "Customer support",
+                "Environmental impact"
+            ],
+            "routing_logic": "This question appears for respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1.",
+            "client_notes": "Use a multi-choice format to allow selection of multiple factors. Consider randomizing options to avoid bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which factors are most important to you when choosing a car-sharing service? (Select all that apply)",
+                "answer_options": [
+                    "Price",
+                    "Vehicle availability",
+                    "Vehicle cleanliness",
+                    "Ease of booking",
+                    "Mobile app usability",
+                    "Customer support",
+                    "Environmental impact"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would encourage you to use car-sharing services more often?",
+            "answer_options": [],
+            "routing_logic": "This question appears for respondents who answered 'A few times a year' or 'Never' to Q1.",
+            "client_notes": "Use an open-ended format to capture detailed feedback. Clarify that responses are optional.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would encourage you to use car-sharing services more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for respondents who answered 'A few times a year' or 'Never' to Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the pricing of car-sharing services?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1.",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction. Ensure options are balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the pricing of car-sharing services?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend car-sharing services to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "This question appears for respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1.",
+            "client_notes": "Use a simple single-choice format for clarity. Include a neutral option ('Maybe').",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you recommend car-sharing services to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1."
+            }
+        }
+    ]
+}

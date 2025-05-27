@@ -1,0 +1,111 @@
+{
+    "survey_id": "dc0d3c83-0baf-45c2-94fd-16750d46929b",
+    "survey_name": "Consumer Preferences for Augmented Reality Shopping Experiences Survey",
+    "survey_brief": "This survey aims to gather insights on consumer attitudes and preferences towards augmented reality (AR) features in online shopping platforms.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with augmented reality (AR) features in online shopping platforms?",
+            "answer_options": [
+                "Very familiar - I use them regularly",
+                "Somewhat familiar - I’ve tried them a few times",
+                "Not very familiar - I’ve heard of them but haven’t used them",
+                "Not at all familiar - I don’t know what they are"
+            ],
+            "routing_logic": "This question appears to all respondents.",
+            "client_notes": "Use a balanced scale to measure familiarity. Ensure the options are mutually exclusive.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "How familiar are you with augmented reality (AR) features in online shopping platforms?",
+                "answer_options": [
+                    "Very familiar - I use them regularly",
+                    "Somewhat familiar - I’ve tried them a few times",
+                    "Not very familiar - I’ve heard of them but haven’t used them",
+                    "Not at all familiar - I don’t know what they are"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AR shopping features have you used? (Select all that apply)",
+            "answer_options": [
+                "Virtual try-on for clothing or accessories",
+                "AR furniture placement in your home",
+                "AR makeup or beauty product testing",
+                "AR product visualization (e.g., seeing a 3D model of a product)",
+                "None of the above"
+            ],
+            "routing_logic": "This question appears if Q1 answer is not 'Not at all familiar - I don’t know what they are'.",
+            "client_notes": "Allow multiple selections. Include an option for respondents who haven’t used any AR features.",
+            "scripter_notes": "Field type: multi-choice (checkboxes).",
+            "script": {
+                "question_text": "Which of the following AR shopping features have you used? (Select all that apply)",
+                "answer_options": [
+                    "Virtual try-on for clothing or accessories",
+                    "AR furniture placement in your home",
+                    "AR makeup or beauty product testing",
+                    "AR product visualization (e.g., seeing a 3D model of a product)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q1 answer is not 'Not at all familiar - I don’t know what they are'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How likely are you to use AR features when shopping online in the future?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "This question appears if Q1 answer is not 'Not at all familiar - I don’t know what they are'.",
+            "client_notes": "Use a standard 5-point Likert scale. Randomize the order of positive/negative options if possible.",
+            "scripter_notes": "Field type: single-choice (radio buttons).",
+            "script": {
+                "question_text": "How likely are you to use AR features when shopping online in the future?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 answer is not 'Not at all familiar - I don’t know what they are'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors would encourage you to use AR features more often when shopping online?",
+            "answer_options": [],
+            "routing_logic": "This question appears if Q3 answer is 'Very likely' or 'Somewhat likely'.",
+            "client_notes": "Use an open-ended question to capture qualitative insights. Ensure the field is mobile-friendly for longer responses.",
+            "scripter_notes": "Field type: open-ended (text input).",
+            "script": {
+                "question_text": "What factors would encourage you to use AR features more often when shopping online?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if Q3 answer is 'Very likely' or 'Somewhat likely'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What barriers prevent you from using AR features when shopping online?",
+            "answer_options": [],
+            "routing_logic": "This question appears if Q3 answer is 'Somewhat unlikely' or 'Very unlikely'.",
+            "client_notes": "Use an open-ended question to identify pain points. Provide ample space for detailed responses.",
+            "scripter_notes": "Field type: open-ended (text input).",
+            "script": {
+                "question_text": "What barriers prevent you from using AR features when shopping online?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if Q3 answer is 'Somewhat unlikely' or 'Very unlikely'."
+            }
+        }
+    ]
+}

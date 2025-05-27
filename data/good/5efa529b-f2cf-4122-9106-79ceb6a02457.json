@@ -1,0 +1,129 @@
+{
+    "survey_id": "5efa529b-f2cf-4122-9106-79ceb6a02457",
+    "survey_name": "Consumer Preferences for Outdoor Gear Rental Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and experiences with outdoor gear rental services, including factors influencing their choices and satisfaction levels.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you rent outdoor gear (e.g., camping equipment, hiking gear, bicycles)?",
+            "answer_options": [
+                "Never",
+                "Rarely (once a year or less)",
+                "Occasionally (2-5 times a year)",
+                "Frequently (more than 5 times a year)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover the full range of possible frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you rent outdoor gear (e.g., camping equipment, hiking gear, bicycles)?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once a year or less)",
+                    "Occasionally (2-5 times a year)",
+                    "Frequently (more than 5 times a year)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of outdoor gear do you typically rent? (Select all that apply)",
+            "answer_options": [
+                "Camping equipment (tents, sleeping bags, etc.)",
+                "Hiking gear (boots, backpacks, etc.)",
+                "Bicycles or e-bikes",
+                "Water sports equipment (kayaks, paddleboards, etc.)",
+                "Winter sports equipment (skis, snowboards, etc.)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option to capture unexpected responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an open-text field for 'Other' if selected.",
+            "script": {
+                "question_text": "What types of outdoor gear do you typically rent? (Select all that apply)",
+                "answer_options": [
+                    "Camping equipment (tents, sleeping bags, etc.)",
+                    "Hiking gear (boots, backpacks, etc.)",
+                    "Bicycles or e-bikes",
+                    "Water sports equipment (kayaks, paddleboards, etc.)",
+                    "Winter sports equipment (skis, snowboards, etc.)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing an outdoor gear rental service? (Rank top 3)",
+            "answer_options": [
+                "Price",
+                "Gear quality and condition",
+                "Availability of gear",
+                "Convenience of pickup/delivery",
+                "Customer service",
+                "Flexibility in rental duration",
+                "Online booking and payment options"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Use a ranking question format. Limit to top 3 choices to simplify analysis.",
+            "scripter_notes": "Field type: ranking (MULTI_CHOICE with max selections: 3). Ensure the interface supports drag-and-drop or numbered selection.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing an outdoor gear rental service? (Rank top 3)",
+                "answer_options": [
+                    "Price",
+                    "Gear quality and condition",
+                    "Availability of gear",
+                    "Convenience of pickup/delivery",
+                    "Customer service",
+                    "Flexibility in rental duration",
+                    "Online booking and payment options"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any challenges or frustrations you have encountered with outdoor gear rental services.",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "Please describe any challenges or frustrations you have encountered with outdoor gear rental services.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your preferred outdoor gear rental service to others?",
+            "answer_options": [
+                "Very unlikely",
+                "Unlikely",
+                "Neutral",
+                "Likely",
+                "Very likely"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale for measuring likelihood. Ensure the scale is balanced and clearly labeled.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How likely are you to recommend your preferred outdoor gear rental service to others?",
+                "answer_options": [
+                    "Very unlikely",
+                    "Unlikely",
+                    "Neutral",
+                    "Likely",
+                    "Very likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        }
+    ]
+}

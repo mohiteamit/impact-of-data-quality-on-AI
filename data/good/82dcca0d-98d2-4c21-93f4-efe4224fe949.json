@@ -1,0 +1,141 @@
+{
+    "survey_id": "82dcca0d-98d2-4c21-93f4-efe4224fe949",
+    "survey_name": "Outdoor Recreation Participation and Preferences Survey",
+    "survey_brief": "This survey aims to understand participation rates, preferences, and barriers related to outdoor recreational activities among adults.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you participate in outdoor recreational activities (e.g., hiking, cycling, camping)?",
+            "answer_options": [
+                "Multiple times per week",
+                "Once a week",
+                "2-3 times per month",
+                "Once a month",
+                "Less than once a month",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button grid for clarity. Consider randomizing options to avoid order bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons), mandatory response.",
+            "script": {
+                "question_text": "How frequently do you participate in outdoor recreational activities (e.g., hiking, cycling, camping)?",
+                "answer_options": [
+                    "Multiple times per week",
+                    "Once a week",
+                    "2-3 times per month",
+                    "Once a month",
+                    "Less than once a month",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following outdoor activities have you participated in during the past 12 months? (Select all that apply)",
+            "answer_options": [
+                "Hiking",
+                "Cycling",
+                "Camping",
+                "Fishing",
+                "Running/Jogging",
+                "Kayaking/Canoeing",
+                "Rock Climbing",
+                "Bird Watching",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-select. Include 'None of the above' to capture non-participants.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), optional response.",
+            "script": {
+                "question_text": "Which of the following outdoor activities have you participated in during the past 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Hiking",
+                    "Cycling",
+                    "Camping",
+                    "Fishing",
+                    "Running/Jogging",
+                    "Kayaking/Canoeing",
+                    "Rock Climbing",
+                    "Bird Watching",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors most influence your choice of outdoor recreational activities?",
+            "answer_options": [
+                "Physical health benefits",
+                "Mental health/relaxation",
+                "Social interaction",
+                "Proximity to locations",
+                "Cost",
+                "Equipment availability",
+                "Season/weather conditions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected at least one activity in Q2",
+            "client_notes": "Allow multiple selections but limit to 3 choices to prioritize key factors.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with max 3 selections), include 'Other' with open-text field.",
+            "script": {
+                "question_text": "What factors most influence your choice of outdoor recreational activities?",
+                "answer_options": [
+                    "Physical health benefits",
+                    "Mental health/relaxation",
+                    "Social interaction",
+                    "Proximity to locations",
+                    "Cost",
+                    "Equipment availability",
+                    "Season/weather conditions",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected at least one activity in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any barriers that prevent you from participating in outdoor activities more frequently.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field with a 200-character limit to encourage concise responses.",
+            "scripter_notes": "Field type: OPEN_TEXT, optional response.",
+            "script": {
+                "question_text": "Please describe any barriers that prevent you from participating in outdoor activities more frequently.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to try a new outdoor recreational activity in the next 6 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale with clear polarity labels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons), mandatory response.",
+            "script": {
+                "question_text": "How likely are you to try a new outdoor recreational activity in the next 6 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

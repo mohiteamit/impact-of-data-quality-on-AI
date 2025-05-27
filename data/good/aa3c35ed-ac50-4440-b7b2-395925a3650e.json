@@ -1,0 +1,119 @@
+{
+    "survey_id": "aa3c35ed-ac50-4440-b7b2-395925a3650e",
+    "survey_name": "Impact of Workplace Design on Employee Creativity Survey",
+    "survey_brief": "This survey aims to understand how office design and workspace environments influence employee creativity and innovation. It will gather feedback on physical spaces, collaborative areas, and personal work zones to inform future workplace design strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you rate your current workspace design in terms of fostering creativity?",
+            "answer_options": [
+                "Poor - Hinders creativity",
+                "Fair - Somewhat limits creativity",
+                "Good - Neutral impact",
+                "Very good - Encourages creativity",
+                "Excellent - Strongly fosters creativity"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a balanced 5-point Likert scale to capture nuanced opinions. Ensure mobile-friendly button sizing for touch selection.",
+            "scripter_notes": "Single-choice radio buttons with mandatory selection. Randomize option order to prevent bias.",
+            "script": {
+                "question_text": "How would you rate your current workspace design in terms of fostering creativity?",
+                "answer_options": [
+                    "Poor - Hinders creativity",
+                    "Fair - Somewhat limits creativity",
+                    "Good - Neutral impact",
+                    "Very good - Encourages creativity",
+                    "Excellent - Strongly fosters creativity"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of these workspace features do you find most stimulating for creative thinking? (Select up to 3)",
+            "answer_options": [
+                "Natural lighting",
+                "Flexible seating arrangements",
+                "Quiet zones/focus pods",
+                "Collaborative open spaces",
+                "Art/visual installations",
+                "Biophilic design (plants/nature elements)",
+                "Adjustable furniture (standing desks, etc.)",
+                "Color psychology elements"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select with clear max selection limit. Consider displaying as a grid on desktop for visual clarity.",
+            "scripter_notes": "Multi-choice checkboxes with a 3-selection maximum enforced by validation.",
+            "script": {
+                "question_text": "Which of these workspace features do you find most stimulating for creative thinking? (Select up to 3)",
+                "answer_options": [
+                    "Natural lighting",
+                    "Flexible seating arrangements",
+                    "Quiet zones/focus pods",
+                    "Collaborative open spaces",
+                    "Art/visual installations",
+                    "Biophilic design (plants/nature elements)",
+                    "Adjustable furniture (standing desks, etc.)",
+                    "Color psychology elements"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Describe a specific instance where your workspace design directly contributed to a creative idea or solution.",
+            "answer_options": [],
+            "routing_logic": "If Q1 ≠ 'Poor - Hinders creativity'",
+            "client_notes": "Open-ended to capture qualitative insights. Set a 500-character limit with real-time counter.",
+            "scripter_notes": "Open text field with character limit validation. Include placeholder text: 'Briefly describe the situation...'",
+            "script": {
+                "question_text": "Describe a specific instance where your workspace design directly contributed to a creative idea or solution.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 ≠ 'Poor - Hinders creativity'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How frequently do you utilize dedicated creative zones (e.g., innovation labs, brainstorming rooms) in your office?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never (no access)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an explicit 'no access' option for accurate data. Randomize mid-frequency options.",
+            "scripter_notes": "Single-choice with option to show Q4a if 'Never (no access)' is selected.",
+            "script": {
+                "question_text": "How frequently do you utilize dedicated creative zones (e.g., innovation labs, brainstorming rooms) in your office?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never (no access)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What single change to your workspace would most improve your creative output?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Optional question to prioritize improvements. Use AI-powered response categorization for analysis.",
+            "scripter_notes": "Open text field with 300-character limit. Enable spellcheck.",
+            "script": {
+                "question_text": "What single change to your workspace would most improve your creative output?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

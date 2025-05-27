@@ -1,0 +1,115 @@
+{
+    "survey_id": "ff5e97b3-147a-408a-934f-634b25985611",
+    "survey_name": "Cybersecurity Training Effectiveness Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness of cybersecurity awareness training programs within organizations, focusing on employee knowledge retention and behavioral changes.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often does your organization conduct mandatory cybersecurity training for employees?",
+            "answer_options": [
+                "Annually",
+                "Bi-annually",
+                "Quarterly",
+                "Monthly",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice responses. Ensure mobile-friendly spacing.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often does your organization conduct mandatory cybersecurity training for employees?",
+                "answer_options": [
+                    "Annually",
+                    "Bi-annually",
+                    "Quarterly",
+                    "Monthly",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following cybersecurity topics were covered in your most recent training? (Select all that apply)",
+            "answer_options": [
+                "Phishing awareness",
+                "Password security",
+                "Social engineering attacks",
+                "Data privacy regulations",
+                "Incident reporting procedures",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-select responses. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes).",
+            "script": {
+                "question_text": "Which of the following cybersecurity topics were covered in your most recent training? (Select all that apply)",
+                "answer_options": [
+                    "Phishing awareness",
+                    "Password security",
+                    "Social engineering attacks",
+                    "Data privacy regulations",
+                    "Incident reporting procedures",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how confident do you feel in identifying potential cybersecurity threats after completing the training? (1 = Not confident at all, 5 = Extremely confident)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale with clear labels. Include a 'N/A' option if training was not completed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons with scale labels).",
+            "script": {
+                "question_text": "On a scale of 1-5, how confident do you feel in identifying potential cybersecurity threats after completing the training? (1 = Not confident at all, 5 = Extremely confident)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe one specific action you've taken to improve cybersecurity in your work as a result of the training.",
+            "answer_options": [],
+            "routing_logic": "If Q3 answer is 3, 4, or 5",
+            "client_notes": "Use an open-text field with a character limit of 500. Encourage specificity.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with validation).",
+            "script": {
+                "question_text": "Describe one specific action you've taken to improve cybersecurity in your work as a result of the training.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q3 answer is 3, 4, or 5"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional cybersecurity training topics would you find most valuable for future sessions?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to capture unanticipated needs. Optional question.",
+            "scripter_notes": "Field type: OPEN_TEXT (optional response).",
+            "script": {
+                "question_text": "What additional cybersecurity training topics would you find most valuable for future sessions?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

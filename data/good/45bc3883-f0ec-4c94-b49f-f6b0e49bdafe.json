@@ -1,0 +1,123 @@
+{
+    "survey_id": "45bc3883-f0ec-4c94-b49f-f6b0e49bdafe",
+    "survey_name": "Smartwatch Usage and Health Tracking Survey",
+    "survey_brief": "This survey aims to understand how individuals use smartwatches for health tracking and their overall satisfaction with current features.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own or use a smartwatch?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This is a screening question. Use a simple yes/no format for clarity.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Do you currently own or use a smartwatch?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following health tracking features do you use most often on your smartwatch? (Select all that apply)",
+            "answer_options": [
+                "Heart rate monitoring",
+                "Step counting",
+                "Sleep tracking",
+                "Calorie tracking",
+                "Blood oxygen monitoring",
+                "Stress tracking",
+                "None of the above"
+            ],
+            "routing_logic": "Shown only if Q1 answer is 'Yes'",
+            "client_notes": "Allow multiple selections to capture feature usage accurately.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following health tracking features do you use most often on your smartwatch? (Select all that apply)",
+                "answer_options": [
+                    "Heart rate monitoring",
+                    "Step counting",
+                    "Sleep tracking",
+                    "Calorie tracking",
+                    "Blood oxygen monitoring",
+                    "Stress tracking",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown only if Q1 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of the health tracking features on your smartwatch?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Shown only if Q1 answer is 'Yes'",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of the health tracking features on your smartwatch?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown only if Q1 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in future smartwatch health tracking features?",
+            "answer_options": [],
+            "routing_logic": "Shown only if Q1 answer is 'Yes'",
+            "client_notes": "Open-ended to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you like to see in future smartwatch health tracking features?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown only if Q1 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you do not own a smartwatch, what is the primary reason?",
+            "answer_options": [
+                "Too expensive",
+                "Don't see the need for one",
+                "Privacy concerns",
+                "Prefer other health tracking methods",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown only if Q1 answer is 'No'",
+            "client_notes": "Include an 'Other' option with a text field for additional reasons.",
+            "scripter_notes": "Field type: radio button with conditional text input for 'Other'.",
+            "script": {
+                "question_text": "If you do not own a smartwatch, what is the primary reason?",
+                "answer_options": [
+                    "Too expensive",
+                    "Don't see the need for one",
+                    "Privacy concerns",
+                    "Prefer other health tracking methods",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown only if Q1 answer is 'No'"
+            }
+        }
+    ]
+}

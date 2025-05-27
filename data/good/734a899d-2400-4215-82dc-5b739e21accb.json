@@ -1,0 +1,135 @@
+{
+    "survey_id": "734a899d-2400-4215-82dc-5b739e21accb",
+    "survey_name": "Home Energy Monitoring System Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer awareness, preferences, and barriers regarding home energy monitoring systems to help manufacturers and service providers better meet customer needs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Are you currently using a home energy monitoring system?",
+            "answer_options": [
+                "Yes, I actively use one",
+                "No, but I have considered it",
+                "No, and I have not considered it",
+                "Not sure what this is"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a clear, simple scale for initial adoption intent. Consider follow-up questions based on responses.",
+            "scripter_notes": "Field type: single-choice radio buttons. Ensure 'Not sure' option is included.",
+            "script": {
+                "question_text": "Are you currently using a home energy monitoring system?",
+                "answer_options": [
+                    "Yes, I actively use one",
+                    "No, but I have considered it",
+                    "No, and I have not considered it",
+                    "Not sure what this is"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when considering a home energy monitoring system? (Select up to 3)",
+            "answer_options": [
+                "Real-time energy usage data",
+                "Cost savings potential",
+                "Ease of installation",
+                "Integration with smart home devices",
+                "Mobile app functionality",
+                "Accuracy of monitoring",
+                "Brand reputation",
+                "Environmental impact awareness",
+                "Utility company compatibility"
+            ],
+            "routing_logic": "Shows if Q1 response is 'Yes' or 'No, but I have considered it'",
+            "client_notes": "Multi-select question to identify key decision drivers. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: multi-choice checkboxes with max 3 selections. Include 'Other' with text field if needed.",
+            "script": {
+                "question_text": "What factors are most important to you when considering a home energy monitoring system? (Select up to 3)",
+                "answer_options": [
+                    "Real-time energy usage data",
+                    "Cost savings potential",
+                    "Ease of installation",
+                    "Integration with smart home devices",
+                    "Mobile app functionality",
+                    "Accuracy of monitoring",
+                    "Brand reputation",
+                    "Environmental impact awareness",
+                    "Utility company compatibility"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shows if Q1 response is 'Yes' or 'No, but I have considered it'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, have prevented you from adopting a home energy monitoring system?",
+            "answer_options": [],
+            "routing_logic": "Shows if Q1 response is 'No, and I have not considered it' or 'Not sure what this is'",
+            "client_notes": "Open-ended to capture unanticipated barriers. Keep field size appropriate for mobile users.",
+            "scripter_notes": "Field type: open text with character limit of 300.",
+            "script": {
+                "question_text": "What concerns, if any, have prevented you from adopting a home energy monitoring system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shows if Q1 response is 'No, and I have not considered it' or 'Not sure what this is'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current home energy monitoring system?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "N/A - I don't currently use one"
+            ],
+            "routing_logic": "Shows if Q1 response is 'Yes, I actively use one'",
+            "client_notes": "Standard 5-point satisfaction scale with neutral midpoint. Include N/A option for routing errors.",
+            "scripter_notes": "Field type: single-choice radio buttons. Randomize scale order if needed.",
+            "script": {
+                "question_text": "How satisfied are you with your current home energy monitoring system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "N/A - I don't currently use one"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shows if Q1 response is 'Yes, I actively use one'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What monthly price range would you consider reasonable for a premium home energy monitoring service with advanced features?",
+            "answer_options": [
+                "Under $5/month",
+                "$5-$9.99/month",
+                "$10-$14.99/month",
+                "$15-$19.99/month",
+                "$20+/month",
+                "I would not pay for a subscription service"
+            ],
+            "routing_logic": "All respondents except Q1 = 'Not sure what this is'",
+            "client_notes": "Price sensitivity question with realistic brackets. Consider local currency adjustments.",
+            "scripter_notes": "Field type: single-choice radio buttons. Include 'Prefer not to say' if needed.",
+            "script": {
+                "question_text": "What monthly price range would you consider reasonable for a premium home energy monitoring service with advanced features?",
+                "answer_options": [
+                    "Under $5/month",
+                    "$5-$9.99/month",
+                    "$10-$14.99/month",
+                    "$15-$19.99/month",
+                    "$20+/month",
+                    "I would not pay for a subscription service"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except Q1 = 'Not sure what this is'"
+            }
+        }
+    ]
+}

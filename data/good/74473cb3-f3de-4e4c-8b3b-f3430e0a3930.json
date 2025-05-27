@@ -1,0 +1,131 @@
+{
+    "survey_id": "74473cb3-f3de-4e4c-8b3b-f3430e0a3930",
+    "survey_name": "Sustainable Fashion Consumption Habits Survey",
+    "survey_brief": "This survey aims to understand consumer behaviors and preferences regarding sustainable fashion, including purchase motivations, barriers, and brand trust factors.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase clothing labeled as 'sustainable' or 'eco-friendly'?",
+            "answer_options": [
+                "Never",
+                "Rarely (less than once a year)",
+                "Occasionally (1-2 times a year)",
+                "Frequently (3-5 times a year)",
+                "Very frequently (more than 5 times a year)"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure mobile-friendly dropdown for answer options.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you purchase clothing labeled as 'sustainable' or 'eco-friendly'?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (less than once a year)",
+                    "Occasionally (1-2 times a year)",
+                    "Frequently (3-5 times a year)",
+                    "Very frequently (more than 5 times a year)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors most influence your decision to buy sustainable fashion? (Select up to 3)",
+            "answer_options": [
+                "Environmental impact",
+                "Ethical labor practices",
+                "Higher product quality",
+                "Brand reputation",
+                "Price affordability",
+                "Personal values alignment",
+                "Peer recommendations"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Randomize option order to avoid bias. Mobile-friendly checkboxes required.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with max 3 selections.",
+            "script": {
+                "question_text": "What factors most influence your decision to buy sustainable fashion? (Select up to 3)",
+                "answer_options": [
+                    "Environmental impact",
+                    "Ethical labor practices",
+                    "Higher product quality",
+                    "Brand reputation",
+                    "Price affordability",
+                    "Personal values alignment",
+                    "Peer recommendations"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the biggest barrier preventing you from purchasing more sustainable fashion?",
+            "answer_options": [
+                "Higher prices",
+                "Limited style/design options",
+                "Lack of transparency from brands",
+                "Difficulty finding trustworthy brands",
+                "Limited availability in my size",
+                "No barriers – I already prioritize it"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Include an 'Other (specify)' option if open-ended responses are valuable.",
+            "scripter_notes": "Field type: Single-choice with optional open-ended follow-up.",
+            "script": {
+                "question_text": "What is the biggest barrier preventing you from purchasing more sustainable fashion?",
+                "answer_options": [
+                    "Higher prices",
+                    "Limited style/design options",
+                    "Lack of transparency from brands",
+                    "Difficulty finding trustworthy brands",
+                    "Limited availability in my size",
+                    "No barriers – I already prioritize it"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much more would you be willing to pay for a sustainable clothing item compared to a conventional alternative?",
+            "answer_options": [
+                "0% (same price)",
+                "5-10% more",
+                "11-20% more",
+                "21-30% more",
+                "Over 30% more"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'No barriers – I already prioritize it' in Q3.",
+            "client_notes": "Display as a slider for visual appeal on desktop; dropdown for mobile.",
+            "scripter_notes": "Field type: Single-choice with dynamic display based on Q3 response.",
+            "script": {
+                "question_text": "How much more would you be willing to pay for a sustainable clothing item compared to a conventional alternative?",
+                "answer_options": [
+                    "0% (same price)",
+                    "5-10% more",
+                    "11-20% more",
+                    "21-30% more",
+                    "Over 30% more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'No barriers – I already prioritize it' in Q3."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Describe a situation where you chose not to buy a sustainable fashion item despite being interested. What stopped you?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected any barrier in Q3.",
+            "client_notes": "Use text validation to require at least 20 characters. Mobile-friendly long-text input.",
+            "scripter_notes": "Field type: Open-text with character minimum.",
+            "script": {
+                "question_text": "Describe a situation where you chose not to buy a sustainable fashion item despite being interested. What stopped you?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected any barrier in Q3."
+            }
+        }
+    ]
+}

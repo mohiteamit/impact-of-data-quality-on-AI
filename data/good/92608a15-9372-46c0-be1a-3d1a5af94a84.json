@@ -1,0 +1,129 @@
+{
+    "survey_id": "92608a15-9372-46c0-be1a-3d1a5af94a84",
+    "survey_name": "Consumer Preferences for Sustainable Home Cleaning Products Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, purchasing habits, and attitudes towards sustainable home cleaning products to guide product development and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase sustainable home cleaning products (e.g., biodegradable, eco-friendly)?",
+            "answer_options": [
+                "Never",
+                "Rarely (less than once a year)",
+                "Occasionally (a few times a year)",
+                "Frequently (monthly or more)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a balanced scale to capture frequency without overwhelming respondents. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: Radio button (single-choice). Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "How often do you purchase sustainable home cleaning products (e.g., biodegradable, eco-friendly)?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (less than once a year)",
+                    "Occasionally (a few times a year)",
+                    "Frequently (monthly or more)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which factors most influence your decision to buy sustainable cleaning products? (Select up to 3)",
+            "answer_options": [
+                "Environmental impact",
+                "Product effectiveness",
+                "Price",
+                "Brand reputation",
+                "Packaging sustainability",
+                "Availability in stores",
+                "Recommendations from friends/family"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to identify key drivers. Limit selections to prioritize top factors.",
+            "scripter_notes": "Field type: Checkbox (multi-choice). Include 'Other' with open-text option if needed.",
+            "script": {
+                "question_text": "Which factors most influence your decision to buy sustainable cleaning products? (Select up to 3)",
+                "answer_options": [
+                    "Environmental impact",
+                    "Product effectiveness",
+                    "Price",
+                    "Brand reputation",
+                    "Packaging sustainability",
+                    "Availability in stores",
+                    "Recommendations from friends/family"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers prevent you from purchasing sustainable cleaning products more often?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture nuanced barriers. Use text analysis tools post-survey for themes.",
+            "scripter_notes": "Field type: Open-text (paragraph). Limit response to 300 characters.",
+            "script": {
+                "question_text": "What barriers prevent you from purchasing sustainable cleaning products more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much more would you be willing to pay for a sustainable cleaning product compared to a conventional one?",
+            "answer_options": [
+                "0% (same price)",
+                "1-10% more",
+                "11-20% more",
+                "21-30% more",
+                "Over 30% more"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "Price sensitivity is critical. Use percentage ranges for easier comparison across regions.",
+            "scripter_notes": "Field type: Radio button (single-choice). Display logic skips non-buyers.",
+            "script": {
+                "question_text": "How much more would you be willing to pay for a sustainable cleaning product compared to a conventional one?",
+                "answer_options": [
+                    "0% (same price)",
+                    "1-10% more",
+                    "11-20% more",
+                    "21-30% more",
+                    "Over 30% more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which certifications or labels do you look for when buying sustainable cleaning products? (Select all that apply)",
+            "answer_options": [
+                "USDA Certified Biobased",
+                "EPA Safer Choice",
+                "EWG Verified",
+                "Leaping Bunny (Cruelty-Free)",
+                "Fair Trade",
+                "None/I don’t check certifications"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "Multi-choice with industry-standard labels. Add 'Other' option if needed.",
+            "scripter_notes": "Field type: Checkbox (multi-choice). Randomize option order.",
+            "script": {
+                "question_text": "Which certifications or labels do you look for when buying sustainable cleaning products? (Select all that apply)",
+                "answer_options": [
+                    "USDA Certified Biobased",
+                    "EPA Safer Choice",
+                    "EWG Verified",
+                    "Leaping Bunny (Cruelty-Free)",
+                    "Fair Trade",
+                    "None/I don’t check certifications"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "survey_id": "345d40c1-9c18-4e04-b4e4-1e008ddc15b7",
+    "survey_name": "Consumer Preferences for Smart Home Energy Management Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and usage patterns regarding smart home energy management systems to help developers and manufacturers improve product offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home energy management systems are you currently using?",
+            "answer_options": [
+                "Nest Learning Thermostat",
+                "Ecobee Smart Thermostat",
+                "Honeywell Home T9",
+                "Other (please specify)",
+                "None"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Ensure the list includes popular options and an 'Other' field for flexibility. Mobile-friendly design is recommended.",
+            "scripter_notes": "Use a MULTI_CHOICE field type with checkboxes.",
+            "script": {
+                "question_text": "Which of the following smart home energy management systems are you currently using?",
+                "answer_options": [
+                    "Nest Learning Thermostat",
+                    "Ecobee Smart Thermostat",
+                    "Honeywell Home T9",
+                    "Other (please specify)",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current smart home energy management system?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'None'",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure readability on all devices.",
+            "scripter_notes": "Use a SINGLE_CHOICE field type with radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home energy management system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'None'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you consider most important when selecting a smart home energy management system?",
+            "answer_options": [
+                "Energy usage reports",
+                "Remote control via mobile app",
+                "Integration with other smart home devices",
+                "Automated energy-saving adjustments",
+                "Cost savings tracking"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multiple selections to capture prioritized features. Ensure the options are clear and concise.",
+            "scripter_notes": "Use a MULTI_CHOICE field type with checkboxes.",
+            "script": {
+                "question_text": "What features do you consider most important when selecting a smart home energy management system?",
+                "answer_options": [
+                    "Energy usage reports",
+                    "Remote control via mobile app",
+                    "Integration with other smart home devices",
+                    "Automated energy-saving adjustments",
+                    "Cost savings tracking"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the primary reason you have not adopted a smart home energy management system?",
+            "answer_options": [
+                "High upfront cost",
+                "Lack of perceived benefits",
+                "Privacy concerns",
+                "Technical complexity",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is 'None'",
+            "client_notes": "Include an 'Other' option to capture unique responses. Keep the question concise.",
+            "scripter_notes": "Use a SINGLE_CHOICE field type with radio buttons.",
+            "script": {
+                "question_text": "What is the primary reason you have not adopted a smart home energy management system?",
+                "answer_options": [
+                    "High upfront cost",
+                    "Lack of perceived benefits",
+                    "Privacy concerns",
+                    "Technical complexity",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is 'None'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any challenges you have faced with your smart home energy management system.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is not 'None'",
+            "client_notes": "Use an open-ended question to gather detailed feedback. Ensure the text box is large enough for thorough responses.",
+            "scripter_notes": "Use an OPEN_TEXT field type with a text area.",
+            "script": {
+                "question_text": "Please describe any challenges you have faced with your smart home energy management system.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is not 'None'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,115 @@
+{
+    "survey_id": "c8f757be-b18e-4bfa-bd2c-c963513f8135",
+    "survey_name": "Employee Engagement in Remote Work Environments Survey",
+    "survey_brief": "This survey aims to assess employee engagement, satisfaction, and challenges faced in remote work settings to help organizations improve their remote work policies and support systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you work remotely?",
+            "answer_options": [
+                "Full-time remote",
+                "3-4 days per week",
+                "1-2 days per week",
+                "Rarely or never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a radio button for single-choice selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you work remotely?",
+                "answer_options": [
+                    "Full-time remote",
+                    "3-4 days per week",
+                    "1-2 days per week",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which tools do you use for remote collaboration? (Select all that apply)",
+            "answer_options": [
+                "Zoom",
+                "Microsoft Teams",
+                "Slack",
+                "Google Meet",
+                "Trello",
+                "Asana",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for respondents who work remotely at least 1-2 days per week.",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include conditional text field for 'Other'.",
+            "script": {
+                "question_text": "Which tools do you use for remote collaboration? (Select all that apply)",
+                "answer_options": [
+                    "Zoom",
+                    "Microsoft Teams",
+                    "Slack",
+                    "Google Meet",
+                    "Trello",
+                    "Asana",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who work remotely at least 1-2 days per week."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the biggest challenge you face while working remotely?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents who work remotely at least 1-2 days per week.",
+            "client_notes": "Use an open-text field to capture detailed responses. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What is the biggest challenge you face while working remotely?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents who work remotely at least 1-2 days per week."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your organization's support for remote work?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for all respondents who work remotely at least 1-2 days per week.",
+            "client_notes": "Use a Likert scale with radio buttons. Ensure clear labeling of scale points.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with your organization's support for remote work?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents who work remotely at least 1-2 days per week."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional resources would improve your remote work experience?",
+            "answer_options": [],
+            "routing_logic": "This question appears for respondents who rated satisfaction as 'Dissatisfied' or 'Very dissatisfied' in Q4.",
+            "client_notes": "Use an open-text field to capture suggestions. Limit response length to 300 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What additional resources would improve your remote work experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for respondents who rated satisfaction as 'Dissatisfied' or 'Very dissatisfied' in Q4."
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "survey_id": "a81fd510-4e7f-4a15-8c0a-c8218ac635fc",
+    "survey_name": "Consumer Preferences for Smart Home Energy Management Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding smart home energy management systems to help improve product offerings and user experiences.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently use a smart home energy management system?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I am not sure"
+            ],
+            "routing_logic": "This question is the first question and appears for all respondents.",
+            "client_notes": "This question helps segment respondents for further questions. Ensure the options are clear and cover all possible responses.",
+            "scripter_notes": "Use a single-choice radio button for this question.",
+            "script": {
+                "question_text": "Do you currently use a smart home energy management system?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I am not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is the first question and appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "If you answered 'Yes' to Q1, which features of your smart home energy management system do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Real-time energy monitoring",
+                "Automated energy-saving schedules",
+                "Integration with renewable energy sources",
+                "Alerts for high energy usage",
+                "Remote control via smartphone app",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears only if the respondent answered 'Yes' to Q1.",
+            "client_notes": "This question helps identify the most used features. Including an 'Other' option captures any unlisted features.",
+            "scripter_notes": "Use multi-choice checkboxes for this question.",
+            "script": {
+                "question_text": "If you answered 'Yes' to Q1, which features of your smart home energy management system do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Real-time energy monitoring",
+                    "Automated energy-saving schedules",
+                    "Integration with renewable energy sources",
+                    "Alerts for high energy usage",
+                    "Remote control via smartphone app",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears only if the respondent answered 'Yes' to Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "If you answered 'No' or 'I am not sure' to Q1, what factors would encourage you to adopt a smart home energy management system? (Select all that apply)",
+            "answer_options": [
+                "Cost savings on energy bills",
+                "Environmental benefits",
+                "Ease of installation and use",
+                "Integration with other smart home devices",
+                "Government incentives or rebates",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears only if the respondent answered 'No' or 'I am not sure' to Q1.",
+            "client_notes": "This question identifies adoption drivers for non-users. Ensure the options are comprehensive.",
+            "scripter_notes": "Use multi-choice checkboxes for this question.",
+            "script": {
+                "question_text": "If you answered 'No' or 'I am not sure' to Q1, what factors would encourage you to adopt a smart home energy management system? (Select all that apply)",
+                "answer_options": [
+                    "Cost savings on energy bills",
+                    "Environmental benefits",
+                    "Ease of installation and use",
+                    "Integration with other smart home devices",
+                    "Government incentives or rebates",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears only if the respondent answered 'No' or 'I am not sure' to Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1 to 5, how important is energy efficiency in your household? (1 = Not important at all, 5 = Extremely important)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a Likert scale to measure the importance of energy efficiency. Ensure the scale is balanced and clear.",
+            "scripter_notes": "Use a single-choice radio button for this question.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how important is energy efficiency in your household? (1 = Not important at all, 5 = Extremely important)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges, if any, have you faced with your current smart home energy management system?",
+            "answer_options": [],
+            "routing_logic": "This question appears only if the respondent answered 'Yes' to Q1.",
+            "client_notes": "This open-ended question captures qualitative feedback on user challenges.",
+            "scripter_notes": "Use an open-text field for this question.",
+            "script": {
+                "question_text": "What challenges, if any, have you faced with your current smart home energy management system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears only if the respondent answered 'Yes' to Q1."
+            }
+        }
+    ]
+}

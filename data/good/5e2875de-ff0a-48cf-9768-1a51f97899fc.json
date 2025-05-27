@@ -1,0 +1,127 @@
+{
+    "survey_id": "5e2875de-ff0a-48cf-9768-1a51f97899fc",
+    "survey_name": "Consumer Preferences for Contactless Payment Methods Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding contactless payment methods to help businesses adapt their payment solutions.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use contactless payment methods (e.g., Apple Pay, Google Pay, contactless cards)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Displayed to all respondents.",
+            "client_notes": "Use a single-choice format for clarity. Ensure mobile-friendly design for smooth selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use contactless payment methods (e.g., Apple Pay, Google Pay, contactless cards)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your choice to use contactless payments? (Select all that apply)",
+            "answer_options": [
+                "Speed of transaction",
+                "Convenience",
+                "Hygiene/safety concerns",
+                "Availability of the option",
+                "Loyalty/rewards programs",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Displayed to respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1.",
+            "client_notes": "Use a multi-choice format. Include an open-ended option for 'Other' to capture unique responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What factors influence your choice to use contactless payments? (Select all that apply)",
+                "answer_options": [
+                    "Speed of transaction",
+                    "Convenience",
+                    "Hygiene/safety concerns",
+                    "Availability of the option",
+                    "Loyalty/rewards programs",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Displayed to respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, do you have about using contactless payment methods?",
+            "answer_options": [],
+            "routing_logic": "Displayed to all respondents.",
+            "client_notes": "Open-ended question to gather qualitative insights. Encourage detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using contactless payment methods?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Displayed to all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which of the following contactless payment methods have you used in the past 3 months? (Select all that apply)",
+            "answer_options": [
+                "Mobile wallet (e.g., Apple Pay, Google Pay)",
+                "Contactless credit/debit card",
+                "Wearable device (e.g., smartwatch)",
+                "QR code payments",
+                "None of the above"
+            ],
+            "routing_logic": "Displayed to respondents who did not select 'Never' in Q1.",
+            "client_notes": "Multi-choice format to identify popular methods. Include 'None of the above' for accuracy.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following contactless payment methods have you used in the past 3 months? (Select all that apply)",
+                "answer_options": [
+                    "Mobile wallet (e.g., Apple Pay, Google Pay)",
+                    "Contactless credit/debit card",
+                    "Wearable device (e.g., smartwatch)",
+                    "QR code payments",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Displayed to respondents who did not select 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with your current contactless payment options?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Displayed to respondents who selected at least one method in Q4.",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure neutral option is included.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with your current contactless payment options?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed to respondents who selected at least one method in Q4."
+            }
+        }
+    ]
+}

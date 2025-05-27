@@ -1,0 +1,115 @@
+{
+    "survey_id": "0457a2bc-edc5-4cda-8643-dbba806ffabb",
+    "survey_name": "Public Library Digital Resource Usage Survey",
+    "survey_brief": "This survey aims to understand how patrons use digital resources provided by public libraries, including e-books, online databases, and virtual programs, to improve services and accessibility.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the digital resources (e-books, online databases, virtual programs) offered by your public library?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Ensure answer options cover all frequency ranges to capture accurate usage patterns.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you use the digital resources (e-books, online databases, virtual programs) offered by your public library?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following digital resources do you use? (Select all that apply)",
+            "answer_options": [
+                "E-books",
+                "Audiobooks",
+                "Online databases (e.g., academic journals, genealogy)",
+                "Virtual programs (e.g., workshops, storytimes)",
+                "Library mobile app",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for all respondents who selected any option other than 'Never' in Q1.",
+            "client_notes": "Use a multi-choice format to allow multiple selections. Include an 'Other' option with a text field for unlisted resources.",
+            "scripter_notes": "Field type: multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following digital resources do you use? (Select all that apply)",
+                "answer_options": [
+                    "E-books",
+                    "Audiobooks",
+                    "Online databases (e.g., academic journals, genealogy)",
+                    "Virtual programs (e.g., workshops, storytimes)",
+                    "Library mobile app",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents who selected any option other than 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges, if any, do you face when using the library's digital resources? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents who selected any option other than 'Never' in Q1.",
+            "client_notes": "An open-ended question helps identify pain points not covered in predefined options.",
+            "scripter_notes": "Field type: open-text input.",
+            "script": {
+                "question_text": "What challenges, if any, do you face when using the library's digital resources? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents who selected any option other than 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the library's digital resource offerings?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for all respondents who selected any option other than 'Never' in Q1.",
+            "client_notes": "Use a Likert scale to measure satisfaction levels clearly.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the library's digital resource offerings?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents who selected any option other than 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional digital resources or services would you like the library to offer? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Open-ended responses can reveal unmet needs and inspire future improvements.",
+            "scripter_notes": "Field type: open-text input.",
+            "script": {
+                "question_text": "What additional digital resources or services would you like the library to offer? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

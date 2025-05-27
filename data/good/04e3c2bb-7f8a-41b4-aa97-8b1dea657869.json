@@ -1,0 +1,139 @@
+{
+    "survey_id": "04e3c2bb-7f8a-41b4-aa97-8b1dea657869",
+    "survey_name": "Consumer Preferences for Smart Home Security Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, concerns, and adoption barriers related to smart home security systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with smart home security systems?",
+            "answer_options": [
+                "Very familiar - I currently use one",
+                "Somewhat familiar - I've researched them",
+                "Not very familiar - Only heard of them",
+                "Not at all familiar"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button matrix for clarity. This helps segment respondents for later questions.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How familiar are you with smart home security systems?",
+                "answer_options": [
+                    "Very familiar - I currently use one",
+                    "Somewhat familiar - I've researched them",
+                    "Not very familiar - Only heard of them",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following smart home security features are most important to you? (Select up to 3)",
+            "answer_options": [
+                "24/7 professional monitoring",
+                "Camera surveillance",
+                "Smart door locks",
+                "Motion sensors",
+                "Window/door sensors",
+                "Smart alarms/sirens",
+                "Water leak detection",
+                "Smoke/CO detection",
+                "Mobile app control",
+                "Voice assistant integration"
+            ],
+            "routing_logic": "If Q1 is not 'Not at all familiar'",
+            "client_notes": "Multi-select with clear instructions on number of selections. Helps prioritize feature development.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max_selections=3",
+            "script": {
+                "question_text": "Which of the following smart home security features are most important to you? (Select up to 3)",
+                "answer_options": [
+                    "24/7 professional monitoring",
+                    "Camera surveillance",
+                    "Smart door locks",
+                    "Motion sensors",
+                    "Window/door sensors",
+                    "Smart alarms/sirens",
+                    "Water leak detection",
+                    "Smoke/CO detection",
+                    "Mobile app control",
+                    "Voice assistant integration"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 is not 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your biggest concern about adopting a smart home security system?",
+            "answer_options": [
+                "Cost of equipment/subscription",
+                "Privacy/data security concerns",
+                "Complexity of installation/use",
+                "Reliability concerns",
+                "Fear of hacking/vulnerability",
+                "Not seeing the need/value",
+                "No concerns - I already use one"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to identify primary barriers. Include 'Already use' option to filter current users.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "What is your biggest concern about adopting a smart home security system?",
+                "answer_options": [
+                    "Cost of equipment/subscription",
+                    "Privacy/data security concerns",
+                    "Complexity of installation/use",
+                    "Reliability concerns",
+                    "Fear of hacking/vulnerability",
+                    "Not seeing the need/value",
+                    "No concerns - I already use one"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much would you be willing to pay monthly for a professional smart home security monitoring service?",
+            "answer_options": [
+                "Nothing - I wouldn't pay for monitoring",
+                "$5-$10",
+                "$11-$20",
+                "$21-$30",
+                "$31-$50",
+                "More than $50"
+            ],
+            "routing_logic": "If Q1 is not 'Not at all familiar'",
+            "client_notes": "Price sensitivity question. Use range options to avoid anchoring.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How much would you be willing to pay monthly for a professional smart home security monitoring service?",
+                "answer_options": [
+                    "Nothing - I wouldn't pay for monitoring",
+                    "$5-$10",
+                    "$11-$20",
+                    "$21-$30",
+                    "$31-$50",
+                    "More than $50"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 is not 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features or improvements would make you more likely to adopt a smart home security system?",
+            "answer_options": [],
+            "routing_logic": "If Q3 is not 'No concerns - I already use one'",
+            "client_notes": "Open-ended to capture unanticipated responses. Limit to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with max_length=250",
+            "script": {
+                "question_text": "What additional features or improvements would make you more likely to adopt a smart home security system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q3 is not 'No concerns - I already use one'"
+            }
+        }
+    ]
+}

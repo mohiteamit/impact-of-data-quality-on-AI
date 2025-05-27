@@ -1,0 +1,101 @@
+{
+    "survey_id": "64569704-5ef6-46d2-90d6-4d0288f4768b",
+    "survey_name": "Employee Preferences for Hybrid Workspace Setup Survey",
+    "survey_brief": "This survey aims to gather employee feedback on workspace setup preferences in hybrid work environments to optimize comfort and productivity.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you currently work in the office?",
+            "answer_options": [
+                "0 days (fully remote)",
+                "1-2 days",
+                "3-4 days",
+                "5 days (fully on-site)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use radio buttons for clear single-selection. Mobile-friendly vertical layout recommended.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How many days per week do you currently work in the office?",
+                "answer_options": [
+                    "0 days (fully remote)",
+                    "1-2 days",
+                    "3-4 days",
+                    "5 days (fully on-site)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Select all workspace amenities you consider essential for office days:",
+            "answer_options": [
+                "Adjustable desk (standing/sitting)",
+                "Ergonomic chair",
+                "Dedicated quiet zone",
+                "Collaboration spaces",
+                "On-site tech support",
+                "Personal locker/storage"
+            ],
+            "routing_logic": "Appears if Q1 ≠ '0 days (fully remote)'",
+            "client_notes": "Checkbox format allows multiple selections. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Select all workspace amenities you consider essential for office days:",
+                "answer_options": [
+                    "Adjustable desk (standing/sitting)",
+                    "Ergonomic chair",
+                    "Dedicated quiet zone",
+                    "Collaboration spaces",
+                    "On-site tech support",
+                    "Personal locker/storage"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 ≠ '0 days (fully remote)'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Describe your ideal hybrid workspace setup in 2-3 sentences:",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Text field with 300-character limit. Example placeholder text improves response quality.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "Describe your ideal hybrid workspace setup in 2-3 sentences:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with current office technology (e.g., conference room AV, docking stations)?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "N/A (no office days)"
+            ],
+            "routing_logic": "Appears if Q1 ≠ '0 days (fully remote)'",
+            "client_notes": "5-point Likert scale with neutral midpoint. Include N/A option for accuracy.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with current office technology (e.g., conference room AV, docking stations)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "N/A (no office days)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 ≠ '0 days (fully remote)'"
+            }
+        }
+    ]
+}

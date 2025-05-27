@@ -1,0 +1,207 @@
+{
+    "survey_id": "cbb85622-b633-49a7-aa0d-53e060c5baca",
+    "survey_name": "Adoption of AI Tools in Academic Research Survey",
+    "survey_brief": "This survey aims to understand the adoption rate, benefits, and challenges of using AI tools in academic research across various disciplines.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which academic discipline best represents your field of research?",
+            "answer_options": [
+                "Engineering and Technology",
+                "Natural Sciences",
+                "Social Sciences",
+                "Humanities",
+                "Medical and Health Sciences",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a radio button for single selection. 'Other' should include a text field for specification.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an additional text input for 'Other'.",
+            "script": {
+                "question_text": "Which academic discipline best represents your field of research?",
+                "answer_options": [
+                    "Engineering and Technology",
+                    "Natural Sciences",
+                    "Social Sciences",
+                    "Humanities",
+                    "Medical and Health Sciences",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Do you currently use any AI-powered tools in your academic research?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a radio button for single selection.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Do you currently use any AI-powered tools in your academic research?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which types of AI tools do you use in your research? (Select all that apply)",
+            "answer_options": [
+                "Literature review and summarization tools",
+                "Data analysis and visualization tools",
+                "Automated citation and reference management",
+                "Language translation and proofreading tools",
+                "Research data collection tools",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q2 is 'Yes'",
+            "client_notes": "Use checkboxes for multiple selections. 'Other' should include a text field for specification.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an additional text input for 'Other'.",
+            "script": {
+                "question_text": "Which types of AI tools do you use in your research? (Select all that apply)",
+                "answer_options": [
+                    "Literature review and summarization tools",
+                    "Data analysis and visualization tools",
+                    "Automated citation and reference management",
+                    "Language translation and proofreading tools",
+                    "Research data collection tools",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q2 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What benefits have you experienced from using AI tools in your research?",
+            "answer_options": [
+                "Increased efficiency and time savings",
+                "Improved accuracy of results",
+                "Enhanced ability to process large datasets",
+                "Better organization of research materials",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q2 is 'Yes'",
+            "client_notes": "Use checkboxes for multiple selections. 'Other' should include a text field for specification.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an additional text input for 'Other'.",
+            "script": {
+                "question_text": "What benefits have you experienced from using AI tools in your research?",
+                "answer_options": [
+                    "Increased efficiency and time savings",
+                    "Improved accuracy of results",
+                    "Enhanced ability to process large datasets",
+                    "Better organization of research materials",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q2 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced when using AI tools in your research?",
+            "answer_options": [
+                "Lack of accuracy or reliability",
+                "Difficulty in learning to use the tools",
+                "High cost of premium features",
+                "Limited functionality for specific research needs",
+                "Ethical concerns about AI use in research",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q2 is 'Yes'",
+            "client_notes": "Use checkboxes for multiple selections. 'Other' should include a text field for specification.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an additional text input for 'Other'.",
+            "script": {
+                "question_text": "What challenges have you faced when using AI tools in your research?",
+                "answer_options": [
+                    "Lack of accuracy or reliability",
+                    "Difficulty in learning to use the tools",
+                    "High cost of premium features",
+                    "Limited functionality for specific research needs",
+                    "Ethical concerns about AI use in research",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q2 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you do not currently use AI tools in your research, what are your main reasons?",
+            "answer_options": [
+                "Lack of awareness about suitable tools",
+                "Concerns about accuracy or reliability",
+                "Preference for traditional research methods",
+                "Ethical concerns about AI use in research",
+                "Lack of institutional support or training",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q2 is 'No' or 'Not sure'",
+            "client_notes": "Use checkboxes for multiple selections. 'Other' should include a text field for specification.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an additional text input for 'Other'.",
+            "script": {
+                "question_text": "If you do not currently use AI tools in your research, what are your main reasons?",
+                "answer_options": [
+                    "Lack of awareness about suitable tools",
+                    "Concerns about accuracy or reliability",
+                    "Preference for traditional research methods",
+                    "Ethical concerns about AI use in research",
+                    "Lack of institutional support or training",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q2 is 'No' or 'Not sure'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How do you perceive the future role of AI tools in academic research?",
+            "answer_options": [
+                "AI will become essential in all research fields",
+                "AI will be useful but not essential",
+                "AI will have limited impact on research practices",
+                "The impact of AI is uncertain",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a radio button for single selection. 'Other' should include a text field for specification.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an additional text input for 'Other'.",
+            "script": {
+                "question_text": "How do you perceive the future role of AI tools in academic research?",
+                "answer_options": [
+                    "AI will become essential in all research fields",
+                    "AI will be useful but not essential",
+                    "AI will have limited impact on research practices",
+                    "The impact of AI is uncertain",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Please share any additional comments or concerns you have about the use of AI tools in academic research.",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use an open text field for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "Please share any additional comments or concerns you have about the use of AI tools in academic research.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

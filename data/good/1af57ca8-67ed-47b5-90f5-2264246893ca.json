@@ -1,0 +1,129 @@
+{
+    "survey_id": "1af57ca8-67ed-47b5-90f5-2264246893ca",
+    "survey_name": "Consumer Preferences for Smart Home Integration with IoT Devices Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and challenges regarding the integration of smart home devices with IoT (Internet of Things) ecosystems, focusing on usability, security concerns, and future adoption intentions.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many smart home devices do you currently own?",
+            "answer_options": [
+                "None",
+                "1-2 devices",
+                "3-5 devices",
+                "6 or more devices"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button scale for clear single-choice selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How many smart home devices do you currently own?",
+                "answer_options": [
+                    "None",
+                    "1-2 devices",
+                    "3-5 devices",
+                    "6 or more devices"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following smart home device categories do you use? (Select all that apply)",
+            "answer_options": [
+                "Smart lighting",
+                "Smart thermostats",
+                "Smart security cameras",
+                "Smart speakers/voice assistants",
+                "Smart appliances (e.g., refrigerators, ovens)",
+                "Smart plugs/switches",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected '1-2 devices' or more in Q1",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with text input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "Which of the following smart home device categories do you use? (Select all that apply)",
+                "answer_options": [
+                    "Smart lighting",
+                    "Smart thermostats",
+                    "Smart security cameras",
+                    "Smart speakers/voice assistants",
+                    "Smart appliances (e.g., refrigerators, ovens)",
+                    "Smart plugs/switches",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected '1-2 devices' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary challenge you face when integrating smart home devices with each other?",
+            "answer_options": [
+                "Compatibility issues between brands",
+                "Complex setup process",
+                "Privacy/security concerns",
+                "High cost of integration",
+                "Lack of technical support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected any category in Q2",
+            "client_notes": "Single-choice with radio buttons. Include an optional open-text field for 'Other'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What is the primary challenge you face when integrating smart home devices with each other?",
+                "answer_options": [
+                    "Compatibility issues between brands",
+                    "Complex setup process",
+                    "Privacy/security concerns",
+                    "High cost of integration",
+                    "Lack of technical support",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any category in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to purchase additional smart home devices in the next 12 months?",
+            "answer_options": [
+                "Very unlikely",
+                "Unlikely",
+                "Neutral",
+                "Likely",
+                "Very likely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale (radio buttons) for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (Likert scale)",
+            "script": {
+                "question_text": "How likely are you to purchase additional smart home devices in the next 12 months?",
+                "answer_options": [
+                    "Very unlikely",
+                    "Unlikely",
+                    "Neutral",
+                    "Likely",
+                    "Very likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What features would motivate you to adopt a unified IoT platform for all your smart home devices? (Describe in your own words)",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Likely' or 'Very likely' in Q4",
+            "client_notes": "Open-text field for qualitative insights. Limit to 300 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with character limit)",
+            "script": {
+                "question_text": "What features would motivate you to adopt a unified IoT platform for all your smart home devices? (Describe in your own words)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Likely' or 'Very likely' in Q4"
+            }
+        }
+    ]
+}

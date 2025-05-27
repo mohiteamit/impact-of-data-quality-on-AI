@@ -1,0 +1,137 @@
+{
+    "survey_id": "763813e1-bd1b-426e-8e27-aff014901d09",
+    "survey_name": "Consumer Preferences for Smart Home Appliances Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels with smart home appliances, including usage patterns and factors influencing purchase decisions.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home appliances do you currently own? (Select all that apply)",
+            "answer_options": [
+                "Smart Thermostat",
+                "Smart Lighting System",
+                "Smart Security Camera",
+                "Smart Speaker (e.g., Amazon Echo, Google Home)",
+                "Smart Refrigerator",
+                "Smart Vacuum Cleaner",
+                "Smart Oven",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to allow multiple selections. Ensure the options cover common smart appliances.",
+            "scripter_notes": "Field type: Checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following smart home appliances do you currently own? (Select all that apply)",
+                "answer_options": [
+                    "Smart Thermostat",
+                    "Smart Lighting System",
+                    "Smart Security Camera",
+                    "Smart Speaker (e.g., Amazon Echo, Google Home)",
+                    "Smart Refrigerator",
+                    "Smart Vacuum Cleaner",
+                    "Smart Oven",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the performance of your smart home appliances?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected at least one smart appliance in Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the performance of your smart home appliances?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one smart appliance in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influenced your decision to purchase smart home appliances? (Select all that apply)",
+            "answer_options": [
+                "Energy Efficiency",
+                "Convenience",
+                "Security",
+                "Remote Control Capabilities",
+                "Cost Savings",
+                "Recommendations from Friends/Family",
+                "Marketing/Brand Influence",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected at least one smart appliance in Q1",
+            "client_notes": "Multi-choice question to capture multiple influencing factors. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: Checkbox (multi-choice) with an open-text option for 'Other'.",
+            "script": {
+                "question_text": "What factors influenced your decision to purchase smart home appliances? (Select all that apply)",
+                "answer_options": [
+                    "Energy Efficiency",
+                    "Convenience",
+                    "Security",
+                    "Remote Control Capabilities",
+                    "Cost Savings",
+                    "Recommendations from Friends/Family",
+                    "Marketing/Brand Influence",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected at least one smart appliance in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend smart home appliances to others?",
+            "answer_options": [
+                "Very Likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very Unlikely"
+            ],
+            "routing_logic": "Respondents who selected at least one smart appliance in Q1",
+            "client_notes": "Use a standard Likert scale for likelihood to recommend. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend smart home appliances to others?",
+                "answer_options": [
+                    "Very Likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very Unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one smart appliance in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in smart home appliances?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: Open-text.",
+            "script": {
+                "question_text": "What improvements would you like to see in smart home appliances?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

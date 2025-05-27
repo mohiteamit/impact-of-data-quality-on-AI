@@ -1,0 +1,137 @@
+{
+    "survey_id": "4c63dd67-f132-49e7-9ae9-b005af1a514f",
+    "survey_name": "Consumer Preferences for In-Flight Dining Options Survey",
+    "survey_brief": "This survey aims to gather passenger feedback on in-flight meal services to improve airline dining experiences and cater to diverse dietary preferences.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you typically choose to purchase in-flight meals when traveling?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point Likert scale for granularity. Ensure mobile-friendly radio buttons.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Mandatory response.",
+            "script": {
+                "question_text": "How often do you typically choose to purchase in-flight meals when traveling?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors most influence your decision to purchase an in-flight meal? (Select up to 3)",
+            "answer_options": [
+                "Price",
+                "Meal quality",
+                "Dietary restrictions",
+                "Flight duration",
+                "Airline reputation",
+                "Pre-order options",
+                "Special occasions"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Checkbox format. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with max 3 selections.",
+            "script": {
+                "question_text": "What factors most influence your decision to purchase an in-flight meal? (Select up to 3)",
+                "answer_options": [
+                    "Price",
+                    "Meal quality",
+                    "Dietary restrictions",
+                    "Flight duration",
+                    "Airline reputation",
+                    "Pre-order options",
+                    "Special occasions"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the variety of meal options typically offered on flights?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Include midpoint neutral option. Display as horizontal radio buttons.",
+            "scripter_notes": "Field type: Single-choice matrix for consistency.",
+            "script": {
+                "question_text": "How satisfied are you with the variety of meal options typically offered on flights?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which dietary preferences or restrictions should airlines better accommodate? (Select all that apply)",
+            "answer_options": [
+                "Vegetarian",
+                "Vegan",
+                "Gluten-free",
+                "Halal",
+                "Kosher",
+                "Low-sodium",
+                "Diabetic-friendly",
+                "Nut allergies",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Include 'Other' with open-text field. Alphabetize options.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with conditional text input for 'Other'.",
+            "script": {
+                "question_text": "Which dietary preferences or restrictions should airlines better accommodate? (Select all that apply)",
+                "answer_options": [
+                    "Vegetarian",
+                    "Vegan",
+                    "Gluten-free",
+                    "Halal",
+                    "Kosher",
+                    "Low-sodium",
+                    "Diabetic-friendly",
+                    "Nut allergies",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for in-flight meal services?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow for detailed feedback. Minimum 100-character limit.",
+            "scripter_notes": "Field type: Open-text with character counter.",
+            "script": {
+                "question_text": "What improvements would you suggest for in-flight meal services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

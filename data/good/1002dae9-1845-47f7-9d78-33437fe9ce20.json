@@ -1,0 +1,129 @@
+{
+    "survey_id": "1002dae9-1845-47f7-9d78-33437fe9ce20",
+    "survey_name": "AI-Powered Virtual Meeting Assistant User Experience Survey",
+    "survey_brief": "This survey aims to evaluate user experience and satisfaction with AI-powered virtual meeting assistants in professional settings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use an AI-powered virtual meeting assistant?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How frequently do you use an AI-powered virtual meeting assistant?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of the AI virtual meeting assistant do you find most useful? (Select all that apply)",
+            "answer_options": [
+                "Automated meeting summaries",
+                "Real-time transcription",
+                "Action item tracking",
+                "Meeting scheduling assistance",
+                "Speaker identification",
+                "None of the above"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use checkboxes for multiple selections. Consider randomizing option order to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "Which features of the AI virtual meeting assistant do you find most useful? (Select all that apply)",
+                "answer_options": [
+                    "Automated meeting summaries",
+                    "Real-time transcription",
+                    "Action item tracking",
+                    "Meeting scheduling assistance",
+                    "Speaker identification",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the accuracy of the AI virtual meeting assistant's transcriptions?",
+            "answer_options": [
+                "Very accurate",
+                "Somewhat accurate",
+                "Neutral",
+                "Somewhat inaccurate",
+                "Very inaccurate",
+                "N/A (haven't used this feature)"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use a Likert scale for nuanced feedback. Include N/A option for users who haven't used the feature.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How would you rate the accuracy of the AI virtual meeting assistant's transcriptions?",
+                "answer_options": [
+                    "Very accurate",
+                    "Somewhat accurate",
+                    "Neutral",
+                    "Somewhat inaccurate",
+                    "Very inaccurate",
+                    "N/A (haven't used this feature)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for AI virtual meeting assistants?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Provide a text box with ample space for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you suggest for AI virtual meeting assistants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How has using an AI virtual meeting assistant impacted your meeting productivity?",
+            "answer_options": [
+                "Significantly improved",
+                "Slightly improved",
+                "No impact",
+                "Slightly decreased",
+                "Significantly decreased"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use a balanced scale to measure both positive and negative impacts. Single-choice format recommended.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How has using an AI virtual meeting assistant impacted your meeting productivity?",
+                "answer_options": [
+                    "Significantly improved",
+                    "Slightly improved",
+                    "No impact",
+                    "Slightly decreased",
+                    "Significantly decreased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        }
+    ]
+}

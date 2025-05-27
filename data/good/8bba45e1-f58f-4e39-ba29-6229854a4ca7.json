@@ -1,0 +1,227 @@
+{
+    "survey_id": "8bba45e1-f58f-4e39-ba29-6229854a4ca7",
+    "survey_name": "Smart Thermostat User Adoption and Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate user satisfaction, adoption barriers, and feature preferences among smart thermostat owners and potential buyers to enhance product development and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own a smart thermostat?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use this as a screener question to bifurcate the survey path for owners vs. non-owners.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "Do you currently own a smart thermostat?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which brand of smart thermostat do you own?",
+            "answer_options": [
+                "Nest",
+                "Ecobee",
+                "Honeywell",
+                "Emerson",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes'",
+            "client_notes": "Include an open-text option for lesser-known brands to capture market diversity.",
+            "scripter_notes": "Field type: radio button with 'Other' triggering a text input.",
+            "script": {
+                "question_text": "Which brand of smart thermostat do you own?",
+                "answer_options": [
+                    "Nest",
+                    "Ecobee",
+                    "Honeywell",
+                    "Emerson",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your smart thermostat?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes'",
+            "client_notes": "Use a 5-point Likert scale for granular feedback. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How satisfied are you with your smart thermostat?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What features do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Remote temperature control via app",
+                "Energy usage reports",
+                "Voice assistant integration",
+                "Geofencing",
+                "Schedule automation",
+                "None of the above"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes'",
+            "client_notes": "Multi-select question to identify popular features. Randomize options to avoid bias.",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "What features do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Remote temperature control via app",
+                    "Energy usage reports",
+                    "Voice assistant integration",
+                    "Geofencing",
+                    "Schedule automation",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What is the primary reason you have not purchased a smart thermostat?",
+            "answer_options": [
+                "High cost",
+                "Perceived complexity",
+                "Lack of compatibility with my HVAC system",
+                "Privacy concerns",
+                "No perceived benefit",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 = 'No'",
+            "client_notes": "Include an open-text option to uncover unlisted barriers. Randomize options.",
+            "scripter_notes": "Field type: radio button with 'Other' triggering a text input.",
+            "script": {
+                "question_text": "What is the primary reason you have not purchased a smart thermostat?",
+                "answer_options": [
+                    "High cost",
+                    "Perceived complexity",
+                    "Lack of compatibility with my HVAC system",
+                    "Privacy concerns",
+                    "No perceived benefit",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'No'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What would motivate you to purchase a smart thermostat?",
+            "answer_options": [
+                "Lower price",
+                "Simpler installation process",
+                "Clearer energy-saving benefits",
+                "Integration with other smart home devices",
+                "Better privacy assurances",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 = 'No'",
+            "client_notes": "Multi-select question to prioritize marketing strategies. Ensure mobile-friendly design.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with 'Other' option.",
+            "script": {
+                "question_text": "What would motivate you to purchase a smart thermostat?",
+                "answer_options": [
+                    "Lower price",
+                    "Simpler installation process",
+                    "Clearer energy-saving benefits",
+                    "Integration with other smart home devices",
+                    "Better privacy assurances",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 = 'No'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How much would you be willing to pay for a smart thermostat?",
+            "answer_options": [
+                "Less than $100",
+                "$100 - $199",
+                "$200 - $299",
+                "$300 or more"
+            ],
+            "routing_logic": "Only if Q1 = 'No'",
+            "client_notes": "Use predefined price brackets to gauge affordability expectations.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How much would you be willing to pay for a smart thermostat?",
+                "answer_options": [
+                    "Less than $100",
+                    "$100 - $199",
+                    "$200 - $299",
+                    "$300 or more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'No'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Please describe any challenges you have faced with your smart thermostat.",
+            "answer_options": [],
+            "routing_logic": "Only if Q1 = 'Yes'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 300 characters.",
+            "scripter_notes": "Field type: open-text with character limit.",
+            "script": {
+                "question_text": "Please describe any challenges you have faced with your smart thermostat.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "How likely are you to recommend your smart thermostat to others?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes'",
+            "client_notes": "Use a 5-point Likert scale to measure Net Promoter Score (NPS).",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend your smart thermostat to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes'"
+            }
+        }
+    ]
+}

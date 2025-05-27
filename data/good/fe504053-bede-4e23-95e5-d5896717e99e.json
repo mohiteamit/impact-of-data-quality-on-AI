@@ -1,0 +1,125 @@
+{
+    "survey_id": "fe504053-bede-4e23-95e5-d5896717e99e",
+    "survey_name": "Customer Feedback on In-Store Digital Payment Experiences",
+    "survey_brief": "This survey aims to gather customer feedback on the ease, security, and satisfaction levels associated with using digital payment methods in physical retail stores.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use digital payment methods (e.g., mobile wallets, contactless cards) when shopping in physical stores?",
+            "answer_options": [
+                "Always",
+                "Frequently",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Use a 5-point frequency scale for clarity. Ensure mobile-friendly dropdown if used.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you use digital payment methods (e.g., mobile wallets, contactless cards) when shopping in physical stores?",
+                "answer_options": [
+                    "Always",
+                    "Frequently",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following digital payment methods have you used in the past 3 months? (Select all that apply)",
+            "answer_options": [
+                "Mobile wallet (e.g., Apple Pay, Google Pay)",
+                "Contactless credit/debit card",
+                "QR code payments",
+                "Store-specific apps (e.g., Target Circle, Walmart Pay)",
+                "None of the above"
+            ],
+            "routing_logic": "Ask if Q1 ≠ 'Never'",
+            "client_notes": "Allow multiple selections. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with 'Select all' prompt.",
+            "script": {
+                "question_text": "Which of the following digital payment methods have you used in the past 3 months? (Select all that apply)",
+                "answer_options": [
+                    "Mobile wallet (e.g., Apple Pay, Google Pay)",
+                    "Contactless credit/debit card",
+                    "QR code payments",
+                    "Store-specific apps (e.g., Target Circle, Walmart Pay)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Ask if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you prefer digital payments over cash or traditional card payments?",
+            "answer_options": [
+                "Faster checkout",
+                "No need to carry physical cards/cash",
+                "Better hygiene (contactless)",
+                "Discounts/rewards offered",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Ask if Q1 = 'Always' or 'Frequently'",
+            "client_notes": "Include an open-text 'Other' option for nuanced responses.",
+            "scripter_notes": "Field type: Single-choice with optional open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you prefer digital payments over cash or traditional card payments?",
+                "answer_options": [
+                    "Faster checkout",
+                    "No need to carry physical cards/cash",
+                    "Better hygiene (contactless)",
+                    "Discounts/rewards offered",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask if Q1 = 'Always' or 'Frequently'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any challenges you've faced when using digital payments in-store.",
+            "answer_options": [],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Use open-text to capture unanticipated pain points. Limit to 300 characters.",
+            "scripter_notes": "Field type: Open-text with character counter.",
+            "script": {
+                "question_text": "Please describe any challenges you've faced when using digital payments in-store.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the speed of digital payment processing in stores?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Ask if Q2 includes any payment method except 'None of the above'",
+            "client_notes": "5-point Likert scale for consistency. Display as smiley faces for mobile engagement.",
+            "scripter_notes": "Field type: Single-choice with graphical scale option.",
+            "script": {
+                "question_text": "How satisfied are you with the speed of digital payment processing in stores?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask if Q2 includes any payment method except 'None of the above'"
+            }
+        }
+    ]
+}

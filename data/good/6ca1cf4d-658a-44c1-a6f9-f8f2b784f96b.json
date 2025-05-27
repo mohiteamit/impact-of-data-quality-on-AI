@@ -1,0 +1,119 @@
+{
+    "survey_id": "6ca1cf4d-658a-44c1-a6f9-f8f2b784f96b",
+    "survey_name": "Corporate Sustainability Practices Employee Feedback Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the effectiveness and perception of corporate sustainability initiatives within the organization.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How aware are you of the sustainability initiatives implemented by our company?",
+            "answer_options": [
+                "Very aware",
+                "Somewhat aware",
+                "Not very aware",
+                "Not aware at all"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use a single-choice radio button layout for clarity. Consider randomizing answer options to avoid bias.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How aware are you of the sustainability initiatives implemented by our company?",
+                "answer_options": [
+                    "Very aware",
+                    "Somewhat aware",
+                    "Not very aware",
+                    "Not aware at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainability initiatives have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Recycling programs",
+                "Energy-saving challenges",
+                "Sustainable commuting incentives",
+                "Corporate volunteer events",
+                "None of the above"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use checkboxes for multi-choice response. Include 'None of the above' to capture non-participation.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following sustainability initiatives have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Recycling programs",
+                    "Energy-saving challenges",
+                    "Sustainable commuting incentives",
+                    "Corporate volunteer events",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How effectively do you think the company communicates its sustainability goals to employees?",
+            "answer_options": [
+                "Very effectively",
+                "Somewhat effectively",
+                "Not very effectively",
+                "Not effectively at all"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use a Likert scale for single-choice response. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How effectively do you think the company communicates its sustainability goals to employees?",
+                "answer_options": [
+                    "Very effectively",
+                    "Somewhat effectively",
+                    "Not very effectively",
+                    "Not effectively at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional sustainability initiatives would you like to see the company implement?",
+            "answer_options": [],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What additional sustainability initiatives would you like to see the company implement?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How motivated are you to participate in future sustainability initiatives?",
+            "answer_options": [
+                "Very motivated",
+                "Somewhat motivated",
+                "Not very motivated",
+                "Not motivated at all"
+            ],
+            "routing_logic": "This question is shown to all respondents who selected any participation in Q2 (excluding 'None of the above').",
+            "client_notes": "Use a single-choice radio button layout. Ensure the question is only shown to relevant respondents based on Q2 responses.",
+            "scripter_notes": "Field type: radio button (single-choice). Apply skip logic based on Q2 responses.",
+            "script": {
+                "question_text": "How motivated are you to participate in future sustainability initiatives?",
+                "answer_options": [
+                    "Very motivated",
+                    "Somewhat motivated",
+                    "Not very motivated",
+                    "Not motivated at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents who selected any participation in Q2 (excluding 'None of the above')."
+            }
+        }
+    ]
+}

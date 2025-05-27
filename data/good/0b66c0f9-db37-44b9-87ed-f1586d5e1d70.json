@@ -1,0 +1,125 @@
+{
+    "survey_id": "0b66c0f9-db37-44b9-87ed-f1586d5e1d70",
+    "survey_name": "Consumer Preferences for Plant-Based Meat Alternatives Survey",
+    "survey_brief": "This survey aims to gather insights into consumer preferences, perceptions, and purchasing behaviors regarding plant-based meat alternatives.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you consume plant-based meat alternatives?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure mobile-friendly design.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you consume plant-based meat alternatives?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your decision to purchase plant-based meat alternatives? (Select all that apply)",
+            "answer_options": [
+                "Health benefits",
+                "Environmental impact",
+                "Animal welfare",
+                "Taste",
+                "Price",
+                "Availability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Use checkboxes for multi-select options. Include an 'Other' option with an open-text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What factors influence your decision to purchase plant-based meat alternatives? (Select all that apply)",
+                "answer_options": [
+                    "Health benefits",
+                    "Environmental impact",
+                    "Animal welfare",
+                    "Taste",
+                    "Price",
+                    "Availability",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the taste of plant-based meat alternatives compared to traditional meat?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the taste of plant-based meat alternatives compared to traditional meat?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in plant-based meat alternatives?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Open-ended question to gather qualitative feedback. Limit response length to 250 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you like to see in plant-based meat alternatives?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay a premium for plant-based meat alternatives that are more sustainable?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe, depending on the price difference"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button. Include a neutral option ('Maybe') to capture uncertainty.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you be willing to pay a premium for plant-based meat alternatives that are more sustainable?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe, depending on the price difference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}
