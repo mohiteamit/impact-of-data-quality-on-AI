@@ -1,0 +1,161 @@
+{
+    "survey_id": "87a9468b-cfec-4794-b1f4-db00cacb5c3f",
+    "survey_name": "Customer Satisfaction with Automated Checkout Systems in Retail Stores Survey",
+    "survey_brief": "This survey aims to gather feedback from customers about their experience with automated checkout systems in retail stores, including ease of use, reliability, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use automated checkout systems in retail stores?",
+            "answer_options": [
+                "Every time I shop",
+                "Often",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps gauge frequency of use, which can correlate with satisfaction levels.",
+            "scripter_notes": "Single-choice radio buttons",
+            "script": {
+                "question_text": "How often do you use automated checkout systems in retail stores?",
+                "answer_options": [
+                    "Every time I shop",
+                    "Often",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your decision to use an automated checkout system? (Select all that apply)",
+            "answer_options": [
+                "Shorter wait times",
+                "Ease of use",
+                "Preference for self-service",
+                "Avoiding interaction with staff",
+                "Store policy/encouragement",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "This helps understand customer motivations, which can inform marketing and placement strategies.",
+            "scripter_notes": "Multi-choice checkboxes with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What factors influence your decision to use an automated checkout system? (Select all that apply)",
+                "answer_options": [
+                    "Shorter wait times",
+                    "Ease of use",
+                    "Preference for self-service",
+                    "Avoiding interaction with staff",
+                    "Store policy/encouragement",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the speed of automated checkout systems compared to traditional cashier lanes?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement.",
+            "scripter_notes": "Single-choice radio buttons",
+            "script": {
+                "question_text": "How satisfied are you with the speed of automated checkout systems compared to traditional cashier lanes?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you encountered any technical issues while using an automated checkout system?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Binary question to identify common pain points.",
+            "scripter_notes": "Single-choice radio buttons",
+            "script": {
+                "question_text": "Have you encountered any technical issues while using an automated checkout system?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you answered 'Yes' to the previous question, please describe the technical issue you encountered.",
+            "answer_options": [],
+            "routing_logic": "Only respondents who answered 'Yes' to Q4",
+            "client_notes": "Open-ended question to capture specific issues for troubleshooting.",
+            "scripter_notes": "Open-text field",
+            "script": {
+                "question_text": "If you answered 'Yes' to the previous question, please describe the technical issue you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only respondents who answered 'Yes' to Q4"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend automated checkout systems to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Net Promoter Score (NPS) style question to measure advocacy.",
+            "scripter_notes": "Single-choice radio buttons",
+            "script": {
+                "question_text": "How likely are you to recommend automated checkout systems to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What improvements would you suggest for automated checkout systems to enhance your experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Open-ended to gather qualitative feedback for innovation.",
+            "scripter_notes": "Open-text field",
+            "script": {
+                "question_text": "What improvements would you suggest for automated checkout systems to enhance your experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        }
+    ]
+}

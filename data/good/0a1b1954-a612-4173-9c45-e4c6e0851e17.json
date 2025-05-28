@@ -1,0 +1,129 @@
+{
+    "survey_id": "0a1b1954-a612-4173-9c45-e4c6e0851e17",
+    "survey_name": "AI-Powered Mental Wellness App User Feedback Survey",
+    "survey_brief": "This survey aims to gather user feedback on the effectiveness, usability, and satisfaction with AI-powered mental wellness applications to improve future iterations and features.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the AI-powered mental wellness app?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Less than once a week",
+                "This is my first time using it"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use a single-choice radio button format for clarity. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How often do you use the AI-powered mental wellness app?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Less than once a week",
+                    "This is my first time using it"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of the app do you find most helpful? (Select all that apply)",
+            "answer_options": [
+                "Personalized meditation guides",
+                "Mood tracking and analytics",
+                "AI-driven chat support",
+                "Sleep improvement tools",
+                "Stress management exercises",
+                "None of the above"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use a multi-choice checkbox format. Allow for an 'Other' option if necessary.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "Which features of the app do you find most helpful? (Select all that apply)",
+                "answer_options": [
+                    "Personalized meditation guides",
+                    "Mood tracking and analytics",
+                    "AI-driven chat support",
+                    "Sleep improvement tools",
+                    "Stress management exercises",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the AI-driven chat support feature?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied",
+                "I have not used this feature"
+            ],
+            "routing_logic": "Show if Q2 includes 'AI-driven chat support'",
+            "client_notes": "Use a Likert scale for satisfaction levels. Include an option for non-users.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with the AI-driven chat support feature?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied",
+                    "I have not used this feature"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q2 includes 'AI-driven chat support'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the AI-powered mental wellness app?",
+            "answer_options": [],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Allow for open-ended responses to capture detailed feedback. Limit to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you suggest for the AI-powered mental wellness app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend this app to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Neutral",
+                "Probably no",
+                "Definitely no"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use a single-choice radio button format. This is a key metric for net promoter score (NPS).",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Would you recommend this app to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Neutral",
+                    "Probably no",
+                    "Definitely no"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        }
+    ]
+}

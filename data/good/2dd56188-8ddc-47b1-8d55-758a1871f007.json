@@ -1,0 +1,129 @@
+{
+    "survey_id": "2dd56188-8ddc-47b1-8d55-758a1871f007",
+    "survey_name": "Adoption and Usage of AI-Powered Language Learning Apps Survey",
+    "survey_brief": "This survey aims to understand user preferences, experiences, and challenges related to AI-powered language learning applications to help improve future product offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use AI-powered language learning apps?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a clear frequency scale to capture accurate usage patterns. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How often do you use AI-powered language learning apps?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you value most in AI language learning apps? (Select up to 3)",
+            "answer_options": [
+                "Real-time pronunciation feedback",
+                "Personalized lesson plans",
+                "Conversation practice with AI",
+                "Grammar correction",
+                "Vocabulary building exercises",
+                "Cultural context integration",
+                "Progress tracking"
+            ],
+            "routing_logic": "All respondents who selected 'Daily' to 'A few times a month' in Q1",
+            "client_notes": "Multi-select with clear instructions on max selections. Consider randomizing option order to reduce bias.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes with max 3 selections)",
+            "script": {
+                "question_text": "Which features do you value most in AI language learning apps? (Select up to 3)",
+                "answer_options": [
+                    "Real-time pronunciation feedback",
+                    "Personalized lesson plans",
+                    "Conversation practice with AI",
+                    "Grammar correction",
+                    "Vocabulary building exercises",
+                    "Cultural context integration",
+                    "Progress tracking"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents who selected 'Daily' to 'A few times a month' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would make you use AI language learning apps more frequently?",
+            "answer_options": [],
+            "routing_logic": "All respondents who selected 'A few times a month' or 'Rarely or never' in Q1",
+            "client_notes": "Open-ended question to capture qualitative feedback. Include character limit (500 max).",
+            "scripter_notes": "Field type: Open-text (text area with 500 character limit)",
+            "script": {
+                "question_text": "What improvements would make you use AI language learning apps more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents who selected 'A few times a month' or 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accuracy of AI-generated language corrections in your current app?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "All respondents except those who selected 'Rarely or never' in Q1",
+            "client_notes": "Include a neutral midpoint and N/A option for respondents who haven't used this feature.",
+            "scripter_notes": "Field type: Single-choice (radio buttons with horizontal layout)",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of AI-generated language corrections in your current app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay for premium features in an AI language learning app?",
+            "answer_options": [
+                "Yes, currently pay for premium",
+                "Yes, would consider in future",
+                "No, prefer free versions only",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Important for monetization strategy. Include clear differentiation between current and potential future payers.",
+            "scripter_notes": "Field type: Single-choice (radio buttons with 'Unsure' as last option)",
+            "script": {
+                "question_text": "Would you be willing to pay for premium features in an AI language learning app?",
+                "answer_options": [
+                    "Yes, currently pay for premium",
+                    "Yes, would consider in future",
+                    "No, prefer free versions only",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

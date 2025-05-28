@@ -1,0 +1,131 @@
+{
+    "survey_id": "50ef2800-4ac3-408b-bc35-c1dbf87b78c4",
+    "survey_name": "User Preferences for Virtual Reality Fitness Applications Survey",
+    "survey_brief": "This survey aims to gather insights on consumer preferences and experiences with virtual reality (VR) fitness applications to guide future product development and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you ever used a virtual reality (VR) fitness application?",
+            "answer_options": [
+                "Yes, regularly (at least once a week)",
+                "Yes, occasionally (less than once a week)",
+                "No, but I am interested in trying",
+                "No, and I am not interested"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps segment users and non-users for further analysis. Ensure mobile-friendly layout for easy selection.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "Have you ever used a virtual reality (VR) fitness application?",
+                "answer_options": [
+                    "Yes, regularly (at least once a week)",
+                    "Yes, occasionally (less than once a week)",
+                    "No, but I am interested in trying",
+                    "No, and I am not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What features do you value most in a VR fitness application? (Select up to 3)",
+            "answer_options": [
+                "Real-time performance feedback",
+                "Variety of workout programs",
+                "Multiplayer or social interaction",
+                "Integration with fitness trackers",
+                "Customizable workout plans",
+                "Immersive environments",
+                "Competitive challenges or leaderboards",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Use checkboxes for multi-selection. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: checkbox (multi-choice), include 'Other' as open-text if selected",
+            "script": {
+                "question_text": "What features do you value most in a VR fitness application? (Select up to 3)",
+                "answer_options": [
+                    "Real-time performance feedback",
+                    "Variety of workout programs",
+                    "Multiplayer or social interaction",
+                    "Integration with fitness trackers",
+                    "Customizable workout plans",
+                    "Immersive environments",
+                    "Competitive challenges or leaderboards",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers prevent you from using VR fitness applications?",
+            "answer_options": [
+                "High cost of VR equipment",
+                "Lack of space at home",
+                "Limited content or workout variety",
+                "Motion sickness or discomfort",
+                "Prefer traditional fitness methods",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'No' to Q1",
+            "client_notes": "Include an open-ended 'Other' option to capture unlisted barriers.",
+            "scripter_notes": "Field type: checkbox (multi-choice), include 'Other' as open-text if selected",
+            "script": {
+                "question_text": "What barriers prevent you from using VR fitness applications?",
+                "answer_options": [
+                    "High cost of VR equipment",
+                    "Lack of space at home",
+                    "Limited content or workout variety",
+                    "Motion sickness or discomfort",
+                    "Prefer traditional fitness methods",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'No' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1 to 5, how likely are you to recommend your preferred VR fitness application to a friend? (1 = Not at all likely, 5 = Extremely likely)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Use a Likert scale for standardized measurement. Display as a horizontal radio button set.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how likely are you to recommend your preferred VR fitness application to a friend? (1 = Not at all likely, 5 = Extremely likely)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to use VR fitness applications more often?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open-text",
+            "script": {
+                "question_text": "What improvements would encourage you to use VR fitness applications more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

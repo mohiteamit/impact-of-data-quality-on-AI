@@ -1,0 +1,127 @@
+{
+    "survey_id": "a7da8495-faa9-4f57-9c2d-f6c5c5d4d269",
+    "survey_name": "Gen Z Preferences for Virtual Reality (VR) Social Platforms Survey",
+    "survey_brief": "This survey aims to understand Gen Z's preferences and behaviors regarding virtual reality social platforms to guide future platform development and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use virtual reality (VR) social platforms?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format to ensure clear data collection. Consider adding a follow-up question for those who select 'Never'.",
+            "scripter_notes": "Field type: Radio button. Ensure the question is mobile-friendly.",
+            "script": {
+                "question_text": "How frequently do you use virtual reality (VR) social platforms?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features are most important to you in a VR social platform? (Select up to 3)",
+            "answer_options": [
+                "Avatar customization",
+                "Realistic interactions",
+                "Multiplayer games",
+                "Virtual events/concerts",
+                "Private chat spaces",
+                "Content creation tools",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "Use a multi-choice format to allow respondents to select multiple features. Ensure the 'Other' option includes a text field for specification.",
+            "scripter_notes": "Field type: Checkbox. Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which features are most important to you in a VR social platform? (Select up to 3)",
+                "answer_options": [
+                    "Avatar customization",
+                    "Realistic interactions",
+                    "Multiplayer games",
+                    "Virtual events/concerts",
+                    "Private chat spaces",
+                    "Content creation tools",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced when using VR social platforms?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "Use an open-ended format to capture detailed feedback. Encourage honesty and specificity.",
+            "scripter_notes": "Field type: Open text. Set a character limit of 500.",
+            "script": {
+                "question_text": "What challenges have you faced when using VR social platforms?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend VR social platforms to your friends? (Scale of 1-10)",
+            "answer_options": [
+                "1 (Not at all likely)",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 (Extremely likely)"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "Use a single-choice Likert scale for ease of analysis. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: Radio button. Display the scale horizontally on desktop and vertically on mobile.",
+            "script": {
+                "question_text": "How likely are you to recommend VR social platforms to your friends? (Scale of 1-10)",
+                "answer_options": [
+                    "1 (Not at all likely)",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 (Extremely likely)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What would encourage you to use VR social platforms more often?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Rarely' or 'Monthly' in Q1",
+            "client_notes": "Use an open-ended format to gather actionable insights. Avoid leading questions.",
+            "scripter_notes": "Field type: Open text. Set a character limit of 300.",
+            "script": {
+                "question_text": "What would encourage you to use VR social platforms more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Rarely' or 'Monthly' in Q1"
+            }
+        }
+    ]
+}

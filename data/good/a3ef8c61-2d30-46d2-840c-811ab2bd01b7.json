@@ -1,0 +1,125 @@
+{
+    "survey_id": "a3ef8c61-2d30-46d2-840c-811ab2bd01b7",
+    "survey_name": "Customer Satisfaction with Plant-Based Restaurant Menu Options Survey",
+    "survey_brief": "This survey aims to understand customer satisfaction and preferences regarding plant-based menu options at restaurants.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you choose plant-based menu options when dining out?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a 5-point scale to measure frequency. Ensure the options are balanced and cover the full range of possible responses.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you choose plant-based menu options when dining out?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors influence your choice of plant-based menu options? (Select all that apply)",
+            "answer_options": [
+                "Health benefits",
+                "Environmental concerns",
+                "Animal welfare",
+                "Taste preferences",
+                "Availability of options",
+                "Price",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q1 is answered with 'Always', 'Often', or 'Sometimes'.",
+            "client_notes": "Allow multiple selections to capture diverse influences. Include an 'Other' option for additional factors.",
+            "scripter_notes": "Field type: Checkbox (multi-choice). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which of the following factors influence your choice of plant-based menu options? (Select all that apply)",
+                "answer_options": [
+                    "Health benefits",
+                    "Environmental concerns",
+                    "Animal welfare",
+                    "Taste preferences",
+                    "Availability of options",
+                    "Price",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q1 is answered with 'Always', 'Often', or 'Sometimes'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you like to see in plant-based menu options at restaurants?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: Open text.",
+            "script": {
+                "question_text": "What improvements would you like to see in plant-based menu options at restaurants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the variety of plant-based options currently available at restaurants?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears if Q1 is answered with 'Always', 'Often', or 'Sometimes'.",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction. Ensure clarity in the wording of the scale.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the variety of plant-based options currently available at restaurants?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 is answered with 'Always', 'Often', or 'Sometimes'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be more likely to dine at a restaurant that prominently features plant-based options?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Simple yes/no/maybe question to gauge potential behavior change. Ensure the options are clear and unambiguous.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "Would you be more likely to dine at a restaurant that prominently features plant-based options?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

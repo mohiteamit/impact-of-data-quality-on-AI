@@ -1,0 +1,123 @@
+{
+    "survey_id": "1d87387b-4cfc-40cd-b4d6-5e12c08b92df",
+    "survey_name": "Employee Experience with AI-Powered Workplace Assistants Survey",
+    "survey_brief": "This survey aims to understand employee satisfaction, challenges, and preferences regarding AI-powered workplace assistants in their daily work routines.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use an AI-powered workplace assistant (e.g., virtual meeting schedulers, task automation bots, or AI-driven data analysis tools)?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button format for clarity. Ensure mobile responsiveness.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use an AI-powered workplace assistant (e.g., virtual meeting schedulers, task automation bots, or AI-driven data analysis tools)?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI-powered workplace assistant features do you find most useful? (Select all that apply)",
+            "answer_options": [
+                "Automated meeting scheduling",
+                "Task prioritization suggestions",
+                "Data analysis and reporting",
+                "Document summarization",
+                "Email filtering and categorization",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Several times a week', 'Once a week', or 'Rarely' to Q1",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field for manual input.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following AI-powered workplace assistant features do you find most useful? (Select all that apply)",
+                "answer_options": [
+                    "Automated meeting scheduling",
+                    "Task prioritization suggestions",
+                    "Data analysis and reporting",
+                    "Document summarization",
+                    "Email filtering and categorization",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Several times a week', 'Once a week', or 'Rarely' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced when using AI-powered workplace assistants?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'Daily', 'Several times a week', 'Once a week', or 'Rarely' to Q1",
+            "client_notes": "Open-text field to capture qualitative feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: text area (OPEN_TEXT)",
+            "script": {
+                "question_text": "What challenges have you faced when using AI-powered workplace assistants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'Daily', 'Several times a week', 'Once a week', or 'Rarely' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1-5, how satisfied are you with the accuracy of your AI-powered workplace assistant?",
+            "answer_options": [
+                "1 - Very dissatisfied",
+                "2 - Dissatisfied",
+                "3 - Neutral",
+                "4 - Satisfied",
+                "5 - Very satisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Several times a week', 'Once a week', or 'Rarely' to Q1",
+            "client_notes": "Use a Likert scale. Randomize scale order to avoid bias.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the accuracy of your AI-powered workplace assistant?",
+                "answer_options": [
+                    "1 - Very dissatisfied",
+                    "2 - Dissatisfied",
+                    "3 - Neutral",
+                    "4 - Satisfied",
+                    "5 - Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Several times a week', 'Once a week', or 'Rarely' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your organization's AI-powered workplace assistant to colleagues in other companies?",
+            "answer_options": [
+                "Yes, enthusiastically",
+                "Yes, with some reservations",
+                "No, not at this time"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question. Include a neutral option for balanced responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend your organization's AI-powered workplace assistant to colleagues in other companies?",
+                "answer_options": [
+                    "Yes, enthusiastically",
+                    "Yes, with some reservations",
+                    "No, not at this time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

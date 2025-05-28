@@ -1,0 +1,97 @@
+{
+    "survey_id": "5ef4b85c-2b9a-4eec-b672-00025facad46",
+    "survey_name": "Customer Satisfaction with In-Store Digital Signage Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and effectiveness of digital signage in retail stores, focusing on clarity, engagement, and impact on purchasing decisions.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you notice digital signage when shopping in-store?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a Likert scale for consistency. Ensure mobile-friendly radio buttons.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you notice digital signage when shopping in-store?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of content on digital signage do you find most useful? (Select all that apply)",
+            "answer_options": [
+                "Product promotions/discounts",
+                "New product announcements",
+                "Store navigation assistance",
+                "Brand storytelling",
+                "None of the above"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Allow multi-selection. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: multi-choice checkboxes.",
+            "script": {
+                "question_text": "Which types of content on digital signage do you find most useful? (Select all that apply)",
+                "answer_options": [
+                    "Product promotions/discounts",
+                    "New product announcements",
+                    "Store navigation assistance",
+                    "Brand storytelling",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Has digital signage ever influenced your in-store purchasing decision?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No, but it catches my attention",
+                "No, I ignore it"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Include a neutral option to avoid forced responses.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "Has digital signage ever influenced your in-store purchasing decision?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No, but it catches my attention",
+                    "No, I ignore it"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would make digital signage more engaging for you?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use open-ended to capture qualitative insights. Limit to 200 characters.",
+            "scripter_notes": "Field type: open-text input with character limit.",
+            "script": {
+                "question_text": "What improvements would make digital signage more engaging for you?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

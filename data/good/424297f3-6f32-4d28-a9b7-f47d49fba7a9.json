@@ -1,0 +1,125 @@
+{
+    "survey_id": "424297f3-6f32-4d28-a9b7-f47d49fba7a9",
+    "survey_name": "Customer Satisfaction with Contactless Payment Methods in Retail Stores Survey",
+    "survey_brief": "This survey aims to gather customer feedback on their experiences and preferences regarding contactless payment methods in retail stores.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use contactless payment methods (e.g., mobile wallets, tap-to-pay cards) when shopping in retail stores?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice scale for clarity. Ensure the response options cover all possible usage frequencies.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use contactless payment methods (e.g., mobile wallets, tap-to-pay cards) when shopping in retail stores?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following contactless payment methods have you used in the past 3 months? (Select all that apply)",
+            "answer_options": [
+                "Mobile wallet (e.g., Apple Pay, Google Pay)",
+                "Tap-to-pay credit/debit card",
+                "Contactless smart cards (e.g., transit cards)",
+                "QR code payments",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use multi-choice to allow multiple selections. Include an option for respondents who haven't used any contactless methods.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following contactless payment methods have you used in the past 3 months? (Select all that apply)",
+                "answer_options": [
+                    "Mobile wallet (e.g., Apple Pay, Google Pay)",
+                    "Tap-to-pay credit/debit card",
+                    "Contactless smart cards (e.g., transit cards)",
+                    "QR code payments",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the primary reasons you prefer using contactless payment methods?",
+            "answer_options": [
+                "Faster checkout process",
+                "Hygienic (no physical contact)",
+                "Convenience (no need to carry cash/cards)",
+                "Security features (e.g., tokenization)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is 'Always', 'Often', or 'Sometimes'.",
+            "client_notes": "Include an 'Other' option with an open-text field for additional reasons.",
+            "scripter_notes": "Field type: Radio button with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are the primary reasons you prefer using contactless payment methods?",
+                "answer_options": [
+                    "Faster checkout process",
+                    "Hygienic (no physical contact)",
+                    "Convenience (no need to carry cash/cards)",
+                    "Security features (e.g., tokenization)",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is 'Always', 'Often', or 'Sometimes'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you encountered any issues or challenges when using contactless payment methods in retail stores? If yes, please describe.",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use an open-ended question to gather detailed feedback on challenges.",
+            "scripter_notes": "Field type: Open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "Have you encountered any issues or challenges when using contactless payment methods in retail stores? If yes, please describe.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the availability of contactless payment options in the retail stores you frequently visit?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the availability of contactless payment options in the retail stores you frequently visit?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

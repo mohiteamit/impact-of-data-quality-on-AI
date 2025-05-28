@@ -1,0 +1,157 @@
+{
+    "survey_id": "d5a1144e-8db0-491d-ada7-b52b436ee3bb",
+    "survey_name": "Consumer Preferences for Subscription-Based Wine Clubs Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, satisfaction levels, and decision-making factors when subscribing to wine club services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase wine for personal consumption?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "Quarterly",
+                "Less than quarterly",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button layout. Ensure the options cover the full range of purchase frequencies.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you purchase wine for personal consumption?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "Quarterly",
+                    "Less than quarterly",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors are most important to you when selecting a wine club subscription? (Select up to 3)",
+            "answer_options": [
+                "Price per bottle",
+                "Variety of wines offered",
+                "Frequency of delivery",
+                "Expert wine recommendations",
+                "Flexibility to skip/cancel shipments",
+                "Exclusive access to limited-edition wines",
+                "Educational content about wines",
+                "Sustainable/organic wine options"
+            ],
+            "routing_logic": "Appears if Q1 answer is NOT 'Never'",
+            "client_notes": "Use a multi-select checkbox format. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), max 3 selections",
+            "script": {
+                "question_text": "Which of the following factors are most important to you when selecting a wine club subscription? (Select up to 3)",
+                "answer_options": [
+                    "Price per bottle",
+                    "Variety of wines offered",
+                    "Frequency of delivery",
+                    "Expert wine recommendations",
+                    "Flexibility to skip/cancel shipments",
+                    "Exclusive access to limited-edition wines",
+                    "Educational content about wines",
+                    "Sustainable/organic wine options"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is NOT 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your preferred price range per bottle in a wine club subscription?",
+            "answer_options": [
+                "Under $15",
+                "$15-$25",
+                "$26-$40",
+                "Above $40",
+                "No preference"
+            ],
+            "routing_logic": "Appears if Q1 answer is NOT 'Never'",
+            "client_notes": "Present as a single-choice question with balanced price brackets.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "What is your preferred price range per bottle in a wine club subscription?",
+                "answer_options": [
+                    "Under $15",
+                    "$15-$25",
+                    "$26-$40",
+                    "Above $40",
+                    "No preference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is NOT 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What would make you more likely to join a wine club subscription service?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is NOT 'Never'",
+            "client_notes": "Open-ended question to capture qualitative insights. Use a text box with a 300-character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT (text input)",
+            "script": {
+                "question_text": "What would make you more likely to join a wine club subscription service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is NOT 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you ever subscribed to a wine club before?",
+            "answer_options": [
+                "Yes, currently subscribed",
+                "Yes, but not currently",
+                "No, never subscribed"
+            ],
+            "routing_logic": "Appears if Q1 answer is NOT 'Never'",
+            "client_notes": "Single-choice question to segment respondents for further analysis.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Have you ever subscribed to a wine club before?",
+                "answer_options": [
+                    "Yes, currently subscribed",
+                    "Yes, but not currently",
+                    "No, never subscribed"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is NOT 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What features would you most like to see in a wine club mobile app?",
+            "answer_options": [
+                "Personalized wine recommendations",
+                "Delivery tracking",
+                "Ability to rate/review wines",
+                "Educational wine content",
+                "Virtual tasting events",
+                "Social features to share with friends",
+                "None - I wouldn't use an app"
+            ],
+            "routing_logic": "Appears if Q5 answer is 'Yes, currently subscribed' or 'Yes, but not currently'",
+            "client_notes": "Multi-select question with a 'None' option. Randomize option order.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "What features would you most like to see in a wine club mobile app?",
+                "answer_options": [
+                    "Personalized wine recommendations",
+                    "Delivery tracking",
+                    "Ability to rate/review wines",
+                    "Educational wine content",
+                    "Virtual tasting events",
+                    "Social features to share with friends",
+                    "None - I wouldn't use an app"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q5 answer is 'Yes, currently subscribed' or 'Yes, but not currently'"
+            }
+        }
+    ]
+}

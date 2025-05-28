@@ -1,0 +1,99 @@
+{
+    "survey_id": "9e4dfd80-846b-4724-b5df-c74079c6d676",
+    "survey_name": "Employee Satisfaction with Workplace Noise Reduction Solutions Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction with current workplace noise reduction solutions and identify areas for improvement to enhance productivity and comfort.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you rate the current noise levels in your workplace?",
+            "answer_options": [
+                "Very quiet",
+                "Somewhat quiet",
+                "Moderate",
+                "Somewhat noisy",
+                "Very noisy"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for better trend analysis. Ensure mobile-friendly layout.",
+            "scripter_notes": "Single-choice radio buttons. Randomize options to avoid bias.",
+            "script": {
+                "question_text": "How would you rate the current noise levels in your workplace?",
+                "answer_options": [
+                    "Very quiet",
+                    "Somewhat quiet",
+                    "Moderate",
+                    "Somewhat noisy",
+                    "Very noisy"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following noise reduction solutions are currently available in your workplace? (Select all that apply)",
+            "answer_options": [
+                "Soundproofing panels",
+                "White noise machines",
+                "Noise-canceling headphones provided",
+                "Designated quiet zones",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select to capture availability. Consider follow-up questions based on responses.",
+            "scripter_notes": "Multi-choice checkboxes. Include 'Other' with open text option.",
+            "script": {
+                "question_text": "Which of the following noise reduction solutions are currently available in your workplace? (Select all that apply)",
+                "answer_options": [
+                    "Soundproofing panels",
+                    "White noise machines",
+                    "Noise-canceling headphones provided",
+                    "Designated quiet zones",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How effective do you find the current noise reduction solutions in improving your focus?",
+            "answer_options": [
+                "Very effective",
+                "Somewhat effective",
+                "Neutral",
+                "Somewhat ineffective",
+                "Very ineffective"
+            ],
+            "routing_logic": "Respondents who selected at least one option in Q2",
+            "client_notes": "Use a consistent scale for comparability. Ensure clarity in wording.",
+            "scripter_notes": "Single-choice radio buttons. Display only if Q2 has selections.",
+            "script": {
+                "question_text": "How effective do you find the current noise reduction solutions in improving your focus?",
+                "answer_options": [
+                    "Very effective",
+                    "Somewhat effective",
+                    "Neutral",
+                    "Somewhat ineffective",
+                    "Very ineffective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one option in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional noise reduction solutions would you like to see implemented in your workplace?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Limit to 300 characters.",
+            "scripter_notes": "Open-text input. Include character counter.",
+            "script": {
+                "question_text": "What additional noise reduction solutions would you like to see implemented in your workplace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

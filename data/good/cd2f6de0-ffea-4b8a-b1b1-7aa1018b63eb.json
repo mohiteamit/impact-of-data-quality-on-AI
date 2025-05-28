@@ -1,0 +1,125 @@
+{
+    "survey_id": "cd2f6de0-ffea-4b8a-b1b1-7aa1018b63eb",
+    "survey_name": "Customer Satisfaction with Smart Parking Solutions Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with smart parking solutions, including ease of use, payment methods, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use smart parking solutions in your city?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format for clarity. This question helps segment users by frequency.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How frequently do you use smart parking solutions in your city?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using smart parking solutions?",
+            "answer_options": [
+                "Convenience",
+                "Time-saving",
+                "Cost-effectiveness",
+                "Availability of parking spots",
+                "Other"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Single-choice format. This helps identify key drivers for usage.",
+            "scripter_notes": "Field type: radio button with an 'Other' option.",
+            "script": {
+                "question_text": "What is your primary reason for using smart parking solutions?",
+                "answer_options": [
+                    "Convenience",
+                    "Time-saving",
+                    "Cost-effectiveness",
+                    "Availability of parking spots",
+                    "Other"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which payment methods do you prefer when using smart parking solutions? (Select all that apply)",
+            "answer_options": [
+                "Credit/Debit Card",
+                "Mobile Wallet (e.g., Apple Pay, Google Pay)",
+                "Direct Carrier Billing",
+                "Prepaid Parking Credits",
+                "Other"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Multi-choice format. Helps assess preferred payment options.",
+            "scripter_notes": "Field type: checkboxes with an 'Other' option.",
+            "script": {
+                "question_text": "Which payment methods do you prefer when using smart parking solutions? (Select all that apply)",
+                "answer_options": [
+                    "Credit/Debit Card",
+                    "Mobile Wallet (e.g., Apple Pay, Google Pay)",
+                    "Direct Carrier Billing",
+                    "Prepaid Parking Credits",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the availability of parking spots when using smart parking solutions?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How satisfied are you with the availability of parking spots when using smart parking solutions?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for smart parking solutions in your city?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you suggest for smart parking solutions in your city?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

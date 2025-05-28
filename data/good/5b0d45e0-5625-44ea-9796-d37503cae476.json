@@ -1,0 +1,137 @@
+{
+    "survey_id": "5b0d45e0-5625-44ea-9796-d37503cae476",
+    "survey_name": "Customer Satisfaction with Virtual Reality (VR) Museum Tours Survey",
+    "survey_brief": "This survey aims to gather feedback from users who have experienced virtual reality (VR) museum tours to assess satisfaction levels, identify key features that enhance the experience, and uncover areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied were you with your most recent VR museum tour experience?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement of satisfaction levels. Ensure the scale is clearly labeled to avoid confusion.",
+            "scripter_notes": "Single-choice radio buttons. Randomize options to mitigate order bias.",
+            "script": {
+                "question_text": "How satisfied were you with your most recent VR museum tour experience?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features did you find most engaging during your VR museum tour? (Select all that apply)",
+            "answer_options": [
+                "Interactive exhibits",
+                "360-degree views",
+                "Audio guides",
+                "Live guided tours",
+                "Multilingual support",
+                "Social interaction with other visitors",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to understand which features are most valued. Option order should be randomized.",
+            "scripter_notes": "Multi-choice checkboxes. Include an 'Other' option with a text field if needed.",
+            "script": {
+                "question_text": "Which of the following features did you find most engaging during your VR museum tour? (Select all that apply)",
+                "answer_options": [
+                    "Interactive exhibits",
+                    "360-degree views",
+                    "Audio guides",
+                    "Live guided tours",
+                    "Multilingual support",
+                    "Social interaction with other visitors",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest to enhance the VR museum tour experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Use a text box with a character limit of 500.",
+            "scripter_notes": "Open-text field. Enable spell-check and provide a character counter.",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance the VR museum tour experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend VR museum tours to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale to measure likelihood of recommendation. This is a key metric for assessing overall satisfaction.",
+            "scripter_notes": "Single-choice radio buttons. Ensure the scale is displayed horizontally for better readability.",
+            "script": {
+                "question_text": "How likely are you to recommend VR museum tours to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Did you experience any technical issues during your VR museum tour?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Simple yes/no question to identify technical issues. Follow up with Q6 if the answer is 'Yes'.",
+            "scripter_notes": "Single-choice radio buttons. Route to Q6 if 'Yes' is selected.",
+            "script": {
+                "question_text": "Did you experience any technical issues during your VR museum tour?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe the technical issues you encountered.",
+            "answer_options": [],
+            "routing_logic": "Only if Q5 is answered with 'Yes'",
+            "client_notes": "Open-ended question to gather details about technical problems. Use a text box with a character limit of 300.",
+            "scripter_notes": "Open-text field. Display only if Q5 is 'Yes'.",
+            "script": {
+                "question_text": "Please describe the technical issues you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q5 is answered with 'Yes'"
+            }
+        }
+    ]
+}

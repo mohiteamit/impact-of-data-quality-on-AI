@@ -1,0 +1,111 @@
+{
+    "survey_id": "30fb3f90-25e0-4da9-8b04-303ce49e1b29",
+    "survey_name": "Customer Satisfaction with Autonomous Grocery Checkout Systems Survey",
+    "survey_brief": "This survey aims to gather feedback from customers who have used autonomous grocery checkout systems to understand their satisfaction levels, ease of use, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use autonomous grocery checkout systems?",
+            "answer_options": [
+                "Every time I shop",
+                "Often",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure the answer options are randomized to avoid bias. This question helps segment users based on frequency of use.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use autonomous grocery checkout systems?",
+                "answer_options": [
+                    "Every time I shop",
+                    "Often",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What do you like most about using autonomous grocery checkout systems?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'Every time I shop', 'Often', or 'Occasionally' to Q1",
+            "client_notes": "Open-ended question to capture detailed feedback on positive experiences.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What do you like most about using autonomous grocery checkout systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'Every time I shop', 'Often', or 'Occasionally' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced while using autonomous grocery checkout systems?",
+            "answer_options": [
+                "Technical issues (e.g., system errors)",
+                "Difficulty scanning items",
+                "Lack of assistance when needed",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Every time I shop', 'Often', or 'Occasionally' to Q1",
+            "client_notes": "Include an 'Other' option with a text field for additional challenges. This helps identify common pain points.",
+            "scripter_notes": "Use checkboxes for multi-choice selection and a text input field for 'Other' responses.",
+            "script": {
+                "question_text": "What challenges have you faced while using autonomous grocery checkout systems?",
+                "answer_options": [
+                    "Technical issues (e.g., system errors)",
+                    "Difficulty scanning items",
+                    "Lack of assistance when needed",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Every time I shop', 'Often', or 'Occasionally' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the overall experience of using autonomous grocery checkout systems? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Respondents who answered 'Every time I shop', 'Often', or 'Occasionally' to Q1",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the overall experience of using autonomous grocery checkout systems? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Every time I shop', 'Often', or 'Occasionally' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest to enhance the autonomous grocery checkout experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to collect actionable feedback for improvement.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance the autonomous grocery checkout experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

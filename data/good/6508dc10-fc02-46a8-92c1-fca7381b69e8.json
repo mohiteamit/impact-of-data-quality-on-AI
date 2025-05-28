@@ -1,0 +1,129 @@
+{
+    "survey_id": "6508dc10-fc02-46a8-92c1-fca7381b69e8",
+    "survey_name": "Consumer Preferences for Smart Home Air Quality Monitoring Systems Survey",
+    "survey_brief": "This survey aims to gather insights on consumer preferences and satisfaction levels regarding smart home air quality monitoring systems, including features, usability, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with smart home air quality monitoring systems?",
+            "answer_options": [
+                "Very familiar - I own and use one regularly",
+                "Somewhat familiar - I know about them but do not own one",
+                "Not very familiar - I have heard of them but know little",
+                "Not at all familiar - I have never heard of them before"
+            ],
+            "routing_logic": "Always display",
+            "client_notes": "This question helps segment respondents based on their familiarity with the product. Consider using a single-choice radio button for mobile-friendliness.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How familiar are you with smart home air quality monitoring systems?",
+                "answer_options": [
+                    "Very familiar - I own and use one regularly",
+                    "Somewhat familiar - I know about them but do not own one",
+                    "Not very familiar - I have heard of them but know little",
+                    "Not at all familiar - I have never heard of them before"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always display"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features are most important to you when selecting a smart home air quality monitoring system? (Select all that apply)",
+            "answer_options": [
+                "Real-time air quality data",
+                "Mobile app integration",
+                "Alerts/notifications for poor air quality",
+                "Integration with other smart home devices",
+                "Ease of installation",
+                "Battery life/power source options",
+                "Design/aesthetics of the device",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "This multi-choice question helps identify key selling points. Ensure the 'Other' option includes a text field for additional input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with an optional open-text field for 'Other')",
+            "script": {
+                "question_text": "Which features are most important to you when selecting a smart home air quality monitoring system? (Select all that apply)",
+                "answer_options": [
+                    "Real-time air quality data",
+                    "Mobile app integration",
+                    "Alerts/notifications for poor air quality",
+                    "Integration with other smart home devices",
+                    "Ease of installation",
+                    "Battery life/power source options",
+                    "Design/aesthetics of the device",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary reason for considering a smart air quality monitoring system?",
+            "answer_options": [
+                "Health concerns (e.g., allergies, asthma)",
+                "General wellness and air quality awareness",
+                "Home automation/smart home integration",
+                "Curiosity/interest in new technology",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "This question helps understand consumer motivations. Include an open-ended option for 'Other'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons with an optional open-text field for 'Other')",
+            "script": {
+                "question_text": "What is your primary reason for considering a smart air quality monitoring system?",
+                "answer_options": [
+                    "Health concerns (e.g., allergies, asthma)",
+                    "General wellness and air quality awareness",
+                    "Home automation/smart home integration",
+                    "Curiosity/interest in new technology",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns or barriers, if any, have prevented you from purchasing a smart air quality monitoring system?",
+            "answer_options": [],
+            "routing_logic": "Display if Q1 answer is 'Somewhat familiar' or 'Not very familiar'",
+            "client_notes": "This open-ended question captures qualitative feedback on barriers to adoption. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: OPEN_TEXT (text input)",
+            "script": {
+                "question_text": "What concerns or barriers, if any, have prevented you from purchasing a smart air quality monitoring system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q1 answer is 'Somewhat familiar' or 'Not very familiar'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to purchase a smart air quality monitoring system in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Always display",
+            "client_notes": "This question gauges purchase intent. Use a single-choice Likert scale for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to purchase a smart air quality monitoring system in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always display"
+            }
+        }
+    ]
+}

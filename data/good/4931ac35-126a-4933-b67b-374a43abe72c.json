@@ -1,0 +1,191 @@
+{
+    "survey_id": "4931ac35-126a-4933-b67b-374a43abe72c",
+    "survey_name": "Adoption of AI Tools in Academic Research Survey",
+    "survey_brief": "This survey aims to understand the adoption, usage patterns, and perceptions of AI-powered tools among academic researchers across various disciplines.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "What is your primary academic discipline?",
+            "answer_options": [
+                "Natural Sciences",
+                "Engineering",
+                "Social Sciences",
+                "Humanities",
+                "Medical/Health Sciences",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice dropdown for mobile-friendliness. Include 'Other' as an open-text follow-up if selected.",
+            "scripter_notes": "Field type: Single-choice dropdown with conditional open-text for 'Other'",
+            "script": {
+                "question_text": "What is your primary academic discipline?",
+                "answer_options": [
+                    "Natural Sciences",
+                    "Engineering",
+                    "Social Sciences",
+                    "Humanities",
+                    "Medical/Health Sciences",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which AI-powered tools do you currently use for academic research? (Select all that apply)",
+            "answer_options": [
+                "Literature discovery/recommendation systems",
+                "Automated citation managers",
+                "Data analysis tools",
+                "Automated transcription services",
+                "Plagiarism detection software",
+                "Research writing assistants",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Display as checkboxes with 'None of the above' as an exclusive option",
+            "scripter_notes": "Field type: Multi-choice checkboxes with validation to prevent 'None' + other selections",
+            "script": {
+                "question_text": "Which AI-powered tools do you currently use for academic research? (Select all that apply)",
+                "answer_options": [
+                    "Literature discovery/recommendation systems",
+                    "Automated citation managers",
+                    "Data analysis tools",
+                    "Automated transcription services",
+                    "Plagiarism detection software",
+                    "Research writing assistants",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On average, how many hours per week do you use AI tools for research-related work?",
+            "answer_options": [
+                "Less than 1 hour",
+                "1-5 hours",
+                "6-10 hours",
+                "11-15 hours",
+                "More than 15 hours"
+            ],
+            "routing_logic": "If Q2 does NOT equal 'None of the above'",
+            "client_notes": "Use a radio button scale for clear visual hierarchy",
+            "scripter_notes": "Field type: Radio buttons with vertical layout",
+            "script": {
+                "question_text": "On average, how many hours per week do you use AI tools for research-related work?",
+                "answer_options": [
+                    "Less than 1 hour",
+                    "1-5 hours",
+                    "6-10 hours",
+                    "11-15 hours",
+                    "More than 15 hours"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q2 does NOT equal 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What are the main barriers preventing you from using AI tools in your research?",
+            "answer_options": [
+                "Lack of awareness about available tools",
+                "Concerns about accuracy/reliability",
+                "Ethical concerns",
+                "Institutional restrictions",
+                "Steep learning curve",
+                "Cost constraints",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q2 equals 'None of the above'",
+            "client_notes": "Multi-select with 'Other' triggering open text",
+            "scripter_notes": "Field type: Multi-choice checkboxes with conditional open-text",
+            "script": {
+                "question_text": "What are the main barriers preventing you from using AI tools in your research?",
+                "answer_options": [
+                    "Lack of awareness about available tools",
+                    "Concerns about accuracy/reliability",
+                    "Ethical concerns",
+                    "Institutional restrictions",
+                    "Steep learning curve",
+                    "Cost constraints",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q2 equals 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Briefly describe how AI tools have most impacted your research workflow (e.g., time savings, new capabilities, challenges faced).",
+            "answer_options": [],
+            "routing_logic": "If Q3 is answered",
+            "client_notes": "5-line text box with character limit (500 chars)",
+            "scripter_notes": "Field type: Open text with input validation",
+            "script": {
+                "question_text": "Briefly describe how AI tools have most impacted your research workflow (e.g., time savings, new capabilities, challenges faced).",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q3 is answered"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How concerned are you about potential biases in AI research tools?",
+            "answer_options": [
+                "Not at all concerned",
+                "Slightly concerned",
+                "Moderately concerned",
+                "Very concerned",
+                "Extremely concerned"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "5-point Likert scale with neutral midpoint",
+            "scripter_notes": "Field type: Radio button matrix",
+            "script": {
+                "question_text": "How concerned are you about potential biases in AI research tools?",
+                "answer_options": [
+                    "Not at all concerned",
+                    "Slightly concerned",
+                    "Moderately concerned",
+                    "Very concerned",
+                    "Extremely concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Which institutional support would most encourage your adoption of AI research tools? (Select up to 3)",
+            "answer_options": [
+                "Training workshops",
+                "Technical support staff",
+                "Subsidized tool access",
+                "Ethical use guidelines",
+                "Peer learning groups",
+                "Institutional licenses",
+                "Research computing infrastructure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a ranking question format with drag-and-drop for desktop, numbered selection for mobile",
+            "scripter_notes": "Field type: Multi-choice with max selection validation (3)",
+            "script": {
+                "question_text": "Which institutional support would most encourage your adoption of AI research tools? (Select up to 3)",
+                "answer_options": [
+                    "Training workshops",
+                    "Technical support staff",
+                    "Subsidized tool access",
+                    "Ethical use guidelines",
+                    "Peer learning groups",
+                    "Institutional licenses",
+                    "Research computing infrastructure"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

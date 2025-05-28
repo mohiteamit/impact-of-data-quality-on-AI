@@ -1,0 +1,123 @@
+{
+    "survey_id": "92889cf5-70d2-49f9-ae5f-ba48c92c3cde",
+    "survey_name": "Customer Satisfaction with Urban Bike Sharing Programs Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction levels with urban bike sharing programs, focusing on ease of use, availability, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use urban bike sharing programs in a typical month?",
+            "answer_options": [
+                "Never",
+                "1-3 times",
+                "4-6 times",
+                "7-10 times",
+                "More than 10 times"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use urban bike sharing programs in a typical month?",
+                "answer_options": [
+                    "Never",
+                    "1-3 times",
+                    "4-6 times",
+                    "7-10 times",
+                    "More than 10 times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons you use urban bike sharing programs? (Select all that apply)",
+            "answer_options": [
+                "Convenience",
+                "Cost-effectiveness",
+                "Environmental benefits",
+                "Health and fitness",
+                "Avoiding traffic",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected '1-3 times' or more in Q1",
+            "client_notes": "Use checkboxes for multi-choice selection. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Enable 'Other' option with open-text follow-up.",
+            "script": {
+                "question_text": "What are the primary reasons you use urban bike sharing programs? (Select all that apply)",
+                "answer_options": [
+                    "Convenience",
+                    "Cost-effectiveness",
+                    "Environmental benefits",
+                    "Health and fitness",
+                    "Avoiding traffic",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected '1-3 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of bikes at stations when you need them?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected '1-3 times' or more in Q1",
+            "client_notes": "Use a Likert scale with radio buttons for single-choice selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the availability of bikes at stations when you need them?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected '1-3 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would enhance your experience with urban bike sharing programs?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to capture qualitative feedback.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would enhance your experience with urban bike sharing programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your city's bike sharing program to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you recommend your city's bike sharing program to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

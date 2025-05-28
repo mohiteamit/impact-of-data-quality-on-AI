@@ -1,0 +1,129 @@
+{
+    "survey_id": "bf728225-c2e5-4237-bfeb-cd0f0cb9d0c3",
+    "survey_name": "Customer Satisfaction with AI-Powered Personal Finance Assistants Survey",
+    "survey_brief": "This survey aims to gather feedback from users of AI-powered personal finance assistants to understand their satisfaction levels, feature preferences, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use an AI-powered personal finance assistant?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "This is my first time"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "This helps segment users based on engagement frequency. Consider adding a follow-up question for first-time users to understand their initial experience.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "How often do you use an AI-powered personal finance assistant?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of the AI-powered personal finance assistant do you find most useful? (Select all that apply)",
+            "answer_options": [
+                "Budgeting recommendations",
+                "Expense tracking",
+                "Investment insights",
+                "Bill payment reminders",
+                "Credit score monitoring",
+                "Financial goal setting",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Multi-choice question to prioritize feature development. Ensure 'Other' option includes a text field for detailed responses.",
+            "scripter_notes": "Field type: Checkbox (multi-choice) with an optional text input for 'Other'",
+            "script": {
+                "question_text": "Which features of the AI-powered personal finance assistant do you find most useful? (Select all that apply)",
+                "answer_options": [
+                    "Budgeting recommendations",
+                    "Expense tracking",
+                    "Investment insights",
+                    "Bill payment reminders",
+                    "Credit score monitoring",
+                    "Financial goal setting",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of the financial advice provided by the AI assistant?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "5-point Likert scale to gauge satisfaction with AI accuracy. Consider benchmarking against industry standards.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of the financial advice provided by the AI assistant?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the AI-powered personal finance assistant?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Useful for identifying unmet needs or pain points.",
+            "scripter_notes": "Field type: Open text",
+            "script": {
+                "question_text": "What improvements would you suggest for the AI-powered personal finance assistant?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend this AI-powered personal finance assistant to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "Not sure",
+                "Probably not",
+                "Definitely not"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Measures Net Promoter Score (NPS). Responses can be categorized into promoters, passives, and detractors.",
+            "scripter_notes": "Field type: Radio button (single-choice)",
+            "script": {
+                "question_text": "Would you recommend this AI-powered personal finance assistant to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "Not sure",
+                    "Probably not",
+                    "Definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

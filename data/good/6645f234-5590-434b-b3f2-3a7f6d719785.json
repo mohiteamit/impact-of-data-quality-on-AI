@@ -1,0 +1,131 @@
+{
+    "survey_id": "6645f234-5590-434b-b3f2-3a7f6d719785",
+    "survey_name": "Customer Satisfaction with AI-Powered Customer Support Chatbots Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction levels with AI-powered chatbots used for customer support across various industries.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you interact with AI-powered customer support chatbots?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How often do you interact with AI-powered customer support chatbots?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following industries have you used AI-powered chatbots for customer support? (Select all that apply)",
+            "answer_options": [
+                "Retail/E-commerce",
+                "Banking/Finance",
+                "Telecommunications",
+                "Healthcare",
+                "Travel/Hospitality",
+                "Other"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Use multi-choice checkboxes to allow multiple selections.",
+            "scripter_notes": "Field type: MULTI_CHOICE",
+            "script": {
+                "question_text": "Which of the following industries have you used AI-powered chatbots for customer support? (Select all that apply)",
+                "answer_options": [
+                    "Retail/E-commerce",
+                    "Banking/Finance",
+                    "Telecommunications",
+                    "Healthcare",
+                    "Travel/Hospitality",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the overall experience of using AI-powered customer support chatbots? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale for better measurement of satisfaction levels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the overall experience of using AI-powered customer support chatbots? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What do you believe are the biggest advantages of using AI-powered customer support chatbots? (Select up to 3)",
+            "answer_options": [
+                "24/7 Availability",
+                "Quick Response Times",
+                "Handles Simple Queries Efficiently",
+                "Reduces Wait Times",
+                "Consistent Answers",
+                "Multilingual Support",
+                "Other"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Limit selection to 3 options to prioritize top advantages.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max selection of 3",
+            "script": {
+                "question_text": "What do you believe are the biggest advantages of using AI-powered customer support chatbots? (Select up to 3)",
+                "answer_options": [
+                    "24/7 Availability",
+                    "Quick Response Times",
+                    "Handles Simple Queries Efficiently",
+                    "Reduces Wait Times",
+                    "Consistent Answers",
+                    "Multilingual Support",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for AI-powered customer support chatbots?",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 answer is not 'Never'",
+            "client_notes": "Open-ended to capture qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-powered customer support chatbots?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 answer is not 'Never'"
+            }
+        }
+    ]
+}

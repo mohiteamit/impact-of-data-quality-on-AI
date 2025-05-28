@@ -1,0 +1,123 @@
+{
+    "survey_id": "1642eb75-345c-408a-9d7f-3db087087dc4",
+    "survey_name": "Employee Satisfaction with Digital Wellness Programs Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with digital wellness programs offered by the company, including mental health apps, fitness trackers, and online wellness resources.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the digital wellness programs offered by your company?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not familiar at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale to measure familiarity levels. Ensure options are clearly distinguishable.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How familiar are you with the digital wellness programs offered by your company?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which digital wellness programs have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Mental health apps (e.g., Headspace, Calm)",
+                "Fitness trackers (e.g., Fitbit, Apple Watch)",
+                "Online wellness courses (e.g., nutrition, mindfulness)",
+                "Virtual fitness classes",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-select. Include an option for non-users.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which digital wellness programs have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Mental health apps (e.g., Headspace, Calm)",
+                    "Fitness trackers (e.g., Fitbit, Apple Watch)",
+                    "Online wellness courses (e.g., nutrition, mindfulness)",
+                    "Virtual fitness classes",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the digital wellness programs provided by your company?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected any option other than 'None of the above' in Q2",
+            "client_notes": "Use a Likert scale for satisfaction. Ensure the question is skipped if no programs were used.",
+            "scripter_notes": "Field type: radio button (single-choice). Routing logic: Display only if Q2 != 'None of the above'.",
+            "script": {
+                "question_text": "How satisfied are you with the digital wellness programs provided by your company?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any option other than 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the company's digital wellness programs?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Keep the text box large enough for detailed responses.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you suggest for the company's digital wellness programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend the company's digital wellness programs to a colleague?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Respondents who selected any option other than 'None of the above' in Q2",
+            "client_notes": "Use a single-choice scale to measure likelihood. Skip if no programs were used.",
+            "scripter_notes": "Field type: radio button (single-choice). Routing logic: Display only if Q2 != 'None of the above'.",
+            "script": {
+                "question_text": "How likely are you to recommend the company's digital wellness programs to a colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any option other than 'None of the above' in Q2"
+            }
+        }
+    ]
+}

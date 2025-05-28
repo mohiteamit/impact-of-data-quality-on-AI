@@ -1,0 +1,123 @@
+{
+    "survey_id": "f4f1e937-4720-4b86-8e4d-dc3b5c6af16b",
+    "survey_name": "Employee Satisfaction with In-Office Fitness Facilities Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the availability, quality, and usage of in-office fitness facilities to improve workplace wellness initiatives.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the in-office fitness facilities?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a single-choice radio button for clear frequency categorization. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How frequently do you use the in-office fitness facilities?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following in-office fitness amenities do you use? (Select all that apply)",
+            "answer_options": [
+                "Treadmills/Cardio machines",
+                "Weightlifting equipment",
+                "Yoga/Pilates space",
+                "Group fitness classes",
+                "Locker rooms/showers",
+                "None of the above"
+            ],
+            "routing_logic": "Shown if Q1 ≠ 'Never'",
+            "client_notes": "Multi-select checkbox format. Include an 'Other' option if open-ended responses are valuable.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes).",
+            "script": {
+                "question_text": "Which of the following in-office fitness amenities do you use? (Select all that apply)",
+                "answer_options": [
+                    "Treadmills/Cardio machines",
+                    "Weightlifting equipment",
+                    "Yoga/Pilates space",
+                    "Group fitness classes",
+                    "Locker rooms/showers",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would encourage you to use the in-office fitness facilities more often?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What improvements would encourage you to use the in-office fitness facilities more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the cleanliness and maintenance of the fitness facilities?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Shown if Q1 ≠ 'Never'",
+            "client_notes": "5-point Likert scale for satisfaction measurement. Randomize scale order to avoid bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and maintenance of the fitness facilities?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you participate in employer-sponsored wellness challenges tied to facility usage?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe, depending on incentives"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Single-choice with a neutral option. Consider follow-up questions for 'Maybe' responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Would you participate in employer-sponsored wellness challenges tied to facility usage?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe, depending on incentives"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

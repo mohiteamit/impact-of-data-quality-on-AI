@@ -1,0 +1,173 @@
+{
+    "survey_id": "e119b620-b831-45dd-8452-74c47f111b3f",
+    "survey_name": "Adoption and Usage of AI-Powered Personal Finance Management Tools Survey",
+    "survey_brief": "This survey aims to understand the adoption rates, usage patterns, and satisfaction levels of AI-powered personal finance management tools among consumers.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Are you currently using any AI-powered personal finance management tools?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "If 'No', skip to Q5.",
+            "client_notes": "Use radio buttons for a clear binary choice. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Are you currently using any AI-powered personal finance management tools?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'No', skip to Q5."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which AI-powered personal finance management tools do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Mint",
+                "You Need a Budget (YNAB)",
+                "Personal Capital",
+                "PocketGuard",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If 'Other (please specify)' is selected, display an open-text field for specification.",
+            "client_notes": "Use checkboxes for multiple selections. Include an open-text field for 'Other'. Ensure readability on all devices.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with conditional open-text field.",
+            "script": {
+                "question_text": "Which AI-powered personal finance management tools do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Mint",
+                    "You Need a Budget (YNAB)",
+                    "Personal Capital",
+                    "PocketGuard",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If 'Other (please specify)' is selected, display an open-text field for specification."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the AI-powered personal finance management tools you currently use?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "None",
+            "client_notes": "Use a Likert scale for satisfaction levels. Ensure the scale is balanced and clear.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the AI-powered personal finance management tools you currently use?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "None"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What features do you find most valuable in AI-powered personal finance management tools? (Select all that apply)",
+            "answer_options": [
+                "Automated budgeting",
+                "Expense tracking",
+                "Investment advice",
+                "Bill reminders",
+                "Credit score monitoring",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If 'Other (please specify)' is selected, display an open-text field for specification.",
+            "client_notes": "Use checkboxes for multiple selections. Include an open-text field for 'Other'.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with conditional open-text field.",
+            "script": {
+                "question_text": "What features do you find most valuable in AI-powered personal finance management tools? (Select all that apply)",
+                "answer_options": [
+                    "Automated budgeting",
+                    "Expense tracking",
+                    "Investment advice",
+                    "Bill reminders",
+                    "Credit score monitoring",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If 'Other (please specify)' is selected, display an open-text field for specification."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you are not using AI-powered personal finance management tools, what are the main reasons? (Select all that apply)",
+            "answer_options": [
+                "Lack of awareness",
+                "Privacy concerns",
+                "Prefer traditional methods",
+                "Too complex to use",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only display if Q1 answer is 'No'.",
+            "client_notes": "Use checkboxes for multiple selections. Include an open-text field for 'Other'.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with conditional open-text field. Conditional display based on Q1.",
+            "script": {
+                "question_text": "If you are not using AI-powered personal finance management tools, what are the main reasons? (Select all that apply)",
+                "answer_options": [
+                    "Lack of awareness",
+                    "Privacy concerns",
+                    "Prefer traditional methods",
+                    "Too complex to use",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only display if Q1 answer is 'No'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What would motivate you to start using AI-powered personal finance management tools? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "Only display if Q1 answer is 'No'.",
+            "client_notes": "Ensure the open-text field is mobile-friendly and allows for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT. Conditional display based on Q1.",
+            "script": {
+                "question_text": "What would motivate you to start using AI-powered personal finance management tools? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only display if Q1 answer is 'No'."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How likely are you to recommend AI-powered personal finance management tools to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Only display if Q1 answer is 'Yes'.",
+            "client_notes": "Use a Likert scale for likelihood levels. Ensure the scale is balanced and clear.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Conditional display based on Q1.",
+            "script": {
+                "question_text": "How likely are you to recommend AI-powered personal finance management tools to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only display if Q1 answer is 'Yes'."
+            }
+        }
+    ]
+}

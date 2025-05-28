@@ -1,0 +1,125 @@
+{
+    "survey_id": "fc7448a6-0982-4ec2-8f74-764ced3ac3b2",
+    "survey_name": "Consumer Preferences for Smart Gardening Technology Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding smart gardening technology, including adoption rates, feature preferences, and barriers to usage.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with smart gardening technology (e.g., smart sprinklers, soil sensors, automated plant care devices)?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Heard of but not familiar",
+                "Not familiar at all"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a radio button scale to ensure single-choice selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How familiar are you with smart gardening technology (e.g., smart sprinklers, soil sensors, automated plant care devices)?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Heard of but not familiar",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following smart gardening features would you find most useful? (Select all that apply)",
+            "answer_options": [
+                "Automated watering systems",
+                "Soil moisture sensors",
+                "Weather-based scheduling",
+                "Plant health monitoring",
+                "Mobile app integration",
+                "Voice assistant compatibility"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use checkboxes for multi-select. Randomize answer options to avoid bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Randomize options.",
+            "script": {
+                "question_text": "Which of the following smart gardening features would you find most useful? (Select all that apply)",
+                "answer_options": [
+                    "Automated watering systems",
+                    "Soil moisture sensors",
+                    "Weather-based scheduling",
+                    "Plant health monitoring",
+                    "Mobile app integration",
+                    "Voice assistant compatibility"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you have not adopted smart gardening technology?",
+            "answer_options": [
+                "High cost",
+                "Lack of awareness",
+                "Prefer traditional gardening methods",
+                "Concerns about technology reliability",
+                "Not applicable (I already use smart gardening technology)"
+            ],
+            "routing_logic": "Appears if Q1 response is 'Heard of but not familiar' or 'Not familiar at all'",
+            "client_notes": "Include an option for respondents who already use the technology. Use radio buttons.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Apply routing logic based on Q1.",
+            "script": {
+                "question_text": "What is the primary reason you have not adopted smart gardening technology?",
+                "answer_options": [
+                    "High cost",
+                    "Lack of awareness",
+                    "Prefer traditional gardening methods",
+                    "Concerns about technology reliability",
+                    "Not applicable (I already use smart gardening technology)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is 'Heard of but not familiar' or 'Not familiar at all'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much would you be willing to spend on smart gardening technology?",
+            "answer_options": [
+                "Less than $50",
+                "$50 - $100",
+                "$100 - $200",
+                "$200 - $300",
+                "More than $300"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a radio button scale. Consider adding a 'Prefer not to answer' option if needed.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How much would you be willing to spend on smart gardening technology?",
+                "answer_options": [
+                    "Less than $50",
+                    "$50 - $100",
+                    "$100 - $200",
+                    "$200 - $300",
+                    "More than $300"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features would you like to see in future smart gardening products?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure text box is mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What additional features would you like to see in future smart gardening products?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

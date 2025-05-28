@@ -1,0 +1,189 @@
+{
+    "survey_id": "beeb7fc0-f1a2-4e8e-aaba-ba51ab9bba6e",
+    "survey_name": "Workplace AI Tool Adoption and Satisfaction Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the adoption and satisfaction levels of AI-powered tools in the workplace, identifying pain points and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following AI-powered tools do you currently use in your daily work?",
+            "answer_options": [
+                "AI-powered meeting transcription tools",
+                "AI-powered email assistants",
+                "AI-powered data analysis tools",
+                "AI-powered project management tools",
+                "AI-powered HR/payroll assistants",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Recommended to use checkboxes for multiple selections. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "Which of the following AI-powered tools do you currently use in your daily work?",
+                "answer_options": [
+                    "AI-powered meeting transcription tools",
+                    "AI-powered email assistants",
+                    "AI-powered data analysis tools",
+                    "AI-powered project management tools",
+                    "AI-powered HR/payroll assistants",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the AI tools available in your workplace?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (do not use AI tools)"
+            ],
+            "routing_logic": "Appears for all respondents who selected any tool in Q1 (except 'None of the above')",
+            "client_notes": "Use radio buttons with a clear 5-point Likert scale. Include N/A option for non-users.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How satisfied are you with the AI tools available in your workplace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (do not use AI tools)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who selected any tool in Q1 (except 'None of the above')"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary benefit you experience from using AI tools at work?",
+            "answer_options": [
+                "Time savings",
+                "Improved accuracy",
+                "Reduced workload",
+                "Better decision-making",
+                "Enhanced collaboration",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Very satisfied' or 'Somewhat satisfied' in Q2",
+            "client_notes": "Include an 'Other' field with open-text option. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with open-text follow-up for 'Other'",
+            "script": {
+                "question_text": "What is the primary benefit you experience from using AI tools at work?",
+                "answer_options": [
+                    "Time savings",
+                    "Improved accuracy",
+                    "Reduced workload",
+                    "Better decision-making",
+                    "Enhanced collaboration",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Very satisfied' or 'Somewhat satisfied' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced when using AI tools at work? (Select all that apply)",
+            "answer_options": [
+                "Technical glitches",
+                "Steep learning curve",
+                "Limited functionality",
+                "Integration issues with other software",
+                "Privacy/security concerns",
+                "Output inaccuracy",
+                "None"
+            ],
+            "routing_logic": "Appears for all respondents who selected any tool in Q1 (except 'None of the above')",
+            "client_notes": "Use checkboxes with 'None' as an explicit option. Allow multiple selections.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "What challenges have you faced when using AI tools at work? (Select all that apply)",
+                "answer_options": [
+                    "Technical glitches",
+                    "Steep learning curve",
+                    "Limited functionality",
+                    "Integration issues with other software",
+                    "Privacy/security concerns",
+                    "Output inaccuracy",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents who selected any tool in Q1 (except 'None of the above')"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What types of AI tools would you like to see implemented in your workplace that aren't currently available?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-text field with character limit of 500. Useful for identifying unmet needs.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What types of AI tools would you like to see implemented in your workplace that aren't currently available?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How adequate was the training provided for AI tools in your workplace?",
+            "answer_options": [
+                "Very adequate",
+                "Somewhat adequate",
+                "Neutral",
+                "Somewhat inadequate",
+                "Very inadequate",
+                "No training provided"
+            ],
+            "routing_logic": "Appears for all respondents who selected any tool in Q1 (except 'None of the above')",
+            "client_notes": "5-point scale with explicit 'No training' option. Helps assess training needs.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How adequate was the training provided for AI tools in your workplace?",
+                "answer_options": [
+                    "Very adequate",
+                    "Somewhat adequate",
+                    "Neutral",
+                    "Somewhat inadequate",
+                    "Very inadequate",
+                    "No training provided"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who selected any tool in Q1 (except 'None of the above')"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Would you recommend expanding AI tool usage in your workplace?",
+            "answer_options": [
+                "Yes, enthusiastically",
+                "Yes, with some reservations",
+                "Neutral",
+                "No, unless significant improvements are made",
+                "No, not under any circumstances"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "5-point recommendation scale. Helps gauge overall sentiment.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "Would you recommend expanding AI tool usage in your workplace?",
+                "answer_options": [
+                    "Yes, enthusiastically",
+                    "Yes, with some reservations",
+                    "Neutral",
+                    "No, unless significant improvements are made",
+                    "No, not under any circumstances"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

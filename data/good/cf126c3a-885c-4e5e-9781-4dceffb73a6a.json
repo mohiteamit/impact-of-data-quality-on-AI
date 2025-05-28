@@ -1,0 +1,123 @@
+{
+    "survey_id": "cf126c3a-885c-4e5e-9781-4dceffb73a6a",
+    "survey_name": "Employee Satisfaction with Corporate Social Responsibility (CSR) Programs Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the effectiveness and engagement with the company's Corporate Social Responsibility (CSR) programs to enhance employee participation and satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the company's current CSR initiatives?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use a single-choice radio button for clarity. Keep the scale balanced to avoid bias.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How familiar are you with the company's current CSR initiatives?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following CSR activities have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Volunteering events",
+                "Charity fundraising",
+                "Sustainability initiatives (e.g., recycling programs)",
+                "Diversity and inclusion programs",
+                "None of the above"
+            ],
+            "routing_logic": "Display if Q1 answer is not 'Not at all familiar'",
+            "client_notes": "Allow multiple selections. Include an option for non-participation.",
+            "scripter_notes": "Field type: checkboxes (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following CSR activities have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Volunteering events",
+                    "Charity fundraising",
+                    "Sustainability initiatives (e.g., recycling programs)",
+                    "Diversity and inclusion programs",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 answer is not 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the company's CSR programs?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display if Q1 answer is not 'Not at all familiar'",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure neutral option is included.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the company's CSR programs?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 answer is not 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What motivates you to participate in CSR activities?",
+            "answer_options": [
+                "Personal values alignment",
+                "Team-building opportunities",
+                "Company incentives/rewards",
+                "Peer influence",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q2 answer is not 'None of the above'",
+            "client_notes": "Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: radio button with an optional open-text field (SINGLE_CHOICE with conditional OPEN_TEXT).",
+            "script": {
+                "question_text": "What motivates you to participate in CSR activities?",
+                "answer_options": [
+                    "Personal values alignment",
+                    "Team-building opportunities",
+                    "Company incentives/rewards",
+                    "Peer influence",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q2 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What suggestions do you have to improve the company's CSR programs?",
+            "answer_options": [],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use an open-text field to gather qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What suggestions do you have to improve the company's CSR programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always displayed"
+            }
+        }
+    ]
+}

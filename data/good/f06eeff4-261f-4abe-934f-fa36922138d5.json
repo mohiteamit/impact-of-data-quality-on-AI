@@ -1,0 +1,127 @@
+{
+    "survey_id": "f06eeff4-261f-4abe-934f-fa36922138d5",
+    "survey_name": "Public Library Digital Resource Usage Survey",
+    "survey_brief": "This survey aims to understand how patrons utilize digital resources provided by public libraries, including e-books, online databases, and virtual programming, to improve service offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you access digital resources (e-books, audiobooks, databases) from your public library?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point frequency scale for clarity. Ensure mobile-friendly radio buttons.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you access digital resources (e-books, audiobooks, databases) from your public library?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of digital resources do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "E-books",
+                "Audiobooks",
+                "Online research databases (e.g., JSTOR, ProQuest)",
+                "Streaming films/music",
+                "Virtual library programs (e.g., webinars, book clubs)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "Allow multi-selection with an optional open-field 'Other'.",
+            "scripter_notes": "Field type: multi-choice checkboxes with an open-text option for 'Other'.",
+            "script": {
+                "question_text": "Which types of digital resources do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "E-books",
+                    "Audiobooks",
+                    "Online research databases (e.g., JSTOR, ProQuest)",
+                    "Streaming films/music",
+                    "Virtual library programs (e.g., webinars, book clubs)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers, if any, prevent you from using digital library resources more often?",
+            "answer_options": [
+                "Lack of awareness about available resources",
+                "Difficulty navigating library websites/apps",
+                "Limited selection in preferred genres/languages",
+                "Technical issues (e.g., device compatibility)",
+                "No barriers"
+            ],
+            "routing_logic": "Respondents who selected anything other than 'Never' in Q1",
+            "client_notes": "Include an open-text field for additional barriers not listed.",
+            "scripter_notes": "Field type: multi-choice checkboxes with optional open-text comment.",
+            "script": {
+                "question_text": "What barriers, if any, prevent you from using digital library resources more often?",
+                "answer_options": [
+                    "Lack of awareness about available resources",
+                    "Difficulty navigating library websites/apps",
+                    "Limited selection in preferred genres/languages",
+                    "Technical issues (e.g., device compatibility)",
+                    "No barriers"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected anything other than 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the variety of e-books available through your library?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'E-books' in Q2",
+            "client_notes": "Use a 5-point Likert scale for consistency.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the variety of e-books available through your library?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'E-books' in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional digital resources or services would you like your library to offer?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 250 characters.",
+            "scripter_notes": "Field type: open-text with character limit.",
+            "script": {
+                "question_text": "What additional digital resources or services would you like your library to offer?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,145 @@
+{
+    "survey_id": "b3c8ab26-438e-4dbc-a8f4-70a11b2b7ed6",
+    "survey_name": "Employee Productivity in Hybrid Work Environments Survey",
+    "survey_brief": "This survey aims to understand employee productivity and satisfaction levels in hybrid work environments, focusing on the effectiveness of remote and in-office work arrangements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "What is your current work arrangement?",
+            "answer_options": [
+                "Fully remote",
+                "Hybrid (part remote, part in-office)",
+                "Fully in-office"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Ensure this is the first question to segment respondents early in the survey.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "What is your current work arrangement?",
+                "answer_options": [
+                    "Fully remote",
+                    "Hybrid (part remote, part in-office)",
+                    "Fully in-office"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How many days per week do you typically work remotely?",
+            "answer_options": [
+                "0 days",
+                "1-2 days",
+                "3-4 days",
+                "5 or more days"
+            ],
+            "routing_logic": "Appears only if respondent selected 'Hybrid' in Q1.",
+            "client_notes": "This helps quantify the hybrid work balance.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How many days per week do you typically work remotely?",
+                "answer_options": [
+                    "0 days",
+                    "1-2 days",
+                    "3-4 days",
+                    "5 or more days"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if respondent selected 'Hybrid' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What tools or technologies do you use to stay productive while working remotely? (Select all that apply)",
+            "answer_options": [
+                "Video conferencing (e.g., Zoom, Teams)",
+                "Project management software (e.g., Asana, Trello)",
+                "Collaboration tools (e.g., Slack, Microsoft Teams)",
+                "Cloud storage (e.g., Google Drive, Dropbox)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if respondent selected 'Fully remote' or 'Hybrid' in Q1.",
+            "client_notes": "This helps identify which tools are most valued for remote work.",
+            "scripter_notes": "Use checkboxes for multi-choice selection and include an 'Other' open-text option.",
+            "script": {
+                "question_text": "What tools or technologies do you use to stay productive while working remotely? (Select all that apply)",
+                "answer_options": [
+                    "Video conferencing (e.g., Zoom, Teams)",
+                    "Project management software (e.g., Asana, Trello)",
+                    "Collaboration tools (e.g., Slack, Microsoft Teams)",
+                    "Cloud storage (e.g., Google Drive, Dropbox)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if respondent selected 'Fully remote' or 'Hybrid' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate your overall productivity in a hybrid work environment compared to a fully in-office environment?",
+            "answer_options": [
+                "Much more productive",
+                "Slightly more productive",
+                "About the same",
+                "Slightly less productive",
+                "Much less productive"
+            ],
+            "routing_logic": "Appears only if respondent selected 'Hybrid' in Q1.",
+            "client_notes": "Use a balanced scale to capture nuanced responses.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How would you rate your overall productivity in a hybrid work environment compared to a fully in-office environment?",
+                "answer_options": [
+                    "Much more productive",
+                    "Slightly more productive",
+                    "About the same",
+                    "Slightly less productive",
+                    "Much less productive"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if respondent selected 'Hybrid' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges do you face when working remotely? (Select all that apply)",
+            "answer_options": [
+                "Communication barriers",
+                "Distractions at home",
+                "Lack of access to resources",
+                "Difficulty separating work and personal life",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if respondent selected 'Fully remote' or 'Hybrid' in Q1.",
+            "client_notes": "Helps identify pain points to address in remote work policies.",
+            "scripter_notes": "Use checkboxes for multi-choice selection and include an 'Other' open-text option.",
+            "script": {
+                "question_text": "What challenges do you face when working remotely? (Select all that apply)",
+                "answer_options": [
+                    "Communication barriers",
+                    "Distractions at home",
+                    "Lack of access to resources",
+                    "Difficulty separating work and personal life",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if respondent selected 'Fully remote' or 'Hybrid' in Q1."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional support or resources would improve your productivity in a hybrid work environment?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended to capture unique suggestions not covered in previous questions.",
+            "scripter_notes": "Use open-text field for free-form responses.",
+            "script": {
+                "question_text": "What additional support or resources would improve your productivity in a hybrid work environment?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

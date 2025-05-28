@@ -1,0 +1,125 @@
+{
+    "survey_id": "67e11cd5-2ce4-4034-b149-d26964a40dd3",
+    "survey_name": "Sustainable Office Supply Preferences Survey",
+    "survey_brief": "This survey aims to understand employee preferences and behaviors regarding sustainable office supplies in corporate environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use sustainable office supplies (e.g., recycled paper, biodegradable pens) at work?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question is always shown first.",
+            "client_notes": "Use a simple frequency scale to gauge adoption rates. Ensure mobile-friendly radio buttons.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you use sustainable office supplies (e.g., recycled paper, biodegradable pens) at work?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is always shown first."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following sustainable office supplies do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Recycled paper",
+                "Biodegradable pens/pencils",
+                "Refillable ink cartridges",
+                "Eco-friendly staplers/tape",
+                "None of the above"
+            ],
+            "routing_logic": "Only shown if Q1 is not 'Never'.",
+            "client_notes": "Multi-choice allows respondents to indicate specific preferences. Limit to 5 options for clarity.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes).",
+            "script": {
+                "question_text": "Which of the following sustainable office supplies do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Recycled paper",
+                    "Biodegradable pens/pencils",
+                    "Refillable ink cartridges",
+                    "Eco-friendly staplers/tape",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influence your choice to use sustainable office supplies?",
+            "answer_options": [
+                "Environmental concerns",
+                "Company policy",
+                "Personal values",
+                "Cost/availability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only shown if Q1 is not 'Never'.",
+            "client_notes": "Include an 'Other' option with a text field for additional insights.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with an optional open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "What factors influence your choice to use sustainable office supplies?",
+                "answer_options": [
+                    "Environmental concerns",
+                    "Company policy",
+                    "Personal values",
+                    "Cost/availability",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any challenges you face when trying to use sustainable office supplies.",
+            "answer_options": [],
+            "routing_logic": "Optional follow-up for Q3 if 'Other' is selected.",
+            "client_notes": "Open-ended responses can reveal barriers (e.g., budget, accessibility).",
+            "scripter_notes": "Field type: OPEN_TEXT (textbox).",
+            "script": {
+                "question_text": "Please describe any challenges you face when trying to use sustainable office supplies.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional follow-up for Q3 if 'Other' is selected."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend sustainable office supplies to colleagues? (Scale: 1-5, where 1 = Not at all likely, 5 = Extremely likely)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Shown to all respondents.",
+            "client_notes": "Use a Likert scale for measurable sentiment analysis.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How likely are you to recommend sustainable office supplies to colleagues? (Scale: 1-5, where 1 = Not at all likely, 5 = Extremely likely)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown to all respondents."
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "survey_id": "9a5f8ad8-4a62-42cf-80a3-9f418ac8f404",
+    "survey_name": "Employee Satisfaction with Workplace Augmented Reality (AR) Training Tools Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the effectiveness, usability, and satisfaction with augmented reality (AR) training tools implemented in the workplace.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use AR training tools in your workplace?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Consider using a frequency scale to gauge adoption rates. Ensure options cover all possible usage patterns.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How frequently do you use AR training tools in your workplace?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AR training tools have you used? (Select all that apply)",
+            "answer_options": [
+                "AR Safety Training Modules",
+                "AR Equipment Operation Guides",
+                "AR Customer Interaction Simulations",
+                "AR Onboarding Programs",
+                "None of the above"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'",
+            "client_notes": "This helps identify which tools are most commonly used. Allows multiple selections.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "Which of the following AR training tools have you used? (Select all that apply)",
+                "answer_options": [
+                    "AR Safety Training Modules",
+                    "AR Equipment Operation Guides",
+                    "AR Customer Interaction Simulations",
+                    "AR Onboarding Programs",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the ease of use of the AR training tools?",
+            "answer_options": [
+                "Very Easy",
+                "Somewhat Easy",
+                "Neutral",
+                "Somewhat Difficult",
+                "Very Difficult"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'",
+            "client_notes": "Use a Likert scale to measure usability. Ensure balance in positive and negative options.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How would you rate the ease of use of the AR training tools?",
+                "answer_options": [
+                    "Very Easy",
+                    "Somewhat Easy",
+                    "Neutral",
+                    "Somewhat Difficult",
+                    "Very Difficult"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the AR training tools?",
+            "answer_options": [],
+            "routing_logic": "Shown if Q1 is not 'Never'",
+            "client_notes": "Open-ended to capture qualitative feedback. Useful for identifying pain points and innovation opportunities.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would you suggest for the AR training tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have AR training tools improved your learning or job performance?",
+            "answer_options": [
+                "Significantly Improved",
+                "Somewhat Improved",
+                "No Change",
+                "Somewhat Worsened",
+                "Significantly Worsened"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'",
+            "client_notes": "Assess impact on performance. Use a balanced scale to measure both positive and negative effects.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Have AR training tools improved your learning or job performance?",
+                "answer_options": [
+                    "Significantly Improved",
+                    "Somewhat Improved",
+                    "No Change",
+                    "Somewhat Worsened",
+                    "Significantly Worsened"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'"
+            }
+        }
+    ]
+}

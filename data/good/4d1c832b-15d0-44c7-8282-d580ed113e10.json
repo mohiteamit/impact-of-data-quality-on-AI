@@ -1,0 +1,125 @@
+{
+    "survey_id": "4d1c832b-15d0-44c7-8282-d580ed113e10",
+    "survey_name": "Consumer Preferences for Smart Water Bottles Survey",
+    "survey_brief": "This survey aims to gather insights on consumer preferences and usage patterns related to smart water bottles, including features, pricing, and brand awareness.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently own a smart water bottle?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a simple yes/no question to segment respondents effectively.",
+            "scripter_notes": "Single-choice radio button question.",
+            "script": {
+                "question_text": "Do you currently own a smart water bottle?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features are most important to you in a smart water bottle? (Select up to 3)",
+            "answer_options": [
+                "Hydration tracking",
+                "Temperature control",
+                "Reminder notifications",
+                "Battery life",
+                "Bluetooth connectivity",
+                "Mobile app integration",
+                "Design/aesthetics",
+                "Durability"
+            ],
+            "routing_logic": "If Q1 is 'Yes' or 'No'",
+            "client_notes": "Multi-choice question to identify priority features. Limit selections to 3 for clearer insights.",
+            "scripter_notes": "Multi-choice checkbox question with a maximum of 3 selections.",
+            "script": {
+                "question_text": "Which features are most important to you in a smart water bottle? (Select up to 3)",
+                "answer_options": [
+                    "Hydration tracking",
+                    "Temperature control",
+                    "Reminder notifications",
+                    "Battery life",
+                    "Bluetooth connectivity",
+                    "Mobile app integration",
+                    "Design/aesthetics",
+                    "Durability"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 is 'Yes' or 'No'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the maximum price you would be willing to pay for a smart water bottle?",
+            "answer_options": [
+                "Under $30",
+                "$30 - $50",
+                "$50 - $70",
+                "$70 - $90",
+                "Over $90"
+            ],
+            "routing_logic": "If Q1 is 'No'",
+            "client_notes": "Price sensitivity question to gauge acceptable price ranges. Ensure options cover typical market prices.",
+            "scripter_notes": "Single-choice radio button question.",
+            "script": {
+                "question_text": "What is the maximum price you would be willing to pay for a smart water bottle?",
+                "answer_options": [
+                    "Under $30",
+                    "$30 - $50",
+                    "$50 - $70",
+                    "$70 - $90",
+                    "Over $90"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 is 'No'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What brands of smart water bottles are you familiar with?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture brand awareness without leading options.",
+            "scripter_notes": "Open-text field for free response.",
+            "script": {
+                "question_text": "What brands of smart water bottles are you familiar with?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your current smart water bottle to a friend or colleague?",
+            "answer_options": [
+                "Very unlikely",
+                "Unlikely",
+                "Neutral",
+                "Likely",
+                "Very likely"
+            ],
+            "routing_logic": "If Q1 is 'Yes'",
+            "client_notes": "Use a standard Likert scale for measuring recommendation likelihood.",
+            "scripter_notes": "Single-choice radio button question.",
+            "script": {
+                "question_text": "How likely are you to recommend your current smart water bottle to a friend or colleague?",
+                "answer_options": [
+                    "Very unlikely",
+                    "Unlikely",
+                    "Neutral",
+                    "Likely",
+                    "Very likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 is 'Yes'"
+            }
+        }
+    ]
+}

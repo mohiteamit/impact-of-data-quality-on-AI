@@ -1,0 +1,129 @@
+{
+    "survey_id": "0287dd4b-61c8-415d-b980-6cf90ffc48b7",
+    "survey_name": "Urban Bicycle Commuting Habits Survey",
+    "survey_brief": "This survey aims to understand the commuting habits, preferences, and challenges of urban bicycle commuters to improve infrastructure and services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you commute by bicycle?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once per week",
+                "Only seasonally"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you commute by bicycle?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once per week",
+                    "Only seasonally"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for commuting by bicycle? (Select all that apply)",
+            "answer_options": [
+                "Health and fitness",
+                "Environmental concerns",
+                "Cost savings",
+                "Avoiding traffic congestion",
+                "Convenience",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with an open-text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What are your primary reasons for commuting by bicycle? (Select all that apply)",
+                "answer_options": [
+                    "Health and fitness",
+                    "Environmental concerns",
+                    "Cost savings",
+                    "Avoiding traffic congestion",
+                    "Convenience",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the approximate distance of your typical bicycle commute (one way)?",
+            "answer_options": [
+                "Less than 1 mile",
+                "1-3 miles",
+                "3-5 miles",
+                "5-10 miles",
+                "More than 10 miles"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Less than once per week' or 'Only seasonally'",
+            "client_notes": "Display logic ensures relevance. Use a single-choice scale for distance ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with conditional display",
+            "script": {
+                "question_text": "What is the approximate distance of your typical bicycle commute (one way)?",
+                "answer_options": [
+                    "Less than 1 mile",
+                    "1-3 miles",
+                    "3-5 miles",
+                    "5-10 miles",
+                    "More than 10 miles"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Less than once per week' or 'Only seasonally'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe the biggest challenge you face when commuting by bicycle.",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-text field to capture qualitative insights. Limit to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit",
+            "script": {
+                "question_text": "Describe the biggest challenge you face when commuting by bicycle.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following would most encourage you to bicycle more often?",
+            "answer_options": [
+                "More dedicated bike lanes",
+                "Better bicycle parking facilities",
+                "Showers at work",
+                "Improved road safety measures",
+                "Incentives (e.g., tax breaks, employer benefits)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Single-choice with an 'Other' option. Randomize options to avoid bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with option randomization",
+            "script": {
+                "question_text": "Which of the following would most encourage you to bicycle more often?",
+                "answer_options": [
+                    "More dedicated bike lanes",
+                    "Better bicycle parking facilities",
+                    "Showers at work",
+                    "Improved road safety measures",
+                    "Incentives (e.g., tax breaks, employer benefits)",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

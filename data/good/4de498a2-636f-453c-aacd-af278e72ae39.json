@@ -1,0 +1,123 @@
+{
+    "survey_id": "4de498a2-636f-453c-aacd-af278e72ae39",
+    "survey_name": "Customer Satisfaction with Autonomous Grocery Shopping Carts Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and user experience with autonomous grocery shopping carts in retail stores.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use autonomous grocery shopping carts when shopping in-store?",
+            "answer_options": [
+                "Every visit",
+                "Frequently (more than 50% of visits)",
+                "Occasionally (less than 50% of visits)",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure the options cover all potential usage frequencies.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How often do you use autonomous grocery shopping carts when shopping in-store?",
+                "answer_options": [
+                    "Every visit",
+                    "Frequently (more than 50% of visits)",
+                    "Occasionally (less than 50% of visits)",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What do you like most about using autonomous grocery shopping carts?",
+            "answer_options": [],
+            "routing_logic": "Appears to respondents who answered 'Every visit', 'Frequently', or 'Occasionally' in Q1",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box)",
+            "script": {
+                "question_text": "What do you like most about using autonomous grocery shopping carts?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to respondents who answered 'Every visit', 'Frequently', or 'Occasionally' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following issues have you encountered with autonomous grocery shopping carts? (Select all that apply)",
+            "answer_options": [
+                "Cart did not respond to commands",
+                "Navigation errors (e.g., wrong aisles)",
+                "Difficulty scanning items",
+                "Battery issues",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to respondents who answered 'Every visit', 'Frequently', or 'Occasionally' in Q1",
+            "client_notes": "Use checkboxes for multi-select. Include an option for no issues encountered.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which of the following issues have you encountered with autonomous grocery shopping carts? (Select all that apply)",
+                "answer_options": [
+                    "Cart did not respond to commands",
+                    "Navigation errors (e.g., wrong aisles)",
+                    "Difficulty scanning items",
+                    "Battery issues",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to respondents who answered 'Every visit', 'Frequently', or 'Occasionally' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1-5, how satisfied are you with the overall performance of autonomous grocery shopping carts? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears to respondents who answered 'Every visit', 'Frequently', or 'Occasionally' in Q1",
+            "client_notes": "Use a Likert scale for standardized feedback. Display as radio buttons.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the overall performance of autonomous grocery shopping carts? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who answered 'Every visit', 'Frequently', or 'Occasionally' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend autonomous grocery shopping carts to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Single-choice question to gauge advocacy. Include an option for neutrality.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "Would you recommend autonomous grocery shopping carts to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

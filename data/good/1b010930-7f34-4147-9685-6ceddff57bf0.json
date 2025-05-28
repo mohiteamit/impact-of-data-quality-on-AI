@@ -1,0 +1,157 @@
+{
+    "survey_id": "1b010930-7f34-4147-9685-6ceddff57bf0",
+    "survey_name": "AI-Powered Customer Service Chatbot Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback on customer satisfaction and user experience with AI-powered customer service chatbots across various industries.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you interact with AI-powered customer service chatbots?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a radio button for single selection. Ensure the options cover all frequency ranges for accurate data.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you interact with AI-powered customer service chatbots?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which industries have you used AI chatbots for customer service? (Select all that apply)",
+            "answer_options": [
+                "Retail/E-commerce",
+                "Banking/Finance",
+                "Telecommunications",
+                "Healthcare",
+                "Travel/Hospitality",
+                "Utilities",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option with text input for uncovered industries.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "Which industries have you used AI chatbots for customer service? (Select all that apply)",
+                "answer_options": [
+                    "Retail/E-commerce",
+                    "Banking/Finance",
+                    "Telecommunications",
+                    "Healthcare",
+                    "Travel/Hospitality",
+                    "Utilities",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with the overall performance of AI chatbots in resolving your queries? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a 5-point Likert scale with clear anchors. Display as radio buttons or a visual scale for better UX.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the overall performance of AI chatbots in resolving your queries? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What do you consider the biggest advantage of using AI chatbots over human customer service?",
+            "answer_options": [
+                "24/7 availability",
+                "Faster response times",
+                "Consistent answers",
+                "Handles simple queries efficiently",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Include an 'Other' option to capture unlisted advantages. Randomize option order to prevent bias.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What do you consider the biggest advantage of using AI chatbots over human customer service?",
+                "answer_options": [
+                    "24/7 availability",
+                    "Faster response times",
+                    "Consistent answers",
+                    "Handles simple queries efficiently",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any frustrations or challenges you've experienced when using AI customer service chatbots:",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Open-ended question to gather qualitative feedback. Use a multi-line text box with character limit of 500.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT) with character limit",
+            "script": {
+                "question_text": "Please describe any frustrations or challenges you've experienced when using AI customer service chatbots:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would make you more likely to use AI chatbots for customer service in the future?",
+            "answer_options": [
+                "Better understanding of complex questions",
+                "More human-like conversation",
+                "Seamless handoff to human agents when needed",
+                "Faster resolution times",
+                "More personalized responses",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Multiple selection allowed. Randomize order of options while keeping 'Other' last.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What improvements would make you more likely to use AI chatbots for customer service in the future?",
+                "answer_options": [
+                    "Better understanding of complex questions",
+                    "More human-like conversation",
+                    "Seamless handoff to human agents when needed",
+                    "Faster resolution times",
+                    "More personalized responses",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        }
+    ]
+}

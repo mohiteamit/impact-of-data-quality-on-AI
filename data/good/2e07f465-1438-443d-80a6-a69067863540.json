@@ -1,0 +1,125 @@
+{
+    "survey_id": "2e07f465-1438-443d-80a6-a69067863540",
+    "survey_name": "Telehealth Service Adoption and Satisfaction Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels with telehealth services, including usage frequency, perceived benefits, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often have you used telehealth services in the past 12 months?",
+            "answer_options": [
+                "Never",
+                "1-2 times",
+                "3-5 times",
+                "6-10 times",
+                "More than 10 times"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often have you used telehealth services in the past 12 months?",
+                "answer_options": [
+                    "Never",
+                    "1-2 times",
+                    "3-5 times",
+                    "6-10 times",
+                    "More than 10 times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What type of healthcare provider have you consulted via telehealth? (Select all that apply)",
+            "answer_options": [
+                "Primary care physician",
+                "Specialist (e.g., cardiologist, dermatologist)",
+                "Mental health professional",
+                "Urgent care provider",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected '1-2 times' or more in Q1",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What type of healthcare provider have you consulted via telehealth? (Select all that apply)",
+                "answer_options": [
+                    "Primary care physician",
+                    "Specialist (e.g., cardiologist, dermatologist)",
+                    "Mental health professional",
+                    "Urgent care provider",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected '1-2 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the primary reasons you choose telehealth over in-person visits?",
+            "answer_options": [
+                "Convenience",
+                "Lower cost",
+                "Faster access to care",
+                "Avoiding exposure to illnesses",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected '1-2 times' or more in Q1",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What are the primary reasons you choose telehealth over in-person visits?",
+                "answer_options": [
+                    "Convenience",
+                    "Lower cost",
+                    "Faster access to care",
+                    "Avoiding exposure to illnesses",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected '1-2 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your overall telehealth experience?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected '1-2 times' or more in Q1",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with your overall telehealth experience?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected '1-2 times' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for telehealth services?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for telehealth services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

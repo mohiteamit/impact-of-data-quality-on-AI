@@ -1,0 +1,149 @@
+{
+    "survey_id": "75749aa5-c2a7-45dd-997b-12695fc291cc",
+    "survey_name": "Employee Satisfaction with On-Site Childcare Facilities Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction with on-site childcare facilities, including availability, quality, and convenience, to identify potential improvements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently use the on-site childcare facility?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Ensure this question is clear and straightforward to filter respondents who use the facility.",
+            "scripter_notes": "Use a radio button for single-choice selection.",
+            "script": {
+                "question_text": "Do you currently use the on-site childcare facility?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the availability of childcare slots?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears only if Q1 is 'Yes'.",
+            "client_notes": "Use a Likert scale to measure satisfaction levels accurately.",
+            "scripter_notes": "Use a radio button for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the availability of childcare slots?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears only if Q1 is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What aspects of the childcare facility do you value the most? (Select all that apply)",
+            "answer_options": [
+                "Convenience of location",
+                "Quality of care",
+                "Cost affordability",
+                "Hours of operation",
+                "Staff friendliness and professionalism",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears only if Q1 is 'Yes'.",
+            "client_notes": "Allow multiple selections to capture diverse preferences.",
+            "scripter_notes": "Use checkboxes for multi-choice selection. Include an 'Other' option with a text field.",
+            "script": {
+                "question_text": "What aspects of the childcare facility do you value the most? (Select all that apply)",
+                "answer_options": [
+                    "Convenience of location",
+                    "Quality of care",
+                    "Cost affordability",
+                    "Hours of operation",
+                    "Staff friendliness and professionalism",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears only if Q1 is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend the on-site childcare facility to a colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "This question appears only if Q1 is 'Yes'.",
+            "client_notes": "This question measures Net Promoter Score (NPS) for the childcare facility.",
+            "scripter_notes": "Use a radio button for single-choice selection.",
+            "script": {
+                "question_text": "How likely are you to recommend the on-site childcare facility to a colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears only if Q1 is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for the on-site childcare facility?",
+            "answer_options": [],
+            "routing_logic": "This question appears only if Q1 is 'Yes'.",
+            "client_notes": "Open-ended responses can provide qualitative insights for improvement.",
+            "scripter_notes": "Use a text box for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would you suggest for the on-site childcare facility?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears only if Q1 is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you do not use the on-site childcare facility, what is the primary reason?",
+            "answer_options": [
+                "Not applicable (I do not have children)",
+                "Prefer alternative childcare arrangements",
+                "Cost is prohibitive",
+                "Limited availability of slots",
+                "Concerns about quality of care",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears only if Q1 is 'No'.",
+            "client_notes": "This helps identify barriers to usage for non-users.",
+            "scripter_notes": "Use a radio button for single-choice selection with an 'Other' option and text field.",
+            "script": {
+                "question_text": "If you do not use the on-site childcare facility, what is the primary reason?",
+                "answer_options": [
+                    "Not applicable (I do not have children)",
+                    "Prefer alternative childcare arrangements",
+                    "Cost is prohibitive",
+                    "Limited availability of slots",
+                    "Concerns about quality of care",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears only if Q1 is 'No'."
+            }
+        }
+    ]
+}

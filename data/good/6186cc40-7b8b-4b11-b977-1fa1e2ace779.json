@@ -1,0 +1,127 @@
+{
+    "survey_id": "6186cc40-7b8b-4b11-b977-1fa1e2ace779",
+    "survey_name": "Customer Satisfaction with Virtual Book Club Platforms Survey",
+    "survey_brief": "This survey aims to gather feedback from users of virtual book club platforms to understand their satisfaction levels and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which virtual book club platform do you currently use?",
+            "answer_options": [
+                "Bookclubs.com",
+                "Goodreads Groups",
+                "Facebook Groups",
+                "Discord Servers",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears first to all respondents",
+            "client_notes": "Use a radio button for single selection. Include 'Other' with an open-text option to capture niche platforms.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an 'Other' option triggering an open-text field.",
+            "script": {
+                "question_text": "Which virtual book club platform do you currently use?",
+                "answer_options": [
+                    "Bookclubs.com",
+                    "Goodreads Groups",
+                    "Facebook Groups",
+                    "Discord Servers",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears first to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current virtual book club platform?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents who selected a platform in Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is balanced and neutral.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with your current virtual book club platform?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected a platform in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you value the most in a virtual book club platform? (Select all that apply)",
+            "answer_options": [
+                "Discussion forums",
+                "Live video meetings",
+                "Reading progress tracking",
+                "Book recommendations",
+                "Author Q&A sessions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents who selected a platform in Q1",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option to capture unique preferences.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an 'Other' option triggering an open-text field.",
+            "script": {
+                "question_text": "What features do you value the most in a virtual book club platform? (Select all that apply)",
+                "answer_options": [
+                    "Discussion forums",
+                    "Live video meetings",
+                    "Reading progress tracking",
+                    "Book recommendations",
+                    "Author Q&A sessions",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents who selected a platform in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for your current virtual book club platform?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents who selected a platform in Q1",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT.",
+            "script": {
+                "question_text": "What improvements would you suggest for your current virtual book club platform?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents who selected a platform in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you participate in virtual book club discussions?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents who selected a platform in Q1",
+            "client_notes": "Use a radio button for single selection. This helps gauge engagement levels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How often do you participate in virtual book club discussions?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected a platform in Q1"
+            }
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+{
+    "survey_id": "1f3833ab-9fd3-4c8d-bcfd-57fda7c36589",
+    "survey_name": "Adoption of AI-Powered Virtual Fitness Coaches Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and adoption rates of AI-powered virtual fitness coaches, including features, pricing, and barriers to usage.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with AI-powered virtual fitness coaches?",
+            "answer_options": [
+                "Very familiar - I currently use one or have used one in the past",
+                "Somewhat familiar - I know about them but haven't used one",
+                "Not very familiar - I've heard of them but don't know much",
+                "Not at all familiar - This is the first I'm hearing about them"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "This helps segment the audience by familiarity level. Consider adding a 'Don't know' option if needed.",
+            "scripter_notes": "Single-choice radio buttons. Randomize answer options to reduce bias.",
+            "script": {
+                "question_text": "How familiar are you with AI-powered virtual fitness coaches?",
+                "answer_options": [
+                    "Very familiar - I currently use one or have used one in the past",
+                    "Somewhat familiar - I know about them but haven't used one",
+                    "Not very familiar - I've heard of them but don't know much",
+                    "Not at all familiar - This is the first I'm hearing about them"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What features would be most valuable to you in an AI-powered virtual fitness coach? (Select up to 3)",
+            "answer_options": [
+                "Personalized workout plans",
+                "Real-time form correction",
+                "Progress tracking and analytics",
+                "Voice or video interaction",
+                "Integration with wearable devices",
+                "Nutrition guidance",
+                "Community or social features",
+                "Adaptive difficulty based on performance"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'Not at all familiar'",
+            "client_notes": "Multi-select question helps prioritize feature development. Consider limiting selections to prevent overchoice.",
+            "scripter_notes": "Multi-choice checkboxes with max 3 selections. Display options in random order.",
+            "script": {
+                "question_text": "What features would be most valuable to you in an AI-powered virtual fitness coach? (Select up to 3)",
+                "answer_options": [
+                    "Personalized workout plans",
+                    "Real-time form correction",
+                    "Progress tracking and analytics",
+                    "Voice or video interaction",
+                    "Integration with wearable devices",
+                    "Nutrition guidance",
+                    "Community or social features",
+                    "Adaptive difficulty based on performance"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What would be your preferred pricing model for an AI-powered virtual fitness coach?",
+            "answer_options": [
+                "One-time purchase",
+                "Monthly subscription ($5-$10)",
+                "Annual subscription (with discount)",
+                "Freemium model (basic features free, premium features paid)",
+                "Pay-per-session",
+                "Bundled with other fitness services"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'Not at all familiar'",
+            "client_notes": "Helps determine monetization strategy. Include an 'Other' option if needed.",
+            "scripter_notes": "Single-choice radio buttons. Randomize options except 'Other' at bottom.",
+            "script": {
+                "question_text": "What would be your preferred pricing model for an AI-powered virtual fitness coach?",
+                "answer_options": [
+                    "One-time purchase",
+                    "Monthly subscription ($5-$10)",
+                    "Annual subscription (with discount)",
+                    "Freemium model (basic features free, premium features paid)",
+                    "Pay-per-session",
+                    "Bundled with other fitness services"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, would prevent you from using an AI-powered virtual fitness coach?",
+            "answer_options": [
+                "Privacy/data security concerns",
+                "Lack of human interaction",
+                "Doubt about effectiveness",
+                "Cost",
+                "Technical complexity",
+                "Preference for in-person training",
+                "None - I would have no concerns"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'Very familiar - I currently use one or have used one in the past'",
+            "client_notes": "Identifies barriers to adoption. Allow multiple selections to capture overlapping concerns.",
+            "scripter_notes": "Multi-choice checkboxes. Include 'Other (please specify)' with open text field.",
+            "script": {
+                "question_text": "What concerns, if any, would prevent you from using an AI-powered virtual fitness coach?",
+                "answer_options": [
+                    "Privacy/data security concerns",
+                    "Lack of human interaction",
+                    "Doubt about effectiveness",
+                    "Cost",
+                    "Technical complexity",
+                    "Preference for in-person training",
+                    "None - I would have no concerns"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'Very familiar - I currently use one or have used one in the past'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How do you think an AI-powered virtual fitness coach could best complement your current fitness routine?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents who are familiar with the concept (Q1 answers 1-3)",
+            "client_notes": "Open-ended question captures qualitative insights. Limit response length to 500 characters.",
+            "scripter_notes": "Open-text field with character counter. Include placeholder text: 'Please describe in a few sentences'.",
+            "script": {
+                "question_text": "How do you think an AI-powered virtual fitness coach could best complement your current fitness routine?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents who are familiar with the concept (Q1 answers 1-3)"
+            }
+        }
+    ]
+}

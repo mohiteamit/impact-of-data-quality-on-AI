@@ -1,0 +1,123 @@
+{
+    "survey_id": "4c072c21-88e2-4059-bb94-6906de6aa50d",
+    "survey_name": "Customer Satisfaction with Electric Vehicle (EV) Charging Network Survey",
+    "survey_brief": "This survey aims to gather feedback from electric vehicle owners about their experiences with public EV charging networks, including ease of use, reliability, and satisfaction with charging speeds.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use public EV charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for this question to ensure clear data collection.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How often do you use public EV charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following charging networks have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Tesla Supercharger",
+                "Electrify America",
+                "ChargePoint",
+                "EVgo",
+                "Blink",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1",
+            "client_notes": "Use multi-choice checkboxes for this question to allow multiple selections. Include an 'Other' option with an open-text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which of the following charging networks have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Tesla Supercharger",
+                    "Electrify America",
+                    "ChargePoint",
+                    "EVgo",
+                    "Blink",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of public EV charging stations in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1",
+            "client_notes": "Use a 5-point Likert scale for this question to measure satisfaction levels accurately.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with the availability of public EV charging stations in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the biggest challenge you face when using public EV charging stations?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1",
+            "client_notes": "Use an open-text field to capture detailed responses about challenges faced.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What is the biggest challenge you face when using public EV charging stations?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your preferred charging network to other EV owners?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1",
+            "client_notes": "Use a single-choice radio button for this question to gauge likelihood of recommendation.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Would you recommend your preferred charging network to other EV owners?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1"
+            }
+        }
+    ]
+}

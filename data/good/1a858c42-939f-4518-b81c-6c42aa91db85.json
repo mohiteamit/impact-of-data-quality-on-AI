@@ -1,0 +1,257 @@
+{
+    "survey_id": "1a858c42-939f-4518-b81c-6c42aa91db85",
+    "survey_name": "Workplace AI Tool Adoption Survey",
+    "survey_brief": "This survey aims to understand employee experiences and preferences regarding AI-powered tools in the workplace.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following AI-powered tools does your organization currently use?",
+            "answer_options": [
+                "AI-powered recruitment tools",
+                "AI-powered virtual meeting assistants",
+                "AI-powered customer support chatbots",
+                "AI-powered HR tools",
+                "AI-powered data analytics tools",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to allow for multiple tool selections. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following AI-powered tools does your organization currently use?",
+                "answer_options": [
+                    "AI-powered recruitment tools",
+                    "AI-powered virtual meeting assistants",
+                    "AI-powered customer support chatbots",
+                    "AI-powered HR tools",
+                    "AI-powered data analytics tools",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the AI tools currently implemented in your workplace?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "Only shown if Q1 != 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement. Consider adding an 'N/A' option for respondents not using these tools.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the AI tools currently implemented in your workplace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What benefits have you experienced from using AI tools in your work?",
+            "answer_options": [
+                "Increased productivity",
+                "Time savings",
+                "Better decision-making",
+                "Improved accuracy",
+                "Enhanced collaboration",
+                "None of the above"
+            ],
+            "routing_logic": "Only shown if Q2 != 'Not applicable'",
+            "client_notes": "Allow multiple selections as users may have experienced multiple benefits.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What benefits have you experienced from using AI tools in your work?",
+                "answer_options": [
+                    "Increased productivity",
+                    "Time savings",
+                    "Better decision-making",
+                    "Improved accuracy",
+                    "Enhanced collaboration",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q2 != 'Not applicable'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced when using AI tools at work?",
+            "answer_options": [
+                "Difficulty learning to use the tools",
+                "Integration issues with existing systems",
+                "Concerns about data privacy",
+                "Unreliable outputs/results",
+                "Lack of human oversight",
+                "None of the above"
+            ],
+            "routing_logic": "Only shown if Q2 != 'Not applicable'",
+            "client_notes": "Include an open-ended follow-up question to capture specific challenges not listed.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What challenges have you faced when using AI tools at work?",
+                "answer_options": [
+                    "Difficulty learning to use the tools",
+                    "Integration issues with existing systems",
+                    "Concerns about data privacy",
+                    "Unreliable outputs/results",
+                    "Lack of human oversight",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q2 != 'Not applicable'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any specific challenges you've encountered when using AI tools at work:",
+            "answer_options": [],
+            "routing_logic": "Only shown if Q4 != 'None of the above'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Consider character limit of 500.",
+            "scripter_notes": "Field type: Text area (OPEN_TEXT)",
+            "script": {
+                "question_text": "Please describe any specific challenges you've encountered when using AI tools at work:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only shown if Q4 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What type of AI-powered tools would you like to see implemented in your workplace?",
+            "answer_options": [
+                "AI-powered document generation",
+                "AI-assisted meeting note taking",
+                "Predictive analytics tools",
+                "Automated data visualization",
+                "Smart scheduling assistants",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with text field to capture suggestions not listed.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE) with an 'Other' text field option",
+            "script": {
+                "question_text": "What type of AI-powered tools would you like to see implemented in your workplace?",
+                "answer_options": [
+                    "AI-powered document generation",
+                    "AI-assisted meeting note taking",
+                    "Predictive analytics tools",
+                    "Automated data visualization",
+                    "Smart scheduling assistants",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How comfortable are you with the idea of AI tools taking over certain routine tasks in your job?",
+            "answer_options": [
+                "Very comfortable",
+                "Somewhat comfortable",
+                "Neutral",
+                "Somewhat uncomfortable",
+                "Very uncomfortable"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point scale to measure comfort levels. Consider randomizing scale points to avoid response bias.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE) with scale randomization",
+            "script": {
+                "question_text": "How comfortable are you with the idea of AI tools taking over certain routine tasks in your job?",
+                "answer_options": [
+                    "Very comfortable",
+                    "Somewhat comfortable",
+                    "Neutral",
+                    "Somewhat uncomfortable",
+                    "Very uncomfortable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What concerns, if any, do you have about increasing AI adoption in the workplace?",
+            "answer_options": [
+                "Job security",
+                "Data privacy",
+                "Lack of human judgment",
+                "Over-reliance on technology",
+                "Bias in AI algorithms",
+                "None"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to identify common concerns. Include 'None' option.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What concerns, if any, do you have about increasing AI adoption in the workplace?",
+                "answer_options": [
+                    "Job security",
+                    "Data privacy",
+                    "Lack of human judgment",
+                    "Over-reliance on technology",
+                    "Bias in AI algorithms",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "What type of training would be most helpful for adapting to AI tools in your work?",
+            "answer_options": [
+                "Hands-on workshops",
+                "Video tutorials",
+                "Written guides/manuals",
+                "Peer mentoring",
+                "Online courses",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an open text field for 'Other' responses.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE) with 'Other' text option",
+            "script": {
+                "question_text": "What type of training would be most helpful for adapting to AI tools in your work?",
+                "answer_options": [
+                    "Hands-on workshops",
+                    "Video tutorials",
+                    "Written guides/manuals",
+                    "Peer mentoring",
+                    "Online courses",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Please share any additional comments or suggestions about AI tool adoption in your workplace:",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Set character limit appropriate for mobile input.",
+            "scripter_notes": "Field type: Text area (OPEN_TEXT) with 1000 character limit",
+            "script": {
+                "question_text": "Please share any additional comments or suggestions about AI tool adoption in your workplace:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,133 @@
+{
+  "survey_id": "SV2001",
+  "survey_name": "Adoption of AI-Based Mental Health Chatbots Survey",
+  "survey_brief": "This survey assesses consumer awareness, adoption barriers, and preferences regarding AI-powered mental health chatbot services.",
+  "questions": [
+    {
+      "qid": "Q1",
+      "question_text": "How familiar are you with AI-powered mental health chatbot services?",
+      "answer_options": [
+        "Very familiar (I've used them multiple times)",
+        "Somewhat familiar (I've tried them once or twice)",
+        "Minimally familiar (I've heard of them but not used)",
+        "Not at all familiar"
+      ],
+      "routing_logic": "Ask all respondents",
+      "client_notes": "Use a radio button grid for mobile optimization. Consider randomizing options 2-4 to reduce bias.",
+      "scripter_notes": "Radio button, single choice, mandatory question",
+      "script": {
+        "question_text": "How familiar are you with AI-powered mental health chatbot services?",
+        "answer_options": [
+          "Very familiar (I've used them multiple times)",
+          "Somewhat familiar (I've tried them once or twice)",
+          "Minimally familiar (I've heard of them but not used)",
+          "Not at all familiar"
+        ],
+        "type": "SINGLE_CHOICE",
+        "routing_logic": "Ask all respondents"
+      }
+    },
+    {
+      "qid": "Q2",
+      "question_text": "What features would be most important to you in a mental health chatbot? (Select up to 3)",
+      "answer_options": [
+        "24/7 availability",
+        "Clinical accuracy of advice",
+        "Personalization based on my history",
+        "Integration with human therapists",
+        "Multilingual support",
+        "Free/low-cost access",
+        "Anonymous usage option",
+        "Mental health crisis protocols"
+      ],
+      "routing_logic": "Ask if Q1 ≠ 'Not at all familiar'",
+      "client_notes": "Use a checkbox format with maximum selection enforced. Consider grouping clinical vs convenience features separately if space allows.",
+      "scripter_notes": "Checkbox, multiple choice (limit 3), show if Q1 not option 4",
+      "script": {
+        "question_text": "What features would be most important to you in a mental health chatbot? (Select up to 3)",
+        "answer_options": [
+          "24/7 availability",
+          "Clinical accuracy of advice",
+          "Personalization based on my history",
+          "Integration with human therapists",
+          "Multilingual support",
+          "Free/low-cost access",
+          "Anonymous usage option",
+          "Mental health crisis protocols"
+        ],
+        "type": "MULTI_CHOICE",
+        "routing_logic": "Ask if Q1 ≠ 'Not at all familiar'"
+      }
+    },
+    {
+      "qid": "Q3",
+      "question_text": "What concerns, if any, prevent you from using mental health chatbots?",
+      "answer_options": [
+        "Privacy/data security",
+        "Lack of human empathy",
+        "Questionable effectiveness",
+        "Cost/insurance coverage",
+        "Comfort with traditional therapy",
+        "No concerns - I would use them"
+      ],
+      "routing_logic": "Ask all respondents",
+      "client_notes": "Include 'Other' with text field if budget allows. Randomize first 5 options to reduce order bias.",
+      "scripter_notes": "Radio button with optional 'Other' text field, single choice",
+      "script": {
+        "question_text": "What concerns, if any, prevent you from using mental health chatbots?",
+        "answer_options": [
+          "Privacy/data security",
+          "Lack of human empathy",
+          "Questionable effectiveness",
+          "Cost/insurance coverage",
+          "Comfort with traditional therapy",
+          "No concerns - I would use them"
+        ],
+        "type": "SINGLE_CHOICE",
+        "routing_logic": "Ask all respondents"
+      }
+    },
+    {
+      "qid": "Q4",
+      "question_text": "How much would you be willing to pay monthly for a premium mental health chatbot service with clinician oversight?",
+      "answer_options": [
+        "$0 (would only use free version)",
+        "$1-$10",
+        "$11-$20",
+        "$21-$30",
+        "More than $30",
+        "Unsure"
+      ],
+      "routing_logic": "Ask all respondents",
+      "client_notes": "Display as sliding scale on desktop, radio buttons on mobile. Anchor with local currency equivalents for international surveys.",
+      "scripter_notes": "Radio button, single choice, ensure mobile-responsive design",
+      "script": {
+        "question_text": "How much would you be willing to pay monthly for a premium mental health chatbot service with clinician oversight?",
+        "answer_options": [
+          "$0 (would only use free version)",
+          "$1-$10",
+          "$11-$20",
+          "$21-$30",
+          "More than $30",
+          "Unsure"
+        ],
+        "type": "SINGLE_CHOICE",
+        "routing_logic": "Ask all respondents"
+      }
+    },
+    {
+      "qid": "Q5",
+      "question_text": "What improvements would make you more likely to use an AI mental health chatbot?",
+      "answer_options": [],
+      "routing_logic": "Ask if Q3 ≠ 'No concerns - I would use them'",
+      "client_notes": "Use open text with character limit (300 chars). Display example prompts for guidance if abandonment rates are high.",
+      "scripter_notes": "Open text field with validation for max length",
+      "script": {
+        "question_text": "What improvements would make you more likely to use an AI mental health chatbot?",
+        "answer_options": [],
+        "type": "OPEN_TEXT",
+        "routing_logic": "Ask if Q3 ≠ 'No concerns - I would use them'"
+      }
+    }
+  ]
+}

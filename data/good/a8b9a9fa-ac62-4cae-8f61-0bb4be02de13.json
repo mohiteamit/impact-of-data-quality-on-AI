@@ -1,0 +1,115 @@
+{
+    "survey_id": "a8b9a9fa-ac62-4cae-8f61-0bb4be02de13",
+    "survey_name": "Employee Satisfaction with Digital Onboarding Experience Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with digital onboarding processes, identifying strengths and areas for improvement in virtual orientation programs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the overall digital onboarding experience at your organization?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use a 5-point Likert scale for measurable sentiment analysis. Ensure mobile responsiveness for remote employees.",
+            "scripter_notes": "Single-choice radio buttons with mandatory response. Randomize option order to prevent bias.",
+            "script": {
+                "question_text": "How satisfied are you with the overall digital onboarding experience at your organization?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which digital onboarding tools did you use? (Select all that apply)",
+            "answer_options": [
+                "HR management software (e.g., Workday, BambooHR)",
+                "Video conferencing platforms (e.g., Zoom, Teams)",
+                "E-learning modules",
+                "Digital document signing tools",
+                "Company mobile app",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Multi-select with 'Other' field for comprehensive technology mapping. Consider adding tooltips with examples.",
+            "scripter_notes": "Checkbox input type with optional 'Other' text field. Implement skip logic if 'None' is added.",
+            "script": {
+                "question_text": "Which digital onboarding tools did you use? (Select all that apply)",
+                "answer_options": [
+                    "HR management software (e.g., Workday, BambooHR)",
+                    "Video conferencing platforms (e.g., Zoom, Teams)",
+                    "E-learning modules",
+                    "Digital document signing tools",
+                    "Company mobile app",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What was the most challenging aspect of your digital onboarding experience?",
+            "answer_options": [],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Open-ended to capture unanticipated pain points. Limit to 250 characters for actionable insights.",
+            "scripter_notes": "Text area input with character counter. Enable spell check for non-native speakers.",
+            "script": {
+                "question_text": "What was the most challenging aspect of your digital onboarding experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How effectively did the digital onboarding prepare you for your role?",
+            "answer_options": [
+                "Extremely effective",
+                "Very effective",
+                "Moderately effective",
+                "Slightly effective",
+                "Not effective at all"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Benchmark question for training ROI analysis. Include midpoint for neutral responses.",
+            "scripter_notes": "Radio buttons with vertical layout. Require response before submission.",
+            "script": {
+                "question_text": "How effectively did the digital onboarding prepare you for your role?",
+                "answer_options": [
+                    "Extremely effective",
+                    "Very effective",
+                    "Moderately effective",
+                    "Slightly effective",
+                    "Not effective at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional digital resources would improve future onboarding experiences?",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 response is 'Dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Optional question for targeted improvements. Use text analytics for thematic coding.",
+            "scripter_notes": "Open-text field with conditional display. Allow file uploads for detailed suggestions.",
+            "script": {
+                "question_text": "What additional digital resources would improve future onboarding experiences?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 response is 'Dissatisfied' or 'Very dissatisfied'"
+            }
+        }
+    ]
+}

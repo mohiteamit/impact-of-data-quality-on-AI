@@ -1,0 +1,125 @@
+{
+    "survey_id": "c4bcf49b-e75e-45b1-abe3-be1cdccbb6ae",
+    "survey_name": "Customer Satisfaction with Peer-to-Peer Car Sharing Services Survey",
+    "survey_brief": "This survey aims to evaluate user satisfaction and identify areas for improvement in peer-to-peer car sharing services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use peer-to-peer car sharing services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "This is my first time"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button for better mobile compatibility.",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "How often do you use peer-to-peer car sharing services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing a peer-to-peer car sharing service? (Select up to 3)",
+            "answer_options": [
+                "Price",
+                "Vehicle availability",
+                "Vehicle condition",
+                "Ease of booking",
+                "Insurance coverage",
+                "Customer support",
+                "User reviews"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use checkboxes for multi-selection and limit to 3 choices.",
+            "scripter_notes": "Field type: checkbox (multi-choice, max 3 selections)",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a peer-to-peer car sharing service? (Select up to 3)",
+                "answer_options": [
+                    "Price",
+                    "Vehicle availability",
+                    "Vehicle condition",
+                    "Ease of booking",
+                    "Insurance coverage",
+                    "Customer support",
+                    "User reviews"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness of the vehicles you've rented?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'This is my first time'",
+            "client_notes": "Use a Likert scale for satisfaction questions.",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness of the vehicles you've rented?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'This is my first time'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for peer-to-peer car sharing services?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: text input (open-ended)",
+            "script": {
+                "question_text": "What improvements would you suggest for peer-to-peer car sharing services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend peer-to-peer car sharing services to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with reservations",
+                "No"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'This is my first time'",
+            "client_notes": "Single-choice question to gauge overall satisfaction.",
+            "scripter_notes": "Field type: radio button (single choice)",
+            "script": {
+                "question_text": "Would you recommend peer-to-peer car sharing services to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with reservations",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'This is my first time'"
+            }
+        }
+    ]
+}

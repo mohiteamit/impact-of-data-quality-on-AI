@@ -1,0 +1,123 @@
+{
+    "survey_id": "ec1e6083-1f85-431e-8b34-c87519c8ac69",
+    "survey_name": "Customer Satisfaction with Contactless Grocery Shopping Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and experience with contactless grocery shopping services, including ease of use, technology reliability, and overall service quality.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use contactless grocery shopping services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Less than once a month",
+                "This is my first time"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice question to gauge usage frequency. Ensure mobile-friendly formatting.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often do you use contactless grocery shopping services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Less than once a month",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following contactless grocery shopping features have you used? (Select all that apply)",
+            "answer_options": [
+                "Mobile app ordering",
+                "Self-checkout kiosks",
+                "Scan-as-you-go technology",
+                "Curbside pickup",
+                "Home delivery",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a multi-choice question to identify popular features. Ensure options are clear and distinct.",
+            "scripter_notes": "Field type: checkbox.",
+            "script": {
+                "question_text": "Which of the following contactless grocery shopping features have you used? (Select all that apply)",
+                "answer_options": [
+                    "Mobile app ordering",
+                    "Self-checkout kiosks",
+                    "Scan-as-you-go technology",
+                    "Curbside pickup",
+                    "Home delivery",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the ease of use of contactless grocery shopping services?",
+            "answer_options": [
+                "1 - Very dissatisfied",
+                "2 - Dissatisfied",
+                "3 - Neutral",
+                "4 - Satisfied",
+                "5 - Very satisfied"
+            ],
+            "routing_logic": "Appears for all respondents who have used contactless grocery shopping services (Q1 not equal to 'This is my first time').",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the ease of use of contactless grocery shopping services?",
+                "answer_options": [
+                    "1 - Very dissatisfied",
+                    "2 - Dissatisfied",
+                    "3 - Neutral",
+                    "4 - Satisfied",
+                    "5 - Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who have used contactless grocery shopping services (Q1 not equal to 'This is my first time')."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for contactless grocery shopping services?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents who have used contactless grocery shopping services (Q1 not equal to 'This is my first time').",
+            "client_notes": "Use an open-ended question to gather qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you suggest for contactless grocery shopping services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents who have used contactless grocery shopping services (Q1 not equal to 'This is my first time')."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend contactless grocery shopping services to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Appears for all respondents who have used contactless grocery shopping services (Q1 not equal to 'This is my first time').",
+            "client_notes": "Use a single-choice question to measure likelihood of recommendation. Keep options simple.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "Would you recommend contactless grocery shopping services to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who have used contactless grocery shopping services (Q1 not equal to 'This is my first time')."
+            }
+        }
+    ]
+}

@@ -1,0 +1,147 @@
+{
+    "survey_id": "c5eedc74-1771-4c0c-91e3-b151348d74c1",
+    "survey_name": "Employee Satisfaction with Workplace AI-Powered Scheduling Tools Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the effectiveness, usability, and satisfaction with AI-powered scheduling tools implemented in the workplace.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the AI-powered scheduling tool in your daily work?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps assess adoption rates. Ensure options cover all potential usage frequencies.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How frequently do you use the AI-powered scheduling tool in your daily work?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of the AI-powered scheduling tool do you find most useful?",
+            "answer_options": [
+                "Automated meeting scheduling",
+                "Conflict detection",
+                "Calendar syncing",
+                "Task prioritization",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice question to identify valued features. Include an option for 'None' to capture dissatisfaction.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "Which features of the AI-powered scheduling tool do you find most useful?",
+                "answer_options": [
+                    "Automated meeting scheduling",
+                    "Conflict detection",
+                    "Calendar syncing",
+                    "Task prioritization",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of the AI-powered scheduling tool?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "5-point Likert scale to measure satisfaction. Exclude non-users.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of the AI-powered scheduling tool?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced while using the AI-powered scheduling tool?",
+            "answer_options": [],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Open-ended question to uncover pain points. Encourage detailed responses.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What challenges have you faced while using the AI-powered scheduling tool?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How has the AI-powered scheduling tool impacted your productivity?",
+            "answer_options": [
+                "Significantly increased",
+                "Slightly increased",
+                "No impact",
+                "Slightly decreased",
+                "Significantly decreased"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "5-point scale to measure perceived productivity impact. Exclude non-users.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How has the AI-powered scheduling tool impacted your productivity?",
+                "answer_options": [
+                    "Significantly increased",
+                    "Slightly increased",
+                    "No impact",
+                    "Slightly decreased",
+                    "Significantly decreased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you recommend this AI-powered scheduling tool to a colleague?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents except those who answered 'Never' to Q1",
+            "client_notes": "Simple yes/no/unsure question to gauge overall satisfaction. Exclude non-users.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Would you recommend this AI-powered scheduling tool to a colleague?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'Never' to Q1"
+            }
+        }
+    ]
+}

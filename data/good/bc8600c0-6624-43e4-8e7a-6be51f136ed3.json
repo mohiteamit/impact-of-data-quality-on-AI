@@ -1,0 +1,125 @@
+{
+    "survey_id": "bc8600c0-6624-43e4-8e7a-6be51f136ed3",
+    "survey_name": "Adoption of AI-Powered Personalized Nutrition Planning Survey",
+    "survey_brief": "This survey aims to evaluate user adoption, satisfaction, and preferences regarding AI-powered personalized nutrition planning services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Are you currently using an AI-powered personalized nutrition planning service?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I have used one in the past but not currently"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a simple single-choice question to segment users effectively. Ensure mobile-friendly design.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "Are you currently using an AI-powered personalized nutrition planning service?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I have used one in the past but not currently"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current AI-powered personalized nutrition planning service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 answer is 'Yes'",
+            "client_notes": "Use a 5-point Likert scale for measurable satisfaction levels. Ensure balanced options.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How satisfied are you with your current AI-powered personalized nutrition planning service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 answer is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you value the most in an AI-powered personalized nutrition planning service? (Select all that apply)",
+            "answer_options": [
+                "Customized meal plans",
+                "Real-time dietary adjustments",
+                "Integration with fitness trackers",
+                "Grocery shopping recommendations",
+                "Nutritional insights and analytics",
+                "Recipe suggestions based on preferences",
+                "Community/social features"
+            ],
+            "routing_logic": "Only if Q1 answer is 'Yes' or 'I have used one in the past but not currently'",
+            "client_notes": "Use a multi-choice question to identify priority features. Limit to 7 options for clarity.",
+            "scripter_notes": "Field type: checkbox (multi-choice)",
+            "script": {
+                "question_text": "What features do you value the most in an AI-powered personalized nutrition planning service? (Select all that apply)",
+                "answer_options": [
+                    "Customized meal plans",
+                    "Real-time dietary adjustments",
+                    "Integration with fitness trackers",
+                    "Grocery shopping recommendations",
+                    "Nutritional insights and analytics",
+                    "Recipe suggestions based on preferences",
+                    "Community/social features"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 answer is 'Yes' or 'I have used one in the past but not currently'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors would encourage you to start using (or return to using) an AI-powered personalized nutrition planning service?",
+            "answer_options": [],
+            "routing_logic": "Only if Q1 answer is 'No' or 'I have used one in the past but not currently'",
+            "client_notes": "Open-ended question to capture qualitative insights. Set a 200-character limit.",
+            "scripter_notes": "Field type: open text",
+            "script": {
+                "question_text": "What factors would encourage you to start using (or return to using) an AI-powered personalized nutrition planning service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q1 answer is 'No' or 'I have used one in the past but not currently'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How much would you be willing to pay monthly for an AI-powered personalized nutrition planning service?",
+            "answer_options": [
+                "Less than $5",
+                "$5 - $10",
+                "$10 - $20",
+                "$20 - $30",
+                "More than $30"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice question with balanced price ranges. Helps gauge pricing sensitivity.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How much would you be willing to pay monthly for an AI-powered personalized nutrition planning service?",
+                "answer_options": [
+                    "Less than $5",
+                    "$5 - $10",
+                    "$10 - $20",
+                    "$20 - $30",
+                    "More than $30"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

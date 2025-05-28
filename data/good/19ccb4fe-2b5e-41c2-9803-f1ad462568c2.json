@@ -1,0 +1,135 @@
+{
+    "survey_id": "19ccb4fe-2b5e-41c2-9803-f1ad462568c2",
+    "survey_name": "Adoption and Satisfaction with AI-Powered Personal Shopping Assistants Survey",
+    "survey_brief": "This survey aims to understand consumer adoption rates, satisfaction levels, and preferences regarding AI-powered personal shopping assistants for retail purchases.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with AI-powered personal shopping assistants?",
+            "answer_options": [
+                "Very familiar - I use them regularly",
+                "Somewhat familiar - I have used them a few times",
+                "Slightly familiar - I know what they are but have not used them",
+                "Not at all familiar - I don't know what they are"
+            ],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Use a balanced 4-point scale to measure familiarity. Avoid neutral midpoint to force directional response.",
+            "scripter_notes": "Single-choice radio buttons, randomized option order except for extreme anchors",
+            "script": {
+                "question_text": "How familiar are you with AI-powered personal shopping assistants?",
+                "answer_options": [
+                    "Very familiar - I use them regularly",
+                    "Somewhat familiar - I have used them a few times",
+                    "Slightly familiar - I know what they are but have not used them",
+                    "Not at all familiar - I don't know what they are"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which retail categories have you used an AI shopping assistant for? (Select all that apply)",
+            "answer_options": [
+                "Fashion/clothing",
+                "Electronics",
+                "Groceries",
+                "Home goods",
+                "Beauty/personal care",
+                "Books/media",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show only if Q1 response is not 'Not at all familiar'",
+            "client_notes": "Include an 'Other' field with text entry to capture niche categories. Limit to 7 primary categories for readability.",
+            "scripter_notes": "Multi-choice checkboxes with 'Other' triggering text field",
+            "script": {
+                "question_text": "Which retail categories have you used an AI shopping assistant for? (Select all that apply)",
+                "answer_options": [
+                    "Fashion/clothing",
+                    "Electronics",
+                    "Groceries",
+                    "Home goods",
+                    "Beauty/personal care",
+                    "Books/media",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show only if Q1 response is not 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing an AI shopping assistant? (Rank top 3)",
+            "answer_options": [
+                "Accuracy of recommendations",
+                "Privacy/data security",
+                "Integration with my preferred retailers",
+                "Ease of use",
+                "Personalization level",
+                "Cost/free service",
+                "Mobile app quality",
+                "Customer support"
+            ],
+            "routing_logic": "Show only if Q1 response is not 'Not at all familiar'",
+            "client_notes": "Use drag-and-drop ranking with forced top 3 selection. Include progress indicator for mobile users.",
+            "scripter_notes": "Ranking question type with visual UI, store as ordinal data",
+            "script": {
+                "question_text": "What factors are most important to you when choosing an AI shopping assistant? (Rank top 3)",
+                "answer_options": [
+                    "Accuracy of recommendations",
+                    "Privacy/data security",
+                    "Integration with my preferred retailers",
+                    "Ease of use",
+                    "Personalization level",
+                    "Cost/free service",
+                    "Mobile app quality",
+                    "Customer support"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show only if Q1 response is not 'Not at all familiar'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your primary AI shopping assistant's ability to understand your preferences?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (don't use regularly)"
+            ],
+            "routing_logic": "Show only if Q1 response is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "5-point satisfaction scale with N/A opt-out. Display as Likert scale with equal visual spacing.",
+            "scripter_notes": "Single-choice horizontal radio buttons, randomize except anchors and N/A",
+            "script": {
+                "question_text": "How satisfied are you with your primary AI shopping assistant's ability to understand your preferences?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (don't use regularly)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show only if Q1 response is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would make you use an AI shopping assistant more frequently?",
+            "answer_options": [],
+            "routing_logic": "Show to all respondents",
+            "client_notes": "Open-ended to capture qualitative insights. Show character counter (max 500 chars) to encourage concise responses.",
+            "scripter_notes": "Open text field with input validation and length limit",
+            "script": {
+                "question_text": "What improvements would make you use an AI shopping assistant more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show to all respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "survey_id": "efb4901e-65f0-4c69-bc06-208a3f98e940",
+    "survey_name": "Customer Satisfaction with Biodegradable Food Packaging Survey",
+    "survey_brief": "This survey aims to gather customer feedback on their satisfaction and preferences regarding biodegradable food packaging used in restaurants and food delivery services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you encounter biodegradable food packaging when ordering food?",
+            "answer_options": [
+                "Very frequently",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for easy mobile and desktop response.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you encounter biodegradable food packaging when ordering food?",
+                "answer_options": [
+                    "Very frequently",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors are most important to you regarding biodegradable food packaging? (Select all that apply)",
+            "answer_options": [
+                "Environmental impact",
+                "Durability",
+                "Cost",
+                "Aesthetic appeal",
+                "Ease of disposal",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Never'.",
+            "client_notes": "Use a multi-choice checkbox layout. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with an optional text input for 'Other'.",
+            "script": {
+                "question_text": "Which of the following factors are most important to you regarding biodegradable food packaging? (Select all that apply)",
+                "answer_options": [
+                    "Environmental impact",
+                    "Durability",
+                    "Cost",
+                    "Aesthetic appeal",
+                    "Ease of disposal",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the current biodegradable food packaging options available? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Never'.",
+            "client_notes": "Use a Likert scale with clear labels for each point. Ensure it's mobile-friendly.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with a 5-point scale.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the current biodegradable food packaging options available? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for biodegradable food packaging?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use an open-ended text box to allow detailed feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What improvements would you suggest for biodegradable food packaging?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay a premium for food delivered in biodegradable packaging?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "It depends on the price difference"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Never'.",
+            "client_notes": "Use a single-choice radio button for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Would you be willing to pay a premium for food delivered in biodegradable packaging?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "It depends on the price difference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Never'."
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "survey_id": "7e68c66c-93a6-4fab-84c1-13666d25c5f7",
+    "survey_name": "Customer Satisfaction with Smart Home Security Systems Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction levels and feature preferences for smart home security systems to guide product improvements and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your current smart home security system?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a 5-point Likert scale for consistent sentiment measurement. Ensure mobile-friendly button sizing.",
+            "scripter_notes": "Field type: Radio buttons (SINGLE_CHOICE). Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home security system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you use most frequently in your smart security system? (Select all that apply)",
+            "answer_options": [
+                "Motion detection alerts",
+                "Live video monitoring",
+                "Smart doorbell camera",
+                "Automated door locks",
+                "Environmental sensors (e.g., smoke, water leak)"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Multi-select question. Limit to 5 core features for clarity. Include 'Other' with text input if needed.",
+            "scripter_notes": "Field type: Checkboxes (MULTI_CHOICE). Implement 'Select all that apply' instruction clearly.",
+            "script": {
+                "question_text": "Which features do you use most frequently in your smart security system? (Select all that apply)",
+                "answer_options": [
+                    "Motion detection alerts",
+                    "Live video monitoring",
+                    "Smart doorbell camera",
+                    "Automated door locks",
+                    "Environmental sensors (e.g., smoke, water leak)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you like to see in future smart security systems?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Set character limit to 500 for manageable analysis.",
+            "scripter_notes": "Field type: Text area (OPEN_TEXT). Enable spell-check and auto-capitalization.",
+            "script": {
+                "question_text": "What improvements would you like to see in future smart security systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend your smart security system to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Display only if Q1 response is 'Satisfied' or higher",
+            "client_notes": "Net Promoter Score (NPS) proxy question. Use consistent 5-point scale from Q1 for comparability.",
+            "scripter_notes": "Field type: Radio buttons (SINGLE_CHOICE). Apply skip logic based on Q1 values.",
+            "script": {
+                "question_text": "How likely are you to recommend your smart security system to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 response is 'Satisfied' or higher"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What was the primary reason for choosing your current smart security system?",
+            "answer_options": [
+                "Brand reputation",
+                "Price/value",
+                "Feature set",
+                "Professional installation options",
+                "Compatibility with other smart devices"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Single-choice question to identify key decision drivers. Include 'Other' with specify option if needed.",
+            "scripter_notes": "Field type: Radio buttons (SINGLE_CHOICE). Randomize first 3 options to reduce order bias.",
+            "script": {
+                "question_text": "What was the primary reason for choosing your current smart security system?",
+                "answer_options": [
+                    "Brand reputation",
+                    "Price/value",
+                    "Feature set",
+                    "Professional installation options",
+                    "Compatibility with other smart devices"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        }
+    ]
+}

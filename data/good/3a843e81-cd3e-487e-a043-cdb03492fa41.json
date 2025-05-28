@@ -1,0 +1,123 @@
+{
+    "survey_id": "3a843e81-cd3e-487e-a043-cdb03492fa41",
+    "survey_name": "Employee Satisfaction with Workplace AI Tools Survey",
+    "survey_brief": "This survey aims to gather feedback from employees on their satisfaction and experience with AI-powered tools implemented in the workplace.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use AI-powered tools in your daily work tasks?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure options cover a broad range of usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use AI-powered tools in your daily work tasks?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI-powered tools do you use at work? (Select all that apply)",
+            "answer_options": [
+                "AI-powered virtual assistants (e.g., chatbots)",
+                "AI-driven data analysis tools",
+                "AI-enhanced project management software",
+                "AI-based recruitment or HR tools",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following AI-powered tools do you use at work? (Select all that apply)",
+                "answer_options": [
+                    "AI-powered virtual assistants (e.g., chatbots)",
+                    "AI-driven data analysis tools",
+                    "AI-enhanced project management software",
+                    "AI-based recruitment or HR tools",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the AI tools provided by your organization?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents who selected any AI tool in Q2",
+            "client_notes": "Use a Likert scale with radio buttons. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the AI tools provided by your organization?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected any AI tool in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the AI tools used in your workplace?",
+            "answer_options": [],
+            "routing_logic": "All respondents who selected any AI tool in Q2",
+            "client_notes": "Use an open-text field to allow for detailed feedback. Ensure the field is mobile-friendly.",
+            "scripter_notes": "Field type: open-ended (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for the AI tools used in your workplace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents who selected any AI tool in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Do you feel that AI tools have improved your productivity at work?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No change",
+                "No, it has decreased my productivity"
+            ],
+            "routing_logic": "All respondents who selected any AI tool in Q2",
+            "client_notes": "Use a radio button for single-choice selection. Include a neutral option for those who see no impact.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Do you feel that AI tools have improved your productivity at work?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No change",
+                    "No, it has decreased my productivity"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected any AI tool in Q2"
+            }
+        }
+    ]
+}

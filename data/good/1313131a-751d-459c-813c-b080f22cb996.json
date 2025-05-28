@@ -1,0 +1,129 @@
+{
+    "survey_id": "1313131a-751d-459c-813c-b080f22cb996",
+    "survey_name": "Adoption and Usage of AI-Powered Mental Wellness Apps Survey",
+    "survey_brief": "This survey aims to understand user adoption, satisfaction, and feature preferences for AI-powered mental wellness applications to guide future product development.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use AI-powered mental wellness apps?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button format for clear response capture. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use AI-powered mental wellness apps?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features do you value most in AI-powered mental wellness apps? (Select up to 3)",
+            "answer_options": [
+                "Personalized mindfulness exercises",
+                "Mood tracking and analytics",
+                "AI-chatbot support",
+                "Sleep improvement programs",
+                "Stress reduction techniques",
+                "Guided meditation",
+                "Cognitive Behavioral Therapy (CBT) tools",
+                "Community support features"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1",
+            "client_notes": "Use a multi-select checkbox format with a limit of 3 selections. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with max_selections=3",
+            "script": {
+                "question_text": "Which of the following features do you value most in AI-powered mental wellness apps? (Select up to 3)",
+                "answer_options": [
+                    "Personalized mindfulness exercises",
+                    "Mood tracking and analytics",
+                    "AI-chatbot support",
+                    "Sleep improvement programs",
+                    "Stress reduction techniques",
+                    "Guided meditation",
+                    "Cognitive Behavioral Therapy (CBT) tools",
+                    "Community support features"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would make you use AI-powered mental wellness apps more frequently?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use an open-text field to capture qualitative feedback. Include a character limit of 500.",
+            "scripter_notes": "Field type: text area (OPEN_TEXT) with max_length=500",
+            "script": {
+                "question_text": "What improvements would make you use AI-powered mental wellness apps more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accuracy of AI-powered mental wellness app recommendations?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1",
+            "client_notes": "Use a 5-point Likert scale with radio buttons. Include a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of AI-powered mental wellness app recommendations?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay for premium features in an AI-powered mental wellness app?",
+            "answer_options": [
+                "Yes, currently pay",
+                "Yes, would consider",
+                "No, prefer free versions",
+                "Unsure"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button format. Include an optional follow-up question for 'Yes' responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you be willing to pay for premium features in an AI-powered mental wellness app?",
+                "answer_options": [
+                    "Yes, currently pay",
+                    "Yes, would consider",
+                    "No, prefer free versions",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

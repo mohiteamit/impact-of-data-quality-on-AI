@@ -1,0 +1,115 @@
+{
+    "survey_id": "64452741-7216-4170-927e-785330bce4a8",
+    "survey_name": "Hybrid Work Model Employee Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from employees regarding their satisfaction and challenges with the hybrid work model implemented by the company.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you work remotely in a typical week?",
+            "answer_options": [
+                "1 day or less",
+                "2 days",
+                "3 days",
+                "4 days",
+                "5 days (fully remote)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps identify the distribution of remote work days. Ensure the options cover all possible scenarios.",
+            "scripter_notes": "Use a single-choice radio button for this question.",
+            "script": {
+                "question_text": "How often do you work remotely in a typical week?",
+                "answer_options": [
+                    "1 day or less",
+                    "2 days",
+                    "3 days",
+                    "4 days",
+                    "5 days (fully remote)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the biggest challenges you face with the hybrid work model? (Select all that apply)",
+            "answer_options": [
+                "Communication with colleagues",
+                "Access to necessary tools/technology",
+                "Work-life balance",
+                "Staying motivated",
+                "Technical issues",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps identify common pain points. Allow multiple selections and an 'Other' option for unexpected responses.",
+            "scripter_notes": "Use a multi-choice checkbox for this question, with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are the biggest challenges you face with the hybrid work model? (Select all that apply)",
+                "answer_options": [
+                    "Communication with colleagues",
+                    "Access to necessary tools/technology",
+                    "Work-life balance",
+                    "Staying motivated",
+                    "Technical issues",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please specify any other challenges you face with the hybrid work model.",
+            "answer_options": [],
+            "routing_logic": "Only if 'Other' is selected in Q2",
+            "client_notes": "This open-ended question captures unique challenges not listed in Q2.",
+            "scripter_notes": "Use an open-text field for this question. Display only if 'Other' is selected in Q2.",
+            "script": {
+                "question_text": "Please specify any other challenges you face with the hybrid work model.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if 'Other' is selected in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the company's hybrid work policy?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This Likert-scale question measures overall satisfaction with the hybrid work policy.",
+            "scripter_notes": "Use a single-choice radio button for this question.",
+            "script": {
+                "question_text": "How satisfied are you with the company's hybrid work policy?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for the hybrid work model?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "This open-ended question gathers qualitative feedback for policy improvements.",
+            "scripter_notes": "Use an open-text field for this question.",
+            "script": {
+                "question_text": "What improvements would you suggest for the hybrid work model?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

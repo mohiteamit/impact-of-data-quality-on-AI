@@ -1,0 +1,125 @@
+{
+    "survey_id": "3f739268-2fd5-4013-b73a-0b1544063502",
+    "survey_name": "Adoption of AI in Small Business Inventory Management Survey",
+    "survey_brief": "This survey aims to understand the current adoption levels, challenges, and future intentions of small businesses regarding AI tools for inventory management.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following best describes your business's current use of AI in inventory management?",
+            "answer_options": [
+                "We do not use any AI tools for inventory management",
+                "We use basic AI tools (e.g., demand forecasting)",
+                "We use advanced AI tools (e.g., real-time tracking, automated ordering)",
+                "We are currently evaluating AI solutions for inventory management"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "This question helps segment respondents based on their current AI adoption level. Ensure options are mutually exclusive.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Which of the following best describes your business's current use of AI in inventory management?",
+                "answer_options": [
+                    "We do not use any AI tools for inventory management",
+                    "We use basic AI tools (e.g., demand forecasting)",
+                    "We use advanced AI tools (e.g., real-time tracking, automated ordering)",
+                    "We are currently evaluating AI solutions for inventory management"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary barriers preventing your business from adopting AI tools for inventory management? (Select all that apply)",
+            "answer_options": [
+                "High cost of implementation",
+                "Lack of technical expertise",
+                "Concerns about data security",
+                "Uncertainty about ROI",
+                "Difficulty integrating with existing systems",
+                "None, we have adopted AI tools"
+            ],
+            "routing_logic": "Appears if Q1 response is 'We do not use any AI tools for inventory management' or 'We are currently evaluating AI solutions for inventory management'",
+            "client_notes": "This question identifies common barriers. Allow multiple selections to capture overlapping challenges.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "What are the primary barriers preventing your business from adopting AI tools for inventory management? (Select all that apply)",
+                "answer_options": [
+                    "High cost of implementation",
+                    "Lack of technical expertise",
+                    "Concerns about data security",
+                    "Uncertainty about ROI",
+                    "Difficulty integrating with existing systems",
+                    "None, we have adopted AI tools"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is 'We do not use any AI tools for inventory management' or 'We are currently evaluating AI solutions for inventory management'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the AI tools currently used for inventory management in your business?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 response is 'We use basic AI tools' or 'We use advanced AI tools'",
+            "client_notes": "Use a standard Likert scale to measure satisfaction. Ensure the scale is balanced.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the AI tools currently used for inventory management in your business?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is 'We use basic AI tools' or 'We use advanced AI tools'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What specific improvements have you observed since adopting AI tools for inventory management?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is 'We use basic AI tools' or 'We use advanced AI tools'",
+            "client_notes": "This open-ended question captures qualitative feedback. Limit response length to 500 characters for readability.",
+            "scripter_notes": "Use a text input field with character limit.",
+            "script": {
+                "question_text": "What specific improvements have you observed since adopting AI tools for inventory management?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is 'We use basic AI tools' or 'We use advanced AI tools'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to invest in additional AI tools for inventory management in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "This question gauges future intentions. Use a standard Likert scale for consistency.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How likely are you to invest in additional AI tools for inventory management in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

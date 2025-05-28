@@ -1,0 +1,127 @@
+{
+    "survey_id": "4705b1fd-0e1b-4ca1-bf82-52c3bd39056a",
+    "survey_name": "Customer Satisfaction with Autonomous Grocery Checkout Systems Survey",
+    "survey_brief": "This survey aims to gather customer feedback on the usability, efficiency, and overall satisfaction with autonomous grocery checkout systems to help improve service quality and user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use autonomous grocery checkout systems?",
+            "answer_options": [
+                "Every time I shop",
+                "Most of the time",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale to measure frequency. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How frequently do you use autonomous grocery checkout systems?",
+                "answer_options": [
+                    "Every time I shop",
+                    "Most of the time",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your decision to use autonomous checkout systems? (Select all that apply)",
+            "answer_options": [
+                "Speed of checkout",
+                "Convenience",
+                "Avoiding human interaction",
+                "Perceived hygiene benefits",
+                "Curiosity or novelty",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 response is not 'Never'",
+            "client_notes": "Use a multi-choice format to allow respondents to select multiple factors. Include an open-ended option for additional feedback.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What factors influence your decision to use autonomous checkout systems? (Select all that apply)",
+                "answer_options": [
+                    "Speed of checkout",
+                    "Convenience",
+                    "Avoiding human interaction",
+                    "Perceived hygiene benefits",
+                    "Curiosity or novelty",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall experience of using autonomous checkout systems?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 response is not 'Never'",
+            "client_notes": "Use a Likert scale to measure satisfaction. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the overall experience of using autonomous checkout systems?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would enhance your experience with autonomous checkout systems?",
+            "answer_options": [],
+            "routing_logic": "If Q1 response is not 'Never'",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What improvements would enhance your experience with autonomous checkout systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you have never used autonomous checkout systems, what is the primary reason?",
+            "answer_options": [
+                "Prefer human interaction",
+                "Lack of trust in the technology",
+                "Unfamiliar with how to use it",
+                "Concerns about errors or issues",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 response is 'Never'",
+            "client_notes": "Use a single-choice scale with an optional open-text field for 'Other'. Ensure the options cover common barriers.",
+            "scripter_notes": "Field type: radio button (single-choice) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "If you have never used autonomous checkout systems, what is the primary reason?",
+                "answer_options": [
+                    "Prefer human interaction",
+                    "Lack of trust in the technology",
+                    "Unfamiliar with how to use it",
+                    "Concerns about errors or issues",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 response is 'Never'"
+            }
+        }
+    ]
+}

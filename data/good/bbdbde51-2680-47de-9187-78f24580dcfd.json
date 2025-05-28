@@ -1,0 +1,125 @@
+{
+    "survey_id": "bbdbde51-2680-47de-9187-78f24580dcfd",
+    "survey_name": "Adoption and Satisfaction of AI-Powered Personal Shopping Assistants Survey",
+    "survey_brief": "This survey aims to understand consumer adoption rates and satisfaction levels with AI-powered personal shopping assistants, including features used, benefits experienced, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you used an AI-powered personal shopping assistant in the past 12 months?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question serves as a filter for the rest of the survey. If 'No' or 'Not sure' is selected, the survey will end early.",
+            "scripter_notes": "Field type: Single-choice radio button.",
+            "script": {
+                "question_text": "Have you used an AI-powered personal shopping assistant in the past 12 months?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which AI-powered personal shopping assistant(s) have you used? (Select all that apply)",
+            "answer_options": [
+                "Amazon Personal Shopper",
+                "Google Shopping AI",
+                "eBay ShopBot",
+                "Other (please specify)",
+                "None of the above"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Multi-select question to identify popular platforms. Include an 'Other' option with an open-text field for manual entry if needed.",
+            "scripter_notes": "Field type: Multi-choice checkbox with an 'Other' option triggering a text input.",
+            "script": {
+                "question_text": "Which AI-powered personal shopping assistant(s) have you used? (Select all that apply)",
+                "answer_options": [
+                    "Amazon Personal Shopper",
+                    "Google Shopping AI",
+                    "eBay ShopBot",
+                    "Other (please specify)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the AI-powered personal shopping assistant you use most frequently?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Use a standard Likert scale to measure satisfaction. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: Single-choice radio button.",
+            "script": {
+                "question_text": "How satisfied are you with the AI-powered personal shopping assistant you use most frequently?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What features do you find most valuable in an AI-powered personal shopping assistant? (Select up to three)",
+            "answer_options": [
+                "Personalized recommendations",
+                "Price comparison",
+                "Product reviews and ratings",
+                "Wishlist management",
+                "Automatic reordering",
+                "Voice command support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Limit selections to three to identify top priorities. Include 'Other' for uncovered features.",
+            "scripter_notes": "Field type: Multi-choice checkbox with a maximum of three selections allowed and an 'Other' option triggering a text input.",
+            "script": {
+                "question_text": "What features do you find most valuable in an AI-powered personal shopping assistant? (Select up to three)",
+                "answer_options": [
+                    "Personalized recommendations",
+                    "Price comparison",
+                    "Product reviews and ratings",
+                    "Wishlist management",
+                    "Automatic reordering",
+                    "Voice command support",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would make you more likely to use an AI-powered personal shopping assistant in the future?",
+            "answer_options": [],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Open-ended question to gather qualitative feedback. Consider using sentiment analysis for responses.",
+            "scripter_notes": "Field type: Open-text input.",
+            "script": {
+                "question_text": "What improvements would make you more likely to use an AI-powered personal shopping assistant in the future?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        }
+    ]
+}

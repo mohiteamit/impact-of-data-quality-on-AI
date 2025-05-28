@@ -1,0 +1,185 @@
+{
+    "survey_id": "39a51979-06ce-4db3-b155-ad67bdb3fc12",
+    "survey_name": "Consumer Preferences for Augmented Reality (AR) Shopping Experiences Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding the use of augmented reality (AR) in online and in-store shopping experiences.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with augmented reality (AR) technology in shopping experiences?",
+            "answer_options": [
+                "Very familiar, I use it regularly",
+                "Somewhat familiar, I have tried it a few times",
+                "Not very familiar, but I’ve heard of it",
+                "Not familiar at all"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a Likert scale to measure familiarity. Ensure the options are balanced and cover the full spectrum of familiarity.",
+            "scripter_notes": "Field type: Radio buttons (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How familiar are you with augmented reality (AR) technology in shopping experiences?",
+                "answer_options": [
+                    "Very familiar, I use it regularly",
+                    "Somewhat familiar, I have tried it a few times",
+                    "Not very familiar, but I’ve heard of it",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Have you ever used AR to visualize a product (e.g., furniture, clothing, makeup) before purchasing?",
+            "answer_options": [
+                "Yes, multiple times",
+                "Yes, once or twice",
+                "No, but I would like to try",
+                "No, and I’m not interested"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Simple yes/no with follow-up options to gauge interest. Helps segment respondents for further questions.",
+            "scripter_notes": "Field type: Radio buttons (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Have you ever used AR to visualize a product (e.g., furniture, clothing, makeup) before purchasing?",
+                "answer_options": [
+                    "Yes, multiple times",
+                    "Yes, once or twice",
+                    "No, but I would like to try",
+                    "No, and I’m not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which types of products would you most like to preview using AR before purchasing? (Select all that apply)",
+            "answer_options": [
+                "Furniture and home decor",
+                "Clothing and accessories",
+                "Makeup and beauty products",
+                "Electronics",
+                "None of the above"
+            ],
+            "routing_logic": "Appears if Q2 answer is not 'No, and I’m not interested'",
+            "client_notes": "Multi-choice to identify popular categories for AR applications. Include 'None of the above' to avoid forcing responses.",
+            "scripter_notes": "Field type: Checkboxes (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which types of products would you most like to preview using AR before purchasing? (Select all that apply)",
+                "answer_options": [
+                    "Furniture and home decor",
+                    "Clothing and accessories",
+                    "Makeup and beauty products",
+                    "Electronics",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q2 answer is not 'No, and I’m not interested'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to purchase a product if you can preview it using AR first?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears if Q2 answer is not 'No, and I’m not interested'",
+            "client_notes": "Likert scale to measure purchase intent. Use balanced options to avoid bias.",
+            "scripter_notes": "Field type: Radio buttons (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to purchase a product if you can preview it using AR first?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q2 answer is not 'No, and I’m not interested'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What concerns, if any, do you have about using AR for shopping? (Select all that apply)",
+            "answer_options": [
+                "Privacy issues",
+                "Accuracy of product representation",
+                "Technical difficulties (e.g., app crashes, slow loading)",
+                "Lack of interest in AR",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Multi-choice to identify barriers. Include an open-text follow-up (Q6) for additional concerns.",
+            "scripter_notes": "Field type: Checkboxes (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using AR for shopping? (Select all that apply)",
+                "answer_options": [
+                    "Privacy issues",
+                    "Accuracy of product representation",
+                    "Technical difficulties (e.g., app crashes, slow loading)",
+                    "Lack of interest in AR",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you have any additional concerns about AR shopping, please describe them:",
+            "answer_options": [],
+            "routing_logic": "Appears if Q5 answer is not 'None of the above'",
+            "client_notes": "Open-ended to capture unlisted concerns. Keep optional to avoid survey fatigue.",
+            "scripter_notes": "Field type: Open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "If you have any additional concerns about AR shopping, please describe them:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q5 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "Would you be more likely to shop with a retailer that offers AR product previews compared to one that doesn’t?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, somewhat",
+                "No difference",
+                "No, not at all"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Single-choice to measure competitive advantage of AR. Helps assess business impact.",
+            "scripter_notes": "Field type: Radio buttons (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you be more likely to shop with a retailer that offers AR product previews compared to one that doesn’t?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, somewhat",
+                    "No difference",
+                    "No, not at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What improvements would make AR shopping experiences more appealing to you?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended to gather qualitative feedback. Useful for product development.",
+            "scripter_notes": "Field type: Open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would make AR shopping experiences more appealing to you?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

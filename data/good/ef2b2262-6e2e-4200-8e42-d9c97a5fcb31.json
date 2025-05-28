@@ -1,0 +1,123 @@
+{
+    "survey_id": "ef2b2262-6e2e-4200-8e42-d9c97a5fcb31",
+    "survey_name": "Customer Satisfaction with Subscription-Based Plant Care Services Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with subscription-based plant care services, including delivery, product quality, and customer service.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the overall quality of the plants received through the subscription service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for consistency and ease of analysis. Ensure mobile-friendly formatting.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of the plants received through the subscription service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following plant care services do you use? (Select all that apply)",
+            "answer_options": [
+                "Indoor plant subscription",
+                "Outdoor plant subscription",
+                "Plant care tips and guides",
+                "One-on-one plant care consultations",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture diverse service usage.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following plant care services do you use? (Select all that apply)",
+                "answer_options": [
+                    "Indoor plant subscription",
+                    "Outdoor plant subscription",
+                    "Plant care tips and guides",
+                    "One-on-one plant care consultations",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How likely are you to recommend this subscription service to a friend or colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Net Promoter Score (NPS) question. Use a 5-point scale for consistency.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to recommend this subscription service to a friend or colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the subscription service?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open text box.",
+            "script": {
+                "question_text": "What improvements would you suggest for the subscription service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How often do you use the additional plant care resources provided (e.g., tips, guides, consultations)?",
+            "answer_options": [
+                "Frequently",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Respondents who selected 'Plant care tips and guides' or 'One-on-one plant care consultations' in Q2",
+            "client_notes": "Conditional question based on Q2 responses. Use a single-choice format.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you use the additional plant care resources provided (e.g., tips, guides, consultations)?",
+                "answer_options": [
+                    "Frequently",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Plant care tips and guides' or 'One-on-one plant care consultations' in Q2"
+            }
+        }
+    ]
+}

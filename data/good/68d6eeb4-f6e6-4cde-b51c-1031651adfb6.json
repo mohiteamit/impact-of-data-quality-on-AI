@@ -1,0 +1,127 @@
+{
+    "survey_id": "68d6eeb4-f6e6-4cde-b51c-1031651adfb6",
+    "survey_name": "Customer Satisfaction with Smart Home Lighting Systems Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with smart home lighting systems, including ease of use, features, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which smart home lighting system do you currently use?",
+            "answer_options": [
+                "Philips Hue",
+                "LIFX",
+                "Nanoleaf",
+                "Other (please specify)",
+                "None"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Ensure the 'Other' option includes a text field for specification. Keep the list updated with popular brands.",
+            "scripter_notes": "Use a single-choice radio button with an optional text field for 'Other'.",
+            "script": {
+                "question_text": "Which smart home lighting system do you currently use?",
+                "answer_options": [
+                    "Philips Hue",
+                    "LIFX",
+                    "Nanoleaf",
+                    "Other (please specify)",
+                    "None"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your smart home lighting system?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only appears if respondent answered 'Philips Hue', 'LIFX', 'Nanoleaf', or 'Other' in Q1.",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Use a single-choice radio button.",
+            "script": {
+                "question_text": "How satisfied are you with your smart home lighting system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if respondent answered 'Philips Hue', 'LIFX', 'Nanoleaf', or 'Other' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which features do you use most often with your smart home lighting system? (Select all that apply)",
+            "answer_options": [
+                "Voice control (e.g., Alexa, Google Assistant)",
+                "Scheduling/timers",
+                "Color changing",
+                "Brightness adjustment",
+                "Integration with other smart home devices",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if respondent answered 'Philips Hue', 'LIFX', 'Nanoleaf', or 'Other' in Q1.",
+            "client_notes": "Allow multiple selections to capture varied usage patterns. Include an 'Other' option for additional features.",
+            "scripter_notes": "Use a multi-choice checkbox with an optional text field for 'Other'.",
+            "script": {
+                "question_text": "Which features do you use most often with your smart home lighting system? (Select all that apply)",
+                "answer_options": [
+                    "Voice control (e.g., Alexa, Google Assistant)",
+                    "Scheduling/timers",
+                    "Color changing",
+                    "Brightness adjustment",
+                    "Integration with other smart home devices",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if respondent answered 'Philips Hue', 'LIFX', 'Nanoleaf', or 'Other' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in smart home lighting systems?",
+            "answer_options": [],
+            "routing_logic": "Only appears if respondent answered 'Philips Hue', 'LIFX', 'Nanoleaf', or 'Other' in Q1.",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Use an open-text field.",
+            "script": {
+                "question_text": "What improvements would you like to see in smart home lighting systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only appears if respondent answered 'Philips Hue', 'LIFX', 'Nanoleaf', or 'Other' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your smart home lighting system to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Only appears if respondent answered 'Philips Hue', 'LIFX', 'Nanoleaf', or 'Other' in Q1.",
+            "client_notes": "Use a standard Net Promoter Score (NPS) scale for consistency. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Use a single-choice radio button.",
+            "script": {
+                "question_text": "How likely are you to recommend your smart home lighting system to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if respondent answered 'Philips Hue', 'LIFX', 'Nanoleaf', or 'Other' in Q1."
+            }
+        }
+    ]
+}

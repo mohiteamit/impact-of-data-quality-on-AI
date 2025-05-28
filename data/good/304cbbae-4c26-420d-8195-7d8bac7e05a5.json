@@ -1,0 +1,99 @@
+{
+    "survey_id": "304cbbae-4c26-420d-8195-7d8bac7e05a5",
+    "survey_name": "Customer Satisfaction with Airport Parking Services Survey",
+    "survey_brief": "This survey aims to gather customer feedback on their experiences with airport parking services, including ease of use, cost, and overall satisfaction to help improve service quality.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use airport parking services when traveling?",
+            "answer_options": [
+                "Every time I travel",
+                "Often",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure the options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use airport parking services when traveling?",
+                "answer_options": [
+                    "Every time I travel",
+                    "Often",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following airport parking services have you used in the past 12 months? (Select all that apply)",
+            "answer_options": [
+                "Short-term parking",
+                "Long-term parking",
+                "Valet parking",
+                "Economy parking",
+                "None of the above"
+            ],
+            "routing_logic": "Respondents who selected 'Every time I travel', 'Often', 'Occasionally', or 'Rarely' in Q1",
+            "client_notes": "Use checkboxes for multi-choice selection. Include an option for those who haven't used any services.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following airport parking services have you used in the past 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Short-term parking",
+                    "Long-term parking",
+                    "Valet parking",
+                    "Economy parking",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Every time I travel', 'Often', 'Occasionally', or 'Rarely' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness and maintenance of the airport parking facilities?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected any option except 'None of the above' in Q2",
+            "client_notes": "Use a Likert scale for satisfaction levels. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and maintenance of the airport parking facilities?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any option except 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for airport parking services?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to capture detailed feedback. Ensure the field is mobile-friendly.",
+            "scripter_notes": "Field type: open-ended text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for airport parking services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

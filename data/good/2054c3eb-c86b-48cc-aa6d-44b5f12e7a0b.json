@@ -1,0 +1,125 @@
+{
+    "survey_id": "2054c3eb-c86b-48cc-aa6d-44b5f12e7a0b",
+    "survey_name": "Employee Satisfaction with Corporate Mental Health Support Programs Survey",
+    "survey_brief": "This survey aims to gather feedback from employees regarding their satisfaction with the company's mental health support programs and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the mental health support programs offered by your company?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not familiar at all"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice scale to measure familiarity levels clearly.",
+            "scripter_notes": "Field type: single-choice (radio buttons)",
+            "script": {
+                "question_text": "How familiar are you with the mental health support programs offered by your company?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following mental health support programs have you used in the past year?",
+            "answer_options": [
+                "Employee Assistance Program (EAP)",
+                "Mental health days/leave",
+                "Wellness workshops or seminars",
+                "Counseling or therapy sessions (company-sponsored)",
+                "Online mental health resources",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multiple selections to capture usage across different programs.",
+            "scripter_notes": "Field type: multi-choice (checkboxes)",
+            "script": {
+                "question_text": "Which of the following mental health support programs have you used in the past year?",
+                "answer_options": [
+                    "Employee Assistance Program (EAP)",
+                    "Mental health days/leave",
+                    "Wellness workshops or seminars",
+                    "Counseling or therapy sessions (company-sponsored)",
+                    "Online mental health resources",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the mental health support programs provided by your company? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears if Q2 is not 'None of the above'",
+            "client_notes": "Use a Likert scale to measure satisfaction levels quantitatively.",
+            "scripter_notes": "Field type: single-choice (radio buttons with numerical scale)",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the mental health support programs provided by your company? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q2 is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the company's mental health support programs?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended responses can provide qualitative insights for program enhancement.",
+            "scripter_notes": "Field type: open-ended (text box)",
+            "script": {
+                "question_text": "What improvements would you suggest for the company's mental health support programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend the company's mental health support programs to a colleague? (1 = Very unlikely, 5 = Very likely)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears if Q2 is not 'None of the above'",
+            "client_notes": "Use a Likert scale to measure advocacy potential.",
+            "scripter_notes": "Field type: single-choice (radio buttons with numerical scale)",
+            "script": {
+                "question_text": "How likely are you to recommend the company's mental health support programs to a colleague? (1 = Very unlikely, 5 = Very likely)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q2 is not 'None of the above'"
+            }
+        }
+    ]
+}

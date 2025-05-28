@@ -1,0 +1,169 @@
+{
+    "survey_id": "b0bf79cc-a5e7-4d55-81a2-36c5973e8e69",
+    "survey_name": "Customer Satisfaction with Smart Pet Care Technology Survey",
+    "survey_brief": "This survey aims to gather customer feedback on smart pet care technologies, including automated feeders, GPS trackers, and health monitoring devices, to understand user satisfaction and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which smart pet care products do you currently own or use? (Select all that apply)",
+            "answer_options": [
+                "Automated pet feeder",
+                "Smart GPS pet tracker",
+                "Health monitoring collar",
+                "Smart pet camera",
+                "None of the above"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "This question helps identify the adoption rate of various smart pet care products. Ensure the 'None of the above' option is included for respondents who do not use any of these products.",
+            "scripter_notes": "Use a MULTI_CHOICE field type with checkboxes for each option.",
+            "script": {
+                "question_text": "Which smart pet care products do you currently own or use? (Select all that apply)",
+                "answer_options": [
+                    "Automated pet feeder",
+                    "Smart GPS pet tracker",
+                    "Health monitoring collar",
+                    "Smart pet camera",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the performance of your smart pet care products?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display only if Q1 does not select 'None of the above'",
+            "client_notes": "Use a standard 5-point Likert scale to measure satisfaction. This helps gauge overall customer sentiment.",
+            "scripter_notes": "Use a SINGLE_CHOICE field type with radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the performance of your smart pet care products?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you value the most in your smart pet care products? (Select up to 3)",
+            "answer_options": [
+                "Real-time alerts",
+                "Mobile app integration",
+                "Battery life",
+                "Ease of setup",
+                "Data accuracy",
+                "Customer support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display only if Q1 does not select 'None of the above'",
+            "client_notes": "This question identifies the most valued features to prioritize in future product development. The 'Other' option allows for open-ended responses.",
+            "scripter_notes": "Use a MULTI_CHOICE field type with checkboxes and a limit of 3 selections. Include an 'Other' option with a text field for specification.",
+            "script": {
+                "question_text": "What features do you value the most in your smart pet care products? (Select up to 3)",
+                "answer_options": [
+                    "Real-time alerts",
+                    "Mobile app integration",
+                    "Battery life",
+                    "Ease of setup",
+                    "Data accuracy",
+                    "Customer support",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display only if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced while using smart pet care products?",
+            "answer_options": [],
+            "routing_logic": "Display only if Q1 does not select 'None of the above'",
+            "client_notes": "This open-ended question allows customers to share specific issues they’ve encountered, providing valuable insights for improvement.",
+            "scripter_notes": "Use an OPEN_TEXT field type with a text box for responses.",
+            "script": {
+                "question_text": "What challenges have you faced while using smart pet care products?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display only if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend smart pet care products to other pet owners?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Display only if Q1 does not select 'None of the above'",
+            "client_notes": "This question measures Net Promoter Score (NPS) potential, indicating customer loyalty and satisfaction.",
+            "scripter_notes": "Use a SINGLE_CHOICE field type with radio buttons.",
+            "script": {
+                "question_text": "How likely are you to recommend smart pet care products to other pet owners?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional features would you like to see in future smart pet care products?",
+            "answer_options": [],
+            "routing_logic": "Display only if Q1 does not select 'None of the above'",
+            "client_notes": "This open-ended question helps identify unmet needs and innovation opportunities.",
+            "scripter_notes": "Use an OPEN_TEXT field type with a text box for responses.",
+            "script": {
+                "question_text": "What additional features would you like to see in future smart pet care products?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display only if Q1 does not select 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If you do not currently use smart pet care products, what is the primary reason?",
+            "answer_options": [
+                "Too expensive",
+                "Not necessary for my pet",
+                "Concerns about reliability",
+                "Prefer traditional methods",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display only if Q1 selects 'None of the above'",
+            "client_notes": "This question helps understand barriers to adoption among non-users.",
+            "scripter_notes": "Use a SINGLE_CHOICE field type with radio buttons and an 'Other' option with a text field for specification.",
+            "script": {
+                "question_text": "If you do not currently use smart pet care products, what is the primary reason?",
+                "answer_options": [
+                    "Too expensive",
+                    "Not necessary for my pet",
+                    "Concerns about reliability",
+                    "Prefer traditional methods",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 selects 'None of the above'"
+            }
+        }
+    ]
+}

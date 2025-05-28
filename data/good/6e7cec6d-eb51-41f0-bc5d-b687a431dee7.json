@@ -1,0 +1,121 @@
+{
+    "survey_id": "6e7cec6d-eb51-41f0-bc5d-b687a431dee7",
+    "survey_name": "Consumer Preferences for Contactless Grocery Checkout Systems Survey",
+    "survey_brief": "This survey aims to gather consumer feedback on their preferences and satisfaction levels with contactless grocery checkout systems to help retailers enhance user experience and adoption rates.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use contactless grocery checkout systems?",
+            "answer_options": [
+                "Every visit",
+                "Most visits",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point frequency scale to capture usage patterns accurately.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you use contactless grocery checkout systems?",
+                "answer_options": [
+                    "Every visit",
+                    "Most visits",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons you prefer contactless checkout systems? (Select all that apply)",
+            "answer_options": [
+                "Faster checkout process",
+                "Reduced physical contact with surfaces",
+                "Ease of use",
+                "Integration with mobile payment apps",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is 'Every visit', 'Most visits', or 'Occasionally'",
+            "client_notes": "Allow multiple selections to identify key drivers of preference.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with an optional 'Other' open-text field.",
+            "script": {
+                "question_text": "What are the primary reasons you prefer contactless checkout systems? (Select all that apply)",
+                "answer_options": [
+                    "Faster checkout process",
+                    "Reduced physical contact with surfaces",
+                    "Ease of use",
+                    "Integration with mobile payment apps",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is 'Every visit', 'Most visits', or 'Occasionally'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced when using contactless grocery checkout systems?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback on pain points.",
+            "scripter_notes": "Field type: Open-text response.",
+            "script": {
+                "question_text": "What challenges have you faced when using contactless grocery checkout systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accuracy of contactless checkout systems in scanning items correctly?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of contactless checkout systems in scanning items correctly?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend contactless grocery checkout systems to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Simple yes/no/unsure question to gauge advocacy.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "Would you recommend contactless grocery checkout systems to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "survey_id": "66b7ffe5-2c71-4a74-88b5-bb84373845c8",
+    "survey_name": "Adoption of AI in Small Business Accounting Survey",
+    "survey_brief": "This survey aims to understand the current adoption rates, challenges, and satisfaction levels of small businesses using AI-powered accounting tools.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following best describes your business's use of AI in accounting?",
+            "answer_options": [
+                "We do not use AI in accounting",
+                "We are considering AI for accounting but have not adopted it yet",
+                "We use AI-powered accounting tools for specific tasks",
+                "AI is fully integrated into our accounting processes"
+            ],
+            "routing_logic": "This question appears to all respondents.",
+            "client_notes": "Use a single-choice question to categorize the respondent's level of AI adoption.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Which of the following best describes your business's use of AI in accounting?",
+                "answer_options": [
+                    "We do not use AI in accounting",
+                    "We are considering AI for accounting but have not adopted it yet",
+                    "We use AI-powered accounting tools for specific tasks",
+                    "AI is fully integrated into our accounting processes"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "If you use AI in accounting, what are the primary benefits you experience? (Select all that apply)",
+            "answer_options": [
+                "Improved accuracy",
+                "Time savings",
+                "Cost reduction",
+                "Better financial insights",
+                "Automated compliance",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears only if respondents select 'We use AI-powered accounting tools for specific tasks' or 'AI is fully integrated into our accounting processes' in Q1.",
+            "client_notes": "Use a multi-choice question to identify key benefits. Ensure 'Other' option includes a text field for additional details.",
+            "scripter_notes": "Field type: checkbox (multi-choice). Include an optional open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "If you use AI in accounting, what are the primary benefits you experience? (Select all that apply)",
+                "answer_options": [
+                    "Improved accuracy",
+                    "Time savings",
+                    "Cost reduction",
+                    "Better financial insights",
+                    "Automated compliance",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears only if respondents select 'We use AI-powered accounting tools for specific tasks' or 'AI is fully integrated into our accounting processes' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced when implementing AI in accounting?",
+            "answer_options": [],
+            "routing_logic": "This question appears only if respondents select 'We use AI-powered accounting tools for specific tasks' or 'AI is fully integrated into our accounting processes' in Q1.",
+            "client_notes": "Use an open-ended question to gather qualitative feedback on challenges.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What challenges have you faced when implementing AI in accounting?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears only if respondents select 'We use AI-powered accounting tools for specific tasks' or 'AI is fully integrated into our accounting processes' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with your AI-powered accounting tools? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "This question appears only if respondents select 'We use AI-powered accounting tools for specific tasks' or 'AI is fully integrated into our accounting processes' in Q1.",
+            "client_notes": "Use a Likert scale for satisfaction rating. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with your AI-powered accounting tools? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears only if respondents select 'We use AI-powered accounting tools for specific tasks' or 'AI is fully integrated into our accounting processes' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What factors would encourage your business to adopt AI in accounting if you are not currently using it?",
+            "answer_options": [],
+            "routing_logic": "This question appears only if respondents select 'We do not use AI in accounting' or 'We are considering AI for accounting but have not adopted it yet' in Q1.",
+            "client_notes": "Use an open-ended question to explore motivations for future adoption.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What factors would encourage your business to adopt AI in accounting if you are not currently using it?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears only if respondents select 'We do not use AI in accounting' or 'We are considering AI for accounting but have not adopted it yet' in Q1."
+            }
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+{
+    "survey_id": "3cef3c6a-72a4-464c-ba0b-27bba4d0cef7",
+    "survey_name": "Employee Satisfaction with Workplace Noise Reduction Solutions Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction with various noise reduction solutions implemented in the workplace to improve productivity and well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the current noise reduction solutions in your workspace?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a 5-point Likert scale to ensure clarity and ease of response. This question is mobile-friendly.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Ensure options are vertically aligned for readability.",
+            "script": {
+                "question_text": "How satisfied are you with the current noise reduction solutions in your workspace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following noise reduction solutions do you find most effective? (Select all that apply)",
+            "answer_options": [
+                "White noise machines",
+                "Soundproof partitions",
+                "Noise-canceling headphones provided by the company",
+                "Quiet zones/rooms",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "This question allows multiple selections. Ensure the 'Other' option includes a text field for specification.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "Which of the following noise reduction solutions do you find most effective? (Select all that apply)",
+                "answer_options": [
+                    "White noise machines",
+                    "Soundproof partitions",
+                    "Noise-canceling headphones provided by the company",
+                    "Quiet zones/rooms",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What additional noise reduction solutions would you recommend for the workplace?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "This open-ended question allows employees to provide personalized feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT). Include a text area with a 500-character limit.",
+            "script": {
+                "question_text": "What additional noise reduction solutions would you recommend for the workplace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you use the provided noise-canceling headphones?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Display only if 'Noise-canceling headphones provided by the company' is selected in Q2",
+            "client_notes": "This follow-up question provides insights into the utilization of specific solutions. Use a drop-down menu for ease of selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Ensure conditional routing is correctly implemented.",
+            "script": {
+                "question_text": "How often do you use the provided noise-canceling headphones?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if 'Noise-canceling headphones provided by the company' is selected in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "On a scale of 1 to 10, how much has noise reduction improved your productivity? (1 = Not at all, 10 = Significantly)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a numerical scale for precise measurement. This question is mobile-friendly with a slider option.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Alternatively, implement a slider for enhanced user experience.",
+            "script": {
+                "question_text": "On a scale of 1 to 10, how much has noise reduction improved your productivity? (1 = Not at all, 10 = Significantly)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        }
+    ]
+}

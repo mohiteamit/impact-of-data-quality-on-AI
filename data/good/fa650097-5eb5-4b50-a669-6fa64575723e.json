@@ -1,0 +1,129 @@
+{
+    "survey_id": "fa650097-5eb5-4b50-a669-6fa64575723e",
+    "survey_name": "Sustainable Fashion Brand Loyalty Survey",
+    "survey_brief": "This survey aims to understand consumer loyalty and preferences towards sustainable fashion brands, focusing on purchasing habits, brand trust, and factors influencing sustainable shopping decisions.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase from sustainable fashion brands?",
+            "answer_options": [
+                "Regularly (at least once a month)",
+                "Occasionally (a few times a year)",
+                "Rarely (once a year or less)",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for clear response capture. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you purchase from sustainable fashion brands?",
+                "answer_options": [
+                    "Regularly (at least once a month)",
+                    "Occasionally (a few times a year)",
+                    "Rarely (once a year or less)",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors most influence your decision to buy from sustainable fashion brands? (Select up to 3)",
+            "answer_options": [
+                "Environmental impact",
+                "Ethical labor practices",
+                "Brand transparency",
+                "Product quality",
+                "Price",
+                "Design/style",
+                "Peer recommendations"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Regularly', 'Occasionally', or 'Rarely' to Q1",
+            "client_notes": "Use checkboxes for multi-select. Randomize option order to minimize bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "What factors most influence your decision to buy from sustainable fashion brands? (Select up to 3)",
+                "answer_options": [
+                    "Environmental impact",
+                    "Ethical labor practices",
+                    "Brand transparency",
+                    "Product quality",
+                    "Price",
+                    "Design/style",
+                    "Peer recommendations"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Regularly', 'Occasionally', or 'Rarely' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What barriers prevent you from purchasing more sustainable fashion?",
+            "answer_options": [
+                "Higher prices",
+                "Limited availability",
+                "Lack of awareness about brands",
+                "Style/design preferences",
+                "Perceived lower quality",
+                "No barriers"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Rarely' or 'Never' to Q1",
+            "client_notes": "Include an open-text 'Other' option if space allows. Use radio buttons.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons with optional 'Other' text field)",
+            "script": {
+                "question_text": "What barriers prevent you from purchasing more sustainable fashion?",
+                "answer_options": [
+                    "Higher prices",
+                    "Limited availability",
+                    "Lack of awareness about brands",
+                    "Style/design preferences",
+                    "Perceived lower quality",
+                    "No barriers"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Rarely' or 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend your favorite sustainable fashion brand to a friend?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Regularly' or 'Occasionally' to Q1",
+            "client_notes": "Use a 5-point Likert scale. Label all points to avoid ambiguity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How likely are you to recommend your favorite sustainable fashion brand to a friend?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Regularly' or 'Occasionally' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would make you more loyal to a sustainable fashion brand?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents except those who answered 'Never' to Q1",
+            "client_notes": "Open-ended to capture qualitative insights. Use a text box with a 200-character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would make you more loyal to a sustainable fashion brand?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents except those who answered 'Never' to Q1"
+            }
+        }
+    ]
+}

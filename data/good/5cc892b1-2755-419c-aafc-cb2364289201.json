@@ -1,0 +1,113 @@
+{
+    "survey_id": "5cc892b1-2755-419c-aafc-cb2364289201",
+    "survey_name": "Customer Satisfaction with Contactless Restaurant Ordering Technology Survey",
+    "survey_brief": "This survey aims to gather feedback from customers regarding their experience with contactless ordering technology in restaurants, including ease of use, satisfaction, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use contactless ordering technology (e.g., QR code menus, mobile apps) when dining at restaurants?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Always"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for clarity and consistency. Ensure the options are mobile-friendly.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How frequently do you use contactless ordering technology (e.g., QR code menus, mobile apps) when dining at restaurants?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What aspects of contactless ordering technology do you find most convenient? (Select all that apply)",
+            "answer_options": [
+                "Reduced physical contact with menus",
+                "Faster ordering process",
+                "Easy payment integration",
+                "Ability to customize orders",
+                "Access to detailed menu descriptions"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Sometimes', 'Often', or 'Always' in Q1.",
+            "client_notes": "Allow multiple selections. Ensure the options are clear and concise.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "What aspects of contactless ordering technology do you find most convenient? (Select all that apply)",
+                "answer_options": [
+                    "Reduced physical contact with menus",
+                    "Faster ordering process",
+                    "Easy payment integration",
+                    "Ability to customize orders",
+                    "Access to detailed menu descriptions"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Sometimes', 'Often', or 'Always' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced when using contactless ordering technology?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 200 characters for brevity.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What challenges have you faced when using contactless ordering technology?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to choose a restaurant that offers contactless ordering over one that does not?",
+            "answer_options": [
+                "Very unlikely",
+                "Unlikely",
+                "Neutral",
+                "Likely",
+                "Very likely"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale. Ensure the question is easy to understand.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How likely are you to choose a restaurant that offers contactless ordering over one that does not?",
+                "answer_options": [
+                    "Very unlikely",
+                    "Unlikely",
+                    "Neutral",
+                    "Likely",
+                    "Very likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features would improve your contactless ordering experience?",
+            "answer_options": [],
+            "routing_logic": "Appears for respondents who selected 'Likely' or 'Very likely' in Q4.",
+            "client_notes": "Open-ended question to gather suggestions. Limit response length to 200 characters.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What additional features would improve your contactless ordering experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for respondents who selected 'Likely' or 'Very likely' in Q4."
+            }
+        }
+    ]
+}

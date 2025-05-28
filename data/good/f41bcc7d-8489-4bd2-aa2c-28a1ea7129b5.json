@@ -1,0 +1,147 @@
+{
+    "survey_id": "f41bcc7d-8489-4bd2-aa2c-28a1ea7129b5",
+    "survey_name": "Customer Preferences for Contactless Restaurant Ordering Technology Survey",
+    "survey_brief": "This survey aims to understand customer preferences and experiences with contactless ordering technologies in restaurants, such as QR code menus, mobile apps, and tabletop tablets.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use contactless ordering technologies (e.g., QR code menus, mobile apps) when dining at restaurants?",
+            "answer_options": [
+                "Never",
+                "Rarely (once every few months)",
+                "Occasionally (once a month)",
+                "Frequently (once a week or more)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button format for clarity. Ensure options cover a broad range of usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use contactless ordering technologies (e.g., QR code menus, mobile apps) when dining at restaurants?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once every few months)",
+                    "Occasionally (once a month)",
+                    "Frequently (once a week or more)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following contactless ordering methods have you used in the past six months? (Select all that apply)",
+            "answer_options": [
+                "QR code menus",
+                "Restaurant mobile app",
+                "Tabletop tablets",
+                "Voice-activated ordering",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections (checkboxes) to capture varied experiences. Include an opt-out option for non-users.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following contactless ordering methods have you used in the past six months? (Select all that apply)",
+                "answer_options": [
+                    "QR code menus",
+                    "Restaurant mobile app",
+                    "Tabletop tablets",
+                    "Voice-activated ordering",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the PRIMARY reason you choose to use contactless ordering technologies?",
+            "answer_options": [
+                "Convenience",
+                "Speed of service",
+                "Hygiene/safety concerns",
+                "Personal preference for technology",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected any option except 'None of the above' in Q2",
+            "client_notes": "Include an 'Other' option with a text field to capture unique responses. Use a single-choice format.",
+            "scripter_notes": "Field type: radio button with optional open-text follow-up (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What is the PRIMARY reason you choose to use contactless ordering technologies?",
+                "answer_options": [
+                    "Convenience",
+                    "Speed of service",
+                    "Hygiene/safety concerns",
+                    "Personal preference for technology",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any option except 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the usability of contactless ordering systems in restaurants?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected any option except 'None of the above' in Q2",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the usability of contactless ordering systems in restaurants?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected any option except 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for contactless restaurant ordering technologies?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected any option except 'None of the above' in Q2",
+            "client_notes": "Open-ended question to gather qualitative feedback. Limit response length to 200 characters for brevity.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for contactless restaurant ordering technologies?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected any option except 'None of the above' in Q2"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you be more likely to visit a restaurant that offers contactless ordering options?",
+            "answer_options": [
+                "Yes, significantly more likely",
+                "Yes, slightly more likely",
+                "No difference",
+                "No, less likely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to measure behavioral intent. Include neutral and negative options.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you be more likely to visit a restaurant that offers contactless ordering options?",
+                "answer_options": [
+                    "Yes, significantly more likely",
+                    "Yes, slightly more likely",
+                    "No difference",
+                    "No, less likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,121 @@
+{
+    "survey_id": "e44094f0-835d-4408-b0d4-09c924ca7204",
+    "survey_name": "Employee Satisfaction with Digital Detox Programs Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction and effectiveness of digital detox programs implemented by the company to promote work-life balance and mental well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in the company's digital detox programs?",
+            "answer_options": [
+                "Never",
+                "Occasionally (1-2 times a month)",
+                "Regularly (3-4 times a month)",
+                "Very frequently (5 or more times a month)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice scale to measure frequency of participation. Ensure mobile-friendly design with clear radio buttons.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you participate in the company's digital detox programs?",
+                "answer_options": [
+                    "Never",
+                    "Occasionally (1-2 times a month)",
+                    "Regularly (3-4 times a month)",
+                    "Very frequently (5 or more times a month)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which digital detox activities do you find most beneficial? (Select all that apply)",
+            "answer_options": [
+                "No-email hours",
+                "Screen-free lunch breaks",
+                "Mindfulness sessions",
+                "Offline team-building activities",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a multi-choice format to capture diverse preferences. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "Which digital detox activities do you find most beneficial? (Select all that apply)",
+                "answer_options": [
+                    "No-email hours",
+                    "Screen-free lunch breaks",
+                    "Mindfulness sessions",
+                    "Offline team-building activities",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How has participating in digital detox programs impacted your work-life balance?",
+            "answer_options": [
+                "Significantly improved",
+                "Slightly improved",
+                "No change",
+                "Slightly worsened",
+                "Significantly worsened"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale to measure perceived impact. Ensure neutral option is included.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How has participating in digital detox programs impacted your work-life balance?",
+                "answer_options": [
+                    "Significantly improved",
+                    "Slightly improved",
+                    "No change",
+                    "Slightly worsened",
+                    "Significantly worsened"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges, if any, do you face when participating in digital detox programs?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT) with character limit",
+            "script": {
+                "question_text": "What challenges, if any, do you face when participating in digital detox programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend the company's digital detox programs to colleagues?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Single-choice question to measure advocacy. Include a neutral option.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend the company's digital detox programs to colleagues?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        }
+    ]
+}

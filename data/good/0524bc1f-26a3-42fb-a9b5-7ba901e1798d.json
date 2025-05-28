@@ -1,0 +1,127 @@
+{
+    "survey_id": "0524bc1f-26a3-42fb-a9b5-7ba901e1798d",
+    "survey_name": "Employee Satisfaction with Hybrid Meeting Tools Survey",
+    "survey_brief": "This survey aims to gather feedback from employees about their satisfaction and experience with hybrid meeting tools used within the organization.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in hybrid meetings (a combination of in-person and remote attendees)?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale to measure frequency. Consider mobile-friendly dropdown if survey is taken on mobile devices.",
+            "scripter_notes": "Field type: Radio button",
+            "script": {
+                "question_text": "How often do you participate in hybrid meetings (a combination of in-person and remote attendees)?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which hybrid meeting tools does your organization currently use? (Select all that apply)",
+            "answer_options": [
+                "Zoom",
+                "Microsoft Teams",
+                "Google Meet",
+                "Webex",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections. Include an 'Other' option with a text field for unspecified tools.",
+            "scripter_notes": "Field type: Checkboxes with an optional open text field for 'Other'.",
+            "script": {
+                "question_text": "Which hybrid meeting tools does your organization currently use? (Select all that apply)",
+                "answer_options": [
+                    "Zoom",
+                    "Microsoft Teams",
+                    "Google Meet",
+                    "Webex",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the current hybrid meeting tools in terms of audio quality?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents who selected at least one tool in Q2",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is consistent across similar questions.",
+            "scripter_notes": "Field type: Radio button",
+            "script": {
+                "question_text": "How satisfied are you with the current hybrid meeting tools in terms of audio quality?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected at least one tool in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges do you face when using hybrid meeting tools? (Select all that apply)",
+            "answer_options": [
+                "Poor audio quality",
+                "Video lag or freezing",
+                "Difficulty sharing screens",
+                "Unreliable internet connection",
+                "Difficulty managing in-person and remote participants",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents who selected at least one tool in Q2",
+            "client_notes": "Allow multiple selections. Include an 'Other' option for unspecified challenges.",
+            "scripter_notes": "Field type: Checkboxes with an optional open text field for 'Other'.",
+            "script": {
+                "question_text": "What challenges do you face when using hybrid meeting tools? (Select all that apply)",
+                "answer_options": [
+                    "Poor audio quality",
+                    "Video lag or freezing",
+                    "Difficulty sharing screens",
+                    "Unreliable internet connection",
+                    "Difficulty managing in-person and remote participants",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents who selected at least one tool in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for the hybrid meeting tools used in your organization?",
+            "answer_options": [],
+            "routing_logic": "All respondents who selected at least one tool in Q2",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: Open text",
+            "script": {
+                "question_text": "What improvements would you suggest for the hybrid meeting tools used in your organization?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents who selected at least one tool in Q2"
+            }
+        }
+    ]
+}

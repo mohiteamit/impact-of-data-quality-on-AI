@@ -1,0 +1,149 @@
+{
+    "survey_id": "d6c01a5b-15b4-467d-979e-61f93e9d53b0",
+    "survey_name": "Consumer Preferences for Subscription-Based Personal Styling Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels with subscription-based personal styling services, including factors influencing subscription decisions and desired features.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you ever used a subscription-based personal styling service?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This is a screening question. Respondents who answer 'No' will be routed to the end of the survey with a thank you message.",
+            "scripter_notes": "Use a single-choice radio button. Route respondents who answer 'No' to the end of the survey.",
+            "script": {
+                "question_text": "Have you ever used a subscription-based personal styling service?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which subscription-based personal styling services have you used? (Select all that apply)",
+            "answer_options": [
+                "Stitch Fix",
+                "Trunk Club",
+                "DailyLook",
+                "Wantable",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Include an 'Other' option with a text field for respondents to specify. This helps identify lesser-known competitors.",
+            "scripter_notes": "Use a multi-choice checkbox. Include an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "Which subscription-based personal styling services have you used? (Select all that apply)",
+                "answer_options": [
+                    "Stitch Fix",
+                    "Trunk Club",
+                    "DailyLook",
+                    "Wantable",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influenced your decision to subscribe to a personal styling service? (Select up to 3)",
+            "answer_options": [
+                "Convenience",
+                "Personalized recommendations",
+                "Style inspiration",
+                "Time savings",
+                "Avoid in-store shopping",
+                "Access to exclusive brands",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Limit selections to 3 to identify the most important factors. Include an 'Other' option with a text field.",
+            "scripter_notes": "Use a multi-choice checkbox with a maximum of 3 selections allowed. Include an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "What factors influenced your decision to subscribe to a personal styling service? (Select up to 3)",
+                "answer_options": [
+                    "Convenience",
+                    "Personalized recommendations",
+                    "Style inspiration",
+                    "Time savings",
+                    "Avoid in-store shopping",
+                    "Access to exclusive brands",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current or most recent subscription-based personal styling service?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "Use a balanced 5-point Likert scale to measure satisfaction levels accurately.",
+            "scripter_notes": "Use a single-choice radio button with a horizontal layout for better mobile responsiveness.",
+            "script": {
+                "question_text": "How satisfied are you with your current or most recent subscription-based personal styling service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in subscription-based personal styling services?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'Yes' to Q1",
+            "client_notes": "This open-ended question will provide qualitative insights into areas for improvement.",
+            "scripter_notes": "Use an open-text field with a character limit of 500.",
+            "script": {
+                "question_text": "What improvements would you like to see in subscription-based personal styling services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'Yes' to Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What is your primary reason for not using a subscription-based personal styling service?",
+            "answer_options": [
+                "Prefer to shop in-store",
+                "Too expensive",
+                "Don't trust the service to understand my style",
+                "Concerned about fit/quality",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'No' to Q1",
+            "client_notes": "Include an 'Other' option with a text field to capture additional reasons not listed.",
+            "scripter_notes": "Use a single-choice radio button. Include an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "What is your primary reason for not using a subscription-based personal styling service?",
+                "answer_options": [
+                    "Prefer to shop in-store",
+                    "Too expensive",
+                    "Don't trust the service to understand my style",
+                    "Concerned about fit/quality",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'No' to Q1"
+            }
+        }
+    ]
+}

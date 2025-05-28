@@ -1,0 +1,123 @@
+{
+    "survey_id": "110b851e-1a13-46af-8a34-71c468832883",
+    "survey_name": "Gen Z Financial Literacy and Digital Banking Preferences Survey",
+    "survey_brief": "This survey aims to understand Gen Z's financial literacy levels and preferences regarding digital banking services to help financial institutions tailor their offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use digital banking services (e.g., mobile banking apps, online banking)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all possible usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use digital banking services (e.g., mobile banking apps, online banking)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following digital banking features do you find most useful? (Select up to 3)",
+            "answer_options": [
+                "Mobile check deposit",
+                "Budgeting tools",
+                "Real-time notifications",
+                "Peer-to-peer payments",
+                "Bill pay automation",
+                "Investment tracking",
+                "Customer support chatbots"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use checkboxes for multi-select. Limit to 3 selections to prioritize preferences.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Max selections: 3.",
+            "script": {
+                "question_text": "Which of the following digital banking features do you find most useful? (Select up to 3)",
+                "answer_options": [
+                    "Mobile check deposit",
+                    "Budgeting tools",
+                    "Real-time notifications",
+                    "Peer-to-peer payments",
+                    "Bill pay automation",
+                    "Investment tracking",
+                    "Customer support chatbots"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your biggest challenge when managing personal finances?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Open-ended question to capture qualitative insights. Use a text box with a 200-character limit.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT). Character limit: 200.",
+            "script": {
+                "question_text": "What is your biggest challenge when managing personal finances?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you ever used a financial literacy app or tool (e.g., credit score monitoring, investment simulators)?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Binary single-choice question. Follow up with Q5 if 'Yes' is selected.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Route to Q5 if 'Yes' is selected.",
+            "script": {
+                "question_text": "Have you ever used a financial literacy app or tool (e.g., credit score monitoring, investment simulators)?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which financial literacy tools have you used? (Select all that apply)",
+            "answer_options": [
+                "Credit score monitoring (e.g., Credit Karma)",
+                "Investment simulators (e.g., Investopedia)",
+                "Budgeting apps (e.g., Mint, YNAB)",
+                "Debt payoff calculators",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q4 is 'Yes'",
+            "client_notes": "Multi-choice question with an 'Other' option for unspecified tools. Ensure 'Other' triggers a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Add text field for 'Other' option.",
+            "script": {
+                "question_text": "Which financial literacy tools have you used? (Select all that apply)",
+                "answer_options": [
+                    "Credit score monitoring (e.g., Credit Karma)",
+                    "Investment simulators (e.g., Investopedia)",
+                    "Budgeting apps (e.g., Mint, YNAB)",
+                    "Debt payoff calculators",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q4 is 'Yes'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "survey_id": "e2464981-cf18-443c-bec3-88ae7b4926c0",
+    "survey_name": "Employee Satisfaction with In-Office Dining Options Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with the quality, variety, and accessibility of in-office dining options to improve workplace amenities.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the variety of food options available in the office cafeteria?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction levels. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the variety of food options available in the office cafeteria?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following dining options do you frequently use? (Select all that apply)",
+            "answer_options": [
+                "Cafeteria",
+                "Vending machines",
+                "Coffee/snack bar",
+                "On-site food trucks",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture usage patterns across different dining options.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "Which of the following dining options do you frequently use? (Select all that apply)",
+                "answer_options": [
+                    "Cafeteria",
+                    "Vending machines",
+                    "Coffee/snack bar",
+                    "On-site food trucks",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for the in-office dining options?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Use a text area for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would you suggest for the in-office dining options?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you use the in-office dining facilities?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a frequency scale to measure usage patterns. Ensure options are mutually exclusive.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use the in-office dining facilities?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please rate the affordability of the food options in the office cafeteria.",
+            "answer_options": [
+                "Very affordable",
+                "Affordable",
+                "Neutral",
+                "Expensive",
+                "Very expensive"
+            ],
+            "routing_logic": "All respondents who selected 'Cafeteria' in Q2",
+            "client_notes": "Use a 5-point Likert scale to measure affordability. Ensure the scale is clear and concise.",
+            "scripter_notes": "Use radio buttons for single-choice selection. Apply skip logic based on Q2 responses.",
+            "script": {
+                "question_text": "Please rate the affordability of the food options in the office cafeteria.",
+                "answer_options": [
+                    "Very affordable",
+                    "Affordable",
+                    "Neutral",
+                    "Expensive",
+                    "Very expensive"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected 'Cafeteria' in Q2"
+            }
+        }
+    ]
+}

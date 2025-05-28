@@ -1,0 +1,99 @@
+{
+    "survey_id": "291d1259-62b2-4f47-8f16-c06e90ba3979",
+    "survey_name": "Customer Satisfaction with Contactless Payment Methods Survey",
+    "survey_brief": "This survey aims to gather customer feedback on their experience and satisfaction with contactless payment methods in retail environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use contactless payment methods (e.g., Apple Pay, Google Pay, contactless cards) for in-store purchases?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use a single-choice scale to simplify response collection. Ensure mobile-friendly design for easy selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use contactless payment methods (e.g., Apple Pay, Google Pay, contactless cards) for in-store purchases?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following benefits of contactless payments are most important to you? (Select all that apply)",
+            "answer_options": [
+                "Speed of transaction",
+                "Convenience",
+                "Hygiene/safety (no physical contact)",
+                "No need to carry cash",
+                "Wide acceptance"
+            ],
+            "routing_logic": "This question is shown to respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1.",
+            "client_notes": "Use a multi-choice format to allow multiple selections. Keep options concise for readability.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following benefits of contactless payments are most important to you? (Select all that apply)",
+                "answer_options": [
+                    "Speed of transaction",
+                    "Convenience",
+                    "Hygiene/safety (no physical contact)",
+                    "No need to carry cash",
+                    "Wide acceptance"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question is shown to respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, do you have about using contactless payment methods?",
+            "answer_options": [],
+            "routing_logic": "This question is shown to all respondents.",
+            "client_notes": "Use an open-ended response to gather detailed feedback. Mobile-friendly text input recommended.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT).",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using contactless payment methods?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question is shown to all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the speed of contactless payment transactions compared to traditional payment methods (e.g., chip or swipe)?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question is shown to respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1.",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure clarity in options.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the speed of contactless payment transactions compared to traditional payment methods (e.g., chip or swipe)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is shown to respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1."
+            }
+        }
+    ]
+}

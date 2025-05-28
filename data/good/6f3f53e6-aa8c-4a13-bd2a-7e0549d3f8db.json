@@ -1,0 +1,123 @@
+{
+    "survey_id": "6f3f53e6-aa8c-4a13-bd2a-7e0549d3f8db",
+    "survey_name": "Hybrid Work Environment Employee Satisfaction Survey",
+    "survey_brief": "This survey aims to gather employee feedback on satisfaction and challenges related to hybrid work environments, focusing on technology, workspace setup, and work-life balance.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you currently work remotely?",
+            "answer_options": [
+                "0 days (fully on-site)",
+                "1-2 days",
+                "3-4 days",
+                "5 days (fully remote)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a radio button for single-select responses. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How many days per week do you currently work remotely?",
+                "answer_options": [
+                    "0 days (fully on-site)",
+                    "1-2 days",
+                    "3-4 days",
+                    "5 days (fully remote)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following hybrid work challenges have you experienced? (Select all that apply)",
+            "answer_options": [
+                "Difficulty collaborating with remote/on-site colleagues",
+                "Technology issues (e.g., poor connectivity)",
+                "Workspace ergonomics at home",
+                "Maintaining work-life balance",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use checkboxes for multi-select. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following hybrid work challenges have you experienced? (Select all that apply)",
+                "answer_options": [
+                    "Difficulty collaborating with remote/on-site colleagues",
+                    "Technology issues (e.g., poor connectivity)",
+                    "Workspace ergonomics at home",
+                    "Maintaining work-life balance",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your company's provision of remote work technology (e.g., laptops, software, IT support)?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not '0 days'",
+            "client_notes": "5-point Likert scale. Label all points to avoid ambiguity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with your company's provision of remote work technology (e.g., laptops, software, IT support)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not '0 days'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional tools or resources would improve your hybrid work experience?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question. Set character limit to 500 for readability.",
+            "scripter_notes": "Field type: text area (OPEN_TEXT)",
+            "script": {
+                "question_text": "What additional tools or resources would improve your hybrid work experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How has hybrid work impacted your productivity compared to fully on-site work?",
+            "answer_options": [
+                "Significantly increased",
+                "Slightly increased",
+                "No change",
+                "Slightly decreased",
+                "Significantly decreased"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a symmetric scale with neutral midpoint. Ensure question is unambiguous.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How has hybrid work impacted your productivity compared to fully on-site work?",
+                "answer_options": [
+                    "Significantly increased",
+                    "Slightly increased",
+                    "No change",
+                    "Slightly decreased",
+                    "Significantly decreased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

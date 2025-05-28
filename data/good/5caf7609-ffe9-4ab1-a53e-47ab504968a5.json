@@ -1,0 +1,129 @@
+{
+    "survey_id": "5caf7609-ffe9-4ab1-a53e-47ab504968a5",
+    "survey_name": "Remote Work Ergonomics and Productivity Survey",
+    "survey_brief": "This survey assesses employee experiences with remote work setups, focusing on ergonomics, productivity, and challenges faced when working from home.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you typically work remotely?",
+            "answer_options": [
+                "1 day",
+                "2-3 days",
+                "4-5 days",
+                "Full-time remote",
+                "Not applicable (I do not work remotely)"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use a horizontal radio button layout for mobile-friendliness.",
+            "scripter_notes": "Field type: single-choice radio buttons with 'Not applicable' option.",
+            "script": {
+                "question_text": "How many days per week do you typically work remotely?",
+                "answer_options": [
+                    "1 day",
+                    "2-3 days",
+                    "4-5 days",
+                    "Full-time remote",
+                    "Not applicable (I do not work remotely)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following ergonomic issues have you experienced while working remotely? (Select all that apply)",
+            "answer_options": [
+                "Neck/shoulder pain",
+                "Back pain",
+                "Eye strain",
+                "Wrist/hand discomfort",
+                "Poor posture",
+                "None of the above"
+            ],
+            "routing_logic": "Displayed if Q1 ≠ 'Not applicable'",
+            "client_notes": "Checkbox format with a clear 'None of the above' option to avoid forced responses.",
+            "scripter_notes": "Field type: multi-choice checkboxes with non-exclusive options.",
+            "script": {
+                "question_text": "Which of the following ergonomic issues have you experienced while working remotely? (Select all that apply)",
+                "answer_options": [
+                    "Neck/shoulder pain",
+                    "Back pain",
+                    "Eye strain",
+                    "Wrist/hand discomfort",
+                    "Poor posture",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Displayed if Q1 ≠ 'Not applicable'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate your overall productivity when working remotely compared to working in the office?",
+            "answer_options": [
+                "Significantly more productive",
+                "Slightly more productive",
+                "About the same",
+                "Slightly less productive",
+                "Significantly less productive"
+            ],
+            "routing_logic": "Displayed if Q1 ≠ 'Not applicable'",
+            "client_notes": "5-point Likert scale with clear anchors. Consider randomization to avoid bias.",
+            "scripter_notes": "Field type: single-choice radio buttons presented vertically.",
+            "script": {
+                "question_text": "How would you rate your overall productivity when working remotely compared to working in the office?",
+                "answer_options": [
+                    "Significantly more productive",
+                    "Slightly more productive",
+                    "About the same",
+                    "Slightly less productive",
+                    "Significantly less productive"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed if Q1 ≠ 'Not applicable'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would make your remote work setup more comfortable or productive?",
+            "answer_options": [],
+            "routing_logic": "Displayed if Q2 has any selection except 'None of the above' OR Q3 = 'Slightly less productive' or 'Significantly less productive'",
+            "client_notes": "Open-text field with a 500-character limit. Use placeholder text like 'Describe up to 3 key improvements...'",
+            "scripter_notes": "Field type: open-text input with character counter.",
+            "script": {
+                "question_text": "What improvements would make your remote work setup more comfortable or productive?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Displayed if Q2 has any selection except 'None of the above' OR Q3 = 'Slightly less productive' or 'Significantly less productive'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Has your employer provided any of the following for remote work? (Select all that apply)",
+            "answer_options": [
+                "Ergonomic chair",
+                "Adjustable desk",
+                "Monitor stands",
+                "Keyboard/mouse",
+                "Stipend for equipment",
+                "None of the above"
+            ],
+            "routing_logic": "Displayed if Q1 ≠ 'Not applicable'",
+            "client_notes": "Multi-select with an 'Other' write-in option recommended if budget allows for additional insights.",
+            "scripter_notes": "Field type: multi-choice checkboxes with optional 'Other' text input.",
+            "script": {
+                "question_text": "Has your employer provided any of the following for remote work? (Select all that apply)",
+                "answer_options": [
+                    "Ergonomic chair",
+                    "Adjustable desk",
+                    "Monitor stands",
+                    "Keyboard/mouse",
+                    "Stipend for equipment",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Displayed if Q1 ≠ 'Not applicable'"
+            }
+        }
+    ]
+}

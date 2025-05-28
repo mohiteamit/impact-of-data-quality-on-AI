@@ -1,0 +1,121 @@
+{
+    "survey_id": "b6cb199f-095e-4c05-a604-665fc2f55ed4",
+    "survey_name": "Customer Satisfaction with Contactless Hotel Check-In Services Survey",
+    "survey_brief": "This survey aims to gather customer feedback on the experience and satisfaction with contactless hotel check-in services to improve service quality and convenience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often have you used contactless check-in services at hotels in the past 12 months?",
+            "answer_options": [
+                "Never",
+                "1-2 times",
+                "3-5 times",
+                "More than 5 times"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format for clarity; ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often have you used contactless check-in services at hotels in the past 12 months?",
+                "answer_options": [
+                    "Never",
+                    "1-2 times",
+                    "3-5 times",
+                    "More than 5 times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What was your primary reason for choosing contactless check-in?",
+            "answer_options": [
+                "Convenience",
+                "Safety concerns (e.g., avoiding physical contact)",
+                "Speed of service",
+                "Hotel policy",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected '1-2 times', '3-5 times', or 'More than 5 times' in Q1",
+            "client_notes": "Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: multi-choice with an open-text option for 'Other'.",
+            "script": {
+                "question_text": "What was your primary reason for choosing contactless check-in?",
+                "answer_options": [
+                    "Convenience",
+                    "Safety concerns (e.g., avoiding physical contact)",
+                    "Speed of service",
+                    "Hotel policy",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected '1-2 times', '3-5 times', or 'More than 5 times' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied were you with the contactless check-in process? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Respondents who selected '1-2 times', '3-5 times', or 'More than 5 times' in Q1",
+            "client_notes": "Use a Likert scale for better quantitative analysis.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied were you with the contactless check-in process? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected '1-2 times', '3-5 times', or 'More than 5 times' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges, if any, did you encounter during the contactless check-in process?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected '1-2 times', '3-5 times', or 'More than 5 times' in Q1",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What challenges, if any, did you encounter during the contactless check-in process?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected '1-2 times', '3-5 times', or 'More than 5 times' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you prefer contactless check-in over traditional check-in for future hotel stays?",
+            "answer_options": [
+                "Yes, always",
+                "Yes, but only if it's faster",
+                "No, I prefer traditional check-in",
+                "Undecided"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to gauge long-term preference.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "Would you prefer contactless check-in over traditional check-in for future hotel stays?",
+                "answer_options": [
+                    "Yes, always",
+                    "Yes, but only if it's faster",
+                    "No, I prefer traditional check-in",
+                    "Undecided"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

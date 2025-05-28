@@ -1,0 +1,241 @@
+{
+    "survey_id": "8ae4d8aa-8e52-414e-856f-0917219a05e4",
+    "survey_name": "Adoption of AI-Powered Personalized Learning Platforms in Higher Education Survey",
+    "survey_brief": "This survey aims to understand the adoption rates, user satisfaction, and perceived effectiveness of AI-powered personalized learning platforms among higher education students and faculty.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you used an AI-powered personalized learning platform in your higher education coursework?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This is a screening question to bifurcate the survey flow. Ensure clear and simple wording.",
+            "scripter_notes": "Single-choice radio buttons with mandatory response.",
+            "script": {
+                "question_text": "Have you used an AI-powered personalized learning platform in your higher education coursework?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which AI-powered personalized learning platforms have you used? (Select all that apply)",
+            "answer_options": [
+                "Coursera Learn",
+                "edX Personalized Learning",
+                "Knewton Alta",
+                "Smart Sparrow",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Include an open-ended 'Other' option to capture platforms not listed.",
+            "scripter_notes": "Multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which AI-powered personalized learning platforms have you used? (Select all that apply)",
+                "answer_options": [
+                    "Coursera Learn",
+                    "edX Personalized Learning",
+                    "Knewton Alta",
+                    "Smart Sparrow",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the AI-powered personalized learning platform you used most frequently?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Use a balanced Likert scale to measure satisfaction accurately.",
+            "scripter_notes": "Single-choice radio buttons with mandatory response.",
+            "script": {
+                "question_text": "How satisfied are you with the AI-powered personalized learning platform you used most frequently?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What features do you find most valuable in AI-powered personalized learning platforms? (Select up to 3)",
+            "answer_options": [
+                "Adaptive learning paths",
+                "Real-time feedback",
+                "Personalized content recommendations",
+                "Automated grading",
+                "Interactive simulations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Limit selections to 3 to identify top priorities.",
+            "scripter_notes": "Multi-choice checkboxes with a max selection of 3 and an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What features do you find most valuable in AI-powered personalized learning platforms? (Select up to 3)",
+                "answer_options": [
+                    "Adaptive learning paths",
+                    "Real-time feedback",
+                    "Personalized content recommendations",
+                    "Automated grading",
+                    "Interactive simulations",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced when using AI-powered personalized learning platforms? (Select all that apply)",
+            "answer_options": [
+                "Technical issues (e.g., platform errors)",
+                "Difficulty navigating the platform",
+                "Lack of personalization",
+                "Limited instructor support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Include an open-ended 'Other' option to capture challenges not listed.",
+            "scripter_notes": "Multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What challenges have you faced when using AI-powered personalized learning platforms? (Select all that apply)",
+                "answer_options": [
+                    "Technical issues (e.g., platform errors)",
+                    "Difficulty navigating the platform",
+                    "Lack of personalization",
+                    "Limited instructor support",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend AI-powered personalized learning platforms to your peers or students?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Use a standard Likert scale for measuring Net Promoter Score (NPS).",
+            "scripter_notes": "Single-choice radio buttons with mandatory response.",
+            "script": {
+                "question_text": "How likely are you to recommend AI-powered personalized learning platforms to your peers or students?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "If you have not used an AI-powered personalized learning platform, what are the primary reasons? (Select all that apply)",
+            "answer_options": [
+                "Lack of awareness",
+                "No access to such platforms",
+                "Prefer traditional learning methods",
+                "Concerns about data privacy",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'No' or 'Not sure'",
+            "client_notes": "Include an open-ended 'Other' option to capture reasons not listed.",
+            "scripter_notes": "Multi-choice checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "If you have not used an AI-powered personalized learning platform, what are the primary reasons? (Select all that apply)",
+                "answer_options": [
+                    "Lack of awareness",
+                    "No access to such platforms",
+                    "Prefer traditional learning methods",
+                    "Concerns about data privacy",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'No' or 'Not sure'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What would motivate you to try an AI-powered personalized learning platform in the future?",
+            "answer_options": [],
+            "routing_logic": "Only if Q1 is 'No' or 'Not sure'",
+            "client_notes": "Open-ended question to capture qualitative insights. Keep it concise.",
+            "scripter_notes": "Open-text field with no character limit.",
+            "script": {
+                "question_text": "What would motivate you to try an AI-powered personalized learning platform in the future?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q1 is 'No' or 'Not sure'"
+            }
+        },
+        {
+            "qid": "Q9",
+            "question_text": "Do you believe AI-powered personalized learning platforms can improve educational outcomes?",
+            "answer_options": [
+                "Strongly agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly disagree"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a balanced Likert scale to measure agreement levels.",
+            "scripter_notes": "Single-choice radio buttons with mandatory response.",
+            "script": {
+                "question_text": "Do you believe AI-powered personalized learning platforms can improve educational outcomes?",
+                "answer_options": [
+                    "Strongly agree",
+                    "Agree",
+                    "Neutral",
+                    "Disagree",
+                    "Strongly disagree"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q10",
+            "question_text": "Please share any additional comments or suggestions regarding AI-powered personalized learning platforms.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Keep it optional.",
+            "scripter_notes": "Open-text field with no character limit.",
+            "script": {
+                "question_text": "Please share any additional comments or suggestions regarding AI-powered personalized learning platforms.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

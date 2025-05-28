@@ -1,0 +1,175 @@
+{
+    "survey_id": "69aadaf7-896a-4f32-899c-4aa229b50a66",
+    "survey_name": "Consumer Preferences for Plant-Based Meat Alternatives Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, purchasing behaviors, and attitudes toward plant-based meat alternatives to help brands improve product offerings and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you consume plant-based meat alternatives?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "Shown to all respondents",
+            "client_notes": "Use a clear frequency scale to categorize consumption habits. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you consume plant-based meat alternatives?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for consuming plant-based meat alternatives? (Select all that apply)",
+            "answer_options": [
+                "Health benefits",
+                "Environmental concerns",
+                "Animal welfare",
+                "Curiosity/trying new products",
+                "Dietary restrictions (e.g., vegan, vegetarian)",
+                "Taste preference",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown to respondents who selected 'Daily' to 'A few times a month' in Q1",
+            "client_notes": "Allow multiple selections to capture diverse motivations. Include an 'Other' option for unique responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Add an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are your primary reasons for consuming plant-based meat alternatives? (Select all that apply)",
+                "answer_options": [
+                    "Health benefits",
+                    "Environmental concerns",
+                    "Animal welfare",
+                    "Curiosity/trying new products",
+                    "Dietary restrictions (e.g., vegan, vegetarian)",
+                    "Taste preference",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown to respondents who selected 'Daily' to 'A few times a month' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which factors are most important to you when purchasing plant-based meat alternatives? Rank the top 3 (1 = most important, 3 = least important).",
+            "answer_options": [
+                "Taste",
+                "Price",
+                "Texture similarity to meat",
+                "Nutritional content",
+                "Brand reputation",
+                "Ingredient quality",
+                "Availability in stores"
+            ],
+            "routing_logic": "Shown to respondents who selected 'Daily' to 'A few times a month' in Q1",
+            "client_notes": "Use a drag-and-drop or numerical ranking UI. Limit to 3 selections to force prioritization.",
+            "scripter_notes": "Field type: RANKING (custom widget). Ensure mobile responsiveness.",
+            "script": {
+                "question_text": "Which factors are most important to you when purchasing plant-based meat alternatives? Rank the top 3 (1 = most important, 3 = least important).",
+                "answer_options": [
+                    "Taste",
+                    "Price",
+                    "Texture similarity to meat",
+                    "Nutritional content",
+                    "Brand reputation",
+                    "Ingredient quality",
+                    "Availability in stores"
+                ],
+                "type": "RANKING",
+                "routing_logic": "Shown to respondents who selected 'Daily' to 'A few times a month' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What barriers prevent you from consuming plant-based meat alternatives more frequently?",
+            "answer_options": [
+                "High cost",
+                "Limited availability",
+                "Unappealing taste/texture",
+                "Lack of familiarity with cooking methods",
+                "Concerns about processing/ingredients",
+                "No barriers—I consume them regularly",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown to respondents who selected 'Rarely or never' in Q1",
+            "client_notes": "Include a mix of practical and perceptual barriers. 'Other' allows for nuanced responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Add an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What barriers prevent you from consuming plant-based meat alternatives more frequently?",
+                "answer_options": [
+                    "High cost",
+                    "Limited availability",
+                    "Unappealing taste/texture",
+                    "Lack of familiarity with cooking methods",
+                    "Concerns about processing/ingredients",
+                    "No barriers—I consume them regularly",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown to respondents who selected 'Rarely or never' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your favorite plant-based meat brand to a friend or colleague? (Scale: 0 = Not at all likely, 10 = Extremely likely)",
+            "answer_options": [
+                "0",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "routing_logic": "Shown to respondents who selected 'Daily' to 'Once a week' in Q1",
+            "client_notes": "Use a standard 11-point Net Promoter Score (NPS) scale. Label endpoints for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons or slider).",
+            "script": {
+                "question_text": "How likely are you to recommend your favorite plant-based meat brand to a friend or colleague? (Scale: 0 = Not at all likely, 10 = Extremely likely)",
+                "answer_options": [
+                    "0",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown to respondents who selected 'Daily' to 'Once a week' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would encourage you to purchase plant-based meat alternatives more often?",
+            "answer_options": [],
+            "routing_logic": "Shown to all respondents",
+            "client_notes": "Open-ended to capture qualitative insights. Use a text box with a 200-character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What improvements would encourage you to purchase plant-based meat alternatives more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown to all respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,133 @@
+{
+    "survey_id": "f5f2431b-5866-4800-afd6-98c4f305fd50",
+    "survey_name": "Remote Work Productivity Tools Evaluation Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness and user satisfaction with various productivity tools used in remote work environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following remote work productivity tools do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Slack",
+                "Microsoft Teams",
+                "Zoom",
+                "Trello",
+                "Asana",
+                "Google Workspace (Docs, Sheets, etc.)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure this question allows for multiple selections and includes an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE). Include an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "Which of the following remote work productivity tools do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Slack",
+                    "Microsoft Teams",
+                    "Zoom",
+                    "Trello",
+                    "Asana",
+                    "Google Workspace (Docs, Sheets, etc.)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the primary tool you use for team communication?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 includes any team communication tool (Slack, Microsoft Teams, Zoom)",
+            "client_notes": "Use a 5-point Likert scale for measuring satisfaction. Ensure the question is shown only to respondents who use team communication tools.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE). Apply routing logic based on Q1 selections.",
+            "script": {
+                "question_text": "How satisfied are you with the primary tool you use for team communication?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 includes any team communication tool (Slack, Microsoft Teams, Zoom)"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you find most valuable in your project management tool? (Select up to 3)",
+            "answer_options": [
+                "Task assignment and tracking",
+                "Collaboration features (comments, mentions)",
+                "Integration with other tools",
+                "Reporting and analytics",
+                "Mobile accessibility",
+                "User-friendly interface",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 includes any project management tool (Trello, Asana)",
+            "client_notes": "Limit selections to 3 to prioritize features. Include an 'Other' option for additional feedback.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE) with max selection limit of 3. Include an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "What features do you find most valuable in your project management tool? (Select up to 3)",
+                "answer_options": [
+                    "Task assignment and tracking",
+                    "Collaboration features (comments, mentions)",
+                    "Integration with other tools",
+                    "Reporting and analytics",
+                    "Mobile accessibility",
+                    "User-friendly interface",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 includes any project management tool (Trello, Asana)"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges do you face when using remote work productivity tools?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: Open-text (OPEN_TEXT). No answer options required.",
+            "script": {
+                "question_text": "What challenges do you face when using remote work productivity tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your primary productivity tool to a colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale to measure Net Promoter Score (NPS) potential. This question can help gauge overall satisfaction.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How likely are you to recommend your primary productivity tool to a colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "survey_id": "06d6b039-a598-4d68-b93e-45ead1eeb86e",
+    "survey_name": "Employee Satisfaction with Hybrid Workspace Solutions Survey",
+    "survey_brief": "This survey aims to gather employee feedback on hybrid workspace solutions, including remote and in-office work arrangements, to improve workplace satisfaction and productivity.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you currently work remotely (from home or another location outside the office)?",
+            "answer_options": [
+                "Fully remote (5 days a week)",
+                "Mostly remote (3-4 days a week)",
+                "Hybrid (1-2 days a week)",
+                "Fully in-office (0 days remote)"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a single-choice scale to measure the frequency of remote work.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How often do you currently work remotely (from home or another location outside the office)?",
+                "answer_options": [
+                    "Fully remote (5 days a week)",
+                    "Mostly remote (3-4 days a week)",
+                    "Hybrid (1-2 days a week)",
+                    "Fully in-office (0 days remote)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following tools do you use for remote collaboration? (Select all that apply)",
+            "answer_options": [
+                "Video conferencing (e.g., Zoom, Microsoft Teams)",
+                "Instant messaging (e.g., Slack, Microsoft Teams Chat)",
+                "Project management software (e.g., Asana, Trello)",
+                "Cloud storage (e.g., Google Drive, Dropbox)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Fully in-office (0 days remote)'",
+            "client_notes": "Use a multi-choice format to capture the range of tools employees use.",
+            "scripter_notes": "Field type: checkbox with an 'Other' open-text option",
+            "script": {
+                "question_text": "Which of the following tools do you use for remote collaboration? (Select all that apply)",
+                "answer_options": [
+                    "Video conferencing (e.g., Zoom, Microsoft Teams)",
+                    "Instant messaging (e.g., Slack, Microsoft Teams Chat)",
+                    "Project management software (e.g., Asana, Trello)",
+                    "Cloud storage (e.g., Google Drive, Dropbox)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Fully in-office (0 days remote)'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the biggest challenge you face when working remotely?",
+            "answer_options": [
+                "Lack of face-to-face interaction with colleagues",
+                "Home distractions (e.g., family, pets)",
+                "Internet connection or technical issues",
+                "Difficulty separating work and personal life",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Fully in-office (0 days remote)'",
+            "client_notes": "Single-choice question with an 'Other' option to capture unique challenges.",
+            "scripter_notes": "Field type: radio button with an 'Other' open-text option",
+            "script": {
+                "question_text": "What is the biggest challenge you face when working remotely?",
+                "answer_options": [
+                    "Lack of face-to-face interaction with colleagues",
+                    "Home distractions (e.g., family, pets)",
+                    "Internet connection or technical issues",
+                    "Difficulty separating work and personal life",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Fully in-office (0 days remote)'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current hybrid work arrangement?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How satisfied are you with your current hybrid work arrangement?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest to enhance your hybrid work experience?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Open-ended question to gather qualitative feedback on potential improvements.",
+            "scripter_notes": "Field type: open-text",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance your hybrid work experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

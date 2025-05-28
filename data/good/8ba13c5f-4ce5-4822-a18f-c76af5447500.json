@@ -1,0 +1,147 @@
+{
+    "survey_id": "8ba13c5f-4ce5-4822-a18f-c76af5447500",
+    "survey_name": "Adoption and Satisfaction of AI-Powered Personal Finance Assistants Survey",
+    "survey_brief": "This survey aims to understand consumer adoption rates, satisfaction levels, and feature preferences for AI-powered personal finance management tools.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following AI-powered personal finance tools have you used in the past 12 months? (Select all that apply)",
+            "answer_options": [
+                "Budgeting assistants",
+                "Investment recommendation tools",
+                "Expense categorization systems",
+                "Credit score monitoring",
+                "Debt repayment planners",
+                "Tax optimization tools",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-select. Consider randomizing option order to minimize bias.",
+            "scripter_notes": "MULTI_CHOICE field type with 'None of the above' as an exclusive option",
+            "script": {
+                "question_text": "Which of the following AI-powered personal finance tools have you used in the past 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Budgeting assistants",
+                    "Investment recommendation tools",
+                    "Expense categorization systems",
+                    "Credit score monitoring",
+                    "Debt repayment planners",
+                    "Tax optimization tools",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary AI finance tool's accuracy in categorizing transactions?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "Only show if Q1 selection is not 'None of the above'",
+            "client_notes": "Use Likert scale with neutral midpoint. Include 'Not applicable' for those who haven't used categorization features.",
+            "scripter_notes": "SINGLE_CHOICE radio buttons displayed vertically",
+            "script": {
+                "question_text": "How satisfied are you with your primary AI finance tool's accuracy in categorizing transactions?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only show if Q1 selection is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the single most important feature you look for in an AI finance assistant?",
+            "answer_options": [
+                "Real-time spending alerts",
+                "Automated savings recommendations",
+                "Investment portfolio suggestions",
+                "Customizable budget templates",
+                "Debt payoff strategies",
+                "Security features",
+                "Ease of bank connectivity"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Forced single choice to identify primary driver. Randomize options after first two.",
+            "scripter_notes": "SINGLE_CHOICE with dropdown implementation",
+            "script": {
+                "question_text": "What is the single most important feature you look for in an AI finance assistant?",
+                "answer_options": [
+                    "Real-time spending alerts",
+                    "Automated savings recommendations",
+                    "Investment portfolio suggestions",
+                    "Customizable budget templates",
+                    "Debt payoff strategies",
+                    "Security features",
+                    "Ease of bank connectivity"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any concerns you have about using AI for personal financial management:",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open text field with character limit of 500. Important for qualitative insights.",
+            "scripter_notes": "OPEN_TEXT field with validation for maximum length",
+            "script": {
+                "question_text": "Please describe any concerns you have about using AI for personal financial management:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your current AI finance tool to friends or colleagues? (0-10 scale)",
+            "answer_options": [
+                "0 - Not at all likely",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 - Extremely likely"
+            ],
+            "routing_logic": "Only show if Q1 selection is not 'None of the above'",
+            "client_notes": "NPS question format. Display as slider on mobile, radio buttons on desktop.",
+            "scripter_notes": "SINGLE_CHOICE with conditional display based on Q1",
+            "script": {
+                "question_text": "How likely are you to recommend your current AI finance tool to friends or colleagues? (0-10 scale)",
+                "answer_options": [
+                    "0 - Not at all likely",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 - Extremely likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only show if Q1 selection is not 'None of the above'"
+            }
+        }
+    ]
+}

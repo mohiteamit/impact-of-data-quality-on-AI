@@ -1,0 +1,123 @@
+{
+    "survey_id": "f696ee0f-1472-4965-8fa5-4123fe3eae3a",
+    "survey_name": "Remote Work Cybersecurity Practices Survey",
+    "survey_brief": "This survey aims to assess cybersecurity awareness and practices among employees working remotely to identify potential risks and training needs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you receive cybersecurity training from your employer?",
+            "answer_options": [
+                "Monthly or more frequently",
+                "Quarterly",
+                "Annually",
+                "Less than once a year",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button scale for single-choice selection. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How often do you receive cybersecurity training from your employer?",
+                "answer_options": [
+                    "Monthly or more frequently",
+                    "Quarterly",
+                    "Annually",
+                    "Less than once a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following cybersecurity measures do you personally use while working remotely? (Select all that apply)",
+            "answer_options": [
+                "VPN (Virtual Private Network)",
+                "Multi-factor authentication",
+                "Password manager",
+                "Antivirus/anti-malware software",
+                "Regular password changes",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multiple selections. Consider randomizing option order to reduce bias.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes)",
+            "script": {
+                "question_text": "Which of the following cybersecurity measures do you personally use while working remotely? (Select all that apply)",
+                "answer_options": [
+                    "VPN (Virtual Private Network)",
+                    "Multi-factor authentication",
+                    "Password manager",
+                    "Antivirus/anti-malware software",
+                    "Regular password changes",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Have you experienced any cybersecurity incidents (e.g., phishing attempts, malware infections) while working remotely in the past 12 months?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I'm not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Simple yes/no question to gauge incident frequency. Include 'Not sure' to capture uncertainty.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "Have you experienced any cybersecurity incidents (e.g., phishing attempts, malware infections) while working remotely in the past 12 months?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I'm not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If yes, please briefly describe the nature of the cybersecurity incident(s) you experienced:",
+            "answer_options": [],
+            "routing_logic": "Q3 = 'Yes'",
+            "client_notes": "Open-ended question to capture qualitative data. Limit response length to 250 characters.",
+            "scripter_notes": "Field type: Open-text (text area with character limit)",
+            "script": {
+                "question_text": "If yes, please briefly describe the nature of the cybersecurity incident(s) you experienced:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Q3 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How confident are you in your ability to identify and respond to cybersecurity threats while working remotely?",
+            "answer_options": [
+                "Very confident",
+                "Somewhat confident",
+                "Neutral",
+                "Somewhat unconfident",
+                "Very unconfident"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale with neutral midpoint. Consider visual presentation (e.g., stars or emojis) for mobile-friendliness.",
+            "scripter_notes": "Field type: Single-choice (radio buttons with visual scale option)",
+            "script": {
+                "question_text": "How confident are you in your ability to identify and respond to cybersecurity threats while working remotely?",
+                "answer_options": [
+                    "Very confident",
+                    "Somewhat confident",
+                    "Neutral",
+                    "Somewhat unconfident",
+                    "Very unconfident"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

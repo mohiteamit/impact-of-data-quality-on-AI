@@ -1,0 +1,133 @@
+{
+    "survey_id": "d60af7b2-6148-4197-b391-29dd145a80a5",
+    "survey_name": "Electric Vehicle (EV) Home Charging Station Installation Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from EV owners about their experience with home charging station installations, including satisfaction levels, challenges faced, and overall service quality.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the installation process of your home EV charging station?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement. Ensure mobile-friendly layout for easy selection.",
+            "scripter_notes": "Field type: Radio button (single choice). Randomize answer options to avoid bias.",
+            "script": {
+                "question_text": "How satisfied are you with the installation process of your home EV charging station?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following challenges did you face during the installation? (Select all that apply)",
+            "answer_options": [
+                "Delays in scheduling",
+                "Poor communication from the installer",
+                "Technical difficulties during installation",
+                "Higher-than-expected costs",
+                "None of the above"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Allow multiple selections. Include 'None of the above' to capture respondents who faced no issues.",
+            "scripter_notes": "Field type: Checkbox (multi-choice). Ensure the 'None of the above' option deselects other options when chosen.",
+            "script": {
+                "question_text": "Which of the following challenges did you face during the installation? (Select all that apply)",
+                "answer_options": [
+                    "Delays in scheduling",
+                    "Poor communication from the installer",
+                    "Technical difficulties during installation",
+                    "Higher-than-expected costs",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How long did the installation process take from scheduling to completion?",
+            "answer_options": [
+                "Less than 1 week",
+                "1-2 weeks",
+                "2-4 weeks",
+                "More than 4 weeks"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use clear time ranges. Consider adding an 'I don't remember' option if recall bias is a concern.",
+            "scripter_notes": "Field type: Radio button (single choice). Add an optional open-text field for additional comments.",
+            "script": {
+                "question_text": "How long did the installation process take from scheduling to completion?",
+                "answer_options": [
+                    "Less than 1 week",
+                    "1-2 weeks",
+                    "2-4 weeks",
+                    "More than 4 weeks"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any additional feedback about your home EV charging station installation experience.",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Open-ended question to capture qualitative insights. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: Open text. Add character counter to ensure responses stay within limit.",
+            "script": {
+                "question_text": "Please describe any additional feedback about your home EV charging station installation experience.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your installation service provider to other EV owners?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Simple yes/no question for Net Promoter Score (NPS) calculation. Include 'Not sure' for neutral responses.",
+            "scripter_notes": "Field type: Radio button (single choice). Follow up with Q6 if 'No' or 'Not sure' is selected.",
+            "script": {
+                "question_text": "Would you recommend your installation service provider to other EV owners?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What could the installation service provider improve to earn your recommendation?",
+            "answer_options": [],
+            "routing_logic": "Display if Q5 answer is 'No' or 'Not sure'",
+            "client_notes": "Open-ended follow-up for critical feedback. Use to identify service gaps.",
+            "scripter_notes": "Field type: Open text. Show only if Q5 is answered as 'No' or 'Not sure'.",
+            "script": {
+                "question_text": "What could the installation service provider improve to earn your recommendation?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q5 answer is 'No' or 'Not sure'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+{
+    "survey_id": "82f7b357-0acc-461a-99ab-a35e09729f0b",
+    "survey_name": "Post-Pandemic Office Space Redesign Feedback Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the redesign of office spaces to accommodate post-pandemic work preferences and hybrid work models. The insights will help optimize workspace layouts, amenities, and technology integrations.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you currently work from the office?",
+            "answer_options": [
+                "5 days a week",
+                "3-4 days a week",
+                "1-2 days a week",
+                "Less than once a week",
+                "Not at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. This establishes baseline office attendance.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you currently work from the office?",
+                "answer_options": [
+                    "5 days a week",
+                    "3-4 days a week",
+                    "1-2 days a week",
+                    "Less than once a week",
+                    "Not at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following redesigned office features do you value most? (Select up to 3)",
+            "answer_options": [
+                "Flexible seating (hot desks, lounge areas)",
+                "Soundproof phone booths",
+                "Collaboration zones with whiteboards",
+                "Quiet focus rooms",
+                "On-site wellness amenities (e.g., gym, meditation space)",
+                "Enhanced air filtration systems",
+                "Outdoor workspaces",
+                "Tech-enabled meeting rooms"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-choice checkboxes with a max selection limit of 3. Helps prioritize investments.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with validation)",
+            "script": {
+                "question_text": "Which of the following redesigned office features do you value most? (Select up to 3)",
+                "answer_options": [
+                    "Flexible seating (hot desks, lounge areas)",
+                    "Soundproof phone booths",
+                    "Collaboration zones with whiteboards",
+                    "Quiet focus rooms",
+                    "On-site wellness amenities (e.g., gym, meditation space)",
+                    "Enhanced air filtration systems",
+                    "Outdoor workspaces",
+                    "Tech-enabled meeting rooms"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What additional improvements would make the office more appealing for hybrid work?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-text field to capture unlisted ideas. Mobile-friendly long-text input recommended.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What additional improvements would make the office more appealing for hybrid work?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the current balance between collaborative and individual workspaces?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected '1-2 days a week' or more in Q1",
+            "client_notes": "5-point Likert scale. Excludes fully remote employees.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons with conditional display)",
+            "script": {
+                "question_text": "How satisfied are you with the current balance between collaborative and individual workspaces?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected '1-2 days a week' or more in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would dedicated team zones (assigned areas for specific departments) improve your productivity?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, slightly",
+                "No impact",
+                "No, it would reduce productivity"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice with neutral option. Helps evaluate spatial planning.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Would dedicated team zones (assigned areas for specific departments) improve your productivity?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, slightly",
+                    "No impact",
+                    "No, it would reduce productivity"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

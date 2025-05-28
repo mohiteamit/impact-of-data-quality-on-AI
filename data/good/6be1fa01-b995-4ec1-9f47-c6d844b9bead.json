@@ -1,0 +1,159 @@
+{
+    "survey_id": "6be1fa01-b995-4ec1-9f47-c6d844b9bead",
+    "survey_name": "Gym Member Retention Strategies Survey",
+    "survey_brief": "This survey aims to understand the factors influencing gym membership retention and identify areas for improvement to enhance member satisfaction and loyalty.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How long have you been a member at this gym?",
+            "answer_options": [
+                "Less than 3 months",
+                "3 to 6 months",
+                "6 to 12 months",
+                "1 to 2 years",
+                "More than 2 years"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use single-choice radio buttons. This question helps segment respondents by tenure.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How long have you been a member at this gym?",
+                "answer_options": [
+                    "Less than 3 months",
+                    "3 to 6 months",
+                    "6 to 12 months",
+                    "1 to 2 years",
+                    "More than 2 years"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influenced your decision to join this gym? (Select all that apply)",
+            "answer_options": [
+                "Location convenience",
+                "Equipment variety",
+                "Group class offerings",
+                "Personal training availability",
+                "Price/membership cost",
+                "Cleanliness/hygiene",
+                "Reputation/recommendations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use checkboxes (MULTI_CHOICE). Include an 'Other' option with a text field for unique responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What factors influenced your decision to join this gym? (Select all that apply)",
+                "answer_options": [
+                    "Location convenience",
+                    "Equipment variety",
+                    "Group class offerings",
+                    "Personal training availability",
+                    "Price/membership cost",
+                    "Cleanliness/hygiene",
+                    "Reputation/recommendations",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How likely are you to renew your membership when it expires?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point Likert scale (SINGLE_CHOICE) to gauge retention intent.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to renew your membership when it expires?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would make you more likely to continue your membership?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q3 answer is 'Somewhat unlikely' or 'Very unlikely'",
+            "client_notes": "Open-text field to capture qualitative feedback. Useful for identifying churn drivers.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would make you more likely to continue your membership?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q3 answer is 'Somewhat unlikely' or 'Very unlikely'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the cleanliness and maintenance of the gym facilities?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "5-point satisfaction scale (SINGLE_CHOICE). Hygiene is a critical retention factor.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and maintenance of the gym facilities?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Which of the following amenities do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Locker rooms/showers",
+                "Sauna/steam room",
+                "Hydromassage chairs",
+                "Tanning beds",
+                "Childcare services",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Checkbox options (MULTI_CHOICE) to identify underutilized amenities.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following amenities do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Locker rooms/showers",
+                    "Sauna/steam room",
+                    "Hydromassage chairs",
+                    "Tanning beds",
+                    "Childcare services",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

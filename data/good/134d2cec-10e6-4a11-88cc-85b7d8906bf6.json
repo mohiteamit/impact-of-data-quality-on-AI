@@ -1,0 +1,169 @@
+{
+    "survey_id": "134d2cec-10e6-4a11-88cc-85b7d8906bf6",
+    "survey_name": "Customer Satisfaction with Online Grocery Delivery Services Survey",
+    "survey_brief": "This survey aims to gather customer feedback on their experience with online grocery delivery services to identify areas for improvement and measure overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use online grocery delivery services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Bi-weekly",
+                "Monthly",
+                "Less than once a month"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a single-choice radio button for ease of selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use online grocery delivery services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Bi-weekly",
+                    "Monthly",
+                    "Less than once a month"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which online grocery delivery services have you used in the past 3 months? (Select all that apply)",
+            "answer_options": [
+                "Instacart",
+                "Amazon Fresh",
+                "Walmart Grocery",
+                "Shipt",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field for additional entries.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which online grocery delivery services have you used in the past 3 months? (Select all that apply)",
+                "answer_options": [
+                    "Instacart",
+                    "Amazon Fresh",
+                    "Walmart Grocery",
+                    "Shipt",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing an online grocery delivery service? (Select up to 3)",
+            "answer_options": [
+                "Delivery speed",
+                "Product quality",
+                "Price",
+                "Availability of organic/local products",
+                "User-friendly app/website",
+                "Customer service",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Limit selections to 3 options. Use checkboxes with a validation rule for max selections.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with validation for max 3 selections.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing an online grocery delivery service? (Select up to 3)",
+                "answer_options": [
+                    "Delivery speed",
+                    "Product quality",
+                    "Price",
+                    "Availability of organic/local products",
+                    "User-friendly app/website",
+                    "Customer service",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the overall experience of your most recent online grocery delivery?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a 5-point Likert scale. Ensure the scale is clearly labeled for consistency.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the overall experience of your most recent online grocery delivery?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What was the primary reason for your satisfaction or dissatisfaction with your most recent online grocery delivery experience?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Open-ended question to capture detailed feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What was the primary reason for your satisfaction or dissatisfaction with your most recent online grocery delivery experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend the online grocery delivery service you used most recently to a friend or family member?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Less than once a month'",
+            "client_notes": "Use a 5-point Likert scale. This question is a good indicator of Net Promoter Score (NPS).",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Apply routing logic based on Q1 response.",
+            "script": {
+                "question_text": "How likely are you to recommend the online grocery delivery service you used most recently to a friend or family member?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Less than once a month'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What improvements would you suggest for online grocery delivery services?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Open-ended question to gather actionable feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for online grocery delivery services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        }
+    ]
+}

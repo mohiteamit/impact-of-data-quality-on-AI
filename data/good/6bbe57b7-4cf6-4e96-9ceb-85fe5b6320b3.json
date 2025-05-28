@@ -1,0 +1,131 @@
+{
+    "survey_id": "6bbe57b7-4cf6-4e96-9ceb-85fe5b6320b3",
+    "survey_name": "Consumer Preferences for Smart Home Air Quality Monitoring Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels regarding smart home air quality monitoring systems, including features, usability, and integration with other smart home devices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home air quality monitoring systems are you currently using?",
+            "answer_options": [
+                "Awair",
+                "Airthings",
+                "Netatmo Healthy Home Coach",
+                "Kaiterra Laser Egg",
+                "Other (please specify)",
+                "None"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option to capture any unlisted brands. Ensure the options are randomized to avoid bias.",
+            "scripter_notes": "Use a multi-choice selection field with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following smart home air quality monitoring systems are you currently using?",
+                "answer_options": [
+                    "Awair",
+                    "Airthings",
+                    "Netatmo Healthy Home Coach",
+                    "Kaiterra Laser Egg",
+                    "Other (please specify)",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current smart home air quality monitoring system?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 is not 'None'",
+            "client_notes": "Use a standard Likert scale for consistency. Ensure the scale is balanced.",
+            "scripter_notes": "Use a single-choice radio button selection.",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home air quality monitoring system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 is not 'None'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you consider most important when selecting a smart home air quality monitoring system?",
+            "answer_options": [
+                "Real-time air quality data",
+                "Integration with other smart home devices",
+                "Mobile app alerts and notifications",
+                "Accuracy of sensors",
+                "Ease of installation",
+                "Design and aesthetics",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow respondents to select multiple features. Randomize the order of options.",
+            "scripter_notes": "Use a multi-choice checkbox selection with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What features do you consider most important when selecting a smart home air quality monitoring system?",
+                "answer_options": [
+                    "Real-time air quality data",
+                    "Integration with other smart home devices",
+                    "Mobile app alerts and notifications",
+                    "Accuracy of sensors",
+                    "Ease of installation",
+                    "Design and aesthetics",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend your current smart home air quality monitoring system to a friend or colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "If Q1 is not 'None'",
+            "client_notes": "This is a standard Net Promoter Score (NPS) question. Use a single-choice scale.",
+            "scripter_notes": "Use a single-choice radio button selection.",
+            "script": {
+                "question_text": "How likely are you to recommend your current smart home air quality monitoring system to a friend or colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 is not 'None'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in future smart home air quality monitoring systems?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "This open-ended question allows respondents to provide detailed feedback. Ensure the text box is large enough for lengthy responses.",
+            "scripter_notes": "Use an open-text field with no character limit.",
+            "script": {
+                "question_text": "What improvements would you like to see in future smart home air quality monitoring systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "survey_id": "e4ae8d4d-263e-45f2-bbc7-677ce40402fd",
+    "survey_name": "Employee Satisfaction with On-Site Childcare Facilities Survey",
+    "survey_brief": "This survey aims to gather feedback from employees regarding their satisfaction with the on-site childcare facilities provided by the company, to identify areas for improvement and ensure the needs of working parents are met.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the availability of on-site childcare facilities at your workplace?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "This question is presented to all respondents.",
+            "client_notes": "Use a 5-point Likert scale for clarity and ease of analysis. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the availability of on-site childcare facilities at your workplace?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is presented to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following amenities do you find most valuable in the on-site childcare facility? (Select all that apply)",
+            "answer_options": [
+                "Flexible Hours",
+                "Qualified Staff",
+                "Educational Programs",
+                "Safe and Clean Environment",
+                "Affordable Pricing",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question is presented to respondents who indicated 'Satisfied' or higher in Q1.",
+            "client_notes": "Allow multiple selections to capture diverse preferences. Include an 'Other' option for additional feedback.",
+            "scripter_notes": "Field type: checkbox (multi-choice). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which of the following amenities do you find most valuable in the on-site childcare facility? (Select all that apply)",
+                "answer_options": [
+                    "Flexible Hours",
+                    "Qualified Staff",
+                    "Educational Programs",
+                    "Safe and Clean Environment",
+                    "Affordable Pricing",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question is presented to respondents who indicated 'Satisfied' or higher in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for the on-site childcare facility?",
+            "answer_options": [],
+            "routing_logic": "This question is presented to all respondents.",
+            "client_notes": "Open-ended questions can provide nuanced insights. Encourage detailed responses.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What improvements would you suggest for the on-site childcare facility?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question is presented to all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you use the on-site childcare facility?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question is presented to all respondents.",
+            "client_notes": "Frequency data will help assess utilization rates.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you use the on-site childcare facility?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is presented to all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend the on-site childcare facility to a colleague?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "This question is presented to respondents who indicated they use the facility ('Daily', 'Weekly', or 'Monthly') in Q4.",
+            "client_notes": "A simple yes/no/unsure question can gauge overall satisfaction.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Would you recommend the on-site childcare facility to a colleague?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question is presented to respondents who indicated they use the facility ('Daily', 'Weekly', or 'Monthly') in Q4."
+            }
+        }
+    ]
+}

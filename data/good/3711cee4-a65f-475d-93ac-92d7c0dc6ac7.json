@@ -1,0 +1,125 @@
+{
+    "survey_id": "3711cee4-a65f-475d-93ac-92d7c0dc6ac7",
+    "survey_name": "AI-Powered Personal Shopping Assistant Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer adoption, usage patterns, and satisfaction levels with AI-powered personal shopping assistants across various retail sectors.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you ever used an AI-powered personal shopping assistant (e.g., chatbot, virtual stylist, recommendation engine)?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No, but I am aware of such tools",
+                "No, and I am not aware of such tools"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons for single selection. This question serves as a filter for subsequent questions.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Have you ever used an AI-powered personal shopping assistant (e.g., chatbot, virtual stylist, recommendation engine)?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No, but I am aware of such tools",
+                    "No, and I am not aware of such tools"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of AI shopping assistants have you used? (Select all that apply)",
+            "answer_options": [
+                "Fashion/style recommendation tools",
+                "Grocery shopping assistants",
+                "Electronics product finders",
+                "Home decor visualizers",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 response is 'Yes, frequently' or 'Yes, occasionally'",
+            "client_notes": "Checkbox format for multi-select. Include an 'Other' option with text input for unlisted categories.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Implement conditional logic based on Q1 responses.",
+            "script": {
+                "question_text": "Which types of AI shopping assistants have you used? (Select all that apply)",
+                "answer_options": [
+                    "Fashion/style recommendation tools",
+                    "Grocery shopping assistants",
+                    "Electronics product finders",
+                    "Home decor visualizers",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 response is 'Yes, frequently' or 'Yes, occasionally'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of product recommendations from AI shopping assistants?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "N/A (haven't used recommendation features)"
+            ],
+            "routing_logic": "Only if Q1 response is 'Yes, frequently' or 'Yes, occasionally'",
+            "client_notes": "5-point Likert scale with neutral midpoint. Include N/A option for those who haven't used specific features.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Conditional display based on Q1.",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of product recommendations from AI shopping assistants?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "N/A (haven't used recommendation features)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 response is 'Yes, frequently' or 'Yes, occasionally'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would make you more likely to use AI shopping assistants?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-text field with character limit of 500. Useful for qualitative insights across all user segments.",
+            "scripter_notes": "Field type: text area (OPEN_TEXT). Mobile-responsive design recommended.",
+            "script": {
+                "question_text": "What improvements would make you more likely to use AI shopping assistants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How concerned are you about data privacy when using AI shopping assistants?",
+            "answer_options": [
+                "Extremely concerned",
+                "Very concerned",
+                "Moderately concerned",
+                "Slightly concerned",
+                "Not at all concerned"
+            ],
+            "routing_logic": "All respondents except Q1 = 'No, and I am not aware of such tools'",
+            "client_notes": "5-point Likert scale. Crucial for understanding privacy barriers to adoption.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Skip logic for unaware respondents.",
+            "script": {
+                "question_text": "How concerned are you about data privacy when using AI shopping assistants?",
+                "answer_options": [
+                    "Extremely concerned",
+                    "Very concerned",
+                    "Moderately concerned",
+                    "Slightly concerned",
+                    "Not at all concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except Q1 = 'No, and I am not aware of such tools'"
+            }
+        }
+    ]
+}

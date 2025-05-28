@@ -1,0 +1,123 @@
+{
+    "survey_id": "0cf82ca3-81c1-491f-a90e-eabd53fa2e63",
+    "survey_name": "Patient Satisfaction with AI-Powered Symptom Checkers Survey",
+    "survey_brief": "This survey aims to evaluate patient satisfaction and experience with AI-powered symptom checker tools in healthcare settings, focusing on usability, accuracy, and trust.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use AI-powered symptom checker tools?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use AI-powered symptom checker tools?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features do you value most in an AI symptom checker? (Select up to 3)",
+            "answer_options": [
+                "Accuracy of diagnosis suggestions",
+                "Ease of use/navigation",
+                "Speed of results",
+                "Integration with healthcare providers",
+                "Multilingual support",
+                "Privacy/security of data"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use checkboxes for multi-select. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE), max selections: 3",
+            "script": {
+                "question_text": "Which of the following features do you value most in an AI symptom checker? (Select up to 3)",
+                "answer_options": [
+                    "Accuracy of diagnosis suggestions",
+                    "Ease of use/navigation",
+                    "Speed of results",
+                    "Integration with healthcare providers",
+                    "Multilingual support",
+                    "Privacy/security of data"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of AI symptom checker results?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale for nuanced feedback. Include a 'Not applicable' option if needed.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of AI symptom checker results?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe a situation where an AI symptom checker was particularly helpful or unhelpful.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use an open-text field to capture qualitative insights. Limit response to 500 characters.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT), character limit: 500",
+            "script": {
+                "question_text": "Describe a situation where an AI symptom checker was particularly helpful or unhelpful.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend AI symptom checkers to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a simple single-choice format for clear metric tracking.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend AI symptom checkers to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        }
+    ]
+}

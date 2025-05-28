@@ -1,0 +1,135 @@
+{
+    "survey_id": "dd6899e4-380d-45ec-8ff3-ba0bd0ecdf2f",
+    "survey_name": "Employee Satisfaction with Digital Learning Platforms Survey",
+    "survey_brief": "This survey aims to gather feedback from employees on their satisfaction with the digital learning platforms provided by the company for professional development.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the company-provided digital learning platforms?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice question to gauge frequency of usage. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: Radio button.",
+            "script": {
+                "question_text": "How often do you use the company-provided digital learning platforms?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features do you find most useful in the digital learning platforms? (Select all that apply)",
+            "answer_options": [
+                "Interactive courses",
+                "Video tutorials",
+                "Quizzes and assessments",
+                "Progress tracking",
+                "Discussion forums",
+                "Certification upon completion"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1.",
+            "client_notes": "Use a multi-choice question to identify preferred features. Ensure options cover common platform functionalities.",
+            "scripter_notes": "Field type: Checkbox.",
+            "script": {
+                "question_text": "Which of the following features do you find most useful in the digital learning platforms? (Select all that apply)",
+                "answer_options": [
+                    "Interactive courses",
+                    "Video tutorials",
+                    "Quizzes and assessments",
+                    "Progress tracking",
+                    "Discussion forums",
+                    "Certification upon completion"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall user experience of the digital learning platforms?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a Likert scale to measure satisfaction. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: Radio button.",
+            "script": {
+                "question_text": "How satisfied are you with the overall user experience of the digital learning platforms?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the digital learning platforms?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use an open-ended question to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: Open text.",
+            "script": {
+                "question_text": "What improvements would you suggest for the digital learning platforms?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you encountered any technical issues while using the digital learning platforms?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice question to identify technical issues. Follow up with Q6 if 'Yes' is selected.",
+            "scripter_notes": "Field type: Radio button.",
+            "script": {
+                "question_text": "Have you encountered any technical issues while using the digital learning platforms?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe the technical issues you encountered.",
+            "answer_options": [],
+            "routing_logic": "Appears only if 'Yes' is selected in Q5.",
+            "client_notes": "Use an open-ended question to gather details about technical issues. This helps in troubleshooting.",
+            "scripter_notes": "Field type: Open text.",
+            "script": {
+                "question_text": "Please describe the technical issues you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if 'Yes' is selected in Q5."
+            }
+        }
+    ]
+}

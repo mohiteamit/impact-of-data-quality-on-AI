@@ -1,0 +1,121 @@
+{
+    "survey_id": "640bdf5b-fc32-408d-94c7-e3c435bae9e0",
+    "survey_name": "Customer Satisfaction with In-Flight Wi-Fi Services Survey",
+    "survey_brief": "This survey aims to gather customer feedback on the quality, reliability, and user experience of in-flight Wi-Fi services to help improve future offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use in-flight Wi-Fi services?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Always"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a Likert scale for frequency to capture nuanced responses. Ensure the options are balanced and cover the full range of possible usage.",
+            "scripter_notes": "Single-choice radio buttons. Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "How often do you use in-flight Wi-Fi services?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using in-flight Wi-Fi?",
+            "answer_options": [
+                "Work-related tasks",
+                "Entertainment (streaming, social media, etc.)",
+                "Communication (emails, messaging, etc.)",
+                "General browsing",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Include an 'Other' option with a text field to capture unique responses. Helps identify niche use cases.",
+            "scripter_notes": "Single-choice radio buttons with an 'Other' option triggering an open-text field.",
+            "script": {
+                "question_text": "What is your primary reason for using in-flight Wi-Fi?",
+                "answer_options": [
+                    "Work-related tasks",
+                    "Entertainment (streaming, social media, etc.)",
+                    "Communication (emails, messaging, etc.)",
+                    "General browsing",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the speed of in-flight Wi-Fi?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Use a standard satisfaction scale. Consider adding a 'Not applicable' option if needed.",
+            "scripter_notes": "Single-choice radio buttons. Display options vertically for clarity.",
+            "script": {
+                "question_text": "How satisfied are you with the speed of in-flight Wi-Fi?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for in-flight Wi-Fi services?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to gather qualitative feedback. Useful for identifying pain points and innovation opportunities.",
+            "scripter_notes": "Open-text field with a character limit of 500.",
+            "script": {
+                "question_text": "What improvements would you suggest for in-flight Wi-Fi services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay for premium in-flight Wi-Fi with faster speeds and better reliability?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe, depending on the price"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Helps gauge willingness to pay for enhanced services. Useful for pricing strategy.",
+            "scripter_notes": "Single-choice radio buttons. Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "Would you be willing to pay for premium in-flight Wi-Fi with faster speeds and better reliability?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe, depending on the price"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        }
+    ]
+}

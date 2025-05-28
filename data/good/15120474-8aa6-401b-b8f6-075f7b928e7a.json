@@ -1,0 +1,143 @@
+{
+    "survey_id": "15120474-8aa6-401b-b8f6-075f7b928e7a",
+    "survey_name": "Customer Satisfaction with Autonomous Grocery Checkout Systems Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and usage experiences with autonomous grocery checkout systems in retail stores.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use autonomous checkout systems when shopping for groceries?",
+            "answer_options": [
+                "Every time I shop",
+                "Most of the time",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for clear response capture. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use autonomous checkout systems when shopping for groceries?",
+                "answer_options": [
+                    "Every time I shop",
+                    "Most of the time",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features do you value most in autonomous checkout systems? (Select up to 3)",
+            "answer_options": [
+                "Speed of checkout",
+                "Ease of use",
+                "Reduced human interaction",
+                "Item scanning accuracy",
+                "Payment options available",
+                "Receipt delivery method",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with text input to capture unlisted features.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "Which of the following features do you value most in autonomous checkout systems? (Select up to 3)",
+                "answer_options": [
+                    "Speed of checkout",
+                    "Ease of use",
+                    "Reduced human interaction",
+                    "Item scanning accuracy",
+                    "Payment options available",
+                    "Receipt delivery method",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced when using autonomous checkout systems?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Use a text box with a reasonable character limit.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What challenges have you faced when using autonomous checkout systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the overall experience of using autonomous checkout systems?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Single-choice radio button recommended.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the overall experience of using autonomous checkout systems?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend autonomous checkout systems to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Not sure",
+                "Probably not",
+                "Definitely not"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Net Promoter Score (NPS) style question to gauge recommendation likelihood.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend autonomous checkout systems to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Not sure",
+                    "Probably not",
+                    "Definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would make you more likely to use autonomous checkout systems?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is 'Occasionally', 'Rarely', or 'Never'",
+            "client_notes": "Open-ended question to gather suggestions for improvement. Useful for users with limited engagement.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would make you more likely to use autonomous checkout systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is 'Occasionally', 'Rarely', or 'Never'"
+            }
+        }
+    ]
+}

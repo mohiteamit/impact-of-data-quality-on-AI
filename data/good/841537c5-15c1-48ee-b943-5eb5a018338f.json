@@ -1,0 +1,129 @@
+{
+    "survey_id": "841537c5-15c1-48ee-b943-5eb5a018338f",
+    "survey_name": "Post-Pandemic Remote Work Productivity Tools Evaluation Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness and satisfaction of productivity tools used by employees in remote work settings post-pandemic.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use productivity tools for remote work?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always ask this question first to gauge tool usage frequency.",
+            "client_notes": "Ensure the scale is clear and options are mutually exclusive.",
+            "scripter_notes": "Use a single-choice radio button for this question.",
+            "script": {
+                "question_text": "How often do you use productivity tools for remote work?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always ask this question first to gauge tool usage frequency."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following productivity tools do you currently use for remote work? (Select all that apply)",
+            "answer_options": [
+                "Slack",
+                "Microsoft Teams",
+                "Zoom",
+                "Trello",
+                "Asana",
+                "Google Workspace",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Ask if Q1 response is not 'Never'.",
+            "client_notes": "Include an 'Other' option to capture tools not listed.",
+            "scripter_notes": "Use a multi-choice checkbox for this question.",
+            "script": {
+                "question_text": "Which of the following productivity tools do you currently use for remote work? (Select all that apply)",
+                "answer_options": [
+                    "Slack",
+                    "Microsoft Teams",
+                    "Zoom",
+                    "Trello",
+                    "Asana",
+                    "Google Workspace",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Ask if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the productivity tools you currently use?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Ask if Q1 response is not 'Never'.",
+            "client_notes": "Use a balanced Likert scale for accurate feedback.",
+            "scripter_notes": "Use a single-choice radio button for this question.",
+            "script": {
+                "question_text": "How satisfied are you with the productivity tools you currently use?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask if Q1 response is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges do you face when using remote work productivity tools?",
+            "answer_options": [],
+            "routing_logic": "Ask if Q3 response is 'Dissatisfied' or 'Very dissatisfied'.",
+            "client_notes": "Allow open-ended responses for detailed feedback.",
+            "scripter_notes": "Use an open-text field for this question.",
+            "script": {
+                "question_text": "What challenges do you face when using remote work productivity tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Ask if Q3 response is 'Dissatisfied' or 'Very dissatisfied'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How has using productivity tools impacted your work efficiency?",
+            "answer_options": [
+                "Significantly improved",
+                "Slightly improved",
+                "No change",
+                "Slightly decreased",
+                "Significantly decreased"
+            ],
+            "routing_logic": "Ask if Q1 response is not 'Never'.",
+            "client_notes": "Include a neutral option for unbiased responses.",
+            "scripter_notes": "Use a single-choice radio button for this question.",
+            "script": {
+                "question_text": "How has using productivity tools impacted your work efficiency?",
+                "answer_options": [
+                    "Significantly improved",
+                    "Slightly improved",
+                    "No change",
+                    "Slightly decreased",
+                    "Significantly decreased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask if Q1 response is not 'Never'."
+            }
+        }
+    ]
+}

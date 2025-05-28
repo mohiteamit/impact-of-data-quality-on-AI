@@ -1,0 +1,135 @@
+{
+    "survey_id": "e4bfadd8-7ae8-4bb5-96a0-2964fddcd850",
+    "survey_name": "Corporate Virtual Reality (VR) Training Program Effectiveness Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness and user satisfaction of VR-based corporate training programs implemented within the organization.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in VR-based training sessions?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "Quarterly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a clear frequency scale to capture participation rates. Ensure mobile-friendly dropdown options.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you participate in VR-based training sessions?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "Quarterly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of VR training modules have you completed? (Select all that apply)",
+            "answer_options": [
+                "Leadership Development",
+                "Technical Skills",
+                "Compliance and Safety",
+                "Customer Service",
+                "Diversity and Inclusion",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Multi-select with an optional open-text field for 'Other'. Ensure responsive design for checkboxes.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with an optional open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "Which types of VR training modules have you completed? (Select all that apply)",
+                "answer_options": [
+                    "Leadership Development",
+                    "Technical Skills",
+                    "Compliance and Safety",
+                    "Customer Service",
+                    "Diversity and Inclusion",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how engaging do you find the VR training sessions? (1 = Not engaging, 5 = Highly engaging)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use a Likert scale with clear labels. Avoid neutral midpoint bias.",
+            "scripter_notes": "Field type: Single-choice radio buttons with a 5-point scale.",
+            "script": {
+                "question_text": "On a scale of 1-5, how engaging do you find the VR training sessions? (1 = Not engaging, 5 = Highly engaging)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the VR training programs?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 500 characters.",
+            "scripter_notes": "Field type: Open-text with character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for the VR training programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you experienced any technical issues during VR training sessions?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Binary response to identify technical pain points. Follow-up with Q6 if 'Yes'.",
+            "scripter_notes": "Field type: Single-choice radio buttons with conditional routing.",
+            "script": {
+                "question_text": "Have you experienced any technical issues during VR training sessions?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Describe the technical issues you encountered.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q5 is 'Yes'",
+            "client_notes": "Open-text to detail specific issues. Use for troubleshooting.",
+            "scripter_notes": "Field type: Open-text with no character limit.",
+            "script": {
+                "question_text": "Describe the technical issues you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q5 is 'Yes'"
+            }
+        }
+    ]
+}

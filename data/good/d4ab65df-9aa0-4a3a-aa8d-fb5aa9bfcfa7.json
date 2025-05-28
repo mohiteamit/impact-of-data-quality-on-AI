@@ -1,0 +1,151 @@
+{
+    "survey_id": "d4ab65df-9aa0-4a3a-aa8d-fb5aa9bfcfa7",
+    "survey_name": "Healthcare Telemedicine Adoption Survey",
+    "survey_brief": "This survey aims to understand patient adoption and satisfaction levels with telemedicine services post-pandemic.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you used telemedicine services in the past 12 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a simple binary choice for initial screening. Ensure mobile-friendly button placement.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Have you used telemedicine services in the past 12 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of telemedicine services have you used? (Select all that apply)",
+            "answer_options": [
+                "General consultations",
+                "Mental health therapy",
+                "Chronic condition management",
+                "Prescription refills",
+                "Urgent care",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes'",
+            "client_notes": "Multi-select format with an 'Other' option for unlisted services. Consider randomizing option order to reduce bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "Which types of telemedicine services have you used? (Select all that apply)",
+                "answer_options": [
+                    "General consultations",
+                    "Mental health therapy",
+                    "Chronic condition management",
+                    "Prescription refills",
+                    "Urgent care",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary reason for choosing telemedicine over in-person visits?",
+            "answer_options": [
+                "Convenience",
+                "Lower cost",
+                "Faster access to care",
+                "Safety concerns (e.g., avoiding illness exposure)",
+                "Lack of local healthcare providers",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes'",
+            "client_notes": "Include a balanced set of common motivations. 'Other' captures niche responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What is your primary reason for choosing telemedicine over in-person visits?",
+                "answer_options": [
+                    "Convenience",
+                    "Lower cost",
+                    "Faster access to care",
+                    "Safety concerns (e.g., avoiding illness exposure)",
+                    "Lack of local healthcare providers",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1-5, how satisfied are you with your telemedicine experiences overall? (1 = Not at all satisfied, 5 = Extremely satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Only if Q1 = 'Yes'",
+            "client_notes": "Likert scale for standardized sentiment measurement. Label endpoints clearly.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with your telemedicine experiences overall? (1 = Not at all satisfied, 5 = Extremely satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would encourage you to use telemedicine more frequently?",
+            "answer_options": [],
+            "routing_logic": "Only if Q1 = 'Yes'",
+            "client_notes": "Open-ended to capture qualitative feedback. Set a 200-character limit.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would encourage you to use telemedicine more frequently?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What factors have prevented you from trying telemedicine?",
+            "answer_options": [
+                "Prefer in-person care",
+                "Technology barriers",
+                "Insurance coverage concerns",
+                "Privacy/security worries",
+                "Not aware it was an option",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 = 'No'",
+            "client_notes": "Multi-select with 'Other' for non-adoption drivers. Randomize options.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What factors have prevented you from trying telemedicine?",
+                "answer_options": [
+                    "Prefer in-person care",
+                    "Technology barriers",
+                    "Insurance coverage concerns",
+                    "Privacy/security worries",
+                    "Not aware it was an option",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 = 'No'"
+            }
+        }
+    ]
+}

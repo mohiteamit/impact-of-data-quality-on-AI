@@ -1,0 +1,197 @@
+{
+    "survey_id": "df6d45de-d58e-4658-86cd-fdde28d84580",
+    "survey_name": "Adoption and Satisfaction of AI-Powered Legal Document Review Services Survey",
+    "survey_brief": "This survey aims to gather insights on the adoption rates and user satisfaction levels with AI-powered legal document review services among legal professionals.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you used an AI-powered legal document review service in the past 12 months?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This is a screening question to segment users and non-users of AI-powered legal document review services.",
+            "scripter_notes": "Field type: Radio button (single choice)",
+            "script": {
+                "question_text": "Have you used an AI-powered legal document review service in the past 12 months?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI-powered legal document review services have you used? (Select all that apply)",
+            "answer_options": [
+                "LexisNexis Context",
+                "Relativity Trace",
+                "ROSS Intelligence",
+                "Casetext CARA",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 is 'Yes'",
+            "client_notes": "This question helps identify the most commonly used platforms among respondents. Include an 'Other' option to capture additional platforms.",
+            "scripter_notes": "Field type: Checkbox (multi-choice)",
+            "script": {
+                "question_text": "Which of the following AI-powered legal document review services have you used? (Select all that apply)",
+                "answer_options": [
+                    "LexisNexis Context",
+                    "Relativity Trace",
+                    "ROSS Intelligence",
+                    "Casetext CARA",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influenced your decision to adopt an AI-powered legal document review service? (Select all that apply)",
+            "answer_options": [
+                "Time savings",
+                "Cost efficiency",
+                "Improved accuracy",
+                "Ease of use",
+                "Integration with existing tools",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 is 'Yes'",
+            "client_notes": "Understand the key drivers behind adoption. This can help in marketing and product development.",
+            "scripter_notes": "Field type: Checkbox (multi-choice)",
+            "script": {
+                "question_text": "What factors influenced your decision to adopt an AI-powered legal document review service? (Select all that apply)",
+                "answer_options": [
+                    "Time savings",
+                    "Cost efficiency",
+                    "Improved accuracy",
+                    "Ease of use",
+                    "Integration with existing tools",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accuracy of the AI-powered legal document review service you have used?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 is 'Yes'",
+            "client_notes": "5-point Likert scale to measure satisfaction with accuracy, a critical factor for legal professionals.",
+            "scripter_notes": "Field type: Radio button (single choice)",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of the AI-powered legal document review service you have used?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any challenges or limitations you have encountered while using AI-powered legal document review services.",
+            "answer_options": [],
+            "routing_logic": "If Q1 is 'Yes'",
+            "client_notes": "Open-ended question to capture qualitative feedback on pain points and areas for improvement.",
+            "scripter_notes": "Field type: Open text",
+            "script": {
+                "question_text": "Please describe any challenges or limitations you have encountered while using AI-powered legal document review services.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you recommend the AI-powered legal document review service you have used to a colleague?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "If Q1 is 'Yes'",
+            "client_notes": "Simple yes/no/maybe question to gauge overall satisfaction and likelihood of referral.",
+            "scripter_notes": "Field type: Radio button (single choice)",
+            "script": {
+                "question_text": "Would you recommend the AI-powered legal document review service you have used to a colleague?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What would encourage you to start using an AI-powered legal document review service?",
+            "answer_options": [
+                "Better accuracy",
+                "Lower cost",
+                "More user-friendly interface",
+                "Integration with my current workflow",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 is 'No'",
+            "client_notes": "For non-users, identify potential motivators for future adoption.",
+            "scripter_notes": "Field type: Checkbox (multi-choice)",
+            "script": {
+                "question_text": "What would encourage you to start using an AI-powered legal document review service?",
+                "answer_options": [
+                    "Better accuracy",
+                    "Lower cost",
+                    "More user-friendly interface",
+                    "Integration with my current workflow",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 is 'No'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What concerns, if any, do you have about using AI-powered legal document review services?",
+            "answer_options": [
+                "Privacy and data security",
+                "Accuracy and reliability",
+                "Cost",
+                "Learning curve",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 is 'No' or 'Not sure'",
+            "client_notes": "Identify barriers to adoption among non-users or those uncertain about using these services.",
+            "scripter_notes": "Field type: Checkbox (multi-choice)",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using AI-powered legal document review services?",
+                "answer_options": [
+                    "Privacy and data security",
+                    "Accuracy and reliability",
+                    "Cost",
+                    "Learning curve",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 is 'No' or 'Not sure'"
+            }
+        }
+    ]
+}

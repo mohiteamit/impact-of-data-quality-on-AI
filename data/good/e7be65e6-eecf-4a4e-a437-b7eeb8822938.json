@@ -1,0 +1,123 @@
+{
+    "survey_id": "e7be65e6-eecf-4a4e-a437-b7eeb8822938",
+    "survey_name": "Customer Satisfaction with Contactless Parking Payment Solutions Survey",
+    "survey_brief": "This survey aims to assess customer satisfaction with contactless parking payment solutions, including ease of use, reliability, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use contactless parking payment solutions?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity and ease of response.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use contactless parking payment solutions?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features are most important to you in a contactless parking payment solution? (Select all that apply)",
+            "answer_options": [
+                "Ease of use",
+                "Speed of transaction",
+                "Reliability",
+                "Mobile app integration",
+                "Customer support",
+                "Cost-effectiveness"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'Never'",
+            "client_notes": "Use checkboxes for multi-choice responses to allow multiple selections.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following features are most important to you in a contactless parking payment solution? (Select all that apply)",
+                "answer_options": [
+                    "Ease of use",
+                    "Speed of transaction",
+                    "Reliability",
+                    "Mobile app integration",
+                    "Customer support",
+                    "Cost-effectiveness"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the reliability of contactless parking payment solutions you have used?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale for satisfaction ratings to capture nuanced feedback.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the reliability of contactless parking payment solutions you have used?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for contactless parking payment solutions?",
+            "answer_options": [],
+            "routing_logic": "Shown if Q1 answer is not 'Never'",
+            "client_notes": "Allow open-ended responses to gather detailed feedback for innovation.",
+            "scripter_notes": "Field type: text box (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for contactless parking payment solutions?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend contactless parking payment solutions to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Shown if Q1 answer is not 'Never'",
+            "client_notes": "Use a simple single-choice question to gauge willingness to recommend.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend contactless parking payment solutions to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 answer is not 'Never'"
+            }
+        }
+    ]
+}

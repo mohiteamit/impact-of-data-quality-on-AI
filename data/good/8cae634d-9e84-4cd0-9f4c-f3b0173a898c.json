@@ -1,0 +1,127 @@
+{
+    "survey_id": "8cae634d-9e84-4cd0-9f4c-f3b0173a898c",
+    "survey_name": "Customer Satisfaction with Contactless Payment Methods in Retail Stores Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and preferences regarding the use of contactless payment methods in retail stores, focusing on ease of use, security perceptions, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use contactless payment methods (e.g., mobile wallets, contactless cards) in retail stores?",
+            "answer_options": [
+                "Never",
+                "Rarely (once a month or less)",
+                "Occasionally (a few times a month)",
+                "Frequently (once a week or more)",
+                "Almost always (every time I shop)"
+            ],
+            "routing_logic": "This question appears to all respondents.",
+            "client_notes": "Use a single-choice scale to capture usage frequency. Ensure the options are distinct and cover the full range of possible responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use contactless payment methods (e.g., mobile wallets, contactless cards) in retail stores?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once a month or less)",
+                    "Occasionally (a few times a month)",
+                    "Frequently (once a week or more)",
+                    "Almost always (every time I shop)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your decision to use contactless payment methods? (Select all that apply)",
+            "answer_options": [
+                "Speed of transaction",
+                "Perceived security",
+                "Hygiene/avoiding physical contact",
+                "Convenience",
+                "Rewards or incentives",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Never'.",
+            "client_notes": "Use a multi-choice format to allow respondents to select multiple factors. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an optional text field for 'Other'.",
+            "script": {
+                "question_text": "What factors influence your decision to use contactless payment methods? (Select all that apply)",
+                "answer_options": [
+                    "Speed of transaction",
+                    "Perceived security",
+                    "Hygiene/avoiding physical contact",
+                    "Convenience",
+                    "Rewards or incentives",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the ease of using contactless payment methods in retail stores?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Never'.",
+            "client_notes": "Use a Likert scale to measure satisfaction levels. Ensure the scale is balanced and labeled clearly.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the ease of using contactless payment methods in retail stores?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest to enhance the contactless payment experience in retail stores?",
+            "answer_options": [],
+            "routing_logic": "This question appears if Q1 is not 'Never'.",
+            "client_notes": "Use an open-ended question to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance the contactless payment experience in retail stores?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you do not use contactless payment methods, what is the primary reason?",
+            "answer_options": [
+                "Concerns about security",
+                "Lack of awareness or understanding",
+                "Preference for traditional payment methods",
+                "No access to contactless payment tools",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears only if Q1 is 'Never'.",
+            "client_notes": "Use a single-choice format with an 'Other' option for additional input. Helps identify barriers to adoption.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with an optional text field for 'Other'.",
+            "script": {
+                "question_text": "If you do not use contactless payment methods, what is the primary reason?",
+                "answer_options": [
+                    "Concerns about security",
+                    "Lack of awareness or understanding",
+                    "Preference for traditional payment methods",
+                    "No access to contactless payment tools",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears only if Q1 is 'Never'."
+            }
+        }
+    ]
+}

@@ -1,0 +1,155 @@
+{
+    "survey_id": "d477828b-b87e-4919-b6b5-9d3a3c3733c8",
+    "survey_name": "Smart Home Energy Management System Adoption Survey",
+    "survey_brief": "This survey aims to understand user adoption, satisfaction, and challenges with smart home energy management systems to improve future product development.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart home energy management systems do you currently use?",
+            "answer_options": [
+                "Nest Energy Management",
+                "Ecobee SmartThermostat",
+                "Honeywell Home Energy Controller",
+                "Other (please specify)",
+                "I do not use a smart home energy management system"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure 'Other' option includes a text field for specification. Consider randomizing options to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "Which of the following smart home energy management systems do you currently use?",
+                "answer_options": [
+                    "Nest Energy Management",
+                    "Ecobee SmartThermostat",
+                    "Honeywell Home Energy Controller",
+                    "Other (please specify)",
+                    "I do not use a smart home energy management system"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current smart home energy management system?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display only if Q1 does not select 'I do not use a smart home energy management system'",
+            "client_notes": "Use a standard 5-point Likert scale for consistency. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with your current smart home energy management system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 does not select 'I do not use a smart home energy management system'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you value the most in a smart home energy management system?",
+            "answer_options": [
+                "Real-time energy usage tracking",
+                "Automated energy-saving adjustments",
+                "Integration with renewable energy sources",
+                "Cost-saving recommendations",
+                "User-friendly mobile app",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display only if Q1 does not select 'I do not use a smart home energy management system'",
+            "client_notes": "Allow multiple selections. Use a checkbox format for clarity.",
+            "scripter_notes": "Field type: MULTI_CHOICE with optional open-text for 'Other'.",
+            "script": {
+                "question_text": "What features do you value the most in a smart home energy management system?",
+                "answer_options": [
+                    "Real-time energy usage tracking",
+                    "Automated energy-saving adjustments",
+                    "Integration with renewable energy sources",
+                    "Cost-saving recommendations",
+                    "User-friendly mobile app",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display only if Q1 does not select 'I do not use a smart home energy management system'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What are the main barriers preventing you from adopting a smart home energy management system?",
+            "answer_options": [
+                "High initial cost",
+                "Complex installation process",
+                "Lack of perceived benefits",
+                "Privacy concerns",
+                "Unfamiliarity with available options",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display only if Q1 selects 'I do not use a smart home energy management system'",
+            "client_notes": "Use checkboxes for multiple selections. Include an open-text field for 'Other'.",
+            "scripter_notes": "Field type: MULTI_CHOICE with optional open-text follow-up.",
+            "script": {
+                "question_text": "What are the main barriers preventing you from adopting a smart home energy management system?",
+                "answer_options": [
+                    "High initial cost",
+                    "Complex installation process",
+                    "Lack of perceived benefits",
+                    "Privacy concerns",
+                    "Unfamiliarity with available options",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display only if Q1 selects 'I do not use a smart home energy management system'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your smart home energy management system to others?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Display only if Q1 does not select 'I do not use a smart home energy management system'",
+            "client_notes": "Use a standard 5-point Likert scale. Ensure question is mobile-responsive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How likely are you to recommend your smart home energy management system to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 does not select 'I do not use a smart home energy management system'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would you suggest for current smart home energy management systems?",
+            "answer_options": [],
+            "routing_logic": "Display only if Q1 does not select 'I do not use a smart home energy management system'",
+            "client_notes": "Open-ended question to gather qualitative feedback. Allow for longer text input.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What improvements would you suggest for current smart home energy management systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display only if Q1 does not select 'I do not use a smart home energy management system'"
+            }
+        }
+    ]
+}

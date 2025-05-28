@@ -1,0 +1,123 @@
+{
+    "survey_id": "21de40e3-1485-4951-8856-378d7f9714e3",
+    "survey_name": "Customer Satisfaction with Electric Vehicle (EV) Public Charging Stations Survey",
+    "survey_brief": "This survey aims to gather feedback from electric vehicle (EV) owners about their experiences and satisfaction levels with public EV charging stations.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public EV charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for simplicity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How frequently do you use public EV charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following public EV charging networks have you used in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "ChargePoint",
+                "EVgo",
+                "Electrify America",
+                "Tesla Supercharger",
+                "Blink Charging",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice checkbox format. Add an 'Other' option with a text field for input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following public EV charging networks have you used in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "ChargePoint",
+                    "EVgo",
+                    "Electrify America",
+                    "Tesla Supercharger",
+                    "Blink Charging",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the availability of public EV charging stations in your area? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for better measurement of satisfaction levels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button) with a 5-point scale.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the availability of public EV charging stations in your area? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What are the biggest challenges you face when using public EV charging stations?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What are the biggest challenges you face when using public EV charging stations?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your most frequently used public EV charging network to other EV owners?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "All respondents who selected at least one charging network in Q2",
+            "client_notes": "Single-choice question to measure recommendation likelihood.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "Would you recommend your most frequently used public EV charging network to other EV owners?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who selected at least one charging network in Q2"
+            }
+        }
+    ]
+}

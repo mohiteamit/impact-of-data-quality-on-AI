@@ -1,0 +1,127 @@
+{
+    "survey_id": "bbdc0962-c1f8-452d-b8e3-afc7a0c12707",
+    "survey_name": "Customer Satisfaction with Autonomous Grocery Shopping Carts Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and experience with autonomous grocery shopping carts in retail environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use autonomous grocery shopping carts?",
+            "answer_options": [
+                "Never",
+                "Rarely (once every few months)",
+                "Occasionally (once a month)",
+                "Frequently (once a week)",
+                "Very frequently (multiple times a week)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point frequency scale to capture usage patterns clearly.",
+            "scripter_notes": "Field type: radio button for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use autonomous grocery shopping carts?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once every few months)",
+                    "Occasionally (once a month)",
+                    "Frequently (once a week)",
+                    "Very frequently (multiple times a week)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of autonomous grocery shopping carts do you find most useful? (Select all that apply)",
+            "answer_options": [
+                "Self-navigation",
+                "Auto-checkout",
+                "Item scanning",
+                "Basket capacity",
+                "Real-time price updates",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Occasionally', 'Frequently', or 'Very frequently' to Q1",
+            "client_notes": "Allow multiple selections to identify key features driving satisfaction.",
+            "scripter_notes": "Field type: checkbox for multi-choice selection.",
+            "script": {
+                "question_text": "Which features of autonomous grocery shopping carts do you find most useful? (Select all that apply)",
+                "answer_options": [
+                    "Self-navigation",
+                    "Auto-checkout",
+                    "Item scanning",
+                    "Basket capacity",
+                    "Real-time price updates",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Occasionally', 'Frequently', or 'Very frequently' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for autonomous grocery shopping carts?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: open text input.",
+            "script": {
+                "question_text": "What improvements would you suggest for autonomous grocery shopping carts?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the overall performance of autonomous grocery shopping carts?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Occasionally', 'Frequently', or 'Very frequently' to Q1",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction levels accurately.",
+            "scripter_notes": "Field type: radio button for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the overall performance of autonomous grocery shopping carts?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Occasionally', 'Frequently', or 'Very frequently' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend autonomous grocery shopping carts to others?",
+            "answer_options": [
+                "Definitely not",
+                "Probably not",
+                "Neutral",
+                "Probably yes",
+                "Definitely yes"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Occasionally', 'Frequently', or 'Very frequently' to Q1",
+            "client_notes": "Use a 5-point scale to gauge likelihood of recommendation.",
+            "scripter_notes": "Field type: radio button for single-choice selection.",
+            "script": {
+                "question_text": "Would you recommend autonomous grocery shopping carts to others?",
+                "answer_options": [
+                    "Definitely not",
+                    "Probably not",
+                    "Neutral",
+                    "Probably yes",
+                    "Definitely yes"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Occasionally', 'Frequently', or 'Very frequently' to Q1"
+            }
+        }
+    ]
+}

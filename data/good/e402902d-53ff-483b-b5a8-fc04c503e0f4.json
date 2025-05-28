@@ -1,0 +1,131 @@
+{
+    "survey_id": "e402902d-53ff-483b-b5a8-fc04c503e0f4",
+    "survey_name": "Consumer Preferences for Smart Luggage Features Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and expectations regarding smart luggage features to guide product development and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you travel with checked or carry-on luggage?",
+            "answer_options": [
+                "Several times per month",
+                "Once a month",
+                "A few times per year",
+                "Once a year or less",
+                "I do not travel with luggage"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Consider excluding respondents who select 'I do not travel with luggage' from further questions.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you travel with checked or carry-on luggage?",
+                "answer_options": [
+                    "Several times per month",
+                    "Once a month",
+                    "A few times per year",
+                    "Once a year or less",
+                    "I do not travel with luggage"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following smart luggage features are most important to you? (Select up to 3)",
+            "answer_options": [
+                "Built-in GPS tracking",
+                "USB charging ports",
+                "Weight sensors",
+                "Remote locking",
+                "Digital luggage tags",
+                "Bluetooth connectivity",
+                "Proximity alerts (e.g., separation warnings)",
+                "Battery level indicators",
+                "None of the above"
+            ],
+            "routing_logic": "Respondents who did not select 'I do not travel with luggage' in Q1",
+            "client_notes": "Use a multi-choice checkbox format. Randomize the order of options to minimize bias, except for 'None of the above' which should remain last.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE), max 3 selections allowed",
+            "script": {
+                "question_text": "Which of the following smart luggage features are most important to you? (Select up to 3)",
+                "answer_options": [
+                    "Built-in GPS tracking",
+                    "USB charging ports",
+                    "Weight sensors",
+                    "Remote locking",
+                    "Digital luggage tags",
+                    "Bluetooth connectivity",
+                    "Proximity alerts (e.g., separation warnings)",
+                    "Battery level indicators",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who did not select 'I do not travel with luggage' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the maximum you would be willing to pay for smart luggage with your preferred features?",
+            "answer_options": [
+                "Under $100",
+                "$100-$199",
+                "$200-$299",
+                "$300-$399",
+                "$400 or more"
+            ],
+            "routing_logic": "Respondents who did not select 'I do not travel with luggage' in Q1",
+            "client_notes": "Present as a single-choice radio button with clear price ranges. Include currency symbol for clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What is the maximum you would be willing to pay for smart luggage with your preferred features?",
+                "answer_options": [
+                    "Under $100",
+                    "$100-$199",
+                    "$200-$299",
+                    "$300-$399",
+                    "$400 or more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who did not select 'I do not travel with luggage' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about using smart luggage?",
+            "answer_options": [],
+            "routing_logic": "Respondents who did not select 'I do not travel with luggage' in Q1",
+            "client_notes": "Open-ended question to capture qualitative feedback. Use a text box with a 300-character limit to encourage concise responses.",
+            "scripter_notes": "Field type: open text box (OPEN_TEXT)",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using smart luggage?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who did not select 'I do not travel with luggage' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following best describes your awareness of smart luggage products currently on the market?",
+            "answer_options": [
+                "I currently own smart luggage",
+                "I'm familiar with several brands/models",
+                "I've heard of smart luggage but don't know specifics",
+                "This is my first time hearing about smart luggage"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to gauge market awareness. Present options in descending order of familiarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Which of the following best describes your awareness of smart luggage products currently on the market?",
+                "answer_options": [
+                    "I currently own smart luggage",
+                    "I'm familiar with several brands/models",
+                    "I've heard of smart luggage but don't know specifics",
+                    "This is my first time hearing about smart luggage"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

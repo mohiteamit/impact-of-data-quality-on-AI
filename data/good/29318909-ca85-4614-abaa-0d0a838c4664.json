@@ -1,0 +1,123 @@
+{
+    "survey_id": "29318909-ca85-4614-abaa-0d0a838c4664",
+    "survey_name": "Sustainable Fashion Brand Loyalty Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and loyalty towards sustainable fashion brands, focusing on purchasing behaviors, motivations, and barriers.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you purchase clothing from sustainable fashion brands?",
+            "answer_options": [
+                "At least once a month",
+                "A few times a year",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a clear frequency scale for measurable insights.",
+            "scripter_notes": "Single-choice question with radio buttons.",
+            "script": {
+                "question_text": "How often do you purchase clothing from sustainable fashion brands?",
+                "answer_options": [
+                    "At least once a month",
+                    "A few times a year",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors most influence your decision to buy from sustainable fashion brands? (Select up to 3)",
+            "answer_options": [
+                "Ethical labor practices",
+                "Eco-friendly materials",
+                "Transparency in sourcing",
+                "Brand reputation",
+                "Price",
+                "Style/design",
+                "Personal values alignment"
+            ],
+            "routing_logic": "Appears to all respondents who answered anything other than 'Never' in Q1.",
+            "client_notes": "Multi-choice for nuanced insights; limit selections to prioritize top factors.",
+            "scripter_notes": "Multi-choice question with checkboxes.",
+            "script": {
+                "question_text": "What factors most influence your decision to buy from sustainable fashion brands? (Select up to 3)",
+                "answer_options": [
+                    "Ethical labor practices",
+                    "Eco-friendly materials",
+                    "Transparency in sourcing",
+                    "Brand reputation",
+                    "Price",
+                    "Style/design",
+                    "Personal values alignment"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents who answered anything other than 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the biggest barrier preventing you from purchasing more sustainable fashion?",
+            "answer_options": [
+                "Higher prices",
+                "Limited style options",
+                "Lack of availability",
+                "Unclear sustainability claims",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents who answered anything other than 'Never' in Q1.",
+            "client_notes": "Include an 'Other' option to capture unlisted barriers.",
+            "scripter_notes": "Single-choice question with radio buttons and an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is the biggest barrier preventing you from purchasing more sustainable fashion?",
+                "answer_options": [
+                    "Higher prices",
+                    "Limited style options",
+                    "Lack of availability",
+                    "Unclear sustainability claims",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who answered anything other than 'Never' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe how you verify a brand's sustainability claims before purchasing.",
+            "answer_options": [],
+            "routing_logic": "Appears to respondents who selected 'Transparency in sourcing' or 'Unclear sustainability claims' in Q2 or Q3.",
+            "client_notes": "Open-ended to capture qualitative insights on consumer verification methods.",
+            "scripter_notes": "Open-text question.",
+            "script": {
+                "question_text": "Please describe how you verify a brand's sustainability claims before purchasing.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to respondents who selected 'Transparency in sourcing' or 'Unclear sustainability claims' in Q2 or Q3."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you pay a premium (10-20% higher) for sustainable fashion if it addressed your top barrier?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe, depending on the brand"
+            ],
+            "routing_logic": "Appears to all respondents who answered anything other than 'Never' in Q1.",
+            "client_notes": "Directly ties pricing to previously identified barriers for actionable insights.",
+            "scripter_notes": "Single-choice question with radio buttons.",
+            "script": {
+                "question_text": "Would you pay a premium (10-20% higher) for sustainable fashion if it addressed your top barrier?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe, depending on the brand"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who answered anything other than 'Never' in Q1."
+            }
+        }
+    ]
+}

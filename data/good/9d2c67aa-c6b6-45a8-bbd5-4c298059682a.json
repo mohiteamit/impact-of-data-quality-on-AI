@@ -1,0 +1,123 @@
+{
+    "survey_id": "9d2c67aa-c6b6-45a8-bbd5-4c298059682a",
+    "survey_name": "Customer Satisfaction with Contactless Restaurant Ordering Technology Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and experience with contactless ordering technologies implemented in restaurants, including mobile apps, QR codes, and in-table devices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use contactless ordering technology when dining at restaurants?",
+            "answer_options": [
+                "Every time I dine out",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale to measure frequency. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How frequently do you use contactless ordering technology when dining at restaurants?",
+                "answer_options": [
+                    "Every time I dine out",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following contactless ordering methods have you used? (Select all that apply)",
+            "answer_options": [
+                "QR code scanning with smartphone",
+                "Restaurant's mobile app",
+                "In-table touchscreen devices",
+                "Voice-activated ordering",
+                "None of the above"
+            ],
+            "routing_logic": "Respondents who selected 'Every time', 'Often', 'Sometimes', or 'Rarely' in Q1",
+            "client_notes": "Allow multiple selections to capture diverse experiences.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following contactless ordering methods have you used? (Select all that apply)",
+                "answer_options": [
+                    "QR code scanning with smartphone",
+                    "Restaurant's mobile app",
+                    "In-table touchscreen devices",
+                    "Voice-activated ordering",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Every time', 'Often', 'Sometimes', or 'Rarely' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the ease of use of contactless ordering technology?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected at least one method in Q2",
+            "client_notes": "Use a Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the ease of use of contactless ordering technology?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one method in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would enhance your experience with contactless ordering?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Limit to 250 characters.",
+            "scripter_notes": "Field type: text input (open-ended).",
+            "script": {
+                "question_text": "What improvements would enhance your experience with contactless ordering?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you prefer contactless ordering over traditional menu-based ordering in the future?",
+            "answer_options": [
+                "Yes, always",
+                "Yes, but only in certain situations",
+                "No, I prefer traditional menus",
+                "Undecided"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice to gauge future preference.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Would you prefer contactless ordering over traditional menu-based ordering in the future?",
+                "answer_options": [
+                    "Yes, always",
+                    "Yes, but only in certain situations",
+                    "No, I prefer traditional menus",
+                    "Undecided"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

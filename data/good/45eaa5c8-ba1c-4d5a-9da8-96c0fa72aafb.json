@@ -1,0 +1,137 @@
+{
+    "survey_id": "45eaa5c8-ba1c-4d5a-9da8-96c0fa72aafb",
+    "survey_name": "Employee Satisfaction with Digital Collaboration Tools Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction and effectiveness with digital collaboration tools used within the organization.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use digital collaboration tools for work-related tasks?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Once a week",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for frequency to capture detailed usage patterns.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How often do you use digital collaboration tools for work-related tasks?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Once a week",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which digital collaboration tools do you primarily use? (Select all that apply)",
+            "answer_options": [
+                "Slack",
+                "Microsoft Teams",
+                "Zoom",
+                "Google Workspace (Docs, Sheets, etc.)",
+                "Trello",
+                "Asana",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure 'Other' option includes a text field for manual entry.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes with optional text input)",
+            "script": {
+                "question_text": "Which digital collaboration tools do you primarily use? (Select all that apply)",
+                "answer_options": [
+                    "Slack",
+                    "Microsoft Teams",
+                    "Zoom",
+                    "Google Workspace (Docs, Sheets, etc.)",
+                    "Trello",
+                    "Asana",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the digital collaboration tools provided by your organization?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the digital collaboration tools provided by your organization?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges do you face when using digital collaboration tools? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow free-text responses to capture qualitative feedback.",
+            "scripter_notes": "Field type: Open-ended (text input)",
+            "script": {
+                "question_text": "What challenges do you face when using digital collaboration tools? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend any additional digital collaboration tools for the organization?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Follow up with an open-ended question if 'Yes' is selected.",
+            "scripter_notes": "Field type: Single-choice (radio buttons with conditional logic)",
+            "script": {
+                "question_text": "Would you recommend any additional digital collaboration tools for the organization?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If yes, please specify which tools you recommend and why.",
+            "answer_options": [],
+            "routing_logic": "Q5 = 'Yes'",
+            "client_notes": "Only display this question if Q5 is answered with 'Yes'.",
+            "scripter_notes": "Field type: Open-ended (text input)",
+            "script": {
+                "question_text": "If yes, please specify which tools you recommend and why.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Q5 = 'Yes'"
+            }
+        }
+    ]
+}

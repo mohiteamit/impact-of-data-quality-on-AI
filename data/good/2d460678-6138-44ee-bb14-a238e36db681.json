@@ -1,0 +1,211 @@
+{
+    "survey_id": "2d460678-6138-44ee-bb14-a238e36db681",
+    "survey_name": "Adoption of AI in Small Business Accounting Survey",
+    "survey_brief": "This survey aims to understand the adoption rates, benefits, and challenges small businesses face when using AI-powered accounting solutions.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Does your small business currently use any AI-powered accounting software?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Planning to adopt within the next 12 months"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This screening question helps segment users vs. non-users. Mobile-friendly radio buttons recommended.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Does your small business currently use any AI-powered accounting software?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Planning to adopt within the next 12 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of AI accounting software do you find most valuable? (Select up to 3)",
+            "answer_options": [
+                "Automated expense categorization",
+                "Real-time financial reporting",
+                "Fraud detection",
+                "Cash flow forecasting",
+                "Tax preparation automation",
+                "Invoice processing",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only displayed if Q1 = 'Yes'",
+            "client_notes": "Multi-select with 'Other' open-field option captures nuanced responses. Limit to 7 options for mobile usability.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional text input for 'Other'",
+            "script": {
+                "question_text": "Which features of AI accounting software do you find most valuable? (Select up to 3)",
+                "answer_options": [
+                    "Automated expense categorization",
+                    "Real-time financial reporting",
+                    "Fraud detection",
+                    "Cash flow forecasting",
+                    "Tax preparation automation",
+                    "Invoice processing",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only displayed if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What were the primary challenges when implementing AI accounting tools?",
+            "answer_options": [],
+            "routing_logic": "Only displayed if Q1 = 'Yes'",
+            "client_notes": "Open-text field captures detailed pain points. Suggest 200-character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What were the primary challenges when implementing AI accounting tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only displayed if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How has AI accounting software impacted your operational efficiency?",
+            "answer_options": [
+                "Significantly improved",
+                "Moderately improved",
+                "Minimal improvement",
+                "No noticeable change",
+                "Decreased efficiency"
+            ],
+            "routing_logic": "Only displayed if Q1 = 'Yes'",
+            "client_notes": "5-point balanced scale measures perceived impact. Include 'N/A' option if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How has AI accounting software impacted your operational efficiency?",
+                "answer_options": [
+                    "Significantly improved",
+                    "Moderately improved",
+                    "Minimal improvement",
+                    "No noticeable change",
+                    "Decreased efficiency"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only displayed if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What factors would motivate your business to adopt AI accounting tools?",
+            "answer_options": [
+                "Cost savings",
+                "Time savings",
+                "Improved accuracy",
+                "Integration with existing systems",
+                "Regulatory compliance",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only displayed if Q1 = 'No' or 'Planning to adopt within the next 12 months'",
+            "client_notes": "Multi-select with 'Other' option identifies adoption drivers. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What factors would motivate your business to adopt AI accounting tools?",
+                "answer_options": [
+                    "Cost savings",
+                    "Time savings",
+                    "Improved accuracy",
+                    "Integration with existing systems",
+                    "Regulatory compliance",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only displayed if Q1 = 'No' or 'Planning to adopt within the next 12 months'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What concerns, if any, do you have about adopting AI accounting solutions?",
+            "answer_options": [
+                "Data security",
+                "Implementation costs",
+                "Staff training requirements",
+                "Accuracy/reliability",
+                "Loss of human oversight",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only displayed if Q1 = 'No' or 'Planning to adopt within the next 12 months'",
+            "client_notes": "Captures adoption barriers. Include 'None' option if appropriate for your analysis.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What concerns, if any, do you have about adopting AI accounting solutions?",
+                "answer_options": [
+                    "Data security",
+                    "Implementation costs",
+                    "Staff training requirements",
+                    "Accuracy/reliability",
+                    "Loss of human oversight",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only displayed if Q1 = 'No' or 'Planning to adopt within the next 12 months'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How many employees does your business have?",
+            "answer_options": [
+                "1-10",
+                "11-50",
+                "51-100",
+                "101-250",
+                "More than 250"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Standard size categorization enables segmentation. Ensure options cover target market.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How many employees does your business have?",
+                "answer_options": [
+                    "1-10",
+                    "11-50",
+                    "51-100",
+                    "101-250",
+                    "More than 250"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What industry best describes your business?",
+            "answer_options": [
+                "Retail",
+                "Professional Services",
+                "Healthcare",
+                "Hospitality",
+                "Manufacturing",
+                "Technology",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Customize options based on target respondent pool. 'Other' captures niche segments.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (dropdown) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What industry best describes your business?",
+                "answer_options": [
+                    "Retail",
+                    "Professional Services",
+                    "Healthcare",
+                    "Hospitality",
+                    "Manufacturing",
+                    "Technology",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

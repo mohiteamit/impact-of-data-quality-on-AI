@@ -1,0 +1,153 @@
+{
+    "survey_id": "f9dae3af-6b09-4854-b207-ece6ad73002c",
+    "survey_name": "Employee Satisfaction with On-Site Fitness Facilities Survey",
+    "survey_brief": "This survey aims to gather feedback from employees about their satisfaction and suggestions for improving on-site fitness facilities.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the on-site fitness facilities?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "Use a single-choice format for clarity. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How often do you use the on-site fitness facilities?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of equipment or facilities do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Cardio machines",
+                "Weight machines",
+                "Free weights",
+                "Yoga/Pilates area",
+                "Group exercise classes",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if answer to Q1 is not 'Never'",
+            "client_notes": "Use a multi-choice format. Include an 'Other' option for additional feedback.",
+            "scripter_notes": "Field type: checkbox",
+            "script": {
+                "question_text": "Which types of equipment or facilities do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Cardio machines",
+                    "Weight machines",
+                    "Free weights",
+                    "Yoga/Pilates area",
+                    "Group exercise classes",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if answer to Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Please rate your overall satisfaction with the on-site fitness facilities.",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if answer to Q1 is not 'Never'",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "Please rate your overall satisfaction with the on-site fitness facilities.",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if answer to Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the on-site fitness facilities?",
+            "answer_options": [],
+            "routing_logic": "Appears if answer to Q1 is not 'Never'",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text",
+            "script": {
+                "question_text": "What improvements would you suggest for the on-site fitness facilities?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if answer to Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you do not use the on-site fitness facilities, what are the reasons? (Select all that apply)",
+            "answer_options": [
+                "Lack of time",
+                "Prefer off-site gym",
+                "Facility hours are inconvenient",
+                "Lack of preferred equipment",
+                "Hygiene concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if answer to Q1 is 'Rarely' or 'Never'",
+            "client_notes": "Use a multi-choice format to identify barriers to usage.",
+            "scripter_notes": "Field type: checkbox",
+            "script": {
+                "question_text": "If you do not use the on-site fitness facilities, what are the reasons? (Select all that apply)",
+                "answer_options": [
+                    "Lack of time",
+                    "Prefer off-site gym",
+                    "Facility hours are inconvenient",
+                    "Lack of preferred equipment",
+                    "Hygiene concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if answer to Q1 is 'Rarely' or 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you be interested in additional wellness programs (e.g., nutrition workshops, mental health sessions)?",
+            "answer_options": [
+                "Yes, very interested",
+                "Somewhat interested",
+                "Neutral",
+                "Not interested"
+            ],
+            "routing_logic": "Always appears",
+            "client_notes": "Single-choice to gauge interest in expanding wellness offerings.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "Would you be interested in additional wellness programs (e.g., nutrition workshops, mental health sessions)?",
+                "answer_options": [
+                    "Yes, very interested",
+                    "Somewhat interested",
+                    "Neutral",
+                    "Not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears"
+            }
+        }
+    ]
+}

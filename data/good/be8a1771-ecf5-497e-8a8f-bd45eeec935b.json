@@ -1,0 +1,117 @@
+{
+    "survey_id": "be8a1771-ecf5-497e-8a8f-bd45eeec935b",
+    "survey_name": "Employee Preferences for Remote Work Technology Tools Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the effectiveness and usability of remote work technology tools to improve future workplace technology investments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following remote work technology tools do you currently use for your job? (Select all that apply)",
+            "answer_options": [
+                "Video conferencing (e.g., Zoom, Microsoft Teams)",
+                "Instant messaging (e.g., Slack, Microsoft Teams Chat)",
+                "Project management (e.g., Asana, Trello)",
+                "Document collaboration (e.g., Google Docs, Microsoft 365)",
+                "Cloud storage (e.g., Dropbox, Google Drive)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure the 'Other' option includes a text field for manual entry. Consider randomizing the order of options to prevent bias.",
+            "scripter_notes": "Field type: CHECKBOX. Include an 'Other' option with an open-text field for manual entry.",
+            "script": {
+                "question_text": "Which of the following remote work technology tools do you currently use for your job? (Select all that apply)",
+                "answer_options": [
+                    "Video conferencing (e.g., Zoom, Microsoft Teams)",
+                    "Instant messaging (e.g., Slack, Microsoft Teams Chat)",
+                    "Project management (e.g., Asana, Trello)",
+                    "Document collaboration (e.g., Google Docs, Microsoft 365)",
+                    "Cloud storage (e.g., Dropbox, Google Drive)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the video conferencing tools provided by your employer?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "Only if 'Video conferencing' is selected in Q1",
+            "client_notes": "Use a balanced scale with a neutral midpoint. Include 'Not applicable' for respondents who do not use video conferencing tools.",
+            "scripter_notes": "Field type: RADIO. Ensure the question is skipped if 'Video conferencing' is not selected in Q1.",
+            "script": {
+                "question_text": "How satisfied are you with the video conferencing tools provided by your employer?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if 'Video conferencing' is selected in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced while using remote work technology tools?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative insights. Encourage detailed responses by specifying 'Please be as specific as possible.'",
+            "scripter_notes": "Field type: OPEN_TEXT. No answer options needed.",
+            "script": {
+                "question_text": "What challenges have you faced while using remote work technology tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you experience technical issues with remote work tools?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a frequency scale to quantify issues. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: RADIO. Randomize answer options to prevent order bias.",
+            "script": {
+                "question_text": "How often do you experience technical issues with remote work tools?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which additional technology tools would improve your remote work experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather suggestions for future tool investments. Prompt respondents with 'Examples: time-tracking software, virtual whiteboards, etc.'",
+            "scripter_notes": "Field type: OPEN_TEXT. Include a placeholder text for examples.",
+            "script": {
+                "question_text": "Which additional technology tools would improve your remote work experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

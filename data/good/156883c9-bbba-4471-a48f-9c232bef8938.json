@@ -1,0 +1,119 @@
+{
+    "survey_id": "156883c9-bbba-4471-a48f-9c232bef8938",
+    "survey_name": "Employee Satisfaction with Hybrid Office Layouts Survey",
+    "survey_brief": "This survey aims to gather employee feedback on their satisfaction and preferences regarding hybrid office layouts to optimize workplace design and productivity.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you work in the office under the current hybrid work model?",
+            "answer_options": [
+                "Every workday",
+                "3-4 days per week",
+                "1-2 days per week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice question to simplify data collection. Ensure options cover all possible frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you work in the office under the current hybrid work model?",
+                "answer_options": [
+                    "Every workday",
+                    "3-4 days per week",
+                    "1-2 days per week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which hybrid office layout features do you find most conducive to your productivity? (Select up to 3)",
+            "answer_options": [
+                "Hot-desking (shared workstations)",
+                "Reservable private offices",
+                "Open collaborative spaces",
+                "Quiet zones",
+                "Standing desk areas",
+                "Phone booths for private calls",
+                "Outdoor workspaces",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a multi-choice question to capture diverse preferences. Limit selections to 3 to prioritize top choices.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with a max selection limit of 3",
+            "script": {
+                "question_text": "Which hybrid office layout features do you find most conducive to your productivity? (Select up to 3)",
+                "answer_options": [
+                    "Hot-desking (shared workstations)",
+                    "Reservable private offices",
+                    "Open collaborative spaces",
+                    "Quiet zones",
+                    "Standing desk areas",
+                    "Phone booths for private calls",
+                    "Outdoor workspaces",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges, if any, have you faced with the current hybrid office layout?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Useful for identifying pain points.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT)",
+            "script": {
+                "question_text": "What challenges, if any, have you faced with the current hybrid office layout?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the availability of collaborative spaces in the office?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Open collaborative spaces' in Q2",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure routing targets relevant respondents.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the availability of collaborative spaces in the office?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Open collaborative spaces' in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features or changes would improve your hybrid office experience?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to gather innovative suggestions. Useful for future planning.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT)",
+            "script": {
+                "question_text": "What additional features or changes would improve your hybrid office experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

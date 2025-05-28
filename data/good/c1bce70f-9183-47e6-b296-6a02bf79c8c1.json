@@ -1,0 +1,119 @@
+{
+    "survey_id": "c1bce70f-9183-47e6-b296-6a02bf79c8c1",
+    "survey_name": "Workplace Ergonomics and Productivity Survey",
+    "survey_brief": "This survey aims to gather employee feedback on workplace ergonomics and its impact on productivity and well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the ergonomic setup of your workstation?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the ergonomic setup of your workstation?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following ergonomic issues have you experienced in the past 6 months? (Select all that apply)",
+            "answer_options": [
+                "Neck or back pain",
+                "Eye strain",
+                "Wrist or hand discomfort",
+                "Leg or foot discomfort",
+                "None of the above"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Allow multiple selections. Ensure the options cover common ergonomic issues.",
+            "scripter_notes": "Field type: Multi-choice checkboxes.",
+            "script": {
+                "question_text": "Which of the following ergonomic issues have you experienced in the past 6 months? (Select all that apply)",
+                "answer_options": [
+                    "Neck or back pain",
+                    "Eye strain",
+                    "Wrist or hand discomfort",
+                    "Leg or foot discomfort",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you take breaks to stretch or move around during your workday?",
+            "answer_options": [
+                "Every hour or more frequently",
+                "Every 2-3 hours",
+                "Once or twice a day",
+                "Rarely or never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use clear frequency options. Avoid overlapping ranges.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you take breaks to stretch or move around during your workday?",
+                "answer_options": [
+                    "Every hour or more frequently",
+                    "Every 2-3 hours",
+                    "Once or twice a day",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest to enhance workplace ergonomics?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Allow open-ended responses to capture detailed feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: Open-text input.",
+            "script": {
+                "question_text": "What improvements would you suggest to enhance workplace ergonomics?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Has your productivity been affected by ergonomic issues in the workplace?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No, not at all"
+            ],
+            "routing_logic": "This question appears if Q2 is not 'None of the above'.",
+            "client_notes": "Use a simple scale to measure impact. Ensure logical routing from Q2.",
+            "scripter_notes": "Field type: Single-choice radio buttons with conditional display.",
+            "script": {
+                "question_text": "Has your productivity been affected by ergonomic issues in the workplace?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No, not at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q2 is not 'None of the above'."
+            }
+        }
+    ]
+}

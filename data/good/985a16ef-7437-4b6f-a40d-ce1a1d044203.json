@@ -1,0 +1,161 @@
+{
+    "survey_id": "985a16ef-7437-4b6f-a40d-ce1a1d044203",
+    "survey_name": "Healthcare Provider Telemedicine Adoption Survey",
+    "survey_brief": "This survey aims to assess healthcare providers' adoption, satisfaction, and challenges with telemedicine services to improve digital healthcare delivery.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following best describes your current role in healthcare?",
+            "answer_options": [
+                "Physician",
+                "Nurse Practitioner",
+                "Registered Nurse",
+                "Physician Assistant",
+                "Mental Health Professional",
+                "Other healthcare provider (please specify)"
+            ],
+            "routing_logic": "Appears to all participants",
+            "client_notes": "Use radio buttons for single selection. Include an 'Other' field with text input for precise role categorization.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional open-ended 'Other' option.",
+            "script": {
+                "question_text": "Which of the following best describes your current role in healthcare?",
+                "answer_options": [
+                    "Physician",
+                    "Nurse Practitioner",
+                    "Registered Nurse",
+                    "Physician Assistant",
+                    "Mental Health Professional",
+                    "Other healthcare provider (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all participants"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How frequently do you currently use telemedicine platforms to interact with patients?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all participants except those who selected 'Never' in Q1",
+            "client_notes": "Use a 5-point Likert scale for frequency measurement. Ensure mobile-friendly dropdown if space is limited.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Skip logic: Hide if Q1 = 'Never'.",
+            "script": {
+                "question_text": "How frequently do you currently use telemedicine platforms to interact with patients?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all participants except those who selected 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What types of telemedicine services do you provide? (Select all that apply)",
+            "answer_options": [
+                "General consultations",
+                "Chronic disease management",
+                "Mental health therapy",
+                "Follow-up visits",
+                "Prescription refills",
+                "Diagnostic reviews",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q2 ≠ 'Never'",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' field for comprehensive data.",
+            "scripter_notes": "Field type: MULTI_CHOICE with optional open-ended 'Other'.",
+            "script": {
+                "question_text": "What types of telemedicine services do you provide? (Select all that apply)",
+                "answer_options": [
+                    "General consultations",
+                    "Chronic disease management",
+                    "Mental health therapy",
+                    "Follow-up visits",
+                    "Prescription refills",
+                    "Diagnostic reviews",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q2 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What are the top three challenges you face when using telemedicine platforms?",
+            "answer_options": [
+                "Technical difficulties",
+                "Patient digital literacy",
+                "Reimbursement limitations",
+                "Licensing restrictions",
+                "Privacy/security concerns",
+                "Limited physical examination capability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q2 ≠ 'Never'",
+            "client_notes": "Use a multi-select grid with ranking capability (1st, 2nd, 3rd). Randomize options to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE with ranking logic. Include 'Other' text input.",
+            "script": {
+                "question_text": "What are the top three challenges you face when using telemedicine platforms?",
+                "answer_options": [
+                    "Technical difficulties",
+                    "Patient digital literacy",
+                    "Reimbursement limitations",
+                    "Licensing restrictions",
+                    "Privacy/security concerns",
+                    "Limited physical examination capability",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q2 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with your current telemedicine platform's ability to support your clinical workflow?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears only if Q2 ≠ 'Never'",
+            "client_notes": "Use a 5-point Likert scale with smiley faces for visual engagement. Ensure scale consistency across similar questions.",
+            "scripter_notes": "Field type: SINGLE_CHOICE. Display as radio buttons with horizontal layout.",
+            "script": {
+                "question_text": "How satisfied are you with your current telemedicine platform's ability to support your clinical workflow?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q2 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional features would most improve your telemedicine experience?",
+            "answer_options": [],
+            "routing_logic": "Appears to all participants",
+            "client_notes": "Open-ended question to capture qualitative insights. Set character limit to 500 for manageable responses.",
+            "scripter_notes": "Field type: OPEN_TEXT with character counter.",
+            "script": {
+                "question_text": "What additional features would most improve your telemedicine experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all participants"
+            }
+        }
+    ]
+}

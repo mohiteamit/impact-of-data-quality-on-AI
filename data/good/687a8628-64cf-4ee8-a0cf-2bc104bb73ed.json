@@ -1,0 +1,135 @@
+{
+    "survey_id": "687a8628-64cf-4ee8-a0cf-2bc104bb73ed",
+    "survey_name": "Customer Satisfaction with In-Car Voice Assistant Systems Survey",
+    "survey_brief": "This survey aims to gather customer feedback on the usability, functionality, and satisfaction with in-car voice assistant systems to help manufacturers improve user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the in-car voice assistant system?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps gauge frequency of use, which correlates with overall engagement and satisfaction.",
+            "scripter_notes": "Use a single-choice radio button format.",
+            "script": {
+                "question_text": "How often do you use the in-car voice assistant system?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following tasks do you typically use the in-car voice assistant for? (Select all that apply)",
+            "answer_options": [
+                "Navigation",
+                "Music playback",
+                "Making phone calls",
+                "Sending text messages",
+                "Adjusting climate controls",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1",
+            "client_notes": "Understanding common use cases can highlight which features are most valuable to users.",
+            "scripter_notes": "Use a multi-choice checkbox format with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following tasks do you typically use the in-car voice assistant for? (Select all that apply)",
+                "answer_options": [
+                    "Navigation",
+                    "Music playback",
+                    "Making phone calls",
+                    "Sending text messages",
+                    "Adjusting climate controls",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the accuracy of the in-car voice assistant?",
+            "answer_options": [
+                "1 - Very dissatisfied",
+                "2 - Dissatisfied",
+                "3 - Neutral",
+                "4 - Satisfied",
+                "5 - Very satisfied"
+            ],
+            "routing_logic": "All respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1",
+            "client_notes": "A 5-point Likert scale provides a balanced measure of satisfaction levels.",
+            "scripter_notes": "Use a single-choice radio button format.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the accuracy of the in-car voice assistant?",
+                "answer_options": [
+                    "1 - Very dissatisfied",
+                    "2 - Dissatisfied",
+                    "3 - Neutral",
+                    "4 - Satisfied",
+                    "5 - Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the in-car voice assistant system?",
+            "answer_options": [],
+            "routing_logic": "All respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1",
+            "client_notes": "Open-ended responses can reveal unexpected insights or feature requests.",
+            "scripter_notes": "Use an open-text field with a character limit of 500.",
+            "script": {
+                "question_text": "What improvements would you suggest for the in-car voice assistant system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you ever experienced any technical issues with the in-car voice assistant?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1",
+            "client_notes": "Identifying common technical issues can help prioritize bug fixes.",
+            "scripter_notes": "Use a single-choice radio button format.",
+            "script": {
+                "question_text": "Have you ever experienced any technical issues with the in-car voice assistant?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you answered 'Yes' to the previous question, please describe the issue(s) you encountered.",
+            "answer_options": [],
+            "routing_logic": "All respondents who answered 'Yes' to Q5",
+            "client_notes": "Detailed descriptions of issues can help technical teams diagnose and resolve problems.",
+            "scripter_notes": "Use an open-text field with a character limit of 500.",
+            "script": {
+                "question_text": "If you answered 'Yes' to the previous question, please describe the issue(s) you encountered.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents who answered 'Yes' to Q5"
+            }
+        }
+    ]
+}

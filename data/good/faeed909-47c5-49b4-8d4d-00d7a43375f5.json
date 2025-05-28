@@ -1,0 +1,137 @@
+{
+    "survey_id": "faeed909-47c5-49b4-8d4d-00d7a43375f5",
+    "survey_name": "Public Transportation Satisfaction Survey",
+    "survey_brief": "This survey aims to gather feedback from users about their satisfaction with public transportation services, including buses, trains, and trams, to identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public transportation?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Less than once a week",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a clear single-choice format for this demographic question.",
+            "scripter_notes": "Set as single-choice radio buttons.",
+            "script": {
+                "question_text": "How frequently do you use public transportation?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Less than once a week",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which modes of public transportation do you typically use? (Select all that apply)",
+            "answer_options": [
+                "Bus",
+                "Train",
+                "Tram",
+                "Subway/Metro",
+                "Ferry",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1.",
+            "client_notes": "Use a multi-choice format to capture various transportation modes.",
+            "scripter_notes": "Set as checkboxes with an optional 'Other' open-text field.",
+            "script": {
+                "question_text": "Which modes of public transportation do you typically use? (Select all that apply)",
+                "answer_options": [
+                    "Bus",
+                    "Train",
+                    "Tram",
+                    "Subway/Metro",
+                    "Ferry",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the cleanliness of public transportation vehicles? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears for all respondents who selected at least one mode in Q2.",
+            "client_notes": "Use a Likert scale for satisfaction measurement.",
+            "scripter_notes": "Set as single-choice radio buttons with a horizontal layout for the scale.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the cleanliness of public transportation vehicles? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who selected at least one mode in Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What do you think can be improved about the public transportation services you use?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents who selected at least one mode in Q2.",
+            "client_notes": "This open-ended question allows users to provide detailed feedback.",
+            "scripter_notes": "Set as an open-text field with a multi-line input.",
+            "script": {
+                "question_text": "What do you think can be improved about the public transportation services you use?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents who selected at least one mode in Q2."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your primary mode of public transportation to others? (1 = Not at all likely, 10 = Extremely likely)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "routing_logic": "Appears for all respondents who selected at least one mode in Q2.",
+            "client_notes": "Use a numerical scale for Net Promoter Score (NPS) measurement.",
+            "scripter_notes": "Set as single-choice radio buttons with a horizontal layout for the scale.",
+            "script": {
+                "question_text": "How likely are you to recommend your primary mode of public transportation to others? (1 = Not at all likely, 10 = Extremely likely)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who selected at least one mode in Q2."
+            }
+        }
+    ]
+}

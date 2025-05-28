@@ -1,0 +1,129 @@
+{
+    "survey_id": "42f1b578-a073-4a4f-af45-7708bd23cfaa",
+    "survey_name": "Consumer Preferences for Indoor Vertical Farming Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and attitudes towards indoor vertical farming systems, including factors influencing purchase decisions, perceived benefits, and barriers to adoption.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with indoor vertical farming systems?",
+            "answer_options": [
+                "Very familiar - I own or use one",
+                "Somewhat familiar - I have heard about them but do not use",
+                "Not familiar at all"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Use a single-choice radio button format. Ensure the question is mobile-friendly and easy to understand.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How familiar are you with indoor vertical farming systems?",
+                "answer_options": [
+                    "Very familiar - I own or use one",
+                    "Somewhat familiar - I have heard about them but do not use",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors would most influence your decision to purchase an indoor vertical farming system? (Select up to 3)",
+            "answer_options": [
+                "Cost of the system",
+                "Space requirements",
+                "Ease of use/maintenance",
+                "Energy efficiency",
+                "Yield/output capacity",
+                "Environmental benefits",
+                "Ability to grow specific crops",
+                "Aesthetic design"
+            ],
+            "routing_logic": "Ask if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "Use a multi-choice checkbox format. Ensure options are clearly distinguishable and not overlapping.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Allow up to 3 selections.",
+            "script": {
+                "question_text": "Which of the following factors would most influence your decision to purchase an indoor vertical farming system? (Select up to 3)",
+                "answer_options": [
+                    "Cost of the system",
+                    "Space requirements",
+                    "Ease of use/maintenance",
+                    "Energy efficiency",
+                    "Yield/output capacity",
+                    "Environmental benefits",
+                    "Ability to grow specific crops",
+                    "Aesthetic design"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Ask if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What do you perceive as the biggest barrier to adopting an indoor vertical farming system?",
+            "answer_options": [
+                "High initial cost",
+                "Lack of space in my home",
+                "Technical complexity",
+                "Uncertainty about benefits",
+                "Limited crop variety",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Ask if Q1 answer is 'Very familiar' or 'Somewhat familiar'",
+            "client_notes": "Use a single-choice radio button with an 'Other' option that allows open-text input.",
+            "scripter_notes": "Field type: radio button with an open-text follow-up for 'Other' (SINGLE_CHOICE with conditional OPEN_TEXT).",
+            "script": {
+                "question_text": "What do you perceive as the biggest barrier to adopting an indoor vertical farming system?",
+                "answer_options": [
+                    "High initial cost",
+                    "Lack of space in my home",
+                    "Technical complexity",
+                    "Uncertainty about benefits",
+                    "Limited crop variety",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask if Q1 answer is 'Very familiar' or 'Somewhat familiar'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you currently use an indoor vertical farming system, what types of crops do you primarily grow? (Open-ended)",
+            "answer_options": [],
+            "routing_logic": "Ask if Q1 answer is 'Very familiar'",
+            "client_notes": "Use an open-text field to capture detailed responses. Ensure the field is large enough for multi-line inputs.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "If you currently use an indoor vertical farming system, what types of crops do you primarily grow? (Open-ended)",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Ask if Q1 answer is 'Very familiar'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to purchase an indoor vertical farming system in the next 12 months?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Use a Likert scale format with single-choice radio buttons. Ensure the scale is balanced and clearly labeled.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How likely are you to purchase an indoor vertical farming system in the next 12 months?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        }
+    ]
+}

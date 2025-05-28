@@ -1,0 +1,131 @@
+{
+    "survey_id": "33dcba46-fb42-4a8a-a094-fcb508b4a3e9",
+    "survey_name": "Consumer Preferences for Smart Water Bottles Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and usage patterns related to smart water bottles, including features, brand preferences, and purchasing behaviors.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use a smart water bottle?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for ease of response. Ensure the options cover all potential usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use a smart water bottle?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features are most important to you in a smart water bottle? (Select all that apply)",
+            "answer_options": [
+                "Hydration tracking",
+                "Temperature control",
+                "Reminder alerts",
+                "Battery life",
+                "Design/aesthetics",
+                "Durability",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a multi-choice checkbox format. Include an 'Other' option to capture unique preferences.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which features are most important to you in a smart water bottle? (Select all that apply)",
+                "answer_options": [
+                    "Hydration tracking",
+                    "Temperature control",
+                    "Reminder alerts",
+                    "Battery life",
+                    "Design/aesthetics",
+                    "Durability",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you would purchase a smart water bottle?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use an open-text field to allow for detailed responses. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: open-ended (OPEN_TEXT)",
+            "script": {
+                "question_text": "What is the primary reason you would purchase a smart water bottle?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Which brand of smart water bottle do you currently own or prefer?",
+            "answer_options": [
+                "HidrateSpark",
+                "Thermos",
+                "Moikit",
+                "LARQ",
+                "Other (please specify)",
+                "I do not own a smart water bottle"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a single-choice radio button with an 'Other' option for flexibility. Include an option for non-owners.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Which brand of smart water bottle do you currently own or prefer?",
+                "answer_options": [
+                    "HidrateSpark",
+                    "Thermos",
+                    "Moikit",
+                    "LARQ",
+                    "Other (please specify)",
+                    "I do not own a smart water bottle"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How much would you be willing to pay for a high-quality smart water bottle?",
+            "answer_options": [
+                "Less than $30",
+                "$30 - $50",
+                "$50 - $80",
+                "$80 - $100",
+                "More than $100"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button with clear price ranges. Ensure the ranges are realistic and cover common price points.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How much would you be willing to pay for a high-quality smart water bottle?",
+                "answer_options": [
+                    "Less than $30",
+                    "$30 - $50",
+                    "$50 - $80",
+                    "$80 - $100",
+                    "More than $100"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

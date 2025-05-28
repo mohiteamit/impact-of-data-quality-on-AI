@@ -1,0 +1,121 @@
+{
+    "survey_id": "f6976eb4-f13f-47d4-8424-91fbb6fa09e4",
+    "survey_name": "Employee Satisfaction with On-Site Childcare Facilities Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the quality, accessibility, and satisfaction with on-site childcare facilities provided by the company.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Do you currently use the on-site childcare facilities provided by the company?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "N/A (Not applicable)"
+            ],
+            "routing_logic": "If 'No' is selected, skip to Q5.",
+            "client_notes": "Use a single-choice question for clarity. Ensure this is the first question to route respondents appropriately.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "Do you currently use the on-site childcare facilities provided by the company?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "N/A (Not applicable)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'No' is selected, skip to Q5."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the cleanliness and safety of the on-site childcare facilities?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display only if Q1 answer is 'Yes'.",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and safety of the on-site childcare facilities?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 answer is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the qualifications and friendliness of the childcare staff?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display only if Q1 answer is 'Yes'.",
+            "client_notes": "Likert scale for consistent measurement. Ensure the question is clear and straightforward.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button).",
+            "script": {
+                "question_text": "How satisfied are you with the qualifications and friendliness of the childcare staff?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display only if Q1 answer is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the on-site childcare facilities?",
+            "answer_options": [],
+            "routing_logic": "Display only if Q1 answer is 'Yes'.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What improvements would you suggest for the on-site childcare facilities?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display only if Q1 answer is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you do not use the on-site childcare facilities, what are the primary reasons? (Select all that apply)",
+            "answer_options": [
+                "Cost is too high",
+                "Location is inconvenient",
+                "Hours of operation do not meet my needs",
+                "Prefer using off-site childcare",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display only if Q1 answer is 'No' or 'N/A'.",
+            "client_notes": "Multi-choice question to identify barriers. Include an 'Other' option for additional reasons.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include a text field for 'Other' if selected.",
+            "script": {
+                "question_text": "If you do not use the on-site childcare facilities, what are the primary reasons? (Select all that apply)",
+                "answer_options": [
+                    "Cost is too high",
+                    "Location is inconvenient",
+                    "Hours of operation do not meet my needs",
+                    "Prefer using off-site childcare",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display only if Q1 answer is 'No' or 'N/A'."
+            }
+        }
+    ]
+}

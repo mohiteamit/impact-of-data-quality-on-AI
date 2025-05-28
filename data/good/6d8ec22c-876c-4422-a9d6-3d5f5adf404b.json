@@ -1,0 +1,127 @@
+{
+    "survey_id": "6d8ec22c-876c-4422-a9d6-3d5f5adf404b",
+    "survey_name": "Employee Satisfaction with Hybrid Meeting Tools Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the effectiveness, usability, and overall satisfaction with hybrid meeting tools used in the workplace to inform future technology investments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in hybrid meetings (mix of in-person and remote attendees)?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "Several times a week",
+                "Once a week",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a frequency scale to gauge meeting intensity. Ensure options cover the full range of possible participation levels.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "How often do you participate in hybrid meetings (mix of in-person and remote attendees)?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "Several times a week",
+                    "Once a week",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which hybrid meeting tools do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Zoom",
+                "Microsoft Teams",
+                "Google Meet",
+                "Webex",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Include an 'Other' option to capture any tools not listed. This helps identify less common platforms.",
+            "scripter_notes": "Field type: Checkbox (multi-choice). Include a text field for 'Other' responses.",
+            "script": {
+                "question_text": "Which hybrid meeting tools do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Zoom",
+                    "Microsoft Teams",
+                    "Google Meet",
+                    "Webex",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with the audio quality of your hybrid meetings? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears for respondents who selected at least one tool in Q2.",
+            "client_notes": "Use a Likert scale for satisfaction ratings. Ensure the scale is clearly labeled for consistency.",
+            "scripter_notes": "Field type: Radio button (single-choice).",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the audio quality of your hybrid meetings? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected at least one tool in Q2."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the biggest challenge you face when using hybrid meeting tools?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended to capture nuanced feedback. Limit response length to 250 characters for readability.",
+            "scripter_notes": "Field type: Open text (short answer).",
+            "script": {
+                "question_text": "What is the biggest challenge you face when using hybrid meeting tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following features would most improve your hybrid meeting experience? (Select up to 2)",
+            "answer_options": [
+                "Better integration with calendar apps",
+                "AI-powered transcription/notes",
+                "Enhanced screen-sharing capabilities",
+                "Improved virtual whiteboarding",
+                "Breakout room enhancements",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who selected at least one tool in Q2.",
+            "client_notes": "Prioritize feature requests. Use a multi-choice format with a limit to avoid over-selection.",
+            "scripter_notes": "Field type: Checkbox (multi-choice) with max selection of 2. Include a text field for 'Other' responses.",
+            "script": {
+                "question_text": "Which of the following features would most improve your hybrid meeting experience? (Select up to 2)",
+                "answer_options": [
+                    "Better integration with calendar apps",
+                    "AI-powered transcription/notes",
+                    "Enhanced screen-sharing capabilities",
+                    "Improved virtual whiteboarding",
+                    "Breakout room enhancements",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who selected at least one tool in Q2."
+            }
+        }
+    ]
+}

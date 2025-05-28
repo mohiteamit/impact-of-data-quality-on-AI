@@ -1,0 +1,141 @@
+{
+    "survey_id": "177e40e9-a5de-4fde-a6dd-523b137e9ed6",
+    "survey_name": "Customer Satisfaction with Augmented Reality (AR) Shopping Experiences Survey",
+    "survey_brief": "This survey aims to gather feedback from customers who have used AR shopping features to understand their satisfaction levels, usability, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you ever used an Augmented Reality (AR) feature while shopping online?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All participants",
+            "client_notes": "Use a simple binary choice to filter respondents who have experience with AR shopping.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Have you ever used an Augmented Reality (AR) feature while shopping online?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All participants"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AR shopping features have you used? (Select all that apply)",
+            "answer_options": [
+                "Virtual try-on for clothing",
+                "AR furniture placement",
+                "Virtual makeup try-on",
+                "AR product visualization",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Allow multiple selections to capture diverse AR usage.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following AR shopping features have you used? (Select all that apply)",
+                "answer_options": [
+                    "Virtual try-on for clothing",
+                    "AR furniture placement",
+                    "Virtual makeup try-on",
+                    "AR product visualization",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your overall AR shopping experience?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Use a standard Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with your overall AR shopping experience?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges did you face while using AR shopping features? (Select all that apply)",
+            "answer_options": [
+                "Technical glitches",
+                "Poor image quality",
+                "Difficulty in navigation",
+                "Limited product options",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Identify common pain points to prioritize improvements.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What challenges did you face while using AR shopping features? (Select all that apply)",
+                "answer_options": [
+                    "Technical glitches",
+                    "Poor image quality",
+                    "Difficulty in navigation",
+                    "Limited product options",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend AR shopping features to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Measure willingness to recommend as an indicator of overall satisfaction.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend AR shopping features to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would make AR shopping features more useful for you?",
+            "answer_options": [],
+            "routing_logic": "Only if Q1 is 'Yes'",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would make AR shopping features more useful for you?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q1 is 'Yes'"
+            }
+        }
+    ]
+}

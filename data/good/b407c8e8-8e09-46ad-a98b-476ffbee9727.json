@@ -1,0 +1,125 @@
+{
+    "survey_id": "b407c8e8-8e09-46ad-a98b-476ffbee9727",
+    "survey_name": "Adoption of AI in Healthcare Diagnosis Survey",
+    "survey_brief": "This survey aims to gather insights from healthcare professionals on the adoption, benefits, and challenges of AI-powered diagnostic tools in clinical settings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with AI-powered diagnostic tools in healthcare?",
+            "answer_options": [
+                "Not familiar at all",
+                "Slightly familiar",
+                "Moderately familiar",
+                "Very familiar",
+                "Extremely familiar"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for familiarity assessment. Ensure mobile-friendly dropdown implementation for small screens.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "How familiar are you with AI-powered diagnostic tools in healthcare?",
+                "answer_options": [
+                    "Not familiar at all",
+                    "Slightly familiar",
+                    "Moderately familiar",
+                    "Very familiar",
+                    "Extremely familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI diagnostic tools have you used professionally? (Select all that apply)",
+            "answer_options": [
+                "Radiology image analysis",
+                "Pathology slide analysis",
+                "Clinical decision support systems",
+                "Predictive analytics for patient outcomes",
+                "None of the above"
+            ],
+            "routing_logic": "If Q1 ≠ 'Not familiar at all'",
+            "client_notes": "Consider adding an 'Other' option with text input for unlisted tools. Mobile users may need larger touch targets for checkboxes.",
+            "scripter_notes": "Field type: Multi-choice checkboxes. Include 'Select all that apply' instruction.",
+            "script": {
+                "question_text": "Which of the following AI diagnostic tools have you used professionally? (Select all that apply)",
+                "answer_options": [
+                    "Radiology image analysis",
+                    "Pathology slide analysis",
+                    "Clinical decision support systems",
+                    "Predictive analytics for patient outcomes",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 ≠ 'Not familiar at all'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements have you observed when using AI diagnostic tools compared to traditional methods?",
+            "answer_options": [
+                "Increased diagnostic accuracy",
+                "Reduced interpretation time",
+                "Earlier detection of conditions",
+                "Reduced workload for clinicians",
+                "No significant improvements observed"
+            ],
+            "routing_logic": "If Q2 includes any tool (excluding 'None of the above')",
+            "client_notes": "Include a 'Not applicable' option for respondents with limited experience. Rotate positive/negative options to avoid order bias.",
+            "scripter_notes": "Field type: Multi-choice checkboxes. Add 'Other' with text input option.",
+            "script": {
+                "question_text": "What improvements have you observed when using AI diagnostic tools compared to traditional methods?",
+                "answer_options": [
+                    "Increased diagnostic accuracy",
+                    "Reduced interpretation time",
+                    "Earlier detection of conditions",
+                    "Reduced workload for clinicians",
+                    "No significant improvements observed"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q2 includes any tool (excluding 'None of the above')"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What are the most significant barriers to adopting AI diagnostic tools in your organization?",
+            "answer_options": [
+                "High implementation costs",
+                "Lack of clinician trust in AI",
+                "Regulatory compliance concerns",
+                "Integration with existing systems",
+                "Data privacy/security concerns"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Prioritize vertical layout for readability. Include 'Other (please specify)' option to capture unique barriers.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with 'Select up to 3' limitation. Implement answer piping for follow-up questions.",
+            "script": {
+                "question_text": "What are the most significant barriers to adopting AI diagnostic tools in your organization?",
+                "answer_options": [
+                    "High implementation costs",
+                    "Lack of clinician trust in AI",
+                    "Regulatory compliance concerns",
+                    "Integration with existing systems",
+                    "Data privacy/security concerns"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Describe one specific instance where AI-assisted diagnosis impacted patient care in your practice:",
+            "answer_options": [],
+            "routing_logic": "If Q3 includes any positive improvement",
+            "client_notes": "Use rich text formatting for longer responses. Implement character counter (500 max).",
+            "scripter_notes": "Field type: Open-text with word limit validation. Include example placeholder text.",
+            "script": {
+                "question_text": "Describe one specific instance where AI-assisted diagnosis impacted patient care in your practice:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q3 includes any positive improvement"
+            }
+        }
+    ]
+}

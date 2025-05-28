@@ -1,0 +1,127 @@
+{
+    "survey_id": "fab760ba-aa26-4150-964c-9a8ef637160e",
+    "survey_name": "Customer Satisfaction with Autonomous Grocery Shopping Carts Survey",
+    "survey_brief": "This survey aims to gather customer feedback on their experience with autonomous grocery shopping carts to improve usability and satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use autonomous grocery shopping carts?",
+            "answer_options": [
+                "Every time I shop",
+                "Often",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for ease of response. Ensure the options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use autonomous grocery shopping carts?",
+                "answer_options": [
+                    "Every time I shop",
+                    "Often",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What features do you find most useful in autonomous grocery shopping carts? (Select all that apply)",
+            "answer_options": [
+                "Automated navigation",
+                "Barcode scanning",
+                "Item suggestions",
+                "Checkout automation",
+                "Basket capacity indicator",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Never'.",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with optional open text for 'Other')",
+            "script": {
+                "question_text": "What features do you find most useful in autonomous grocery shopping carts? (Select all that apply)",
+                "answer_options": [
+                    "Automated navigation",
+                    "Barcode scanning",
+                    "Item suggestions",
+                    "Checkout automation",
+                    "Basket capacity indicator",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced while using autonomous grocery shopping carts?",
+            "answer_options": [],
+            "routing_logic": "This question appears if Q1 is not 'Never'.",
+            "client_notes": "Open-text field to capture detailed feedback. Encourage honest responses.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What challenges have you faced while using autonomous grocery shopping carts?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the overall performance of autonomous grocery shopping carts?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Never'.",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the overall performance of autonomous grocery shopping carts?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend autonomous grocery shopping carts to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Not sure",
+                "Probably no",
+                "Definitely no"
+            ],
+            "routing_logic": "This question appears if Q1 is not 'Never'.",
+            "client_notes": "Single-choice question to gauge likelihood of recommendation. Useful for Net Promoter Score (NPS) analysis.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Would you recommend autonomous grocery shopping carts to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Not sure",
+                    "Probably no",
+                    "Definitely no"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q1 is not 'Never'."
+            }
+        }
+    ]
+}

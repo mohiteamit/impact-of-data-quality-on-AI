@@ -1,0 +1,161 @@
+{
+    "survey_id": "1e63f06a-2fde-409a-aa97-6d1d6662f6aa",
+    "survey_name": "Workplace AI Tool Adoption and Satisfaction Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction and adoption rates of AI-powered tools in the workplace, focusing on usability, impact on productivity, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which AI-powered tools do you currently use in your daily work? (Select all that apply)",
+            "answer_options": [
+                "AI-Powered Meeting Assistants (e.g., transcription, summarization)",
+                "AI-Powered Email Sorting and Prioritization Tools",
+                "AI-Powered Data Analysis and Reporting Tools",
+                "AI-Powered Project Management Assistants",
+                "AI-Powered HR Support Tools (e.g., leave requests, policy queries)",
+                "Other (please specify)",
+                "None"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "This question helps identify the most commonly used AI tools. Consider using a multi-select format for accurate data collection.",
+            "scripter_notes": "Ensure the 'Other' option includes a text field for manual entry.",
+            "script": {
+                "question_text": "Which AI-powered tools do you currently use in your daily work? (Select all that apply)",
+                "answer_options": [
+                    "AI-Powered Meeting Assistants (e.g., transcription, summarization)",
+                    "AI-Powered Email Sorting and Prioritization Tools",
+                    "AI-Powered Data Analysis and Reporting Tools",
+                    "AI-Powered Project Management Assistants",
+                    "AI-Powered HR Support Tools (e.g., leave requests, policy queries)",
+                    "Other (please specify)",
+                    "None"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the AI tools provided by your organization?",
+            "answer_options": [
+                "Very Satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very Dissatisfied"
+            ],
+            "routing_logic": "Displayed if Q1 does not include 'None'",
+            "client_notes": "A 5-point Likert scale is recommended for measuring satisfaction levels.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the AI tools provided by your organization?",
+                "answer_options": [
+                    "Very Satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very Dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed if Q1 does not include 'None'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary benefit you experience from using AI tools at work?",
+            "answer_options": [
+                "Increased Productivity",
+                "Time Savings",
+                "Improved Accuracy",
+                "Better Decision-Making",
+                "Enhanced Collaboration",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Displayed if Q1 does not include 'None'",
+            "client_notes": "This question helps identify perceived benefits to tailor future AI tool investments.",
+            "scripter_notes": "Include an 'Other' option with a text field for additional input.",
+            "script": {
+                "question_text": "What is the primary benefit you experience from using AI tools at work?",
+                "answer_options": [
+                    "Increased Productivity",
+                    "Time Savings",
+                    "Improved Accuracy",
+                    "Better Decision-Making",
+                    "Enhanced Collaboration",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed if Q1 does not include 'None'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced when using AI tools? (Select all that apply)",
+            "answer_options": [
+                "Difficulty in Learning/Training",
+                "Limited Functionality",
+                "Integration Issues with Existing Tools",
+                "Privacy/Security Concerns",
+                "Unreliable Outputs",
+                "Other (please specify)",
+                "No Challenges"
+            ],
+            "routing_logic": "Displayed if Q1 does not include 'None'",
+            "client_notes": "This question identifies pain points to address in future training or tool selection.",
+            "scripter_notes": "Use a multi-select dropdown with an 'Other' text field.",
+            "script": {
+                "question_text": "What challenges have you faced when using AI tools? (Select all that apply)",
+                "answer_options": [
+                    "Difficulty in Learning/Training",
+                    "Limited Functionality",
+                    "Integration Issues with Existing Tools",
+                    "Privacy/Security Concerns",
+                    "Unreliable Outputs",
+                    "Other (please specify)",
+                    "No Challenges"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Displayed if Q1 does not include 'None'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How could the AI tools you use be improved?",
+            "answer_options": [],
+            "routing_logic": "Displayed if Q1 does not include 'None'",
+            "client_notes": "An open-ended question provides qualitative insights for improvements.",
+            "scripter_notes": "Use a text box for free-form responses.",
+            "script": {
+                "question_text": "How could the AI tools you use be improved?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Displayed if Q1 does not include 'None'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you do not use AI tools, what is the primary reason?",
+            "answer_options": [
+                "Lack of Awareness/Training",
+                "No Access to Tools",
+                "Prefer Traditional Methods",
+                "Privacy Concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Displayed only if Q1 includes 'None'",
+            "client_notes": "Helps identify barriers to adoption for targeted interventions.",
+            "scripter_notes": "Single-choice with an 'Other' text field.",
+            "script": {
+                "question_text": "If you do not use AI tools, what is the primary reason?",
+                "answer_options": [
+                    "Lack of Awareness/Training",
+                    "No Access to Tools",
+                    "Prefer Traditional Methods",
+                    "Privacy Concerns",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed only if Q1 includes 'None'"
+            }
+        }
+    ]
+}

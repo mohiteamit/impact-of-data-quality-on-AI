@@ -1,0 +1,173 @@
+{
+    "survey_id": "f25e864a-8531-4bc4-8c28-d88ac67e90f7",
+    "survey_name": "Electric Vehicle (EV) Charging Station User Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from EV owners about their experiences with public and home charging stations, including ease of use, availability, and satisfaction levels.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use public EV charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure the options cover all possible frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use public EV charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of charging stations do you typically use? (Select all that apply)",
+            "answer_options": [
+                "Level 1 (120V)",
+                "Level 2 (240V)",
+                "DC Fast Charging",
+                "Tesla Supercharger",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to respondents who use public charging stations (Q1 not 'Never').",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What types of charging stations do you typically use? (Select all that apply)",
+                "answer_options": [
+                    "Level 1 (120V)",
+                    "Level 2 (240V)",
+                    "DC Fast Charging",
+                    "Tesla Supercharger",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to respondents who use public charging stations (Q1 not 'Never')."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of public EV charging stations in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who use public charging stations (Q1 not 'Never').",
+            "client_notes": "Use a Likert scale for satisfaction levels. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the availability of public EV charging stations in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who use public charging stations (Q1 not 'Never')."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced when using public EV charging stations? (Select all that apply)",
+            "answer_options": [
+                "Limited availability",
+                "Long wait times",
+                "Out-of-service stations",
+                "High cost",
+                "Difficulty finding stations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to respondents who use public charging stations (Q1 not 'Never').",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What challenges have you faced when using public EV charging stations? (Select all that apply)",
+                "answer_options": [
+                    "Limited availability",
+                    "Long wait times",
+                    "Out-of-service stations",
+                    "High cost",
+                    "Difficulty finding stations",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to respondents who use public charging stations (Q1 not 'Never')."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Do you have a home EV charging station?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a single-choice radio button for clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Do you have a home EV charging station?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How satisfied are you with your home EV charging station?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who have a home EV charging station (Q5 = 'Yes').",
+            "client_notes": "Use a Likert scale for satisfaction levels. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with your home EV charging station?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who have a home EV charging station (Q5 = 'Yes')."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What factors would encourage you to use public EV charging stations more often?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use an open-text field to gather qualitative feedback. Ensure the field is mobile-friendly.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What factors would encourage you to use public EV charging stations more often?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents."
+            }
+        }
+    ]
+}

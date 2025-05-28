@@ -1,0 +1,99 @@
+{
+    "survey_id": "8dda31bd-e31b-4143-8f83-ab782566c8fa",
+    "survey_name": "Employee Satisfaction with Workplace Mental Health Support Programs Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with current workplace mental health support programs, identifying strengths and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the mental health support programs offered by your employer?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Avoid jargon to ensure all employees understand the question.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How familiar are you with the mental health support programs offered by your employer?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following mental health support programs have you used in the past 12 months? (Select all that apply)",
+            "answer_options": [
+                "Employee Assistance Program (EAP)",
+                "Mental health days/leave",
+                "On-site counseling services",
+                "Virtual therapy sessions",
+                "Mindfulness/meditation workshops",
+                "None of the above"
+            ],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Use checkboxes for multi-select options. Include 'None of the above' to capture non-users.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following mental health support programs have you used in the past 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Employee Assistance Program (EAP)",
+                    "Mental health days/leave",
+                    "On-site counseling services",
+                    "Virtual therapy sessions",
+                    "Mindfulness/meditation workshops",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the mental health support programs available at your workplace?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display if Q2 != 'None of the above'",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the mental health support programs available at your workplace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q2 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for your workplace's mental health support programs?",
+            "answer_options": [],
+            "routing_logic": "Display for all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Allow for long-form responses.",
+            "scripter_notes": "Field type: text area (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for your workplace's mental health support programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display for all respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,129 @@
+{
+    "survey_id": "9a445d16-eea6-4b9e-88b7-96d3082109a3",
+    "survey_name": "Customer Satisfaction with Mobile Banking Apps Survey",
+    "survey_brief": "This survey aims to gather feedback on user satisfaction with mobile banking applications, focusing on usability, features, and security perceptions.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use your bank's mobile app?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice format to ensure clarity. Consider randomizing answer options to avoid bias.",
+            "scripter_notes": "Field type: Radio button.",
+            "script": {
+                "question_text": "How often do you use your bank's mobile app?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features do you use most frequently in your mobile banking app? (Select all that apply)",
+            "answer_options": [
+                "Account balance check",
+                "Fund transfers",
+                "Bill payments",
+                "Mobile check deposit",
+                "Card management",
+                "Customer support chat",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents who use the app at least 'Once a week' (Q1 answer).",
+            "client_notes": "Use a multi-choice format. Include an 'Other' option with an open-text field for additional responses.",
+            "scripter_notes": "Field type: Checkbox with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following features do you use most frequently in your mobile banking app? (Select all that apply)",
+                "answer_options": [
+                    "Account balance check",
+                    "Fund transfers",
+                    "Bill payments",
+                    "Mobile check deposit",
+                    "Card management",
+                    "Customer support chat",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents who use the app at least 'Once a week' (Q1 answer)."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall user interface of your mobile banking app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents who use the app at least 'Once a week' (Q1 answer).",
+            "client_notes": "Use a 5-point Likert scale for consistency. Randomize scale direction to minimize response bias.",
+            "scripter_notes": "Field type: Radio button.",
+            "script": {
+                "question_text": "How satisfied are you with the overall user interface of your mobile banking app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who use the app at least 'Once a week' (Q1 answer)."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for your mobile banking app?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents who use the app at least 'Once a week' (Q1 answer).",
+            "client_notes": "Keep the text box concise but allow for detailed responses. Use input validation for character limits.",
+            "scripter_notes": "Field type: Open text.",
+            "script": {
+                "question_text": "What improvements would you suggest for your mobile banking app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents who use the app at least 'Once a week' (Q1 answer)."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How confident are you in the security measures of your mobile banking app?",
+            "answer_options": [
+                "Very confident",
+                "Somewhat confident",
+                "Neutral",
+                "Somewhat concerned",
+                "Very concerned"
+            ],
+            "routing_logic": "Appears for all respondents who use the app at least 'Once a week' (Q1 answer).",
+            "client_notes": "Use a 5-point Likert scale. Ensure the question is clearly worded to focus on perceived security.",
+            "scripter_notes": "Field type: Radio button.",
+            "script": {
+                "question_text": "How confident are you in the security measures of your mobile banking app?",
+                "answer_options": [
+                    "Very confident",
+                    "Somewhat confident",
+                    "Neutral",
+                    "Somewhat concerned",
+                    "Very concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who use the app at least 'Once a week' (Q1 answer)."
+            }
+        }
+    ]
+}

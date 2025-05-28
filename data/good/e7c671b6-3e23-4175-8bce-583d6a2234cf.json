@@ -1,0 +1,131 @@
+{
+    "survey_id": "e7c671b6-3e23-4175-8bce-583d6a2234cf",
+    "survey_name": "Remote Work Productivity and Well-being Survey",
+    "survey_brief": "This survey aims to understand how remote work impacts employee productivity and well-being, and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How many days per week do you typically work remotely?",
+            "answer_options": [
+                "1 day",
+                "2 days",
+                "3 days",
+                "4 days",
+                "5 days or more",
+                "I do not work remotely"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure the options cover all possible scenarios.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How many days per week do you typically work remotely?",
+                "answer_options": [
+                    "1 day",
+                    "2 days",
+                    "3 days",
+                    "4 days",
+                    "5 days or more",
+                    "I do not work remotely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following tools do you use to stay productive while working remotely? (Select all that apply)",
+            "answer_options": [
+                "Video conferencing (e.g., Zoom, Teams)",
+                "Project management software (e.g., Asana, Trello)",
+                "Time tracking apps",
+                "Communication tools (e.g., Slack, Microsoft Teams)",
+                "Digital calendars",
+                "None of the above"
+            ],
+            "routing_logic": "Respondents who selected 1-5 days in Q1",
+            "client_notes": "Use checkboxes for multi-select. Include an option for respondents who do not use any tools.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox)",
+            "script": {
+                "question_text": "Which of the following tools do you use to stay productive while working remotely? (Select all that apply)",
+                "answer_options": [
+                    "Video conferencing (e.g., Zoom, Teams)",
+                    "Project management software (e.g., Asana, Trello)",
+                    "Time tracking apps",
+                    "Communication tools (e.g., Slack, Microsoft Teams)",
+                    "Digital calendars",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 1-5 days in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate your overall productivity while working remotely compared to working in the office?",
+            "answer_options": [
+                "Much more productive",
+                "Slightly more productive",
+                "About the same",
+                "Slightly less productive",
+                "Much less productive"
+            ],
+            "routing_logic": "Respondents who selected 1-5 days in Q1",
+            "client_notes": "Use a Likert scale for clarity. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button)",
+            "script": {
+                "question_text": "How would you rate your overall productivity while working remotely compared to working in the office?",
+                "answer_options": [
+                    "Much more productive",
+                    "Slightly more productive",
+                    "About the same",
+                    "Slightly less productive",
+                    "Much less productive"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 1-5 days in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges do you face while working remotely? (Select all that apply)",
+            "answer_options": [
+                "Distractions at home",
+                "Poor internet connection",
+                "Lack of collaboration with colleagues",
+                "Difficulty separating work and personal life",
+                "Feeling isolated",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 1-5 days in Q1",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What challenges do you face while working remotely? (Select all that apply)",
+                "answer_options": [
+                    "Distractions at home",
+                    "Poor internet connection",
+                    "Lack of collaboration with colleagues",
+                    "Difficulty separating work and personal life",
+                    "Feeling isolated",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 1-5 days in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would enhance your remote work experience?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-text field to capture qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would enhance your remote work experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

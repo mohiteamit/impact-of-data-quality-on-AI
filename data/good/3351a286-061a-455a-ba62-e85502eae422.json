@@ -1,0 +1,151 @@
+{
+    "survey_id": "3351a286-061a-455a-ba62-e85502eae422",
+    "survey_name": "Gen Z Workplace Flexibility Preferences Survey",
+    "survey_brief": "This survey aims to understand the workplace flexibility preferences of Gen Z employees, focusing on remote work options, flexible hours, and preferred work environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How important is workplace flexibility to you when considering a job opportunity?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for better data granularity. Ensure mobile-friendly layout for dropdown options.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How important is workplace flexibility to you when considering a job opportunity?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which type of work arrangement do you prefer?",
+            "answer_options": [
+                "Fully remote",
+                "Hybrid (mix of remote and in-office)",
+                "Fully in-office",
+                "No preference"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other (please specify)' option if needed for additional insights.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "Which type of work arrangement do you prefer?",
+                "answer_options": [
+                    "Fully remote",
+                    "Hybrid (mix of remote and in-office)",
+                    "Fully in-office",
+                    "No preference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors influence your preference for remote work? (Select all that apply)",
+            "answer_options": [
+                "Better work-life balance",
+                "Reduced commute time",
+                "Increased productivity",
+                "Flexibility in location",
+                "Health and safety concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Fully remote' or 'Hybrid' in Q2",
+            "client_notes": "Allow multiple selections to capture diverse motivations.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What factors influence your preference for remote work? (Select all that apply)",
+                "answer_options": [
+                    "Better work-life balance",
+                    "Reduced commute time",
+                    "Increased productivity",
+                    "Flexibility in location",
+                    "Health and safety concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Fully remote' or 'Hybrid' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often would you prefer to work in the office if given a hybrid option?",
+            "answer_options": [
+                "1 day per week",
+                "2 days per week",
+                "3 days per week",
+                "4 days per week",
+                "No preference"
+            ],
+            "routing_logic": "Respondents who selected 'Hybrid' in Q2",
+            "client_notes": "Use a clear, evenly spaced scale to avoid bias.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How often would you prefer to work in the office if given a hybrid option?",
+                "answer_options": [
+                    "1 day per week",
+                    "2 days per week",
+                    "3 days per week",
+                    "4 days per week",
+                    "No preference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Hybrid' in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges do you anticipate with remote work? (Select all that apply)",
+            "answer_options": [
+                "Lack of social interaction",
+                "Difficulty separating work and personal life",
+                "Technical issues",
+                "Communication barriers",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Fully remote' or 'Hybrid' in Q2",
+            "client_notes": "Include an open-ended option for nuanced responses.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What challenges do you anticipate with remote work? (Select all that apply)",
+                "answer_options": [
+                    "Lack of social interaction",
+                    "Difficulty separating work and personal life",
+                    "Technical issues",
+                    "Communication barriers",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Fully remote' or 'Hybrid' in Q2"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional tools or resources would help you succeed in a remote or hybrid work environment?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture unique needs and suggestions.",
+            "scripter_notes": "Field type: Open-text (text area).",
+            "script": {
+                "question_text": "What additional tools or resources would help you succeed in a remote or hybrid work environment?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

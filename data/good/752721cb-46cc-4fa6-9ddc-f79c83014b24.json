@@ -1,0 +1,119 @@
+{
+    "survey_id": "752721cb-46cc-4fa6-9ddc-f79c83014b24",
+    "survey_name": "Customer Satisfaction with Autonomous Grocery Checkout Systems Survey",
+    "survey_brief": "This survey aims to gather feedback from customers who have used autonomous grocery checkout systems to understand their satisfaction levels, pain points, and suggestions for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use autonomous grocery checkout systems?",
+            "answer_options": [
+                "Never",
+                "Rarely (once a month or less)",
+                "Occasionally (2-3 times a month)",
+                "Frequently (once a week or more)"
+            ],
+            "routing_logic": "Display for all respondents.",
+            "client_notes": "This question helps establish usage frequency, which may influence satisfaction levels.",
+            "scripter_notes": "Use a single-choice radio button format.",
+            "script": {
+                "question_text": "How frequently do you use autonomous grocery checkout systems?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once a month or less)",
+                    "Occasionally (2-3 times a month)",
+                    "Frequently (once a week or more)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the speed of the autonomous grocery checkout process? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Display for all respondents who answered 'Rarely', 'Occasionally', or 'Frequently' to Q1.",
+            "client_notes": "Use a Likert scale to measure satisfaction with speed.",
+            "scripter_notes": "Use a single-choice radio button format with a 5-point scale.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the speed of the autonomous grocery checkout process? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents who answered 'Rarely', 'Occasionally', or 'Frequently' to Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges, if any, have you faced while using autonomous grocery checkout systems? (Select all that apply)",
+            "answer_options": [
+                "Difficulty scanning items",
+                "System errors or freezes",
+                "Long wait times for assistance",
+                "Confusing interface",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display for all respondents who answered 'Rarely', 'Occasionally', or 'Frequently' to Q1.",
+            "client_notes": "This multi-choice question identifies common pain points.",
+            "scripter_notes": "Use a multi-choice checkbox format with an optional 'Other' open-text field.",
+            "script": {
+                "question_text": "What challenges, if any, have you faced while using autonomous grocery checkout systems? (Select all that apply)",
+                "answer_options": [
+                    "Difficulty scanning items",
+                    "System errors or freezes",
+                    "Long wait times for assistance",
+                    "Confusing interface",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display for all respondents who answered 'Rarely', 'Occasionally', or 'Frequently' to Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would make you more likely to use autonomous grocery checkout systems in the future?",
+            "answer_options": [],
+            "routing_logic": "Display for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Use an open-text field format.",
+            "script": {
+                "question_text": "What improvements would make you more likely to use autonomous grocery checkout systems in the future?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend autonomous grocery checkout systems to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Display for all respondents who answered 'Rarely', 'Occasionally', or 'Frequently' to Q1.",
+            "client_notes": "This question measures the likelihood of recommendation, a key satisfaction metric.",
+            "scripter_notes": "Use a single-choice radio button format.",
+            "script": {
+                "question_text": "Would you recommend autonomous grocery checkout systems to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display for all respondents who answered 'Rarely', 'Occasionally', or 'Frequently' to Q1."
+            }
+        }
+    ]
+}

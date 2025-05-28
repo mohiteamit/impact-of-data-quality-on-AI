@@ -1,0 +1,129 @@
+{
+    "survey_id": "77904f79-0f28-4273-acc1-2fe1743440f1",
+    "survey_name": "Customer Satisfaction with Electric Vehicle (EV) Charging Stations Survey",
+    "survey_brief": "This survey aims to gather feedback from EV owners regarding their satisfaction with public charging stations, including ease of use, reliability, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use public EV charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Occasionally",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a single-choice format to simplify data collection. Ensure options cover all potential usage frequencies.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often do you use public EV charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Occasionally",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when selecting a public EV charging station? (Select up to 3)",
+            "answer_options": [
+                "Proximity to my location",
+                "Charging speed",
+                "Cost per charge",
+                "Availability of stations",
+                "Ease of payment",
+                "Safety of the location",
+                "Brand reputation"
+            ],
+            "routing_logic": "Appears to all respondents who answered 'Daily', 'Weekly', 'Monthly', or 'Occasionally' to Q1.",
+            "client_notes": "Use a multi-choice format to allow respondents to select multiple factors. Limit selections to 3 for clearer data.",
+            "scripter_notes": "Field type: checkbox with a maximum of 3 selections.",
+            "script": {
+                "question_text": "What factors are most important to you when selecting a public EV charging station? (Select up to 3)",
+                "answer_options": [
+                    "Proximity to my location",
+                    "Charging speed",
+                    "Cost per charge",
+                    "Availability of stations",
+                    "Ease of payment",
+                    "Safety of the location",
+                    "Brand reputation"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents who answered 'Daily', 'Weekly', 'Monthly', or 'Occasionally' to Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the reliability of public EV charging stations?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents who answered 'Daily', 'Weekly', 'Monthly', or 'Occasionally' to Q1.",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How satisfied are you with the reliability of public EV charging stations?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who answered 'Daily', 'Weekly', 'Monthly', or 'Occasionally' to Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in public EV charging stations?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents who answered 'Daily', 'Weekly', 'Monthly', or 'Occasionally' to Q1.",
+            "client_notes": "Use an open-ended format to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you like to see in public EV charging stations?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents who answered 'Daily', 'Weekly', 'Monthly', or 'Occasionally' to Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which payment methods do you prefer for EV charging stations? (Select all that apply)",
+            "answer_options": [
+                "Credit/Debit card",
+                "Mobile app payment",
+                "RFID card",
+                "Subscription plan",
+                "Pay-as-you-go"
+            ],
+            "routing_logic": "Appears to all respondents who answered 'Daily', 'Weekly', 'Monthly', or 'Occasionally' to Q1.",
+            "client_notes": "Use a multi-choice format to allow respondents to select all applicable options.",
+            "scripter_notes": "Field type: checkbox.",
+            "script": {
+                "question_text": "Which payment methods do you prefer for EV charging stations? (Select all that apply)",
+                "answer_options": [
+                    "Credit/Debit card",
+                    "Mobile app payment",
+                    "RFID card",
+                    "Subscription plan",
+                    "Pay-as-you-go"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents who answered 'Daily', 'Weekly', 'Monthly', or 'Occasionally' to Q1."
+            }
+        }
+    ]
+}

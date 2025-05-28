@@ -1,0 +1,125 @@
+{
+    "survey_id": "ea0e489d-dfc4-47e6-b2eb-d07c999affbd",
+    "survey_name": "Customer Satisfaction with Online Grocery Delivery Services Survey",
+    "survey_brief": "This survey aims to gather feedback from customers on their experience with online grocery delivery services to improve service quality and customer satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use online grocery delivery services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Occasionally",
+                "First time user"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button to ensure clarity and ease of response.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use online grocery delivery services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Occasionally",
+                    "First time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which online grocery delivery platforms have you used in the past 3 months? (Select all that apply)",
+            "answer_options": [
+                "Instacart",
+                "Amazon Fresh",
+                "Walmart Grocery",
+                "Shipt",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for all respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Occasionally' in Q1.",
+            "client_notes": "Use checkboxes for multiple selections and include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional text field for 'Other'.",
+            "script": {
+                "question_text": "Which online grocery delivery platforms have you used in the past 3 months? (Select all that apply)",
+                "answer_options": [
+                    "Instacart",
+                    "Amazon Fresh",
+                    "Walmart Grocery",
+                    "Shipt",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Occasionally' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing an online grocery delivery service? (Rank in order of importance, 1 being most important)",
+            "answer_options": [
+                "Delivery speed",
+                "Product quality",
+                "Price competitiveness",
+                "User interface and app experience",
+                "Customer service"
+            ],
+            "routing_logic": "This question appears for all respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Occasionally' in Q1.",
+            "client_notes": "Use a ranking question type where respondents can drag and drop options.",
+            "scripter_notes": "Field type: ranking (MULTI_CHOICE with ranking capability).",
+            "script": {
+                "question_text": "What factors are most important to you when choosing an online grocery delivery service? (Rank in order of importance, 1 being most important)",
+                "answer_options": [
+                    "Delivery speed",
+                    "Product quality",
+                    "Price competitiveness",
+                    "User interface and app experience",
+                    "Customer service"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Occasionally' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the freshness and quality of groceries delivered?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for all respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Occasionally' in Q1.",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the freshness and quality of groceries delivered?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Occasionally' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for online grocery delivery services?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use an open-ended text field to capture detailed feedback.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for online grocery delivery services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

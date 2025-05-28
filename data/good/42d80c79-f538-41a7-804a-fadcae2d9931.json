@@ -1,0 +1,125 @@
+{
+    "survey_id": "42d80c79-f538-41a7-804a-fadcae2d9931",
+    "survey_name": "Customer Satisfaction with Electric Vehicle (EV) Charging Station Networks Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and identify areas for improvement regarding the usability, accessibility, and overall experience with public and private electric vehicle (EV) charging station networks.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use public EV charging stations?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice format to ensure clarity and ease of response.",
+            "scripter_notes": "Implement as radio buttons.",
+            "script": {
+                "question_text": "How frequently do you use public EV charging stations?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons you use public EV charging stations? (Select all that apply)",
+            "answer_options": [
+                "Convenience during long trips",
+                "Lack of home charging options",
+                "Faster charging speeds",
+                "Cost savings",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use a multi-choice format to allow multiple selections. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Implement as checkboxes with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are the primary reasons you use public EV charging stations? (Select all that apply)",
+                "answer_options": [
+                    "Convenience during long trips",
+                    "Lack of home charging options",
+                    "Faster charging speeds",
+                    "Cost savings",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of EV charging stations in your area?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Implement as radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the availability of EV charging stations in your area?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in EV charging station networks?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Implement as an open-text field.",
+            "script": {
+                "question_text": "What improvements would you like to see in EV charging station networks?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following factors is most important to you when choosing an EV charging station?",
+            "answer_options": [
+                "Location",
+                "Charging speed",
+                "Cost",
+                "Ease of payment",
+                "Availability of amenities nearby"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Single-choice question to prioritize key factors influencing user decisions.",
+            "scripter_notes": "Implement as radio buttons.",
+            "script": {
+                "question_text": "Which of the following factors is most important to you when choosing an EV charging station?",
+                "answer_options": [
+                    "Location",
+                    "Charging speed",
+                    "Cost",
+                    "Ease of payment",
+                    "Availability of amenities nearby"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        }
+    ]
+}

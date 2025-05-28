@@ -1,0 +1,127 @@
+{
+    "survey_id": "5d5f71de-1480-4971-87f5-4e22a7f62457",
+    "survey_name": "Customer Satisfaction with AI-Powered Personal Chef Services Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and gather feedback on AI-powered personal chef services, including ease of use, customization, and overall user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use AI-powered personal chef services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "This is my first time"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale to measure frequency of usage. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use AI-powered personal chef services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of the AI-powered personal chef service do you find most valuable? (Select all that apply)",
+            "answer_options": [
+                "Meal customization",
+                "Dietary restriction accommodations",
+                "Recipe variety",
+                "Grocery delivery integration",
+                "Nutritional tracking",
+                "Meal planning automation"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to identify key features. Consider randomizing options to reduce order bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which features of the AI-powered personal chef service do you find most valuable? (Select all that apply)",
+                "answer_options": [
+                    "Meal customization",
+                    "Dietary restriction accommodations",
+                    "Recipe variety",
+                    "Grocery delivery integration",
+                    "Nutritional tracking",
+                    "Meal planning automation"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the meal recommendations provided by the AI-powered personal chef service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents except those who selected 'This is my first time' in Q1",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement. Include a 'Not applicable' option if necessary.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the meal recommendations provided by the AI-powered personal chef service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'This is my first time' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced while using the AI-powered personal chef service?",
+            "answer_options": [],
+            "routing_logic": "All respondents except those who selected 'This is my first time' in Q1",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT)",
+            "script": {
+                "question_text": "What challenges have you faced while using the AI-powered personal chef service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents except those who selected 'This is my first time' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend the AI-powered personal chef service to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "All respondents except those who selected 'This is my first time' in Q1",
+            "client_notes": "Use a 5-point Likert scale to measure likelihood of recommendation. This is a key metric for Net Promoter Score (NPS) analysis.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How likely are you to recommend the AI-powered personal chef service to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who selected 'This is my first time' in Q1"
+            }
+        }
+    ]
+}

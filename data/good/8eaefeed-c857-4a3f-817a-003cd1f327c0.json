@@ -1,0 +1,177 @@
+{
+    "survey_id": "8eaefeed-c857-4a3f-817a-003cd1f327c0",
+    "survey_name": "Workplace AI Tool Adoption and Satisfaction Survey",
+    "survey_brief": "This survey aims to understand employee adoption rates, satisfaction levels, and challenges with AI-powered tools in the workplace to improve tool selection and training processes.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following AI-powered tools does your organization currently provide? (Select all that apply)",
+            "answer_options": [
+                "AI-powered meeting transcription tools",
+                "AI-powered document summarization tools",
+                "AI-powered data analysis tools",
+                "AI-powered customer support chatbots",
+                "AI-powered email prioritization tools",
+                "AI-powered HR/recruitment tools",
+                "None of the above"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a multi-select format. Consider adding 'Other (please specify)' if important tools might be missing from this list.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an 'Other' open text field option.",
+            "script": {
+                "question_text": "Which of the following AI-powered tools does your organization currently provide? (Select all that apply)",
+                "answer_options": [
+                    "AI-powered meeting transcription tools",
+                    "AI-powered document summarization tools",
+                    "AI-powered data analysis tools",
+                    "AI-powered customer support chatbots",
+                    "AI-powered email prioritization tools",
+                    "AI-powered HR/recruitment tools",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How frequently do you use AI-powered tools in your daily work?",
+            "answer_options": [
+                "Multiple times per day",
+                "About once per day",
+                "A few times per week",
+                "About once per week",
+                "Less than once per week",
+                "Never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "This establishes baseline adoption rates. Consider following up with non-users about reasons for non-adoption.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Present options vertically.",
+            "script": {
+                "question_text": "How frequently do you use AI-powered tools in your daily work?",
+                "answer_options": [
+                    "Multiple times per day",
+                    "About once per day",
+                    "A few times per week",
+                    "About once per week",
+                    "Less than once per week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What has been your most significant challenge when using AI-powered tools at work?",
+            "answer_options": [
+                "Lack of adequate training",
+                "Tools don't integrate well with existing systems",
+                "Output quality/reliability concerns",
+                "Privacy/security concerns",
+                "No significant challenges",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q2 != 'Never'",
+            "client_notes": "Identify pain points to address in future implementations. Open-ended 'Other' option captures unique challenges.",
+            "scripter_notes": "Field type: radio button with 'Other' open text option (SINGLE_CHOICE with text field).",
+            "script": {
+                "question_text": "What has been your most significant challenge when using AI-powered tools at work?",
+                "answer_options": [
+                    "Lack of adequate training",
+                    "Tools don't integrate well with existing systems",
+                    "Output quality/reliability concerns",
+                    "Privacy/security concerns",
+                    "No significant challenges",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q2 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe how AI tools have most improved your work productivity or quality (if at all):",
+            "answer_options": [],
+            "routing_logic": "Show if Q2 != 'Never'",
+            "client_notes": "Open-ended format captures nuanced benefits that may inform ROI calculations and tool prioritization.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT). Provide a text box with 500-character limit.",
+            "script": {
+                "question_text": "Please describe how AI tools have most improved your work productivity or quality (if at all):",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q2 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What type of additional training or support would help you use AI tools more effectively?",
+            "answer_options": [
+                "More initial onboarding training",
+                "Ongoing advanced feature tutorials",
+                "Better technical support",
+                "Peer learning/sharing sessions",
+                "Clearer documentation",
+                "None needed",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q2 != 'Never'",
+            "client_notes": "Identify training gaps. Multi-select allows respondents to indicate multiple needs.",
+            "scripter_notes": "Field type: checkbox with 'Other' open text option (MULTI_CHOICE).",
+            "script": {
+                "question_text": "What type of additional training or support would help you use AI tools more effectively?",
+                "answer_options": [
+                    "More initial onboarding training",
+                    "Ongoing advanced feature tutorials",
+                    "Better technical support",
+                    "Peer learning/sharing sessions",
+                    "Clearer documentation",
+                    "None needed",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q2 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you recommend that your organization continue investing in AI-powered tools?",
+            "answer_options": [
+                "Strongly recommend",
+                "Recommend with some improvements",
+                "Neutral/no opinion",
+                "Recommend against unless significant improvements are made",
+                "Strongly recommend against"
+            ],
+            "routing_logic": "Show if Q2 != 'Never'",
+            "client_notes": "5-point Likert scale measures overall satisfaction. Consider following up with low scores.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Present options vertically with clear labels.",
+            "script": {
+                "question_text": "Would you recommend that your organization continue investing in AI-powered tools?",
+                "answer_options": [
+                    "Strongly recommend",
+                    "Recommend with some improvements",
+                    "Neutral/no opinion",
+                    "Recommend against unless significant improvements are made",
+                    "Strongly recommend against"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q2 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What concerns, if any, do you have about increased use of AI tools in your workplace?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended format surfaces unanticipated concerns about ethics, job security, or implementation issues.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT). Provide a text box with 300-character limit.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about increased use of AI tools in your workplace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

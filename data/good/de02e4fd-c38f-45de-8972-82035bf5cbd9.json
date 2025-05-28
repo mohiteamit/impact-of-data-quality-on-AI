@@ -1,0 +1,119 @@
+{
+    "survey_id": "de02e4fd-c38f-45de-8972-82035bf5cbd9",
+    "survey_name": "Employee Satisfaction with Biometric Attendance Systems Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the usability, privacy concerns, and overall satisfaction with biometric attendance systems implemented in the workplace.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the biometric attendance system?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "This helps assess adoption rates and frequency of use.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How frequently do you use the biometric attendance system?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the accuracy of the biometric attendance system?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for respondents who selected 'Daily' or 'Several times a week' in Q1.",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of the biometric attendance system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who selected 'Daily' or 'Several times a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, do you have regarding the privacy of your biometric data?",
+            "answer_options": [
+                "No concerns",
+                "Data security risks",
+                "Unauthorized access",
+                "Lack of transparency in data usage",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Multi-choice question to identify common privacy concerns.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with an optional open-ended 'Other' field.",
+            "script": {
+                "question_text": "What concerns, if any, do you have regarding the privacy of your biometric data?",
+                "answer_options": [
+                    "No concerns",
+                    "Data security risks",
+                    "Unauthorized access",
+                    "Lack of transparency in data usage",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any technical issues you have encountered with the biometric attendance system.",
+            "answer_options": [],
+            "routing_logic": "This question appears for respondents who selected 'Daily', 'Several times a week', or 'Rarely' in Q1.",
+            "client_notes": "Open-ended question to capture specific technical challenges.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "Please describe any technical issues you have encountered with the biometric attendance system.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for respondents who selected 'Daily', 'Several times a week', or 'Rarely' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend the biometric attendance system to other organizations?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Simple yes/no question to gauge overall satisfaction.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Would you recommend the biometric attendance system to other organizations?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

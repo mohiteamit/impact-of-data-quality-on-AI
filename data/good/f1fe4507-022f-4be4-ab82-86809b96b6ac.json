@@ -1,0 +1,121 @@
+{
+    "survey_id": "f1fe4507-022f-4be4-ab82-86809b96b6ac",
+    "survey_name": "Customer Satisfaction with Plant-Based Restaurant Menu Options Survey",
+    "survey_brief": "This survey aims to gather feedback from customers regarding their satisfaction with plant-based menu options at our restaurant, to help us improve and expand our offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit our restaurant?",
+            "answer_options": [
+                "First time",
+                "Once a month",
+                "2-3 times a month",
+                "Once a week or more"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How often do you visit our restaurant?",
+                "answer_options": [
+                    "First time",
+                    "Once a month",
+                    "2-3 times a month",
+                    "Once a week or more"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which plant-based menu items have you tried? (Select all that apply)",
+            "answer_options": [
+                "Plant-based burger",
+                "Vegan pizza",
+                "Tofu stir-fry",
+                "Quinoa salad",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-text follow-up for 'Other'.",
+            "script": {
+                "question_text": "Which plant-based menu items have you tried? (Select all that apply)",
+                "answer_options": [
+                    "Plant-based burger",
+                    "Vegan pizza",
+                    "Tofu stir-fry",
+                    "Quinoa salad",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the taste of our plant-based menu options?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who selected at least one item in Q2",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with the taste of our plant-based menu options?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected at least one item in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for our plant-based menu?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What improvements would you suggest for our plant-based menu?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend our plant-based menu options to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No, probably not",
+                "No, definitely not"
+            ],
+            "routing_logic": "Appears to respondents who selected at least one item in Q2",
+            "client_notes": "Single-choice question to gauge likelihood of recommendation.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Would you recommend our plant-based menu options to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No, probably not",
+                    "No, definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected at least one item in Q2"
+            }
+        }
+    ]
+}

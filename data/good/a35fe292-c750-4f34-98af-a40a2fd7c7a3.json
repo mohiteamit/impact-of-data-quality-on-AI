@@ -1,0 +1,133 @@
+{
+    "survey_id": "a35fe292-c750-4f34-98af-a40a2fd7c7a3",
+    "survey_name": "Adoption and Usage of Smart Sleep Technology Survey",
+    "survey_brief": "This survey aims to understand consumer adoption, usage patterns, and satisfaction levels with smart sleep technology products such as sleep trackers, smart mattresses, and connected sleep aids.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart sleep technology products do you currently own or use regularly?",
+            "answer_options": [
+                "Smart mattress (e.g., Sleep Number, Eight Sleep)",
+                "Wearable sleep tracker (e.g., Fitbit, Oura Ring)",
+                "Non-wearable sleep tracker (e.g., bedside device)",
+                "Smart alarm clock (e.g., Withings, Hatch)",
+                "None of the above"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Allow multiple selections to accurately capture usage of multiple product types. Ensure mobile-friendly checkboxes.",
+            "scripter_notes": "Field type: MULTI_CHOICE checkbox. Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "Which of the following smart sleep technology products do you currently own or use regularly?",
+                "answer_options": [
+                    "Smart mattress (e.g., Sleep Number, Eight Sleep)",
+                    "Wearable sleep tracker (e.g., Fitbit, Oura Ring)",
+                    "Non-wearable sleep tracker (e.g., bedside device)",
+                    "Smart alarm clock (e.g., Withings, Hatch)",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How long have you been using smart sleep technology products?",
+            "answer_options": [
+                "Less than 1 month",
+                "1-6 months",
+                "6-12 months",
+                "1-2 years",
+                "More than 2 years"
+            ],
+            "routing_logic": "Display if Q1 != 'None of the above'",
+            "client_notes": "Use radio buttons for single-select. Consider adding 'Prefer not to say' if sensitive demographic.",
+            "scripter_notes": "Field type: SINGLE_CHOICE radio buttons. Mandatory response.",
+            "script": {
+                "question_text": "How long have you been using smart sleep technology products?",
+                "answer_options": [
+                    "Less than 1 month",
+                    "1-6 months",
+                    "6-12 months",
+                    "1-2 years",
+                    "More than 2 years"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors were most important in your decision to purchase smart sleep technology? (Select top 3)",
+            "answer_options": [
+                "Improving sleep quality",
+                "Health monitoring features",
+                "Compatibility with other smart devices",
+                "Recommendation from healthcare professional",
+                "Positive online reviews",
+                "Price/value",
+                "Brand reputation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display if Q1 != 'None of the above'",
+            "client_notes": "Use a max-selection validation to ensure only 3 choices. Include 'Other' with open-text follow-up.",
+            "scripter_notes": "Field type: MULTI_CHOICE with max_selection=3. Add open-text field when 'Other' is selected.",
+            "script": {
+                "question_text": "What factors were most important in your decision to purchase smart sleep technology? (Select top 3)",
+                "answer_options": [
+                    "Improving sleep quality",
+                    "Health monitoring features",
+                    "Compatibility with other smart devices",
+                    "Recommendation from healthcare professional",
+                    "Positive online reviews",
+                    "Price/value",
+                    "Brand reputation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display if Q1 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How has using smart sleep technology impacted your sleep quality or daily routine?",
+            "answer_options": [],
+            "routing_logic": "Display if Q1 != 'None of the above'",
+            "client_notes": "Open-ended to capture qualitative insights. Suggest 200-character limit for mobile optimization.",
+            "scripter_notes": "Field type: OPEN_TEXT with character counter. Optional response.",
+            "script": {
+                "question_text": "How has using smart sleep technology impacted your sleep quality or daily routine?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display if Q1 != 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What concerns, if any, would prevent you from purchasing smart sleep technology in the future?",
+            "answer_options": [
+                "Privacy/data security concerns",
+                "High cost",
+                "Difficulty using technology",
+                "Lack of proven benefits",
+                "Prefer non-tech sleep solutions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Include an 'Other' option to capture unlisted concerns. Multi-select accommodates multiple barriers.",
+            "scripter_notes": "Field type: MULTI_CHOICE. Add open-text field when 'Other' is selected.",
+            "script": {
+                "question_text": "What concerns, if any, would prevent you from purchasing smart sleep technology in the future?",
+                "answer_options": [
+                    "Privacy/data security concerns",
+                    "High cost",
+                    "Difficulty using technology",
+                    "Lack of proven benefits",
+                    "Prefer non-tech sleep solutions",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        }
+    ]
+}

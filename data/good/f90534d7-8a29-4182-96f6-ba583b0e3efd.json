@@ -1,0 +1,113 @@
+{
+    "survey_id": "f90534d7-8a29-4182-96f6-ba583b0e3efd",
+    "survey_name": "Customer Satisfaction with Drone Delivery Services Survey",
+    "survey_brief": "This survey aims to assess customer satisfaction and identify areas for improvement in drone delivery services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use drone delivery services?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "This is my first time"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice question to gauge usage frequency. Ensure options are exhaustive and mutually exclusive.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How frequently do you use drone delivery services?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of items do you typically have delivered via drone? (Select all that apply)",
+            "answer_options": [
+                "Food and beverages",
+                "Electronics",
+                "Clothing and accessories",
+                "Medications",
+                "Books and media",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents who selected 'Weekly', 'Monthly', or 'A few times a year' in Q1.",
+            "client_notes": "Use a multi-choice question to understand common delivery categories. Include an 'Other' option for unlisted items.",
+            "scripter_notes": "Field type: checkbox with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What types of items do you typically have delivered via drone? (Select all that apply)",
+                "answer_options": [
+                    "Food and beverages",
+                    "Electronics",
+                    "Clothing and accessories",
+                    "Medications",
+                    "Books and media",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents who selected 'Weekly', 'Monthly', or 'A few times a year' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the speed of drone deliveries? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears for all respondents who selected 'Weekly', 'Monthly', or 'A few times a year' in Q1.",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: radio button with a 5-point scale.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the speed of drone deliveries? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who selected 'Weekly', 'Monthly', or 'A few times a year' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the most significant advantage of using drone delivery services?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents who selected 'Weekly', 'Monthly', or 'A few times a year' in Q1.",
+            "client_notes": "Use an open-ended question to capture qualitative insights. Ensure the field is mobile-friendly.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What is the most significant advantage of using drone delivery services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents who selected 'Weekly', 'Monthly', or 'A few times a year' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for drone delivery services?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents who selected 'Weekly', 'Monthly', or 'A few times a year' in Q1.",
+            "client_notes": "Use an open-ended question to gather actionable feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: open-text.",
+            "script": {
+                "question_text": "What improvements would you suggest for drone delivery services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents who selected 'Weekly', 'Monthly', or 'A few times a year' in Q1."
+            }
+        }
+    ]
+}

@@ -1,0 +1,109 @@
+{
+    "survey_id": "3d76b496-67d0-4e05-951d-7fc1bca234dc",
+    "survey_name": "Employee Satisfaction with Workplace Ergonomics Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with ergonomic solutions provided in the workplace to enhance comfort and productivity.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the ergonomic furniture (e.g., chairs, desks) provided in your workspace?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction levels. Ensure options are clear and balanced.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the ergonomic furniture (e.g., chairs, desks) provided in your workspace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following ergonomic tools or equipment do you currently use in your workspace? (Select all that apply)",
+            "answer_options": [
+                "Adjustable chair",
+                "Standing desk",
+                "Ergonomic keyboard",
+                "Monitor stand",
+                "Footrest",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture diverse usage patterns.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following ergonomic tools or equipment do you currently use in your workspace? (Select all that apply)",
+                "answer_options": [
+                    "Adjustable chair",
+                    "Standing desk",
+                    "Ergonomic keyboard",
+                    "Monitor stand",
+                    "Footrest",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Have you experienced any discomfort or pain related to your workspace setup in the past 6 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Binary question to identify issues. Follow-up with Q4 if 'Yes' is selected.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Have you experienced any discomfort or pain related to your workspace setup in the past 6 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe the type of discomfort or pain you experienced and how it affected your work.",
+            "answer_options": [],
+            "routing_logic": "Only if Q3 is 'Yes'",
+            "client_notes": "Open-ended to gather detailed feedback. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "Please describe the type of discomfort or pain you experienced and how it affected your work.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only if Q3 is 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional ergonomic support or equipment would you like to see provided by the company?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture unmet needs. Useful for future planning.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What additional ergonomic support or equipment would you like to see provided by the company?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,123 @@
+{
+    "survey_id": "574f9562-483f-4e03-894e-22e43a82b88d",
+    "survey_name": "Customer Satisfaction with Autonomous Grocery Shopping Carts Survey",
+    "survey_brief": "This survey aims to gather customer feedback on their experience with autonomous grocery shopping carts to improve service quality and user satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use autonomous grocery shopping carts?",
+            "answer_options": [
+                "Never",
+                "Rarely (once a month or less)",
+                "Occasionally (a few times a month)",
+                "Frequently (weekly)",
+                "Very frequently (multiple times a week)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format to measure frequency of use. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How often do you use autonomous grocery shopping carts?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once a month or less)",
+                    "Occasionally (a few times a month)",
+                    "Frequently (weekly)",
+                    "Very frequently (multiple times a week)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What features of the autonomous grocery shopping cart do you find most useful? (Select all that apply)",
+            "answer_options": [
+                "Self-navigation",
+                "Item scanning",
+                "Checkout automation",
+                "Basket capacity",
+                "User interface",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered 'Rarely' or more frequently in Q1",
+            "client_notes": "Use a multi-choice format to identify key features. Include an 'Other' option for additional feedback.",
+            "scripter_notes": "Field type: checkbox",
+            "script": {
+                "question_text": "What features of the autonomous grocery shopping cart do you find most useful? (Select all that apply)",
+                "answer_options": [
+                    "Self-navigation",
+                    "Item scanning",
+                    "Checkout automation",
+                    "Basket capacity",
+                    "User interface",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Rarely' or more frequently in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges have you faced while using autonomous grocery shopping carts?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-ended format to gather detailed feedback. Ensure the text box is large enough for comprehensive responses.",
+            "scripter_notes": "Field type: open text",
+            "script": {
+                "question_text": "What challenges have you faced while using autonomous grocery shopping carts?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the overall performance of the autonomous grocery shopping cart?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "Respondents who answered 'Rarely' or more frequently in Q1",
+            "client_notes": "Use a single-choice Likert scale to measure satisfaction. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How satisfied are you with the overall performance of the autonomous grocery shopping cart?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Rarely' or more frequently in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend autonomous grocery shopping carts to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format to gauge likelihood of recommendation. Include a 'Maybe' option for neutrality.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "Would you recommend autonomous grocery shopping carts to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,199 @@
+{
+    "survey_id": "a280da27-cbb9-4cac-94cf-94c047ff2a2e",
+    "survey_name": "Adoption of AI in Small Business Customer Service Survey",
+    "survey_brief": "This survey aims to understand small business adoption and satisfaction with AI-powered customer service tools, identifying key benefits, challenges, and future needs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Does your business currently use any AI-powered tools for customer service (e.g., chatbots, automated response systems)?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Planning to implement within the next 6 months"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use radio buttons for clear single-choice selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Does your business currently use any AI-powered tools for customer service (e.g., chatbots, automated response systems)?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Planning to implement within the next 6 months"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI customer service tools does your business use? (Select all that apply)",
+            "answer_options": [
+                "Chatbots",
+                "Voice assistants",
+                "Automated email responders",
+                "Sentiment analysis tools",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 answered 'Yes'",
+            "client_notes": "Checkbox format for multi-selection. Include 'Other' with open-text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE with optional open-text for 'Other'",
+            "script": {
+                "question_text": "Which of the following AI customer service tools does your business use? (Select all that apply)",
+                "answer_options": [
+                    "Chatbots",
+                    "Voice assistants",
+                    "Automated email responders",
+                    "Sentiment analysis tools",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 answered 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the primary benefits your business has experienced from using AI in customer service?",
+            "answer_options": [
+                "Reduced response time",
+                "Cost savings",
+                "24/7 availability",
+                "Improved customer satisfaction",
+                "Scalability during peak demand"
+            ],
+            "routing_logic": "Only if Q1 answered 'Yes'",
+            "client_notes": "Multi-choice question with checkbox options. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE with randomized option display",
+            "script": {
+                "question_text": "What are the primary benefits your business has experienced from using AI in customer service?",
+                "answer_options": [
+                    "Reduced response time",
+                    "Cost savings",
+                    "24/7 availability",
+                    "Improved customer satisfaction",
+                    "Scalability during peak demand"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 answered 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges has your business faced when implementing AI for customer service?",
+            "answer_options": [
+                "High initial setup costs",
+                "Integration with existing systems",
+                "Limited customization options",
+                "Customer resistance to AI interactions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 answered 'Yes'",
+            "client_notes": "Include an 'Other' option with text field for unlisted challenges.",
+            "scripter_notes": "Field type: MULTI_CHOICE with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What challenges has your business faced when implementing AI for customer service?",
+                "answer_options": [
+                    "High initial setup costs",
+                    "Integration with existing systems",
+                    "Limited customization options",
+                    "Customer resistance to AI interactions",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 answered 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied is your business with its current AI customer service tools?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 answered 'Yes'",
+            "client_notes": "5-point Likert scale for satisfaction measurement. Display as radio buttons.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with horizontal scale display",
+            "script": {
+                "question_text": "How satisfied is your business with its current AI customer service tools?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 answered 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What factors would motivate your business to adopt AI customer service tools in the future?",
+            "answer_options": [
+                "Lower costs",
+                "Easier integration",
+                "Proven ROI case studies",
+                "Industry-specific solutions",
+                "Better customization options"
+            ],
+            "routing_logic": "Only if Q1 answered 'No' or 'Planning to implement within the next 6 months'",
+            "client_notes": "Multi-choice question with checkbox options. Include 'Other' with text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What factors would motivate your business to adopt AI customer service tools in the future?",
+                "answer_options": [
+                    "Lower costs",
+                    "Easier integration",
+                    "Proven ROI case studies",
+                    "Industry-specific solutions",
+                    "Better customization options"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 answered 'No' or 'Planning to implement within the next 6 months'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What concerns does your business have about adopting AI for customer service?",
+            "answer_options": [
+                "Data privacy and security",
+                "Loss of human touch",
+                "Technical complexity",
+                "High maintenance costs",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 answered 'No' or 'Planning to implement within the next 6 months'",
+            "client_notes": "Multi-choice question with checkbox options. Include 'Other' with text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What concerns does your business have about adopting AI for customer service?",
+                "answer_options": [
+                    "Data privacy and security",
+                    "Loss of human touch",
+                    "Technical complexity",
+                    "High maintenance costs",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 answered 'No' or 'Planning to implement within the next 6 months'"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "What additional features or capabilities would you like to see in AI customer service tools?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Provide ample space for response.",
+            "scripter_notes": "Field type: OPEN_TEXT with large text box",
+            "script": {
+                "question_text": "What additional features or capabilities would you like to see in AI customer service tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

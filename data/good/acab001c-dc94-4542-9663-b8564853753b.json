@@ -1,0 +1,123 @@
+{
+    "survey_id": "acab001c-dc94-4542-9663-b8564853753b",
+    "survey_name": "Employee Satisfaction with On-Site Fitness Facilities Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with the on-site fitness facilities provided by the company, focusing on usage patterns, satisfaction levels, and suggestions for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the on-site fitness facilities?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once per week",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale to capture frequency accurately. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How frequently do you use the on-site fitness facilities?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once per week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following amenities do you use most often? (Select all that apply)",
+            "answer_options": [
+                "Cardio machines",
+                "Weightlifting equipment",
+                "Group fitness classes",
+                "Yoga/Pilates studio",
+                "Locker rooms/showers",
+                "None of the above"
+            ],
+            "routing_logic": "Only respondents who answered 'Daily', '3-5 times per week', or '1-2 times per week' to Q1",
+            "client_notes": "Multi-choice question to identify popular amenities. Ensure checkboxes are clearly labeled.",
+            "scripter_notes": "Field type: checkbox",
+            "script": {
+                "question_text": "Which of the following amenities do you use most often? (Select all that apply)",
+                "answer_options": [
+                    "Cardio machines",
+                    "Weightlifting equipment",
+                    "Group fitness classes",
+                    "Yoga/Pilates studio",
+                    "Locker rooms/showers",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only respondents who answered 'Daily', '3-5 times per week', or '1-2 times per week' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness and maintenance of the fitness facilities?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only respondents who answered 'Daily', '3-5 times per week', or '1-2 times per week' to Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure clarity in scale labels.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and maintenance of the fitness facilities?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only respondents who answered 'Daily', '3-5 times per week', or '1-2 times per week' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the on-site fitness facilities?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Provide ample space for responses.",
+            "scripter_notes": "Field type: text area",
+            "script": {
+                "question_text": "What improvements would you suggest for the on-site fitness facilities?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be more likely to use the on-site fitness facilities if additional services were offered (e.g., personal training, nutrition counseling)?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to gauge interest in additional services. Keep options simple.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "Would you be more likely to use the on-site fitness facilities if additional services were offered (e.g., personal training, nutrition counseling)?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

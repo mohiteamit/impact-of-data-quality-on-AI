@@ -1,0 +1,135 @@
+{
+    "survey_id": "4e571f1c-75c8-41bd-8e29-49c5c34cab6a",
+    "survey_name": "Consumer Preferences for Subscription-Based Skincare Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, satisfaction levels, and pain points related to subscription-based skincare services to help providers enhance their offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How long have you been subscribed to a skincare service?",
+            "answer_options": [
+                "Less than 3 months",
+                "3-6 months",
+                "6-12 months",
+                "More than 1 year",
+                "I am not currently subscribed"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Use a single-choice radio button layout for clarity. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "How long have you been subscribed to a skincare service?",
+                "answer_options": [
+                    "Less than 3 months",
+                    "3-6 months",
+                    "6-12 months",
+                    "More than 1 year",
+                    "I am not currently subscribed"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influenced your decision to subscribe to a skincare service? (Select all that apply)",
+            "answer_options": [
+                "Customized product recommendations",
+                "Convenience of home delivery",
+                "Cost savings compared to retail",
+                "Access to exclusive products",
+                "Educational content (e.g., skincare tips)",
+                "Positive reviews/recommendations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only ask if respondent selected any option other than 'I am not currently subscribed' in Q1",
+            "client_notes": "Allow multiple selections. Include an 'Other' field with text input to capture unique responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Add optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What factors influenced your decision to subscribe to a skincare service? (Select all that apply)",
+                "answer_options": [
+                    "Customized product recommendations",
+                    "Convenience of home delivery",
+                    "Cost savings compared to retail",
+                    "Access to exclusive products",
+                    "Educational content (e.g., skincare tips)",
+                    "Positive reviews/recommendations",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only ask if respondent selected any option other than 'I am not currently subscribed' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the customization of products in your skincare subscription?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable"
+            ],
+            "routing_logic": "Only ask if respondent selected any option other than 'I am not currently subscribed' in Q1",
+            "client_notes": "Use a 5-point Likert scale with a neutral midpoint. Label all options for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Display vertically to avoid crowding.",
+            "script": {
+                "question_text": "How satisfied are you with the customization of products in your skincare subscription?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only ask if respondent selected any option other than 'I am not currently subscribed' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for your current skincare subscription service?",
+            "answer_options": [],
+            "routing_logic": "Only ask if respondent selected any option other than 'I am not currently subscribed' in Q1",
+            "client_notes": "Use an open-text field to capture detailed feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT. Add character counter and validation.",
+            "script": {
+                "question_text": "What improvements would you suggest for your current skincare subscription service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only ask if respondent selected any option other than 'I am not currently subscribed' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following would make you more likely to subscribe to a skincare service? (Select up to 3)",
+            "answer_options": [
+                "Lower subscription cost",
+                "More frequent product rotations",
+                "Sustainability-focused packaging",
+                "Option to skip/pause deliveries",
+                "Live dermatologist consultations",
+                "Loyalty rewards program",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Ask all respondents",
+            "client_notes": "Limit selections to 3 to prioritize preferences. Randomize option order except for 'Other'.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with max 3 selections. Enforce limit via validation.",
+            "script": {
+                "question_text": "Which of the following would make you more likely to subscribe to a skincare service? (Select up to 3)",
+                "answer_options": [
+                    "Lower subscription cost",
+                    "More frequent product rotations",
+                    "Sustainability-focused packaging",
+                    "Option to skip/pause deliveries",
+                    "Live dermatologist consultations",
+                    "Loyalty rewards program",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Ask all respondents"
+            }
+        }
+    ]
+}

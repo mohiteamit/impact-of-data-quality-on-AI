@@ -1,0 +1,133 @@
+{
+    "survey_id": "d2294179-7699-4554-bb02-b0e9d5ad76e0",
+    "survey_name": "Customer Satisfaction with Subscription-Based Streaming Music Services Survey",
+    "survey_brief": "This survey aims to gather feedback on customer satisfaction with subscription-based music streaming services, exploring usage patterns, feature preferences, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which subscription-based music streaming service do you primarily use?",
+            "answer_options": [
+                "Spotify",
+                "Apple Music",
+                "Amazon Music",
+                "YouTube Music",
+                "Tidal",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Ensure 'Other' includes an open-text field for specification. Mobile-friendly dropdown recommended.",
+            "scripter_notes": "Field type: Single-choice dropdown with 'Other' triggering a text input.",
+            "script": {
+                "question_text": "Which subscription-based music streaming service do you primarily use?",
+                "answer_options": [
+                    "Spotify",
+                    "Apple Music",
+                    "Amazon Music",
+                    "YouTube Music",
+                    "Tidal",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary music streaming service?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents after Q1",
+            "client_notes": "Use a 5-point Likert scale. Ensure options are evenly spaced for consistency.",
+            "scripter_notes": "Field type: Radio buttons with horizontal layout.",
+            "script": {
+                "question_text": "How satisfied are you with your primary music streaming service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents after Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you value most in your music streaming service? (Select up to 3)",
+            "answer_options": [
+                "Audio quality",
+                "Personalized playlists",
+                "Offline listening",
+                "Podcast availability",
+                "Exclusive content",
+                "User interface design",
+                "Integration with smart devices",
+                "Price"
+            ],
+            "routing_logic": "Appears to all respondents after Q2",
+            "client_notes": "Multi-select with a max of 3 choices. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: Checkboxes with validation for ≤3 selections.",
+            "script": {
+                "question_text": "What features do you value most in your music streaming service? (Select up to 3)",
+                "answer_options": [
+                    "Audio quality",
+                    "Personalized playlists",
+                    "Offline listening",
+                    "Podcast availability",
+                    "Exclusive content",
+                    "User interface design",
+                    "Integration with smart devices",
+                    "Price"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents after Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How frequently do you discover new music through your streaming service?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents after Q3",
+            "client_notes": "Use a frequency scale. Tooltip: 'Discovery includes algorithm recommendations, playlists, or curated content.'",
+            "scripter_notes": "Field type: Radio buttons with vertical layout.",
+            "script": {
+                "question_text": "How frequently do you discover new music through your streaming service?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents after Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in your music streaming service?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents after Q4",
+            "client_notes": "Open-ended to capture qualitative feedback. Set a 500-character limit.",
+            "scripter_notes": "Field type: Open-text area with character counter.",
+            "script": {
+                "question_text": "What improvements would you like to see in your music streaming service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents after Q4"
+            }
+        }
+    ]
+}

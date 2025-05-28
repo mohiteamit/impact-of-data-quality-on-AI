@@ -1,0 +1,113 @@
+{
+    "survey_id": "8423fd32-1ecc-411f-b7a9-bbf23f179a4f",
+    "survey_name": "Adoption and Satisfaction of AI-Powered Personal Nutrition Planning Survey",
+    "survey_brief": "This survey aims to understand the adoption rates and satisfaction levels of users who have tried AI-powered personal nutrition planning tools.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you ever used an AI-powered personal nutrition planning tool?",
+            "answer_options": [
+                "Yes, currently using",
+                "Yes, but no longer using",
+                "No, but interested in trying",
+                "No, not interested"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "This question helps segment users and non-users for further questions.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Have you ever used an AI-powered personal nutrition planning tool?",
+                "answer_options": [
+                    "Yes, currently using",
+                    "Yes, but no longer using",
+                    "No, but interested in trying",
+                    "No, not interested"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current AI-powered nutrition planning tool?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears only if Q1 is 'Yes, currently using'",
+            "client_notes": "Use a Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with your current AI-powered nutrition planning tool?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 is 'Yes, currently using'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you find most useful in an AI-powered nutrition planning tool? (Select all that apply)",
+            "answer_options": [
+                "Personalized meal recommendations",
+                "Nutrition tracking",
+                "Integration with fitness apps",
+                "Grocery shopping lists",
+                "Recipe suggestions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 is 'Yes, currently using' or 'Yes, but no longer using'",
+            "client_notes": "This helps identify which features are most valued by users.",
+            "scripter_notes": "Use checkboxes for multi-choice selection and include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "What features do you find most useful in an AI-powered nutrition planning tool? (Select all that apply)",
+                "answer_options": [
+                    "Personalized meal recommendations",
+                    "Nutrition tracking",
+                    "Integration with fitness apps",
+                    "Grocery shopping lists",
+                    "Recipe suggestions",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 is 'Yes, currently using' or 'Yes, but no longer using'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors would encourage you to try an AI-powered nutrition planning tool?",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q1 is 'No, but interested in trying'",
+            "client_notes": "Open-ended question to gather qualitative insights on motivators.",
+            "scripter_notes": "Use an open-text field for respondents to type their answers.",
+            "script": {
+                "question_text": "What factors would encourage you to try an AI-powered nutrition planning tool?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q1 is 'No, but interested in trying'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for AI-powered nutrition planning tools?",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q1 is 'Yes, currently using' or 'Yes, but no longer using'",
+            "client_notes": "Open-ended question to gather feedback for product improvement.",
+            "scripter_notes": "Use an open-text field for respondents to type their answers.",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-powered nutrition planning tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q1 is 'Yes, currently using' or 'Yes, but no longer using'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,127 @@
+{
+    "survey_id": "bd6057f1-7431-41f4-994d-f53665b88577",
+    "survey_name": "Mobile Banking App Feature Prioritization Survey",
+    "survey_brief": "This survey aims to gather customer feedback on which features are most important in a mobile banking app to prioritize development and improvements.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use your bank's mobile app?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "This helps segment users by engagement level. Consider using a radio button for single selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use your bank's mobile app?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following mobile banking features do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Balance checking",
+                "Fund transfers",
+                "Bill payments",
+                "Mobile check deposit",
+                "Customer service chat",
+                "Budgeting tools",
+                "None of the above"
+            ],
+            "routing_logic": "This question appears for all respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1.",
+            "client_notes": "This identifies high-usage features. Checkboxes allow multiple selections.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Skip if Q1 response was 'Rarely' or 'Never'.",
+            "script": {
+                "question_text": "Which of the following mobile banking features do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Balance checking",
+                    "Fund transfers",
+                    "Bill payments",
+                    "Mobile check deposit",
+                    "Customer service chat",
+                    "Budgeting tools",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What additional features would you like to see in your mobile banking app?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1.",
+            "client_notes": "Open-ended to capture unmet needs. Keep the text box mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT). Skip if Q1 response was 'Rarely' or 'Never'.",
+            "script": {
+                "question_text": "What additional features would you like to see in your mobile banking app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current mobile banking app's security features?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for all respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1.",
+            "client_notes": "Use a 5-point Likert scale for satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Skip if Q1 response was 'Rarely' or 'Never'.",
+            "script": {
+                "question_text": "How satisfied are you with your current mobile banking app's security features?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to use biometric authentication (fingerprint or face recognition) for your mobile banking app?",
+            "answer_options": [
+                "Yes, I already use it",
+                "Yes, I would be willing",
+                "No, I prefer traditional passwords",
+                "Unsure"
+            ],
+            "routing_logic": "This question appears for all respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1.",
+            "client_notes": "This gauges readiness for advanced security features.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Skip if Q1 response was 'Rarely' or 'Never'.",
+            "script": {
+                "question_text": "Would you be willing to use biometric authentication (fingerprint or face recognition) for your mobile banking app?",
+                "answer_options": [
+                    "Yes, I already use it",
+                    "Yes, I would be willing",
+                    "No, I prefer traditional passwords",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents who answered 'Daily', 'Weekly', or 'Monthly' to Q1."
+            }
+        }
+    ]
+}

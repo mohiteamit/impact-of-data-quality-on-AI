@@ -1,0 +1,197 @@
+{
+    "survey_id": "ec0a8e7c-728d-4910-90e2-8a41e00eb4d9",
+    "survey_name": "Gen Z Financial Literacy and Banking Preferences Survey",
+    "survey_brief": "This survey aims to understand the financial literacy levels, banking preferences, and digital banking behaviors of Generation Z individuals (born between 1997-2012).",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How would you rate your overall financial literacy?",
+            "answer_options": [
+                "Very knowledgeable",
+                "Somewhat knowledgeable",
+                "Neutral",
+                "Somewhat lacking",
+                "Very lacking"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "How would you rate your overall financial literacy?",
+                "answer_options": [
+                    "Very knowledgeable",
+                    "Somewhat knowledgeable",
+                    "Neutral",
+                    "Somewhat lacking",
+                    "Very lacking"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which financial topics do you feel least confident about? (Select all that apply)",
+            "answer_options": [
+                "Budgeting",
+                "Investing",
+                "Credit scores",
+                "Taxes",
+                "Loans/mortgages",
+                "Retirement planning",
+                "Cryptocurrency",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question. Include an 'Other' option with text field for additional insights.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with optional text input for 'Other'.",
+            "script": {
+                "question_text": "Which financial topics do you feel least confident about? (Select all that apply)",
+                "answer_options": [
+                    "Budgeting",
+                    "Investing",
+                    "Credit scores",
+                    "Taxes",
+                    "Loans/mortgages",
+                    "Retirement planning",
+                    "Cryptocurrency",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary banking method?",
+            "answer_options": [
+                "Traditional bank with physical branches",
+                "Online-only bank",
+                "Mobile payment apps (e.g., Venmo, Cash App)",
+                "Cryptocurrency wallets",
+                "Prepaid debit cards",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice with 'Other' option. Helps identify banking channel preferences.",
+            "scripter_notes": "Field type: Single-choice radio buttons with optional text input for 'Other'.",
+            "script": {
+                "question_text": "What is your primary banking method?",
+                "answer_options": [
+                    "Traditional bank with physical branches",
+                    "Online-only bank",
+                    "Mobile payment apps (e.g., Venmo, Cash App)",
+                    "Cryptocurrency wallets",
+                    "Prepaid debit cards",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What features are most important to you in a mobile banking app?",
+            "answer_options": [
+                "User-friendly interface",
+                "Biometric login (fingerprint/face ID)",
+                "Real-time spending alerts",
+                "Budgeting tools",
+                "Peer-to-peer payments",
+                "Investment integration",
+                "24/7 customer support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents who selected 'Online-only bank' or 'Mobile payment apps' in Q3",
+            "client_notes": "Multi-select question to prioritize feature development. Include skip logic for non-digital banking users.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with conditional display based on Q3 responses.",
+            "script": {
+                "question_text": "What features are most important to you in a mobile banking app?",
+                "answer_options": [
+                    "User-friendly interface",
+                    "Biometric login (fingerprint/face ID)",
+                    "Real-time spending alerts",
+                    "Budgeting tools",
+                    "Peer-to-peer payments",
+                    "Investment integration",
+                    "24/7 customer support",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents who selected 'Online-only bank' or 'Mobile payment apps' in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What barriers prevent you from investing?",
+            "answer_options": [
+                "Lack of knowledge",
+                "Not enough money to start",
+                "Fear of losing money",
+                "Don't know where to start",
+                "Prefer other savings methods",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Identify key investment barriers. Use multi-select to capture overlapping concerns.",
+            "scripter_notes": "Field type: Multi-choice checkboxes with optional text input for 'Other'.",
+            "script": {
+                "question_text": "What barriers prevent you from investing?",
+                "answer_options": [
+                    "Lack of knowledge",
+                    "Not enough money to start",
+                    "Fear of losing money",
+                    "Don't know where to start",
+                    "Prefer other savings methods",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How did you primarily learn about personal finance?",
+            "answer_options": [
+                "Family/parents",
+                "School/education",
+                "Online resources",
+                "Social media",
+                "Financial institutions",
+                "Trial and error",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice question to identify knowledge sources. Helps target financial education efforts.",
+            "scripter_notes": "Field type: Single-choice radio buttons with optional text input for 'Other'.",
+            "script": {
+                "question_text": "How did you primarily learn about personal finance?",
+                "answer_options": [
+                    "Family/parents",
+                    "School/education",
+                    "Online resources",
+                    "Social media",
+                    "Financial institutions",
+                    "Trial and error",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What would make you more likely to use financial planning services?",
+            "answer_options": [],
+            "routing_logic": "All respondents who rated their financial literacy as 'Somewhat lacking' or 'Very lacking' in Q1",
+            "client_notes": "Open-ended question to capture qualitative insights. Limit response to 300 characters.",
+            "scripter_notes": "Field type: Open text input with character limit. Display only for respondents with low financial literacy self-assessment.",
+            "script": {
+                "question_text": "What would make you more likely to use financial planning services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents who rated their financial literacy as 'Somewhat lacking' or 'Very lacking' in Q1"
+            }
+        }
+    ]
+}

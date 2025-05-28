@@ -1,0 +1,125 @@
+{
+    "survey_id": "44280bdc-5769-443c-bc54-514d50bd7936",
+    "survey_name": "Employee Satisfaction with On-Demand Corporate Mental Wellness Programs Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction and engagement with on-demand mental wellness programs provided by the company, assessing accessibility, effectiveness, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the company's on-demand mental wellness programs?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button layout for clarity. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use the company's on-demand mental wellness programs?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following mental wellness program features do you find most valuable? (Select all that apply)",
+            "answer_options": [
+                "Guided meditation sessions",
+                "24/7 counseling hotline",
+                "Stress management workshops",
+                "Sleep improvement resources",
+                "Nutrition and fitness guidance"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use checkboxes for multi-select. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following mental wellness program features do you find most valuable? (Select all that apply)",
+                "answer_options": [
+                    "Guided meditation sessions",
+                    "24/7 counseling hotline",
+                    "Stress management workshops",
+                    "Sleep improvement resources",
+                    "Nutrition and fitness guidance"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accessibility of these mental wellness programs?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point Likert scale for consistency. Label all points to reduce ambiguity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the accessibility of these mental wellness programs?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the company's mental wellness programs?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended responses may reveal unanticipated insights. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for the company's mental wellness programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Has participation in these programs positively impacted your work performance or well-being?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, moderately",
+                "Slightly",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Show if Q1 != 'Never'",
+            "client_notes": "Use a single-choice layout with a neutral option for honest feedback.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Skip logic based on Q1.",
+            "script": {
+                "question_text": "Has participation in these programs positively impacted your work performance or well-being?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, moderately",
+                    "Slightly",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 != 'Never'"
+            }
+        }
+    ]
+}

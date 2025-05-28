@@ -1,0 +1,155 @@
+{
+    "survey_id": "130f9b4b-8caf-4917-83d6-3d25b3418a1b",
+    "survey_name": "Employee Satisfaction with Workplace AI Tool Adoption Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the adoption and effectiveness of AI-powered tools in the workplace, focusing on usability, benefits, and potential areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the AI-powered tools currently available in your workplace?",
+            "answer_options": [
+                "Very familiar, I use them regularly",
+                "Somewhat familiar, I have used them a few times",
+                "Not very familiar, I have heard about them but not used them",
+                "Not at all familiar"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice scale to measure familiarity levels. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How familiar are you with the AI-powered tools currently available in your workplace?",
+                "answer_options": [
+                    "Very familiar, I use them regularly",
+                    "Somewhat familiar, I have used them a few times",
+                    "Not very familiar, I have heard about them but not used them",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI-powered tools have you used in the past 3 months? (Select all that apply)",
+            "answer_options": [
+                "AI-powered virtual meeting assistants",
+                "AI-powered data analytics tools",
+                "AI-powered customer support chatbots",
+                "AI-powered HR and recruitment tools",
+                "AI-powered performance feedback tools",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents except those who selected 'Not at all familiar' in Q1",
+            "client_notes": "Use a multi-choice format to capture multiple tool usage. Consider randomizing the order of options.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which of the following AI-powered tools have you used in the past 3 months? (Select all that apply)",
+                "answer_options": [
+                    "AI-powered virtual meeting assistants",
+                    "AI-powered data analytics tools",
+                    "AI-powered customer support chatbots",
+                    "AI-powered HR and recruitment tools",
+                    "AI-powered performance feedback tools",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents except those who selected 'Not at all familiar' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the AI-powered tools provided by your workplace?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents who selected at least one tool in Q2",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure clear labeling of scale points.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the AI-powered tools provided by your workplace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected at least one tool in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What benefits have you experienced from using AI-powered tools at work? (Select all that apply)",
+            "answer_options": [
+                "Increased productivity",
+                "Reduced repetitive tasks",
+                "Improved decision-making",
+                "Better collaboration with team members",
+                "Faster access to information",
+                "No significant benefits"
+            ],
+            "routing_logic": "Appears for respondents who selected at least one tool in Q2",
+            "client_notes": "Use a multi-choice format to capture multiple benefits. Randomize options to avoid bias.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "What benefits have you experienced from using AI-powered tools at work? (Select all that apply)",
+                "answer_options": [
+                    "Increased productivity",
+                    "Reduced repetitive tasks",
+                    "Improved decision-making",
+                    "Better collaboration with team members",
+                    "Faster access to information",
+                    "No significant benefits"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who selected at least one tool in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced when using AI-powered tools at work? (Select all that apply)",
+            "answer_options": [
+                "Difficulty learning how to use the tools",
+                "Lack of integration with existing systems",
+                "Inaccurate or unreliable results",
+                "Privacy or security concerns",
+                "Limited access or availability of tools",
+                "No significant challenges"
+            ],
+            "routing_logic": "Appears for respondents who selected at least one tool in Q2",
+            "client_notes": "Use a multi-choice format to capture multiple challenges. Include an option for no challenges.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "What challenges have you faced when using AI-powered tools at work? (Select all that apply)",
+                "answer_options": [
+                    "Difficulty learning how to use the tools",
+                    "Lack of integration with existing systems",
+                    "Inaccurate or unreliable results",
+                    "Privacy or security concerns",
+                    "Limited access or availability of tools",
+                    "No significant challenges"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who selected at least one tool in Q2"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What additional AI-powered tools or features would you like to see implemented in your workplace?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use an open-ended text field to gather qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: open text (free response).",
+            "script": {
+                "question_text": "What additional AI-powered tools or features would you like to see implemented in your workplace?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

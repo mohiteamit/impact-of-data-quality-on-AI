@@ -1,0 +1,129 @@
+{
+    "survey_id": "e25ab155-9e56-43d7-9b65-6a252e94a8fd",
+    "survey_name": "Consumer Preferences for Augmented Reality (AR) Shopping Experiences Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and experiences with augmented reality (AR) technology in shopping, including adoption barriers, feature preferences, and satisfaction levels.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you ever used an Augmented Reality (AR) feature while shopping online or in-store?",
+            "answer_options": [
+                "Yes, online shopping",
+                "Yes, in-store shopping",
+                "No, never used AR for shopping"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps segment users and non-users of AR shopping features. Consider adding a follow-up question for 'No' responses to explore reasons.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "Have you ever used an Augmented Reality (AR) feature while shopping online or in-store?",
+                "answer_options": [
+                    "Yes, online shopping",
+                    "Yes, in-store shopping",
+                    "No, never used AR for shopping"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of products have you used AR to visualize before purchasing? (Select all that apply)",
+            "answer_options": [
+                "Furniture/home decor",
+                "Clothing/apparel",
+                "Eyewear (glasses/sunglasses)",
+                "Cosmetics",
+                "Electronics",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only if Q1 answered with 'Yes, online shopping' or 'Yes, in-store shopping'",
+            "client_notes": "Multi-select question to identify popular product categories for AR visualization. Include an 'Other' field to capture unexpected responses.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes) with optional text input for 'Other'",
+            "script": {
+                "question_text": "Which types of products have you used AR to visualize before purchasing? (Select all that apply)",
+                "answer_options": [
+                    "Furniture/home decor",
+                    "Clothing/apparel",
+                    "Eyewear (glasses/sunglasses)",
+                    "Cosmetics",
+                    "Electronics",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only if Q1 answered with 'Yes, online shopping' or 'Yes, in-store shopping'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your AR shopping experiences?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only if Q1 answered with 'Yes, online shopping' or 'Yes, in-store shopping'",
+            "client_notes": "5-point Likert scale recommended for standardized satisfaction measurement. Consider benchmarking against industry standards.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with your AR shopping experiences?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only if Q1 answered with 'Yes, online shopping' or 'Yes, in-store shopping'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What factors would encourage you to use AR for shopping more frequently? (Select up to 3)",
+            "answer_options": [
+                "More accurate product visualization",
+                "Faster loading times",
+                "Integration with more retailers",
+                "Better mobile app performance",
+                "In-store AR navigation assistance",
+                "Virtual try-on for more product categories",
+                "Social sharing features",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Prioritization question to identify key improvement areas. Limit selections to force ranking.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes) with max 3 selections and optional text input for 'Other'",
+            "script": {
+                "question_text": "What factors would encourage you to use AR for shopping more frequently? (Select up to 3)",
+                "answer_options": [
+                    "More accurate product visualization",
+                    "Faster loading times",
+                    "Integration with more retailers",
+                    "Better mobile app performance",
+                    "In-store AR navigation assistance",
+                    "Virtual try-on for more product categories",
+                    "Social sharing features",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What concerns, if any, do you have about using AR for shopping?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative insights about barriers. Consider text analysis for common themes.",
+            "scripter_notes": "Field type: Open text (paragraph)",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using AR for shopping?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

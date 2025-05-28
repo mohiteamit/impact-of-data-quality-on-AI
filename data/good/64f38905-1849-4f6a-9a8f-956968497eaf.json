@@ -1,0 +1,125 @@
+{
+    "survey_id": "64f38905-1849-4f6a-9a8f-956968497eaf",
+    "survey_name": "Adoption of AI in Small Business Marketing Survey",
+    "survey_brief": "This survey aims to understand how small businesses are adopting AI tools in their marketing strategies, the challenges they face, and the benefits they experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following AI tools do you currently use in your marketing efforts?",
+            "answer_options": [
+                "Chatbots for customer service",
+                "AI-powered content creation tools",
+                "Predictive analytics for customer behavior",
+                "AI-driven email marketing platforms",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a multi-choice format to allow selection of multiple tools if applicable.",
+            "scripter_notes": "Field type: Checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following AI tools do you currently use in your marketing efforts?",
+                "answer_options": [
+                    "Chatbots for customer service",
+                    "AI-powered content creation tools",
+                    "Predictive analytics for customer behavior",
+                    "AI-driven email marketing platforms",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the AI tools you currently use?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'None of the above'",
+            "client_notes": "Use a single-choice Likert scale for clarity.",
+            "scripter_notes": "Field type: Radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the AI tools you currently use?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the main challenges you face when implementing AI in your marketing?",
+            "answer_options": [
+                "High cost of tools",
+                "Lack of technical expertise",
+                "Difficulty integrating with existing systems",
+                "Uncertain ROI",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'None of the above'",
+            "client_notes": "Include an 'Other' option with a text field for additional insights.",
+            "scripter_notes": "Field type: Checkbox with optional open text (MULTI_CHOICE with open-ended follow-up)",
+            "script": {
+                "question_text": "What are the main challenges you face when implementing AI in your marketing?",
+                "answer_options": [
+                    "High cost of tools",
+                    "Lack of technical expertise",
+                    "Difficulty integrating with existing systems",
+                    "Uncertain ROI",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If you are not using AI tools in your marketing, what is the primary reason?",
+            "answer_options": [
+                "Unaware of suitable tools",
+                "Budget constraints",
+                "Lack of perceived need",
+                "Concerns about data privacy",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is 'None of the above'",
+            "client_notes": "Include an 'Other' option with a text field for detailed responses.",
+            "scripter_notes": "Field type: Radio button with optional open text (SINGLE_CHOICE with open-ended follow-up)",
+            "script": {
+                "question_text": "If you are not using AI tools in your marketing, what is the primary reason?",
+                "answer_options": [
+                    "Unaware of suitable tools",
+                    "Budget constraints",
+                    "Lack of perceived need",
+                    "Concerns about data privacy",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How do you envision AI impacting your marketing strategy in the next 2 years?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture qualitative insights.",
+            "scripter_notes": "Field type: Open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "How do you envision AI impacting your marketing strategy in the next 2 years?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

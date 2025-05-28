@@ -1,0 +1,123 @@
+{
+    "survey_id": "a5403dc5-329a-42e0-b876-36c06ed09fd9",
+    "survey_name": "Employee Satisfaction with AI-Powered HR Chatbots Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction and experiences with AI-powered HR chatbots in the workplace, focusing on usability, effectiveness, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the AI-powered HR chatbot in your workplace?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale to ensure clarity. Consider adding a 'Not applicable' option if necessary.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use the AI-powered HR chatbot in your workplace?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following tasks have you used the HR chatbot for? (Select all that apply)",
+            "answer_options": [
+                "Leave requests",
+                "Payroll inquiries",
+                "Benefits information",
+                "Training and development",
+                "Policy questions",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a multi-choice format to capture all relevant interactions. Include an 'Other' option for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following tasks have you used the HR chatbot for? (Select all that apply)",
+                "answer_options": [
+                    "Leave requests",
+                    "Payroll inquiries",
+                    "Benefits information",
+                    "Training and development",
+                    "Policy questions",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the AI-powered HR chatbot? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a Likert scale for accurate measurement of satisfaction levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the AI-powered HR chatbot? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the AI-powered HR chatbot?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure mobile-friendly text input.",
+            "scripter_notes": "Field type: text box (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for the AI-powered HR chatbot?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend the AI-powered HR chatbot to a colleague?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Single-choice question to measure overall recommendation likelihood.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend the AI-powered HR chatbot to a colleague?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        }
+    ]
+}

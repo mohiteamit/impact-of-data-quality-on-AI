@@ -1,0 +1,121 @@
+{
+    "survey_id": "93adb039-fd7f-4d7d-b41d-3f80a4f61439",
+    "survey_name": "Customer Satisfaction with Biometric Payment Systems Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and experience with biometric payment systems, including fingerprint and facial recognition technologies, at retail and online stores.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use biometric payment systems (e.g., fingerprint or facial recognition) for purchases?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a single-choice radio button for clarity.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How frequently do you use biometric payment systems (e.g., fingerprint or facial recognition) for purchases?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons you use biometric payment systems? (Select all that apply)",
+            "answer_options": [
+                "Speed and convenience",
+                "Security",
+                "Avoid carrying physical cards or cash",
+                "Novelty/Interest in new technology",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Allow multiple selections; include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are the primary reasons you use biometric payment systems? (Select all that apply)",
+                "answer_options": [
+                    "Speed and convenience",
+                    "Security",
+                    "Avoid carrying physical cards or cash",
+                    "Novelty/Interest in new technology",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the security of biometric payment systems?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "How satisfied are you with the security of biometric payment systems?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What concerns, if any, do you have about using biometric payment systems?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using biometric payment systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend biometric payment systems to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Single-choice question to gauge recommendation likelihood.",
+            "scripter_notes": "Field type: SINGLE_CHOICE",
+            "script": {
+                "question_text": "Would you recommend biometric payment systems to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        }
+    ]
+}

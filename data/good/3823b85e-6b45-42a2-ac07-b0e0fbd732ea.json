@@ -1,0 +1,135 @@
+{
+    "survey_id": "3823b85e-6b45-42a2-ac07-b0e0fbd732ea",
+    "survey_name": "Customer Satisfaction with Drone Delivery Services Survey",
+    "survey_brief": "This survey aims to gather customer feedback on the experience, reliability, and satisfaction levels with drone delivery services to identify areas for improvement and enhance service quality.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use drone delivery services?",
+            "answer_options": [
+                "Never",
+                "Rarely (less than once a month)",
+                "Occasionally (1-3 times a month)",
+                "Frequently (more than 3 times a month)"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice question to assess usage frequency. Ensure the options cover all possible ranges clearly.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use drone delivery services?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (less than once a month)",
+                    "Occasionally (1-3 times a month)",
+                    "Frequently (more than 3 times a month)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of items have you received via drone delivery? (Select all that apply)",
+            "answer_options": [
+                "Food and beverages",
+                "Pharmaceuticals",
+                "Electronics",
+                "Clothing and accessories",
+                "Books and media",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears only if the respondent selects 'Rarely', 'Occasionally', or 'Frequently' in Q1.",
+            "client_notes": "Use a multi-choice question to identify common delivery items. Include an 'Other' option to capture additional responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "What types of items have you received via drone delivery? (Select all that apply)",
+                "answer_options": [
+                    "Food and beverages",
+                    "Pharmaceuticals",
+                    "Electronics",
+                    "Clothing and accessories",
+                    "Books and media",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears only if the respondent selects 'Rarely', 'Occasionally', or 'Frequently' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the speed of drone deliveries? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "This question appears only if the respondent selects 'Rarely', 'Occasionally', or 'Frequently' in Q1.",
+            "client_notes": "Use a Likert scale to measure satisfaction with delivery speed. Ensure the scale is labeled clearly.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the speed of drone deliveries? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears only if the respondent selects 'Rarely', 'Occasionally', or 'Frequently' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for drone delivery services?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents who have used drone delivery services (selected 'Rarely', 'Occasionally', or 'Frequently' in Q1).",
+            "client_notes": "Use an open-ended question to gather qualitative feedback. Allow for detailed responses.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for drone delivery services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents who have used drone delivery services (selected 'Rarely', 'Occasionally', or 'Frequently' in Q1)."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend drone delivery services to others? (1 = Not at all likely, 10 = Extremely likely)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10"
+            ],
+            "routing_logic": "This question appears only if the respondent selects 'Rarely', 'Occasionally', or 'Frequently' in Q1.",
+            "client_notes": "Use a numeric scale to measure Net Promoter Score (NPS). Ensure the scale is intuitive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How likely are you to recommend drone delivery services to others? (1 = Not at all likely, 10 = Extremely likely)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears only if the respondent selects 'Rarely', 'Occasionally', or 'Frequently' in Q1."
+            }
+        }
+    ]
+}

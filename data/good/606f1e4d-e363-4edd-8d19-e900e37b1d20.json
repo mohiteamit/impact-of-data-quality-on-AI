@@ -1,0 +1,129 @@
+{
+    "survey_id": "606f1e4d-e363-4edd-8d19-e900e37b1d20",
+    "survey_name": "Telemedicine Platform User Experience Survey",
+    "survey_brief": "This survey aims to gather feedback from users of telemedicine platforms to understand their experiences, satisfaction levels, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use telemedicine platforms?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure the options cover all possible usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use telemedicine platforms?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What types of healthcare services have you accessed via telemedicine? (Select all that apply)",
+            "answer_options": [
+                "Primary care consultations",
+                "Mental health services",
+                "Chronic disease management",
+                "Prescription refills",
+                "Specialist consultations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 is not 'Never'",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What types of healthcare services have you accessed via telemedicine? (Select all that apply)",
+                "answer_options": [
+                    "Primary care consultations",
+                    "Mental health services",
+                    "Chronic disease management",
+                    "Prescription refills",
+                    "Specialist consultations",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall experience of using telemedicine platforms?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 is not 'Never'",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the overall experience of using telemedicine platforms?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced while using telemedicine platforms? (Select all that apply)",
+            "answer_options": [
+                "Technical issues (e.g., poor connectivity)",
+                "Difficulty navigating the platform",
+                "Limited availability of providers",
+                "Privacy concerns",
+                "Lack of personal interaction",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 is not 'Never'",
+            "client_notes": "Use checkboxes for multiple selections. Include an 'Other' option for additional challenges.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What challenges have you faced while using telemedicine platforms? (Select all that apply)",
+                "answer_options": [
+                    "Technical issues (e.g., poor connectivity)",
+                    "Difficulty navigating the platform",
+                    "Limited availability of providers",
+                    "Privacy concerns",
+                    "Lack of personal interaction",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for telemedicine platforms?",
+            "answer_options": [],
+            "routing_logic": "If Q1 is not 'Never'",
+            "client_notes": "Use an open-ended text field to capture detailed feedback. Ensure the field is mobile-friendly.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for telemedicine platforms?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 is not 'Never'"
+            }
+        }
+    ]
+}

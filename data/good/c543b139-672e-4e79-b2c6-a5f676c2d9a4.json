@@ -1,0 +1,127 @@
+{
+    "survey_id": "c543b139-672e-4e79-b2c6-a5f676c2d9a4",
+    "survey_name": "Consumer Preferences for AI-Powered Grocery Shopping Assistants Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and adoption barriers for AI-powered grocery shopping assistants, focusing on features, usability, and trust factors.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you currently use AI-powered tools or assistants for grocery shopping?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button layout for clarity. Randomize answer order to avoid bias.",
+            "scripter_notes": "Field type: single-choice radio buttons with 'Never' as an anchor option.",
+            "script": {
+                "question_text": "How often do you currently use AI-powered tools or assistants for grocery shopping?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features would you find most valuable in an AI-powered grocery shopping assistant? (Select up to 3)",
+            "answer_options": [
+                "Personalized recipe suggestions based on pantry items",
+                "Automatic price comparison across stores",
+                "Expiration date tracking for perishables",
+                "Nutritional profile analysis",
+                "Meal-planning automation",
+                "Allergy/dietary restriction filters",
+                "One-click reordering of staples"
+            ],
+            "routing_logic": "If Q1 ≠ 'Never'",
+            "client_notes": "Multi-select with a 3-option limit. Display options in a grid layout for mobile compatibility.",
+            "scripter_notes": "Field type: multi-choice checkboxes with max-selection validation.",
+            "script": {
+                "question_text": "Which features would you find most valuable in an AI-powered grocery shopping assistant? (Select up to 3)",
+                "answer_options": [
+                    "Personalized recipe suggestions based on pantry items",
+                    "Automatic price comparison across stores",
+                    "Expiration date tracking for perishables",
+                    "Nutritional profile analysis",
+                    "Meal-planning automation",
+                    "Allergy/dietary restriction filters",
+                    "One-click reordering of staples"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your primary concern about using AI for grocery shopping?",
+            "answer_options": [
+                "Data privacy/security",
+                "Accuracy of recommendations",
+                "Lack of human touch in shopping experience",
+                "Difficulty correcting errors",
+                "No concerns"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other (please specify)' open-field option. Randomize first 4 options.",
+            "scripter_notes": "Field type: single-choice with optional text field for 'Other'.",
+            "script": {
+                "question_text": "What is your primary concern about using AI for grocery shopping?",
+                "answer_options": [
+                    "Data privacy/security",
+                    "Accuracy of recommendations",
+                    "Lack of human touch in shopping experience",
+                    "Difficulty correcting errors",
+                    "No concerns"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe your ideal AI grocery assistant in 1-2 sentences.",
+            "answer_options": [],
+            "routing_logic": "If Q1 ≠ 'Never'",
+            "client_notes": "Use character counter (max 200). Placeholder text: 'e.g., An assistant that learns my family's preferences...'",
+            "scripter_notes": "Field type: open-text with length validation.",
+            "script": {
+                "question_text": "Describe your ideal AI grocery assistant in 1-2 sentences.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you pay a subscription fee for a premium AI grocery assistant?",
+            "answer_options": [
+                "Yes, if under $5/month",
+                "Yes, $5-$10/month",
+                "Only if bundled with other services",
+                "No, would only use free version"
+            ],
+            "routing_logic": "If Q2 has any selection",
+            "client_notes": "Display as a slider for numeric options on mobile. Include 'Prefer not to answer' opt-out.",
+            "scripter_notes": "Field type: single-choice with hidden 'Prefer not to answer' option.",
+            "script": {
+                "question_text": "Would you pay a subscription fee for a premium AI grocery assistant?",
+                "answer_options": [
+                    "Yes, if under $5/month",
+                    "Yes, $5-$10/month",
+                    "Only if bundled with other services",
+                    "No, would only use free version"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q2 has any selection"
+            }
+        }
+    ]
+}

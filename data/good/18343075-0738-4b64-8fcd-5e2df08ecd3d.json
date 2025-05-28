@@ -1,0 +1,131 @@
+{
+    "survey_id": "18343075-0738-4b64-8fcd-5e2df08ecd3d",
+    "survey_name": "Professional Remote Work Productivity Software Evaluation Survey",
+    "survey_brief": "This survey aims to evaluate the effectiveness and user satisfaction of productivity software tools used in remote work environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following remote work productivity tools do you currently use? (Select all that apply)",
+            "answer_options": [
+                "Slack",
+                "Microsoft Teams",
+                "Zoom",
+                "Trello",
+                "Asana",
+                "Google Workspace",
+                "Other"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Ensure the 'Other' option allows for text input.",
+            "scripter_notes": "Use checkboxes for this multi-choice question.",
+            "script": {
+                "question_text": "Which of the following remote work productivity tools do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "Slack",
+                    "Microsoft Teams",
+                    "Zoom",
+                    "Trello",
+                    "Asana",
+                    "Google Workspace",
+                    "Other"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary productivity tool?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 is answered",
+            "client_notes": "Use a standard Likert scale for consistency.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with your primary productivity tool?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 is answered"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you find most valuable in your productivity tool? (Select all that apply)",
+            "answer_options": [
+                "Task management",
+                "Team communication",
+                "File sharing",
+                "Calendar integration",
+                "Video conferencing",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 is answered",
+            "client_notes": "Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "What features do you find most valuable in your productivity tool? (Select all that apply)",
+                "answer_options": [
+                    "Task management",
+                    "Team communication",
+                    "File sharing",
+                    "Calendar integration",
+                    "Video conferencing",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 is answered"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced while using remote work productivity tools?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Allow for open-ended responses to capture detailed feedback.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What challenges have you faced while using remote work productivity tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your primary productivity tool to a colleague?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "If Q1 is answered",
+            "client_notes": "Use a standard Likert scale for consistency.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How likely are you to recommend your primary productivity tool to a colleague?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 is answered"
+            }
+        }
+    ]
+}

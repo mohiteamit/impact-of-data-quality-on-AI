@@ -1,0 +1,165 @@
+{
+    "survey_id": "ef05eff0-9e41-4dd5-850d-61736b6f4d92",
+    "survey_name": "Employee Satisfaction with Virtual Reality (VR) Training Programs Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the effectiveness, usability, and overall satisfaction with VR-based training programs implemented in the workplace.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently have you participated in VR-based training programs in the past 6 months?",
+            "answer_options": [
+                "Never",
+                "1-2 times",
+                "3-5 times",
+                "More than 5 times"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button format. Ensure the options cover a broad range of frequencies to capture accurate participation levels.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently have you participated in VR-based training programs in the past 6 months?",
+                "answer_options": [
+                    "Never",
+                    "1-2 times",
+                    "3-5 times",
+                    "More than 5 times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following VR training topics have you experienced? (Select all that apply)",
+            "answer_options": [
+                "Safety protocols",
+                "Technical skills development",
+                "Customer service simulations",
+                "Leadership and management training",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use a multi-choice checkbox format. Include an 'Other' option with a text field for additional topics not listed.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Ensure 'Other' option triggers a text input field.",
+            "script": {
+                "question_text": "Which of the following VR training topics have you experienced? (Select all that apply)",
+                "answer_options": [
+                    "Safety protocols",
+                    "Technical skills development",
+                    "Customer service simulations",
+                    "Leadership and management training",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate the overall effectiveness of VR training compared to traditional training methods?",
+            "answer_options": [
+                "Much less effective",
+                "Somewhat less effective",
+                "About the same",
+                "Somewhat more effective",
+                "Much more effective"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use a Likert scale format for measuring perceived effectiveness. Ensure the scale is balanced and neutral.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How would you rate the overall effectiveness of VR training compared to traditional training methods?",
+                "answer_options": [
+                    "Much less effective",
+                    "Somewhat less effective",
+                    "About the same",
+                    "Somewhat more effective",
+                    "Much more effective"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What aspects of VR training did you find most beneficial? (Select up to 3)",
+            "answer_options": [
+                "Immersive learning environment",
+                "Interactive simulations",
+                "Immediate feedback",
+                "Ability to practice in a risk-free setting",
+                "Engagement and motivation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use a multi-choice format with a limit of 3 selections. Include an 'Other' option for additional feedback.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with max selections set to 3. Ensure 'Other' option triggers a text input field.",
+            "script": {
+                "question_text": "What aspects of VR training did you find most beneficial? (Select up to 3)",
+                "answer_options": [
+                    "Immersive learning environment",
+                    "Interactive simulations",
+                    "Immediate feedback",
+                    "Ability to practice in a risk-free setting",
+                    "Engagement and motivation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe any challenges or discomfort you experienced while using VR training.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use an open-ended text field to capture detailed feedback. This can help identify potential issues with the VR equipment or content.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "Please describe any challenges or discomfort you experienced while using VR training.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend VR training to your colleagues?",
+            "answer_options": [
+                "Very unlikely",
+                "Unlikely",
+                "Neutral",
+                "Likely",
+                "Very likely"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use a single-choice radio button format. This question measures the Net Promoter Score (NPS) for VR training.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How likely are you to recommend VR training to your colleagues?",
+                "answer_options": [
+                    "Very unlikely",
+                    "Unlikely",
+                    "Neutral",
+                    "Likely",
+                    "Very likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What improvements would you suggest for future VR training programs?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use an open-ended text field to gather actionable feedback for program enhancement.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for future VR training programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,139 @@
+{
+    "survey_id": "9f091541-a3cf-4a90-9d29-b00ecd17983c",
+    "survey_name": "Consumer Preferences for Voice-Controlled Home Automation Systems Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, usage patterns, and satisfaction levels with voice-controlled home automation systems to guide product development and marketing strategies.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which voice-controlled home automation systems do you currently use?",
+            "answer_options": [
+                "Amazon Alexa",
+                "Google Assistant",
+                "Apple HomeKit",
+                "Samsung SmartThings",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a multi-choice format to capture multiple device usage. Include an 'Other' option with a text field for unspecified systems.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an 'Other' option triggering a text input if selected.",
+            "script": {
+                "question_text": "Which voice-controlled home automation systems do you currently use?",
+                "answer_options": [
+                    "Amazon Alexa",
+                    "Google Assistant",
+                    "Apple HomeKit",
+                    "Samsung SmartThings",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your primary voice-controlled home automation system?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents who selected at least one system in Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with your primary voice-controlled home automation system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected at least one system in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you value most in a voice-controlled home automation system?",
+            "answer_options": [
+                "Voice recognition accuracy",
+                "Integration with other smart devices",
+                "Privacy and data security",
+                "Ease of setup and use",
+                "Customizable commands/routines",
+                "Battery life (for portable devices)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Multi-choice question to identify priority features. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE with randomized option display.",
+            "script": {
+                "question_text": "What features do you value most in a voice-controlled home automation system?",
+                "answer_options": [
+                    "Voice recognition accuracy",
+                    "Integration with other smart devices",
+                    "Privacy and data security",
+                    "Ease of setup and use",
+                    "Customizable commands/routines",
+                    "Battery life (for portable devices)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced with voice-controlled home automation systems?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture qualitative insights. Set a 300-character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit validation.",
+            "script": {
+                "question_text": "What challenges have you faced with voice-controlled home automation systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend your voice-controlled home automation system to others?",
+            "answer_options": [
+                "0 (Not at all likely)",
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "10 (Extremely likely)"
+            ],
+            "routing_logic": "Appears for respondents who selected at least one system in Q1",
+            "client_notes": "Use an 11-point NPS scale. Label only endpoints to reduce clutter.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons in a horizontal grid).",
+            "script": {
+                "question_text": "How likely are you to recommend your voice-controlled home automation system to others?",
+                "answer_options": [
+                    "0 (Not at all likely)",
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5",
+                    "6",
+                    "7",
+                    "8",
+                    "9",
+                    "10 (Extremely likely)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected at least one system in Q1"
+            }
+        }
+    ]
+}

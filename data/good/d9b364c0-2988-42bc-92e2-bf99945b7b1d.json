@@ -1,0 +1,157 @@
+{
+    "survey_id": "d9b364c0-2988-42bc-92e2-bf99945b7b1d",
+    "survey_name": "Employee Satisfaction with Digital Collaboration Tools Survey",
+    "survey_brief": "This survey aims to gather feedback from employees regarding their satisfaction and experience with the digital collaboration tools provided by the company. The insights will help improve tool selection and implementation.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which digital collaboration tools do you use most frequently for work?",
+            "answer_options": [
+                "Microsoft Teams",
+                "Slack",
+                "Zoom",
+                "Google Workspace (Docs, Sheets, etc.)",
+                "Trello/Asana",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Ensure the 'Other' option includes a text field for manual entry.",
+            "scripter_notes": "Use a MULTI_CHOICE field type with an additional open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which digital collaboration tools do you use most frequently for work?",
+                "answer_options": [
+                    "Microsoft Teams",
+                    "Slack",
+                    "Zoom",
+                    "Google Workspace (Docs, Sheets, etc.)",
+                    "Trello/Asana",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the overall performance of the digital collaboration tools you use?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels.",
+            "scripter_notes": "Use a SINGLE_CHOICE field type with radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the overall performance of the digital collaboration tools you use?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you find most valuable in your primary collaboration tool?",
+            "answer_options": [
+                "Video conferencing",
+                "File sharing",
+                "Real-time chat",
+                "Task management",
+                "Integration with other apps",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q1 is answered",
+            "client_notes": "Allow multiple selections to identify the most valued features.",
+            "scripter_notes": "Use a MULTI_CHOICE field type with an additional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What features do you find most valuable in your primary collaboration tool?",
+                "answer_options": [
+                    "Video conferencing",
+                    "File sharing",
+                    "Real-time chat",
+                    "Task management",
+                    "Integration with other apps",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 is answered"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How has the use of digital collaboration tools impacted your productivity?",
+            "answer_options": [
+                "Significantly increased",
+                "Slightly increased",
+                "No change",
+                "Slightly decreased",
+                "Significantly decreased"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Measure perceived impact on productivity.",
+            "scripter_notes": "Use a SINGLE_CHOICE field type with radio buttons.",
+            "script": {
+                "question_text": "How has the use of digital collaboration tools impacted your productivity?",
+                "answer_options": [
+                    "Significantly increased",
+                    "Slightly increased",
+                    "No change",
+                    "Slightly decreased",
+                    "Significantly decreased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges do you face when using digital collaboration tools?",
+            "answer_options": [
+                "Technical issues (e.g., lag, crashes)",
+                "Difficulty in navigation",
+                "Lack of training",
+                "Too many tools to manage",
+                "Security concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Show if Q2 response is 'Dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Identify common pain points to address in future tool selections.",
+            "scripter_notes": "Use a MULTI_CHOICE field type with an additional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What challenges do you face when using digital collaboration tools?",
+                "answer_options": [
+                    "Technical issues (e.g., lag, crashes)",
+                    "Difficulty in navigation",
+                    "Lack of training",
+                    "Too many tools to manage",
+                    "Security concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q2 response is 'Dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Do you have any suggestions for improving the digital collaboration tools used in your team?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended question to gather qualitative feedback.",
+            "scripter_notes": "Use an OPEN_TEXT field type with a large text box.",
+            "script": {
+                "question_text": "Do you have any suggestions for improving the digital collaboration tools used in your team?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

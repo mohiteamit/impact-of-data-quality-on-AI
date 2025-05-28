@@ -1,0 +1,129 @@
+{
+    "survey_id": "8725aacf-d493-498a-85bc-23c32b45880b",
+    "survey_name": "Consumer Preferences for Smart Window Shades Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and purchasing behaviors regarding smart window shades, including desired features, price sensitivity, and brand awareness.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with smart window shades?",
+            "answer_options": [
+                "Not familiar at all",
+                "Somewhat familiar",
+                "Very familiar",
+                "I currently own smart window shades"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Use a 4-point Likert scale to measure familiarity. Avoid neutral midpoints to force directional responses.",
+            "scripter_notes": "Field type: Radio buttons (single choice)",
+            "script": {
+                "question_text": "How familiar are you with smart window shades?",
+                "answer_options": [
+                    "Not familiar at all",
+                    "Somewhat familiar",
+                    "Very familiar",
+                    "I currently own smart window shades"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features would be most important to you in smart window shades? (Select up to 3)",
+            "answer_options": [
+                "Voice control (e.g., Alexa, Google Assistant)",
+                "Automated scheduling/timers",
+                "Sunlight/UV level adjustment",
+                "Energy usage tracking",
+                "Remote control via smartphone app",
+                "Integration with other smart home devices",
+                "Privacy modes"
+            ],
+            "routing_logic": "Respondents who selected 'Somewhat familiar', 'Very familiar', or 'I currently own' in Q1",
+            "client_notes": "Multi-select question. Limit to 3 choices to prioritize features.",
+            "scripter_notes": "Field type: Checkboxes (multi-choice) with max selection limit",
+            "script": {
+                "question_text": "Which of the following features would be most important to you in smart window shades? (Select up to 3)",
+                "answer_options": [
+                    "Voice control (e.g., Alexa, Google Assistant)",
+                    "Automated scheduling/timers",
+                    "Sunlight/UV level adjustment",
+                    "Energy usage tracking",
+                    "Remote control via smartphone app",
+                    "Integration with other smart home devices",
+                    "Privacy modes"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Somewhat familiar', 'Very familiar', or 'I currently own' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you would consider purchasing smart window shades?",
+            "answer_options": [
+                "Energy efficiency/cost savings",
+                "Convenience/automation",
+                "Home security",
+                "Temperature regulation",
+                "Aesthetic appeal",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Somewhat familiar', 'Very familiar', or 'I currently own' in Q1",
+            "client_notes": "Include 'Other' with open-text option to capture unique responses.",
+            "scripter_notes": "Field type: Radio buttons with optional text field",
+            "script": {
+                "question_text": "What is the primary reason you would consider purchasing smart window shades?",
+                "answer_options": [
+                    "Energy efficiency/cost savings",
+                    "Convenience/automation",
+                    "Home security",
+                    "Temperature regulation",
+                    "Aesthetic appeal",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Somewhat familiar', 'Very familiar', or 'I currently own' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What would you consider a reasonable price range for smart window shades per window?",
+            "answer_options": [
+                "Under $100",
+                "$100 - $200",
+                "$201 - $300",
+                "$301 - $400",
+                "Over $400"
+            ],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Price ranges should reflect current market averages. Randomize order to avoid bias.",
+            "scripter_notes": "Field type: Radio buttons (single choice)",
+            "script": {
+                "question_text": "What would you consider a reasonable price range for smart window shades per window?",
+                "answer_options": [
+                    "Under $100",
+                    "$100 - $200",
+                    "$201 - $300",
+                    "$301 - $400",
+                    "Over $400"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What concerns, if any, would prevent you from purchasing smart window shades?",
+            "answer_options": [],
+            "routing_logic": "All respondents answer this question",
+            "client_notes": "Open-ended to uncover unanticipated barriers. Limit to 250 characters.",
+            "scripter_notes": "Field type: Open text with character limit",
+            "script": {
+                "question_text": "What concerns, if any, would prevent you from purchasing smart window shades?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents answer this question"
+            }
+        }
+    ]
+}

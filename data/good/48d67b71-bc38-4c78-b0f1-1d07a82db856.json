@@ -1,0 +1,127 @@
+{
+    "survey_id": "48d67b71-bc38-4c78-b0f1-1d07a82db856",
+    "survey_name": "Consumer Preferences for Subscription-Based Skincare Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels regarding subscription-based skincare services, including delivery frequency, product customization, and pricing models.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you currently use a subscription-based skincare service?",
+            "answer_options": [
+                "Monthly",
+                "Bi-monthly",
+                "Quarterly",
+                "I do not currently use a subscription service"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure answer options cover common subscription frequencies. Mobile-friendly radio buttons recommended.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you currently use a subscription-based skincare service?",
+                "answer_options": [
+                    "Monthly",
+                    "Bi-monthly",
+                    "Quarterly",
+                    "I do not currently use a subscription service"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when selecting a skincare subscription service? (Select up to 3)",
+            "answer_options": [
+                "Product quality",
+                "Price",
+                "Customization options",
+                "Brand reputation",
+                "Eco-friendly packaging",
+                "Frequency of delivery",
+                "Included expert advice",
+                "Ability to skip/pause shipments"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question with realistic priorities. Checkboxes recommended with max 3 selections enforced.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with limit of 3)",
+            "script": {
+                "question_text": "What factors are most important to you when selecting a skincare subscription service? (Select up to 3)",
+                "answer_options": [
+                    "Product quality",
+                    "Price",
+                    "Customization options",
+                    "Brand reputation",
+                    "Eco-friendly packaging",
+                    "Frequency of delivery",
+                    "Included expert advice",
+                    "Ability to skip/pause shipments"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is your preferred price range for a monthly skincare subscription?",
+            "answer_options": [
+                "Under $20",
+                "$20-$35",
+                "$35-$50",
+                "$50-$75",
+                "Over $75"
+            ],
+            "routing_logic": "All respondents except those who answered 'I do not currently use a subscription service' to Q1",
+            "client_notes": "Price ranges should reflect market reality. Slider or radio buttons acceptable.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "What is your preferred price range for a monthly skincare subscription?",
+                "answer_options": [
+                    "Under $20",
+                    "$20-$35",
+                    "$35-$50",
+                    "$50-$75",
+                    "Over $75"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'I do not currently use a subscription service' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe your ideal skincare subscription customization options.",
+            "answer_options": [],
+            "routing_logic": "All respondents except those who answered 'I do not currently use a subscription service' to Q1",
+            "client_notes": "Open-ended to capture qualitative insights. Mobile-friendly text box with character limit (500 chars).",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "Describe your ideal skincare subscription customization options.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents except those who answered 'I do not currently use a subscription service' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be interested in add-on services like virtual dermatologist consultations for an additional fee?",
+            "answer_options": [
+                "Yes, regularly",
+                "Yes, occasionally",
+                "No, not interested",
+                "I prefer free basic guidance only"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice with neutral option. Useful for premium service development.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "Would you be interested in add-on services like virtual dermatologist consultations for an additional fee?",
+                "answer_options": [
+                    "Yes, regularly",
+                    "Yes, occasionally",
+                    "No, not interested",
+                    "I prefer free basic guidance only"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

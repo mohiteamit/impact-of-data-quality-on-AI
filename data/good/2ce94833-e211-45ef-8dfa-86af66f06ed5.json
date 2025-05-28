@@ -1,0 +1,151 @@
+{
+    "survey_id": "2ce94833-e211-45ef-8dfa-86af66f06ed5",
+    "survey_name": "AI-Powered Personalized Learning Platforms in Higher Education Survey",
+    "survey_brief": "This survey aims to gather feedback from university students and educators on the adoption, effectiveness, and satisfaction with AI-powered personalized learning platforms in higher education settings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with AI-powered personalized learning platforms?",
+            "answer_options": [
+                "Not familiar at all",
+                "Slightly familiar",
+                "Moderately familiar",
+                "Very familiar",
+                "Extremely familiar"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for familiarity assessment. Ensure options are balanced and cover the full spectrum of familiarity.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How familiar are you with AI-powered personalized learning platforms?",
+                "answer_options": [
+                    "Not familiar at all",
+                    "Slightly familiar",
+                    "Moderately familiar",
+                    "Very familiar",
+                    "Extremely familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI-powered personalized learning platforms have you used? (Select all that apply)",
+            "answer_options": [
+                "Coursera's AI recommendations",
+                "edX's personalized learning paths",
+                "Knewton Alta",
+                "Carnegie Learning's Mika",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Slightly familiar' or higher in Q1",
+            "client_notes": "Allow multiple selections and include an 'Other' option with a text field for unspecified platforms.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which of the following AI-powered personalized learning platforms have you used? (Select all that apply)",
+                "answer_options": [
+                    "Coursera's AI recommendations",
+                    "edX's personalized learning paths",
+                    "Knewton Alta",
+                    "Carnegie Learning's Mika",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Slightly familiar' or higher in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What are the primary benefits you have experienced from using AI-powered personalized learning platforms?",
+            "answer_options": [
+                "Improved understanding of course material",
+                "More efficient study sessions",
+                "Better time management",
+                "Higher engagement with content",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected at least one platform in Q2",
+            "client_notes": "Use a multi-choice question to capture various benefits and include an 'Other' option for additional insights.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "What are the primary benefits you have experienced from using AI-powered personalized learning platforms?",
+                "answer_options": [
+                    "Improved understanding of course material",
+                    "More efficient study sessions",
+                    "Better time management",
+                    "Higher engagement with content",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected at least one platform in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the AI-powered personalized learning platforms you have used?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "Respondents who selected at least one platform in Q2",
+            "client_notes": "Use a Likert scale for satisfaction assessment. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How satisfied are you with the AI-powered personalized learning platforms you have used?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one platform in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced when using AI-powered personalized learning platforms?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected at least one platform in Q2",
+            "client_notes": "Open-ended question to capture qualitative feedback on challenges. Encourage detailed responses.",
+            "scripter_notes": "Field type: open-text",
+            "script": {
+                "question_text": "What challenges have you faced when using AI-powered personalized learning platforms?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected at least one platform in Q2"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend AI-powered personalized learning platforms to other students or educators?",
+            "answer_options": [
+                "Not at all likely",
+                "Slightly likely",
+                "Moderately likely",
+                "Very likely",
+                "Extremely likely"
+            ],
+            "routing_logic": "Respondents who selected at least one platform in Q2",
+            "client_notes": "Use a Likert scale for likelihood assessment. This helps gauge advocacy and perceived value.",
+            "scripter_notes": "Field type: radio button (single-choice)",
+            "script": {
+                "question_text": "How likely are you to recommend AI-powered personalized learning platforms to other students or educators?",
+                "answer_options": [
+                    "Not at all likely",
+                    "Slightly likely",
+                    "Moderately likely",
+                    "Very likely",
+                    "Extremely likely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected at least one platform in Q2"
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "survey_id": "f802d487-483a-4321-b2b5-5015aab64848",
+    "survey_name": "Employee Satisfaction with Remote Work Cybersecurity Training",
+    "survey_brief": "This survey aims to evaluate employee satisfaction and effectiveness of cybersecurity training programs provided for remote workers, identifying gaps and improvement areas.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in cybersecurity training sessions provided by your employer?",
+            "answer_options": [
+                "Monthly",
+                "Quarterly",
+                "Bi-Annually",
+                "Annually",
+                "Never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a balanced frequency scale to capture varying training schedules across organizations.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How often do you participate in cybersecurity training sessions provided by your employer?",
+                "answer_options": [
+                    "Monthly",
+                    "Quarterly",
+                    "Bi-Annually",
+                    "Annually",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which topics were covered in your most recent cybersecurity training? (Select all that apply)",
+            "answer_options": [
+                "Phishing prevention",
+                "Password management",
+                "Secure Wi-Fi usage",
+                "Device encryption",
+                "Data privacy regulations",
+                "Incident reporting",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Multi-select with an 'Other' option ensures comprehensive coverage of potential topics.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which topics were covered in your most recent cybersecurity training? (Select all that apply)",
+                "answer_options": [
+                    "Phishing prevention",
+                    "Password management",
+                    "Secure Wi-Fi usage",
+                    "Device encryption",
+                    "Data privacy regulations",
+                    "Incident reporting",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How confident do you feel in applying cybersecurity best practices after completing the training?",
+            "answer_options": [
+                "Very confident",
+                "Somewhat confident",
+                "Neutral",
+                "Not very confident",
+                "Not confident at all"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Likert scale captures nuanced confidence levels.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "How confident do you feel in applying cybersecurity best practices after completing the training?",
+                "answer_options": [
+                    "Very confident",
+                    "Somewhat confident",
+                    "Neutral",
+                    "Not very confident",
+                    "Not confident at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional cybersecurity topics would you like training on?",
+            "answer_options": [],
+            "routing_logic": "Optional follow-up after Q2.",
+            "client_notes": "Open-ended to uncover unmet needs. Limit to 200 characters for brevity.",
+            "scripter_notes": "Field type: Open-text (text area).",
+            "script": {
+                "question_text": "What additional cybersecurity topics would you like training on?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Optional follow-up after Q2."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Has the training helped you identify or prevent a cybersecurity incident?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Binary with neutral option avoids forcing a response.",
+            "scripter_notes": "Field type: Single-choice (radio buttons).",
+            "script": {
+                "question_text": "Has the training helped you identify or prevent a cybersecurity incident?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        }
+    ]
+}

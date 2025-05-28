@@ -1,0 +1,117 @@
+{
+    "survey_id": "d998d868-ac2f-477f-8d25-074b0f2fcb4f",
+    "survey_name": "Public Library Digital Resource Usage Survey",
+    "survey_brief": "This survey aims to understand how patrons use digital resources provided by public libraries and identify areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the digital resources provided by your public library (e.g., e-books, audiobooks, online databases)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure the scale is clear and options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use the digital resources provided by your public library (e.g., e-books, audiobooks, online databases)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following digital resources do you use? (Select all that apply)",
+            "answer_options": [
+                "E-books",
+                "Audiobooks",
+                "Online magazines/newspapers",
+                "Academic databases",
+                "Streaming video (e.g., Kanopy)",
+                "Language learning tools",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1",
+            "client_notes": "Use checkboxes for multi-choice selection. Include an 'Other' option with a text field for additional input.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "Which of the following digital resources do you use? (Select all that apply)",
+                "answer_options": [
+                    "E-books",
+                    "Audiobooks",
+                    "Online magazines/newspapers",
+                    "Academic databases",
+                    "Streaming video (e.g., Kanopy)",
+                    "Language learning tools",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges do you face when using the library's digital resources?",
+            "answer_options": [],
+            "routing_logic": "Appears for respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1",
+            "client_notes": "Use an open-text field to capture detailed feedback. Keep the question neutral and non-leading.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What challenges do you face when using the library's digital resources?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the variety of digital resources available?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1",
+            "client_notes": "Use a Likert scale for single-choice selection. Ensure the scale is balanced and clearly labeled.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the variety of digital resources available?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Daily', 'Weekly', 'Monthly', or 'A few times a year' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional digital resources would you like your library to offer?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use an open-text field to encourage creative suggestions. Make the field optional to reduce respondent burden.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What additional digital resources would you like your library to offer?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

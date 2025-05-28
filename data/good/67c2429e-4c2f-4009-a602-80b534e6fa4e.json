@@ -1,0 +1,125 @@
+{
+    "survey_id": "67c2429e-4c2f-4009-a602-80b534e6fa4e",
+    "survey_name": "Customer Satisfaction with Smart Bike Sharing Programs Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and identify areas for improvement in smart bike-sharing programs across urban areas.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use smart bike-sharing services in a typical month?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "First-time user"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale to measure frequency. Ensure mobile-friendly dropdown if implemented digitally.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use smart bike-sharing services in a typical month?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing a bike-sharing service? (Select up to 3)",
+            "answer_options": [
+                "Pricing",
+                "Bike availability",
+                "Ease of app usage",
+                "Bike condition",
+                "Safety features",
+                "Proximity to stations",
+                "Environmental impact"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question to prioritize features. Limit selections to 3 for clearer insights.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with max selections enforced.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a bike-sharing service? (Select up to 3)",
+                "answer_options": [
+                    "Pricing",
+                    "Bike availability",
+                    "Ease of app usage",
+                    "Bike condition",
+                    "Safety features",
+                    "Proximity to stations",
+                    "Environmental impact"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the current pricing structure of the bike-sharing service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents except 'First-time user' in Q1",
+            "client_notes": "Use a 5-point Likert scale for granularity. Exclude first-time users for relevance.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with skip logic based on Q1.",
+            "script": {
+                "question_text": "How satisfied are you with the current pricing structure of the bike-sharing service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except 'First-time user' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the bike-sharing program?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Ensure text box is mobile-responsive.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for the bike-sharing program?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend this bike-sharing service to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "All respondents except 'First-time user' in Q1",
+            "client_notes": "Simple single-choice question to measure Net Promoter Score (NPS) potential.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE) with skip logic.",
+            "script": {
+                "question_text": "Would you recommend this bike-sharing service to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except 'First-time user' in Q1"
+            }
+        }
+    ]
+}

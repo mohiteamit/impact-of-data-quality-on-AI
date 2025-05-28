@@ -1,0 +1,145 @@
+{
+    "survey_id": "99259dfc-da98-4c93-b43d-ef7b7d9a9ebf",
+    "survey_name": "Customer Satisfaction with In-Store Augmented Reality (AR) Shopping Experiences Survey",
+    "survey_brief": "This survey aims to gather feedback from customers who have used in-store augmented reality (AR) shopping features to understand their satisfaction levels, preferences, and suggestions for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you used an in-store augmented reality (AR) feature while shopping in the past 6 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "If 'No', skip to Q6",
+            "client_notes": "This is a filter question to ensure respondents are relevant to the survey topic. Ensure the question is clear and concise.",
+            "scripter_notes": "Field type: Radio button (single choice)",
+            "script": {
+                "question_text": "Have you used an in-store augmented reality (AR) feature while shopping in the past 6 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If 'No', skip to Q6"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which type of in-store AR feature have you used? (Select all that apply)",
+            "answer_options": [
+                "Virtual try-on (e.g., clothes, accessories)",
+                "Product visualization (e.g., furniture, home decor)",
+                "AR navigation (e.g., store maps, product locators)",
+                "Interactive product information (e.g., scanning for details)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 = 'Yes'",
+            "client_notes": "This helps identify which AR features are most commonly used. Ensure the 'Other' option includes a text field for specification.",
+            "scripter_notes": "Field type: Checkbox (multi-choice) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which type of in-store AR feature have you used? (Select all that apply)",
+                "answer_options": [
+                    "Virtual try-on (e.g., clothes, accessories)",
+                    "Product visualization (e.g., furniture, home decor)",
+                    "AR navigation (e.g., store maps, product locators)",
+                    "Interactive product information (e.g., scanning for details)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the in-store AR shopping experience?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears only if Q1 = 'Yes'",
+            "client_notes": "Use a balanced Likert scale to measure satisfaction. Ensure the scale is intuitive for respondents.",
+            "scripter_notes": "Field type: Radio button (single choice)",
+            "script": {
+                "question_text": "How satisfied are you with the in-store AR shopping experience?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the in-store AR shopping experience?",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q1 = 'Yes'",
+            "client_notes": "This open-ended question allows for qualitative feedback. Ensure the text field is large enough for detailed responses.",
+            "scripter_notes": "Field type: Open text",
+            "script": {
+                "question_text": "What improvements would you suggest for the in-store AR shopping experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to use in-store AR features again in the future?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears only if Q1 = 'Yes'",
+            "client_notes": "This measures intent for future use. Use the same Likert scale as Q3 for consistency.",
+            "scripter_notes": "Field type: Radio button (single choice)",
+            "script": {
+                "question_text": "How likely are you to use in-store AR features again in the future?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 = 'Yes'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you have not used in-store AR features, what is the primary reason?",
+            "answer_options": [
+                "Not aware of the feature",
+                "Did not find it useful",
+                "Technical issues (e.g., app not working)",
+                "Privacy concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 = 'No'",
+            "client_notes": "This helps identify barriers to adoption. Include an 'Other' option for additional reasons.",
+            "scripter_notes": "Field type: Radio button (single choice) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "If you have not used in-store AR features, what is the primary reason?",
+                "answer_options": [
+                    "Not aware of the feature",
+                    "Did not find it useful",
+                    "Technical issues (e.g., app not working)",
+                    "Privacy concerns",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 = 'No'"
+            }
+        }
+    ]
+}

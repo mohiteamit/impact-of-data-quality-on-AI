@@ -1,0 +1,125 @@
+{
+    "survey_id": "80e3bbd1-9fc2-44cf-9edb-3756d579a362",
+    "survey_name": "Employee Experience with Workplace AI Assistants Survey",
+    "survey_brief": "This survey aims to gather feedback from employees on their experience with AI-powered workplace assistants, focusing on usability, productivity impact, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the AI-powered workplace assistant currently available in your organization?",
+            "answer_options": [
+                "Very familiar, use it regularly",
+                "Somewhat familiar, use it occasionally",
+                "Not very familiar, rarely use it",
+                "Not familiar at all, never used it"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps gauge overall familiarity. Use a balanced 4-point scale for clarity.",
+            "scripter_notes": "Field type: Single-choice radio buttons. Display all options vertically.",
+            "script": {
+                "question_text": "How familiar are you with the AI-powered workplace assistant currently available in your organization?",
+                "answer_options": [
+                    "Very familiar, use it regularly",
+                    "Somewhat familiar, use it occasionally",
+                    "Not very familiar, rarely use it",
+                    "Not familiar at all, never used it"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following tasks do you use the AI assistant for? (Select all that apply)",
+            "answer_options": [
+                "Scheduling meetings",
+                "Searching internal documents",
+                "Generating reports",
+                "Answering HR-related questions",
+                "Data analysis",
+                "None of the above"
+            ],
+            "routing_logic": "Skip if Q1 = 'Not familiar at all, never used it'",
+            "client_notes": "Multi-select question to understand primary use cases. Include 'None of the above' option for completeness.",
+            "scripter_notes": "Field type: Multi-choice checkboxes. Allow multiple selections.",
+            "script": {
+                "question_text": "Which of the following tasks do you use the AI assistant for? (Select all that apply)",
+                "answer_options": [
+                    "Scheduling meetings",
+                    "Searching internal documents",
+                    "Generating reports",
+                    "Answering HR-related questions",
+                    "Data analysis",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Skip if Q1 = 'Not familiar at all, never used it'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how would you rate the AI assistant's ability to understand and respond accurately to your requests?",
+            "answer_options": [
+                "1 - Very poor",
+                "2 - Poor",
+                "3 - Neutral",
+                "4 - Good",
+                "5 - Excellent"
+            ],
+            "routing_logic": "Skip if Q1 = 'Not familiar at all, never used it'",
+            "client_notes": "5-point Likert scale for nuanced feedback. Label each point for clarity.",
+            "scripter_notes": "Field type: Single-choice radio buttons presented horizontally if space allows.",
+            "script": {
+                "question_text": "On a scale of 1-5, how would you rate the AI assistant's ability to understand and respond accurately to your requests?",
+                "answer_options": [
+                    "1 - Very poor",
+                    "2 - Poor",
+                    "3 - Neutral",
+                    "4 - Good",
+                    "5 - Excellent"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Skip if Q1 = 'Not familiar at all, never used it'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the AI workplace assistant?",
+            "answer_options": [],
+            "routing_logic": "Skip if Q1 = 'Not familiar at all, never used it'",
+            "client_notes": "Open-ended to capture qualitative feedback. Include a large text box for thorough responses.",
+            "scripter_notes": "Field type: Open-text with multi-line input.",
+            "script": {
+                "question_text": "What improvements would you suggest for the AI workplace assistant?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Skip if Q1 = 'Not familiar at all, never used it'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How has using the AI assistant impacted your daily productivity?",
+            "answer_options": [
+                "Significantly increased productivity",
+                "Somewhat increased productivity",
+                "No noticeable impact",
+                "Somewhat decreased productivity",
+                "Significantly decreased productivity"
+            ],
+            "routing_logic": "Skip if Q1 = 'Not familiar at all, never used it'",
+            "client_notes": "Use a balanced scale to measure perceived productivity impact.",
+            "scripter_notes": "Field type: Single-choice radio buttons displayed vertically.",
+            "script": {
+                "question_text": "How has using the AI assistant impacted your daily productivity?",
+                "answer_options": [
+                    "Significantly increased productivity",
+                    "Somewhat increased productivity",
+                    "No noticeable impact",
+                    "Somewhat decreased productivity",
+                    "Significantly decreased productivity"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Skip if Q1 = 'Not familiar at all, never used it'"
+            }
+        }
+    ]
+}

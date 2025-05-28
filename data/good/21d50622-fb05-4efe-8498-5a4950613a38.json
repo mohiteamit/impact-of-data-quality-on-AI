@@ -1,0 +1,99 @@
+{
+    "survey_id": "21d50622-fb05-4efe-8498-5a4950613a38",
+    "survey_name": "Employee Feedback on Workplace Mental Health Resources Survey",
+    "survey_brief": "This survey aims to gather employee feedback on the availability, accessibility, and effectiveness of workplace mental health resources to improve support systems.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the mental health resources provided by your employer?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a Likert scale for familiarity levels to gauge awareness.",
+            "scripter_notes": "Single-choice radio buttons; mandatory field.",
+            "script": {
+                "question_text": "How familiar are you with the mental health resources provided by your employer?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following mental health resources have you used in the past 12 months? (Select all that apply)",
+            "answer_options": [
+                "Employee Assistance Program (EAP)",
+                "Mental health hotline",
+                "On-site counseling",
+                "Mental health workshops/training",
+                "Online mental health platforms",
+                "None of the above"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Checkbox format to allow multiple selections; include 'None' as an option.",
+            "scripter_notes": "Multi-choice checkboxes; optional field.",
+            "script": {
+                "question_text": "Which of the following mental health resources have you used in the past 12 months? (Select all that apply)",
+                "answer_options": [
+                    "Employee Assistance Program (EAP)",
+                    "Mental health hotline",
+                    "On-site counseling",
+                    "Mental health workshops/training",
+                    "Online mental health platforms",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with the mental health support provided by your employer? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "This question appears if Q2 does not select 'None of the above'.",
+            "client_notes": "Use a numeric scale for standardized satisfaction measurement.",
+            "scripter_notes": "Single-choice radio buttons; conditional display based on Q2.",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the mental health support provided by your employer? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears if Q2 does not select 'None of the above'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional mental health resources would you like to see offered by your employer?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Open-ended to capture qualitative feedback; limit to 250 characters.",
+            "scripter_notes": "Open-text field; optional response.",
+            "script": {
+                "question_text": "What additional mental health resources would you like to see offered by your employer?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents."
+            }
+        }
+    ]
+}

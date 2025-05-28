@@ -1,0 +1,117 @@
+{
+    "survey_id": "1de85af1-1b0b-45a9-9718-16d36c2e8afd",
+    "survey_name": "Health and Wellness App User Satisfaction Survey",
+    "survey_brief": "This survey aims to gather user feedback on health and wellness mobile applications to understand satisfaction levels, feature preferences, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use a health and wellness app?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "This question appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for ease of selection. Ensure the options cover a broad range of usage frequencies.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you use a health and wellness app?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you use most frequently in your health and wellness app? (Select all that apply)",
+            "answer_options": [
+                "Activity tracking",
+                "Nutrition logging",
+                "Meditation/mental health",
+                "Sleep tracking",
+                "Workout plans",
+                "Health metrics (e.g., heart rate, steps)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "This question appears for respondents who use the app at least 'Once a week' (Q1).",
+            "client_notes": "Allow multiple selections to capture diverse usage patterns. Include an 'Other' option for additional features.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which features do you use most frequently in your health and wellness app? (Select all that apply)",
+                "answer_options": [
+                    "Activity tracking",
+                    "Nutrition logging",
+                    "Meditation/mental health",
+                    "Sleep tracking",
+                    "Workout plans",
+                    "Health metrics (e.g., heart rate, steps)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "This question appears for respondents who use the app at least 'Once a week' (Q1)."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What do you like most about your current health and wellness app?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents who use the app at least 'Once a week' (Q1).",
+            "client_notes": "Open-ended question to gather qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What do you like most about your current health and wellness app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents who use the app at least 'Once a week' (Q1)."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accuracy of the data provided by your health and wellness app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "This question appears for respondents who use the app at least 'Once a week' (Q1).",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of the data provided by your health and wellness app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "This question appears for respondents who use the app at least 'Once a week' (Q1)."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in your health and wellness app?",
+            "answer_options": [],
+            "routing_logic": "This question appears for all respondents who use the app at least 'Once a week' (Q1).",
+            "client_notes": "Open-ended question to collect suggestions for improvement. Encourage detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area).",
+            "script": {
+                "question_text": "What improvements would you like to see in your health and wellness app?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "This question appears for all respondents who use the app at least 'Once a week' (Q1)."
+            }
+        }
+    ]
+}

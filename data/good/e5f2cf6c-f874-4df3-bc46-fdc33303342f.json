@@ -1,0 +1,121 @@
+{
+    "survey_id": "e5f2cf6c-f874-4df3-bc46-fdc33303342f",
+    "survey_name": "Customer Satisfaction with Autonomous Grocery Checkout Systems Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and experience with autonomous grocery checkout systems in retail stores.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use autonomous checkout systems when grocery shopping?",
+            "answer_options": [
+                "Every time I shop",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Consider using a Likert scale for better granularity in responses.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you use autonomous checkout systems when grocery shopping?",
+                "answer_options": [
+                    "Every time I shop",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your decision to use autonomous checkout systems? (Select all that apply)",
+            "answer_options": [
+                "Speed of checkout",
+                "Avoiding long lines",
+                "Ease of use",
+                "Privacy",
+                "Preference for human interaction"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow multiple selections to capture comprehensive feedback.",
+            "scripter_notes": "Use checkboxes for multi-choice selection.",
+            "script": {
+                "question_text": "What factors influence your decision to use autonomous checkout systems? (Select all that apply)",
+                "answer_options": [
+                    "Speed of checkout",
+                    "Avoiding long lines",
+                    "Ease of use",
+                    "Privacy",
+                    "Preference for human interaction"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the ease of use of autonomous checkout systems?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Use a standard satisfaction scale for consistency.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the ease of use of autonomous checkout systems?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for autonomous checkout systems?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended questions can provide valuable qualitative feedback.",
+            "scripter_notes": "Use a text box for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would you suggest for autonomous checkout systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend autonomous checkout systems to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Simple yes/no questions can gauge overall satisfaction.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Would you recommend autonomous checkout systems to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        }
+    ]
+}

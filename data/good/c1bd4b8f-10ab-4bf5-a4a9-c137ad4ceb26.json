@@ -1,0 +1,129 @@
+{
+    "survey_id": "c1bd4b8f-10ab-4bf5-a4a9-c137ad4ceb26",
+    "survey_name": "Customer Satisfaction with AI-Powered Personal Chef Services Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and preferences regarding AI-powered personal chef services, focusing on usability, customization, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use AI-powered personal chef services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "First-time user"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Helps segment users by engagement level. Consider adding a follow-up question for first-time users to understand initial impressions.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How frequently do you use AI-powered personal chef services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What features do you value most in an AI-powered personal chef service? (Select up to 3)",
+            "answer_options": [
+                "Customized meal recommendations",
+                "Dietary restriction accommodations",
+                "Real-time cooking assistance",
+                "Integration with smart kitchen devices",
+                "Grocery delivery coordination",
+                "Nutritional tracking",
+                "Recipe diversity"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Identifies key features driving satisfaction. Useful for prioritizing future updates.",
+            "scripter_notes": "Multi-choice checkboxes with a limit of 3 selections.",
+            "script": {
+                "question_text": "What features do you value most in an AI-powered personal chef service? (Select up to 3)",
+                "answer_options": [
+                    "Customized meal recommendations",
+                    "Dietary restriction accommodations",
+                    "Real-time cooking assistance",
+                    "Integration with smart kitchen devices",
+                    "Grocery delivery coordination",
+                    "Nutritional tracking",
+                    "Recipe diversity"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of meal recommendations provided by the AI-powered personal chef service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'First-time user'",
+            "client_notes": "5-point Likert scale to measure satisfaction with a core feature.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of meal recommendations provided by the AI-powered personal chef service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'First-time user'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced while using the AI-powered personal chef service?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended to capture unanticipated issues. Useful for qualitative insights.",
+            "scripter_notes": "Open-text field.",
+            "script": {
+                "question_text": "What challenges have you faced while using the AI-powered personal chef service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend the AI-powered personal chef service to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Standard NPS-style question to gauge advocacy.",
+            "scripter_notes": "Single-choice radio buttons.",
+            "script": {
+                "question_text": "How likely are you to recommend the AI-powered personal chef service to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

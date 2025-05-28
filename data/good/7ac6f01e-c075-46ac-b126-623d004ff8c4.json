@@ -1,0 +1,121 @@
+{
+    "survey_id": "7ac6f01e-c075-46ac-b126-623d004ff8c4",
+    "survey_name": "Customer Satisfaction with Contactless Restaurant Ordering Technology Survey",
+    "survey_brief": "This survey aims to assess customer satisfaction and preferences regarding contactless ordering technology in restaurants, including ease of use, feature preferences, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use contactless ordering technology (e.g., QR codes, mobile apps) in restaurants?",
+            "answer_options": [
+                "Never",
+                "Rarely (once every few months)",
+                "Occasionally (1-2 times per month)",
+                "Frequently (once a week or more)"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Use a balanced scale to capture varying usage frequencies. Ensure mobile-friendly layout for QR code references.",
+            "scripter_notes": "Single-choice radio buttons; randomize options to avoid bias.",
+            "script": {
+                "question_text": "How frequently do you use contactless ordering technology (e.g., QR codes, mobile apps) in restaurants?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once every few months)",
+                    "Occasionally (1-2 times per month)",
+                    "Frequently (once a week or more)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of contactless ordering do you find most valuable? (Select all that apply)",
+            "answer_options": [
+                "Menu browsing without physical contact",
+                "Customization options (e.g., ingredient substitutions)",
+                "Integrated payment processing",
+                "Order tracking via notifications",
+                "Loyalty program integration"
+            ],
+            "routing_logic": "Display to respondents who selected 'Occasionally' or 'Frequently' in Q1",
+            "client_notes": "Multi-select question; limit to 5 options for readability.",
+            "scripter_notes": "Multi-choice checkboxes; include 'Other' with open-text field if selected.",
+            "script": {
+                "question_text": "Which features of contactless ordering do you find most valuable? (Select all that apply)",
+                "answer_options": [
+                    "Menu browsing without physical contact",
+                    "Customization options (e.g., ingredient substitutions)",
+                    "Integrated payment processing",
+                    "Order tracking via notifications",
+                    "Loyalty program integration"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Display to respondents who selected 'Occasionally' or 'Frequently' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would enhance your contactless ordering experience?",
+            "answer_options": [],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Suggest a 200-character limit.",
+            "scripter_notes": "Open-text field with character counter.",
+            "script": {
+                "question_text": "What improvements would enhance your contactless ordering experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Display to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the speed of order processing via contactless technology?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "Display to respondents who selected 'Occasionally' or 'Frequently' in Q1",
+            "client_notes": "5-point Likert scale for granularity. Anchor labels clearly.",
+            "scripter_notes": "Single-choice radio buttons; horizontal layout for scales.",
+            "script": {
+                "question_text": "How satisfied are you with the speed of order processing via contactless technology?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to respondents who selected 'Occasionally' or 'Frequently' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you prefer contactless ordering over traditional methods for future visits?",
+            "answer_options": [
+                "Yes, exclusively",
+                "Yes, but occasionally use traditional methods",
+                "No preference",
+                "No, prefer traditional methods"
+            ],
+            "routing_logic": "Display to all respondents",
+            "client_notes": "Include a neutral option to avoid forced responses.",
+            "scripter_notes": "Single-choice radio buttons; randomize non-neutral options.",
+            "script": {
+                "question_text": "Would you prefer contactless ordering over traditional methods for future visits?",
+                "answer_options": [
+                    "Yes, exclusively",
+                    "Yes, but occasionally use traditional methods",
+                    "No preference",
+                    "No, prefer traditional methods"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display to all respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "survey_id": "d14d6bd5-9d61-403b-9c05-8fb7213572f1",
+    "survey_name": "Consumer Preferences for Smart Water Bottles Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding smart water bottles, including features, pricing, and usage patterns.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use a water bottle with smart features?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for this question. Ensure the options cover all possible usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use a water bottle with smart features?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following smart water bottle features are most important to you? (Select all that apply)",
+            "answer_options": [
+                "Hydration tracking",
+                "Temperature control",
+                "Reminder notifications",
+                "Integration with fitness apps",
+                "Bluetooth connectivity",
+                "Battery life",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1",
+            "client_notes": "Use a multi-choice checkbox for this question. Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE) with an optional open-text field for 'Other'",
+            "script": {
+                "question_text": "Which of the following smart water bottle features are most important to you? (Select all that apply)",
+                "answer_options": [
+                    "Hydration tracking",
+                    "Temperature control",
+                    "Reminder notifications",
+                    "Integration with fitness apps",
+                    "Bluetooth connectivity",
+                    "Battery life",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the maximum price you would be willing to pay for a smart water bottle?",
+            "answer_options": [
+                "Less than $20",
+                "$20 - $40",
+                "$40 - $60",
+                "$60 - $80",
+                "More than $80"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for this question. Ensure price ranges are realistic and cover common market prices.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What is the maximum price you would be willing to pay for a smart water bottle?",
+                "answer_options": [
+                    "Less than $20",
+                    "$20 - $40",
+                    "$40 - $60",
+                    "$60 - $80",
+                    "More than $80"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced with smart water bottles, if any?",
+            "answer_options": [],
+            "routing_logic": "Appears for respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1",
+            "client_notes": "Use an open-text field for this question to capture detailed feedback.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What challenges have you faced with smart water bottles, if any?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend a smart water bottle to a friend or family member?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1",
+            "client_notes": "Use a single-choice radio button for this question. Include a neutral option ('Maybe') for undecided respondents.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend a smart water bottle to a friend or family member?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Daily', 'Several times a week', or 'Once a week' to Q1"
+            }
+        }
+    ]
+}

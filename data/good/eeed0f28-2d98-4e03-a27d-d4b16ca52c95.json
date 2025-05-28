@@ -1,0 +1,123 @@
+{
+    "survey_id": "eeed0f28-2d98-4e03-a27d-d4b16ca52c95",
+    "survey_name": "Customer Satisfaction with AI-Powered Hotel Concierge Services Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with AI-powered concierge services in hotels, focusing on usability, effectiveness, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use AI-powered concierge services during your hotel stays?",
+            "answer_options": [
+                "Never",
+                "Rarely (1-2 times per stay)",
+                "Occasionally (3-5 times per stay)",
+                "Frequently (6+ times per stay)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for clear response capture. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use AI-powered concierge services during your hotel stays?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (1-2 times per stay)",
+                    "Occasionally (3-5 times per stay)",
+                    "Frequently (6+ times per stay)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI concierge features have you used? (Select all that apply)",
+            "answer_options": [
+                "Room service requests",
+                "Local dining recommendations",
+                "Transportation bookings",
+                "Event/activity reservations",
+                "Housekeeping requests",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 != 'Never'",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with open-text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Add open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following AI concierge features have you used? (Select all that apply)",
+                "answer_options": [
+                    "Room service requests",
+                    "Local dining recommendations",
+                    "Transportation bookings",
+                    "Event/activity reservations",
+                    "Housekeeping requests",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of responses provided by the AI concierge?",
+            "answer_options": [
+                "Very dissatisfied",
+                "Dissatisfied",
+                "Neutral",
+                "Satisfied",
+                "Very satisfied"
+            ],
+            "routing_logic": "Appears if Q1 != 'Never'",
+            "client_notes": "5-point Likert scale for nuanced feedback. Label all points clearly.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of responses provided by the AI concierge?",
+                "answer_options": [
+                    "Very dissatisfied",
+                    "Dissatisfied",
+                    "Neutral",
+                    "Satisfied",
+                    "Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 != 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for AI-powered hotel concierge services?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 500 characters.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT). Add character limit validation.",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-powered hotel concierge services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you prefer interacting with an AI concierge over a human concierge for routine requests?",
+            "answer_options": [
+                "Yes, always",
+                "Yes, for most requests",
+                "Only for simple requests",
+                "No, I prefer human interaction"
+            ],
+            "routing_logic": "Appears if Q1 != 'Never'",
+            "client_notes": "Single-choice to gauge preference. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE). Enable randomization.",
+            "script": {
+                "question_text": "Would you prefer interacting with an AI concierge over a human concierge for routine requests?",
+                "answer_options": [
+                    "Yes, always",
+                    "Yes, for most requests",
+                    "Only for simple requests",
+                    "No, I prefer human interaction"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 != 'Never'"
+            }
+        }
+    ]
+}

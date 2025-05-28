@@ -1,0 +1,129 @@
+{
+    "survey_id": "7df3e8d8-e942-4aef-9b20-28ce88c6a637",
+    "survey_name": "Customer Satisfaction with Virtual Reality (VR) Gaming Experiences Survey",
+    "survey_brief": "This survey aims to gather feedback on user experiences with VR gaming, including hardware comfort, game quality, and overall satisfaction to help improve future VR gaming products.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you engage in VR gaming?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "This is my first time"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This helps segment users by engagement level. Consider a 5-point scale for granularity.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you engage in VR gaming?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "This is my first time"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which VR headset do you primarily use?",
+            "answer_options": [
+                "Oculus Quest",
+                "PlayStation VR",
+                "HTC Vive",
+                "Valve Index",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option to capture less common devices. Mobile-friendly dropdown recommended.",
+            "scripter_notes": "Use a dropdown menu with an open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which VR headset do you primarily use?",
+                "answer_options": [
+                    "Oculus Quest",
+                    "PlayStation VR",
+                    "HTC Vive",
+                    "Valve Index",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you in a VR game? (Select up to 3)",
+            "answer_options": [
+                "Immersive graphics",
+                "Comfortable controls",
+                "Multiplayer options",
+                "Storyline depth",
+                "Physical activity level",
+                "Pricing",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question to identify priority features. Limit to 3 choices to force prioritization.",
+            "scripter_notes": "Use checkboxes with a maximum of 3 selections allowed.",
+            "script": {
+                "question_text": "What factors are most important to you in a VR game? (Select up to 3)",
+                "answer_options": [
+                    "Immersive graphics",
+                    "Comfortable controls",
+                    "Multiplayer options",
+                    "Storyline depth",
+                    "Physical activity level",
+                    "Pricing",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the comfort of your VR headset during extended use?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents except those who answered 'This is my first time' to Q1",
+            "client_notes": "5-point Likert scale to measure satisfaction. Critical for hardware improvements.",
+            "scripter_notes": "Radio buttons with horizontal layout for mobile compatibility.",
+            "script": {
+                "question_text": "How satisfied are you with the comfort of your VR headset during extended use?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except those who answered 'This is my first time' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Describe any improvements you'd like to see in future VR gaming experiences.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative insights. Set a 500-character limit.",
+            "scripter_notes": "Use a text area input field with character counter.",
+            "script": {
+                "question_text": "Describe any improvements you'd like to see in future VR gaming experiences.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

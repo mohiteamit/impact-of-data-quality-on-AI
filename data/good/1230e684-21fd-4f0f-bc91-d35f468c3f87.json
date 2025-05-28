@@ -1,0 +1,131 @@
+{
+    "survey_id": "1230e684-21fd-4f0f-bc91-d35f468c3f87",
+    "survey_name": "Post-Event Feedback Survey for Virtual Professional Conferences",
+    "survey_brief": "This survey aims to gather attendee feedback on virtual professional conferences to improve future events. It focuses on platform usability, content quality, networking opportunities, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied were you with the virtual conference platform's ease of use?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a 5-point Likert scale for consistency. Ensure mobile-friendly radio buttons.",
+            "scripter_notes": "Field type: single-choice radio buttons. Randomize option order to avoid bias.",
+            "script": {
+                "question_text": "How satisfied were you with the virtual conference platform's ease of use?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following conference features did you use? (Select all that apply)",
+            "answer_options": [
+                "Keynote sessions",
+                "Breakout rooms",
+                "Networking lounges",
+                "Virtual exhibit hall",
+                "On-demand content",
+                "Q&A sessions"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Allow multiple selections. Consider adding 'Other' with text input if needed.",
+            "scripter_notes": "Field type: multi-choice checkboxes. Include 'Select all that apply' instruction.",
+            "script": {
+                "question_text": "Which of the following conference features did you use? (Select all that apply)",
+                "answer_options": [
+                    "Keynote sessions",
+                    "Breakout rooms",
+                    "Networking lounges",
+                    "Virtual exhibit hall",
+                    "On-demand content",
+                    "Q&A sessions"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What was your primary reason for attending this virtual conference?",
+            "answer_options": [
+                "Professional development",
+                "Networking opportunities",
+                "Specific session topics",
+                "Speaker lineup",
+                "Employer requirement",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Include 'Other' as final option with text field. Randomize first five options.",
+            "scripter_notes": "Field type: single-choice with optional text input for 'Other'.",
+            "script": {
+                "question_text": "What was your primary reason for attending this virtual conference?",
+                "answer_options": [
+                    "Professional development",
+                    "Networking opportunities",
+                    "Specific session topics",
+                    "Speaker lineup",
+                    "Employer requirement",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How effective were the networking opportunities at this virtual conference?",
+            "answer_options": [
+                "Very effective",
+                "Somewhat effective",
+                "Neutral",
+                "Somewhat ineffective",
+                "Very ineffective",
+                "Did not use networking features"
+            ],
+            "routing_logic": "Show if Q2 includes 'Networking lounges'",
+            "client_notes": "Include opt-out for those who didn't network. Display logic based on Q2 responses.",
+            "scripter_notes": "Field type: single-choice. Implement display logic checking Q2 for 'Networking lounges' selection.",
+            "script": {
+                "question_text": "How effective were the networking opportunities at this virtual conference?",
+                "answer_options": [
+                    "Very effective",
+                    "Somewhat effective",
+                    "Neutral",
+                    "Somewhat ineffective",
+                    "Very ineffective",
+                    "Did not use networking features"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q2 includes 'Networking lounges'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What suggestions do you have for improving future virtual conferences?",
+            "answer_options": [],
+            "routing_logic": "Always show",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 500 characters.",
+            "scripter_notes": "Field type: open-text with character counter. Mobile-friendly text input.",
+            "script": {
+                "question_text": "What suggestions do you have for improving future virtual conferences?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

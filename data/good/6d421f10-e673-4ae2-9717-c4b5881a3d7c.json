@@ -1,0 +1,121 @@
+{
+    "survey_id": "6d421f10-e673-4ae2-9717-c4b5881a3d7c",
+    "survey_name": "Customer Satisfaction with AI-Powered Customer Service Chatbots",
+    "survey_brief": "This survey aims to gather customer feedback on their experiences with AI-powered customer service chatbots to improve service quality and user satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you interact with AI-powered customer service chatbots?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always displayed",
+            "client_notes": "Use a single-choice question to simplify data collection and analysis.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How frequently do you interact with AI-powered customer service chatbots?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always displayed"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features do you find most useful in an AI-powered customer service chatbot? (Select all that apply)",
+            "answer_options": [
+                "Quick response time",
+                "24/7 availability",
+                "Ability to understand complex queries",
+                "Personalized responses",
+                "Multilingual support"
+            ],
+            "routing_logic": "Displayed if Q1 answer is not 'Never'",
+            "client_notes": "Use a multi-choice question to capture multiple preferences. Ensure options are clear and concise.",
+            "scripter_notes": "Field type: checkbox",
+            "script": {
+                "question_text": "Which of the following features do you find most useful in an AI-powered customer service chatbot? (Select all that apply)",
+                "answer_options": [
+                    "Quick response time",
+                    "24/7 availability",
+                    "Ability to understand complex queries",
+                    "Personalized responses",
+                    "Multilingual support"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Displayed if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with your overall experience using AI-powered customer service chatbots? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Displayed if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with your overall experience using AI-powered customer service chatbots? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for AI-powered customer service chatbots?",
+            "answer_options": [],
+            "routing_logic": "Displayed if Q3 answer is 3 or lower",
+            "client_notes": "Use an open-ended question to gather detailed feedback. Ensure the text box is large enough to accommodate lengthy responses.",
+            "scripter_notes": "Field type: open text",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-powered customer service chatbots?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Displayed if Q3 answer is 3 or lower"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you prefer interacting with an AI-powered chatbot or a human customer service representative for routine inquiries?",
+            "answer_options": [
+                "AI-powered chatbot",
+                "Human customer service representative",
+                "No preference"
+            ],
+            "routing_logic": "Displayed if Q1 answer is not 'Never'",
+            "client_notes": "Use a single-choice question to capture clear preferences.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "Would you prefer interacting with an AI-powered chatbot or a human customer service representative for routine inquiries?",
+                "answer_options": [
+                    "AI-powered chatbot",
+                    "Human customer service representative",
+                    "No preference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Displayed if Q1 answer is not 'Never'"
+            }
+        }
+    ]
+}

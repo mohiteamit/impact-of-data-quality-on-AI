@@ -1,0 +1,129 @@
+{
+    "survey_id": "f28132cf-f726-4106-bdf6-4e2d3638cbc8",
+    "survey_name": "Consumer Preferences for Subscription-Based Home Cleaning Services Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and satisfaction levels regarding subscription-based home cleaning services, including frequency, pricing, and service quality.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you currently use a professional home cleaning service?",
+            "answer_options": [
+                "Weekly",
+                "Bi-weekly",
+                "Monthly",
+                "Quarterly",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "This question helps segment respondents based on current usage frequency.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How often do you currently use a professional home cleaning service?",
+                "answer_options": [
+                    "Weekly",
+                    "Bi-weekly",
+                    "Monthly",
+                    "Quarterly",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing a home cleaning service? (Select up to 3)",
+            "answer_options": [
+                "Price",
+                "Frequency of service",
+                "Quality of cleaning",
+                "Eco-friendly products",
+                "Flexibility in scheduling",
+                "Trustworthiness of staff",
+                "Additional services (e.g., laundry, organization)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "This question identifies key decision-making factors for potential subscribers.",
+            "scripter_notes": "Use checkboxes for multi-choice selection with a limit of 3 selections.",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a home cleaning service? (Select up to 3)",
+                "answer_options": [
+                    "Price",
+                    "Frequency of service",
+                    "Quality of cleaning",
+                    "Eco-friendly products",
+                    "Flexibility in scheduling",
+                    "Trustworthiness of staff",
+                    "Additional services (e.g., laundry, organization)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the maximum amount you would be willing to pay per month for a subscription-based home cleaning service?",
+            "answer_options": [
+                "Less than $50",
+                "$50 - $100",
+                "$100 - $150",
+                "$150 - $200",
+                "More than $200"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Weekly', 'Bi-weekly', 'Monthly', or 'Quarterly' to Q1",
+            "client_notes": "This question gauges price sensitivity among current users.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "What is the maximum amount you would be willing to pay per month for a subscription-based home cleaning service?",
+                "answer_options": [
+                    "Less than $50",
+                    "$50 - $100",
+                    "$100 - $150",
+                    "$150 - $200",
+                    "More than $200"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Weekly', 'Bi-weekly', 'Monthly', or 'Quarterly' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What would motivate you to subscribe to a home cleaning service?",
+            "answer_options": [],
+            "routing_logic": "Appears for respondents who answered 'Never' to Q1",
+            "client_notes": "This open-ended question helps identify barriers to adoption for non-users.",
+            "scripter_notes": "Use a text box for open-ended responses.",
+            "script": {
+                "question_text": "What would motivate you to subscribe to a home cleaning service?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for respondents who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with your current home cleaning service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents who answered 'Weekly', 'Bi-weekly', 'Monthly', or 'Quarterly' to Q1",
+            "client_notes": "Use a Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with your current home cleaning service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who answered 'Weekly', 'Bi-weekly', 'Monthly', or 'Quarterly' to Q1"
+            }
+        }
+    ]
+}

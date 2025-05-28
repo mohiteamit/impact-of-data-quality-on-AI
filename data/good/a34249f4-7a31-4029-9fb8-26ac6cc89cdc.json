@@ -1,0 +1,133 @@
+{
+    "survey_id": "a34249f4-7a31-4029-9fb8-26ac6cc89cdc",
+    "survey_name": "Customer Preferences for Electric Skateboards Survey",
+    "survey_brief": "This survey aims to gather insights on consumer preferences and experiences with electric skateboards to help manufacturers and retailers better understand market needs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use an electric skateboard?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never (I do not own one)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure the options cover all possible usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you use an electric skateboard?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never (I do not own one)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is the primary reason you use an electric skateboard?",
+            "answer_options": [
+                "Commuting to work/school",
+                "Recreation/leisure",
+                "Exercise/fitness",
+                "Environmental concerns (reducing carbon footprint)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Include an 'Other' option with an open-text field for unique responses.",
+            "scripter_notes": "Field type: radio button with optional open-text (SINGLE_CHOICE with 'Other' trigger)",
+            "script": {
+                "question_text": "What is the primary reason you use an electric skateboard?",
+                "answer_options": [
+                    "Commuting to work/school",
+                    "Recreation/leisure",
+                    "Exercise/fitness",
+                    "Environmental concerns (reducing carbon footprint)",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which features are most important to you when choosing an electric skateboard? (Select up to 3)",
+            "answer_options": [
+                "Battery life",
+                "Speed",
+                "Portability/weight",
+                "Build quality/durability",
+                "Price",
+                "Brand reputation",
+                "Customer support",
+                "Design/aesthetics",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use checkboxes for multi-selection. Limit to 3 choices to prioritize preferences.",
+            "scripter_notes": "Field type: checkbox with max selections (MULTI_CHOICE, max 3)",
+            "script": {
+                "question_text": "Which features are most important to you when choosing an electric skateboard? (Select up to 3)",
+                "answer_options": [
+                    "Battery life",
+                    "Speed",
+                    "Portability/weight",
+                    "Build quality/durability",
+                    "Price",
+                    "Brand reputation",
+                    "Customer support",
+                    "Design/aesthetics",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What is the maximum price you would pay for a high-quality electric skateboard?",
+            "answer_options": [
+                "Under $200",
+                "$200-$400",
+                "$400-$600",
+                "$600-$800",
+                "Over $800"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice scale. Ensure price ranges reflect current market tiers.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "What is the maximum price you would pay for a high-quality electric skateboard?",
+                "answer_options": [
+                    "Under $200",
+                    "$200-$400",
+                    "$400-$600",
+                    "$600-$800",
+                    "Over $800"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in electric skateboards?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Use a text box with a character limit of 500.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT, max 500 chars)",
+            "script": {
+                "question_text": "What improvements would you like to see in electric skateboards?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        }
+    ]
+}

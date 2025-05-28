@@ -1,0 +1,99 @@
+{
+    "survey_id": "751bc4e1-903b-43be-90fb-00f1daa4891d",
+    "survey_name": "Employee Feedback on Office Space Redesign Survey",
+    "survey_brief": "This survey collects employee feedback on recent office space redesign to assess satisfaction, identify areas for improvement, and guide future workplace planning.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the recent office space redesign?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clear sentiment measurement. Mobile-friendly dropdown recommended.",
+            "scripter_notes": "Single-choice radio buttons with 'Neutral' as midpoint.",
+            "script": {
+                "question_text": "How satisfied are you with the recent office space redesign?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following redesigned areas do you use most frequently? (Select all that apply)",
+            "answer_options": [
+                "Open workspace desks",
+                "Collaboration zones",
+                "Quiet focus pods",
+                "Breakout lounges",
+                "Meeting rooms",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select checkboxes with 'None' option to capture non-users.",
+            "scripter_notes": "Multi-choice checkboxes with validation requiring at least one selection.",
+            "script": {
+                "question_text": "Which of the following redesigned areas do you use most frequently? (Select all that apply)",
+                "answer_options": [
+                    "Open workspace desks",
+                    "Collaboration zones",
+                    "Quiet focus pods",
+                    "Breakout lounges",
+                    "Meeting rooms",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for the redesigned office space?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Limit to 300 characters.",
+            "scripter_notes": "Open-text field with character counter.",
+            "script": {
+                "question_text": "What improvements would you suggest for the redesigned office space?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Has the redesign improved your ability to collaborate with colleagues?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No change",
+                "No, it has worsened"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Single-choice with neutral option. Display logic can skip if Q2 = 'None of the above'.",
+            "scripter_notes": "Radio buttons with conditional display based on Q2.",
+            "script": {
+                "question_text": "Has the redesign improved your ability to collaborate with colleagues?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No change",
+                    "No, it has worsened"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except if Q2 includes 'None of the above'"
+            }
+        }
+    ]
+}

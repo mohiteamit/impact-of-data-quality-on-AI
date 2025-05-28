@@ -1,0 +1,127 @@
+{
+    "survey_id": "a412f378-46d9-4c75-85e7-eabe046d4153",
+    "survey_name": "Customer Satisfaction with In-Car Voice Assistant Systems Survey",
+    "survey_brief": "This survey aims to assess customer satisfaction and user experience with in-car voice assistant systems, focusing on usability, functionality, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the in-car voice assistant system?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always shown",
+            "client_notes": "This helps gauge user engagement with the system. Consider a 5-point Likert scale for clarity.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How frequently do you use the in-car voice assistant system?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features of the in-car voice assistant do you use most often? (Select all that apply)",
+            "answer_options": [
+                "Making phone calls",
+                "Sending text messages",
+                "Navigation directions",
+                "Playing music or media",
+                "Adjusting climate controls",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'",
+            "client_notes": "Multi-choice allows capturing multiple use cases. Ensure 'Other' option includes a text field.",
+            "scripter_notes": "Use checkboxes for multi-choice selection. Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which features of the in-car voice assistant do you use most often? (Select all that apply)",
+                "answer_options": [
+                    "Making phone calls",
+                    "Sending text messages",
+                    "Navigation directions",
+                    "Playing music or media",
+                    "Adjusting climate controls",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of voice recognition?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'",
+            "client_notes": "Use a balanced scale to measure satisfaction levels.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of voice recognition?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the in-car voice assistant system?",
+            "answer_options": [],
+            "routing_logic": "Always shown",
+            "client_notes": "Open-ended question to capture qualitative feedback. Keep the text box size reasonable.",
+            "scripter_notes": "Use an open-text field for this question.",
+            "script": {
+                "question_text": "What improvements would you suggest for the in-car voice assistant system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always shown"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to recommend this in-car voice assistant system to others?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Shown if Q1 is not 'Never'",
+            "client_notes": "This question measures Net Promoter Score (NPS) potential. Use a standard 5-point scale.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How likely are you to recommend this in-car voice assistant system to others?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown if Q1 is not 'Never'"
+            }
+        }
+    ]
+}

@@ -1,0 +1,113 @@
+{
+    "survey_id": "36fb73c0-610d-43e4-a486-f4c63525c707",
+    "survey_name": "Customer Satisfaction with Contactless Hotel Check-In Services Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with contactless check-in services at hotels, focusing on ease of use, efficiency, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use contactless check-in services at hotels?",
+            "answer_options": [
+                "Always",
+                "Often",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Use a 5-point Likert scale for better granularity.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How often do you use contactless check-in services at hotels?",
+                "answer_options": [
+                    "Always",
+                    "Often",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which aspects of contactless check-in did you find most beneficial? (Select all that apply)",
+            "answer_options": [
+                "Speed of check-in",
+                "Reduced physical contact",
+                "Convenience",
+                "Mobile app integration",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Allow multiple selections and an 'Other' option for additional feedback.",
+            "scripter_notes": "Field type: checkbox with an open text field for 'Other'.",
+            "script": {
+                "question_text": "Which aspects of contactless check-in did you find most beneficial? (Select all that apply)",
+                "answer_options": [
+                    "Speed of check-in",
+                    "Reduced physical contact",
+                    "Convenience",
+                    "Mobile app integration",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges did you encounter while using contactless check-in services?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Open-ended question to capture detailed feedback.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What challenges did you encounter while using contactless check-in services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to prefer contactless check-in over traditional check-in in the future?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Use a 5-point Likert scale for consistency.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How likely are you to prefer contactless check-in over traditional check-in in the future?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Do you have any suggestions for improving contactless check-in services?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents.",
+            "client_notes": "Open-ended question to gather actionable insights.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "Do you have any suggestions for improving contactless check-in services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents."
+            }
+        }
+    ]
+}

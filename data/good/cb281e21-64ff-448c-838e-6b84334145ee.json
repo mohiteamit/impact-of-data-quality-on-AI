@@ -1,0 +1,109 @@
+{
+    "survey_id": "cb281e21-64ff-448c-838e-6b84334145ee",
+    "survey_name": "Customer Satisfaction with In-Flight Entertainment Options Survey",
+    "survey_brief": "This survey aims to gather customer feedback on in-flight entertainment systems to improve offerings and enhance passenger experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied were you with the variety of in-flight entertainment options available on your most recent flight?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a 5-point Likert scale for clear measurement. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied were you with the variety of in-flight entertainment options available on your most recent flight?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of in-flight entertainment did you use during your flight? (Select all that apply)",
+            "answer_options": [
+                "Movies",
+                "TV shows",
+                "Music",
+                "Games",
+                "Live TV",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Multiple selections allowed. Randomize answer options to avoid bias.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "Which types of in-flight entertainment did you use during your flight? (Select all that apply)",
+                "answer_options": [
+                    "Movies",
+                    "TV shows",
+                    "Music",
+                    "Games",
+                    "Live TV",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for the in-flight entertainment system?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Provide a text box with sufficient space.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you suggest for the in-flight entertainment system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Did you experience any technical issues with the in-flight entertainment system?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Simple binary question. Follow-up with Q5 if 'Yes' is selected.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Did you experience any technical issues with the in-flight entertainment system?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Please describe the technical issue you encountered with the in-flight entertainment system.",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q4 is answered with 'Yes'.",
+            "client_notes": "Open-ended follow-up question. Ensure smooth transition from Q4.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "Please describe the technical issue you encountered with the in-flight entertainment system.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q4 is answered with 'Yes'."
+            }
+        }
+    ]
+}

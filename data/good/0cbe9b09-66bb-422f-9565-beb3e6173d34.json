@@ -1,0 +1,121 @@
+{
+    "survey_id": "0cbe9b09-66bb-422f-9565-beb3e6173d34",
+    "survey_name": "Corporate Workspace Lighting Preferences Survey",
+    "survey_brief": "This survey aims to gather employee feedback on lighting preferences in corporate workspaces to optimize productivity and well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with the current lighting conditions in your workspace?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for measurable satisfaction levels. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: single-choice radio buttons. Randomize option order to reduce bias.",
+            "script": {
+                "question_text": "How satisfied are you with the current lighting conditions in your workspace?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following lighting issues have you experienced in your workspace? (Select all that apply)",
+            "answer_options": [
+                "Glare on screens",
+                "Inconsistent brightness",
+                "Flickering lights",
+                "Too warm/cold color temperature",
+                "Inadequate task lighting"
+            ],
+            "routing_logic": "If Q1 response is 'Dissatisfied' or 'Very dissatisfied'",
+            "client_notes": "Multi-select format. Include 'Other' with text field if needed.",
+            "scripter_notes": "Field type: multi-choice checkboxes. Add 'Other' option with open-text field.",
+            "script": {
+                "question_text": "Which of the following lighting issues have you experienced in your workspace? (Select all that apply)",
+                "answer_options": [
+                    "Glare on screens",
+                    "Inconsistent brightness",
+                    "Flickering lights",
+                    "Too warm/cold color temperature",
+                    "Inadequate task lighting"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 response is 'Dissatisfied' or 'Very dissatisfied'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What type of lighting do you prefer for focused work tasks?",
+            "answer_options": [
+                "Bright overhead lighting",
+                "Adjustable desk lamp",
+                "Natural light only",
+                "Combination of overhead and task lighting"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include visual aids if possible to illustrate lighting types.",
+            "scripter_notes": "Field type: single-choice with 'Other' option. Display options vertically.",
+            "script": {
+                "question_text": "What type of lighting do you prefer for focused work tasks?",
+                "answer_options": [
+                    "Bright overhead lighting",
+                    "Adjustable desk lamp",
+                    "Natural light only",
+                    "Combination of overhead and task lighting"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe how lighting affects your productivity in the workspace.",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative insights. Limit to 250 characters.",
+            "scripter_notes": "Field type: open-text with character counter.",
+            "script": {
+                "question_text": "Describe how lighting affects your productivity in the workspace.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you use personal lighting controls (e.g., dimmers, color temperature adjusters) if provided?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No preference",
+                "No, unlikely to use"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Critical for ROI analysis on lighting upgrades. Randomize 'No preference' position.",
+            "scripter_notes": "Field type: single-choice with mandatory response.",
+            "script": {
+                "question_text": "Would you use personal lighting controls (e.g., dimmers, color temperature adjusters) if provided?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No preference",
+                    "No, unlikely to use"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

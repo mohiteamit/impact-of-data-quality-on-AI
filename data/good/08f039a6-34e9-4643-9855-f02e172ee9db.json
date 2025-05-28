@@ -1,0 +1,135 @@
+{
+    "survey_id": "08f039a6-34e9-4643-9855-f02e172ee9db",
+    "survey_name": "Consumer Preferences for Air Purifiers Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, usage patterns, and purchasing factors related to air purifiers to help manufacturers and retailers better meet customer needs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use an air purifier in your home?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Occasionally",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Ensure the options cover all likely usage frequencies. Mobile-friendly radio buttons recommended.",
+            "scripter_notes": "Single-choice question with radio buttons.",
+            "script": {
+                "question_text": "How often do you use an air purifier in your home?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Occasionally",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features are most important to you when selecting an air purifier? (Select up to three)",
+            "answer_options": [
+                "HEPA filtration",
+                "Smart app connectivity",
+                "Noise level",
+                "Energy efficiency",
+                "Room coverage area",
+                "Price",
+                "Design/aesthetics",
+                "Odor removal",
+                "Allergen reduction"
+            ],
+            "routing_logic": "Only appears if Q1 is not 'Never'.",
+            "client_notes": "Multiple-choice question with checkboxes. Ensure the selection limit is enforced.",
+            "scripter_notes": "Multi-choice question with a maximum of three selections allowed.",
+            "script": {
+                "question_text": "Which of the following features are most important to you when selecting an air purifier? (Select up to three)",
+                "answer_options": [
+                    "HEPA filtration",
+                    "Smart app connectivity",
+                    "Noise level",
+                    "Energy efficiency",
+                    "Room coverage area",
+                    "Price",
+                    "Design/aesthetics",
+                    "Odor removal",
+                    "Allergen reduction"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you use an air purifier?",
+            "answer_options": [
+                "Allergy relief",
+                "Asthma or respiratory conditions",
+                "General air quality improvement",
+                "Pet dander reduction",
+                "Smoke or odor removal",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 is not 'Never'.",
+            "client_notes": "Include an 'Other' option with a text field to capture unique responses.",
+            "scripter_notes": "Single-choice question with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you use an air purifier?",
+                "answer_options": [
+                    "Allergy relief",
+                    "Asthma or respiratory conditions",
+                    "General air quality improvement",
+                    "Pet dander reduction",
+                    "Smoke or odor removal",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much would you typically spend on an air purifier?",
+            "answer_options": [
+                "Under $100",
+                "$100 - $200",
+                "$201 - $300",
+                "$301 - $500",
+                "Over $500"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Price ranges should reflect common market segments. Mobile-friendly dropdown recommended.",
+            "scripter_notes": "Single-choice question with dropdown options.",
+            "script": {
+                "question_text": "How much would you typically spend on an air purifier?",
+                "answer_options": [
+                    "Under $100",
+                    "$100 - $200",
+                    "$201 - $300",
+                    "$301 - $500",
+                    "Over $500"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you do not currently use an air purifier, what factors would encourage you to purchase one?",
+            "answer_options": [],
+            "routing_logic": "Only appears if Q1 is 'Never'.",
+            "client_notes": "Open-ended question to capture qualitative insights. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Open-text question with a large input field.",
+            "script": {
+                "question_text": "If you do not currently use an air purifier, what factors would encourage you to purchase one?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only appears if Q1 is 'Never'."
+            }
+        }
+    ]
+}

@@ -1,0 +1,181 @@
+{
+    "survey_id": "2b5d272a-ddcd-484f-bd2f-9f63ea908c6d",
+    "survey_name": "Customer Satisfaction with Augmented Reality (AR) Shopping Experiences Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and preferences regarding the use of augmented reality (AR) in online and in-store shopping experiences.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you ever used augmented reality (AR) features while shopping online or in-store?",
+            "answer_options": [
+                "Yes, online shopping",
+                "Yes, in-store shopping",
+                "Yes, both online and in-store",
+                "No, never"
+            ],
+            "routing_logic": "If answer is 'No, never', skip to Q6.",
+            "client_notes": "This screening question helps segment respondents based on their AR experience. Ensure mobile-friendly design for ease of response.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "Have you ever used augmented reality (AR) features while shopping online or in-store?",
+                "answer_options": [
+                    "Yes, online shopping",
+                    "Yes, in-store shopping",
+                    "Yes, both online and in-store",
+                    "No, never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If answer is 'No, never', skip to Q6."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your most recent AR shopping experience?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'No, never'.",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction levels. Consider adding follow-up open-ended questions for 'Dissatisfied' or 'Very dissatisfied' responses.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How satisfied are you with your most recent AR shopping experience?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'No, never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following AR features have you used while shopping? (Select all that apply)",
+            "answer_options": [
+                "Virtual try-on (e.g., clothing, accessories)",
+                "3D product visualization",
+                "AR product placement in your space (e.g., furniture, home decor)",
+                "AR navigation in-store",
+                "Interactive AR product demos",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'No, never'.",
+            "client_notes": "This question helps identify which AR features are most commonly used. The 'Other' option allows for additional insights.",
+            "scripter_notes": "Use checkboxes for multi-choice selection. Include a text field for 'Other' responses.",
+            "script": {
+                "question_text": "Which of the following AR features have you used while shopping? (Select all that apply)",
+                "answer_options": [
+                    "Virtual try-on (e.g., clothing, accessories)",
+                    "3D product visualization",
+                    "AR product placement in your space (e.g., furniture, home decor)",
+                    "AR navigation in-store",
+                    "Interactive AR product demos",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'No, never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to use AR features again in future shopping experiences?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears only if Q1 answer is not 'No, never'.",
+            "client_notes": "This question measures intent for future use of AR features. Pair with Q2 to analyze satisfaction vs. intent.",
+            "scripter_notes": "Use radio buttons for single-choice selection.",
+            "script": {
+                "question_text": "How likely are you to use AR features again in future shopping experiences?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is not 'No, never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would make AR shopping experiences more useful for you?",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q1 answer is not 'No, never'.",
+            "client_notes": "This open-ended question provides qualitative insights for improving AR shopping experiences. Consider limiting response length to 200 characters.",
+            "scripter_notes": "Use a text input field for open-ended responses.",
+            "script": {
+                "question_text": "What improvements would make AR shopping experiences more useful for you?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q1 answer is not 'No, never'."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What factors would encourage you to try AR shopping features in the future?",
+            "answer_options": [
+                "Ease of use",
+                "Better accuracy of AR simulations",
+                "More product options available in AR",
+                "Incentives (e.g., discounts for using AR)",
+                "Clear instructions on how to use AR",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 answer is 'No, never'.",
+            "client_notes": "This question helps identify barriers to adoption for non-users. The 'Other' option allows for additional insights.",
+            "scripter_notes": "Use checkboxes for multi-choice selection. Include a text field for 'Other' responses.",
+            "script": {
+                "question_text": "What factors would encourage you to try AR shopping features in the future?",
+                "answer_options": [
+                    "Ease of use",
+                    "Better accuracy of AR simulations",
+                    "More product options available in AR",
+                    "Incentives (e.g., discounts for using AR)",
+                    "Clear instructions on how to use AR",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is 'No, never'."
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "How do you typically discover new shopping technologies like AR?",
+            "answer_options": [
+                "Social media",
+                "Retailer emails or notifications",
+                "Word of mouth",
+                "In-store promotions",
+                "Online advertisements",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "This question helps identify effective channels for promoting AR shopping features. The 'Other' option allows for additional insights.",
+            "scripter_notes": "Use checkboxes for multi-choice selection. Include a text field for 'Other' responses.",
+            "script": {
+                "question_text": "How do you typically discover new shopping technologies like AR?",
+                "answer_options": [
+                    "Social media",
+                    "Retailer emails or notifications",
+                    "Word of mouth",
+                    "In-store promotions",
+                    "Online advertisements",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

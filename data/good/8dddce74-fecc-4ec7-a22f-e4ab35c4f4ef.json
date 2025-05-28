@@ -1,0 +1,139 @@
+{
+    "survey_id": "8dddce74-fecc-4ec7-a22f-e4ab35c4f4ef",
+    "survey_name": "Customer Satisfaction with In-Flight Wi-Fi Services Survey",
+    "survey_brief": "This survey aims to gather feedback from passengers regarding their satisfaction with in-flight Wi-Fi services to help airlines improve connectivity offerings.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "On your most recent flight, did you use the in-flight Wi-Fi service?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "I did not know it was available"
+            ],
+            "routing_logic": "Applies to all respondents.",
+            "client_notes": "Use a single-choice question to quickly determine Wi-Fi usage rates.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "On your most recent flight, did you use the in-flight Wi-Fi service?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "I did not know it was available"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Applies to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied were you with the speed of the in-flight Wi-Fi?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only appears if Q1 is answered with 'Yes'.",
+            "client_notes": "Use a Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How satisfied were you with the speed of the in-flight Wi-Fi?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 is answered with 'Yes'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Did you experience any interruptions or disconnections while using the in-flight Wi-Fi?",
+            "answer_options": [
+                "Yes, frequently",
+                "Yes, occasionally",
+                "No, not at all"
+            ],
+            "routing_logic": "Only appears if Q1 is answered with 'Yes'.",
+            "client_notes": "Single-choice question to assess reliability of the service.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "Did you experience any interruptions or disconnections while using the in-flight Wi-Fi?",
+                "answer_options": [
+                    "Yes, frequently",
+                    "Yes, occasionally",
+                    "No, not at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only appears if Q1 is answered with 'Yes'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What was the primary reason for using the in-flight Wi-Fi?",
+            "answer_options": [
+                "Work-related tasks",
+                "Personal communication (e.g., email, messaging)",
+                "Entertainment (e.g., streaming, browsing)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only appears if Q1 is answered with 'Yes'.",
+            "client_notes": "Multi-choice question to understand usage patterns.",
+            "scripter_notes": "Field type: checkbox with an 'Other' option for open-ended responses.",
+            "script": {
+                "question_text": "What was the primary reason for using the in-flight Wi-Fi?",
+                "answer_options": [
+                    "Work-related tasks",
+                    "Personal communication (e.g., email, messaging)",
+                    "Entertainment (e.g., streaming, browsing)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only appears if Q1 is answered with 'Yes'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How much would you be willing to pay for in-flight Wi-Fi on a future flight?",
+            "answer_options": [
+                "Nothing, it should be free",
+                "$5 - $10",
+                "$11 - $20",
+                "More than $20"
+            ],
+            "routing_logic": "Applies to all respondents.",
+            "client_notes": "Single-choice question to gauge pricing sensitivity.",
+            "scripter_notes": "Field type: radio button.",
+            "script": {
+                "question_text": "How much would you be willing to pay for in-flight Wi-Fi on a future flight?",
+                "answer_options": [
+                    "Nothing, it should be free",
+                    "$5 - $10",
+                    "$11 - $20",
+                    "More than $20"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Applies to all respondents."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please share any additional comments or suggestions regarding in-flight Wi-Fi services.",
+            "answer_options": [],
+            "routing_logic": "Appears after Q5.",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text box.",
+            "script": {
+                "question_text": "Please share any additional comments or suggestions regarding in-flight Wi-Fi services.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears after Q5."
+            }
+        }
+    ]
+}

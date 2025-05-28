@@ -1,0 +1,123 @@
+{
+    "survey_id": "8f6b33be-bba9-4e9b-aa98-8338bb6a9a20",
+    "survey_name": "Customer Satisfaction with Autonomous Grocery Checkout Systems Survey",
+    "survey_brief": "This survey aims to gather feedback from users of autonomous grocery checkout systems to understand their satisfaction levels, pain points, and suggestions for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use autonomous grocery checkout systems?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question helps segment users based on frequency of use. Use a radio button for single selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use autonomous grocery checkout systems?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your decision to use autonomous checkout systems? (Select all that apply)",
+            "answer_options": [
+                "Speed of checkout",
+                "Avoiding long lines",
+                "Ease of use",
+                "Privacy",
+                "Preference for minimal human interaction",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "This question identifies key motivators. Use checkboxes for multiple selections.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an 'Other' option with a text field.",
+            "script": {
+                "question_text": "What factors influence your decision to use autonomous checkout systems? (Select all that apply)",
+                "answer_options": [
+                    "Speed of checkout",
+                    "Avoiding long lines",
+                    "Ease of use",
+                    "Privacy",
+                    "Preference for minimal human interaction",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of autonomous checkout systems?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a Likert scale for satisfaction levels. Ensure the question is mobile-friendly.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of autonomous checkout systems?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced while using autonomous checkout systems?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Open-ended question to capture detailed feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What challenges have you faced while using autonomous checkout systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend autonomous checkout systems to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Simple yes/no/maybe question to gauge overall satisfaction.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you recommend autonomous checkout systems to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,125 @@
+{
+    "survey_id": "f495ab45-8d72-4a17-9ce2-daa112314a97",
+    "survey_name": "Community Feedback on Urban Green Spaces Survey",
+    "survey_brief": "This survey aims to gather community feedback on the usage, satisfaction, and desired improvements for urban green spaces in the city.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit urban green spaces (e.g., parks, gardens, trails)?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "A few times a year",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for easy selection. Ensure mobile-friendly design.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you visit urban green spaces (e.g., parks, gardens, trails)?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "A few times a year",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for visiting urban green spaces? (Select all that apply)",
+            "answer_options": [
+                "Exercise (e.g., walking, running, cycling)",
+                "Relaxation and stress relief",
+                "Spending time with family/friends",
+                "Enjoying nature and scenery",
+                "Attending events or activities",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for additional responses.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), with an optional text field for 'Other'",
+            "script": {
+                "question_text": "What are your primary reasons for visiting urban green spaces? (Select all that apply)",
+                "answer_options": [
+                    "Exercise (e.g., walking, running, cycling)",
+                    "Relaxation and stress relief",
+                    "Spending time with family/friends",
+                    "Enjoying nature and scenery",
+                    "Attending events or activities",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness and maintenance of urban green spaces?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a 5-point Likert scale for satisfaction. Ensure clear labeling of options.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness and maintenance of urban green spaces?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in urban green spaces?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use an open-text field to capture qualitative feedback. Encourage detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What improvements would you like to see in urban green spaces?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be interested in participating in community-led green space initiatives (e.g., cleanup events, tree planting)?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, possibly",
+                "Unsure",
+                "No"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button. Include an optional text field for respondents to provide contact information if they select 'Yes, definitely' or 'Yes, possibly'.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons), with conditional follow-up for contact info.",
+            "script": {
+                "question_text": "Would you be interested in participating in community-led green space initiatives (e.g., cleanup events, tree planting)?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, possibly",
+                    "Unsure",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

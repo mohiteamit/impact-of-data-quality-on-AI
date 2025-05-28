@@ -1,0 +1,123 @@
+{
+    "survey_id": "5832ba8a-f0a6-4cc4-9914-e80855f0f4dd",
+    "survey_name": "Customer Satisfaction with Automated Pharmacy Kiosks Survey",
+    "survey_brief": "This survey aims to gather customer feedback on the usability, efficiency, and overall satisfaction with automated pharmacy kiosks for prescription pickups.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use automated pharmacy kiosks to pick up prescriptions?",
+            "answer_options": [
+                "Never",
+                "Rarely (1-2 times per year)",
+                "Occasionally (3-5 times per year)",
+                "Frequently (6+ times per year)"
+            ],
+            "routing_logic": "All respondents must answer this question.",
+            "client_notes": "This question helps segment users by frequency of interaction with the service.",
+            "scripter_notes": "Use a single-choice radio button format.",
+            "script": {
+                "question_text": "How often do you use automated pharmacy kiosks to pick up prescriptions?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (1-2 times per year)",
+                    "Occasionally (3-5 times per year)",
+                    "Frequently (6+ times per year)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents must answer this question."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using automated pharmacy kiosks?",
+            "answer_options": [
+                "Faster service",
+                "Avoiding human interaction",
+                "Convenience (e.g., 24/7 availability)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Shown only if Q1 answer is not 'Never'.",
+            "client_notes": "Identifies key drivers for adoption. Include an 'Other' option to capture unlisted motivations.",
+            "scripter_notes": "Use a single-choice radio button with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What is your primary reason for using automated pharmacy kiosks?",
+                "answer_options": [
+                    "Faster service",
+                    "Avoiding human interaction",
+                    "Convenience (e.g., 24/7 availability)",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown only if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following features do you find most valuable in an automated pharmacy kiosk? (Select up to 3)",
+            "answer_options": [
+                "Touchscreen usability",
+                "Multilingual support",
+                "Real-time pharmacist chat",
+                "Mobile app integration",
+                "Prescription status updates",
+                "Payment options (e.g., contactless)"
+            ],
+            "routing_logic": "Shown only if Q1 answer is not 'Never'.",
+            "client_notes": "Helps prioritize feature improvements. Ensure the question is mobile-friendly for easy selection.",
+            "scripter_notes": "Use a multi-choice checkbox format with a max selection limit of 3.",
+            "script": {
+                "question_text": "Which of the following features do you find most valuable in an automated pharmacy kiosk? (Select up to 3)",
+                "answer_options": [
+                    "Touchscreen usability",
+                    "Multilingual support",
+                    "Real-time pharmacist chat",
+                    "Mobile app integration",
+                    "Prescription status updates",
+                    "Payment options (e.g., contactless)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Shown only if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1-5, how satisfied are you with the overall experience of using automated pharmacy kiosks? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Shown only if Q1 answer is not 'Never'.",
+            "client_notes": "Use a Likert scale for standardized satisfaction measurement.",
+            "scripter_notes": "Use a single-choice radio button format with clear labels for each number.",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the overall experience of using automated pharmacy kiosks? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Shown only if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for automated pharmacy kiosks?",
+            "answer_options": [],
+            "routing_logic": "Shown only if Q4 answer is 1-3.",
+            "client_notes": "Open-ended responses will uncover pain points not captured in closed questions.",
+            "scripter_notes": "Use an open-text field with a 500-character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for automated pharmacy kiosks?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Shown only if Q4 answer is 1-3."
+            }
+        }
+    ]
+}

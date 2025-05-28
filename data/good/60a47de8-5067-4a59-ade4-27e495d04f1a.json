@@ -1,0 +1,125 @@
+{
+    "survey_id": "60a47de8-5067-4a59-ade4-27e495d04f1a",
+    "survey_name": "Customer Satisfaction with Subscription-Based Pet Food Delivery Services Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and preferences regarding subscription-based pet food delivery services, including delivery experience, product quality, and customization options.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How satisfied are you with your current subscription-based pet food delivery service?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a 5-point Likert scale for clarity. Ensure mobile-friendly radio button selection.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with your current subscription-based pet food delivery service?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following factors are most important to you when selecting a pet food delivery service? (Select all that apply)",
+            "answer_options": [
+                "Price",
+                "Delivery frequency options",
+                "Customizable meal plans",
+                "Quality of ingredients",
+                "Eco-friendly packaging",
+                "Variety of pet food options",
+                "Customer service"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections (checkbox). Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following factors are most important to you when selecting a pet food delivery service? (Select all that apply)",
+                "answer_options": [
+                    "Price",
+                    "Delivery frequency options",
+                    "Customizable meal plans",
+                    "Quality of ingredients",
+                    "Eco-friendly packaging",
+                    "Variety of pet food options",
+                    "Customer service"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How often do you adjust your pet food subscription (e.g., change delivery frequency, meal plan, or protein options)?",
+            "answer_options": [
+                "Monthly or more frequently",
+                "Every 2-3 months",
+                "Every 6 months",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include a 'Not applicable' option if needed for non-subscribers.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you adjust your pet food subscription (e.g., change delivery frequency, meal plan, or protein options)?",
+                "answer_options": [
+                    "Monthly or more frequently",
+                    "Every 2-3 months",
+                    "Every 6 months",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any challenges you have encountered with your pet food delivery service.",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q1",
+            "client_notes": "Open-ended to capture detailed feedback. Limit response to 500 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "Please describe any challenges you have encountered with your pet food delivery service.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your current pet food delivery service to other pet owners?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use for Net Promoter Score (NPS) calculation. Ensure clear wording.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you recommend your current pet food delivery service to other pet owners?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

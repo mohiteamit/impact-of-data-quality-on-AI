@@ -1,0 +1,123 @@
+{
+    "survey_id": "5a7e8474-5bdd-4118-8ebd-08eeaca391da",
+    "survey_name": "Employee Satisfaction with Digital Wellness Tools Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction and usage patterns regarding digital wellness tools provided by the company to promote work-life balance and mental health.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use the digital wellness tools provided by your employer?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale for clarity. Ensure options cover all frequency ranges.",
+            "scripter_notes": "Field type: Radio buttons",
+            "script": {
+                "question_text": "How often do you use the digital wellness tools provided by your employer?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which digital wellness tools do you find most beneficial? (Select all that apply)",
+            "answer_options": [
+                "Meditation apps",
+                "Fitness tracking apps",
+                "Screen time monitors",
+                "Virtual counseling services",
+                "Ergonomic reminders",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Allow multiple selections to capture varied preferences.",
+            "scripter_notes": "Field type: Checkboxes with an 'Other' open-text option.",
+            "script": {
+                "question_text": "Which digital wellness tools do you find most beneficial? (Select all that apply)",
+                "answer_options": [
+                    "Meditation apps",
+                    "Fitness tracking apps",
+                    "Screen time monitors",
+                    "Virtual counseling services",
+                    "Ergonomic reminders",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for the digital wellness tools currently offered?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to gather qualitative feedback. Limit to 300 characters.",
+            "scripter_notes": "Field type: Open-text with character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for the digital wellness tools currently offered?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How has using digital wellness tools impacted your work-life balance?",
+            "answer_options": [
+                "Significantly improved",
+                "Slightly improved",
+                "No impact",
+                "Slightly worsened",
+                "Significantly worsened"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a Likert scale for nuanced responses.",
+            "scripter_notes": "Field type: Radio buttons with conditional routing.",
+            "script": {
+                "question_text": "How has using digital wellness tools impacted your work-life balance?",
+                "answer_options": [
+                    "Significantly improved",
+                    "Slightly improved",
+                    "No impact",
+                    "Slightly worsened",
+                    "Significantly worsened"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend the company's digital wellness tools to a colleague?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Simple binary choice with an 'Unsure' option for neutral responses.",
+            "scripter_notes": "Field type: Radio buttons.",
+            "script": {
+                "question_text": "Would you recommend the company's digital wellness tools to a colleague?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

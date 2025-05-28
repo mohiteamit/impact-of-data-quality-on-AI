@@ -1,0 +1,199 @@
+{
+    "survey_id": "9493564c-7004-46f1-ad75-7259a00b836f",
+    "survey_name": "Healthcare Provider Satisfaction with AI-Assisted Diagnostics Survey",
+    "survey_brief": "This survey aims to evaluate healthcare providers' satisfaction and experiences with AI-assisted diagnostic tools, focusing on usability, accuracy, and impact on workflow.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "What is your primary role in healthcare?",
+            "answer_options": [
+                "Physician",
+                "Nurse Practitioner",
+                "Radiologist",
+                "Pathologist",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure 'Other' includes an open-text field for specification. This helps segment responses by role.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an open-text option for 'Other'.",
+            "script": {
+                "question_text": "What is your primary role in healthcare?",
+                "answer_options": [
+                    "Physician",
+                    "Nurse Practitioner",
+                    "Radiologist",
+                    "Pathologist",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How frequently do you use AI-assisted diagnostic tools in your practice?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for frequency. Helps gauge adoption rates.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How frequently do you use AI-assisted diagnostic tools in your practice?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following AI-assisted diagnostic tools have you used? (Select all that apply)",
+            "answer_options": [
+                "Radiology imaging analysis",
+                "Pathology slide analysis",
+                "Clinical decision support systems",
+                "Natural language processing for patient records",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q2",
+            "client_notes": "Multi-choice to capture diverse tool usage. Include 'Other' for completeness.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an open-text option for 'Other'.",
+            "script": {
+                "question_text": "Which of the following AI-assisted diagnostic tools have you used? (Select all that apply)",
+                "answer_options": [
+                    "Radiology imaging analysis",
+                    "Pathology slide analysis",
+                    "Clinical decision support systems",
+                    "Natural language processing for patient records",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How would you rate the accuracy of AI-assisted diagnostic tools in your experience?",
+            "answer_options": [
+                "Very accurate",
+                "Somewhat accurate",
+                "Neutral",
+                "Somewhat inaccurate",
+                "Very inaccurate"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q2",
+            "client_notes": "Likert scale for accuracy perception. Critical for understanding trust in AI tools.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How would you rate the accuracy of AI-assisted diagnostic tools in your experience?",
+                "answer_options": [
+                    "Very accurate",
+                    "Somewhat accurate",
+                    "Neutral",
+                    "Somewhat inaccurate",
+                    "Very inaccurate"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced when using AI-assisted diagnostic tools? (Select all that apply)",
+            "answer_options": [
+                "Integration with existing systems",
+                "False positives/negatives",
+                "Lack of training",
+                "Time-consuming to use",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q2",
+            "client_notes": "Multi-choice to identify common pain points. 'Other' captures unique challenges.",
+            "scripter_notes": "Field type: MULTI_CHOICE with an open-text option for 'Other'.",
+            "script": {
+                "question_text": "What challenges have you faced when using AI-assisted diagnostic tools? (Select all that apply)",
+                "answer_options": [
+                    "Integration with existing systems",
+                    "False positives/negatives",
+                    "Lack of training",
+                    "Time-consuming to use",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q2"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How has AI-assisted diagnostics impacted your workflow efficiency?",
+            "answer_options": [
+                "Significantly improved",
+                "Somewhat improved",
+                "No change",
+                "Somewhat decreased",
+                "Significantly decreased"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q2",
+            "client_notes": "Likert scale to measure efficiency impact. Helps quantify benefits.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "How has AI-assisted diagnostics impacted your workflow efficiency?",
+                "answer_options": [
+                    "Significantly improved",
+                    "Somewhat improved",
+                    "No change",
+                    "Somewhat decreased",
+                    "Significantly decreased"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q2"
+            }
+        },
+        {
+            "qid": "Q7",
+            "question_text": "What additional features or improvements would you like to see in AI-assisted diagnostic tools?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q2",
+            "client_notes": "Open-ended to capture qualitative feedback for product development.",
+            "scripter_notes": "Field type: OPEN_TEXT.",
+            "script": {
+                "question_text": "What additional features or improvements would you like to see in AI-assisted diagnostic tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q2"
+            }
+        },
+        {
+            "qid": "Q8",
+            "question_text": "Would you recommend AI-assisted diagnostic tools to your colleagues?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q2",
+            "client_notes": "Simple yes/no/unsure to gauge overall satisfaction and advocacy.",
+            "scripter_notes": "Field type: SINGLE_CHOICE.",
+            "script": {
+                "question_text": "Would you recommend AI-assisted diagnostic tools to your colleagues?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q2"
+            }
+        }
+    ]
+}

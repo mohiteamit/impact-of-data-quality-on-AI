@@ -1,0 +1,135 @@
+{
+    "survey_id": "c9bdf553-3772-4242-b3f9-af604d3a6e89",
+    "survey_name": "Customer Preferences for Smart Pet Care Technology Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, usage patterns, and satisfaction levels regarding smart pet care technology products such as automated feeders, GPS trackers, and health monitoring devices.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following smart pet care technologies do you currently own or use? (Select all that apply)",
+            "answer_options": [
+                "Automated pet feeder",
+                "GPS pet tracker",
+                "Smart pet camera",
+                "Pet health monitoring collar",
+                "Automatic pet water dispenser",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Consider using a multi-select checkbox format for better user experience. Ensure mobile responsiveness as users may access this on various devices.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox). Randomize answer options to avoid bias.",
+            "script": {
+                "question_text": "Which of the following smart pet care technologies do you currently own or use? (Select all that apply)",
+                "answer_options": [
+                    "Automated pet feeder",
+                    "GPS pet tracker",
+                    "Smart pet camera",
+                    "Pet health monitoring collar",
+                    "Automatic pet water dispenser",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your smart pet care technology?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (I do not own any)"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'None of the above'",
+            "client_notes": "Use a 5-point Likert scale for consistency. Include a 'Not applicable' option for accuracy.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button). Display logic based on Q1 response.",
+            "script": {
+                "question_text": "How satisfied are you with your smart pet care technology?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (I do not own any)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features are most important to you when choosing smart pet care technology? (Select up to 3)",
+            "answer_options": [
+                "Ease of use",
+                "Integration with other smart home devices",
+                "Real-time alerts/notifications",
+                "Battery life",
+                "Data accuracy",
+                "Mobile app functionality",
+                "Price/affordability",
+                "Durability/water resistance"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Limit selections to 3 to force prioritization. Randomize options to avoid order bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkbox) with maximum 3 selections allowed.",
+            "script": {
+                "question_text": "What features are most important to you when choosing smart pet care technology? (Select up to 3)",
+                "answer_options": [
+                    "Ease of use",
+                    "Integration with other smart home devices",
+                    "Real-time alerts/notifications",
+                    "Battery life",
+                    "Data accuracy",
+                    "Mobile app functionality",
+                    "Price/affordability",
+                    "Durability/water resistance"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend smart pet care technology to other pet owners?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'None of the above'",
+            "client_notes": "This is a standard NPS-style question. Keep the scale consistent with industry standards.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio button). Display logic based on Q1 response.",
+            "script": {
+                "question_text": "How likely are you to recommend smart pet care technology to other pet owners?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'None of the above'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you like to see in smart pet care technology?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response to 250 characters for easier analysis.",
+            "scripter_notes": "Field type: OPEN_TEXT with character limit validation.",
+            "script": {
+                "question_text": "What improvements would you like to see in smart pet care technology?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

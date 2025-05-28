@@ -1,0 +1,151 @@
+{
+    "survey_id": "99954541-84ae-4fa2-850a-d7866ba38d88",
+    "survey_name": "Customer Satisfaction with AI-Powered Mental Health Apps Survey",
+    "survey_brief": "This survey aims to evaluate user satisfaction and identify areas for improvement in AI-powered mental health applications. The feedback will help developers and service providers enhance app features and user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which AI-powered mental health app have you used in the past 6 months?",
+            "answer_options": [
+                "Calm",
+                "Headspace",
+                "Woebot",
+                "Wysa",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Include an 'Other' option with a text field to capture apps not listed.",
+            "scripter_notes": "Use a dropdown menu with an 'Other' option that triggers a text input field.",
+            "script": {
+                "question_text": "Which AI-powered mental health app have you used in the past 6 months?",
+                "answer_options": [
+                    "Calm",
+                    "Headspace",
+                    "Woebot",
+                    "Wysa",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the AI-powered features of the app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents who selected an app in Q1",
+            "client_notes": "Use a 5-point Likert scale for consistent measurement.",
+            "scripter_notes": "Display as radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the AI-powered features of the app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected an app in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which of the following AI features do you find most useful? (Select all that apply)",
+            "answer_options": [
+                "Mood tracking",
+                "Personalized meditation recommendations",
+                "Cognitive Behavioral Therapy (CBT) exercises",
+                "Chatbot support",
+                "Sleep improvement tips",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents who selected an app in Q1",
+            "client_notes": "Allow multiple selections and include an 'Other' option with a text field.",
+            "scripter_notes": "Display as checkboxes with an 'Other' option that triggers a text input field.",
+            "script": {
+                "question_text": "Which of the following AI features do you find most useful? (Select all that apply)",
+                "answer_options": [
+                    "Mood tracking",
+                    "Personalized meditation recommendations",
+                    "Cognitive Behavioral Therapy (CBT) exercises",
+                    "Chatbot support",
+                    "Sleep improvement tips",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents who selected an app in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How has using an AI-powered mental health app impacted your overall mental well-being?",
+            "answer_options": [
+                "Significantly improved",
+                "Slightly improved",
+                "No change",
+                "Slightly worsened",
+                "Significantly worsened"
+            ],
+            "routing_logic": "Appears to all respondents who selected an app in Q1",
+            "client_notes": "Use a 5-point Likert scale to measure perceived impact.",
+            "scripter_notes": "Display as radio buttons.",
+            "script": {
+                "question_text": "How has using an AI-powered mental health app impacted your overall mental well-being?",
+                "answer_options": [
+                    "Significantly improved",
+                    "Slightly improved",
+                    "No change",
+                    "Slightly worsened",
+                    "Significantly worsened"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected an app in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for the AI features in the app you used?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents who selected an app in Q1",
+            "client_notes": "Encourage detailed feedback to identify specific pain points.",
+            "scripter_notes": "Display as an open-ended text box with a character limit of 500.",
+            "script": {
+                "question_text": "What improvements would you suggest for the AI features in the app you used?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents who selected an app in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Would you recommend the AI-powered mental health app you used to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Appears to all respondents who selected an app in Q1",
+            "client_notes": "This question helps gauge net promoter score (NPS) potential.",
+            "scripter_notes": "Display as radio buttons.",
+            "script": {
+                "question_text": "Would you recommend the AI-powered mental health app you used to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents who selected an app in Q1"
+            }
+        }
+    ]
+}

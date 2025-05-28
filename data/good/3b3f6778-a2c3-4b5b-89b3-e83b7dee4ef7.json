@@ -1,0 +1,123 @@
+{
+    "survey_id": "3b3f6778-a2c3-4b5b-89b3-e83b7dee4ef7",
+    "survey_name": "Employee Satisfaction with On-Site Mental Health Counseling Services Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction with the on-site mental health counseling services provided by the company, assessing accessibility, quality, and impact on well-being.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often have you utilized the on-site mental health counseling services in the past 12 months?",
+            "answer_options": [
+                "Never",
+                "1-2 times",
+                "3-5 times",
+                "6 or more times"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format to ensure clarity and ease of response. Mobile-friendly design recommended.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often have you utilized the on-site mental health counseling services in the past 12 months?",
+                "answer_options": [
+                    "Never",
+                    "1-2 times",
+                    "3-5 times",
+                    "6 or more times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What aspects of the on-site mental health counseling services do you find most valuable? (Select all that apply)",
+            "answer_options": [
+                "Convenience of location",
+                "Confidentiality",
+                "Quality of counselors",
+                "Flexibility in scheduling",
+                "Range of services offered",
+                "Other (please specify)"
+            ],
+            "routing_logic": "If Q1 response is not 'Never'",
+            "client_notes": "Allow multiple selections to capture diverse feedback. Include an 'Other' option for additional insights.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "What aspects of the on-site mental health counseling services do you find most valuable? (Select all that apply)",
+                "answer_options": [
+                    "Convenience of location",
+                    "Confidentiality",
+                    "Quality of counselors",
+                    "Flexibility in scheduling",
+                    "Range of services offered",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the overall quality of the on-site mental health counseling services?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 response is not 'Never'",
+            "client_notes": "Use a Likert scale for nuanced feedback. Ensure the scale is balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the overall quality of the on-site mental health counseling services?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the on-site mental health counseling services?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture detailed suggestions. Ensure the text box is large enough for comprehensive responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for the on-site mental health counseling services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have the on-site mental health counseling services positively impacted your overall well-being or work performance?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No impact",
+                "No, I have not used the services"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an option for non-users to avoid skewing results. Single-choice format recommended.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Have the on-site mental health counseling services positively impacted your overall well-being or work performance?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No impact",
+                    "No, I have not used the services"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

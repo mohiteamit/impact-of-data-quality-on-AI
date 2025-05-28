@@ -1,0 +1,129 @@
+{
+    "survey_id": "fb39f88c-ff48-49d8-94bf-665fbfdc10ed",
+    "survey_name": "Customer Satisfaction with Contactless Grocery Shopping Survey",
+    "survey_brief": "This survey aims to evaluate customer experiences and satisfaction levels with contactless grocery shopping services, focusing on ease of use, reliability, and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use contactless grocery shopping services?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "First time user"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice question to measure frequency of use. Ensure options cover all potential usage patterns.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How often do you use contactless grocery shopping services?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "First time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you value most in contactless grocery shopping? (Select up to 3)",
+            "answer_options": [
+                "Quick checkout process",
+                "Accurate item selection",
+                "Real-time inventory updates",
+                "Customer support availability",
+                "Mobile app usability",
+                "Delivery/pickup flexibility",
+                "Special offers and discounts"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Multi-choice question to identify key value drivers. Limit selections to prioritize responses.",
+            "scripter_notes": "Field type: checkbox with max selection = 3",
+            "script": {
+                "question_text": "Which features do you value most in contactless grocery shopping? (Select up to 3)",
+                "answer_options": [
+                    "Quick checkout process",
+                    "Accurate item selection",
+                    "Real-time inventory updates",
+                    "Customer support availability",
+                    "Mobile app usability",
+                    "Delivery/pickup flexibility",
+                    "Special offers and discounts"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1-5, how satisfied are you with the overall contactless grocery shopping experience? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Likert scale question to measure satisfaction. Ensure balanced scale with clear anchors.",
+            "scripter_notes": "Field type: radio button with horizontal scale",
+            "script": {
+                "question_text": "On a scale of 1-5, how satisfied are you with the overall contactless grocery shopping experience? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would enhance your contactless grocery shopping experience?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Set character limit to 500.",
+            "scripter_notes": "Field type: text area",
+            "script": {
+                "question_text": "What improvements would enhance your contactless grocery shopping experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend contactless grocery shopping to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Neutral",
+                "Probably not",
+                "Definitely not"
+            ],
+            "routing_logic": "Appears to all respondents except those who answered 'First time user' in Q1",
+            "client_notes": "Net Promoter Score (NPS) style question. Exclude first-time users for accurate recommendation data.",
+            "scripter_notes": "Field type: radio button with skip logic for Q1 = 'First time user'",
+            "script": {
+                "question_text": "Would you recommend contactless grocery shopping to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Neutral",
+                    "Probably not",
+                    "Definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents except those who answered 'First time user' in Q1"
+            }
+        }
+    ]
+}

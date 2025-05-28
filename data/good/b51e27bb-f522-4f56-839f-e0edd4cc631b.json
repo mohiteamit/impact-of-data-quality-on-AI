@@ -1,0 +1,131 @@
+{
+    "survey_id": "b51e27bb-f522-4f56-839f-e0edd4cc631b",
+    "survey_name": "Consumer Preferences for Smart Kitchen Appliances Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors related to smart kitchen appliances, including adoption drivers, feature importance, and barriers to purchase.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with smart kitchen appliances (e.g., smart refrigerators, ovens, or coffee makers)?",
+            "answer_options": [
+                "Very familiar – I own or frequently use them",
+                "Somewhat familiar – I know about them but don’t own any",
+                "Not very familiar – I’ve heard of them but don’t know much",
+                "Not at all familiar – I don’t know what they are"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "Use a single-choice radio button layout. Randomize answer options to prevent bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How familiar are you with smart kitchen appliances (e.g., smart refrigerators, ovens, or coffee makers)?",
+                "answer_options": [
+                    "Very familiar – I own or frequently use them",
+                    "Somewhat familiar – I know about them but don’t own any",
+                    "Not very familiar – I’ve heard of them but don’t know much",
+                    "Not at all familiar – I don’t know what they are"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which smart kitchen appliances do you currently own or use? (Select all that apply)",
+            "answer_options": [
+                "Smart refrigerator",
+                "Smart oven",
+                "Smart coffee maker",
+                "Smart blender/food processor",
+                "Smart dishwasher",
+                "Smart air fryer",
+                "None of the above"
+            ],
+            "routing_logic": "Show if Q1 response is not 'Not at all familiar – I don’t know what they are'",
+            "client_notes": "Multi-choice checkboxes with an 'Other (specify)' open-field option can capture additional appliances.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes). Include an 'Other' text field if selected.",
+            "script": {
+                "question_text": "Which smart kitchen appliances do you currently own or use? (Select all that apply)",
+                "answer_options": [
+                    "Smart refrigerator",
+                    "Smart oven",
+                    "Smart coffee maker",
+                    "Smart blender/food processor",
+                    "Smart dishwasher",
+                    "Smart air fryer",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 response is not 'Not at all familiar – I don’t know what they are'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features are most important to you when considering a smart kitchen appliance? (Rank top 3)",
+            "answer_options": [
+                "Remote control via smartphone app",
+                "Voice assistant compatibility (e.g., Alexa, Google Assistant)",
+                "Energy efficiency",
+                "Automated cooking/cleaning programs",
+                "Integration with other smart home devices",
+                "Real-time notifications (e.g., maintenance alerts)",
+                "Built-in recipe suggestions"
+            ],
+            "routing_logic": "Show if Q1 response is not 'Not at all familiar – I don’t know what they are'",
+            "client_notes": "Use a drag-and-drop ranking question or a 'Select top 3' multi-choice variant. Ensure mobile-friendly design.",
+            "scripter_notes": "Field type: MULTI_CHOICE (limit 3 selections). Randomize options.",
+            "script": {
+                "question_text": "What features are most important to you when considering a smart kitchen appliance? (Rank top 3)",
+                "answer_options": [
+                    "Remote control via smartphone app",
+                    "Voice assistant compatibility (e.g., Alexa, Google Assistant)",
+                    "Energy efficiency",
+                    "Automated cooking/cleaning programs",
+                    "Integration with other smart home devices",
+                    "Real-time notifications (e.g., maintenance alerts)",
+                    "Built-in recipe suggestions"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 response is not 'Not at all familiar – I don’t know what they are'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What would motivate you to purchase a smart kitchen appliance in the next 12 months?",
+            "answer_options": [],
+            "routing_logic": "Show if Q1 response is not 'Not at all familiar – I don’t know what they are'",
+            "client_notes": "Open-text field to capture qualitative insights. Use input validation to filter gibberish responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (500-character limit).",
+            "script": {
+                "question_text": "What would motivate you to purchase a smart kitchen appliance in the next 12 months?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q1 response is not 'Not at all familiar – I don’t know what they are'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How concerned are you about data privacy with smart kitchen appliances?",
+            "answer_options": [
+                "Very concerned",
+                "Somewhat concerned",
+                "Neutral",
+                "Not very concerned",
+                "Not at all concerned"
+            ],
+            "routing_logic": "Always show",
+            "client_notes": "5-point Likert scale. Include a 'Prefer not to answer' option if needed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons). Randomize options except for extremes.",
+            "script": {
+                "question_text": "How concerned are you about data privacy with smart kitchen appliances?",
+                "answer_options": [
+                    "Very concerned",
+                    "Somewhat concerned",
+                    "Neutral",
+                    "Not very concerned",
+                    "Not at all concerned"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show"
+            }
+        }
+    ]
+}

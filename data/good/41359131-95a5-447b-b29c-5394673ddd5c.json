@@ -1,0 +1,123 @@
+{
+    "survey_id": "41359131-95a5-447b-b29c-5394673ddd5c",
+    "survey_name": "Customer Satisfaction with Biometric Payment Systems Survey",
+    "survey_brief": "This survey aims to gather feedback on customer satisfaction and usability of biometric payment systems in retail environments.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use biometric payment systems (e.g., fingerprint, facial recognition) for transactions?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for better mobile responsiveness.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How frequently do you use biometric payment systems (e.g., fingerprint, facial recognition) for transactions?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors influence your decision to use biometric payment systems? (Select all that apply)",
+            "answer_options": [
+                "Speed of transaction",
+                "Security",
+                "Convenience",
+                "No need to carry cards/cash",
+                "Trust in the technology",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Allow multiple selections; include an 'Other' option with a text field for additional feedback.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes); enable text input for 'Other'.",
+            "script": {
+                "question_text": "What factors influence your decision to use biometric payment systems? (Select all that apply)",
+                "answer_options": [
+                    "Speed of transaction",
+                    "Security",
+                    "Convenience",
+                    "No need to carry cards/cash",
+                    "Trust in the technology",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, do you have about using biometric payment systems?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback; limit response length to 250 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT; set character limit.",
+            "script": {
+                "question_text": "What concerns, if any, do you have about using biometric payment systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the ease of use of biometric payment systems?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Use a 5-point Likert scale; ensure labels are clearly displayed.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the ease of use of biometric payment systems?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend biometric payment systems to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Not sure"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1",
+            "client_notes": "Single-choice question; include a neutral option.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Would you recommend biometric payment systems to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Not sure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', or 'Monthly' in Q1"
+            }
+        }
+    ]
+}

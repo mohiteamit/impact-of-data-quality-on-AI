@@ -1,0 +1,121 @@
+{
+    "survey_id": "731e1a30-0372-4f06-b1c6-5f8da9de5c22",
+    "survey_name": "Employee Satisfaction with Hybrid Office Layouts Survey",
+    "survey_brief": "This survey aims to gather employee feedback on hybrid office layouts to optimize workspace design and productivity in a post-pandemic work environment.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you currently work in the office versus remotely?",
+            "answer_options": [
+                "Fully remote (never in the office)",
+                "Mostly remote (1-2 days in the office)",
+                "Hybrid (3-4 days in the office)",
+                "Fully in-office (5 days a week)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a radio button for single-choice selection. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often do you currently work in the office versus remotely?",
+                "answer_options": [
+                    "Fully remote (never in the office)",
+                    "Mostly remote (1-2 days in the office)",
+                    "Hybrid (3-4 days in the office)",
+                    "Fully in-office (5 days a week)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which hybrid office features do you find most valuable? (Select up to 3)",
+            "answer_options": [
+                "Hot-desking with reservation system",
+                "Dedicated quiet zones",
+                "Collaborative open spaces",
+                "Soundproof phone booths",
+                "Ergonomic furniture",
+                "On-site wellness rooms"
+            ],
+            "routing_logic": "Appears if Q1 answer is 'Mostly remote' or 'Hybrid'",
+            "client_notes": "Use checkboxes for multi-select. Randomize option order to reduce bias.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE), max 3 selections",
+            "script": {
+                "question_text": "Which hybrid office features do you find most valuable? (Select up to 3)",
+                "answer_options": [
+                    "Hot-desking with reservation system",
+                    "Dedicated quiet zones",
+                    "Collaborative open spaces",
+                    "Soundproof phone booths",
+                    "Ergonomic furniture",
+                    "On-site wellness rooms"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is 'Mostly remote' or 'Hybrid'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges, if any, have you faced with hybrid office layouts?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended question. Include a character limit of 500 for manageable analysis.",
+            "scripter_notes": "Field type: text area (OPEN_TEXT)",
+            "script": {
+                "question_text": "What challenges, if any, have you faced with hybrid office layouts?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your current office's technology setup for hybrid work?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "5-point Likert scale. Label endpoints only to reduce cognitive load.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with your current office's technology setup for hybrid work?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you prefer a fully assigned workspace or flexible seating in the office?",
+            "answer_options": [
+                "Assigned workspace (permanent desk)",
+                "Flexible seating (hot-desking)",
+                "No preference"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Fully remote'",
+            "client_notes": "Include 'No preference' to capture neutral responses.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you prefer a fully assigned workspace or flexible seating in the office?",
+                "answer_options": [
+                    "Assigned workspace (permanent desk)",
+                    "Flexible seating (hot-desking)",
+                    "No preference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Fully remote'"
+            }
+        }
+    ]
+}

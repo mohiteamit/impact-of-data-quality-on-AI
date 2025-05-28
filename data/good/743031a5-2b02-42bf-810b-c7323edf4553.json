@@ -1,0 +1,97 @@
+{
+    "survey_id": "743031a5-2b02-42bf-810b-c7323edf4553",
+    "survey_name": "Customer Satisfaction with In-Store Augmented Reality (AR) Shopping Experiences Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with augmented reality (AR) tools used in retail stores to enhance shopping experiences.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use in-store Augmented Reality (AR) tools when shopping?",
+            "answer_options": [
+                "Never",
+                "Rarely (once or twice)",
+                "Occasionally (a few times a year)",
+                "Frequently (monthly or more often)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover a broad range of usage frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use in-store Augmented Reality (AR) tools when shopping?",
+                "answer_options": [
+                    "Never",
+                    "Rarely (once or twice)",
+                    "Occasionally (a few times a year)",
+                    "Frequently (monthly or more often)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AR features have you used in-store? (Select all that apply)",
+            "answer_options": [
+                "Virtual try-on for clothing/accessories",
+                "3D product visualization",
+                "Interactive store navigation",
+                "AR-powered product information",
+                "None of the above"
+            ],
+            "routing_logic": "Respondents who answered 'Rarely', 'Occasionally', or 'Frequently' to Q1",
+            "client_notes": "Use checkboxes for multi-select. Include an option for users who haven’t used any features.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "Which of the following AR features have you used in-store? (Select all that apply)",
+                "answer_options": [
+                    "Virtual try-on for clothing/accessories",
+                    "3D product visualization",
+                    "Interactive store navigation",
+                    "AR-powered product information",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered 'Rarely', 'Occasionally', or 'Frequently' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with your in-store AR shopping experiences? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Respondents who answered 'Rarely', 'Occasionally', or 'Frequently' to Q1",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure mobile-friendly display.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with your in-store AR shopping experiences? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered 'Rarely', 'Occasionally', or 'Frequently' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for in-store AR shopping tools?",
+            "answer_options": [],
+            "routing_logic": "Respondents who answered 'Occasionally' or 'Frequently' to Q1",
+            "client_notes": "Open-ended question to gather qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: text input (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for in-store AR shopping tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who answered 'Occasionally' or 'Frequently' to Q1"
+            }
+        }
+    ]
+}

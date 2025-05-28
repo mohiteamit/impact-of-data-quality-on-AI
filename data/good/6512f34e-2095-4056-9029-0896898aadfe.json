@@ -1,0 +1,155 @@
+{
+    "survey_id": "6512f34e-2095-4056-9029-0896898aadfe",
+    "survey_name": "Customer Satisfaction with Autonomous Grocery Checkout Systems Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with autonomous grocery checkout systems, identifying key areas for improvement and user preferences.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use autonomous grocery checkout systems?",
+            "answer_options": [
+                "Multiple times per week",
+                "Once a week",
+                "A few times per month",
+                "Once a month or less",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice format for clarity. This helps segment users by frequency of use.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How frequently do you use autonomous grocery checkout systems?",
+                "answer_options": [
+                    "Multiple times per week",
+                    "Once a week",
+                    "A few times per month",
+                    "Once a month or less",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the primary reasons you prefer autonomous checkout systems over traditional checkout? (Select all that apply)",
+            "answer_options": [
+                "Faster checkout process",
+                "Avoiding long lines",
+                "Privacy/not interacting with staff",
+                "Ease of use",
+                "Reduced human error",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Multiple times per week', 'Once a week', 'A few times per month', or 'Once a month or less' in Q1",
+            "client_notes": "Use a multi-choice format to capture multiple preferences. Include an 'Other' option for unlisted reasons.",
+            "scripter_notes": "Field type: checkbox (multi-choice). Include an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What are the primary reasons you prefer autonomous checkout systems over traditional checkout? (Select all that apply)",
+                "answer_options": [
+                    "Faster checkout process",
+                    "Avoiding long lines",
+                    "Privacy/not interacting with staff",
+                    "Ease of use",
+                    "Reduced human error",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Multiple times per week', 'Once a week', 'A few times per month', or 'Once a month or less' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How would you rate your overall satisfaction with autonomous grocery checkout systems? (1 = Very dissatisfied, 5 = Very satisfied)",
+            "answer_options": [
+                "1 - Very dissatisfied",
+                "2",
+                "3",
+                "4",
+                "5 - Very satisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Multiple times per week', 'Once a week', 'A few times per month', or 'Once a month or less' in Q1",
+            "client_notes": "Use a 5-point Likert scale for standardized satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (single-choice). Ensure the scale is displayed horizontally for readability.",
+            "script": {
+                "question_text": "How would you rate your overall satisfaction with autonomous grocery checkout systems? (1 = Very dissatisfied, 5 = Very satisfied)",
+                "answer_options": [
+                    "1 - Very dissatisfied",
+                    "2",
+                    "3",
+                    "4",
+                    "5 - Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Multiple times per week', 'Once a week', 'A few times per month', or 'Once a month or less' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges have you faced while using autonomous checkout systems? (Select all that apply)",
+            "answer_options": [
+                "Technical glitches/freezing",
+                "Difficulty scanning items",
+                "Unclear instructions",
+                "Issues with payment processing",
+                "Lack of staff assistance when needed",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Multiple times per week', 'Once a week', 'A few times per month', or 'Once a month or less' in Q1",
+            "client_notes": "Multi-choice format to identify common pain points. Include 'Other' for unlisted issues.",
+            "scripter_notes": "Field type: checkbox (multi-choice). Include an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What challenges have you faced while using autonomous checkout systems? (Select all that apply)",
+                "answer_options": [
+                    "Technical glitches/freezing",
+                    "Difficulty scanning items",
+                    "Unclear instructions",
+                    "Issues with payment processing",
+                    "Lack of staff assistance when needed",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Multiple times per week', 'Once a week', 'A few times per month', or 'Once a month or less' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "If you have never used autonomous checkout systems, what is the primary reason?",
+            "answer_options": [
+                "Prefer human interaction",
+                "Concerns about accuracy",
+                "Lack of availability in my area",
+                "Unfamiliar with how to use them",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Never' in Q1",
+            "client_notes": "Single-choice format with 'Other' option to capture barriers to adoption.",
+            "scripter_notes": "Field type: radio button (single-choice). Include an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "If you have never used autonomous checkout systems, what is the primary reason?",
+                "answer_options": [
+                    "Prefer human interaction",
+                    "Concerns about accuracy",
+                    "Lack of availability in my area",
+                    "Unfamiliar with how to use them",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What improvements would make autonomous checkout systems more appealing to you?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to gather qualitative feedback on potential enhancements.",
+            "scripter_notes": "Field type: open-text (free response).",
+            "script": {
+                "question_text": "What improvements would make autonomous checkout systems more appealing to you?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

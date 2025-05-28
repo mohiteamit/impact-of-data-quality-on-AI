@@ -1,0 +1,123 @@
+{
+    "survey_id": "6eae0a71-42a1-4fdc-95df-c6df510bc3f4",
+    "survey_name": "Customer Satisfaction with Voice-Activated In-Car Assistants Survey",
+    "survey_brief": "This survey aims to assess customer satisfaction levels with voice-activated assistants in modern vehicles, focusing on usability, functionality, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the voice-activated assistant in your vehicle?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Occasionally (once a week or less)",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Ensure answer options cover all typical usage frequencies. Mobile-friendly radio buttons recommended.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you use the voice-activated assistant in your vehicle?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Occasionally (once a week or less)",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following voice-activated assistant features do you use most often? (Select all that apply)",
+            "answer_options": [
+                "Navigation/directions",
+                "Music/audio control",
+                "Phone calls/messaging",
+                "Climate control",
+                "General information queries (e.g., weather)"
+            ],
+            "routing_logic": "If Q1 ≠ 'Never'",
+            "client_notes": "Allow multiple selections. Consider randomizing option order to reduce bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes)",
+            "script": {
+                "question_text": "Which of the following voice-activated assistant features do you use most often? (Select all that apply)",
+                "answer_options": [
+                    "Navigation/directions",
+                    "Music/audio control",
+                    "Phone calls/messaging",
+                    "Climate control",
+                    "General information queries (e.g., weather)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "If Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the voice recognition accuracy of your in-car assistant?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "If Q1 ≠ 'Never'",
+            "client_notes": "5-point Likert scale recommended. Include neutral midpoint.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with the voice recognition accuracy of your in-car assistant?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for your vehicle's voice-activated assistant?",
+            "answer_options": [],
+            "routing_logic": "If Q1 ≠ 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 300 characters.",
+            "scripter_notes": "Field type: OPEN_TEXT (text input box with character counter)",
+            "script": {
+                "question_text": "What improvements would you suggest for your vehicle's voice-activated assistant?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "If Q1 ≠ 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How does using the voice-activated assistant affect your overall driving experience?",
+            "answer_options": [
+                "Significantly improves",
+                "Slightly improves",
+                "No impact",
+                "Slightly worsens",
+                "Significantly worsens"
+            ],
+            "routing_logic": "If Q1 ≠ 'Never'",
+            "client_notes": "5-point bipolar scale. Display as horizontal radio buttons for desktop, vertical for mobile.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons with responsive layout)",
+            "script": {
+                "question_text": "How does using the voice-activated assistant affect your overall driving experience?",
+                "answer_options": [
+                    "Significantly improves",
+                    "Slightly improves",
+                    "No impact",
+                    "Slightly worsens",
+                    "Significantly worsens"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 ≠ 'Never'"
+            }
+        }
+    ]
+}

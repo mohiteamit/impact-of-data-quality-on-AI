@@ -1,0 +1,129 @@
+{
+    "survey_id": "0b8a5992-b68b-4198-b77b-26cd7e42833c",
+    "survey_name": "Consumer Preferences for Air Purifiers Survey",
+    "survey_brief": "This survey aims to understand consumer preferences, purchasing behaviors, and satisfaction levels regarding air purifiers to help manufacturers and retailers better meet customer needs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use an air purifier in your home?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Occasionally",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all usage frequencies.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you use an air purifier in your home?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Occasionally",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when purchasing an air purifier? (Select up to 3)",
+            "answer_options": [
+                "Price",
+                "Brand reputation",
+                "Noise level",
+                "Energy efficiency",
+                "Filter replacement cost",
+                "Room coverage",
+                "Smart features (e.g., app control)",
+                "Design/aesthetics"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Daily', 'Several times a week', or 'Occasionally' in Q1.",
+            "client_notes": "Use multi-choice checkboxes with a limit of 3 selections. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes with max selections = 3).",
+            "script": {
+                "question_text": "What factors are most important to you when purchasing an air purifier? (Select up to 3)",
+                "answer_options": [
+                    "Price",
+                    "Brand reputation",
+                    "Noise level",
+                    "Energy efficiency",
+                    "Filter replacement cost",
+                    "Room coverage",
+                    "Smart features (e.g., app control)",
+                    "Design/aesthetics"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Daily', 'Several times a week', or 'Occasionally' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your current air purifier's performance?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Daily', 'Several times a week', or 'Occasionally' in Q1.",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Include a 'N/A' option if needed for respondents without a purifier.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with your current air purifier's performance?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Daily', 'Several times a week', or 'Occasionally' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you like to see in future air purifier models?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 250 characters for readability.",
+            "scripter_notes": "Field type: OPEN_TEXT (text input with character limit).",
+            "script": {
+                "question_text": "What improvements would you like to see in future air purifier models?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you be willing to pay a premium for an air purifier with eco-friendly features (e.g., recyclable filters, low energy consumption)?",
+            "answer_options": [
+                "Yes, definitely",
+                "Possibly, depending on the price",
+                "No, price is my primary concern",
+                "Unsure"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Single-choice question to gauge willingness to pay for sustainability. Option order reflects a gradient from positive to negative.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "Would you be willing to pay a premium for an air purifier with eco-friendly features (e.g., recyclable filters, low energy consumption)?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Possibly, depending on the price",
+                    "No, price is my primary concern",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

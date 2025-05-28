@@ -1,0 +1,125 @@
+{
+    "survey_id": "31f9950b-9580-4439-9052-8b3465408ac6",
+    "survey_name": "Customer Satisfaction with AI-Powered Personalized Travel Planning Assistants Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction with AI-powered personalized travel planning assistants, identifying strengths and areas for improvement to enhance user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use AI-powered travel planning assistants?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "First time user"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for optimal mobile responsiveness.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use AI-powered travel planning assistants?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "First time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you find most useful in an AI-powered travel planning assistant? (Select all that apply)",
+            "answer_options": [
+                "Personalized itinerary suggestions",
+                "Real-time flight/hotel price tracking",
+                "Local activity recommendations",
+                "Multilingual support",
+                "Seamless booking integration",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes for multi-selection. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include optional open-text for 'Other'.",
+            "script": {
+                "question_text": "Which features do you find most useful in an AI-powered travel planning assistant? (Select all that apply)",
+                "answer_options": [
+                    "Personalized itinerary suggestions",
+                    "Real-time flight/hotel price tracking",
+                    "Local activity recommendations",
+                    "Multilingual support",
+                    "Seamless booking integration",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for AI-powered travel planning assistants?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Ensure mobile-friendly text box.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-powered travel planning assistants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the accuracy of recommendations provided by AI-powered travel planning assistants?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Weekly', 'Monthly', or 'Rarely' in Q1",
+            "client_notes": "Use a Likert scale for nuanced feedback.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of recommendations provided by AI-powered travel planning assistants?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Weekly', 'Monthly', or 'Rarely' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend AI-powered travel planning assistants to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with reservations",
+                "No",
+                "Unsure"
+            ],
+            "routing_logic": "All respondents except 'First time user' in Q1",
+            "client_notes": "Single-choice with clear options to gauge advocacy.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you recommend AI-powered travel planning assistants to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with reservations",
+                    "No",
+                    "Unsure"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents except 'First time user' in Q1"
+            }
+        }
+    ]
+}

@@ -1,0 +1,135 @@
+{
+    "survey_id": "67c99663-ae2e-4a86-80b2-28623013fd13",
+    "survey_name": "Community Feedback on Public Bicycle Sharing Program",
+    "survey_brief": "This survey aims to gather user feedback on the city's public bicycle sharing program to improve service quality, accessibility, and overall satisfaction.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the city's public bicycle sharing program?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a radio button scale for clarity. Mobile-friendly design recommended.",
+            "scripter_notes": "Field type: single-choice (radio button)",
+            "script": {
+                "question_text": "How frequently do you use the city's public bicycle sharing program?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are your primary reasons for using the public bicycle sharing program? (Select all that apply)",
+            "answer_options": [
+                "Commuting to work/school",
+                "Running errands",
+                "Exercise/recreation",
+                "Environmental concerns",
+                "Cost savings",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Only shown if Q1 is not 'Rarely or never'",
+            "client_notes": "Checkbox format for multiple selections. Include an 'Other' option with text input.",
+            "scripter_notes": "Field type: multi-choice (checkbox) with optional text input for 'Other'",
+            "script": {
+                "question_text": "What are your primary reasons for using the public bicycle sharing program? (Select all that apply)",
+                "answer_options": [
+                    "Commuting to work/school",
+                    "Running errands",
+                    "Exercise/recreation",
+                    "Environmental concerns",
+                    "Cost savings",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 is not 'Rarely or never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the availability of bicycles at stations when you need them?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only shown if Q1 is not 'Rarely or never'",
+            "client_notes": "Likert scale question. Ensure balanced positive/negative options.",
+            "scripter_notes": "Field type: single-choice (radio button)",
+            "script": {
+                "question_text": "How satisfied are you with the availability of bicycles at stations when you need them?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 is not 'Rarely or never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the public bicycle sharing program?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 300 characters.",
+            "scripter_notes": "Field type: open-ended (text input with character limit)",
+            "script": {
+                "question_text": "What improvements would you suggest for the public bicycle sharing program?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Have you encountered any safety concerns while using the public bicycles?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "Only shown if Q1 is not 'Rarely or never'",
+            "client_notes": "Binary response with optional follow-up if 'Yes' selected.",
+            "scripter_notes": "Field type: single-choice (radio button) with conditional routing",
+            "script": {
+                "question_text": "Have you encountered any safety concerns while using the public bicycles?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 is not 'Rarely or never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "Please describe the safety concerns you've encountered:",
+            "answer_options": [],
+            "routing_logic": "Only shown if Q5 is 'Yes'",
+            "client_notes": "Open text field for detailed responses about safety issues.",
+            "scripter_notes": "Field type: open-ended (text input)",
+            "script": {
+                "question_text": "Please describe the safety concerns you've encountered:",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only shown if Q5 is 'Yes'"
+            }
+        }
+    ]
+}

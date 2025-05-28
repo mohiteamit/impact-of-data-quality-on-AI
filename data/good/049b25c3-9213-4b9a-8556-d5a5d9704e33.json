@@ -1,0 +1,129 @@
+{
+    "survey_id": "049b25c3-9213-4b9a-8556-d5a5d9704e33",
+    "survey_name": "Gen Z Preferences for Subscription-Based Fitness Platforms Survey",
+    "survey_brief": "This survey aims to understand the preferences and behaviors of Gen Z individuals regarding subscription-based fitness platforms, including usage frequency, preferred features, and factors influencing their choice of service.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use subscription-based fitness platforms?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Recommended scale for frequency questions. Ensure mobile-friendly layout for option selection.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you use subscription-based fitness platforms?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What features do you value most in a fitness subscription service? (Select up to 3)",
+            "answer_options": [
+                "Live classes",
+                "On-demand workouts",
+                "Personalized training plans",
+                "Community challenges",
+                "Progress tracking",
+                "Nutrition guidance",
+                "Affordable pricing"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Daily', '3-5 times per week', or '1-2 times per week' in Q1",
+            "client_notes": "Multi-choice question to identify priority features. Limit selections to 3 for clearer data.",
+            "scripter_notes": "Field type: multi-choice checkboxes with max selection limit of 3.",
+            "script": {
+                "question_text": "What features do you value most in a fitness subscription service? (Select up to 3)",
+                "answer_options": [
+                    "Live classes",
+                    "On-demand workouts",
+                    "Personalized training plans",
+                    "Community challenges",
+                    "Progress tracking",
+                    "Nutrition guidance",
+                    "Affordable pricing"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Daily', '3-5 times per week', or '1-2 times per week' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you have never used a subscription-based fitness platform?",
+            "answer_options": [
+                "Prefer in-person gyms/studios",
+                "Too expensive",
+                "Lack of interest in structured workouts",
+                "Uncertain about platform quality",
+                "Prefer free fitness resources (e.g., YouTube)"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Never' in Q1",
+            "client_notes": "Single-choice to pinpoint barriers. Include an 'Other' option if needed.",
+            "scripter_notes": "Field type: single-choice radio buttons with optional open-text follow-up.",
+            "script": {
+                "question_text": "What is the primary reason you have never used a subscription-based fitness platform?",
+                "answer_options": [
+                    "Prefer in-person gyms/studios",
+                    "Too expensive",
+                    "Lack of interest in structured workouts",
+                    "Uncertain about platform quality",
+                    "Prefer free fitness resources (e.g., YouTube)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What monthly price range would you consider reasonable for a premium fitness subscription service?",
+            "answer_options": [
+                "Under $10",
+                "$10-$20",
+                "$20-$30",
+                "$30-$50",
+                "Over $50"
+            ],
+            "routing_logic": "Appears to all respondents except those who selected 'Never' in Q1",
+            "client_notes": "Pricing sensitivity question. Use clear ranges aligned with market tiers.",
+            "scripter_notes": "Field type: single-choice radio buttons.",
+            "script": {
+                "question_text": "What monthly price range would you consider reasonable for a premium fitness subscription service?",
+                "answer_options": [
+                    "Under $10",
+                    "$10-$20",
+                    "$20-$30",
+                    "$30-$50",
+                    "Over $50"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents except those who selected 'Never' in Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Describe your ideal fitness subscription service in one sentence.",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended to capture qualitative insights. Limit to 200 characters.",
+            "scripter_notes": "Field type: open-text with character limit.",
+            "script": {
+                "question_text": "Describe your ideal fitness subscription service in one sentence.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

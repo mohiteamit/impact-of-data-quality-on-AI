@@ -1,0 +1,125 @@
+{
+    "survey_id": "6621d317-79b5-4dc5-9e0d-125fd866fb41",
+    "survey_name": "Customer Satisfaction with AI-Powered Language Learning Apps Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and preferences regarding AI-powered language learning applications.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use AI-powered language learning apps?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Weekly",
+                "Monthly",
+                "Rarely or never"
+            ],
+            "routing_logic": "Always display",
+            "client_notes": "Use a single-choice radio button for this question to ensure clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use AI-powered language learning apps?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always display"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you find most useful in AI-powered language learning apps? (Select all that apply)",
+            "answer_options": [
+                "Speech recognition",
+                "Personalized lesson plans",
+                "Gamification elements",
+                "Instant feedback on exercises",
+                "Conversation simulations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always display",
+            "client_notes": "Use checkboxes for multi-selection options.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an 'Other' option with a text field.",
+            "script": {
+                "question_text": "Which features do you find most useful in AI-powered language learning apps? (Select all that apply)",
+                "answer_options": [
+                    "Speech recognition",
+                    "Personalized lesson plans",
+                    "Gamification elements",
+                    "Instant feedback on exercises",
+                    "Conversation simulations",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Always display"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of speech recognition in your preferred app?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Display if Q1 is not 'Rarely or never'",
+            "client_notes": "Use a Likert scale for satisfaction questions.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of speech recognition in your preferred app?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 is not 'Rarely or never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for AI-powered language learning apps?",
+            "answer_options": [],
+            "routing_logic": "Always display",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-powered language learning apps?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Always display"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your preferred AI-powered language learning app to others?",
+            "answer_options": [
+                "Yes, definitely",
+                "Yes, with some reservations",
+                "No, probably not",
+                "No, definitely not"
+            ],
+            "routing_logic": "Display if Q1 is not 'Rarely or never'",
+            "client_notes": "Use a single-choice radio button for clarity.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Would you recommend your preferred AI-powered language learning app to others?",
+                "answer_options": [
+                    "Yes, definitely",
+                    "Yes, with some reservations",
+                    "No, probably not",
+                    "No, definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Display if Q1 is not 'Rarely or never'"
+            }
+        }
+    ]
+}

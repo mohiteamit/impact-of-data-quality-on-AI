@@ -1,0 +1,125 @@
+{
+    "survey_id": "f3053c6f-9d60-4230-a52b-1d2fc8c1f0e0",
+    "survey_name": "Customer Satisfaction with Virtual Reality (VR) Fitness Experiences Survey",
+    "survey_brief": "This survey aims to gather feedback from users about their satisfaction and experiences with VR fitness platforms to help improve service offerings and user engagement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use VR fitness platforms?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Ensure answer options cover all frequency ranges. Mobile-friendly dropdown recommended.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How often do you use VR fitness platforms?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which VR fitness platform do you primarily use?",
+            "answer_options": [
+                "Supernatural",
+                "FitXR",
+                "Beat Saber",
+                "OhShape",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents who selected 'Daily' to 'A few times a month' in Q1.",
+            "client_notes": "Include an 'Other' option to capture all possible platforms.",
+            "scripter_notes": "Field type: Single-choice dropdown with an open-text option for 'Other'.",
+            "script": {
+                "question_text": "Which VR fitness platform do you primarily use?",
+                "answer_options": [
+                    "Supernatural",
+                    "FitXR",
+                    "Beat Saber",
+                    "OhShape",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who selected 'Daily' to 'A few times a month' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What do you like most about your VR fitness experience?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents who selected 'Daily' to 'A few times a month' in Q1.",
+            "client_notes": "Open-ended to capture detailed feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: Open-text input with character limit.",
+            "script": {
+                "question_text": "What do you like most about your VR fitness experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents who selected 'Daily' to 'A few times a month' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with the variety of workouts available on your VR fitness platform?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents who selected 'Daily' to 'A few times a month' in Q1.",
+            "client_notes": "5-point Likert scale recommended for consistency.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the variety of workouts available on your VR fitness platform?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who selected 'Daily' to 'A few times a month' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your VR fitness platform to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Not sure",
+                "Probably not",
+                "Definitely not"
+            ],
+            "routing_logic": "Appears for all respondents who selected 'Daily' to 'A few times a month' in Q1.",
+            "client_notes": "Net Promoter Score (NPS) style question. Useful for assessing loyalty.",
+            "scripter_notes": "Field type: Single-choice radio buttons.",
+            "script": {
+                "question_text": "Would you recommend your VR fitness platform to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Not sure",
+                    "Probably not",
+                    "Definitely not"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who selected 'Daily' to 'A few times a month' in Q1."
+            }
+        }
+    ]
+}

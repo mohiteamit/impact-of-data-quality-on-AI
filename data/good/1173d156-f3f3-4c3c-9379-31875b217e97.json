@@ -1,0 +1,125 @@
+{
+    "survey_id": "1173d156-f3f3-4c3c-9379-31875b217e97",
+    "survey_name": "Customer Satisfaction with Automated Car Wash Services Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction levels with automated car wash services, focusing on service quality, ease of use, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use automated car wash services?",
+            "answer_options": [
+                "Weekly",
+                "Monthly",
+                "Every few months",
+                "First-time user"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use radio buttons for single-choice selection. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How frequently do you use automated car wash services?",
+                "answer_options": [
+                    "Weekly",
+                    "Monthly",
+                    "Every few months",
+                    "First-time user"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What factors are most important to you when choosing an automated car wash service? (Select all that apply)",
+            "answer_options": [
+                "Price",
+                "Speed of service",
+                "Quality of wash",
+                "Location convenience",
+                "Ease of payment",
+                "Environmental friendliness"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use checkboxes for multi-choice selection. Limit to 6 options for readability.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE)",
+            "script": {
+                "question_text": "What factors are most important to you when choosing an automated car wash service? (Select all that apply)",
+                "answer_options": [
+                    "Price",
+                    "Speed of service",
+                    "Quality of wash",
+                    "Location convenience",
+                    "Ease of payment",
+                    "Environmental friendliness"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the cleanliness of your vehicle after using an automated car wash?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents who selected anything other than 'First-time user' in Q1",
+            "client_notes": "Use a 5-point Likert scale. Ensure neutral option is clearly labeled.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the cleanliness of your vehicle after using an automated car wash?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected anything other than 'First-time user' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you experienced any issues with automated car wash services? If yes, please describe.",
+            "answer_options": [],
+            "routing_logic": "Appears for respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q3",
+            "client_notes": "Use an open-text field with a character limit of 500. Provide enough space for detailed responses.",
+            "scripter_notes": "Field type: text area (OPEN_TEXT)",
+            "script": {
+                "question_text": "Have you experienced any issues with automated car wash services? If yes, please describe.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for respondents who selected 'Dissatisfied' or 'Very dissatisfied' in Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend your preferred automated car wash service to others?",
+            "answer_options": [
+                "Definitely yes",
+                "Probably yes",
+                "Not sure",
+                "Probably no",
+                "Definitely no"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a 5-point Likert scale for measuring likelihood of recommendation.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "Would you recommend your preferred automated car wash service to others?",
+                "answer_options": [
+                    "Definitely yes",
+                    "Probably yes",
+                    "Not sure",
+                    "Probably no",
+                    "Definitely no"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

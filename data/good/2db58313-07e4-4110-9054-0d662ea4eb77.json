@@ -1,0 +1,115 @@
+{
+    "survey_id": "2db58313-07e4-4110-9054-0d662ea4eb77",
+    "survey_name": "Customer Satisfaction with Virtual Reality (VR) Fitness Applications Survey",
+    "survey_brief": "This survey aims to evaluate user satisfaction, preferences, and challenges related to virtual reality fitness applications to help improve product offerings and user experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use virtual reality (VR) fitness applications?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "Once a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a single-choice scale to measure frequency. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you use virtual reality (VR) fitness applications?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "Once a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following VR fitness applications have you used? (Select all that apply)",
+            "answer_options": [
+                "Supernatural",
+                "FitXR",
+                "Beat Saber",
+                "Thrill of the Fight",
+                "OhShape",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1.",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Add an open-text field for 'Other' responses.",
+            "script": {
+                "question_text": "Which of the following VR fitness applications have you used? (Select all that apply)",
+                "answer_options": [
+                    "Supernatural",
+                    "FitXR",
+                    "Beat Saber",
+                    "Thrill of the Fight",
+                    "OhShape",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What do you enjoy most about using VR fitness applications?",
+            "answer_options": [],
+            "routing_logic": "Appears for respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What do you enjoy most about using VR fitness applications?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1-5, how would you rate the effectiveness of VR fitness applications in helping you achieve your fitness goals?",
+            "answer_options": [
+                "1 (Not effective at all)",
+                "2",
+                "3 (Neutral)",
+                "4",
+                "5 (Very effective)"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1.",
+            "client_notes": "Use a Likert scale for single-choice responses. Ensure labels are clear and balanced.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "On a scale of 1-5, how would you rate the effectiveness of VR fitness applications in helping you achieve your fitness goals?",
+                "answer_options": [
+                    "1 (Not effective at all)",
+                    "2",
+                    "3 (Neutral)",
+                    "4",
+                    "5 (Very effective)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges or frustrations have you encountered while using VR fitness applications?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents who answered Q1.",
+            "client_notes": "Open-ended question to identify pain points. Limit response length to 500 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What challenges or frustrations have you encountered while using VR fitness applications?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents who answered Q1."
+            }
+        }
+    ]
+}

@@ -1,0 +1,151 @@
+{
+    "survey_id": "5432e7ff-2165-419a-98cd-ffd3fcd7bdbe",
+    "survey_name": "Adoption and Satisfaction of AI-Powered Legal Research Tools Survey",
+    "survey_brief": "This survey aims to understand the adoption rates, user satisfaction, and challenges faced by legal professionals when using AI-powered legal research tools.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following best describes your primary role in the legal profession?",
+            "answer_options": [
+                "Attorney/Lawyer",
+                "Paralegal/Legal Assistant",
+                "Legal Researcher",
+                "Law Student",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice dropdown for mobile-friendliness. Include 'Other' with a text field for specification.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an optional text field for 'Other'.",
+            "script": {
+                "question_text": "Which of the following best describes your primary role in the legal profession?",
+                "answer_options": [
+                    "Attorney/Lawyer",
+                    "Paralegal/Legal Assistant",
+                    "Legal Researcher",
+                    "Law Student",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Do you currently use AI-powered legal research tools in your work?",
+            "answer_options": [
+                "Yes, regularly",
+                "Yes, occasionally",
+                "No, but I have in the past",
+                "No, never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "This question helps segment users vs. non-users for follow-up questions. Use radio buttons.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "Do you currently use AI-powered legal research tools in your work?",
+                "answer_options": [
+                    "Yes, regularly",
+                    "Yes, occasionally",
+                    "No, but I have in the past",
+                    "No, never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which AI-powered legal research tools do you use? (Select all that apply)",
+            "answer_options": [
+                "Westlaw Edge",
+                "Lexis+",
+                "Casetext",
+                "Ravel Law",
+                "Fastcase",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q2 is 'Yes, regularly' or 'Yes, occasionally'",
+            "client_notes": "Use checkboxes for multi-select. Include an 'Other' option with a text field for tools not listed.",
+            "scripter_notes": "Field type: MULTI_CHOICE with checkboxes.",
+            "script": {
+                "question_text": "Which AI-powered legal research tools do you use? (Select all that apply)",
+                "answer_options": [
+                    "Westlaw Edge",
+                    "Lexis+",
+                    "Casetext",
+                    "Ravel Law",
+                    "Fastcase",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears only if Q2 is 'Yes, regularly' or 'Yes, occasionally'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the accuracy of results provided by AI-powered legal research tools? (1 = Not at all satisfied, 5 = Extremely satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears only if Q2 is 'Yes, regularly' or 'Yes, occasionally'",
+            "client_notes": "Use a Likert scale with radio buttons. Ensure the scale is clearly labeled for respondents.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the accuracy of results provided by AI-powered legal research tools? (1 = Not at all satisfied, 5 = Extremely satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q2 is 'Yes, regularly' or 'Yes, occasionally'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What are the biggest challenges you face when using AI-powered legal research tools?",
+            "answer_options": [],
+            "routing_logic": "Appears only if Q2 is 'Yes, regularly' or 'Yes, occasionally'",
+            "client_notes": "This is an open-ended question. Allow for a multi-line text response.",
+            "scripter_notes": "Field type: OPEN_TEXT with a text area for detailed responses.",
+            "script": {
+                "question_text": "What are the biggest challenges you face when using AI-powered legal research tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears only if Q2 is 'Yes, regularly' or 'Yes, occasionally'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "If you do not use AI-powered legal research tools, what is the primary reason?",
+            "answer_options": [
+                "Too expensive",
+                "Lack of trust in AI-generated results",
+                "Prefer traditional research methods",
+                "Not aware of available tools",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q2 is 'No, but I have in the past' or 'No, never'",
+            "client_notes": "Use radio buttons with an 'Other' option for specification.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "If you do not use AI-powered legal research tools, what is the primary reason?",
+                "answer_options": [
+                    "Too expensive",
+                    "Lack of trust in AI-generated results",
+                    "Prefer traditional research methods",
+                    "Not aware of available tools",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q2 is 'No, but I have in the past' or 'No, never'"
+            }
+        }
+    ]
+}

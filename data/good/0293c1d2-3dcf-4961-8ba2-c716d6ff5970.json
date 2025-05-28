@@ -1,0 +1,135 @@
+{
+    "survey_id": "0293c1d2-3dcf-4961-8ba2-c716d6ff5970",
+    "survey_name": "Digital Nomad Co-Working Space Preferences Survey",
+    "survey_brief": "This survey aims to understand the preferences and needs of digital nomads when selecting co-working spaces, to help providers better cater to this demographic.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use co-working spaces as a digital nomad?",
+            "answer_options": [
+                "Daily",
+                "3-5 times per week",
+                "1-2 times per week",
+                "Less than once per week",
+                "Only when traveling"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a clear and simple scale to capture frequency accurately. Ensure options cover the full range of possible usage.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How often do you use co-working spaces as a digital nomad?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times per week",
+                    "1-2 times per week",
+                    "Less than once per week",
+                    "Only when traveling"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What are the most important factors you consider when choosing a co-working space? (Select up to 3)",
+            "answer_options": [
+                "High-speed internet",
+                "Quiet work areas",
+                "Community/networking opportunities",
+                "Proximity to accommodation",
+                "Cost/flexible membership options",
+                "Availability of meeting rooms",
+                "24/7 access",
+                "Ergonomic seating",
+                "Coffee/food options",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Allow respondents to select multiple options but limit to top priorities. Include an 'Other' option for unique needs.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes with max selection of 3)",
+            "script": {
+                "question_text": "What are the most important factors you consider when choosing a co-working space? (Select up to 3)",
+                "answer_options": [
+                    "High-speed internet",
+                    "Quiet work areas",
+                    "Community/networking opportunities",
+                    "Proximity to accommodation",
+                    "Cost/flexible membership options",
+                    "Availability of meeting rooms",
+                    "24/7 access",
+                    "Ergonomic seating",
+                    "Coffee/food options",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How much are you willing to pay per day for a co-working space with good amenities?",
+            "answer_options": [
+                "Less than $10",
+                "$10-$20",
+                "$21-$30",
+                "$31-$50",
+                "More than $50"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use realistic price ranges based on global co-working space averages. Ensure options are mutually exclusive.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How much are you willing to pay per day for a co-working space with good amenities?",
+                "answer_options": [
+                    "Less than $10",
+                    "$10-$20",
+                    "$21-$30",
+                    "$31-$50",
+                    "More than $50"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What additional services would make a co-working space more appealing to you as a digital nomad?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to capture unique insights. Keep the text box large enough for detailed responses.",
+            "scripter_notes": "Field type: Open-ended (text input)",
+            "script": {
+                "question_text": "What additional services would make a co-working space more appealing to you as a digital nomad?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with the current co-working spaces you use?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for respondents who selected 'Daily' or '3-5 times per week' in Q1",
+            "client_notes": "Use a standard Likert scale for satisfaction. Ensure the question only appears to frequent users.",
+            "scripter_notes": "Field type: Single-choice (radio buttons). Apply skip logic based on Q1 responses.",
+            "script": {
+                "question_text": "How satisfied are you with the current co-working spaces you use?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for respondents who selected 'Daily' or '3-5 times per week' in Q1"
+            }
+        }
+    ]
+}

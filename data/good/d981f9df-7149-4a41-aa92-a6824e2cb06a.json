@@ -1,0 +1,113 @@
+{
+    "survey_id": "d981f9df-7149-4a41-aa92-a6824e2cb06a",
+    "survey_name": "Customer Satisfaction with Automated Checkout Systems in Supermarkets Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and preferences regarding the use of automated checkout systems in supermarkets, focusing on ease of use, reliability, and overall experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use automated checkout systems in supermarkets?",
+            "answer_options": [
+                "Every visit",
+                "Most visits",
+                "Sometimes",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a 5-point scale to capture frequency accurately.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How frequently do you use automated checkout systems in supermarkets?",
+                "answer_options": [
+                    "Every visit",
+                    "Most visits",
+                    "Sometimes",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using automated checkout systems?",
+            "answer_options": [
+                "Faster than traditional checkout",
+                "Avoid interaction with cashiers",
+                "Fewer items to scan",
+                "Curiosity or novelty",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Include an 'Other' option with text entry for unique responses.",
+            "scripter_notes": "Field type: checkbox (multi-choice) with optional text input for 'Other'.",
+            "script": {
+                "question_text": "What is your primary reason for using automated checkout systems?",
+                "answer_options": [
+                    "Faster than traditional checkout",
+                    "Avoid interaction with cashiers",
+                    "Fewer items to scan",
+                    "Curiosity or novelty",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the ease of use of automated checkout systems? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+            "answer_options": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a Likert scale for standardized satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the ease of use of automated checkout systems? (1 = Very Dissatisfied, 5 = Very Satisfied)",
+                "answer_options": [
+                    "1",
+                    "2",
+                    "3",
+                    "4",
+                    "5"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Have you encountered any issues while using automated checkout systems? If yes, please describe.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Open-ended to capture detailed feedback on pain points.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "Have you encountered any issues while using automated checkout systems? If yes, please describe.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for automated checkout systems?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended to gather actionable insights for system enhancements.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you suggest for automated checkout systems?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

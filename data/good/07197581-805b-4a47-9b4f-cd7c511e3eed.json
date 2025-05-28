@@ -1,0 +1,97 @@
+{
+    "survey_id": "07197581-805b-4a47-9b4f-cd7c511e3eed",
+    "survey_name": "Smart Office Lighting System User Satisfaction Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction with smart lighting systems in corporate office environments, focusing on usability, comfort, and productivity impacts.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you interact with the smart lighting system in your office?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a radio button scale for clear single-choice responses. Ensure mobile compatibility.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How frequently do you interact with the smart lighting system in your office?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which smart lighting features do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Automatic brightness adjustment",
+                "Color temperature control (e.g., warm/cool light)",
+                "Motion-activated lighting",
+                "Personalized lighting presets",
+                "None of the above"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Checkbox format for multi-select. Clarify technical terms like 'color temperature'.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes).",
+            "script": {
+                "question_text": "Which smart lighting features do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Automatic brightness adjustment",
+                    "Color temperature control (e.g., warm/cool light)",
+                    "Motion-activated lighting",
+                    "Personalized lighting presets",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the smart lighting system's impact on your visual comfort?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "5-point Likert scale for granularity. Randomize polarity if survey fatigue is a concern.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the smart lighting system's impact on your visual comfort?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Describe any challenges you've faced when using the smart lighting system.",
+            "answer_options": [],
+            "routing_logic": "Appears if Q2 answer includes any feature except 'None of the above'.",
+            "client_notes": "Open-text field for qualitative insights. Limit to 300 characters to balance depth and analysis.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area with character limit).",
+            "script": {
+                "question_text": "Describe any challenges you've faced when using the smart lighting system.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q2 answer includes any feature except 'None of the above'."
+            }
+        }
+    ]
+}

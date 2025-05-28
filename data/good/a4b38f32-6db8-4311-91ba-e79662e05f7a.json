@@ -1,0 +1,131 @@
+{
+    "survey_id": "a4b38f32-6db8-4311-91ba-e79662e05f7a",
+    "survey_name": "Consumer Preferences for AI-Powered Home Fitness Equipment Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and behaviors regarding AI-powered home fitness equipment, including usage patterns, features most valued, and barriers to adoption.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you currently use home fitness equipment?",
+            "answer_options": [
+                "Daily",
+                "3-5 times a week",
+                "1-2 times a week",
+                "Less than once a week",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a standard frequency scale to ensure comparability. Ensure options cover all likely usage patterns.",
+            "scripter_notes": "Field type: single-choice radio buttons. Randomize options to avoid order bias.",
+            "script": {
+                "question_text": "How often do you currently use home fitness equipment?",
+                "answer_options": [
+                    "Daily",
+                    "3-5 times a week",
+                    "1-2 times a week",
+                    "Less than once a week",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features are most important to you when choosing AI-powered home fitness equipment? (Select up to 3)",
+            "answer_options": [
+                "Real-time form correction",
+                "Personalized workout plans",
+                "Integration with other smart home devices",
+                "Voice assistant compatibility",
+                "Progress tracking and analytics",
+                "Live or on-demand classes",
+                "Social features (e.g., challenges, leaderboards)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "This helps prioritize product development. Use a multi-choice format to allow selection of multiple features.",
+            "scripter_notes": "Field type: multi-choice checkboxes. Include 'Other' with open-text option if needed.",
+            "script": {
+                "question_text": "Which features are most important to you when choosing AI-powered home fitness equipment? (Select up to 3)",
+                "answer_options": [
+                    "Real-time form correction",
+                    "Personalized workout plans",
+                    "Integration with other smart home devices",
+                    "Voice assistant compatibility",
+                    "Progress tracking and analytics",
+                    "Live or on-demand classes",
+                    "Social features (e.g., challenges, leaderboards)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What is the primary reason you have not purchased AI-powered home fitness equipment?",
+            "answer_options": [
+                "Too expensive",
+                "Don't see the added value of AI features",
+                "Prefer in-person gym sessions",
+                "Concerns about data privacy",
+                "Lack of space at home",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears only if Q1 answer is 'Never'",
+            "client_notes": "This identifies barriers to adoption. Include an 'Other' option to capture unlisted reasons.",
+            "scripter_notes": "Field type: single-choice radio buttons with open-text option for 'Other'.",
+            "script": {
+                "question_text": "What is the primary reason you have not purchased AI-powered home fitness equipment?",
+                "answer_options": [
+                    "Too expensive",
+                    "Don't see the added value of AI features",
+                    "Prefer in-person gym sessions",
+                    "Concerns about data privacy",
+                    "Lack of space at home",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears only if Q1 answer is 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How much would you be willing to pay for high-quality AI-powered home fitness equipment?",
+            "answer_options": [
+                "Less than $200",
+                "$200 - $500",
+                "$501 - $1,000",
+                "$1,001 - $2,000",
+                "More than $2,000"
+            ],
+            "routing_logic": "Appears to all respondents except those who answered 'Never' to Q1",
+            "client_notes": "Use clear price brackets to gauge budget expectations. Ensure ranges are realistic for the market.",
+            "scripter_notes": "Field type: single-choice radio buttons. Randomize options to avoid order bias.",
+            "script": {
+                "question_text": "How much would you be willing to pay for high-quality AI-powered home fitness equipment?",
+                "answer_options": [
+                    "Less than $200",
+                    "$200 - $500",
+                    "$501 - $1,000",
+                    "$1,001 - $2,000",
+                    "More than $2,000"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents except those who answered 'Never' to Q1"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional features or improvements would you like to see in AI-powered home fitness equipment?",
+            "answer_options": [],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Open-ended to capture innovative ideas. Keep it optional to avoid survey fatigue.",
+            "scripter_notes": "Field type: open-text. Limit response length to 250 characters.",
+            "script": {
+                "question_text": "What additional features or improvements would you like to see in AI-powered home fitness equipment?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

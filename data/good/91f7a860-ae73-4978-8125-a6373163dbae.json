@@ -1,0 +1,117 @@
+{
+    "survey_id": "91f7a860-ae73-4978-8125-a6373163dbae",
+    "survey_name": "Employee Satisfaction with Corporate On-Site Childcare Services Survey",
+    "survey_brief": "This survey aims to gather feedback from employees regarding their satisfaction and needs related to the on-site childcare services provided by the company, to better understand how these services can be improved.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Have you used the company's on-site childcare services in the past 12 months?",
+            "answer_options": [
+                "Yes",
+                "No"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Use this question to filter respondents who have used the service versus those who haven't.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "Have you used the company's on-site childcare services in the past 12 months?",
+                "answer_options": [
+                    "Yes",
+                    "No"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the quality of care provided at the on-site childcare facility?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Only shown if Q1 answer is 'Yes'.",
+            "client_notes": "Use a 5-point Likert scale to measure satisfaction levels.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "How satisfied are you with the quality of care provided at the on-site childcare facility?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Only shown if Q1 answer is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What aspects of the on-site childcare services do you find most valuable? (Select all that apply)",
+            "answer_options": [
+                "Convenience of location",
+                "Quality of caregivers",
+                "Cost affordability",
+                "Flexibility in scheduling",
+                "Age-appropriate activities"
+            ],
+            "routing_logic": "Only shown if Q1 answer is 'Yes'.",
+            "client_notes": "Use multi-choice to allow selection of multiple benefits.",
+            "scripter_notes": "Field type: checkbox (multi-choice).",
+            "script": {
+                "question_text": "What aspects of the on-site childcare services do you find most valuable? (Select all that apply)",
+                "answer_options": [
+                    "Convenience of location",
+                    "Quality of caregivers",
+                    "Cost affordability",
+                    "Flexibility in scheduling",
+                    "Age-appropriate activities"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Only shown if Q1 answer is 'Yes'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "If the on-site childcare services were not available, how would it impact your work-life balance?",
+            "answer_options": [
+                "Significantly negative impact",
+                "Moderate negative impact",
+                "Slight negative impact",
+                "No impact"
+            ],
+            "routing_logic": "All respondents answer this question.",
+            "client_notes": "Use this question to understand the perceived importance of the service.",
+            "scripter_notes": "Field type: radio button (single-choice).",
+            "script": {
+                "question_text": "If the on-site childcare services were not available, how would it impact your work-life balance?",
+                "answer_options": [
+                    "Significantly negative impact",
+                    "Moderate negative impact",
+                    "Slight negative impact",
+                    "No impact"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents answer this question."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for the on-site childcare services?",
+            "answer_options": [],
+            "routing_logic": "Only shown if Q1 answer is 'Yes'.",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text.",
+            "script": {
+                "question_text": "What improvements would you suggest for the on-site childcare services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Only shown if Q1 answer is 'Yes'."
+            }
+        }
+    ]
+}

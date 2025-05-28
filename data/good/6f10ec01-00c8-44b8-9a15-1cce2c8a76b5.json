@@ -1,0 +1,129 @@
+{
+    "survey_id": "6f10ec01-00c8-44b8-9a15-1cce2c8a76b5",
+    "survey_name": "Employee Satisfaction with Workplace AI Tools Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction and usage patterns of AI-powered tools in the workplace, including productivity tools, HR platforms, and communication assistants.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use AI-powered tools in your daily work tasks?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a clear frequency scale to capture accurate usage patterns. Ensure mobile-friendly radio button layout.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you use AI-powered tools in your daily work tasks?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI-powered workplace tools do you currently use? (Select all that apply)",
+            "answer_options": [
+                "AI-powered writing assistants (e.g., Grammarly, ChatGPT)",
+                "HR/performance feedback platforms",
+                "Virtual meeting assistants (e.g., Otter.ai, Fireflies)",
+                "Data analysis/visualization tools",
+                "Project management automation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Multi-select question with an 'Other' option for completeness. Limit to 6-7 options for mobile usability.",
+            "scripter_notes": "Field type: Multi-choice (checkboxes) with optional text input for 'Other'",
+            "script": {
+                "question_text": "Which of the following AI-powered workplace tools do you currently use? (Select all that apply)",
+                "answer_options": [
+                    "AI-powered writing assistants (e.g., Grammarly, ChatGPT)",
+                    "HR/performance feedback platforms",
+                    "Virtual meeting assistants (e.g., Otter.ai, Fireflies)",
+                    "Data analysis/visualization tools",
+                    "Project management automation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your organization's AI tool training and support resources?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "N/A (no training provided)"
+            ],
+            "routing_logic": "If Q1 answer is not 'Never'",
+            "client_notes": "5-point Likert scale with neutral midpoint and N/A option. Helps identify training gaps.",
+            "scripter_notes": "Field type: Single-choice (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with your organization's AI tool training and support resources?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "N/A (no training provided)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for your organization's AI tool implementation?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended to capture qualitative feedback. Limit to 200 characters for concise responses.",
+            "scripter_notes": "Field type: Open text (text area with character limit)",
+            "script": {
+                "question_text": "What improvements would you suggest for your organization's AI tool implementation?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "To what extent do you agree with this statement: 'AI tools have positively impacted my productivity'?",
+            "answer_options": [
+                "Strongly agree",
+                "Agree",
+                "Neutral",
+                "Disagree",
+                "Strongly disagree"
+            ],
+            "routing_logic": "If Q1 answer is not 'Never'",
+            "client_notes": "Standard 5-point agreement scale. Place 'Neutral' in the middle for balanced interpretation.",
+            "scripter_notes": "Field type: Single-choice (radio buttons in horizontal layout)",
+            "script": {
+                "question_text": "To what extent do you agree with this statement: 'AI tools have positively impacted my productivity'?",
+                "answer_options": [
+                    "Strongly agree",
+                    "Agree",
+                    "Neutral",
+                    "Disagree",
+                    "Strongly disagree"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "If Q1 answer is not 'Never'"
+            }
+        }
+    ]
+}

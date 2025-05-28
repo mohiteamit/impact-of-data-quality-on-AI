@@ -1,0 +1,129 @@
+{
+    "survey_id": "bfaf5096-38e9-42f4-9a86-074770bba3c5",
+    "survey_name": "Smart Grocery Shopping Cart Adoption Survey",
+    "survey_brief": "This survey aims to understand consumer preferences and barriers regarding the adoption of smart grocery shopping carts equipped with technology such as barcode scanners, digital payment integration, and real-time spending trackers.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with smart grocery shopping carts that feature barcode scanners and digital payment options?",
+            "answer_options": [
+                "Very familiar, I've used them before",
+                "Somewhat familiar, I've seen them in stores",
+                "Not very familiar, but I've heard of them",
+                "Not familiar at all"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Ensure the question is clear and avoids technical jargon. Use a simple 4-point scale for familiarity.",
+            "scripter_notes": "Radio button response options. Randomize option order to minimize bias.",
+            "script": {
+                "question_text": "How familiar are you with smart grocery shopping carts that feature barcode scanners and digital payment options?",
+                "answer_options": [
+                    "Very familiar, I've used them before",
+                    "Somewhat familiar, I've seen them in stores",
+                    "Not very familiar, but I've heard of them",
+                    "Not familiar at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following features would most encourage you to use a smart grocery shopping cart? (Select up to 3)",
+            "answer_options": [
+                "Real-time spending tracker",
+                "Automatic item scanning (barcode or RFID)",
+                "Integrated digital payment (no checkout line)",
+                "Personalized discount notifications",
+                "Navigation assistance to find items in-store",
+                "Recipe suggestions based on cart items",
+                "None of the above"
+            ],
+            "routing_logic": "Appears to respondents who selected 'Somewhat familiar' or higher in Q1",
+            "client_notes": "Multiple selection allowed. Include 'None of the above' to capture disinterest.",
+            "scripter_notes": "Checkbox response options with a maximum of 3 selections allowed.",
+            "script": {
+                "question_text": "Which of the following features would most encourage you to use a smart grocery shopping cart? (Select up to 3)",
+                "answer_options": [
+                    "Real-time spending tracker",
+                    "Automatic item scanning (barcode or RFID)",
+                    "Integrated digital payment (no checkout line)",
+                    "Personalized discount notifications",
+                    "Navigation assistance to find items in-store",
+                    "Recipe suggestions based on cart items",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to respondents who selected 'Somewhat familiar' or higher in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What concerns, if any, would prevent you from using a smart grocery shopping cart?",
+            "answer_options": [
+                "Privacy concerns about data collection",
+                "Difficulty using technology",
+                "Prefer human interaction at checkout",
+                "Fear of technical malfunctions",
+                "No concerns",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Include an 'Other' option with text input for unlisted concerns.",
+            "scripter_notes": "Checkbox response options with an optional open-text field for 'Other'.",
+            "script": {
+                "question_text": "What concerns, if any, would prevent you from using a smart grocery shopping cart?",
+                "answer_options": [
+                    "Privacy concerns about data collection",
+                    "Difficulty using technology",
+                    "Prefer human interaction at checkout",
+                    "Fear of technical malfunctions",
+                    "No concerns",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "Please describe any additional features you would like to see in a smart grocery shopping cart.",
+            "answer_options": [],
+            "routing_logic": "Appears to respondents who selected at least one feature in Q2",
+            "client_notes": "Open-ended question to capture innovative ideas. Limit response to 200 characters.",
+            "scripter_notes": "Open-text field with character limit.",
+            "script": {
+                "question_text": "Please describe any additional features you would like to see in a smart grocery shopping cart.",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears to respondents who selected at least one feature in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to use a smart grocery shopping cart if your preferred store offered it?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "5-point Likert scale for measuring likelihood. Include a neutral midpoint.",
+            "scripter_notes": "Radio button response options displayed horizontally.",
+            "script": {
+                "question_text": "How likely are you to use a smart grocery shopping cart if your preferred store offered it?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        }
+    ]
+}

@@ -1,0 +1,101 @@
+{
+    "survey_id": "1afd5395-ecca-44bb-a066-4277fe72fe77",
+    "survey_name": "Employee Satisfaction with Corporate Mindfulness Programs Survey",
+    "survey_brief": "This survey aims to gather feedback from employees on their satisfaction and experiences with corporate mindfulness programs, including perceived benefits and areas for improvement.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in the corporate mindfulness programs offered by your employer?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice question to gauge participation frequency. Ensure options cover the full range of possible responses.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How often do you participate in the corporate mindfulness programs offered by your employer?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which types of mindfulness programs have you participated in? (Select all that apply)",
+            "answer_options": [
+                "Guided meditation sessions",
+                "Yoga classes",
+                "Mindfulness workshops",
+                "Breathing exercises",
+                "Stress management webinars",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q1",
+            "client_notes": "Use a multi-choice question to identify popular programs. Include an 'Other' option for additional inputs.",
+            "scripter_notes": "Field type: checkbox",
+            "script": {
+                "question_text": "Which types of mindfulness programs have you participated in? (Select all that apply)",
+                "answer_options": [
+                    "Guided meditation sessions",
+                    "Yoga classes",
+                    "Mindfulness workshops",
+                    "Breathing exercises",
+                    "Stress management webinars",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the corporate mindfulness programs offered by your employer?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q1",
+            "client_notes": "Use a Likert scale to measure satisfaction levels. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: radio button",
+            "script": {
+                "question_text": "How satisfied are you with the corporate mindfulness programs offered by your employer?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'Daily', 'Weekly', 'Monthly', or 'Rarely' in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the corporate mindfulness programs?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Use an open-ended question to gather qualitative feedback. Encourage detailed responses where possible.",
+            "scripter_notes": "Field type: text input",
+            "script": {
+                "question_text": "What improvements would you suggest for the corporate mindfulness programs?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

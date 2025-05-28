@@ -1,0 +1,113 @@
+{
+    "survey_id": "89b9276a-a79a-49fd-8519-c41f2a48173d",
+    "survey_name": "Employee Satisfaction with Hybrid Meeting Tools Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction and effectiveness with hybrid meeting tools used within the organization.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in hybrid meetings (combining in-person and remote attendees)?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely or never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a radio button for single-choice selection. Ensure the options cover all frequency ranges.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How often do you participate in hybrid meetings (combining in-person and remote attendees)?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which hybrid meeting tools do you primarily use? (Select all that apply)",
+            "answer_options": [
+                "Zoom",
+                "Microsoft Teams",
+                "Google Meet",
+                "Cisco Webex",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1.",
+            "client_notes": "Use checkboxes for multi-select options. Include an 'Other' field with open-text input.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) + OPEN_TEXT for 'Other'.",
+            "script": {
+                "question_text": "Which hybrid meeting tools do you primarily use? (Select all that apply)",
+                "answer_options": [
+                    "Zoom",
+                    "Microsoft Teams",
+                    "Google Meet",
+                    "Cisco Webex",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the audio and video quality of your hybrid meetings?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears for all respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1.",
+            "client_notes": "Use a Likert scale with radio buttons for clear measurement.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons).",
+            "script": {
+                "question_text": "How satisfied are you with the audio and video quality of your hybrid meetings?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents who selected 'Daily', 'Several times a week', or 'Once a week' in Q1."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges do you face when participating in hybrid meetings?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is mobile-friendly.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box).",
+            "script": {
+                "question_text": "What challenges do you face when participating in hybrid meetings?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How can the organization improve hybrid meeting experiences?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Open-ended question for actionable insights. Encourage detailed responses.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box).",
+            "script": {
+                "question_text": "How can the organization improve hybrid meeting experiences?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        }
+    ]
+}

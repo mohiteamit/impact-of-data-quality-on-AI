@@ -1,0 +1,129 @@
+{
+    "survey_id": "5f67921b-b4a1-4483-a479-43e3b4037d1e",
+    "survey_name": "Employee Satisfaction with Hybrid Meeting Tools Survey",
+    "survey_brief": "This survey aims to evaluate employee satisfaction and experiences with hybrid meeting tools used within the organization to improve collaboration and productivity.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you participate in hybrid meetings (combining in-person and remote attendees)?",
+            "answer_options": [
+                "Daily",
+                "Several times a week",
+                "Once a week",
+                "A few times a month",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you participate in hybrid meetings (combining in-person and remote attendees)?",
+                "answer_options": [
+                    "Daily",
+                    "Several times a week",
+                    "Once a week",
+                    "A few times a month",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which hybrid meeting tools do you primarily use? (Select all that apply)",
+            "answer_options": [
+                "Zoom",
+                "Microsoft Teams",
+                "Google Meet",
+                "Cisco Webex",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use checkboxes (MULTI_CHOICE) for multiple selections. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Add a follow-up open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "Which hybrid meeting tools do you primarily use? (Select all that apply)",
+                "answer_options": [
+                    "Zoom",
+                    "Microsoft Teams",
+                    "Google Meet",
+                    "Cisco Webex",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the audio quality of your hybrid meetings?",
+            "answer_options": [
+                "1 - Very dissatisfied",
+                "2 - Somewhat dissatisfied",
+                "3 - Neutral",
+                "4 - Somewhat satisfied",
+                "5 - Very satisfied"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use a Likert scale for measuring satisfaction. Ensure the scale is clearly labeled.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the audio quality of your hybrid meetings?",
+                "answer_options": [
+                    "1 - Very dissatisfied",
+                    "2 - Somewhat dissatisfied",
+                    "3 - Neutral",
+                    "4 - Somewhat satisfied",
+                    "5 - Very satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What challenges do you face with hybrid meetings? (Select all that apply)",
+            "answer_options": [
+                "Poor audio/video quality",
+                "Difficulty hearing remote participants",
+                "Technical issues (e.g., connectivity)",
+                "Inconsistent participation from remote attendees",
+                "Lack of engagement",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Use checkboxes (MULTI_CHOICE) for multiple selections. Include an 'Other' option with a text field.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Add a follow-up open-text field if 'Other' is selected.",
+            "script": {
+                "question_text": "What challenges do you face with hybrid meetings? (Select all that apply)",
+                "answer_options": [
+                    "Poor audio/video quality",
+                    "Difficulty hearing remote participants",
+                    "Technical issues (e.g., connectivity)",
+                    "Inconsistent participation from remote attendees",
+                    "Lack of engagement",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would enhance your hybrid meeting experience?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Ensure the text box is large enough for detailed responses.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would enhance your hybrid meeting experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 is not 'Never'"
+            }
+        }
+    ]
+}

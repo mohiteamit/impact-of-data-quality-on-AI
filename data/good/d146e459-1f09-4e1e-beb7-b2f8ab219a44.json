@@ -1,0 +1,123 @@
+{
+    "survey_id": "d146e459-1f09-4e1e-beb7-b2f8ab219a44",
+    "survey_name": "Customer Satisfaction with Autonomous Delivery Robots Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and experiences with autonomous delivery robot services in urban areas.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often have you used autonomous delivery robot services in the past 3 months?",
+            "answer_options": [
+                "Never",
+                "1-2 times",
+                "3-5 times",
+                "More than 5 times"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clear response capture.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How often have you used autonomous delivery robot services in the past 3 months?",
+                "answer_options": [
+                    "Never",
+                    "1-2 times",
+                    "3-5 times",
+                    "More than 5 times"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "What is your primary reason for using autonomous delivery robot services?",
+            "answer_options": [
+                "Convenience",
+                "Speed of delivery",
+                "Contactless delivery preference",
+                "Curiosity/novelty",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or 'More than 5 times' to Q1",
+            "client_notes": "Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: radio button with optional text input (SINGLE_CHOICE with 'Other' triggering open text)",
+            "script": {
+                "question_text": "What is your primary reason for using autonomous delivery robot services?",
+                "answer_options": [
+                    "Convenience",
+                    "Speed of delivery",
+                    "Contactless delivery preference",
+                    "Curiosity/novelty",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or 'More than 5 times' to Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the reliability of autonomous delivery robot services?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or 'More than 5 times' to Q1",
+            "client_notes": "Use a 5-point Likert scale for consistency in satisfaction measurement.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE)",
+            "script": {
+                "question_text": "How satisfied are you with the reliability of autonomous delivery robot services?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or 'More than 5 times' to Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for autonomous delivery robot services?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT)",
+            "script": {
+                "question_text": "What improvements would you suggest for autonomous delivery robot services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following features do you value most in autonomous delivery robots? (Select up to 2)",
+            "answer_options": [
+                "Real-time tracking",
+                "Weather-resistant design",
+                "Quiet operation",
+                "Multiple compartment options",
+                "Facial recognition for secure delivery"
+            ],
+            "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or 'More than 5 times' to Q1",
+            "client_notes": "Multi-choice question to understand priority features.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE with max 2 selections)",
+            "script": {
+                "question_text": "Which of the following features do you value most in autonomous delivery robots? (Select up to 2)",
+                "answer_options": [
+                    "Real-time tracking",
+                    "Weather-resistant design",
+                    "Quiet operation",
+                    "Multiple compartment options",
+                    "Facial recognition for secure delivery"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Respondents who answered '1-2 times', '3-5 times', or 'More than 5 times' to Q1"
+            }
+        }
+    ]
+}

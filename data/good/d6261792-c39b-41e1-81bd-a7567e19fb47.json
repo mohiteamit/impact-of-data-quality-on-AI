@@ -1,0 +1,123 @@
+{
+    "survey_id": "d6261792-c39b-41e1-81bd-a7567e19fb47",
+    "survey_name": "Customer Satisfaction with AI-Powered Virtual Personal Shopping Assistants Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and usage patterns with AI-powered virtual personal shopping assistants across various retail platforms.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use AI-powered virtual personal shopping assistants?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Always appears as the first question.",
+            "client_notes": "Use a single-choice radio button scale for clarity. Ensure mobile-friendly display.",
+            "scripter_notes": "Set field type as SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How often do you use AI-powered virtual personal shopping assistants?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears as the first question."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which features do you find most useful in AI-powered virtual personal shopping assistants? (Select all that apply)",
+            "answer_options": [
+                "Personalized product recommendations",
+                "Price comparison",
+                "Style advice",
+                "Inventory alerts",
+                "Customer reviews curation",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Use a multi-choice checkbox format to allow multiple selections. Include an 'Other' option for unlisted features.",
+            "scripter_notes": "Set field type as MULTI_CHOICE with checkboxes and optional open text for 'Other'.",
+            "script": {
+                "question_text": "Which features do you find most useful in AI-powered virtual personal shopping assistants? (Select all that apply)",
+                "answer_options": [
+                    "Personalized product recommendations",
+                    "Price comparison",
+                    "Style advice",
+                    "Inventory alerts",
+                    "Customer reviews curation",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for AI-powered virtual personal shopping assistants?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Allow open-ended responses for detailed feedback. Use a text box with a character limit of 500.",
+            "scripter_notes": "Set field type as OPEN_TEXT with a character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-powered virtual personal shopping assistants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "On a scale of 1 to 5, how satisfied are you with the accuracy of product recommendations provided by AI-powered virtual personal shopping assistants?",
+            "answer_options": [
+                "1 - Very Dissatisfied",
+                "2 - Dissatisfied",
+                "3 - Neutral",
+                "4 - Satisfied",
+                "5 - Very Satisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels. Ensure it's mobile-responsive.",
+            "scripter_notes": "Set field type as SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "On a scale of 1 to 5, how satisfied are you with the accuracy of product recommendations provided by AI-powered virtual personal shopping assistants?",
+                "answer_options": [
+                    "1 - Very Dissatisfied",
+                    "2 - Dissatisfied",
+                    "3 - Neutral",
+                    "4 - Satisfied",
+                    "5 - Very Satisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Would you recommend AI-powered virtual personal shopping assistants to others?",
+            "answer_options": [
+                "Yes",
+                "No",
+                "Maybe"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'.",
+            "client_notes": "Simple single-choice question to gauge overall satisfaction and likelihood of recommendation.",
+            "scripter_notes": "Set field type as SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "Would you recommend AI-powered virtual personal shopping assistants to others?",
+                "answer_options": [
+                    "Yes",
+                    "No",
+                    "Maybe"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'."
+            }
+        }
+    ]
+}

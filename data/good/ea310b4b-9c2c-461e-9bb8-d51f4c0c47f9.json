@@ -1,0 +1,155 @@
+{
+    "survey_id": "ea310b4b-9c2c-461e-9bb8-d51f4c0c47f9",
+    "survey_name": "Employee Satisfaction with Workplace AI Tool Adoption Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction and perceived effectiveness of AI tools implemented in the workplace, identifying areas for improvement and adoption challenges.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How familiar are you with the AI tools currently available in your workplace?",
+            "answer_options": [
+                "Very familiar",
+                "Somewhat familiar",
+                "Not very familiar",
+                "Not at all familiar"
+            ],
+            "routing_logic": "Always show this question to all respondents.",
+            "client_notes": "This question helps gauge baseline awareness of AI tools. Use a Likert scale for clarity.",
+            "scripter_notes": "Single-choice radio buttons with vertical alignment for mobile-friendliness.",
+            "script": {
+                "question_text": "How familiar are you with the AI tools currently available in your workplace?",
+                "answer_options": [
+                    "Very familiar",
+                    "Somewhat familiar",
+                    "Not very familiar",
+                    "Not at all familiar"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show this question to all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI tools do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "AI-powered scheduling assistants",
+                "Automated data analysis tools",
+                "Predictive typing/email composition tools",
+                "Chatbots for internal support",
+                "AI-driven project management tools",
+                "None of the above"
+            ],
+            "routing_logic": "Show if Q1 answer is not 'Not at all familiar'.",
+            "client_notes": "Multi-select format provides insight into tool adoption patterns. Include 'None' option explicitly.",
+            "scripter_notes": "Multi-choice checkboxes with 'Select all that apply' instruction clearly displayed.",
+            "script": {
+                "question_text": "Which of the following AI tools do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "AI-powered scheduling assistants",
+                    "Automated data analysis tools",
+                    "Predictive typing/email composition tools",
+                    "Chatbots for internal support",
+                    "AI-driven project management tools",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q1 answer is not 'Not at all familiar'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with your organization's training on AI tools?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied",
+                "Not applicable (no training received)"
+            ],
+            "routing_logic": "Always show this question to all respondents.",
+            "client_notes": "5-point satisfaction scale with explicit N/A option for respondents who haven't received training.",
+            "scripter_notes": "Single-choice radio buttons with 'Not applicable' as the last option.",
+            "script": {
+                "question_text": "How satisfied are you with your organization's training on AI tools?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied",
+                    "Not applicable (no training received)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show this question to all respondents."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What benefits have you experienced from using AI tools at work? (Select all that apply)",
+            "answer_options": [
+                "Increased productivity",
+                "Reduction in repetitive tasks",
+                "Improved decision-making",
+                "Faster access to information",
+                "Better collaboration with team members",
+                "No noticeable benefits"
+            ],
+            "routing_logic": "Show if Q2 includes any tool selection (not 'None of the above').",
+            "client_notes": "Multi-select format with both positive outcomes and neutral option. Randomize option order to avoid bias.",
+            "scripter_notes": "Multi-choice checkboxes with options displayed in random order for each respondent.",
+            "script": {
+                "question_text": "What benefits have you experienced from using AI tools at work? (Select all that apply)",
+                "answer_options": [
+                    "Increased productivity",
+                    "Reduction in repetitive tasks",
+                    "Improved decision-making",
+                    "Faster access to information",
+                    "Better collaboration with team members",
+                    "No noticeable benefits"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Show if Q2 includes any tool selection (not 'None of the above')."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What challenges have you faced when using AI tools at work?",
+            "answer_options": [],
+            "routing_logic": "Show if Q2 includes any tool selection (not 'None of the above').",
+            "client_notes": "Open-ended format allows for unexpected insights. Use text area with character limit (500 max).",
+            "scripter_notes": "Open-text response with character counter visible. Mobile-friendly large input field.",
+            "script": {
+                "question_text": "What challenges have you faced when using AI tools at work?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Show if Q2 includes any tool selection (not 'None of the above')."
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "How likely are you to recommend additional AI tool adoption to your colleagues?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Always show this question to all respondents.",
+            "client_notes": "Standard NPS-style question format but with 5-point scale for more granular data.",
+            "scripter_notes": "Single-choice radio buttons with balanced positive/negative options.",
+            "script": {
+                "question_text": "How likely are you to recommend additional AI tool adoption to your colleagues?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always show this question to all respondents."
+            }
+        }
+    ]
+}

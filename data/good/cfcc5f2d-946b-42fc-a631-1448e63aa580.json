@@ -1,0 +1,115 @@
+{
+    "survey_id": "cfcc5f2d-946b-42fc-a631-1448e63aa580",
+    "survey_name": "Employee Satisfaction with Hybrid Work Technology Tools Survey",
+    "survey_brief": "This survey aims to assess employee satisfaction with the technology tools provided for hybrid work environments, identifying areas for improvement and preferred features.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which of the following hybrid work technology tools do you use regularly? (Select all that apply)",
+            "answer_options": [
+                "Video conferencing software (e.g., Zoom, Microsoft Teams)",
+                "Collaboration platforms (e.g., Slack, Microsoft Teams)",
+                "Project management tools (e.g., Asana, Trello)",
+                "Cloud storage solutions (e.g., Google Drive, Dropbox)",
+                "Virtual whiteboarding tools (e.g., Miro, Mural)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Ensure the list includes commonly used tools and an 'Other' option to capture any unlisted tools.",
+            "scripter_notes": "Use a MULTI_CHOICE field type with checkboxes.",
+            "script": {
+                "question_text": "Which of the following hybrid work technology tools do you use regularly? (Select all that apply)",
+                "answer_options": [
+                    "Video conferencing software (e.g., Zoom, Microsoft Teams)",
+                    "Collaboration platforms (e.g., Slack, Microsoft Teams)",
+                    "Project management tools (e.g., Asana, Trello)",
+                    "Cloud storage solutions (e.g., Google Drive, Dropbox)",
+                    "Virtual whiteboarding tools (e.g., Miro, Mural)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the video conferencing tools provided for hybrid work?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if 'Video conferencing software' is selected in Q1",
+            "client_notes": "Use a 5-point Likert scale to gauge satisfaction levels accurately.",
+            "scripter_notes": "Use a SINGLE_CHOICE field type with radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the video conferencing tools provided for hybrid work?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if 'Video conferencing software' is selected in Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What challenges do you face with the collaboration platforms you use?",
+            "answer_options": [],
+            "routing_logic": "Appears if 'Collaboration platforms' is selected in Q1",
+            "client_notes": "Open-ended question to capture detailed feedback on challenges.",
+            "scripter_notes": "Use an OPEN_TEXT field type.",
+            "script": {
+                "question_text": "What challenges do you face with the collaboration platforms you use?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if 'Collaboration platforms' is selected in Q1"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How often do you experience technical issues with your hybrid work technology tools?",
+            "answer_options": [
+                "Never",
+                "Rarely",
+                "Sometimes",
+                "Often",
+                "Always"
+            ],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Use a frequency scale to measure the prevalence of technical issues.",
+            "scripter_notes": "Use a SINGLE_CHOICE field type with radio buttons.",
+            "script": {
+                "question_text": "How often do you experience technical issues with your hybrid work technology tools?",
+                "answer_options": [
+                    "Never",
+                    "Rarely",
+                    "Sometimes",
+                    "Often",
+                    "Always"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What additional technology tools would improve your hybrid work experience?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents",
+            "client_notes": "Open-ended question to gather suggestions for new tools or features.",
+            "scripter_notes": "Use an OPEN_TEXT field type.",
+            "script": {
+                "question_text": "What additional technology tools would improve your hybrid work experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents"
+            }
+        }
+    ]
+}

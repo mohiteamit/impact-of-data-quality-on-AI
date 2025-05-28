@@ -1,0 +1,127 @@
+{
+    "survey_id": "bbe99974-d418-465d-8cc0-3889f3cdee5d",
+    "survey_name": "Customer Satisfaction with Smart Home Security Systems Survey",
+    "survey_brief": "This survey aims to gather customer feedback on the usability, features, and overall satisfaction with smart home security systems to help improve product offerings and customer experience.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "Which smart home security system do you currently use?",
+            "answer_options": [
+                "Nest Secure",
+                "Ring Alarm",
+                "SimpliSafe",
+                "ADT Command",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Always appears first",
+            "client_notes": "Use a dropdown menu for better user experience on mobile devices.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with an 'Other' option as open text.",
+            "script": {
+                "question_text": "Which smart home security system do you currently use?",
+                "answer_options": [
+                    "Nest Secure",
+                    "Ring Alarm",
+                    "SimpliSafe",
+                    "ADT Command",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Always appears first"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with the ease of installation of your smart home security system?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears after Q1",
+            "client_notes": "Use a Likert scale for consistent measurement.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How satisfied are you with the ease of installation of your smart home security system?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears after Q1"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "Which features do you use most frequently in your smart home security system? (Select all that apply)",
+            "answer_options": [
+                "Motion detection",
+                "Door/window sensors",
+                "Video surveillance",
+                "Smart locks",
+                "Mobile app alerts",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears after Q2",
+            "client_notes": "Ensure the mobile app can handle multiple selections.",
+            "scripter_notes": "Field type: MULTI_CHOICE with checkboxes.",
+            "script": {
+                "question_text": "Which features do you use most frequently in your smart home security system? (Select all that apply)",
+                "answer_options": [
+                    "Motion detection",
+                    "Door/window sensors",
+                    "Video surveillance",
+                    "Smart locks",
+                    "Mobile app alerts",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears after Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How likely are you to recommend your smart home security system to a friend or family member?",
+            "answer_options": [
+                "Very likely",
+                "Likely",
+                "Neutral",
+                "Unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears after Q3",
+            "client_notes": "This is a standard Net Promoter Score (NPS) question. Use a 5-point scale.",
+            "scripter_notes": "Field type: SINGLE_CHOICE with radio buttons.",
+            "script": {
+                "question_text": "How likely are you to recommend your smart home security system to a friend or family member?",
+                "answer_options": [
+                    "Very likely",
+                    "Likely",
+                    "Neutral",
+                    "Unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears after Q3"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for your smart home security system?",
+            "answer_options": [],
+            "routing_logic": "Appears after Q4",
+            "client_notes": "Open-ended question to capture qualitative feedback.",
+            "scripter_notes": "Field type: OPEN_TEXT with a text box.",
+            "script": {
+                "question_text": "What improvements would you suggest for your smart home security system?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears after Q4"
+            }
+        }
+    ]
+}

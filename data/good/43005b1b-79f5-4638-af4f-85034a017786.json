@@ -1,0 +1,129 @@
+{
+    "survey_id": "43005b1b-79f5-4638-af4f-85034a017786",
+    "survey_name": "Post-Pandemic Public Library Usage Survey",
+    "survey_brief": "This survey aims to understand how public library usage has evolved post-pandemic, including changes in visitation frequency, preferred services, and digital resource adoption.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you visit your local public library in person since the pandemic restrictions were lifted?",
+            "answer_options": [
+                "Weekly or more often",
+                "Monthly",
+                "A few times a year",
+                "Rarely or never"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure options cover all likely frequencies.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How often do you visit your local public library in person since the pandemic restrictions were lifted?",
+                "answer_options": [
+                    "Weekly or more often",
+                    "Monthly",
+                    "A few times a year",
+                    "Rarely or never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following public library services have you used in the past year? (Select all that apply)",
+            "answer_options": [
+                "Physical book borrowing",
+                "E-book/digital lending",
+                "Computer/printing access",
+                "In-person events (e.g., author talks, workshops)",
+                "Virtual events/programs",
+                "Study/workspace rental",
+                "None of the above"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use checkboxes (MULTI_CHOICE). Include an exhaustive list of common services.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE).",
+            "script": {
+                "question_text": "Which of the following public library services have you used in the past year? (Select all that apply)",
+                "answer_options": [
+                    "Physical book borrowing",
+                    "E-book/digital lending",
+                    "Computer/printing access",
+                    "In-person events (e.g., author talks, workshops)",
+                    "Virtual events/programs",
+                    "Study/workspace rental",
+                    "None of the above"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors would encourage you to visit the library more frequently?",
+            "answer_options": [
+                "Extended operating hours",
+                "More up-to-date book collections",
+                "Enhanced digital resources",
+                "More community events",
+                "Improved seating/study spaces",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Include an 'Other' option with a text field for open-ended responses.",
+            "scripter_notes": "Field type: radio button with optional open-text (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "What factors would encourage you to visit the library more frequently?",
+                "answer_options": [
+                    "Extended operating hours",
+                    "More up-to-date book collections",
+                    "Enhanced digital resources",
+                    "More community events",
+                    "Improved seating/study spaces",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How satisfied are you with your library's current digital resources (e.g., e-books, online databases)?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Respondents who selected 'E-book/digital lending' in Q2",
+            "client_notes": "Use a Likert scale. Route only to users who have used digital services.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with your library's current digital resources (e.g., e-books, online databases)?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Respondents who selected 'E-book/digital lending' in Q2"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "What improvements would you suggest for your public library's services?",
+            "answer_options": [],
+            "routing_logic": "All respondents",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 300 characters.",
+            "scripter_notes": "Field type: open text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for your public library's services?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}

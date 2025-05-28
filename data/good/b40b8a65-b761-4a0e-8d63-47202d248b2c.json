@@ -1,0 +1,155 @@
+{
+    "survey_id": "b40b8a65-b761-4a0e-8d63-47202d248b2c",
+    "survey_name": "Consumer Preferences for AI-Powered Personal Shopping Assistants Survey",
+    "survey_brief": "This survey aims to gather insights on consumer preferences and experiences with AI-powered personal shopping assistants, including usage patterns, satisfaction levels, and desired features.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use AI-powered personal shopping assistants?",
+            "answer_options": [
+                "Daily",
+                "Weekly",
+                "Monthly",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure mobile-friendly layout.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How frequently do you use AI-powered personal shopping assistants?",
+                "answer_options": [
+                    "Daily",
+                    "Weekly",
+                    "Monthly",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which of the following AI-powered personal shopping assistants have you used? (Select all that apply)",
+            "answer_options": [
+                "Amazon Alexa Shopping",
+                "Google Assistant Shopping",
+                "Samsung Bixby Shopping",
+                "Apple Siri Shopping",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use multi-choice checkboxes. Include an 'Other' option with open-text field.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "Which of the following AI-powered personal shopping assistants have you used? (Select all that apply)",
+                "answer_options": [
+                    "Amazon Alexa Shopping",
+                    "Google Assistant Shopping",
+                    "Samsung Bixby Shopping",
+                    "Apple Siri Shopping",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What features do you value most in an AI-powered personal shopping assistant? (Select up to 3)",
+            "answer_options": [
+                "Personalized product recommendations",
+                "Price comparison across retailers",
+                "Voice-command shopping",
+                "Integration with loyalty programs",
+                "Real-time inventory updates",
+                "Multi-language support",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use multi-choice checkboxes with a limit of 3 selections. Include 'Other' option.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes) with max 3 selections and optional open-text for 'Other'",
+            "script": {
+                "question_text": "What features do you value most in an AI-powered personal shopping assistant? (Select up to 3)",
+                "answer_options": [
+                    "Personalized product recommendations",
+                    "Price comparison across retailers",
+                    "Voice-command shopping",
+                    "Integration with loyalty programs",
+                    "Real-time inventory updates",
+                    "Multi-language support",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for AI-powered personal shopping assistants?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Use a text box with character limit of 500.",
+            "scripter_notes": "Field type: OPEN_TEXT (text area)",
+            "script": {
+                "question_text": "What improvements would you suggest for AI-powered personal shopping assistants?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How satisfied are you with your overall experience using AI-powered personal shopping assistants?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 answer is not 'Never'",
+            "client_notes": "Use a 5-point Likert scale with single-choice radio buttons.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How satisfied are you with your overall experience using AI-powered personal shopping assistants?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q6",
+            "question_text": "What is the primary reason you haven't used AI-powered personal shopping assistants?",
+            "answer_options": [
+                "Privacy concerns",
+                "Prefer traditional shopping methods",
+                "Unaware of such features",
+                "Lack of trust in AI recommendations",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 answer is 'Never'",
+            "client_notes": "Single-choice question with 'Other' option. Include open-text field for 'Other' responses.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons) with optional open-text for 'Other'",
+            "script": {
+                "question_text": "What is the primary reason you haven't used AI-powered personal shopping assistants?",
+                "answer_options": [
+                    "Privacy concerns",
+                    "Prefer traditional shopping methods",
+                    "Unaware of such features",
+                    "Lack of trust in AI recommendations",
+                    "Other (please specify)"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 answer is 'Never'"
+            }
+        }
+    ]
+}

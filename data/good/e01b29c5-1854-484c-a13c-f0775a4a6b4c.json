@@ -1,0 +1,127 @@
+{
+    "survey_id": "e01b29c5-1854-484c-a13c-f0775a4a6b4c",
+    "survey_name": "Customer Satisfaction with Contactless Grocery Shopping Survey",
+    "survey_brief": "This survey aims to evaluate customer satisfaction and preferences regarding contactless grocery shopping experiences, including pickup and delivery services.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How often do you use contactless grocery shopping services (e.g., curbside pickup or delivery)?",
+            "answer_options": [
+                "Weekly or more often",
+                "A few times a month",
+                "Once a month",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears to all respondents",
+            "client_notes": "Use a single-choice radio button for clarity. Ensure mobile-friendly formatting for touchscreen selection.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons)",
+            "script": {
+                "question_text": "How often do you use contactless grocery shopping services (e.g., curbside pickup or delivery)?",
+                "answer_options": [
+                    "Weekly or more often",
+                    "A few times a month",
+                    "Once a month",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears to all respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which contactless grocery shopping method do you prefer?",
+            "answer_options": [
+                "Curbside pickup",
+                "Home delivery",
+                "In-store pickup (with minimal contact)",
+                "No preference"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Single-choice to determine preference. Randomize option order to avoid bias.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons), randomize options",
+            "script": {
+                "question_text": "Which contactless grocery shopping method do you prefer?",
+                "answer_options": [
+                    "Curbside pickup",
+                    "Home delivery",
+                    "In-store pickup (with minimal contact)",
+                    "No preference"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What factors are most important to you when choosing a contactless grocery service? (Select up to 3)",
+            "answer_options": [
+                "Speed of service",
+                "Accuracy of orders",
+                "Ease of scheduling",
+                "Fees/costs",
+                "Quality of produce/items",
+                "Availability of substitutions",
+                "Customer service responsiveness"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Multi-choice question with a limit of 3 selections. Use checkboxes and include a counter.",
+            "scripter_notes": "Field type: MULTI_CHOICE (checkboxes), max selections: 3",
+            "script": {
+                "question_text": "What factors are most important to you when choosing a contactless grocery service? (Select up to 3)",
+                "answer_options": [
+                    "Speed of service",
+                    "Accuracy of orders",
+                    "Ease of scheduling",
+                    "Fees/costs",
+                    "Quality of produce/items",
+                    "Availability of substitutions",
+                    "Customer service responsiveness"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would enhance your contactless grocery shopping experience?",
+            "answer_options": [],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Open-ended question to capture qualitative feedback. Provide a text box with a 300-character limit.",
+            "scripter_notes": "Field type: OPEN_TEXT (text box), character limit: 300",
+            "script": {
+                "question_text": "What improvements would enhance your contactless grocery shopping experience?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "How likely are you to continue using contactless grocery shopping services in the future?",
+            "answer_options": [
+                "Very likely",
+                "Somewhat likely",
+                "Neutral",
+                "Somewhat unlikely",
+                "Very unlikely"
+            ],
+            "routing_logic": "Appears if Q1 response is not 'Never'",
+            "client_notes": "Single-choice Likert scale. Ensure balanced options and a neutral midpoint.",
+            "scripter_notes": "Field type: SINGLE_CHOICE (radio buttons), display horizontally if space allows",
+            "script": {
+                "question_text": "How likely are you to continue using contactless grocery shopping services in the future?",
+                "answer_options": [
+                    "Very likely",
+                    "Somewhat likely",
+                    "Neutral",
+                    "Somewhat unlikely",
+                    "Very unlikely"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 response is not 'Never'"
+            }
+        }
+    ]
+}

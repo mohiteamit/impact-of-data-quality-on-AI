@@ -1,0 +1,125 @@
+{
+    "survey_id": "13925a1b-c7a5-4a18-aa6f-c7e2ef7c1eda",
+    "survey_name": "Employee Experience with AI-Powered Workplace Assistants Survey",
+    "survey_brief": "This survey aims to gather feedback from employees on their experience and satisfaction with AI-powered workplace assistants, including ease of use, functionality, and impact on productivity.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "How frequently do you use the AI-powered workplace assistant in your daily work?",
+            "answer_options": [
+                "Multiple times a day",
+                "Once a day",
+                "A few times a week",
+                "Rarely",
+                "Never"
+            ],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use a radio button for single-choice selection. Ensure options are clear and cover all possible frequency ranges.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How frequently do you use the AI-powered workplace assistant in your daily work?",
+                "answer_options": [
+                    "Multiple times a day",
+                    "Once a day",
+                    "A few times a week",
+                    "Rarely",
+                    "Never"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "Which tasks do you primarily use the AI-powered workplace assistant for? (Select all that apply)",
+            "answer_options": [
+                "Scheduling meetings",
+                "Drafting emails",
+                "Generating reports",
+                "Answering FAQs",
+                "Task reminders",
+                "Other (please specify)"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Use checkboxes for multi-choice selection. Include an 'Other' option with a text field for additional inputs.",
+            "scripter_notes": "Field type: checkbox (MULTI_CHOICE). Include an open-text field for 'Other'.",
+            "script": {
+                "question_text": "Which tasks do you primarily use the AI-powered workplace assistant for? (Select all that apply)",
+                "answer_options": [
+                    "Scheduling meetings",
+                    "Drafting emails",
+                    "Generating reports",
+                    "Answering FAQs",
+                    "Task reminders",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "How satisfied are you with the accuracy of the AI-powered workplace assistant in understanding and completing your requests?",
+            "answer_options": [
+                "Very satisfied",
+                "Satisfied",
+                "Neutral",
+                "Dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Use a Likert scale for satisfaction measurement. Ensure the scale is balanced and easy to understand.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "How satisfied are you with the accuracy of the AI-powered workplace assistant in understanding and completing your requests?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Satisfied",
+                    "Neutral",
+                    "Dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "What improvements would you suggest for the AI-powered workplace assistant?",
+            "answer_options": [],
+            "routing_logic": "Appears for all respondents.",
+            "client_notes": "Use an open-text field to allow detailed feedback. Ensure the field is mobile-friendly and allows for long responses.",
+            "scripter_notes": "Field type: open-text (OPEN_TEXT).",
+            "script": {
+                "question_text": "What improvements would you suggest for the AI-powered workplace assistant?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Appears for all respondents."
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Has the AI-powered workplace assistant improved your overall productivity?",
+            "answer_options": [
+                "Yes, significantly",
+                "Yes, somewhat",
+                "No change",
+                "No, it has decreased my productivity"
+            ],
+            "routing_logic": "Appears if Q1 is not 'Never'.",
+            "client_notes": "Use a radio button for single-choice selection. Include an option for negative impact to capture all possible outcomes.",
+            "scripter_notes": "Field type: radio button (SINGLE_CHOICE).",
+            "script": {
+                "question_text": "Has the AI-powered workplace assistant improved your overall productivity?",
+                "answer_options": [
+                    "Yes, significantly",
+                    "Yes, somewhat",
+                    "No change",
+                    "No, it has decreased my productivity"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "Appears if Q1 is not 'Never'."
+            }
+        }
+    ]
+}

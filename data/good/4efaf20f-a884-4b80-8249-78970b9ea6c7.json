@@ -1,0 +1,129 @@
+{
+    "survey_id": "4efaf20f-a884-4b80-8249-78970b9ea6c7",
+    "survey_name": "Gen Z Workplace Technology Preferences Survey",
+    "survey_brief": "This survey aims to understand the technology preferences of Gen Z employees in the workplace, including their favored tools, collaboration methods, and digital workspace needs.",
+    "questions": [
+        {
+            "qid": "Q1",
+            "question_text": "What type of workplace technology tools do you use most frequently?",
+            "answer_options": [
+                "Communication tools (e.g., Slack, Microsoft Teams)",
+                "Project management tools (e.g., Asana, Trello)",
+                "Collaboration tools (e.g., Google Docs, Notion)",
+                "Video conferencing tools (e.g., Zoom, Google Meet)",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format to capture the breadth of tools used. Ensure mobile-friendly dropdown for 'Other' option.",
+            "scripter_notes": "Field type: CHECKBOX with an optional text input for 'Other'.",
+            "script": {
+                "question_text": "What type of workplace technology tools do you use most frequently?",
+                "answer_options": [
+                    "Communication tools (e.g., Slack, Microsoft Teams)",
+                    "Project management tools (e.g., Asana, Trello)",
+                    "Collaboration tools (e.g., Google Docs, Notion)",
+                    "Video conferencing tools (e.g., Zoom, Google Meet)",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q2",
+            "question_text": "How satisfied are you with your current workplace technology tools?",
+            "answer_options": [
+                "Very satisfied",
+                "Somewhat satisfied",
+                "Neutral",
+                "Somewhat dissatisfied",
+                "Very dissatisfied"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a Likert scale for measuring satisfaction levels. Ensure the scale is balanced and neutral.",
+            "scripter_notes": "Field type: RADIO buttons.",
+            "script": {
+                "question_text": "How satisfied are you with your current workplace technology tools?",
+                "answer_options": [
+                    "Very satisfied",
+                    "Somewhat satisfied",
+                    "Neutral",
+                    "Somewhat dissatisfied",
+                    "Very dissatisfied"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q3",
+            "question_text": "What improvements would you suggest for your workplace technology tools?",
+            "answer_options": [],
+            "routing_logic": "Respondents who selected 'Somewhat dissatisfied' or 'Very dissatisfied' in Q2",
+            "client_notes": "Open-ended question to capture qualitative feedback. Limit to 250 characters to ensure concise responses.",
+            "scripter_notes": "Field type: OPEN_TEXT with a character limit.",
+            "script": {
+                "question_text": "What improvements would you suggest for your workplace technology tools?",
+                "answer_options": [],
+                "type": "OPEN_TEXT",
+                "routing_logic": "Respondents who selected 'Somewhat dissatisfied' or 'Very dissatisfied' in Q2"
+            }
+        },
+        {
+            "qid": "Q4",
+            "question_text": "How important is mobile accessibility for workplace tools?",
+            "answer_options": [
+                "Extremely important",
+                "Very important",
+                "Moderately important",
+                "Slightly important",
+                "Not important at all"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a single-choice scale to measure importance levels.",
+            "scripter_notes": "Field type: RADIO buttons.",
+            "script": {
+                "question_text": "How important is mobile accessibility for workplace tools?",
+                "answer_options": [
+                    "Extremely important",
+                    "Very important",
+                    "Moderately important",
+                    "Slightly important",
+                    "Not important at all"
+                ],
+                "type": "SINGLE_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        },
+        {
+            "qid": "Q5",
+            "question_text": "Which of the following features do you value most in workplace technology tools? (Select up to 3)",
+            "answer_options": [
+                "User-friendly interface",
+                "Integration with other tools",
+                "Customization options",
+                "Real-time collaboration",
+                "Offline functionality",
+                "Security features",
+                "Other (please specify)"
+            ],
+            "routing_logic": "All respondents",
+            "client_notes": "Use a multi-choice format with a limit of 3 selections to prioritize features.",
+            "scripter_notes": "Field type: CHECKBOX with max_selection=3 and an optional text input for 'Other'.",
+            "script": {
+                "question_text": "Which of the following features do you value most in workplace technology tools? (Select up to 3)",
+                "answer_options": [
+                    "User-friendly interface",
+                    "Integration with other tools",
+                    "Customization options",
+                    "Real-time collaboration",
+                    "Offline functionality",
+                    "Security features",
+                    "Other (please specify)"
+                ],
+                "type": "MULTI_CHOICE",
+                "routing_logic": "All respondents"
+            }
+        }
+    ]
+}
